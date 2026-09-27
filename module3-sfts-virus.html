@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Module 3 · SFTS 바이러스 시퀀싱 실습 | NGS 입문</title>
+<meta name="description" content="SFTS 바이러스 생활사, 분절 유전체 구조, viremia 환자 샘플 시퀀싱의 중개의학적 의미">
+<link rel="stylesheet" href="assets/style.css">
+<style>
+  .hero-m3 {
+    background: linear-gradient(160deg, var(--ink) 0%, #1A0E12 100%);
+    color: var(--text-on-dark); padding: 56px 24px 64px;
+  }
+  .hero-m3 .pill.warn { background: rgba(255,107,107,0.15); border-color: rgba(255,107,107,0.4); color: #FFB0B0; }
+
+  /* Tick vector + lifecycle diagram */
+  .lifecycle-strip { display:flex; align-items:stretch; gap:0; overflow-x:auto; border:1px solid #E4DDCB; border-radius: var(--radius); background:#fff; }
+  .life-step { flex: 1; min-width: 160px; padding: 22px 18px; border-right:1px solid #E4DDCB; position:relative; }
+  .life-step:last-child { border-right:none; }
+  .life-step .life-icon { font-size: 28px; margin-bottom: 10px; display:block; }
+  .life-step .life-num { font-family: var(--font-display); font-size: 11px; color: var(--text-on-paper-dim); font-weight:700; }
+  .life-step h4 { font-size: 13.5px; margin: 4px 0 8px; }
+  .life-step p { font-size: 12.5px; color: var(--text-on-paper-dim); margin:0; }
+  .life-arrow { position:absolute; right:-10px; top:18px; font-family:var(--font-display); color:var(--text-on-paper-dim); background:#fff; z-index:2; }
+  @media (max-width: 900px){ .lifecycle-strip{flex-direction:column;} .life-step{border-right:none; border-bottom:1px solid #E4DDCB;} .life-arrow{display:none;} }
+
+  /* Genome segment diagram (L/M/S tri-segmented, ambisense S) */
+  .segment-diagram { display:flex; flex-direction:column; gap: 18px; }
+  .segment-row { display:flex; align-items:center; gap: 16px; }
+  .segment-label { font-family: var(--font-display); font-weight:800; font-size: 15px; width: 38px; flex-shrink:0; text-align:center; border-radius:6px; padding:6px 0; }
+  .segment-bar { flex:1; height: 38px; border-radius: 6px; position:relative; display:flex; align-items:center; overflow:hidden;}
+  .segment-bar .gene-block { height:100%; display:flex; align-items:center; justify-content:center; font-family:var(--font-display); font-size:11.5px; font-weight:700; color: var(--ink); }
+  .segment-meta { font-family: var(--font-display); font-size: 11.5px; color: var(--text-on-dark-dim); width: 110px; flex-shrink:0; text-align:right; }
+  .ambisense-note { font-size: 12px; color: var(--text-on-dark-dim); margin-top: -4px; padding-left: 54px; }
+
+  /* Clinical pamphlet card */
+  .pamphlet { background:#fff; border: 1px solid #E4DDCB; border-radius: 14px; overflow:hidden; }
+  .pamphlet-head { background: var(--ink); color:#fff; padding: 20px 26px; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:10px;}
+  .pamphlet-head h3 { font-size: 17px; }
+  .pamphlet-body { padding: 26px; }
+  .pamphlet-stat-row { display:flex; gap: 0; border-top:1px solid #EDE8DA; }
+  .pamphlet-stat { flex:1; padding: 18px 22px; border-right:1px solid #EDE8DA; }
+  .pamphlet-stat:last-child { border-right:none; }
+  .pamphlet-stat .num { font-family: var(--font-display); font-weight:800; font-size: 24px; color: var(--base-T); }
+  .pamphlet-stat .lab { font-size:12.5px; color: var(--text-on-paper-dim); margin-top:4px; }
+  @media (max-width: 760px){ .pamphlet-stat-row{flex-wrap:wrap;} .pamphlet-stat{flex:1 1 50%; border-bottom:1px solid #EDE8DA;} }
+
+  /* Why sequence timeline (translational medicine rationale) */
+  .why-grid { display:grid; grid-template-columns: repeat(4, 1fr); gap: 0; border:1px solid var(--ink-line); border-radius: var(--radius); overflow:hidden; }
+  .why-cell { padding: 22px 20px; border-right:1px solid var(--ink-line); background: var(--ink-soft); }
+  .why-cell:last-child { border-right:none; }
+  .why-cell .why-icon { font-size:24px; margin-bottom:10px; display:block; }
+  .why-cell h4 { font-size:14px; margin-bottom:8px; color: var(--base-A); }
+  .why-cell p { font-size:12.5px; color: var(--text-on-dark-dim); margin:0; }
+  @media (max-width: 880px){ .why-grid{grid-template-columns: 1fr 1fr;} .why-cell{border-bottom:1px solid var(--ink-line);} }
+  @media (max-width: 560px){ .why-grid{grid-template-columns: 1fr;} }
+
+  /* Sample-to-sequence pipeline recap specific to SFTS */
+  .pipeline-flow { display:flex; align-items:center; gap: 6px; overflow-x:auto; padding: 8px 0; }
+  .pipeline-node { flex-shrink:0; background:#fff; border:1px solid #E4DDCB; border-radius: 10px; padding: 16px 18px; min-width: 150px; text-align:center; }
+  .pipeline-node .pnum { font-family:var(--font-display); font-size:11px; color:var(--text-on-paper-dim); font-weight:700; }
+  .pipeline-node h4 { font-size: 13px; margin: 4px 0 0; }
+  .pipeline-sep { font-family: var(--font-display); color: var(--text-on-paper-dim); flex-shrink:0; }
+
+  .closing-card { background: var(--ink); border-radius: 16px; padding: 40px; color:#fff; }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="site-header-inner">
+    <a href="index.html" class="brand"><span class="prompt">&gt;</span> NGS<span class="dim">_course.seq</span></a>
+    <nav class="site-nav">
+      <a href="index.html">개요</a>
+      <a href="module1-genome-gene.html">1 · 유전체/유전자</a>
+      <a href="module2-sanger-ngs.html">2 · 시퀀싱 원리</a>
+      <a href="module3-sfts-virus.html" class="current">3 · SFTS 실습</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero-m3">
+  <div class="wrap">
+    <p class="eyebrow" style="color:var(--text-on-dark-dim)">Module 03 · 약 10분 · Case Study</p>
+    <h1>SFTS 바이러스<br><span style="color:var(--base-T)">— viremia 환자 샘플 시퀀싱 실습</span></h1>
+    <p class="lede" style="margin-top:8px;">이제 배운 개념을 실제 임상 상황에 적용해봅니다. 진드기가 옮기는 SFTS 바이러스에 감염된 환자의 혈액(viremia, 바이러스혈증) 샘플을 시퀀싱해야 하는 이유를 생활사 → 유전체 구조 → 중개의학적 의미 순으로 따라갑니다.</p>
+    <div class="hero-meta" style="margin-top:24px; display:flex; gap:10px; flex-wrap:wrap;">
+      <span class="pill warn">⚠️ 치명률 최대 ~30%</span>
+      <span class="pill">🦟 진드기 매개 (tick-borne)</span>
+      <span class="pill">🧬 3분절 RNA 바이러스</span>
+    </div>
+  </div>
+</section>
+
+<section class="section section-paper">
+  <div class="wrap">
+    <p class="eyebrow">3.1 what is sfts</p>
+    <h2 class="mb-0">SFTS란 무엇인가</h2>
+    <p class="lede" style="margin-top:14px; margin-bottom: 28px;">중증열성혈소판감소증후군(Severe Fever with Thrombocytopenia Syndrome, SFTS)은 SFTS 바이러스(SFTSV, 최근 분류명 <i>Dabie bandavirus</i>)에 의한 진드기 매개 신종 감염병입니다. 2009년 중국에서 처음 보고된 이후 한국, 일본, 대만, 베트남 등으로 확산되었습니다.</p>
+
+    <div class="pamphlet reveal">
+      <div class="pamphlet-head">
+        <h3>🦠 SFTS Virus — 임상 한눈에 보기</h3>
+        <span class="pill" style="background:rgba(255,255,255,0.1); border-color:rgba(255,255,255,0.2); color:#fff;">Bunyavirales · Phenuiviridae</span>
+      </div>
+      <div class="pamphlet-stat-row">
+        <div class="pamphlet-stat"><div class="num">5–14일</div><div class="lab">평균 잠복기</div></div>
+        <div class="pamphlet-stat"><div class="num">10–30%</div><div class="lab">치명률 (지역·연구별 차이)</div></div>
+        <div class="pamphlet-stat"><div class="num">발열·혈소판↓</div><div class="lab">핵심 임상 소견</div></div>
+        <div class="pamphlet-stat"><div class="num">백신/특효약</div><div class="lab">아직 없음</div></div>
+      </div>
+      <div class="pamphlet-body">
+        <p class="text-dim" style="margin:0;">주요 매개체는 <i>Haemaphysalis longicornis</i>(작은소참진드기)이며, 사람은 진드기에 물려 감염되거나 드물게 감염 동물·환자의 혈액·체액 접촉(사람 간 전파)으로도 감염될 수 있습니다. 주요 증상은 고열, 소화기 증상(구토·설사), 그리고 이름의 핵심인 혈소판감소증(thrombocytopenia)과 백혈구감소증입니다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-dark">
+  <div class="wrap">
+    <p class="eyebrow">3.2 life cycle</p>
+    <h2>바이러스 생활사 — 진드기에서 사람까지</h2>
+    <p class="lede" style="margin-top:14px; margin-bottom:30px;">SFTSV는 진드기와 척추동물(주로 소, 염소 등 가축과 야생동물) 사이를 오가며 자연계에 유지되는 "동물원성 사이클(zoonotic cycle)"을 가집니다. 사람은 이 사이클에 우연히 끼어드는 종착 숙주(dead-end host)에 가깝습니다.</p>
+
+    <div class="lifecycle-strip reveal">
+      <div class="life-step">
+        <span class="life-icon">🦟</span>
+        <span class="life-num">STEP 1</span>
+        <h4>진드기 내 유지</h4>
+        <p>진드기가 감염된 동물의 혈액을 섭취하며 바이러스를 획득, 진드기 체내에서 증식·유지됩니다.</p>
+        <span class="life-arrow">→</span>
+      </div>
+      <div class="life-step">
+        <span class="life-icon">🐄</span>
+        <span class="life-num">STEP 2</span>
+        <h4>동물 숙주 감염</h4>
+        <p>진드기가 가축·야생동물을 물면서 바이러스가 전파되어 동물 개체군 내에서 순환합니다.</p>
+        <span class="life-arrow">→</span>
+      </div>
+      <div class="life-step">
+        <span class="life-icon">🧍</span>
+        <span class="life-num">STEP 3</span>
+        <h4>사람 감염</h4>
+        <p>감염된 진드기에 물리며 바이러스가 사람 혈류로 유입, 단핵구/대식세포 등에서 증식합니다.</p>
+        <span class="life-arrow">→</span>
+      </div>
+      <div class="life-step">
+        <span class="life-icon">🩸</span>
+        <span class="life-num">STEP 4</span>
+        <h4>바이러스혈증 (Viremia)</h4>
+        <p>혈액 내 바이러스 농도가 높아지는 시기. 이 시기의 혈액 샘플이 바로 시퀀싱의 대상이 됩니다.</p>
+      </div>
+    </div>
+
+    <hr class="rule">
+    <div class="card-dark reveal" style="margin-top:6px;">
+      <h4 style="color:var(--base-T)">왜 "바이러스혈증(viremia)" 시기가 중요한가</h4>
+      <p class="text-dim" style="margin-top:10px;">바이러스혈증은 혈액 속에 바이러스 입자(혹은 그 RNA)가 검출 가능한 농도로 존재하는 시기를 말합니다. 이 시기의 환자 혈액 샘플에는 충분한 양의 바이러스 RNA가 들어있어, 추가 배양 없이도 직접 시퀀싱이 가능합니다 — 이것이 metagenomic/targeted NGS를 통한 신속 진단의 전제 조건입니다.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section section-paper-dim">
+  <div class="wrap">
+    <p class="eyebrow">3.3 genome architecture</p>
+    <h2 class="mb-0">SFTSV 유전체 구조 — 3개로 나뉜 음성극성 RNA</h2>
+    <p class="lede" style="margin-top:14px; margin-bottom:30px;">SFTSV는 Bunyavirales 목에 속하는 음성극성(negative-sense) 단일가닥 RNA 바이러스로, 유전체가 <b>L(large)·M(medium)·S(small)</b> 세 개의 분절(segment)로 나뉘어 있습니다. 전체 길이는 약 11.5kb입니다.</p>
+
+    <div class="segment-diagram reveal">
+      <div>
+        <div class="segment-row">
+          <div class="segment-label" style="background:var(--base-T); color:#fff;">L</div>
+          <div class="segment-bar" style="background:#FFE3E3;">
+            <div class="gene-block" style="width:100%; background:var(--base-T);">RdRp (RNA 의존 RNA 중합효소)</div>
+          </div>
+          <div class="segment-meta">6,368 nt</div>
+        </div>
+      </div>
+      <div>
+        <div class="segment-row">
+          <div class="segment-label" style="background:var(--base-G); color:#1A1F2B;">M</div>
+          <div class="segment-bar" style="background:#FFF3D6;">
+            <div class="gene-block" style="width:100%; background:var(--base-G);">당단백질 전구체 → Gn / Gc (외피 단백질)</div>
+          </div>
+          <div class="segment-meta">3,378 nt</div>
+        </div>
+      </div>
+      <div>
+        <div class="segment-row">
+          <div class="segment-label" style="background:var(--base-C); color:#fff;">S</div>
+          <div class="segment-bar" style="background:#E6EEFF;">
+            <div class="gene-block" style="width:55%; background:var(--base-C);">N (핵단백질, viral-complementary sense)</div>
+            <div class="gene-block" style="width:45%; background:#9DBBF5;">NSs (비구조단백질, viral sense)</div>
+          </div>
+          <div class="segment-meta">1,744 nt</div>
+        </div>
+        <div class="ambisense-note">↳ S 분절은 <b>양극성(ambisense)</b> 구조: 양방향으로 각각 다른 단백질을 암호화합니다.</div>
+      </div>
+    </div>
+
+    <div class="grid grid-3" style="margin-top:30px;">
+      <div class="card reveal">
+        <h4>🧬 L 분절 — 중합효소</h4>
+        <p class="text-dim" style="font-size:13.5px; margin-top:8px;">RNA-dependent RNA polymerase(RdRp)를 암호화합니다. 이 효소가 바이러스 RNA를 복제하고 mRNA를 전사합니다 — 항바이러스제의 주요 표적이기도 합니다.</p>
+      </div>
+      <div class="card reveal">
+        <h4>🧪 M 분절 — 외피 단백질</h4>
+        <p class="text-dim" style="font-size:13.5px; margin-top:8px;">Gn/Gc 당단백질을 만들어 바이러스가 숙주세포 수용체에 결합하고 침입하도록 합니다. 변이가 가장 많이 축적되는 분절로 알려져 있습니다.</p>
+      </div>
+      <div class="card reveal">
+        <h4>🛡️ S 분절 — 면역 회피</h4>
+        <p class="text-dim" style="font-size:13.5px; margin-top:8px;">N(핵단백질)은 RNA를 감싸 보호하고, NSs(비구조단백질)는 숙주의 인터페론 신호전달을 억제해 선천면역을 회피하는 데 관여합니다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-dark">
+  <div class="wrap">
+    <p class="eyebrow">3.4 translational significance</p>
+    <h2>왜 이 바이러스를 "시퀀싱"해야 하는가</h2>
+    <p class="lede" style="margin-top:14px; margin-bottom:30px;">단순히 "SFTS다/아니다"를 확인하는 것을 넘어, 전체 유전체 서열을 읽는 것은 중개의학(translational medicine) 관점에서 여러 실질적 가치를 가집니다.</p>
+
+    <div class="why-grid reveal">
+      <div class="why-cell">
+        <span class="why-icon">🩺</span>
+        <h4>신속·정밀 진단</h4>
+        <p>발열·혈소판감소를 보이는 환자에서 SFTSV를 다른 출혈열·렙토스피라증 등과 구별 진단합니다. metagenomic NGS는 원인 불명 발열의 병원체를 가설 없이도(unbiased) 찾아낼 수 있습니다.</p>
+      </div>
+      <div class="why-cell">
+        <span class="why-icon">🧬</span>
+        <h4>변이주 및 유전형 추적</h4>
+        <p>M 분절 등의 변이를 추적해 어떤 유전형(genotype A–F)이 유행 중인지, 항원성이나 병원성에 영향을 줄 변이가 있는지 감시합니다.</p>
+      </div>
+      <div class="why-cell">
+        <span class="why-icon">🌍</span>
+        <h4>전파 경로 역학조사</h4>
+        <p>환자 간 바이러스 서열을 비교해 동일 유행의 일부인지, 사람 간 전파(의료진 감염 등)가 있었는지 분자역학적으로 확인합니다.</p>
+      </div>
+      <div class="why-cell">
+        <span class="why-icon">💊</span>
+        <h4>치료제·백신 표적 발굴</h4>
+        <p>RdRp(L), Gn/Gc(M)의 서열 정보는 항바이러스제 설계와 백신 후보 항원 선정에 직접적인 분자 정보를 제공합니다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-paper">
+  <div class="wrap">
+    <p class="eyebrow">3.5 sample to sequence</p>
+    <h2 class="mb-0">실습 시나리오 — viremia 샘플이 데이터가 되는 과정</h2>
+    <p class="lede" style="margin-top:14px; margin-bottom:28px;">Module 2에서 배운 파이프라인을 SFTS 환자 샘플에 그대로 적용하면 다음과 같은 흐름이 됩니다.</p>
+
+    <div class="pipeline-flow reveal">
+      <div class="pipeline-node"><div class="pnum">01</div><h4>환자 혈액 채취<br><span class="text-dim" style="font-weight:400; font-size:11.5px;">(viremia 시기)</span></h4></div>
+      <div class="pipeline-sep">→</div>
+      <div class="pipeline-node"><div class="pnum">02</div><h4>RNA 추출 &amp;<br>cDNA 합성</h4></div>
+      <div class="pipeline-sep">→</div>
+      <div class="pipeline-node"><div class="pnum">03</div><h4>NGS 라이브러리<br>제작 &amp; 시퀀싱</h4></div>
+      <div class="pipeline-sep">→</div>
+      <div class="pipeline-node"><div class="pnum">04</div><h4>FASTQ 생성</h4></div>
+      <div class="pipeline-sep">→</div>
+      <div class="pipeline-node"><div class="pnum">05</div><h4>참조서열(L/M/S)<br>에 정렬 → BAM</h4></div>
+      <div class="pipeline-sep">→</div>
+      <div class="pipeline-node" style="border-color:var(--base-A); background:#EAFBF3;"><div class="pnum">06</div><h4>변이 분석 &amp;<br>유전형 판정</h4></div>
+    </div>
+
+    <div class="card reveal" style="margin-top:28px; border-color:var(--base-T);">
+      <h4 style="color:var(--base-T)">🔬 생각해보기</h4>
+      <p class="text-dim" style="margin-top:10px;">SFTSV는 RNA 바이러스이기 때문에 DNA를 직접 읽는 일반적인 Illumina 워크플로 전에 <b>역전사(reverse transcription)</b>로 cDNA를 만드는 단계가 추가됩니다. 또한 환자 샘플에는 사람 RNA가 압도적으로 많기 때문에, 분석 시 사람 유전체에 매핑되는 read를 걸러내고 바이러스 분절(L/M/S)에 매핑되는 read만 남기는 필터링이 중요합니다. Module 2의 정렬(alignment) 실습에서 "참조서열"이 바뀐다면 어떤 read들이 남을지 생각해보세요.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section section-dark">
+  <div class="wrap">
+    <div class="closing-card">
+      <p class="eyebrow" style="color:var(--text-on-dark-dim)">summary</p>
+      <h2 style="margin-bottom:18px;">한 줄로 정리하면</h2>
+      <p class="lede" style="color:var(--text-on-dark-dim); font-size:17px; max-width: 760px;">DNA의 네 글자(A/T/G/C)를 읽는 기술(NGS)이 있기에, 우리는 진드기에 물린 환자의 혈액 한 방울 속 바이러스의 정체와 진화, 그리고 치료의 실마리까지 며칠 안에 읽어낼 수 있습니다 — 이것이 분자생물학에서 시작해 임상 현장까지 이어지는 중개의학의 한 사례입니다.</p>
+    </div>
+  </div>
+</section>
+
+<nav class="module-pager section-dark">
+  <a href="module2-sanger-ngs.html" class="pager-link">
+    <div class="pager-label">← previous module</div>
+    <div class="pager-title">Sanger &amp; NGS 원리</div>
+  </a>
+  <a href="index.html" class="pager-link next">
+    <div class="pager-label">course home →</div>
+    <div class="pager-title">코스 개요로 돌아가기</div>
+  </a>
+</nav>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <span>Module 03 · SFTS Virus Sequencing Case Study</span>
+    <a href="index.html">코스 개요로 돌아가기</a>
+  </div>
+</footer>
+
+<script src="assets/reveal.js"></script>
+</body>
+</html>

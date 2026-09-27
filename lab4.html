@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>SPATIAL — 공간전사체 미니 세션</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#ffffff; --bg-deep:#f3f4f6; --panel:#ffffff; --panel-alt:#f6f7f9;
+  --panel-raised:#eef0f3; --border:#d8dce2; --border-soft:#e6e9ee;
+  --text:#1a1d23; --text-dim:#4b5563; --text-faint:#8b95a3;
+  --accent:#2f8a52; --accent-dim:#dcf3e3; --blue:#2f6fa8; --amber:#b8790a; --red:#c73e3e;
+  --violet:#7a4fa3; --violet-dim:#efe6f6;
+  --font-display:'Sora',sans-serif; --font-mono:'JetBrains Mono',monospace;
+}
+*{box-sizing:border-box;}
+body{margin:0;background:var(--bg-deep);color:var(--text);font-family:var(--font-display);font-size:14px;line-height:1.6;}
+.shell{max-width:1180px;margin:0 auto;padding:0 20px 80px;}
+
+/* 헤더 */
+.top{background:var(--panel);border-bottom:1px solid var(--border);margin-bottom:28px;}
+.top-in{max-width:1180px;margin:0 auto;padding:18px 20px;display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;}
+.logo{font-family:var(--font-mono);font-weight:700;font-size:18px;letter-spacing:.06em;color:var(--accent);}
+.logo-sub{font-size:13px;color:var(--text-dim);}
+.top-tag{margin-left:auto;font-family:var(--font-mono);font-size:11px;color:var(--text-faint);letter-spacing:.1em;}
+
+/* 인트로 */
+.intro-box{background:var(--panel);border:1px solid var(--border);border-left:3px solid var(--accent);padding:18px 22px;margin-bottom:26px;}
+.intro-box h1{font-size:19px;margin:0 0 10px;letter-spacing:-.01em;}
+.intro-box p{margin:0 0 8px;color:var(--text-dim);font-size:13.5px;}
+.intro-box p:last-child{margin-bottom:0;}
+.intro-box b{color:var(--text);}
+
+/* 스텝 */
+.step{background:var(--panel);border:1px solid var(--border);margin-bottom:18px;}
+.step-head{display:flex;align-items:center;gap:12px;padding:14px 20px;border-bottom:1px solid var(--border-soft);background:var(--panel-alt);cursor:pointer;user-select:none;}
+.step-num{flex:none;width:26px;height:26px;display:grid;place-items:center;border-radius:50%;background:var(--accent);color:#fff;font-family:var(--font-mono);font-size:12px;font-weight:700;}
+.step.done .step-num{background:var(--blue);}
+.step-title{font-weight:600;font-size:14.5px;}
+.step-note{font-size:12.5px;color:var(--text-faint);margin-left:auto;font-family:var(--font-mono);}
+.step-body{padding:20px;display:none;}
+.step.open .step-body{display:block;}
+.step-desc{color:var(--text-dim);font-size:13.5px;margin:0 0 16px;max-width:78ch;}
+.step-desc b{color:var(--text);}
+
+/* 컨트롤 */
+.ctrl{display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center;padding:12px 14px;background:var(--panel-raised);border:1px solid var(--border-soft);margin-bottom:16px;}
+.btn{font-family:var(--font-display);font-size:13px;font-weight:600;padding:8px 15px;border:1px solid var(--border);background:var(--panel);color:var(--text);cursor:pointer;transition:.14s;}
+.btn:hover{border-color:var(--accent);color:var(--accent);}
+.btn-primary{background:var(--accent);border-color:var(--accent);color:#fff;}
+.btn-primary:hover{filter:brightness(1.08);color:#fff;}
+.btn:disabled{opacity:.45;cursor:not-allowed;}
+.slider{display:flex;align-items:center;gap:9px;font-size:12.5px;color:var(--text-dim);}
+.slider input[type=range]{width:130px;accent-color:var(--accent);}
+.slider .val{font-family:var(--font-mono);font-size:12px;color:var(--text);min-width:56px;}
+.chk{display:flex;align-items:center;gap:6px;font-size:12.5px;color:var(--text-dim);cursor:pointer;}
+.chk input{accent-color:var(--accent);}
+
+/* 캔버스 */
+.canvas-row{display:flex;gap:16px;flex-wrap:wrap;}
+.canvas-box{flex:1 1 280px;min-width:250px;}
+.canvas-cap{font-family:var(--font-mono);font-size:11.5px;color:var(--text-faint);letter-spacing:.06em;margin-bottom:6px;display:flex;justify-content:space-between;}
+.canvas-cap b{color:var(--text-dim);font-weight:600;}
+canvas{width:100%;height:auto;display:block;background:#fbfcfd;border:1px solid var(--border);image-rendering:auto;}
+
+/* 로그 / 결과 */
+.log{font-family:var(--font-mono);font-size:11.5px;line-height:1.75;background:#fbfcfd;border:1px solid var(--border-soft);padding:11px 13px;margin-top:14px;max-height:190px;overflow:auto;white-space:pre-wrap;color:var(--text-dim);}
+.log .ok{color:var(--accent);}
+.log .warn{color:var(--amber);}
+.log .err{color:var(--red);}
+.log .hi{color:var(--blue);}
+
+table.tbl{width:100%;border-collapse:collapse;font-family:var(--font-mono);font-size:12px;margin-top:14px;}
+table.tbl th,table.tbl td{border:1px solid var(--border-soft);padding:6px 9px;text-align:right;}
+table.tbl th{background:var(--panel-alt);font-weight:600;color:var(--text-dim);}
+table.tbl td:first-child,table.tbl th:first-child{text-align:left;}
+table.tbl .good{color:var(--accent);}
+table.tbl .bad{color:var(--red);}
+
+.legend{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:12px;color:var(--text-dim);margin-top:10px;}
+.legend span{display:flex;align-items:center;gap:5px;}
+.legend i{width:11px;height:11px;display:block;border-radius:2px;}
+
+.callout{border-left:3px solid var(--amber);background:#fdf8ef;padding:11px 14px;font-size:13px;color:var(--text-dim);margin-top:14px;}
+.callout b{color:var(--text);}
+.takeaway{border-left:3px solid var(--blue);background:#eff5fa;padding:11px 14px;font-size:13px;color:var(--text-dim);margin-top:14px;}
+.takeaway b{color:var(--text);}
+
+.qbox{border:1px solid var(--border);background:var(--panel-alt);padding:14px 16px;margin-top:16px;}
+.qbox .q{font-weight:600;font-size:13.5px;margin-bottom:9px;}
+.qopt{display:block;width:100%;text-align:left;font-family:var(--font-display);font-size:13px;padding:7px 11px;border:1px solid var(--border);background:var(--panel);margin-bottom:6px;cursor:pointer;}
+.qopt:hover{border-color:var(--blue);}
+.qopt.right{border-color:var(--accent);background:var(--accent-dim);}
+.qopt.wrong{border-color:var(--red);background:#fdeeee;}
+.qfb{font-size:12.5px;color:var(--text-dim);margin-top:8px;display:none;}
+.qfb.show{display:block;}
+@media(max-width:700px){.canvas-row{flex-direction:column;}.step-note{display:none;}}
+</style>
+</head>
+<body>
+
+<div class="top"><div class="top-in">
+  <span class="logo">SPATIAL</span>
+  <span class="logo-sub">공간전사체 미니 세션 — FISH 방식 vs Visium 방식</span>
+  <span class="top-tag">LAB 04</span>
+</div></div>
+
+<div class="shell">
+
+<div class="intro-box">
+  <h1>같은 조직, 두 가지 방식</h1>
+  <p>lab1과 lab2에서는 시퀀싱 <b>read</b> 자체를 다뤘습니다. 공간전사체는 출발점이 다릅니다. 여기서는 <b>세포의 위치</b>와 <b>그 자리에서 측정된 유전자 발현</b>을 함께 다룹니다.</p>
+  <p>측정 방식은 크게 둘로 갈립니다. <b>시퀀싱 기반(Visium)</b>은 조직 위에 격자로 배열된 스팟에서 mRNA를 포획해 시퀀싱합니다. <b>이미징 기반(FISH 계열 — MERFISH, seqFISH, Xenium)</b>은 형광 프로브로 개별 mRNA 분자를 하나씩 현미경으로 세어 나갑니다.</p>
+  <p>이 세션에서는 <b>가상 조직을 한 번 만들어두고, 똑같은 조직에 두 방식을 적용</b>합니다. 정답을 알고 있는 상태에서 각 방식이 무엇을 잡아내고 무엇을 놓치는지 직접 비교하는 것이 목표입니다.</p>
+</div>
+
+<!-- STEP 1 -->
+<div class="step open" id="s1">
+  <div class="step-head"><span class="step-num">1</span><span class="step-title">가상 조직 만들기 (정답 데이터)</span><span class="step-note">ground truth</span></div>
+  <div class="step-body">
+    <p class="step-desc">실제 실험에서는 절대 알 수 없는 것을 여기서는 압니다. <b>모든 세포의 정확한 위치, 세포 유형, 진짜 발현량</b>입니다. 이 정답이 있어야 두 측정 방식이 얼마나 잘 맞추는지 채점할 수 있습니다.</p>
+    <div class="ctrl">
+      <button class="btn btn-primary" id="b-gen">조직 생성</button>
+      <div class="slider">세포 수 <input type="range" id="r-ncell" min="300" max="1600" value="900" step="50"><span class="val" id="v-ncell">900</span></div>
+      <div class="slider">난수 시드 <input type="range" id="r-seed" min="1" max="50" value="7"><span class="val" id="v-seed">7</span></div>
+    </div>
+    <div class="canvas-row">
+      <div class="canvas-box">
+        <div class="canvas-cap"><b>세포 유형</b><span>1000 × 1000 µm</span></div>
+        <canvas id="c-truth" width="600" height="600"></canvas>
+        <div class="legend" id="lg-type"></div>
+      </div>
+      <div class="canvas-box">
+        <div class="canvas-cap"><b>조직 영역</b><span>domain</span></div>
+        <canvas id="c-domain" width="600" height="600"></canvas>
+        <div class="legend" id="lg-dom"></div>
+      </div>
+    </div>
+    <div class="log" id="log1">조직 생성 버튼을 누르세요.</div>
+    <div class="takeaway"><b>짚고 갈 점.</b> 조직 영역(domain)과 세포 유형(cell type)은 다른 층위입니다. 한 영역 안에도 여러 유형의 세포가 섞여 있습니다. 뒤에서 이 구분이 두 방식의 성패를 가릅니다.</div>
+  </div>
+</div>
+
+<!-- STEP 2 -->
+<div class="step" id="s2">
+  <div class="step-head"><span class="step-num">2</span><span class="step-title">Visium 방식 — 스팟으로 포획해서 시퀀싱</span><span class="step-note">sequencing-based</span></div>
+  <div class="step-body">
+    <p class="step-desc">조직 위에 바코드가 심어진 스팟이 격자로 깔려 있습니다. 스팟 위에 놓인 세포들이 mRNA를 흘려보내면, 그 스팟의 바코드가 붙어 함께 시퀀싱됩니다. 결과는 <b>스팟 × 유전자</b> 행렬입니다. 세포 하나하나가 아니라 <b>스팟 안에 있던 세포들의 합</b>이라는 점이 핵심입니다.</p>
+    <div class="ctrl">
+      <button class="btn btn-primary" id="b-vis">스팟 포획 실행</button>
+      <div class="slider">스팟 지름 <input type="range" id="r-dia" min="20" max="110" value="55" step="5"><span class="val" id="v-dia">55 µm</span></div>
+      <div class="slider">스팟 간격 <input type="range" id="r-pitch" min="60" max="180" value="100" step="10"><span class="val" id="v-pitch">100 µm</span></div>
+      <div class="slider">포획 효율 <input type="range" id="r-eff" min="3" max="60" value="15"><span class="val" id="v-eff">15%</span></div>
+    </div>
+    <div class="canvas-row">
+      <div class="canvas-box">
+        <div class="canvas-cap"><b>스팟 배치</b><span>조직 위에 겹쳐 보기</span></div>
+        <canvas id="c-spot" width="600" height="600"></canvas>
+      </div>
+      <div class="canvas-box">
+        <div class="canvas-cap"><b>측정 결과</b><span>스팟별 우세 유형</span></div>
+        <canvas id="c-spotres" width="600" height="600"></canvas>
+      </div>
+    </div>
+    <div class="log" id="log2">먼저 1단계에서 조직을 생성하세요.</div>
+    <div class="callout"><b>스팟 지름을 20 µm까지 줄여보세요.</b> 세포 하나만 잡히니 해상도는 좋아지지만, 포획되는 mRNA가 급감해서 스팟 대부분이 거의 비게 됩니다. 해상도와 검출 깊이는 맞바꿈 관계입니다.</div>
+  </div>
+</div>
+
+<!-- STEP 3 -->
+<div class="step" id="s3">
+  <div class="step-head"><span class="step-num">3</span><span class="step-title">FISH 방식 — 분자를 하나씩 세기</span><span class="step-note">imaging-based</span></div>
+  <div class="step-body">
+    <p class="step-desc">형광 프로브를 붙여 개별 mRNA 분자를 현미경으로 직접 셉니다. 분자마다 좌표가 찍히므로 <b>세포 단위, 때로는 세포 안 위치까지</b> 알 수 있습니다. 대신 프로브를 미리 설계해야 해서 <b>측정할 유전자를 사전에 골라야</b> 합니다. 전사체 전체가 아니라 패널입니다.</p>
+    <div class="ctrl">
+      <button class="btn btn-primary" id="b-fish">분자 검출 실행</button>
+      <div class="slider">패널 크기 <input type="range" id="r-panel" min="4" max="60" value="14"><span class="val" id="v-panel">14 종</span></div>
+      <div class="slider">검출 효율 <input type="range" id="r-feff" min="10" max="95" value="65"><span class="val" id="v-feff">65%</span></div>
+      <div class="slider">분할 오류 <input type="range" id="r-seg" min="0" max="40" value="12"><span class="val" id="v-seg">12%</span></div>
+    </div>
+    <div class="canvas-row">
+      <div class="canvas-box">
+        <div class="canvas-cap"><b>검출된 분자</b><span>점 하나 = mRNA 하나</span></div>
+        <canvas id="c-mol" width="600" height="600"></canvas>
+      </div>
+      <div class="canvas-box">
+        <div class="canvas-cap"><b>세포 분할 후 판정</b><span>세포별 유형</span></div>
+        <canvas id="c-fishres" width="600" height="600"></canvas>
+      </div>
+    </div>
+    <div class="log" id="log3">먼저 1단계에서 조직을 생성하세요.</div>
+    <div class="callout"><b>분할 오류를 40%까지 올려보세요.</b> 세포 경계를 잘못 그으면 옆 세포의 분자가 섞여 들어옵니다. 이미징 기반의 가장 큰 실전 약점이고, 스팟 혼합과 성격이 다른 오염입니다.</div>
+  </div>
+</div>
+
+<!-- STEP 4 -->
+<div class="step" id="s4">
+  <div class="step-head"><span class="step-num">4</span><span class="step-title">채점 — 각 방식이 무엇을 맞췄나</span><span class="step-note">benchmark</span></div>
+  <div class="step-body">
+    <p class="step-desc">정답을 알고 있으니 채점할 수 있습니다. <b>조직 영역</b>을 맞추는 과제와 <b>세포 유형</b>을 맞추는 과제를 따로 매깁니다. 두 방식의 성적표가 정반대로 나오는 것이 이 세션의 결론입니다.</p>
+    <div class="ctrl"><button class="btn btn-primary" id="b-score">채점하기</button></div>
+    <div id="scorewrap"></div>
+    <div class="log" id="log4">2단계와 3단계를 먼저 실행하세요.</div>
+  </div>
+</div>
+
+<!-- STEP 5 -->
+<div class="step" id="s5">
+  <div class="step-head"><span class="step-num">5</span><span class="step-title">정리와 확인 문제</span><span class="step-note">wrap-up</span></div>
+  <div class="step-body">
+    <p class="step-desc">두 방식은 우열이 아니라 <b>용도</b>가 다릅니다. 실제 연구에서는 Visium으로 조직 전체를 훑어 관심 영역과 후보 유전자를 찾고, 그 영역을 FISH 패널로 다시 들여다보는 조합이 흔합니다.</p>
+    <table class="tbl" id="summary-tbl"></table>
+    <div id="quizwrap"></div>
+  </div>
+</div>
+
+</div>
+<script>
+/* ============================================================
+   공간전사체 미니 세션 — 시뮬레이터
+   외부 의존성 없음. 모든 계산은 이 파일 안에서 수행됩니다.
+   ============================================================ */
+
+/* ---------- 결정적 난수 (시드 고정 → 재현 가능) ---------- */
+function mulberry32(a){return function(){a|=0;a=a+0x6D2B79F5|0;let t=Math.imul(a^a>>>15,1|a);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296;}}
+let RNG = mulberry32(7);
+const rnd = ()=>RNG();
+function gauss(){let u=0,v=0;while(u===0)u=rnd();while(v===0)v=rnd();return Math.sqrt(-2*Math.log(u))*Math.cos(2*Math.PI*v);}
+function poisson(lam){if(lam<=0)return 0;if(lam>25)return Math.max(0,Math.round(lam+Math.sqrt(lam)*gauss()));let L=Math.exp(-lam),k=0,p=1;do{k++;p*=rnd();}while(p>L);return k-1;}
+
+/* ---------- 모델 정의 ---------- */
+const FIELD = 1000;                 // µm
+const TYPES = [
+  {id:0,name:'Exc-A',  col:'#2f6fa8'},
+  {id:1,name:'Exc-B',  col:'#4a9ed4'},
+  {id:2,name:'Inh',    col:'#c73e3e'},
+  {id:3,name:'Astro',  col:'#2f8a52'},
+  {id:4,name:'Oligo',  col:'#b8790a'},
+  {id:5,name:'Micro',  col:'#7a4fa3'},
+];
+const DOMAINS = [
+  {id:0,name:'표층 (L1–L2)', col:'#dce9f5'},
+  {id:1,name:'중층 (L3–L4)', col:'#c3ddf0'},
+  {id:2,name:'심층 (L5–L6)', col:'#a5cbe8'},
+  {id:3,name:'백질',         col:'#f0e4cd'},
+  {id:4,name:'면역 침윤소',   col:'#f2d4d4'},
+];
+// 영역별 세포 유형 구성비 — 한 영역 안에도 여러 유형이 섞인다
+const COMP = [
+  [0.42,0.10,0.14,0.22,0.04,0.08],
+  [0.30,0.32,0.13,0.16,0.05,0.04],
+  [0.10,0.46,0.12,0.14,0.14,0.04],
+  [0.02,0.03,0.03,0.16,0.70,0.06],
+  [0.04,0.04,0.06,0.14,0.06,0.66],
+];
+const NGENE = 60;
+let GENES = [];      // {name, type, domain, base}
+let PROFILE = [];    // [type][gene] 기대 발현량
+
+function buildGenes(){
+  GENES=[];PROFILE=[];
+  // 유전자 60개: 앞 30개는 세포유형 마커, 다음 15개는 영역 마커, 나머지 15개는 하우스키핑
+  for(let g=0;g<NGENE;g++){
+    if(g<30)      GENES.push({name:'Gene'+String(g+1).padStart(2,'0'),kind:'type',  tgt:g%6});
+    else if(g<45) GENES.push({name:'Gene'+String(g+1).padStart(2,'0'),kind:'domain',tgt:(g-30)%5});
+    else          GENES.push({name:'Gene'+String(g+1).padStart(2,'0'),kind:'hk',    tgt:-1});
+  }
+  for(let t=0;t<6;t++){
+    const row=new Float32Array(NGENE);
+    for(let g=0;g<NGENE;g++){
+      const G=GENES[g];
+      if(G.kind==='type')   row[g]= (G.tgt===t) ? 26+rnd()*22 : 0.8+rnd()*1.6;
+      else if(G.kind==='hk')row[g]= 9+rnd()*7;
+      else                  row[g]= 2+rnd()*3;   // 영역 마커는 세포별 기본값, 아래서 영역 배수 적용
+    }
+    PROFILE.push(row);
+  }
+}
+function domainMultiplier(g,dom){
+  const G=GENES[g];
+  if(G.kind!=='domain') return 1;
+  return (G.tgt===dom) ? 9.0 : 0.55;
+}
+
+/* ---------- 조직 생성 ---------- */
+let CELLS=[], NCELL=900;
+function domainAt(x,y){
+  // 면역 침윤소: 원형 블롭
+  const dx=x-680, dy=y-330;
+  if(dx*dx+dy*dy < 105*105) return 4;
+  // 층상 구조 — 경계를 물결지게
+  const wave = 42*Math.sin(x/155) + 22*Math.sin(x/61+1.3);
+  const yy = y - wave;
+  if(yy<230) return 0;
+  if(yy<470) return 1;
+  if(yy<730) return 2;
+  return 3;
+}
+function pickType(dom){
+  const p=COMP[dom]; let r=rnd(),acc=0;
+  for(let i=0;i<6;i++){acc+=p[i];if(r<acc)return i;}
+  return 5;
+}
+function genTissue(){
+  buildGenes();
+  CELLS=[];
+  let guard=0;
+  while(CELLS.length<NCELL && guard<NCELL*60){
+    guard++;
+    const x=rnd()*FIELD, y=rnd()*FIELD;
+    // 최소 간격 확보 (세포가 겹치지 않게)
+    let ok=true;
+    for(let i=Math.max(0,CELLS.length-70);i<CELLS.length;i++){
+      const c=CELLS[i];
+      if((c.x-x)**2+(c.y-y)**2 < 168) {ok=false;break;}
+    }
+    if(!ok) continue;
+    const dom=domainAt(x,y);
+    const type=pickType(dom);
+    CELLS.push({x,y,dom,type,r:5.0+rnd()*2.6, scale:0.72+rnd()*0.62});
+  }
+  // 세포별 진짜 발현량 (정답)
+  for(const c of CELLS){
+    const e=new Float32Array(NGENE);
+    for(let g=0;g<NGENE;g++) e[g]=PROFILE[c.type][g]*domainMultiplier(g,c.dom)*c.scale;
+    c.expr=e;
+  }
+}
+
+/* ---------- 그리기 유틸 ---------- */
+const S = 600/FIELD;
+function clear(cv,bg){const x=cv.getContext('2d');x.fillStyle=bg||'#fbfcfd';x.fillRect(0,0,cv.width,cv.height);return x;}
+function drawDomainBG(ctx,alpha){
+  const img=ctx.createImageData(600,600);
+  for(let py=0;py<600;py++)for(let px=0;px<600;px++){
+    const d=domainAt(px/S,py/S);
+    const c=DOMAINS[d].col;
+    const R=parseInt(c.substr(1,2),16),G=parseInt(c.substr(3,2),16),B=parseInt(c.substr(5,2),16);
+    const i=(py*600+px)*4;
+    img.data[i]=R;img.data[i+1]=G;img.data[i+2]=B;img.data[i+3]=255*(alpha??1);
+  }
+  ctx.putImageData(img,0,0);
+}
+function drawCells(ctx,colorFn,rad){
+  for(const c of CELLS){
+    ctx.fillStyle=colorFn(c);
+    ctx.beginPath();ctx.arc(c.x*S,c.y*S,(rad||c.r)*S*1.35,0,6.284);ctx.fill();
+  }
+}
+function legend(el,items){
+  el.innerHTML=items.map(o=>`<span><i style="background:${o.col}"></i>${o.name}</span>`).join('');
+}
+function say(id,msg,cls){
+  const el=document.getElementById(id);
+  el.innerHTML += (el.innerHTML?'\n':'') + (cls?`<span class="${cls}">${msg}</span>`:msg);
+  el.scrollTop=el.scrollHeight;
+}
+function reset(id){document.getElementById(id).innerHTML='';}
+
+/* ---------- STEP 1 ---------- */
+function renderTruth(){
+  const a=clear(document.getElementById('c-truth'));
+  drawCells(a,c=>TYPES[c.type].col);
+  const b=document.getElementById('c-domain').getContext('2d');
+  drawDomainBG(b);
+  b.globalAlpha=.55; drawCells(b,c=>'#33414f'); b.globalAlpha=1;
+  legend(document.getElementById('lg-type'),TYPES);
+  legend(document.getElementById('lg-dom'),DOMAINS);
+}
+document.getElementById('b-gen').onclick=()=>{
+  RNG=mulberry32(+document.getElementById('r-seed').value);
+  NCELL=+document.getElementById('r-ncell').value;
+  reset('log1');
+  say('log1','[INFO] 1000 × 1000 µm 조직 절편을 생성합니다…');
+  genTissue();
+  renderTruth();
+  const cnt=[0,0,0,0,0,0]; CELLS.forEach(c=>cnt[c.type]++);
+  say('log1',`[OK] 세포 ${CELLS.length.toLocaleString()}개 배치 완료`,'ok');
+  say('log1','[INFO] 유형별 세포 수 — '+TYPES.map((t,i)=>`${t.name} ${cnt[i]}`).join(', '));
+  say('log1',`[INFO] 유전자 ${NGENE}종 (세포유형 마커 30, 영역 마커 15, 하우스키핑 15)`);
+  say('log1','[NEXT] 이제 이 조직에 두 가지 측정 방식을 적용합니다.','hi');
+  VIS=null;FISH=null;
+  document.getElementById('s2').classList.add('open');
+};
+
+/* ---------- STEP 2 : Visium ---------- */
+let VIS=null;
+function runVisium(){
+  const dia=+document.getElementById('r-dia').value;
+  const pitch=+document.getElementById('r-pitch').value;
+  const eff=+document.getElementById('r-eff').value/100;
+  const rad=dia/2, spots=[];
+  // 육각 격자
+  const dy=pitch*Math.sqrt(3)/2;
+  for(let row=0,y=pitch*0.6;y<FIELD-pitch*0.3;row++,y+=dy){
+    const off=(row%2)?pitch/2:0;
+    for(let x=pitch*0.6+off;x<FIELD-pitch*0.3;x+=pitch){
+      spots.push({x,y,cells:[],counts:new Float32Array(NGENE),total:0});
+    }
+  }
+  for(const c of CELLS){
+    for(const s of spots){
+      if((c.x-s.x)**2+(c.y-s.y)**2 <= rad*rad){ s.cells.push(c); break; }
+    }
+  }
+  for(const s of spots){
+    for(const c of s.cells)
+      for(let g=0;g<NGENE;g++){ const n=poisson(c.expr[g]*eff); s.counts[g]+=n; s.total+=n; }
+    // 우세 유형: 스팟 안 세포 중 최빈
+    const t=[0,0,0,0,0,0]; s.cells.forEach(c=>t[c.type]++);
+    s.domTrue = s.cells.length? t.indexOf(Math.max(...t)) : -1;
+    const d=[0,0,0,0,0]; s.cells.forEach(c=>d[c.dom]++);
+    s.domainTrue = s.cells.length? d.indexOf(Math.max(...d)) : -1;
+    s.pure = s.cells.length? (Math.max(...t)/s.cells.length) : 0;
+  }
+  VIS={spots,dia,pitch,eff};
+  return VIS;
+}
+function renderVisium(){
+  const a=clear(document.getElementById('c-spot'));
+  a.globalAlpha=.9; drawCells(a,c=>TYPES[c.type].col); a.globalAlpha=1;
+  a.strokeStyle='rgba(30,40,55,.55)'; a.lineWidth=1.2;
+  for(const s of VIS.spots){a.beginPath();a.arc(s.x*S,s.y*S,VIS.dia/2*S,0,6.284);a.stroke();}
+  const b=clear(document.getElementById('c-spotres'),'#ffffff');
+  const maxT=Math.max(...VIS.spots.map(s=>s.total),1);
+  for(const s of VIS.spots){
+    const col = s.domTrue>=0 ? TYPES[s.domTrue].col : '#e2e6ea';
+    b.globalAlpha = s.cells.length? (0.35+0.65*Math.min(1,s.total/maxT)) : 0.25;
+    b.fillStyle=col;
+    b.beginPath();b.arc(s.x*S,s.y*S,VIS.dia/2*S,0,6.284);b.fill();
+  }
+  b.globalAlpha=1;
+}
+document.getElementById('b-vis').onclick=()=>{
+  if(!CELLS.length){reset('log2');say('log2','[ERROR] 먼저 1단계에서 조직을 생성하세요.','err');return;}
+  reset('log2');
+  say('log2','[INFO] 스팟 격자를 조직 위에 배치합니다…');
+  runVisium(); renderVisium();
+  const S2=VIS.spots, used=S2.filter(s=>s.cells.length);
+  const cps=used.reduce((a,s)=>a+s.cells.length,0)/Math.max(1,used.length);
+  const mixed=used.filter(s=>s.pure<0.999).length;
+  const meanUMI=used.reduce((a,s)=>a+s.total,0)/Math.max(1,used.length);
+  say('log2',`[OK] 스팟 ${S2.length}개 · 세포가 잡힌 스팟 ${used.length}개`,'ok');
+  say('log2',`[INFO] 스팟당 평균 세포 수: ${cps.toFixed(2)}개`);
+  say('log2',`[INFO] 두 유형 이상이 섞인 스팟: ${used.length?(100*mixed/used.length).toFixed(1):0}%`, mixed/Math.max(1,used.length)>0.5?'warn':'');
+  say('log2',`[INFO] 스팟당 평균 UMI: ${meanUMI.toFixed(0)}`);
+  say('log2',`[INFO] 측정된 유전자: ${NGENE}종 (전사체 전체)`,'ok');
+  say('log2',`[한계] 세포 하나하나를 구분할 수 없습니다. 스팟 값은 그 안 세포들의 합입니다.`,'warn');
+  document.getElementById('s3').classList.add('open');
+};
+
+/* ---------- STEP 3 : FISH ---------- */
+let FISH=null;
+function runFish(){
+  const P=+document.getElementById('r-panel').value;
+  const feff=+document.getElementById('r-feff').value/100;
+  const segErr=+document.getElementById('r-seg').value/100;
+  // 패널 선정: 세포유형 마커를 우선 고르고 남으면 영역 마커
+  const order=[]; for(let t=0;t<6;t++)for(let g=0;g<NGENE;g++) if(GENES[g].kind==='type'&&GENES[g].tgt===t) order.push(g);
+  for(let g=0;g<NGENE;g++) if(GENES[g].kind==='domain') order.push(g);
+  for(let g=0;g<NGENE;g++) if(GENES[g].kind==='hk') order.push(g);
+  const panel=order.slice(0,P);
+  const mols=[];
+  for(const c of CELLS){
+    c.obs=new Float32Array(P);
+    for(let pi=0;pi<P;pi++){
+      const n=poisson(c.expr[panel[pi]]*feff);
+      for(let k=0;k<n;k++){
+        const th=rnd()*6.284, rr=Math.sqrt(rnd())*c.r*1.5;
+        mols.push({x:c.x+Math.cos(th)*rr, y:c.y+Math.sin(th)*rr, g:pi, src:c});
+      }
+    }
+  }
+  // 세포 분할: 확률적으로 이웃 세포에 잘못 배정
+  for(const m of mols){
+    let host=m.src;
+    if(rnd()<segErr){
+      let best=null,bd=1e9;
+      for(const c of CELLS){ if(c===m.src)continue; const d=(c.x-m.x)**2+(c.y-m.y)**2; if(d<bd){bd=d;best=c;} }
+      if(best && bd<(40*40)) host=best;
+    }
+    m.host=host; host.obs[m.g]++;
+  }
+  FISH={panel,P,mols,feff,segErr};
+  return FISH;
+}
+function renderFish(){
+  const a=clear(document.getElementById('c-mol'),'#ffffff');
+  const pal=['#2f6fa8','#c73e3e','#2f8a52','#b8790a','#7a4fa3','#4a9ed4','#d4772f','#3aa8a0'];
+  for(const m of FISH.mols){
+    a.fillStyle=pal[m.g%pal.length];
+    a.fillRect(m.x*S-0.9,m.y*S-0.9,1.8,1.8);
+  }
+  // 관측치로 세포 유형 판정 (최대 마커 발현)
+  const b=clear(document.getElementById('c-fishres'));
+  for(const c of CELLS){
+    let best=-1,bv=-1;
+    for(let pi=0;pi<FISH.P;pi++){
+      const G=GENES[FISH.panel[pi]];
+      if(G.kind!=='type')continue;
+      if(c.obs[pi]>bv){bv=c.obs[pi];best=G.tgt;}
+    }
+    c.callType = bv>0? best : -1;
+    b.fillStyle = c.callType>=0? TYPES[c.callType].col : '#cdd3da';
+    b.beginPath();b.arc(c.x*S,c.y*S,c.r*S*1.35,0,6.284);b.fill();
+  }
+}
+document.getElementById('b-fish').onclick=()=>{
+  if(!CELLS.length){reset('log3');say('log3','[ERROR] 먼저 1단계에서 조직을 생성하세요.','err');return;}
+  reset('log3');
+  say('log3','[INFO] 프로브 패널을 설계하고 분자를 검출합니다…');
+  runFish(); renderFish();
+  const typeGenes=FISH.panel.filter(g=>GENES[g].kind==='type').length;
+  const covered=new Set(FISH.panel.filter(g=>GENES[g].kind==='type').map(g=>GENES[g].tgt)).size;
+  const ok=CELLS.filter(c=>c.callType===c.type).length;
+  say('log3',`[OK] 분자 ${FISH.mols.length.toLocaleString()}개 검출 · 세포 ${CELLS.length}개 모두 개별 분해`,'ok');
+  say('log3',`[INFO] 패널 ${FISH.P}종 중 세포유형 마커 ${typeGenes}종 → 6개 유형 중 ${covered}개 커버`, covered<6?'warn':'ok');
+  say('log3',`[INFO] 측정된 유전자: ${FISH.P}종 / 전체 ${NGENE}종 (${(100*FISH.P/NGENE).toFixed(0)}%)`, FISH.P<NGENE?'warn':'');
+  say('log3',`[INFO] 세포 유형 판정 정확도: ${(100*ok/CELLS.length).toFixed(1)}%`);
+  if(covered<6) say('log3',`[한계] 패널에 없는 유형은 원리적으로 찾을 수 없습니다. 패널 크기를 늘려보세요.`,'warn');
+  document.getElementById('s4').classList.add('open');
+};
+
+/* ---------- STEP 4 : 채점 ---------- */
+document.getElementById('b-score').onclick=()=>{
+  reset('log4');
+  if(!VIS||!FISH){say('log4','[ERROR] 2단계와 3단계를 먼저 실행하세요.','err');return;}
+  // 영역 과제: Visium 스팟의 발현으로 영역 분류가 가능한가 (영역 마커 신호 대비)
+  const used=VIS.spots.filter(s=>s.cells.length);
+  let domHit=0;
+  for(const s of used){
+    let best=-1,bv=-1;
+    for(let d=0;d<5;d++){
+      let v=0,n=0;
+      for(let g=0;g<NGENE;g++) if(GENES[g].kind==='domain'&&GENES[g].tgt===d){v+=s.counts[g];n++;}
+      v/=Math.max(1,n); if(v>bv){bv=v;best=d;}
+    }
+    if(best===s.domainTrue) domHit++;
+  }
+  const visDom = 100*domHit/Math.max(1,used.length);
+  // Visium 세포유형 과제: 스팟 순도의 한계
+  const visPure = 100*used.reduce((a,s)=>a+s.pure,0)/Math.max(1,used.length);
+  // FISH 세포유형 과제
+  const fishType = 100*CELLS.filter(c=>c.callType===c.type).length/CELLS.length;
+  // FISH 영역 과제: 패널에 영역 마커가 있어야 가능
+  const domInPanel=FISH.panel.filter(g=>GENES[g].kind==='domain').length;
+  let fishDom=0;
+  if(domInPanel>0){
+    let hit=0;
+    for(const c of CELLS){
+      let best=-1,bv=-1;
+      for(let pi=0;pi<FISH.P;pi++){const G=GENES[FISH.panel[pi]];if(G.kind!=='domain')continue;if(c.obs[pi]>bv){bv=c.obs[pi];best=G.tgt;}}
+      if(best===c.dom)hit++;
+    }
+    fishDom=100*hit/CELLS.length;
+  }
+  const f=(v,g)=>`<span class="${v>=g?'good':'bad'}">${v.toFixed(1)}%</span>`;
+  document.getElementById('scorewrap').innerHTML=`
+  <table class="tbl">
+    <tr><th>항목</th><th>Visium (시퀀싱)</th><th>FISH (이미징)</th></tr>
+    <tr><td>측정 유전자 수</td><td>${NGENE} / ${NGENE}</td><td>${FISH.P} / ${NGENE}</td></tr>
+    <tr><td>공간 해상도</td><td>${VIS.dia} µm 스팟</td><td>세포 단위</td></tr>
+    <tr><td>분해된 관측 단위</td><td>스팟 ${used.length}개</td><td>세포 ${CELLS.length}개</td></tr>
+    <tr><td>스팟 순도 (단일 유형 비율)</td><td>${f(visPure,80)}</td><td>—</td></tr>
+    <tr><td><b>조직 영역 분류 정확도</b></td><td>${f(visDom,75)}</td><td>${domInPanel?f(fishDom,75):'<span class="bad">측정 불가</span>'}</td></tr>
+    <tr><td><b>세포 유형 판정 정확도</b></td><td><span class="bad">원리적으로 불가</span></td><td>${f(fishType,75)}</td></tr>
+  </table>`;
+  say('log4',`[결과] Visium — 영역 분류 ${visDom.toFixed(1)}%, 전사체 전체 확보`,'ok');
+  say('log4',`[결과] FISH — 세포 유형 판정 ${fishType.toFixed(1)}%, 패널 ${FISH.P}종으로 제한`,'ok');
+  say('log4','');
+  say('log4','[해석] Visium은 "여기가 어떤 조직인가"에 강하고, FISH는 "이 세포가 무엇인가"에 강합니다.','hi');
+  say('log4','[해석] 스팟 안에 세포가 여러 개 섞이는 한, Visium 단독으로 세포 유형을 확정할 수 없습니다.','hi');
+  say('log4','[해석] 패널에 없는 유전자는 FISH에 존재하지 않는 것과 같습니다. 무엇을 볼지 미리 정해야 합니다.','hi');
+  document.getElementById('s5').classList.add('open');
+  buildSummary();
+};
+
+/* ---------- STEP 5 : 정리 + 퀴즈 ---------- */
+function buildSummary(){
+  document.getElementById('summary-tbl').innerHTML=`
+    <tr><th>구분</th><th>Visium 계열</th><th>FISH 계열 (MERFISH / Xenium)</th></tr>
+    <tr><td>측정 원리</td><td>스팟에서 mRNA 포획 후 시퀀싱</td><td>형광 프로브로 분자를 직접 이미징</td></tr>
+    <tr><td>유전자 범위</td><td>전사체 전체 (사전 설계 불필요)</td><td>패널 수백 종 (사전 설계 필요)</td></tr>
+    <tr><td>공간 해상도</td><td>스팟 단위 (55 µm, 세포 여럿)</td><td>세포~세포내 단위</td></tr>
+    <tr><td>주된 오차</td><td>스팟 내 세포 혼합</td><td>세포 분할 오류, 광학 혼선</td></tr>
+    <tr><td>후속 분석</td><td>디컨볼루션으로 조성 추정</td><td>분할 후 세포별 클러스터링</td></tr>
+    <tr><td>잘 맞는 질문</td><td>어느 영역이 다른가, 후보 유전자 찾기</td><td>이 세포가 무엇이고 어디 붙어 있나</td></tr>`;
+}
+const QUIZ=[
+  {q:'Visium 데이터에서 어떤 스팟의 발현 프로파일이 신경세포 마커와 별세포 마커를 동시에 강하게 보였습니다. 가장 타당한 해석은?',
+   opts:['그 자리에 두 성질을 모두 가진 새로운 세포 유형이 있다','스팟 안에 신경세포와 별세포가 함께 들어 있다','시퀀싱 오류다','프로브 설계가 잘못됐다'],
+   ans:1, fb:'스팟은 세포 하나가 아니라 그 안 세포들의 합입니다. 혼합 신호가 기본값이고, 그래서 디컨볼루션이 필요합니다. 새로운 세포 유형을 주장하려면 세포 단위 해상도의 근거가 따로 있어야 합니다.'},
+  {q:'MERFISH 실험에서 관심 있던 전사인자가 데이터에 전혀 나타나지 않았습니다. 먼저 확인할 것은?',
+   opts:['시퀀싱 깊이를 늘린다','해당 유전자가 패널에 포함되어 있었는지 확인한다','스팟 크기를 줄인다','세포를 더 많이 측정한다'],
+   ans:1, fb:'이미징 기반은 프로브를 만든 유전자만 보입니다. 패널에 없으면 발현량이 아무리 높아도 데이터에 나타나지 않습니다. 시퀀싱 기반과 가장 크게 갈리는 지점입니다.'},
+  {q:'세포 분할(segmentation) 오류가 크면 생기는 대표적인 문제는?',
+   opts:['유전자 검출 효율이 떨어진다','이웃 세포의 전사체가 섞여 실재하지 않는 중간 유형이 만들어진다','공간 좌표가 사라진다','패널 크기가 줄어든다'],
+   ans:1, fb:'경계를 잘못 그으면 옆 세포 분자가 넘어옵니다. 그 결과 두 유형의 중간처럼 보이는 가짜 집단이 생기는데, 진짜 중간 상태와 구분하기 어려워서 실전에서 특히 성가십니다.'},
+  {q:'조직 전체를 훑어 관심 영역을 찾고, 그 영역의 세포 조성을 확정하려 합니다. 합리적인 설계는?',
+   opts:['Visium만 쓴다','FISH만 쓴다','Visium으로 탐색하고 관심 영역을 FISH 패널로 검증한다','둘 다 필요 없다'],
+   ans:2, fb:'실제 연구에서 흔한 조합입니다. 가설이 없는 탐색 단계는 전사체 전체를 보는 쪽이, 확정 단계는 세포 해상도를 가진 쪽이 유리합니다.'},
+];
+function buildQuiz(){
+  document.getElementById('quizwrap').innerHTML = QUIZ.map((Q,i)=>`
+    <div class="qbox" data-i="${i}">
+      <div class="q">Q${i+1}. ${Q.q}</div>
+      ${Q.opts.map((o,j)=>`<button class="qopt" data-j="${j}">${o}</button>`).join('')}
+      <div class="qfb">${Q.fb}</div>
+    </div>`).join('');
+  document.querySelectorAll('.qbox').forEach(box=>{
+    const i=+box.dataset.i;
+    box.querySelectorAll('.qopt').forEach(btn=>{
+      btn.onclick=()=>{
+        const j=+btn.dataset.j;
+        box.querySelectorAll('.qopt').forEach(b=>b.disabled=true);
+        btn.classList.add(j===QUIZ[i].ans?'right':'wrong');
+        if(j!==QUIZ[i].ans) box.querySelectorAll('.qopt')[QUIZ[i].ans].classList.add('right');
+        box.querySelector('.qfb').classList.add('show');
+      };
+    });
+  });
+}
+
+/* ---------- 슬라이더 표시값 ---------- */
+const bind=(id,vid,fmt)=>{const r=document.getElementById(id),v=document.getElementById(vid);
+  const up=()=>v.textContent=fmt(r.value); r.addEventListener('input',up); up();};
+bind('r-ncell','v-ncell',x=>x);
+bind('r-seed','v-seed',x=>x);
+bind('r-dia','v-dia',x=>x+' µm');
+bind('r-pitch','v-pitch',x=>x+' µm');
+bind('r-eff','v-eff',x=>x+'%');
+bind('r-panel','v-panel',x=>x+' 종');
+bind('r-feff','v-feff',x=>x+'%');
+bind('r-seg','v-seg',x=>x+'%');
+
+/* ---------- 스텝 접기/펴기 ---------- */
+document.querySelectorAll('.step-head').forEach(h=>{
+  h.onclick=()=>h.parentElement.classList.toggle('open');
+});
+
+buildQuiz();
+</script>
+</body>
+</html>

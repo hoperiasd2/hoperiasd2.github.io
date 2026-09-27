@@ -1,0 +1,1516 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>PYCELL — 로컬 파이썬 노트북</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/pyodide/v0.28.3/full/pyodide.js"></script>
+<script src="https://biowasm.com/cdn/v3/aioli.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pako/2.1.0/pako.min.js"></script>
+<style>
+:root{
+  --bg:#ffffff; --bg-deep:#f3f4f6; --panel:#ffffff; --panel-alt:#f6f7f9;
+  --panel-raised:#eef0f3; --border:#d8dce2; --border-soft:#e6e9ee;
+  --text:#1a1d23; --text-dim:#4b5563; --text-faint:#8b95a3;
+  --accent:#2f8a52; --accent-dim:#dcf3e3; --blue:#2f6fa8; --amber:#b8790a; --red:#c73e3e;
+  --font-display:'Sora',sans-serif; --font-mono:'JetBrains Mono',monospace;
+}
+*{box-sizing:border-box;}
+body{margin:0;background:var(--bg);color:var(--text);font-family:var(--font-display);font-size:14px;-webkit-font-smoothing:antialiased;}
+::-webkit-scrollbar{width:10px;height:10px;}
+::-webkit-scrollbar-track{background:var(--bg-deep);}
+::-webkit-scrollbar-thumb{background:var(--border);border-radius:5px;}
+
+header{display:flex;align-items:center;gap:14px;padding:12px 22px;background:var(--bg-deep);border-bottom:1px solid var(--border);}
+.logo{font-family:var(--font-mono);font-weight:700;font-size:18px;letter-spacing:.5px;}
+.logo span:nth-child(1){color:var(--accent);}
+.logo-sub{font-family:var(--font-mono);font-size:11px;color:var(--text-faint);padding-left:10px;border-left:1px solid var(--border);margin-left:4px;}
+.status{margin-left:auto;display:flex;align-items:center;gap:8px;font-family:var(--font-mono);font-size:11.5px;color:var(--text-faint);}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--text-faint);}
+.dot.ready{background:var(--accent);box-shadow:0 0 6px var(--accent);}
+.dot.busy{background:var(--amber);box-shadow:0 0 6px var(--amber);animation:pulse 1s infinite;}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+.badge{font-family:var(--font-mono);font-size:10px;color:var(--accent);border:1px solid var(--accent);padding:2px 7px;border-radius:3px;cursor:help;}
+
+.toolbar{display:flex;gap:8px;padding:10px 22px;background:var(--panel);border-bottom:1px solid var(--border);align-items:center;flex-wrap:wrap;}
+button{font-family:var(--font-display);font-weight:600;font-size:12.5px;border-radius:6px;border:1px solid var(--border);background:var(--panel-raised);color:var(--text);padding:8px 13px;cursor:pointer;transition:filter .1s;}
+button:hover:not(:disabled){filter:brightness(1.2);}
+button:disabled{opacity:.35;cursor:not-allowed;}
+.btn-primary{background:linear-gradient(135deg,#1e3f2a,#14291b);border-color:var(--accent);color:#c9f2d4;}
+.sep{width:1px;height:22px;background:var(--border);margin:0 4px;}
+select{background:var(--panel-alt);border:1px solid var(--border);color:var(--text);border-radius:6px;padding:7px 9px;font-family:var(--font-mono);font-size:12px;}
+input[type=file]{display:none;}
+
+.wrap{max-width:1040px;margin:0 auto;padding:24px 22px 120px;}
+.cell{border:1px solid var(--border);border-radius:10px;margin-bottom:16px;background:var(--panel);overflow:hidden;}
+.cell.running{border-color:var(--amber);}
+.cell-head{display:flex;align-items:center;gap:8px;padding:6px 10px;background:var(--panel-alt);border-bottom:1px solid var(--border-soft);}
+.cell-idx{font-family:var(--font-mono);font-size:11px;color:var(--text-faint);width:44px;}
+.cell-actions{margin-left:auto;display:flex;gap:5px;}
+.icon-btn{background:transparent;border:none;color:var(--text-faint);padding:4px 7px;font-size:13px;border-radius:5px;}
+.icon-btn:hover{background:var(--panel-raised);color:var(--text);}
+.cell-editor{position:relative;}
+textarea.code{
+  width:100%;min-height:60px;resize:vertical;background:var(--bg-deep);color:var(--text);
+  border:none;outline:none;font-family:var(--font-mono);font-size:13px;line-height:1.6;
+  padding:12px 14px;tab-size:4;white-space:pre;overflow-wrap:normal;overflow-x:auto;
+}
+.run-hint{position:absolute;right:10px;bottom:8px;font-family:var(--font-mono);font-size:10px;color:var(--text-faint);pointer-events:none;}
+.cell-output{border-top:1px solid var(--border-soft);}
+.out-block{padding:10px 14px;font-family:var(--font-mono);font-size:12.5px;white-space:pre-wrap;word-break:break-word;line-height:1.55;}
+.out-stdout{color:var(--text);background:var(--bg-deep);}
+.out-error{color:#a12f2f;background:#fbeaea;}
+.out-result{color:var(--blue);background:var(--bg-deep);}
+.out-img{padding:10px 14px;background:var(--bg-deep);}
+.out-img img{max-width:100%;border-radius:6px;border:1px solid var(--border-soft);}
+.exec-count{font-family:var(--font-mono);color:var(--text-faint);font-size:11px;}
+
+.add-cell-row{display:flex;justify-content:center;gap:10px;margin:6px 0 30px;}
+.add-cell-row button{padding:7px 16px;}
+
+.loading-screen{
+  position:fixed;inset:0;background:var(--bg);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;z-index:100;
+}
+.loading-screen.hidden{display:none;}
+.spinner{width:34px;height:34px;border:3px solid var(--border);border-top-color:var(--accent);border-radius:50%;animation:spin 0.9s linear infinite;}
+@keyframes spin{to{transform:rotate(360deg);}}
+.loading-text{font-family:var(--font-mono);font-size:12.5px;color:var(--text-dim);}
+.loading-sub{font-family:var(--font-mono);font-size:11px;color:var(--text-faint);max-width:360px;text-align:center;line-height:1.6;}
+
+.filepanel{
+  background:var(--panel);border:1px solid var(--border);border-radius:10px;padding:14px 16px;margin-bottom:16px;
+}
+.filepanel h3{margin:0 0 8px;font-size:12px;color:var(--text-faint);text-transform:uppercase;letter-spacing:.5px;font-weight:600;}
+.filelist{display:flex;flex-wrap:wrap;gap:8px;}
+.filechip{
+  font-family:var(--font-mono);font-size:11.5px;background:var(--panel-alt);border:1px solid var(--border-soft);
+  border-radius:6px;padding:5px 10px;color:var(--text-dim);
+}
+.filechip b{color:var(--accent);}
+.empty-hint{color:var(--text-faint);font-size:11.5px;font-family:var(--font-mono);}
+
+.tooltip-note{font-size:11px;color:var(--text-faint);margin-left:8px;font-family:var(--font-mono);}
+
+/* ---------- NGS GUIDED PIPELINE ---------- */
+.ngs-panel{
+  background:var(--panel);border:1px solid var(--accent);border-radius:10px;margin-bottom:16px;overflow:hidden;
+  box-shadow:0 0 0 1px rgba(47,138,82,0.15);
+}
+.ngs-panel-head{
+  display:flex;align-items:center;gap:10px;padding:12px 16px;background:linear-gradient(135deg,#1e3f2a,#16241c);
+  border-bottom:1px solid var(--border);
+}
+.ngs-panel-head .t{font-weight:700;font-size:13.5px;color:#d9f5e2;}
+.ngs-panel-head .s{font-family:var(--font-mono);font-size:11px;color:#9fcbad;margin-left:auto;}
+.ngs-body{padding:14px 16px;}
+.ngs-files{display:flex;gap:10px;margin-bottom:12px;flex-wrap:wrap;}
+.ngs-file-slot{
+  flex:1;min-width:200px;background:var(--panel-alt);border:1px dashed var(--border);border-radius:8px;
+  padding:10px 12px;font-family:var(--font-mono);font-size:11.5px;
+}
+.ngs-file-slot.filled{border-style:solid;border-color:var(--accent);}
+.ngs-file-slot .lbl{color:var(--text-faint);font-size:10px;text-transform:uppercase;letter-spacing:.4px;margin-bottom:3px;}
+.ngs-steps{display:flex;flex-direction:column;gap:8px;margin-top:10px;}
+.ngs-step{
+  display:flex;align-items:center;gap:12px;padding:10px 12px;background:var(--panel-alt);border-radius:8px;border:1px solid var(--border-soft);
+}
+.ngs-step .num{
+  width:24px;height:24px;border-radius:50%;background:var(--panel-raised);border:1px solid var(--border);
+  display:flex;align-items:center;justify-content:center;font-family:var(--font-mono);font-size:11px;color:var(--text-dim);flex-shrink:0;
+}
+.ngs-step.done .num{background:var(--accent-dim);border-color:var(--accent);color:var(--accent);}
+.ngs-step.active .num{background:var(--amber);border-color:var(--amber);color:#2a1e05;}
+.ngs-step .info{flex:1;}
+.ngs-step .title{font-size:12.5px;font-weight:600;}
+.ngs-step .desc{font-size:11px;color:var(--text-faint);margin-top:2px;}
+.ngs-step .cmdline{font-family:var(--font-mono);font-size:10.5px;color:var(--blue);margin-top:3px;}
+.ngs-log{
+  margin-top:12px;background:var(--bg-deep);border:1px solid var(--border-soft);border-radius:8px;
+  font-family:var(--font-mono);font-size:11.5px;padding:10px 12px;max-height:180px;overflow-y:auto;line-height:1.6;
+}
+.ngs-log .l{white-space:pre-wrap;word-break:break-all;}
+.ngs-log .l.cmd{color:#0a72c4;}
+.ngs-log .l.cmd::before{content:"$ ";color:var(--text-faint);}
+.ngs-log .l.ok{color:var(--accent);}
+.ngs-log .l.err{color:#a12f2f;}
+.ngs-log .l.info{color:var(--text-dim);}
+.ngs-result{display:flex;gap:10px;margin-top:12px;flex-wrap:wrap;align-items:center;}
+.ngs-note{font-size:10.5px;color:var(--text-faint);line-height:1.6;margin-top:10px;background:var(--panel-alt);border:1px solid var(--border-soft);border-radius:6px;padding:8px 10px;}
+
+.fmt-tab-btn{font-size:12px;padding:6px 12px;}
+.fmt-tab-btn.active{background:var(--panel-raised);border-color:var(--amber);color:var(--amber);}
+.fmt-tab-content p{font-size:12px;line-height:1.7;color:var(--text-dim);margin:0 0 10px;}
+.fmt-tab-content code{background:var(--panel-alt);border:1px solid var(--border-soft);border-radius:4px;padding:1px 5px;color:var(--accent);font-family:var(--font-mono);font-size:11px;}
+</style>
+</head>
+<body>
+
+<div class="loading-screen" id="loadingScreen">
+  <div class="spinner"></div>
+  <div class="loading-text" id="loadingText">Python 런타임 불러오는 중…</div>
+  <div class="loading-sub">브라우저 안에서 진짜 CPython(Pyodide/WebAssembly)을 내려받아 실행합니다.<br>서버 호출 없음 · API 비용 없음 · 계산은 이 PC에서 수행됩니다.</div>
+</div>
+
+<header>
+  <div class="logo"><span>PY</span>CELL</div>
+  <div class="logo-sub">로컬 파이썬 노트북 · Pyodide WebAssembly</div>
+  <span class="badge" title="이 노트북은 Anthropic/Claude API를 전혀 호출하지 않습니다. Pyodide(WebAssembly로 컴파일된 CPython)를 브라우저에 내려받아 이 기기의 CPU로 직접 실행합니다. 인터넷 연결은 최초 1회 런타임/패키지 다운로드에만 필요하고, 이후 코드 실행은 완전히 오프라인·로컬로 동작합니다.">비용 없음 · 로컬 실행 ⓘ</span>
+  <div class="status"><span class="dot" id="statusDot"></span><span id="statusText">초기화 중</span></div>
+</header>
+
+<div class="toolbar">
+  <button class="btn-primary" id="btnRunAll">▶▶ 전체 실행</button>
+  <button id="btnAddCell">＋ 셀 추가</button>
+  <div class="sep"></div>
+  <button id="btnUpload">⬆ 파일 업로드</button>
+  <input type="file" id="fileInput" multiple>
+  <select id="pkgSelect">
+    <option value="">패키지 설치…</option>
+    <option value="numpy">numpy</option>
+    <option value="pandas">pandas</option>
+    <option value="matplotlib">matplotlib</option>
+    <option value="scipy">scipy</option>
+    <option value="scikit-learn">scikit-learn</option>
+    <option value="biopython">biopython (Bio)</option>
+    <option value="micropip:custom">직접 입력…</option>
+  </select>
+  <div class="sep"></div>
+  <button id="btnDownload">⬇ .ipynb로 저장</button>
+  <button id="btnReset">↺ 런타임 초기화</button>
+  <span class="tooltip-note" id="pkgStatus"></span>
+</div>
+
+<div class="wrap">
+  <div class="filepanel">
+    <h3>업로드된 파일 (Python에서 그대로 경로로 접근 가능)</h3>
+    <div class="filelist" id="fileList"><span class="empty-hint">업로드된 파일 없음 — 위 "파일 업로드" 버튼으로 추가하세요. 예: open('/data/파일명')</span></div>
+  </div>
+
+  <div class="ngs-panel" id="ngsPanel" style="display:none">
+    <div class="ngs-panel-head">
+      <span class="t">🧬 NGS 파이프라인 감지됨</span>
+      <span class="s" id="ngsToolStatus">real minimap2 · samtools · bcftools (WASM)</span>
+    </div>
+    <div class="ngs-body">
+      <div class="ngs-files">
+        <div class="ngs-file-slot" id="ngsRefSlot"><div class="lbl">Reference</div><div id="ngsRefName">감지 안됨</div></div>
+        <div class="ngs-file-slot" id="ngsFqSlot"><div class="lbl">FASTQ reads</div><div id="ngsFqName">감지 안됨</div></div>
+      </div>
+
+      <div class="ngs-step" id="trimBox" style="display:none; align-items:flex-start;flex-direction:column;gap:8px;background:#241a2e;border-color:#4a3a5f;">
+        <div style="display:flex;align-items:center;gap:10px;width:100%;">
+          <div class="num">✂️</div>
+          <div class="info">
+            <div class="title">(권장) Reference를 작은 구간으로 먼저 잘라두기</div>
+            <div class="desc">reference가 크면(예: 대장균 전체 4.6Mb) 이후 모든 단계가 무거워집니다. 여기서 미리 일부만 잘라두면 wgsim/정렬/변이호출이 전부 그 작은 구간 기준으로 가볍게 돌아가고, 낭비되는 리드도 없습니다.</div>
+          </div>
+        </div>
+        <div style="display:flex;gap:8px;flex-wrap:wrap;width:100%;padding-left:36px;align-items:flex-end;">
+          <div class="field" style="margin-left:0"><label>자를 구간 (contig 내 좌표)</label><input type="text" id="trimRegion" value="1-300000" style="width:160px"></div>
+          <button id="btnTrimRef">✂ 이 구간으로 자르기</button>
+          <span style="font-size:10.5px;color:var(--text-faint)">적용하면 원본 reference를 대체합니다 (기존 FASTQ/정렬결과는 초기화됨)</span>
+        </div>
+      </div>
+
+      <div class="ngs-step" id="ngsSimBox" style="align-items:flex-start;flex-direction:column;gap:8px;">
+        <div style="display:flex;align-items:center;gap:10px;width:100%;">
+          <div class="num">🎲</div>
+          <div class="info">
+            <div class="title">FASTQ 없이 시작하기 — 합성 리드 생성 (wgsim)</div>
+            <div class="desc">reference만 있으면, 실제 wgsim(WASM)으로 그 reference 기반 가상 시퀀싱 리드를 만들어줍니다</div>
+          </div>
+        </div>
+        <div style="display:flex;gap:8px;flex-wrap:wrap;width:100%;padding-left:36px;">
+          <div class="field" style="margin-left:0"><label>리드 길이(bp)</label><input type="number" id="simReadLen" value="100" style="width:90px"></div>
+          <div class="field" style="margin-left:0"><label>커버리지(x)</label><input type="number" id="simCoverage" value="15" style="width:90px"></div>
+          <div class="field" style="margin-left:0"><label>시퀀싱 에러율</label><input type="number" id="simErrRate" value="0.01" step="0.001" style="width:90px"></div>
+          <div class="field" style="margin-left:0"><label>변이(돌연변이)율</label><input type="number" id="simMutRate" value="0.001" step="0.0005" style="width:90px"></div>
+          <button id="btnSimulate" style="align-self:flex-end">🎲 wgsim으로 리드 생성</button>
+        </div>
+      </div>
+
+      <div class="ngs-steps">
+        <div class="ngs-step" id="ngsStep1">
+          <div class="num">1</div>
+          <div class="info">
+            <div class="title">정렬 (minimap2)</div>
+            <div class="desc">실제 minimap2 WASM 바이너리로 reads를 reference에 정렬합니다</div>
+            <div class="cmdline">minimap2 -a -x sr reference.fa reads.fastq &gt; aligned.sam</div>
+          </div>
+        </div>
+        <div class="ngs-step" id="ngsStep2">
+          <div class="num">2</div>
+          <div class="info">
+            <div class="title">정렬결과 정리 (samtools)</div>
+            <div class="desc">SAM → 정렬된 BAM으로 변환하고 인덱싱합니다</div>
+            <div class="cmdline">samtools sort aligned.sam -o aligned.sorted.bam && samtools index aligned.sorted.bam</div>
+          </div>
+        </div>
+        <div class="ngs-step" id="ngsStep3">
+          <div class="num">3</div>
+          <div class="info">
+            <div class="title">변이 호출 (bcftools)</div>
+            <div class="desc">pileup을 만들고 변이를 호출합니다 (GATK의 경량 대안, 실제 도구)</div>
+            <div class="cmdline" id="mpileupCmdPreview">bcftools mpileup -f reference.fa aligned.sorted.bam | bcftools call -mv -Ov -o variants.vcf</div>
+            <div style="display:flex;gap:8px;align-items:center;margin-top:8px;">
+              <label style="font-size:11px;color:var(--text-faint);display:flex;align-items:center;gap:5px;">
+                <input type="checkbox" id="regionLimitOn" checked style="width:auto"> 분석 영역 제한 (메모리 절약)
+              </label>
+              <input type="number" id="regionLimitLen" value="300000" style="width:110px" title="앞부분 몇 bp까지만 변이호출할지">
+              <span style="font-size:10.5px;color:var(--text-faint)">bp (0 = 전체 게놈, 메모리 많이 씀)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="ngs-result" id="ngsResultRow" style="display:none">
+        <button class="btn-primary" id="btnDownloadVCF">⬇ variants.vcf 다운로드</button>
+        <button id="btnDownloadBAM">⬇ aligned.sorted.bam 다운로드</button>
+        <button id="btnVcfToCell">🐍 결과를 코드 셀로 열기 (pandas)</button>
+      </div>
+      <button class="btn-primary" id="btnRunNgsPipeline" style="margin-top:12px;width:100%">▶ 파이프라인 전체 실행</button>
+      <div class="ngs-log" id="ngsLog"><div class="l info">// 참조서열(.fa/.fasta)과 리드(.fastq/.fq) 파일을 위 "파일 업로드"로 올리면 여기서 실행할 수 있습니다</div></div>
+      <div class="ngs-note">⚠ minimap2/samtools/bcftools는 biowasm.com CDN에서 실제 WebAssembly 바이너리를 받아 이 브라우저(=이 PC)에서 직접 실행합니다. 서버로 파일이 전송되지 않습니다. 최초 실행 시 도구 다운로드(수십MB)에 시간이 걸릴 수 있고, 네트워크 상황에 따라 CDN 접근이 막힌 환경에서는 동작하지 않을 수 있습니다.</div>
+    </div>
+  </div>
+
+  <div class="ngs-panel" id="fmtPanel" style="border-color:#5a4a2e;">
+    <div class="ngs-panel-head" style="background:linear-gradient(135deg,#4a3a1e,#221a10)">
+      <span class="t">📚 포맷 가이드</span>
+      <span class="s">탭을 눌러 각 파일 형식 설명 보기</span>
+    </div>
+    <div class="ngs-body">
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+        <button class="fmt-tab-btn active" data-tab="fastq">FASTQ</button>
+        <button class="fmt-tab-btn" data-tab="samvsbam">SAM vs BAM</button>
+        <button class="fmt-tab-btn" data-tab="vcf">VCF 구조</button>
+      </div>
+      <div class="fmt-tab-content" data-tab="fastq">
+        <p><b>4줄이 1개 read.</b> ① <code>@ID</code> (read 이름) ② 서열(A/C/G/T) ③ <code>+</code> (구분선, 가끔 ID 반복) ④ 품질값 — 서열과 정확히 같은 길이.</p>
+        <p>품질값은 <b>Phred+33</b> 인코딩: ASCII 코드 - 33 = Phred quality. 문자 <code>I</code>(ASCII 73) → Q40(매우 좋음), 문자 <code>#</code>(ASCII 35) → Q2(매우 나쁨). wgsim으로 만든 파일은 보통 전부 같은 문자(Q20 균일) — 실제 시퀀서보다 단순화된 것.</p>
+      </div>
+      <div class="fmt-tab-content" data-tab="samvsbam" style="display:none">
+        <p><b>SAM</b> = 사람이 읽는 탭구분 텍스트. <b>BAM</b> = SAM을 그대로 이진 압축한 것 — 내용은 동일하고 용량만 작아짐(우리 예제에서 SAM 20MB → BAM 3.8MB). BAM은 직접 못 열고 <code>samtools view</code>로 다시 텍스트화해야 함.</p>
+        <p>SAM 컬럼: <code>QNAME FLAG RNAME POS MAPQ CIGAR RNEXT PNEXT TLEN SEQ QUAL [태그들]</code></p>
+        <p><b>FLAG</b>는 비트마스크: 4=매핑 안 됨, 16=역방향 가닥, 256=보조정렬 등. <b>CIGAR</b>는 정렬 모양(M=일치/불일치, I=삽입, D=결실, S=soft-clip). <b>NM 태그</b> = 그 read의 edit distance(미스매치+indel 총 개수) — 이게 우리 "미스매치 비율" 계산의 근거.</p>
+      </div>
+      <div class="fmt-tab-content" data-tab="vcf" style="display:none">
+        <p><code>##</code>로 시작하는 줄 = 메타데이터(포맷 버전, 아래 INFO/FORMAT 필드가 뭘 뜻하는지 정의). <code>#CHROM</code> 줄 = 실제 데이터의 컬럼 이름.</p>
+        <p>데이터 줄: <code>CHROM POS ID REF ALT QUAL FILTER INFO FORMAT SAMPLE</code> — <b>QUAL</b>은 그 변이콜의 신뢰도(Phred 스케일, 높을수록 확실). <b>INFO</b>의 <code>DP</code>=depth(그 위치를 덮은 read 수), <code>AF</code>=alternate allele 비율.</p>
+        <p><b>FORMAT:SAMPLE</b> 부분의 <code>GT</code>=genotype(0/0=ref 동형, 0/1=이형접합, 1/1=alt 동형), <code>PL</code>=각 genotype의 우도(작을수록 그 genotype일 가능성 높음).</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="ngs-panel" id="viPanel" style="display:none; border-color:#3a4a6b;">
+    <div class="ngs-panel-head" style="background:linear-gradient(135deg,#2d3f5f,#141b28)">
+      <span class="t">📟 파일 뷰어 — 실제 생성된 파일 내용 직접 확인</span>
+      <span class="s">head / tail / 줄수 / 패턴검색</span>
+    </div>
+    <div class="ngs-body">
+      <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:8px;">
+        <select id="viFileSelect" style="min-width:240px"></select>
+        <button id="viHead">처음 20줄</button>
+        <button id="viTail">마지막 20줄</button>
+        <button id="viWc">줄 수 세기</button>
+      </div>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:8px;">
+        <input type="text" id="viGrepPattern" placeholder="검색 패턴 (정규식 가능, 예: NM:i:[1-9])" style="flex:1;min-width:220px">
+        <button id="viGrep">🔍 패턴 검색</button>
+      </div>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px;">
+        <button id="viFastqCheck">🧪 FASTQ 4줄 구조 검증</button>
+        <button id="viSamMismatch">🧬 미스매치 포함 리드 비율</button>
+      </div>
+      <div class="ngs-log" id="viOutput" style="max-height:340px;font-size:11.5px;"><div class="l info">// 파일을 선택하고 위 버튼을 눌러보세요. 아직 없는 파일은 회색으로 비활성 상태이거나 오류가 표시됩니다.</div></div>
+      <div class="ngs-note">이 뷰어는 실제로 생성된 파일(참조서열/FASTQ/SAM/BAM/VCF)의 바이트를 직접 읽어서 보여줍니다. BAM은 바이너리라 samtools view로 텍스트화한 뒤 표시합니다. head/tail/줄수/패턴검색은 이 브라우저 안에서 직접 계산합니다(별도 서버 없음).</div>
+    </div>
+  </div>
+
+  <div class="ngs-panel" id="omicsPanel" style="border-color:#5f3a6b;">
+    <div class="ngs-panel-head" style="background:linear-gradient(135deg,#3a2246,#1a1420)">
+      <span class="t">🧬 오믹스 스타일 분석 — VCF 기반 플롯</span>
+      <span class="s">버튼마다 먼저 뭘/왜 계산하는지 설명 → 직접 읽고 고칠 수 있는 파이썬 코드 셀 생성</span>
+    </div>
+    <div class="ngs-body">
+      <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:10px;">
+        <select id="omicsVcfSelect" style="min-width:240px"></select>
+        <span style="font-size:10.5px;color:var(--text-faint)">variants.vcf(파이프라인 결과) 또는 직접 업로드한 .vcf 모두 선택 가능</span>
+      </div>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px;">
+        <button id="btnStatBasic">📋 기본 통계 (SNP/INDEL, Ti/Tv)</button>
+        <button id="btnSig96">🎨 96-context 변이 시그니처 (COSMIC 스타일)</button>
+        <button id="btnManhattan">🗺️ 게놈 위치별 변이 분포</button>
+        <button id="btnQcScatter">🔬 Depth vs Quality QC 산점도</button>
+      </div>
+      <div class="ngs-log" id="omicsOutput" style="max-height:280px;font-size:11.5px;"><div class="l info">// VCF를 선택하고 분석 버튼을 누르세요. 먼저 이 자리에 "무엇을 계산하는지/왜 보는지" 설명이 나오고, 그 다음 아래 노트북에 실행 가능한 코드 셀이 생깁니다.</div></div>
+      <div class="ngs-note">96-context 시그니처는 reference 서열이 필요합니다 (변이 주변 앞뒤 1염기씩 봐야 하므로). 파이프라인에서 쓴 reference가 자동으로 같이 딸려갑니다. 직접 업로드한 공공 VCF라면 그 VCF의 좌표계와 일치하는 reference를 참조서열로 함께 올려주세요.</div>
+    </div>
+  </div>
+
+
+  <div id="cells"></div>
+  <div class="add-cell-row">
+
+    <button id="btnAddCellBottom">＋ 코드 셀 추가</button>
+  </div>
+</div>
+
+<script>
+(function(){
+"use strict";
+
+const $ = id => document.getElementById(id);
+let pyodide = null;
+let execCounter = 0;
+let cellSeq = 0;
+const uploadedFiles = [];
+
+function setStatus(text, mode){
+  $('statusText').textContent = text;
+  const dot = $('statusDot');
+  dot.className = 'dot' + (mode ? ' '+mode : '');
+}
+
+/* ============================================================
+   PYODIDE INIT
+============================================================ */
+async function initPyodide(){
+  try{
+    setStatus('Pyodide 런타임 다운로드 중…','busy');
+    pyodide = await loadPyodide({ indexURL: "https://cdn.jsdelivr.net/pyodide/v0.28.3/full/" });
+    $('loadingText').textContent = '기본 패키지 준비 중…';
+    await pyodide.loadPackage(['micropip']);
+    pyodide.FS.mkdir('/data');
+    // stdout/stderr 캡처를 위한 파이썬측 헬�를 설치
+    await pyodide.runPythonAsync(`
+import sys, io, base64
+class _Capture:
+    def __init__(self):
+        self.buf = io.StringIO()
+    def write(self, s):
+        self.buf.write(s)
+    def flush(self):
+        pass
+`);
+    setStatus('실행 준비 완료','ready');
+    $('loadingScreen').classList.add('hidden');
+    addCell(`# 파이썬 코드를 입력하고 Shift+Enter 로 실행하세요
+import sys
+print("Python", sys.version)
+print("이 코드는 서버가 아니라 지금 이 브라우저(당신의 PC)에서 실행되고 있습니다.")
+`);
+  }catch(err){
+    setStatus('Python 런타임 로드 실패','');
+    $('loadingScreen').innerHTML = `
+      <div style="font-size:26px">⚠</div>
+      <div class="loading-text" style="color:#c73e3e">Python 런타임 로드 실패</div>
+      <div class="loading-sub">오류: ${err.message}<br>네트워크 연결을 확인하고 새로고침 해주세요 (최초 1회 Pyodide 다운로드가 필요합니다).</div>
+      <button id="btnDismissLoading" style="margin-top:6px">코드 셀 없이 계속하기 (NGS 파이프라인만 사용)</button>
+    `;
+    document.getElementById('btnDismissLoading').onclick = ()=>{ $('loadingScreen').classList.add('hidden'); };
+  }
+}
+
+/* ============================================================
+   MATPLOTLIB 지원: Agg 백엔드로 그려서 PNG base64로 반환
+============================================================ */
+let matplotlibReady = false;
+async function ensureMatplotlib(){
+  if(matplotlibReady) return;
+  setStatus('matplotlib 설치 중…','busy');
+  await pyodide.loadPackage(['matplotlib']);
+  await pyodide.runPythonAsync(`
+import matplotlib
+matplotlib.use("AGG")
+import matplotlib.pyplot as plt
+`);
+  matplotlibReady = true;
+  setStatus('실행 준비 완료','ready');
+}
+
+/* ============================================================
+   PACKAGE INSTALL
+============================================================ */
+$('pkgSelect').addEventListener('change', async (e)=>{
+  let pkg = e.target.value;
+  if(!pkg) return;
+  if(pkg === 'micropip:custom'){
+    pkg = prompt('설치할 패키지명 (PyPI 또는 pyodide 지원 패키지):');
+    if(!pkg){ e.target.value=''; return; }
+  }
+  e.target.value='';
+  $('pkgStatus').textContent = `설치 중: ${pkg} …`;
+  setStatus(`패키지 설치 중: ${pkg}`,'busy');
+  try{
+    if(pkg==='matplotlib'){ await ensureMatplotlib(); }
+    else if(['numpy','pandas','scipy','scikit-learn'].includes(pkg)){
+      await pyodide.loadPackage([pkg]);
+    } else if(pkg==='biopython'){
+      await pyodide.loadPackage(['micropip']);
+      const micropip = pyodide.pyimport('micropip');
+      await micropip.install('biopython');
+    } else {
+      const micropip = pyodide.pyimport('micropip');
+      await micropip.install(pkg);
+    }
+    $('pkgStatus').textContent = `✓ ${pkg} 설치 완료`;
+  }catch(err){
+    $('pkgStatus').textContent = `✗ ${pkg} 설치 실패: ${err.message}`;
+  }
+  setStatus('실행 준비 완료','ready');
+});
+
+/* ============================================================
+   FILE UPLOAD -> pyodide virtual FS (/data/...)
+============================================================ */
+$('btnUpload').onclick = ()=>$('fileInput').click();
+$('fileInput').addEventListener('change', async ()=>{
+  const files = Array.from($('fileInput').files);
+  for(const f of files){
+    const buf = new Uint8Array(await f.arrayBuffer());
+    const path = '/data/'+f.name;
+    try{
+      if(pyodide) pyodide.FS.writeFile(path, buf);
+    }catch(e){ console.warn('pyodide FS write skipped:', e.message); }
+    uploadedFiles.push({name:f.name, path, size:f.size, file:f});
+  }
+  renderFileList();
+  await detectNgsFiles(files);
+});
+
+/* ============================================================
+   NGS GUIDED PIPELINE (real minimap2 / samtools / bcftools via biowasm WASM)
+============================================================ */
+const NGS = { refFile:null, fqFile:null, aioli:null, ready:false };
+
+async function degzipIfNeeded(file){
+  if(!/\.gz$/i.test(file.name)) return file;
+  const buf = new Uint8Array(await file.arrayBuffer());
+  const out = pako.inflate(buf);
+  const newName = file.name.replace(/\.gz$/i,'');
+  return new File([out], newName, {type:'text/plain'});
+}
+
+async function detectNgsFiles(newFiles){
+  for(let f of newFiles){
+    const n = f.name.toLowerCase();
+    if(/\.(fa|fasta|fna)(\.gz)?$/.test(n)){
+      ngsLog(`[INFO] 참조서열 인식: ${f.name}` + (/\.gz$/i.test(n)?' (압축 해제 중…)':''));
+      NGS.refFile = await degzipIfNeeded(f);
+    }
+    if(/\.(fastq|fq)(\.gz)?$/.test(n)){
+      ngsLog(`[INFO] FASTQ 인식: ${f.name}` + (/\.gz$/i.test(n)?' (압축 해제 중…)':''));
+      NGS.fqFile = await degzipIfNeeded(f);
+    }
+    if(/\.vcf(\.gz)?$/.test(n)){
+      ngsLog(`[INFO] VCF 인식: ${f.name}` + (/\.gz$/i.test(n)?' (압축 해제 중…)':''));
+      const vf = await degzipIfNeeded(f);
+      const text = await vf.text();
+      NGS.uploadedVcfs = NGS.uploadedVcfs || {};
+      NGS.uploadedVcfs[vf.name] = text;
+      $('ngsPanel').style.display = 'block';
+      viCache.set(vf.name, text);
+    }
+  }
+  if(NGS.refFile || NGS.fqFile){
+    $('ngsPanel').style.display = 'block';
+  }
+  if(NGS.refFile){
+    $('ngsRefName').textContent = NGS.refFile.name;
+    $('ngsRefSlot').classList.add('filled');
+    $('trimBox').style.display = 'flex';
+  }
+  if(NGS.fqFile){
+    $('ngsFqName').textContent = NGS.fqFile.name;
+    $('ngsFqSlot').classList.add('filled');
+  }
+  $('btnRunNgsPipeline').disabled = !(NGS.refFile && NGS.fqFile);
+  viCache.clear();
+  refreshViFileList();
+  refreshOmicsList();
+}
+
+function updateMpileupPreview(){
+  const on = $('regionLimitOn').checked;
+  const len = parseInt($('regionLimitLen').value)||0;
+  const regionTxt = (on && len>0) ? ` -r <contig>:1-${len.toLocaleString()}` : '';
+  $('mpileupCmdPreview').textContent = `bcftools mpileup${regionTxt} -f reference.fa aligned.sorted.bam | bcftools call -mv -Ov -o variants.vcf`;
+}
+$('regionLimitOn').addEventListener('change', updateMpileupPreview);
+$('regionLimitLen').addEventListener('input', updateMpileupPreview);
+updateMpileupPreview();
+
+async function estimateRefLength(file){
+  const text = await file.text();
+  let len = 0;
+  for(const line of text.split('\n')){
+    if(line.startsWith('>')) continue;
+    len += line.trim().length;
+  }
+  return len || 1;
+}
+
+async function getFirstContigName(file){
+  const text = await file.text();
+  for(const line of text.split('\n')){
+    if(line.startsWith('>')){
+      // '>' 다음, 첫 공백 전까지가 contig/서열 이름 (bcftools -r 에서 쓰는 이름과 동일해야 함)
+      return line.slice(1).trim().split(/\s+/)[0];
+    }
+  }
+  return null;
+}
+
+$('btnTrimRef').onclick = async ()=>{
+  if(!NGS.refFile){ ngsLog('[ERROR] 먼저 참조서열을 업로드하세요','err'); return; }
+  const regionSpec = $('trimRegion').value.trim();
+  if(!/^\d+-\d+$/.test(regionSpec)){ ngsLog('[ERROR] "시작-끝" 형식으로 입력하세요 (예: 1-300000)','err'); return; }
+  const btn = $('btnTrimRef');
+  btn.disabled = true;
+  try{
+    const CLI = await ensureAioli();
+    const contig = await getFirstContigName(NGS.refFile);
+    if(!contig) throw new Error('reference에서 contig 이름을 찾을 수 없습니다');
+    await CLI.mount([NGS.refFile]);
+    const region = `${contig}:${regionSpec}`;
+    ngsCmd(`samtools faidx ${NGS.refFile.name} ${region}`);
+    const res = await CLI.exec('samtools', ['faidx', NGS.refFile.name, region]);
+    logExecResult(res, true);
+    const trimmedText = res.stdout || '';
+    if(!trimmedText || !trimmedText.startsWith('>')){
+      throw new Error('영역 추출 결과가 비어있습니다. 좌표가 contig 길이를 벗어났을 수 있습니다.');
+    }
+    const baseName = NGS.refFile.name.replace(/\.(fa|fasta|fna)$/i,'');
+    const newName = `${baseName}_${regionSpec.replace('-','_')}.fa`;
+    const newFile = new File([trimmedText], newName, {type:'text/plain'});
+    const newLen = trimmedText.split('\n').filter(l=>!l.startsWith('>')).join('').length;
+
+    // reference가 바뀌었으니 이전 FASTQ/정렬 결과는 더 이상 유효하지 않음 (구간 불일치 방지)
+    NGS.refFile = newFile;
+    NGS.fqFile = null;
+    NGS.vcfText = null;
+    NGS.bamCLI = null;
+    viCache.clear();
+    $('ngsRefName').textContent = `${newFile.name} (${newLen.toLocaleString()}bp, 원본에서 ${regionSpec} 잘라냄)`;
+    $('ngsFqName').textContent = '감지 안됨';
+    $('ngsFqSlot').classList.remove('filled');
+    $('btnRunNgsPipeline').disabled = true;
+    $('ngsResultRow').style.display = 'none';
+    refreshViFileList();
+  refreshOmicsList();
+    ngsLog(`[OK] reference를 ${region} (${newLen.toLocaleString()}bp)로 잘랐습니다. 이제 이 작은 reference로 아래 "wgsim으로 리드 생성"부터 다시 진행하세요 — 모든 리드가 이 구간 안에서만 만들어져서 낭비가 없습니다.`, 'ok');
+  }catch(e){
+    ngsLog('[ERROR] reference 자르기 실패: '+e.message, 'err');
+  }
+  btn.disabled = false;
+};
+
+$('btnSimulate').onclick = async ()=>{
+  if(!NGS.refFile){ ngsLog('[ERROR] 먼저 참조서열(.fa/.fasta)을 업로드하세요','err'); return; }
+  const btn = $('btnSimulate');
+  btn.disabled = true;
+  try{
+    const CLI = await ensureAioli();
+    await cleanupNgsOutputs(CLI, ['sim_R1.fastq','sim_R2.fastq','aligned.sam','aligned.sorted.bam','aligned.sorted.bam.bai','pileup.vcf','variants.vcf']);
+    ngsLog('[INFO] 참조서열 마운트 중…');
+    await CLI.mount([NGS.refFile]);
+    const refLen = await estimateRefLength(NGS.refFile);
+    const readLen = parseInt($('simReadLen').value)||100;
+    const coverage = parseFloat($('simCoverage').value)||15;
+    const errRate = parseFloat($('simErrRate').value)||0.01;
+    const mutRate = parseFloat($('simMutRate').value)||0.001;
+    const numPairs = Math.max(10, Math.round(coverage*refLen/(2*readLen)));
+    const cmd = `wgsim -1 ${readLen} -2 ${readLen} -N ${numPairs} -e ${errRate} -r ${mutRate} ${NGS.refFile.name} sim_R1.fastq sim_R2.fastq`;
+    ngsCmd(cmd);
+    const execResult = await CLI.exec(cmd);
+    logExecResult(execResult, true); // wgsim은 진행상황을 stderr에 씀
+    if(execCrashed(execResult)){
+      throw new Error('wgsim 실행 중 WASM 내부 오류(FS error/abort)가 발생했습니다. 이전 실행의 잔여 파일 때문일 수 있으니 새로고침 후 다시 시도해주세요.');
+    }
+
+    // 생성된 파일을 가상 파일시스템에서 직접 읽어온다 (blob URL + fetch는 워커/페이지 경계에서
+    // 실패할 수 있어 CLI.fs.readFile로 바이트를 직접 가져오는 방식을 우선 사용)
+    const bytes = await readAioliFileBytes(CLI, 'sim_R1.fastq');
+    if(!bytes || bytes.length===0){
+      throw new Error('생성된 FASTQ가 비어있습니다. 참조서열 형식이나 wgsim 실행 로그를 확인해주세요.');
+    }
+
+    const simFile = new File([bytes], 'sim_R1.fastq', {type:'text/plain'});
+    NGS.fqFile = simFile;
+    $('ngsFqName').textContent = `${simFile.name} (합성 · ${numPairs.toLocaleString()} pairs · ${readLen}bp)`;
+    $('ngsFqSlot').classList.add('filled');
+    $('btnRunNgsPipeline').disabled = !(NGS.refFile && NGS.fqFile);
+    ngsLog(`[OK] 합성 리드 ${numPairs.toLocaleString()}쌍 생성 완료 (참조서열 길이 ${refLen.toLocaleString()}bp 기준 약 ${coverage}x 커버리지, 변이율 ${mutRate}, 에러율 ${errRate})`, 'ok');
+    viCache.delete('sim_R1.fastq');
+    refreshViFileList();
+  refreshOmicsList();
+  }catch(err){
+    ngsLog('[ERROR] 합성 리드 생성 실패: '+err.message, 'err');
+    ngsLog('[HINT] wgsim은 biowasm CDN에서 받아옵니다. 네트워크/CDN 접근을 확인해주세요.', 'info');
+  }
+  btn.disabled = false;
+};
+
+function ngsLog(msg, cls){
+  const d = document.createElement('div');
+  d.className = 'l '+(cls||'info');
+  d.textContent = msg;
+  $('ngsLog').appendChild(d);
+  $('ngsLog').scrollTop = $('ngsLog').scrollHeight;
+}
+function ngsCmd(msg){ ngsLog(msg,'cmd'); }
+function logExecResult(res, stderrOnly){
+  if(!res) return;
+  const out = (res.stdout||'').trim();
+  const err = (res.stderr||'').trim();
+  if(!stderrOnly && out) ngsLog(out, 'info');
+  if(err) ngsLog(err, 'info');
+}
+function ngsStepState(id, state){
+  const el = $(id);
+  el.classList.remove('active','done');
+  if(state) el.classList.add(state);
+}
+
+async function ensureAioli(){
+  if(NGS.aioli) return NGS.aioli;
+  ngsLog('[INFO] minimap2 / samtools / bcftools WASM 모듈 로드 중 (biowasm CDN, 최초 1회)…');
+  NGS.aioli = await new Aioli(["minimap2/2.22", "samtools/1.21", "bcftools/1.10", "wgsim/2011.10.17"], {debug:false, printInterleaved:false});
+  ngsLog('[INFO] 도구 로드 완료','ok');
+  return NGS.aioli;
+}
+
+// 같은 탭에서 반복 실행하면 이전 산출물이 남아있어 WASM 도구가 파일을 다시 쓰다가
+// FS error로 죽는 경우가 있다. 실행 전에 이전 산출물을 지워서 이 문제를 예방한다.
+async function cleanupNgsOutputs(CLI, names){
+  for(const n of names){
+    try{ await CLI.fs.unlink(n); }catch(e){ /* 원래 없던 파일이면 무시 */ }
+  }
+}
+// Aioli exec 결과에 WASM abort/FS error 흔적이 있는지 검사 — 이 경우 exec()가 reject하지 않고
+// 에러 텍스트를 stderr에 담아 "정상 반환"하는 것처럼 보일 수 있어 별도로 체크해야 한다.
+function execCrashed(res){
+  const combined = ((res&&res.stderr)||'') + ((res&&res.stdout)||'');
+  return /RuntimeError: abort|FS error|Aborted\(/.test(combined);
+}
+
+$('btnRunNgsPipeline').onclick = async ()=>{
+  const btn = $('btnRunNgsPipeline');
+  btn.disabled = true;
+  $('ngsResultRow').style.display = 'none';
+  viCache.clear();
+  try{
+    const CLI = await ensureAioli();
+    await cleanupNgsOutputs(CLI, ['aligned.sam','aligned.sorted.bam','aligned.sorted.bam.bai','pileup.vcf','variants.vcf']);
+
+    // 파일 마운트
+    ngsLog('[INFO] 파일을 가상 파일시스템에 마운트합니다…');
+    await CLI.mount([NGS.refFile, NGS.fqFile]);
+
+    // ---- STEP 1: 정렬 ----
+    ngsStepState('ngsStep1','active');
+    ngsCmd(`minimap2 -a -x sr ${NGS.refFile.name} ${NGS.fqFile.name} > aligned.sam`);
+    const alignRes = await CLI.exec(`minimap2 -a -x sr ${NGS.refFile.name} ${NGS.fqFile.name}`);
+    logExecResult(alignRes, true); // stderr만 로그 (진행상황 메시지)
+    if(execCrashed(alignRes)){
+      throw new Error('minimap2 실행 중 WASM 내부 오류(FS error/abort)가 발생했습니다. 같은 탭에서 여러 번 실행했다면 새로고침 후 다시 시도해주세요.');
+    }
+    const samText = alignRes.stdout || '';
+    if(!samText || samText.trim().length===0){
+      throw new Error('minimap2 출력이 비어있습니다 (정렬 실패). 위 로그의 stderr 메시지를 확인해주세요');
+    }
+    await CLI.mount([{name:"aligned.sam", data: samText}]);
+    ngsLog(`[OK] 정렬 완료 (SAM ${(samText.length/1024).toFixed(1)}KB)`,'ok');
+    ngsStepState('ngsStep1','done');
+
+    // ---- STEP 2: sort & index ----
+    ngsStepState('ngsStep2','active');
+    ngsCmd('samtools sort aligned.sam -o aligned.sorted.bam');
+    const sortRes = await CLI.exec('samtools sort aligned.sam -o aligned.sorted.bam');
+    logExecResult(sortRes, true);
+    if(execCrashed(sortRes)){
+      throw new Error('samtools sort 실행 중 WASM 내부 오류(FS error/abort)가 발생했습니다. 새로고침 후 다시 시도해주세요.');
+    }
+
+    // sort가 실제로 파일을 만들었는지 직접 확인 (성공 메시지를 함부로 찍지 않는다)
+    let sortedBytes;
+    try{
+      sortedBytes = await readAioliFileBytes(CLI, 'aligned.sorted.bam');
+    }catch(e){
+      let dirListing = '';
+      try{ dirListing = JSON.stringify(await CLI.ls('.')); }catch(e2){ dirListing = '(ls 실패: '+e2.message+')'; }
+      ngsLog('[DEBUG] 현재 디렉토리 목록: '+dirListing, 'info');
+      throw new Error('samtools sort가 aligned.sorted.bam을 만들지 못한 것으로 보입니다. 위 [DEBUG] 목록과 stderr를 확인해주세요.');
+    }
+    if(!sortedBytes || sortedBytes.length===0){
+      throw new Error('aligned.sorted.bam이 비어 있습니다 (0바이트) — 정렬 실패');
+    }
+    ngsLog(`[OK] 정렬 BAM 생성 확인됨 (${(sortedBytes.length/1024).toFixed(1)}KB)`,'ok');
+
+    ngsCmd('samtools index aligned.sorted.bam');
+    const idxRes = await CLI.exec('samtools index aligned.sorted.bam');
+    logExecResult(idxRes, true);
+
+    const flagstat = await CLI.exec('samtools flagstat aligned.sorted.bam');
+    logExecResult(flagstat, false);
+    ngsLog('[OK] 정렬(BAM) 정리 및 인덱싱 완료','ok');
+    ngsStepState('ngsStep2','done');
+
+    // ---- STEP 3: variant calling ----
+    ngsStepState('ngsStep3','active');
+    let regionArg = '';
+    const regionOn = $('regionLimitOn').checked;
+    const regionLen = parseInt($('regionLimitLen').value) || 0;
+    if(regionOn && regionLen > 0){
+      const contig = await getFirstContigName(NGS.refFile);
+      if(contig){
+        regionArg = ` -r ${contig}:1-${regionLen}`;
+        ngsLog(`[INFO] 메모리 절약을 위해 분석 영역을 ${contig}:1-${regionLen.toLocaleString()} 으로 제한합니다 (전체 게놈 대신)`, 'info');
+      } else {
+        ngsLog('[WARN] reference에서 contig 이름을 못 읽어 영역 제한 없이 진행합니다', 'warn');
+      }
+    }
+    const mpileupCmdStr = `bcftools mpileup${regionArg} -f ${NGS.refFile.name} aligned.sorted.bam`;
+    ngsCmd(`${mpileupCmdStr} | bcftools call -mv -Ov -o variants.vcf`);
+    const mpileupRes = await CLI.exec(mpileupCmdStr);
+    logExecResult(mpileupRes, true);
+    if(execCrashed(mpileupRes)){
+      throw new Error('bcftools mpileup 실행 중 WASM 내부 오류(FS error/abort)가 발생했습니다. 새로고침 후 다시 시도해주세요.');
+    }
+    const mpileupText = mpileupRes.stdout || '';
+    if(!mpileupText || mpileupText.trim().length===0){
+      throw new Error('bcftools mpileup 결과가 비어있습니다 — 위 stderr를 확인해주세요');
+    }
+    await CLI.mount([{name:"pileup.vcf", data: mpileupText}]);
+    const calledRes = await CLI.exec('bcftools call -mv -Ov pileup.vcf');
+    logExecResult(calledRes, true);
+    if(execCrashed(calledRes)){
+      throw new Error('bcftools call 실행 중 WASM 내부 오류(FS error/abort)가 발생했습니다. 새로고침 후 다시 시도해주세요.');
+    }
+    const vcfText = calledRes.stdout || '';
+    if(!vcfText || !vcfText.includes('#CHROM')){
+      throw new Error('bcftools call 결과가 올바른 VCF가 아닙니다 — 위 stderr를 확인해주세요');
+    }
+    await CLI.mount([{name:"variants.vcf", data: vcfText}]);
+    const numVariants = vcfText.split('\n').filter(l=>l && !l.startsWith('#')).length;
+    ngsLog(`[OK] 변이 호출 완료 — 후보 변이 ${numVariants}개`, 'ok');
+    ngsStepState('ngsStep3','done');
+
+    NGS.vcfText = vcfText;
+    NGS.bamCLI = CLI;
+    $('ngsResultRow').style.display = 'flex';
+    refreshViFileList();
+  refreshOmicsList();
+  }catch(err){
+    ngsLog('[ERROR] '+err.message, 'err');
+    ngsLog('[HINT] 이 파이프라인은 biowasm.com CDN에서 실제 WASM 도구를 받아와 실행합니다. 사내망/방화벽으로 해당 도메인 접근이 막혀있으면 실패할 수 있습니다.', 'info');
+    refreshViFileList();
+  refreshOmicsList();
+  }
+  btn.disabled = false;
+};
+
+// Aioli 워커 안에서 만든 blob URL은 페이지(메인 스레드)에서 곧바로 못 여는 경우가 있어,
+// 파일 바이트를 가상 파일시스템에서 직접 읽어온 뒤 메인 스레드에서 Blob/URL을 새로 만든다.
+async function readAioliFileBytes(CLI, path){
+  try{
+    const data = await CLI.fs.readFile(path);
+    return (data instanceof Uint8Array) ? data : new Uint8Array(data);
+  }catch(e1){
+    const url = await CLI.download(path);
+    if(!url) throw new Error(`${path} 파일을 찾을 수 없습니다`);
+    const resp = await fetch(url);
+    return new Uint8Array(await resp.arrayBuffer());
+  }
+}
+
+/* ============================================================
+   파일 뷰어 (vi 스타일) — 실제 생성된 파일의 내용을 직접 읽어서 검사
+============================================================ */
+const viCache = new Map(); // filename -> text (파이프라인 재실행 시 비움)
+
+function getKnownViFiles(){
+  const files = [];
+  if(NGS.refFile) files.push(NGS.refFile.name);
+  if(NGS.fqFile) files.push(NGS.fqFile.name);
+  files.push('aligned.sam', 'aligned.sorted.bam', 'variants.vcf');
+  if(NGS.uploadedVcfs) files.push(...Object.keys(NGS.uploadedVcfs));
+  return [...new Set(files)];
+}
+function refreshViFileList(){
+  const sel = $('viFileSelect');
+  const cur = sel.value;
+  const files = getKnownViFiles();
+  sel.innerHTML = '';
+  files.forEach(f=>{
+    const opt = document.createElement('option');
+    opt.value = f; opt.textContent = f;
+    sel.appendChild(opt);
+  });
+  if(files.includes(cur)) sel.value = cur;
+  $('viPanel').style.display = files.length ? 'block' : 'none';
+}
+function viLog(msg, cls){
+  const d = document.createElement('div');
+  d.className = 'l '+(cls||'info');
+  d.textContent = msg;
+  $('viOutput').appendChild(d);
+  $('viOutput').scrollTop = $('viOutput').scrollHeight;
+}
+function viClear(){ $('viOutput').innerHTML=''; }
+function viShowLines(lines, startAt){
+  viClear();
+  if(!lines || lines.length===0){ viLog('(결과 없음)','info'); return; }
+  lines.forEach((line, idx)=>{
+    const d = document.createElement('div');
+    d.className='l';
+    d.textContent = `${String((startAt||1)+idx).padStart(6,' ')} | ${line}`;
+    $('viOutput').appendChild(d);
+  });
+}
+// 파일의 실제 텍스트 내용을 가져온다 (BAM은 samtools view로 텍스트화, 나머지는 바이트 직접 읽기). 캐시 사용.
+async function getFileText(filename){
+  if(viCache.has(filename)) return viCache.get(filename);
+  const CLI = await ensureAioli();
+  let text;
+  if(filename.endsWith('.bam')){
+    const res = await CLI.exec('samtools', ['view', filename]);
+    text = res.stdout || '';
+  } else {
+    const bytes = await readAioliFileBytes(CLI, filename);
+    text = new TextDecoder('utf-8').decode(bytes);
+  }
+  viCache.set(filename, text);
+  return text;
+}
+
+$('viHead').onclick = async ()=>{
+  const filename = $('viFileSelect').value;
+  if(!filename) return;
+  viClear(); viLog('로딩 중…','info');
+  try{
+    const text = await getFileText(filename);
+    const lines = text.split('\n');
+    while(lines.length && lines[lines.length-1]==='') lines.pop();
+    viShowLines(lines.slice(0,20), 1);
+  }catch(e){ viClear(); viLog('[ERROR] '+e.message+' — 이 파일이 아직 생성되지 않았을 수 있습니다','err'); }
+};
+$('viTail').onclick = async ()=>{
+  const filename = $('viFileSelect').value;
+  if(!filename) return;
+  viClear(); viLog('로딩 중…','info');
+  try{
+    const text = await getFileText(filename);
+    const lines = text.split('\n');
+    while(lines.length && lines[lines.length-1]==='') lines.pop();
+    const tail = lines.slice(-20);
+    viShowLines(tail, lines.length-tail.length+1);
+  }catch(e){ viClear(); viLog('[ERROR] '+e.message+' — 이 파일이 아직 생성되지 않았을 수 있습니다','err'); }
+};
+$('viWc').onclick = async ()=>{
+  const filename = $('viFileSelect').value;
+  if(!filename) return;
+  viClear(); viLog('로딩 중…','info');
+  try{
+    const text = await getFileText(filename);
+    const lines = text.split('\n');
+    while(lines.length && lines[lines.length-1]==='') lines.pop();
+    const n = lines.length;
+    viLog(`총 줄 수: ${n.toLocaleString()}`,'ok');
+    if(/\.(fastq|fq)$/i.test(filename)){
+      viLog(`4의 배수인가: ${n%4===0 ? '예 ('+(n/4).toLocaleString()+'개 read)' : '아니오 — FASTQ 구조 이상 가능성'}`, n%4===0?'ok':'err');
+    }
+  }catch(e){ viClear(); viLog('[ERROR] '+e.message,'err'); }
+};
+$('viGrep').onclick = async ()=>{
+  const filename = $('viFileSelect').value;
+  const pattern = $('viGrepPattern').value.trim();
+  if(!filename || !pattern){ viClear(); viLog('[ERROR] 파일과 패턴을 모두 지정하세요','err'); return; }
+  viClear(); viLog(`"${pattern}" 검색 중…`,'info');
+  try{
+    const text = await getFileText(filename);
+    let re;
+    try{ re = new RegExp(pattern); }catch(reErr){ viClear(); viLog('[ERROR] 정규식이 올바르지 않습니다: '+reErr.message,'err'); return; }
+    const lines = text.split('\n');
+    const matched = [];
+    lines.forEach((l,i)=>{ if(l && re.test(l)) matched.push({n:i+1, l}); });
+    viClear();
+    viLog(`매치: ${matched.length.toLocaleString()}줄 / 전체 ${lines.length.toLocaleString()}줄`, matched.length?'ok':'info');
+    matched.slice(0,300).forEach(x=>{
+      const d = document.createElement('div');
+      d.className = 'l';
+      d.textContent = `${String(x.n).padStart(6,' ')} | ${x.l}`;
+      $('viOutput').appendChild(d);
+    });
+    if(matched.length>300) viLog(`… 이하 ${(matched.length-300).toLocaleString()}줄 생략 (300줄까지만 표시)`,'info');
+  }catch(e){ viClear(); viLog('[ERROR] '+e.message,'err'); }
+};
+
+// 실습용 체크 1: 생성된 FASTQ가 진짜 4줄(@id / seq / + / qual) 구조를 지키는지 실제로 검증
+$('viFastqCheck').onclick = async ()=>{
+  const filename = $('viFileSelect').value;
+  if(!filename || !/\.(fastq|fq)$/i.test(filename)){ viClear(); viLog('[ERROR] FASTQ 파일(.fastq/.fq)을 선택하세요','err'); return; }
+  viClear(); viLog('FASTQ 4줄 구조를 실제로 검증합니다…','info');
+  try{
+    const text = await getFileText(filename);
+    const lines = text.split('\n');
+    while(lines.length && lines[lines.length-1]==='') lines.pop();
+    const total = lines.length;
+    const mult4 = total % 4 === 0;
+    viLog(`총 ${total.toLocaleString()}줄 (4의 배수: ${mult4?'예':'아니오'})`, mult4?'ok':'err');
+
+    let headBad=0, plusBad=0, lenBad=0, records=0;
+    const badExamples = [];
+    for(let i=0; i+3<lines.length; i+=4){
+      records++;
+      const idLine=lines[i], seqLine=lines[i+1], plusLine=lines[i+2], qualLine=lines[i+3];
+      if(!idLine.startsWith('@')){ headBad++; if(badExamples.length<5) badExamples.push(`줄 ${i+1}: '@'로 시작 안 함 → ${idLine.slice(0,40)}`); }
+      if(!plusLine.startsWith('+')){ plusBad++; if(badExamples.length<5) badExamples.push(`줄 ${i+3}: '+'로 시작 안 함 → ${plusLine.slice(0,40)}`); }
+      if(seqLine.length !== qualLine.length){ lenBad++; if(badExamples.length<5) badExamples.push(`줄 ${i+2}/${i+4}: 서열길이 ${seqLine.length} ≠ 품질길이 ${qualLine.length}`); }
+    }
+    viLog(`레코드(read) 수: ${records.toLocaleString()}`, 'ok');
+    viLog(`'@'로 시작해야 할 줄 위반: ${headBad}개`, headBad===0?'ok':'err');
+    viLog(`'+'로 시작해야 할 줄 위반: ${plusBad}개`, plusBad===0?'ok':'err');
+    viLog(`서열-품질 길이 불일치: ${lenBad}개`, lenBad===0?'ok':'err');
+    badExamples.forEach(ex=> viLog('  예시: '+ex, 'err'));
+    const ok = mult4 && headBad===0 && plusBad===0 && lenBad===0;
+    viLog(ok ? '✅ 유효한 FASTQ 4줄 구조입니다' : '⚠ 형식 위반이 발견되었습니다', ok?'ok':'err');
+  }catch(e){ viClear(); viLog('[ERROR] '+e.message,'err'); }
+};
+
+// 실습용 체크 2: SAM/BAM에서 미스매치(NM>0)를 가진 리드의 비율 — 진짜 정렬 결과에서 직접 계산
+$('viSamMismatch').onclick = async ()=>{
+  const filename = $('viFileSelect').value;
+  if(!filename || !/\.(sam|bam)$/i.test(filename)){ viClear(); viLog('[ERROR] SAM 또는 BAM 파일을 선택하세요','err'); return; }
+  viClear(); viLog('미스매치 포함 리드 비율을 실제 정렬 레코드에서 계산 중…','info');
+  try{
+    const text = await getFileText(filename);
+    const lines = text.split('\n').filter(l=>l && !l.startsWith('@'));
+    let mapped=0, withMismatch=0, noNmTag=0;
+    for(const l of lines){
+      const cols = l.split('\t');
+      const flag = parseInt(cols[1]);
+      if(isNaN(flag) || (flag & 4)) continue; // unmapped 리드는 제외
+      mapped++;
+      const m = l.match(/NM:i:(\d+)/);
+      if(!m){ noNmTag++; continue; }
+      if(parseInt(m[1])>0) withMismatch++;
+    }
+    const pct = mapped ? (withMismatch/mapped*100).toFixed(1) : '0.0';
+    viLog(`정렬된(mapped) 리드: ${mapped.toLocaleString()}개`, 'ok');
+    viLog(`미스매치(NM>0) 포함 리드: ${withMismatch.toLocaleString()}개 (${pct}%)`, 'ok');
+    if(noNmTag>0) viLog(`NM 태그가 없는 리드: ${noNmTag.toLocaleString()}개 (집계에서 제외됨)`, 'info');
+  }catch(e){ viClear(); viLog('[ERROR] '+e.message,'err'); }
+};
+
+/* ============================================================
+   포맷 가이드 탭 전환
+============================================================ */
+document.querySelectorAll('.fmt-tab-btn').forEach(btn=>{
+  btn.addEventListener('click', ()=>{
+    const tab = btn.dataset.tab;
+    document.querySelectorAll('.fmt-tab-btn').forEach(b=>b.classList.toggle('active', b===btn));
+    document.querySelectorAll('.fmt-tab-content').forEach(c=>{
+      c.style.display = (c.dataset.tab===tab) ? 'block' : 'none';
+    });
+  });
+});
+
+/* ============================================================
+   오믹스 스타일 분석 — 각 버튼: 설명 로그 → 실행 가능한 파이썬 셀 생성
+============================================================ */
+function omicsLog(msg, cls){
+  const d = document.createElement('div');
+  d.className = 'l '+(cls||'info');
+  d.textContent = msg;
+  $('omicsOutput').appendChild(d);
+  $('omicsOutput').scrollTop = $('omicsOutput').scrollHeight;
+}
+function omicsClear(){ $('omicsOutput').innerHTML=''; }
+function getVcfFileList(){ return getKnownViFiles().filter(f=>/\.vcf(\.gz)?$/i.test(f)); }
+function refreshOmicsList(){
+  const sel = $('omicsVcfSelect');
+  const cur = sel.value;
+  const files = getVcfFileList();
+  sel.innerHTML = '';
+  files.forEach(f=>{
+    const opt = document.createElement('option');
+    opt.value = f; opt.textContent = f;
+    sel.appendChild(opt);
+  });
+  if(files.includes(cur)) sel.value = cur;
+}
+// VCF 파싱 파이썬 코드 조각(공통) — 매 분석 코드 맨 앞에 그대로 들어가서, 이 부분만 봐도
+// "VCF를 판다스 DataFrame으로 바꾸는 법"을 그대로 배울 수 있게 한다.
+function vcfParsePrelude(vcfDataPath){
+  return `import pandas as pd
+import matplotlib.pyplot as plt
+
+# --- VCF 파싱: '#'로 시작하는 헤더 줄은 건너뛰고, 데이터 줄만 탭으로 쪼갠다 ---
+vcf_path = '${vcfDataPath}'
+rows = []
+with open(vcf_path) as f:
+    for line in f:
+        if line.startswith('#'):
+            continue
+        cols = line.rstrip('\\n').split('\\t')
+        rows.append(cols[:8])
+df = pd.DataFrame(rows, columns=["CHROM","POS","ID","REF","ALT","QUAL","FILTER","INFO"])
+df["POS"] = df["POS"].astype(int)
+df["QUAL"] = df["QUAL"].astype(float)
+df["ALT1"] = df["ALT"].str.split(",").str[0]          # ALT가 여러 개면 첫 번째만 사용
+df["DP"] = df["INFO"].str.extract(r"DP=(\\d+)").astype(float)   # INFO 필드에서 depth만 정규식으로 추출
+df["TYPE"] = ["SNP" if (len(r)==1 and len(a)==1) else "INDEL" for r,a in zip(df["REF"], df["ALT1"])]
+print(f"총 변이: {len(df)}개  (SNP {(df['TYPE']=='SNP').sum()}개, INDEL {(df['TYPE']=='INDEL').sum()}개)")
+`;
+}
+async function prepareVcfAndRef(filename, needRef){
+  const text = await getFileText(filename);
+  const cleanName = filename.replace(/\.gz$/i,'');
+  if(pyodide){ await pyodide.loadPackage(['pandas','matplotlib']); }
+  pyodide.FS.writeFile('/data/'+cleanName, text);
+  let refDataPath = null;
+  if(needRef){
+    if(!NGS.refFile) throw new Error('reference가 없습니다. 96-context 분석에는 참조서열(.fa)이 필요합니다 — 파이프라인 탭에서 reference를 업로드해주세요.');
+    const refText = await NGS.refFile.text();
+    pyodide.FS.writeFile('/data/'+NGS.refFile.name, refText);
+    refDataPath = '/data/'+NGS.refFile.name;
+  }
+  return {vcfDataPath: '/data/'+cleanName, refDataPath};
+}
+
+$('btnStatBasic').onclick = async ()=>{
+  const filename = $('omicsVcfSelect').value;
+  if(!filename){ omicsClear(); omicsLog('[ERROR] VCF를 선택하세요','err'); return; }
+  omicsClear();
+  omicsLog('기본 통계: SNP/INDEL 개수, 그리고 Ti/Tv(전이/전위) 비율을 계산합니다.', 'info');
+  omicsLog('Ti/Tv는 "진짜 생물학적 변이 vs 시퀀싱 노이즈"를 구분하는 가장 기본적인 QC 지표입니다 — 실제 사람/세균 데이터는 보통 2.0 근처, 무작위 노이즈면 0.5 근처로 떨어집니다.', 'info');
+  try{
+    const {vcfDataPath} = await prepareVcfAndRef(filename, false);
+    const code = `${vcfParsePrelude(vcfDataPath)}
+# --- SNP만 추려서 Ti(전이) / Tv(전위) 분류 ---
+transitions = {("A","G"),("G","A"),("C","T"),("T","C")}   # 퓨린<->퓨린, 피리미딘<->피리미딘 치환
+snp = df[df["TYPE"]=="SNP"].copy()
+if len(snp) > 0:
+    snp["TiTv"] = ["Ti" if (r,a) in transitions else "Tv" for r,a in zip(snp["REF"], snp["ALT1"])]
+    n_ti = (snp["TiTv"]=="Ti").sum()
+    n_tv = (snp["TiTv"]=="Tv").sum()
+    ratio = n_ti/n_tv if n_tv>0 else float('nan')
+    print(f"Ti(전이): {n_ti}개, Tv(전위): {n_tv}개, Ti/Tv 비율: {ratio:.2f}")
+
+    subs = (snp["REF"]+">"+snp["ALT1"]).value_counts().sort_index()
+    subs.plot(kind="bar", color="#5fb878", figsize=(6,3.5))
+    plt.title("SNP substitution counts (6 types)")
+    plt.ylabel("count")
+    plt.tight_layout()
+    plt.show()
+else:
+    print("SNP이 없습니다 (INDEL만 있는 경우).")
+
+df["TYPE"].value_counts()
+`;
+    const cellEl = addCell(code);
+    cellEl.scrollIntoView({behavior:'smooth', block:'center'});
+    omicsLog('[OK] 아래에 코드 셀이 추가되었습니다 — Shift+Enter로 실행하세요','ok');
+  }catch(e){ omicsLog('[ERROR] '+e.message,'err'); }
+};
+
+$('btnSig96').onclick = async ()=>{
+  const filename = $('omicsVcfSelect').value;
+  if(!filename){ omicsClear(); omicsLog('[ERROR] VCF를 선택하세요','err'); return; }
+  omicsClear();
+  omicsLog('COSMIC 표준 방식의 96-context 변이 시그니처를 계산합니다.', 'info');
+  omicsLog('각 SNP마다 reference에서 "바로 앞 염기 + 변이 염기 + 바로 뒤 염기"(삼염기 context)를 뽑고, REF가 항상 피리미딘(C 또는 T)이 되도록 필요하면 역상보로 뒤집어서 6가지 치환×16가지 context = 96개 카테고리로 집계합니다. 이게 실제 암 유전체 논문 등에서 "이 샘플에 어떤 돌연변이 프로세스(자외선, 흡연, 노화 등)가 관여했는지" 추정하는 데 쓰는 표준 표현법입니다.', 'info');
+  try{
+    const {vcfDataPath, refDataPath} = await prepareVcfAndRef(filename, true);
+    const code = `${vcfParsePrelude(vcfDataPath)}
+# --- reference 서열 읽기 (변이 주변 3염기 context 추출용) ---
+ref_parts = []
+with open('${refDataPath}') as f:
+    for line in f:
+        if line.startswith('>'):
+            continue
+        ref_parts.append(line.strip())
+ref_seq = ''.join(ref_parts).upper()
+print(f"참조서열 길이: {len(ref_seq):,}bp")
+
+COMP = {"A":"T","C":"G","G":"C","T":"A"}
+def revcomp(s):
+    return ''.join(COMP.get(b,'N') for b in reversed(s))
+
+PYRIMIDINES = {"C","T"}
+snp = df[df["TYPE"]=="SNP"].copy()
+
+contexts = []
+for _, row in snp.iterrows():
+    pos0 = row["POS"] - 1   # VCF POS는 1-based, 파이썬 문자열 인덱스는 0-based
+    if pos0 < 1 or pos0 >= len(ref_seq) - 1:
+        continue
+    tri = ref_seq[pos0-1 : pos0+2]     # 앞1 + 변이자리 + 뒤1, 총 3염기
+    ref_b, alt_b = row["REF"], row["ALT1"]
+    if len(tri) != 3 or tri[1] != ref_b:
+        continue   # reference와 VCF의 REF가 안 맞으면(좌표 오류 등) 건너뜀
+    if ref_b not in PYRIMIDINES:
+        # COSMIC 관례: REF가 퓨린(A/G)이면 역상보로 뒤집어서 항상 피리미딘(C/T) 기준으로 통일
+        tri = revcomp(tri)
+        ref_b, alt_b = tri[1], COMP[alt_b]
+    contexts.append(f"{tri[0]}[{ref_b}>{alt_b}]{tri[2]}")
+
+print(f"context 추출 성공: {len(contexts)} / {len(snp)} SNP")
+spectrum = pd.Series(contexts).value_counts()
+
+# --- COSMIC 표준 96개 카테고리 순서 + 6개 그룹 색상으로 정렬해서 그리기 ---
+bases = "ACGT"
+sub_types = [("C","A"),("C","G"),("C","T"),("T","A"),("T","C"),("T","G")]
+colors = {"C>A":"#5ec9f0","C>G":"#0a0a0a","C>T":"#e02020","T>A":"#c7c7c7","T>C":"#8fd76f","T>G":"#e8b4d0"}
+order, bar_colors = [], []
+for ref_b, alt_b in sub_types:
+    for b5 in bases:
+        for b3 in bases:
+            order.append(f"{b5}[{ref_b}>{alt_b}]{b3}")
+            bar_colors.append(colors[f"{ref_b}>{alt_b}"])
+values = [int(spectrum.get(cat, 0)) for cat in order]
+
+fig, ax = plt.subplots(figsize=(15,4))
+ax.bar(range(96), values, color=bar_colors, width=0.85)
+ax.set_xticks([])
+ax.set_ylabel("count")
+ax.set_title("96-context mutational signature (COSMIC style)")
+top = max(values+[1])
+for i, (ref_b, alt_b) in enumerate(sub_types):
+    ax.axvspan(i*16-0.5, i*16+15.5, color=colors[f"{ref_b}>{alt_b}"], alpha=0.08)
+    ax.text(i*16+7.5, top*1.05, f"{ref_b}>{alt_b}", ha="center", fontsize=11, fontweight="bold")
+ax.set_ylim(0, top*1.2)
+plt.tight_layout()
+plt.show()
+
+pd.Series(values, index=order).sort_values(ascending=False).head(10)
+`;
+    const cellEl = addCell(code);
+    cellEl.scrollIntoView({behavior:'smooth', block:'center'});
+    omicsLog('[OK] 아래에 코드 셀이 추가되었습니다 — Shift+Enter로 실행하세요 (reference가 크면 몇 초 걸릴 수 있음)','ok');
+  }catch(e){ omicsLog('[ERROR] '+e.message,'err'); }
+};
+
+$('btnManhattan').onclick = async ()=>{
+  const filename = $('omicsVcfSelect').value;
+  if(!filename){ omicsClear(); omicsLog('[ERROR] VCF를 선택하세요','err'); return; }
+  omicsClear();
+  omicsLog('게놈 좌표(x축) vs QUAL(y축, 변이 신뢰도)로 산점도를 그립니다. GWAS의 Manhattan plot과 같은 아이디어입니다 — 다만 GWAS는 y축이 -log10(p-value)이고 여기서는 변이 콜의 신뢰도(QUAL)를 씁니다. 점 크기는 그 위치의 depth(DP)에 비례합니다. 변이가 게놈 어디에 몰려있는지, 신뢰도 높은 콜과 낮은 콜이 위치적으로 어떤 패턴을 보이는지 한눈에 보입니다.', 'info');
+  try{
+    const {vcfDataPath} = await prepareVcfAndRef(filename, false);
+    const code = `${vcfParsePrelude(vcfDataPath)}
+# --- 게놈 위치별 분포 (Manhattan-style) ---
+fig, ax = plt.subplots(figsize=(11,4))
+for t, color in [("SNP","#5fb878"), ("INDEL","#e15554")]:
+    sub = df[df["TYPE"]==t]
+    ax.scatter(sub["POS"], sub["QUAL"], s=(sub["DP"].fillna(5)*3), c=color, alpha=0.65, label=t, edgecolors="none")
+ax.set_xlabel("Genomic position (bp)")
+ax.set_ylabel("QUAL (variant confidence, Phred-scaled)")
+ax.set_title("Variant distribution along the genome")
+ax.legend()
+plt.tight_layout()
+plt.show()
+
+# 위치 기준 상위/하위 QUAL 변이 몇 개 확인
+df.sort_values("QUAL", ascending=False)[["CHROM","POS","REF","ALT1","QUAL","TYPE","DP"]].head(10)
+`;
+    const cellEl = addCell(code);
+    cellEl.scrollIntoView({behavior:'smooth', block:'center'});
+    omicsLog('[OK] 아래에 코드 셀이 추가되었습니다 — Shift+Enter로 실행하세요','ok');
+  }catch(e){ omicsLog('[ERROR] '+e.message,'err'); }
+};
+
+$('btnQcScatter').onclick = async ()=>{
+  const filename = $('omicsVcfSelect').value;
+  if(!filename){ omicsClear(); omicsLog('[ERROR] VCF를 선택하세요','err'); return; }
+  omicsClear();
+  omicsLog('Depth(DP, x축) vs QUAL(y축) 산점도 — 논문 supplementary에 자주 나오는 QC 그림입니다. 보통 depth가 낮을수록 QUAL도 낮게 깔리는 경향이 정상이고(증거가 적으니 확신도 낮음), 만약 낮은 depth인데 QUAL이 비정상적으로 높다면 그 콜은 의심해봐야 합니다.', 'info');
+  try{
+    const {vcfDataPath} = await prepareVcfAndRef(filename, false);
+    const code = `${vcfParsePrelude(vcfDataPath)}
+# --- Depth vs Quality QC 산점도 ---
+fig, ax = plt.subplots(figsize=(6,5))
+colors = df["TYPE"].map({"SNP":"#4a90c4","INDEL":"#f2a93b"})
+ax.scatter(df["DP"], df["QUAL"], c=colors, alpha=0.65, edgecolors="none")
+ax.set_xlabel("Depth (DP) — 그 위치를 덮은 read 수")
+ax.set_ylabel("QUAL — 변이 콜의 신뢰도")
+ax.set_title("QC: depth vs quality")
+plt.tight_layout()
+plt.show()
+
+valid = df.dropna(subset=["DP","QUAL"])
+if len(valid) > 1:
+    corr = valid["DP"].corr(valid["QUAL"])
+    print(f"DP-QUAL 상관계수: {corr:.2f} (1에 가까울수록 depth가 곧 신뢰도를 강하게 좌우한다는 뜻)")
+`;
+    const cellEl = addCell(code);
+    cellEl.scrollIntoView({behavior:'smooth', block:'center'});
+    omicsLog('[OK] 아래에 코드 셀이 추가되었습니다 — Shift+Enter로 실행하세요','ok');
+  }catch(e){ omicsLog('[ERROR] '+e.message,'err'); }
+};
+
+$('btnDownloadVCF').onclick = ()=>{
+  if(!NGS.vcfText) return;
+  const blob = new Blob([NGS.vcfText], {type:'text/plain'});
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'variants.vcf';
+  document.body.appendChild(a); a.click(); a.remove();
+};
+$('btnDownloadBAM').onclick = async ()=>{
+  if(!NGS.bamCLI) return;
+  const btn = $('btnDownloadBAM');
+  btn.disabled = true;
+  try{
+    const bytes = await readAioliFileBytes(NGS.bamCLI, 'aligned.sorted.bam');
+    const blob = new Blob([bytes], {type:'application/octet-stream'});
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = 'aligned.sorted.bam';
+    document.body.appendChild(a); a.click(); a.remove();
+    ngsLog('[OK] aligned.sorted.bam 다운로드 완료 ('+(bytes.length/1024).toFixed(1)+'KB)','ok');
+  }catch(err){
+    ngsLog('[ERROR] BAM 다운로드 실패: '+err.message,'err');
+  }
+  btn.disabled = false;
+};
+$('btnVcfToCell').onclick = async ()=>{
+  if(!NGS.vcfText) return;
+  const btn = $('btnVcfToCell');
+  btn.disabled = true;
+  try{
+    if(pyodide){
+      ngsLog('[INFO] pandas 로드 중…', 'info');
+      await pyodide.loadPackage(['pandas']);
+    }
+  }catch(e){
+    ngsLog('[ERROR] pandas 로드 실패: '+e.message, 'err');
+  }
+  // VCF 텍스트를 pyodide 가상 파일시스템에 써서, 파이썬 셀에서 바로 pandas로 열어볼 수 있게 함
+  pyodide.FS.writeFile('/data/variants.vcf', NGS.vcfText);
+  const code = `# NGS 파이프라인에서 생성된 variants.vcf 를 파이썬으로 열어보기
+import pandas as pd
+
+cols = ["CHROM","POS","ID","REF","ALT","QUAL","FILTER","INFO","FORMAT","SAMPLE"]
+rows = []
+with open('/data/variants.vcf') as f:
+    for line in f:
+        if line.startswith('#'):
+            continue
+        rows.append(line.strip().split('\\t'))
+
+df = pd.DataFrame(rows, columns=cols[:len(rows[0])] if rows else cols)
+print(f"변이 {len(df)}개")
+df.head(20)
+`;
+  const cellEl = addCell(code);
+  cellEl.scrollIntoView({behavior:'smooth', block:'center'});
+  btn.disabled = false;
+};
+function renderFileList(){
+  const el = $('fileList');
+  if(uploadedFiles.length===0){
+    el.innerHTML = '<span class="empty-hint">업로드된 파일 없음 — 위 "파일 업로드" 버튼으로 추가하세요. 예: open(\'/data/파일명\')</span>';
+    return;
+  }
+  el.innerHTML = uploadedFiles.map(f=>`<span class="filechip"><b>${f.name}</b> · ${(f.size/1024).toFixed(1)}KB · <code>${f.path}</code></span>`).join('');
+}
+
+/* ============================================================
+   CELL MANAGEMENT
+============================================================ */
+function addCell(initialCode, afterEl){
+  cellSeq++;
+  const id = 'cell_'+cellSeq;
+  const cellEl = document.createElement('div');
+  cellEl.className = 'cell';
+  cellEl.id = id;
+  cellEl.innerHTML = `
+    <div class="cell-head">
+      <span class="cell-idx exec-count" data-role="execcount">[ ]</span>
+      <div class="cell-actions">
+        <button class="icon-btn" data-act="run" title="실행 (Shift+Enter)">▶</button>
+        <button class="icon-btn" data-act="up" title="위로">↑</button>
+        <button class="icon-btn" data-act="down" title="아래로">↓</button>
+        <button class="icon-btn" data-act="del" title="삭제">✕</button>
+      </div>
+    </div>
+    <div class="cell-editor">
+      <textarea class="code" spellcheck="false" rows="3"></textarea>
+      <span class="run-hint">Shift+Enter 실행</span>
+    </div>
+    <div class="cell-output" data-role="output"></div>
+  `;
+  const ta = cellEl.querySelector('textarea');
+  ta.value = initialCode || '';
+  autoGrow(ta);
+  ta.addEventListener('input', ()=>autoGrow(ta));
+  ta.addEventListener('keydown', (e)=>{
+    if(e.key==='Enter' && e.shiftKey){
+      e.preventDefault();
+      runCell(cellEl);
+    } else if(e.key==='Tab'){
+      e.preventDefault();
+      const s=ta.selectionStart, en=ta.selectionEnd;
+      ta.value = ta.value.slice(0,s)+'    '+ta.value.slice(en);
+      ta.selectionStart=ta.selectionEnd=s+4;
+    }
+  });
+  cellEl.querySelector('[data-act=run]').onclick = ()=>runCell(cellEl);
+  cellEl.querySelector('[data-act=up]').onclick = ()=>moveCell(cellEl,-1);
+  cellEl.querySelector('[data-act=down]').onclick = ()=>moveCell(cellEl,1);
+  cellEl.querySelector('[data-act=del]').onclick = ()=>cellEl.remove();
+
+  if(afterEl){ afterEl.after(cellEl); } else { $('cells').appendChild(cellEl); }
+  ta.focus();
+  return cellEl;
+}
+function autoGrow(ta){ ta.style.height='auto'; ta.style.height=(ta.scrollHeight)+'px'; }
+function moveCell(cellEl, dir){
+  if(dir<0 && cellEl.previousElementSibling){ cellEl.parentNode.insertBefore(cellEl, cellEl.previousElementSibling); }
+  if(dir>0 && cellEl.nextElementSibling){ cellEl.parentNode.insertBefore(cellEl.nextElementSibling, cellEl); }
+}
+$('btnAddCell').onclick = ()=>addCell('');
+$('btnAddCellBottom').onclick = ()=>addCell('');
+
+/* ============================================================
+   CELL EXECUTION
+============================================================ */
+async function runCell(cellEl){
+  if(!pyodide){ return; }
+  const ta = cellEl.querySelector('textarea');
+  const code = ta.value;
+  const outEl = cellEl.querySelector('[data-role=output]');
+  outEl.innerHTML = '';
+  cellEl.classList.add('running');
+  setStatus('실행 중…','busy');
+
+  // matplotlib 사용 감지 시 자동 로드
+  if(/matplotlib|plt\./.test(code) && !matplotlibReady){
+    await ensureMatplotlib();
+  }
+
+  execCounter++;
+  cellEl.querySelector('[data-role=execcount]').textContent = `[${execCounter}]`;
+
+  try{
+    // stdout 캡처
+    pyodide.runPython(`
+import sys, io
+_stdout_buf = io.StringIO()
+_old_stdout = sys.stdout
+sys.stdout = _stdout_buf
+`);
+    let result;
+    let errorText = null;
+    try{
+      result = await pyodide.runPythonAsync(code);
+    }catch(err){
+      errorText = err.message;
+    }
+    const stdoutText = pyodide.runPython(`
+sys.stdout = _old_stdout
+_stdout_buf.getvalue()
+`);
+    if(stdoutText){
+      const d = document.createElement('div');
+      d.className = 'out-block out-stdout';
+      d.textContent = stdoutText;
+      outEl.appendChild(d);
+    }
+    if(errorText){
+      const d = document.createElement('div');
+      d.className = 'out-block out-error';
+      d.textContent = errorText;
+      outEl.appendChild(d);
+    } else if(result !== undefined && result !== null){
+      const d = document.createElement('div');
+      d.className = 'out-block out-result';
+      try{
+        d.textContent = (typeof result.toString === 'function') ? result.toString() : String(result);
+      }catch(e){ d.textContent = String(result); }
+      outEl.appendChild(d);
+    }
+
+    // matplotlib figure가 있으면 렌더링
+    if(matplotlibReady){
+      const hasFig = pyodide.runPython(`
+import matplotlib.pyplot as plt
+len(plt.get_fignums()) > 0
+`);
+      if(hasFig){
+        const b64 = pyodide.runPython(`
+import io, base64
+_imgbuf = io.BytesIO()
+plt.savefig(_imgbuf, format='png', bbox_inches='tight', facecolor='white')
+plt.close('all')
+base64.b64encode(_imgbuf.getvalue()).decode('utf-8')
+`);
+        const imgWrap = document.createElement('div');
+        imgWrap.className = 'out-img';
+        imgWrap.innerHTML = `<img src="data:image/png;base64,${b64}">`;
+        outEl.appendChild(imgWrap);
+      }
+    }
+  }catch(err){
+    const d = document.createElement('div');
+    d.className = 'out-block out-error';
+    d.textContent = 'Runtime error: '+err.message;
+    outEl.appendChild(d);
+  }
+  cellEl.classList.remove('running');
+  setStatus('실행 준비 완료','ready');
+}
+
+$('btnRunAll').onclick = async ()=>{
+  const cells = Array.from(document.querySelectorAll('.cell'));
+  for(const c of cells){ await runCell(c); }
+};
+
+/* ============================================================
+   RESET / SAVE
+============================================================ */
+$('btnReset').onclick = async ()=>{
+  if(!confirm('런타임을 초기화하면 지금까지의 변수/상태가 모두 사라집니다. 계속할까요?')) return;
+  location.reload();
+};
+
+$('btnDownload').onclick = ()=>{
+  const cells = Array.from(document.querySelectorAll('.cell')).map(c=>{
+    const code = c.querySelector('textarea').value;
+    const outEl = c.querySelector('[data-role=output]');
+    const outputs = [];
+    outEl.querySelectorAll('.out-stdout, .out-result').forEach(o=>{
+      outputs.push({output_type:"stream", name:"stdout", text: o.textContent.split('\\n')});
+    });
+    outEl.querySelectorAll('.out-error').forEach(o=>{
+      outputs.push({output_type:"error", ename:"Error", evalue:o.textContent, traceback:[o.textContent]});
+    });
+    return {
+      cell_type:"code",
+      execution_count: null,
+      metadata:{},
+      outputs,
+      source: code.split('\\n').map((l,i,arr)=> i<arr.length-1? l+'\\n' : l)
+    };
+  });
+  const nb = {
+    cells,
+    metadata:{ kernelspec:{display_name:"Python 3 (Pyodide)", language:"python", name:"python3"} },
+    nbformat:4, nbformat_minor:5
+  };
+  const blob = new Blob([JSON.stringify(nb,null,2)], {type:'application/json'});
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'notebook.ipynb';
+  document.body.appendChild(a); a.click(); a.remove();
+};
+
+initPyodide();
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,2191 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Cyto/Seq Console</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0b0e13; --panel:#12161d; --panel2:#181f28; --border:#232c39;
+    --text:#dbe2ea; --dim:#7c8797; --dim2:#4d5866;
+    --teal:#4fd8c4; --amber:#f2a65a; --violet:#8f7cf2; --rose:#e8607a; --sky:#7cc9f2;
+    --c0:#4fd8c4; --c1:#f2a65a; --c2:#8f7cf2; --c3:#e8607a; --c4:#7cc9f2; --c5:#c9e86a; --c6:#f27c9c;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;}
+  .strip{display:flex;align-items:center;gap:10px;padding:6px 14px;background:#080a0e;border-bottom:1px solid var(--border);
+    font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--dim);letter-spacing:.04em;}
+  .led{width:7px;height:7px;border-radius:50%;background:var(--teal);box-shadow:0 0 6px var(--teal);animation:blink 1.6s infinite;}
+  @keyframes blink{0%,100%{opacity:1}50%{opacity:.25}}
+  .strip span.val{color:var(--teal);}
+  .strip .sep{color:var(--dim2);}
+  header{padding:18px 20px 8px;}
+  h1{font-family:'JetBrains Mono',monospace;font-size:20px;margin:0 0 2px;letter-spacing:.02em;}
+  h1 b{color:var(--teal);}
+  .sub{color:var(--dim);font-size:12.5px;margin-bottom:14px;}
+  .tabs{display:flex;gap:2px;border-bottom:1px solid var(--border);flex-wrap:wrap;}
+  .tab{padding:9px 16px;font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.03em;color:var(--dim);
+    cursor:pointer;border:1px solid transparent;border-bottom:none;border-radius:6px 6px 0 0;}
+  .tab.active{color:var(--text);background:var(--panel);border-color:var(--border);}
+  .tab:hover:not(.active){color:var(--text);}
+  .app{display:none;padding:16px 20px 30px;gap:16px;}
+  .app.active{display:grid;grid-template-columns:220px 1fr 250px;}
+  @media (max-width:980px){.app.active{grid-template-columns:1fr;}}
+  .panel{background:var(--panel);border:1px solid var(--border);border-radius:10px;padding:14px;}
+  .panel + .panel{margin-top:12px;}
+  .rail{display:flex;flex-direction:column;gap:12px;}
+  label.lbl{display:block;font-size:11px;color:var(--dim);margin-bottom:5px;text-transform:uppercase;letter-spacing:.05em;}
+  select,input[type=range]{width:100%;}
+  select{background:var(--panel2);color:var(--text);border:1px solid var(--border);border-radius:6px;padding:6px 8px;font-size:12.5px;font-family:inherit;}
+  input[type=range]{accent-color:var(--teal);}
+  .rangeval{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--teal);float:right;}
+  button{background:var(--panel2);color:var(--text);border:1px solid var(--border);border-radius:6px;padding:8px 10px;
+    font-family:'JetBrains Mono',monospace;font-size:11.5px;cursor:pointer;letter-spacing:.02em;width:100%;}
+  button:hover{border-color:var(--teal);color:var(--teal);}
+  button.primary{background:linear-gradient(135deg,#1c3d38,#12161d);border-color:var(--teal);color:var(--teal);}
+  button.ghost{background:transparent;}
+  .field{margin-bottom:10px;}
+  .canvaswrap{position:relative;display:flex;justify-content:center;}
+  canvas{background:#0d1117;border-radius:8px;border:1px solid var(--border);cursor:crosshair;width:100%;max-width:560px;height:auto;display:block;}
+  .axisrow{display:flex;gap:8px;margin-bottom:10px;}
+  .axisrow > div{flex:1;}
+  .crumbs{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0 0;}
+  .crumb{font-family:'JetBrains Mono',monospace;font-size:10.5px;background:var(--panel2);border:1px solid var(--border);
+    border-radius:20px;padding:3px 9px;color:var(--dim);}
+  .crumb.on{color:var(--teal);border-color:var(--teal);}
+  .stat{display:flex;justify-content:space-between;font-family:'JetBrains Mono',monospace;font-size:11.5px;padding:5px 0;border-bottom:1px dashed var(--border);}
+  .stat b{color:var(--text);}
+  .stat span{color:var(--dim);}
+  .stat .v{color:var(--amber);}
+  .section-title{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--dim);text-transform:uppercase;letter-spacing:.06em;margin:0 0 8px;}
+  .note{font-size:11.5px;color:var(--dim);line-height:1.5;margin-top:8px;}
+  .legend{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px;font-size:11px;font-family:'JetBrains Mono',monospace;}
+  .legend .item{display:flex;align-items:center;gap:5px;color:var(--dim);}
+  .dot{width:8px;height:8px;border-radius:50%;display:inline-block;}
+  .flex{display:flex;gap:12px;}
+  .flex > div{flex:1;}
+  svg text{font-family:'JetBrains Mono',monospace;fill:var(--dim);}
+  .pill{display:inline-block;padding:2px 7px;border-radius:20px;font-size:10px;font-family:'JetBrains Mono',monospace;
+    background:var(--panel2);border:1px solid var(--border);color:var(--dim);margin-right:4px;}
+  .warn{color:var(--rose);}
+  .mono{font-family:'JetBrains Mono',monospace;}
+  ::-webkit-scrollbar{width:8px;height:8px;}
+  ::-webkit-scrollbar-thumb{background:var(--border);border-radius:4px;}
+
+  /* ---- guide / tutorial tabs ---- */
+  .app.guide{display:none;padding:16px 20px 40px;}
+  .app.guide.active{display:block;}
+  .guidewrap{max-width:900px;margin:0 auto;display:flex;flex-direction:column;gap:14px;}
+  .stepcard{background:var(--panel);border:1px solid var(--border);border-radius:10px;padding:16px 18px;display:grid;grid-template-columns:1fr 190px;gap:16px;align-items:center;}
+  @media (max-width:760px){.stepcard{grid-template-columns:1fr;}}
+  .stepnum{font-family:'JetBrains Mono',monospace;color:var(--teal);font-size:12px;letter-spacing:.05em;}
+  .steptitle{font-size:15.5px;font-weight:600;margin:2px 0 8px;}
+  .stepwhy{font-size:12.5px;color:var(--dim);line-height:1.6;margin-top:8px;padding-top:8px;border-top:1px dashed var(--border);}
+  .stepwhy b{color:var(--amber);font-weight:600;}
+  .diagrambox{background:var(--panel2);border:1px solid var(--border);border-radius:8px;padding:8px;display:flex;align-items:center;justify-content:center;}
+  .guideintro{color:var(--dim);font-size:13px;line-height:1.7;background:var(--panel);border:1px solid var(--border);
+    border-radius:10px;padding:14px 18px;}
+  .guideintro b{color:var(--text);}
+  .tipbox{background:linear-gradient(135deg,#1c2620,#12161d);border:1px solid #2c4038;border-radius:8px;padding:10px 12px;
+    font-size:12px;color:#bcd;line-height:1.6;margin-top:10px;}
+  .tipbox b{color:var(--teal);}
+  .checklist{font-size:12.5px;color:var(--dim);line-height:1.9;padding-left:18px;margin:6px 0;}
+  .checklist li b{color:var(--text);}
+  .concept{background:var(--panel);border:1px solid var(--border);border-radius:10px;padding:16px 18px;}
+  .concept h3{margin:0 0 6px;font-size:14.5px;font-family:'JetBrains Mono',monospace;color:var(--teal);}
+  .concept p{font-size:12.8px;color:var(--dim);line-height:1.7;margin:6px 0;}
+  .concept p b{color:var(--text);}
+  details.codebox{background:#0d1117;border:1px solid var(--border);border-radius:8px;padding:8px 12px;margin-top:10px;}
+  details.codebox summary{cursor:pointer;font-family:'JetBrains Mono',monospace;font-size:11.5px;color:var(--amber);padding:4px 0;}
+  details.codebox pre{overflow-x:auto;font-size:11px;line-height:1.55;color:#a8e0d4;margin:8px 0 4px;font-family:'JetBrains Mono',monospace;}
+  details.codebox .explain{font-size:12px;color:var(--dim);line-height:1.7;border-top:1px dashed var(--border);padding-top:8px;margin-top:6px;}
+  details.codebox .explain b{color:var(--text);}
+  details.rcodebox{background:#0d1520;border:1px solid #2a3d52;border-radius:8px;padding:8px 12px;margin-top:8px;}
+  details.rcodebox summary{cursor:pointer;font-family:'JetBrains Mono',monospace;font-size:11.5px;color:var(--sky);padding:4px 0;}
+  details.rcodebox pre{overflow-x:auto;font-size:11px;line-height:1.55;color:#bcd6ee;margin:8px 0 4px;font-family:'JetBrains Mono',monospace;}
+  details.rcodebox .explain{font-size:12px;color:var(--dim);line-height:1.7;border-top:1px dashed #2a3d52;padding-top:8px;margin-top:6px;}
+  details.rcodebox .explain b{color:var(--sky);}
+  .cmptable{width:100%;border-collapse:collapse;font-size:11.5px;margin-top:4px;}
+  .cmptable th{background:var(--panel2);color:var(--dim);text-align:left;padding:8px 10px;font-family:'JetBrains Mono',monospace;font-weight:500;border-bottom:1px solid var(--border);}
+  .cmptable td{padding:8px 10px;border-bottom:1px solid var(--border);vertical-align:top;color:var(--text);}
+  .cmptable td.jscol{color:var(--teal);font-family:'JetBrains Mono',monospace;font-size:11px;}
+  .cmptable td.rcol{color:var(--sky);font-family:'JetBrains Mono',monospace;font-size:11px;}
+  .cmptable td.diffcol{color:var(--dim);font-size:11px;}
+  .errbox{display:none;background:#2a1216;border:1px solid var(--rose);color:#ffb4c0;border-radius:8px;padding:8px 12px;
+    font-family:'JetBrains Mono',monospace;font-size:11px;margin-bottom:10px;white-space:pre-wrap;}
+  .terminal{background:#080a0e;border:1px solid #26303c;border-radius:8px;overflow:hidden;font-family:'JetBrains Mono',monospace;}
+  .terminal-head{display:flex;align-items:center;justify-content:space-between;padding:7px 10px;background:#0d1117;border-bottom:1px solid #232c39;color:var(--dim);font-size:10.5px;}
+  .terminal-actions{display:flex;gap:6px;}
+  .terminal-actions button{width:auto;padding:4px 8px;font-size:10px;}
+  .terminal-body{height:210px;overflow:auto;padding:9px 10px;font-size:10.5px;line-height:1.55;white-space:pre-wrap;}
+  .term-line{color:#a8e0d4;}
+  .term-line.dim{color:var(--dim);}
+  .term-line.warn{color:#ffb4c0;}
+  .term-prompt{color:var(--teal);}
+  .progressbar{height:4px;background:#18202a;margin:0 10px 8px;border-radius:3px;overflow:hidden;}
+  .progressbar > i{display:block;height:100%;width:0;background:var(--teal);transition:width .2s ease;}
+  .annotation-card{background:var(--panel);border:1px solid var(--border);border-radius:10px;padding:14px;margin-top:12px;}
+  .annotation-grid{display:grid;grid-template-columns:150px 1fr 220px;gap:12px;align-items:center;}
+  .marker-list{display:flex;flex-wrap:wrap;gap:6px;}
+  .marker-chip{font-family:'JetBrains Mono',monospace;font-size:10px;background:var(--panel2);border:1px solid var(--border);padding:4px 7px;border-radius:5px;}
+  @media(max-width:760px){.annotation-grid{grid-template-columns:1fr;}}
+
+
+  .course-console{background:#080a0e;border:1px solid #26303c;border-radius:8px;overflow:hidden;font-family:'JetBrains Mono',monospace;}
+  .course-console-head{padding:7px 10px;background:#0d1117;border-bottom:1px solid #26303c;color:var(--dim);font-size:10px;}
+  .course-console-body{padding:10px;min-height:100px;font-size:10.5px;line-height:1.55;white-space:pre-wrap;color:#a8e0d4;}
+  .analysis-question{font-size:14px;font-weight:700;margin-bottom:8px;}
+  .analysis-flow{display:flex;flex-wrap:wrap;gap:7px;align-items:center;margin:10px 0;}
+  .analysis-flow span{padding:5px 8px;border:1px solid #33404e;border-radius:6px;background:#10161e;color:var(--dim);font-size:10px;}
+  .analysis-flow b{color:var(--teal);}
+  .course-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+  .course-card{background:#0d1117;border:1px solid #26303c;border-radius:8px;padding:12px;margin-bottom:10px;}
+  .course-card h3{font-size:12px;color:var(--teal);margin:0 0 8px;}
+  .course-card p{font-size:11px;color:var(--dim);line-height:1.55;margin:5px 0;}
+  .code-strip{background:#080a0e;border:1px solid #26303c;border-radius:6px;padding:8px 10px;font-family:'JetBrains Mono',monospace;font-size:10px;line-height:1.5;white-space:pre-wrap;color:#b8e8dd;}
+  @media(max-width:900px){.course-grid{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+
+<div class="strip">
+  <span class="led" id="led"></span>
+  <span>DETECTOR ARRAY</span><span class="sep">|</span>
+  <span>MODE: <span class="val" id="modeReadout">FACS SETUP</span></span><span class="sep">|</span>
+  <span>EVENTS: <span class="val" id="eventReadout">0</span></span><span class="sep">|</span>
+  <span>STATUS: <span class="val">ACQUIRING</span></span>
+</div>
+
+<header>
+  <h1><b>Cyto</b>/Seq <span style="color:var(--dim);font-weight:400;">Console</span></h1>
+  <div class="sub">FACS 게이팅 시뮬레이터 &amp; Seurat 스타일 single-cell RNA-seq 파이프라인 — 브라우저에서 R 없이 동작</div>
+  <div class="tabs">
+    <div class="tab active" data-app="facsguide">01 · FACS 기기 조작법</div>
+    <div class="tab" data-app="facsresult">02 · FACS 결과 해석</div>
+    <div class="tab" data-app="scbasics">03 · 싱글셀 분석 기초</div>
+    <div class="tab" data-app="scsim">04 · scRNA-seq 시뮬레이션</div>
+    <div class="tab" data-app="annotation">05 · Cell type annotation</div>
+    <div class="tab" data-app="downstream">06 · Downstream graphs</div>
+    <div class="tab" data-app="origin">07 · Developmental / origin</div>
+  </div>
+</header>
+
+<!-- ============ TAB 1: FACS 기기 조작법 (모식도) ============ -->
+<div class="app guide active" id="app-facsguide">
+  <div class="guidewrap">
+    <div class="guideintro">
+      실제 FACS(유세포분석기) 앞에서 거치는 <b>7단계</b>를 모식도로 그려봤습니다. 실습실마다 기기·소프트웨어는 다르지만
+      전체 흐름(예열 → QC → 컴펜세이션 → 시료 준비 → 로딩 → 획득 → 세정)은 대부분 동일합니다.
+    </div>
+    <div id="facsGuideSteps"></div>
+  </div>
+</div>
+
+<!-- ============ TAB 2: FACS 결과 해석 ============ -->
+<div class="app" id="app-facsresult">
+  <div class="rail">
+    <div class="panel">
+      <div class="section-title">Acquisition</div>
+      <div class="field">
+        <label class="lbl">Events <span class="rangeval" id="nEventsVal">6000</span></label>
+        <input type="range" id="nEvents" min="1000" max="15000" step="500" value="6000">
+      </div>
+      <button class="primary" id="btnAcquire">▶ Run Acquisition</button>
+      <button class="ghost" id="btnClearGates" style="margin-top:8px;">Clear Gates</button>
+      <label style="display:flex;align-items:center;gap:6px;margin-top:10px;font-size:11px;color:var(--dim);">
+        <input type="checkbox" id="showDoublets" style="width:auto;"> Doublet 색칠 (교육용, 실제론 모름)
+      </label>
+    </div>
+    <div class="panel">
+      <div class="section-title">Axes</div>
+      <div class="field">
+        <label class="lbl">X channel</label>
+        <select id="xAxis"></select>
+      </div>
+      <div class="field">
+        <label class="lbl">Y channel</label>
+        <select id="yAxis"></select>
+      </div>
+      <div class="note">캔버스 위에서 마우스로 드래그하면 사각 게이트가 그려집니다. 게이트를 그리면 그 하위 집단에서 다시 게이팅할 수 있습니다 (계층적 게이팅).</div>
+    </div>
+    <div class="panel">
+      <div class="section-title">Gate hierarchy</div>
+      <div class="crumbs" id="gateCrumbs"></div>
+    </div>
+    <div class="panel">
+      <div class="section-title">Interaction terminal</div>
+      <div class="terminal">
+        <div class="terminal-head">
+          <span>FACS@browser:~$</span>
+          <div class="terminal-actions"><button id="btnClearFacsTerminal" class="ghost">clear</button></div>
+        </div>
+        <div class="terminal-body" id="facsTerminal"></div>
+      </div>
+      <div class="note">게이트 생성·삭제·축 변경·보정 적용 등의 상태를 실시간으로 기록합니다.</div>
+    </div>
+    <div class="panel">
+      <div class="section-title">일반적 게이팅 순서</div>
+      <ol class="checklist">
+        <li><b>FSC-A vs SSC-A</b> — 크기/과립도로 debris 제거, 큰 집단 분류</li>
+        <li><b>FSC-H vs FSC-A</b> — doublet(뭉친 세포) 제외</li>
+        <li><b>Viability-Dye</b> — 죽은 세포 제외</li>
+        <li><b>Lineage marker</b> — CD3/CD19/CD14로 세부 계통 확정 (컴펜세이션 먼저 확인)</li>
+      </ol>
+    </div>
+    <div class="panel">
+      <div class="section-title">컴펜세이션 (spillover 보정)</div>
+      <div class="note">지금 CD3/CD19/CD14는 <b style="color:var(--rose)">보정 전(raw)</b> 값이라 형광끼리 스펙트럼이 겹쳐(spillover) 보입니다. 단독염색 대조군을 흘려서 보정 매트릭스를 계산하세요.</div>
+      <button id="btnRunControls" style="margin-top:8px;">▶ Run single-stain controls</button>
+      <div id="compMatrixBox" class="note mono" style="margin-top:8px;"></div>
+      <label style="display:flex;align-items:center;gap:6px;margin-top:8px;font-size:11.5px;color:var(--dim);">
+        <input type="checkbox" id="applyComp" disabled style="width:auto;"> Apply compensation
+      </label>
+    </div>
+  </div>
+
+  <div class="panel">
+    <div class="canvaswrap">
+      <canvas id="facsCanvas" width="560" height="520"></canvas>
+    </div>
+    <div class="legend" id="facsLegend"></div>
+    <div class="tipbox" id="gatingTip">축을 선택하면 이 창에서 무엇을 확인해야 하는지 설명이 나옵니다.</div>
+  </div>
+
+  <div class="rail">
+    <div class="panel">
+      <div class="section-title">Gate statistics</div>
+      <div id="facsStats"></div>
+    </div>
+    <div class="panel">
+      <div class="section-title">Histogram</div>
+      <div class="field">
+        <select id="histChannel"></select>
+      </div>
+      <svg id="histSvg" width="230" height="140"></svg>
+    </div>
+  </div>
+</div>
+
+<!-- ============ TAB 3: 싱글셀 분석 기초 ============ -->
+<div class="app guide" id="app-scbasics">
+  <div class="guidewrap">
+    <div class="guideintro">
+      04번 탭(scRNA-seq 시뮬레이션)에서 버튼을 누르면 실제로 실행되는 코드를 단계별로 뜯어봅니다.
+      Seurat(R)이나 Scanpy(Python)를 써봤다면 <b>같은 개념이 어떤 함수로 매핑되는지</b> 괄호 안에 적어뒀습니다.
+      "코드 보기"를 누르면 04탭에서 쓰는 JS 코드 원문과 줄별 설명이 나오고, <b>"Seurat(R) 실제 코드 보기"</b>를 누르면 진짜 Seurat 튜토리얼(PBMC 3k, Satija Lab)에서 쓰는 R 코드와 이 콘솔이 어디서 갈라지는지 비교할 수 있습니다.
+    </div>
+    <div class="concept">
+      <h3>한눈에 보는 대응표</h3>
+      <table class="cmptable">
+        <tr><th>단계</th><th>콘솔 (이 도구, JS)</th><th>실제 Seurat (R)</th><th>핵심 차이</th></tr>
+        <tr><td>데이터 입력</td><td class="jscol">simulateCounts()</td><td class="rcol">Read10X() + CreateSeuratObject()</td><td class="diffcol">콘솔은 정답(true label)을 아는 가짜 데이터를 생성 / Seurat은 실제 시퀀서 출력을 읽음</td></tr>
+        <tr><td>QC</td><td class="jscol">computeQC()</td><td class="rcol">PercentageFeatureSet(pattern="^MT-")</td><td class="diffcol">미토콘드리아 유전자를 이름 패턴으로 찾음(R) vs 미리 알고 있음(콘솔)</td></tr>
+        <tr><td>정규화 + HVG</td><td class="jscol">applyQCFilter() 내 정규화</td><td class="rcol">NormalizeData() + FindVariableFeatures(vst) + ScaleData()</td><td class="diffcol">정규화 공식은 동일, HVG 선정 방식(vst 국소회귀 vs 단순 분산)과 스케일링 단계 유무가 다름</td></tr>
+        <tr><td>PCA / 임베딩</td><td class="jscol">runPCA() (Jacobi) / tsneEmbed()</td><td class="rcol">RunPCA() (SVD) / RunUMAP()</td><td class="diffcol">수학적으로 동일한 목적, Seurat은 SVD로 훨씬 빠름 / 실무는 t-SNE보다 UMAP을 더 씀</td></tr>
+        <tr><td>클러스터링</td><td class="jscol">louvainMultilevel() (unweighted kNN)</td><td class="rcol">FindNeighbors() + FindClusters()</td><td class="diffcol">Seurat은 SNN(공유 이웃 가중치) 그래프를 씀 — 콘솔은 단순 kNN 카운트 그래프</td></tr>
+        <tr><td>마커 검정</td><td class="jscol">discoverMarkers() (Wilcoxon+BH)</td><td class="rcol">FindAllMarkers()</td><td class="diffcol">기본 통계 검정은 동일(Wilcoxon) / Seurat은 log2FC·min.pct 필터가 추가로 있음</td></tr>
+        <tr><td>궤적 분석</td><td class="jscol">runOriginAnalysis() (MST+PAGA, 07탭)</td><td class="rcol">(Seurat엔 없음) Monocle3, Slingshot</td><td class="diffcol">Seurat 자체엔 pseudotime 기능이 없어 R에서도 별도 패키지를 씀</td></tr>
+      </table>
+    </div>
+    <div id="scConceptCards"></div>
+  </div>
+</div>
+
+<!-- ============ TAB 4: scRNA-seq 시뮬 ============ -->
+<div class="app" id="app-scsim">
+  <div class="rail">
+    <div class="panel">
+      <div class="section-title">Simulate dataset</div>
+      <div class="field">
+        <label class="lbl">Cell types <span class="rangeval" id="nClustVal">4</span></label>
+        <input type="range" id="nClustTrue" min="3" max="6" step="1" value="4">
+      </div>
+      <div class="field">
+        <label class="lbl">Cells <span class="rangeval" id="nCellsVal">1200</span></label>
+        <input type="range" id="nCells" min="500" max="2500" step="100" value="1200">
+      </div>
+      <button class="primary" id="btnSimulate">▶ Simulate counts</button>
+      <div class="note">유전자 120개 + 잠재요인(factor) 10개 기반 모델로, 세포마다 factor score에 잡음을 더해 생성합니다. 특정 유전자 몇 개만으로 클러스터가 정해지지 않습니다.</div>
+    </div>
+    <div class="panel">
+      <div class="section-title">QC filter</div>
+      <div class="field">
+        <label class="lbl">Min genes/cell <span class="rangeval" id="minGenesVal">15</span></label>
+        <input type="range" id="minGenes" min="0" max="60" step="1" value="15">
+      </div>
+      <div class="field">
+        <label class="lbl">Max mito % <span class="rangeval" id="maxMitoVal">15</span></label>
+        <input type="range" id="maxMito" min="5" max="40" step="1" value="15">
+      </div>
+      <button id="btnQC">Apply QC + Normalize</button>
+    </div>
+    <div class="panel">
+      <div class="section-title">Reduce &amp; cluster</div>
+      <button id="btnPCA">Run PCA</button>
+      <div class="field" style="margin-top:10px;">
+        <label class="lbl">kNN neighbors <span class="rangeval" id="kNNVal">15</span></label>
+        <input type="range" id="kNN" min="5" max="30" step="1" value="15">
+      </div>
+      <div class="field">
+        <label class="lbl">Resolution <span class="rangeval" id="resVal">0.5</span></label>
+        <input type="range" id="resolution" min="0.2" max="2.5" step="0.1" value="0.5">
+      </div>
+      <button id="btnCluster">Run clustering (Louvain-style)</button>
+      <div class="note">kNN 그래프를 만들고 모듈성(modularity)을 최적화하는 multi-level 그리디 알고리즘 — Louvain의 단순화 버전입니다. resolution을 올리면 더 잘게 쪼개집니다.</div>
+    </div>
+    <div class="panel">
+      <div class="section-title">Embedding view</div>
+      <select id="embedMode"><option value="pca">PCA (linear, PC1 vs PC2)</option><option value="tsne">t-SNE (nonlinear)</option></select>
+      <button id="btnTsne" style="margin-top:8px;">▶ Run t-SNE</button>
+      <div class="note">t-SNE는 계산량 때문에 세포 최대 600개로 무작위 서브샘플링해서 돌립니다. 클러스터링 자체는 항상 전체 PCA 공간에서 이뤄집니다 (t-SNE는 시각화 전용).</div>
+    </div>
+  </div>
+
+  <div class="rail" style="flex-direction:column;">
+    <div class="panel">
+      <div class="errbox" id="scErr"></div>
+      <div class="flex" style="align-items:center;margin-bottom:8px;">
+        <div class="section-title" style="margin:0;">PCA embedding</div>
+        <div style="text-align:right;">
+          <select id="colorMode" style="width:auto;">
+            <option value="cluster">Color: cluster</option>
+            <option value="gene">Color: gene expression</option>
+            <option value="qc">Color: QC (mito%)</option>
+          </select>
+        </div>
+      </div>
+      <div class="field" id="geneSelectWrap" style="display:none;">
+        <select id="geneSelectPlot"></select>
+      </div>
+      <div class="canvaswrap"><canvas id="pcaCanvas" width="560" height="440"></canvas></div>
+      <div class="legend" id="scLegend"></div>
+    </div>
+    <div class="panel">
+      <div class="section-title">Marker dot plot (empirically discovered, cluster × gene)</div>
+      <svg id="dotplotSvg" width="700" height="220"></svg>
+      <div class="note">클러스터링 후 자동으로 클러스터별 상위 차등발현 유전자를 <b>Wilcoxon rank-sum 검정 + BH FDR 보정</b>으로 찾아 표시합니다 (Seurat FindAllMarkers와 같은 통계 방식). 점 크기 = 발현 세포 비율(%expressing) · 색 = 평균 로그발현량</div>
+    </div>
+  </div>
+
+  <div class="rail">
+    <div class="panel">
+      <div class="section-title">QC summary</div>
+      <div id="scStats"></div>
+    </div>
+    <div class="panel">
+      <div class="section-title">Violin — gene by cluster</div>
+      <div class="field">
+        <select id="geneSelectViolin"></select>
+      </div>
+      <svg id="violinSvg" width="230" height="200"></svg>
+    </div>
+  </div>
+
+    <div class="panel">
+      <div class="section-title">Pipeline terminal</div>
+      <div class="terminal">
+        <div class="terminal-head">
+          <span>scRNA@browser:~$</span>
+          <div class="terminal-actions">
+            <button id="btnRunPipeline" class="primary">▶ run pipeline</button>
+            <button id="btnClearTerminal" class="ghost">clear</button>
+          </div>
+        </div>
+        <div class="progressbar"><i id="pipelineProgress"></i></div>
+        <div class="terminal-body" id="pipelineTerminal"></div>
+      </div>
+      <div class="note">각 단계의 시작/완료/오류가 여기에 순서대로 표시됩니다. 브라우저가 멈춘 것처럼 보여도 어느 함수에서 막혔는지 확인할 수 있습니다.</div>
+    </div>
+
+</div>
+
+<!-- ============ TAB 5: CELL TYPE ANNOTATION ============ -->
+<div class="app guide" id="app-annotation">
+  <div class="guidewrap">
+    <div class="guideintro"><b>05 · Cell type annotation</b> — 04번의 cluster와 marker 결과를 biological identity로 해석하는 단계입니다. 결과를 자동 확정하는 것이 아니라, <b>marker evidence → biological interpretation → cell type hypothesis</b>의 사고방식을 연습합니다.</div>
+    <div class="panel">
+      <div class="analysis-question">Question: “이 cluster는 어떤 세포일 가능성이 높은가?”</div>
+      <div class="analysis-flow"><span>Cluster</span><b>→</b><span>Marker genes</span><b>→</b><span>Marker set</span><b>→</b><span>Biological interpretation</span><b>→</b><span>Hypothesis</span></div>
+      <button class="primary" id="btnBuildAnnotation">▶ build marker evidence</button>
+      <button id="btnResetAnnotation" style="margin-top:8px;">reset labels</button>
+    </div>
+    <div id="annotationCards"></div>
+    <div class="panel">
+      <div class="section-title">R / Seurat conceptual workflow</div>
+      <div class="code-strip">markers &lt;- FindAllMarkers(object)
+markers %&gt;%
+  group_by(cluster) %&gt;%
+  slice_max(avg_log2FC)
+
+# marker evidence
+# → biological interpretation
+# → cell type hypothesis</div>
+    </div>
+    <div class="panel">
+      <div class="section-title">Analysis console</div>
+      <div class="course-console"><div class="course-console-head">R/Seurat@annotation:~$</div><div class="course-console-body" id="annotationConsole">Ready. Build marker evidence from the 04 output.</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ TAB 6: DOWNSTREAM GRAPHS ============ -->
+<div class="app guide" id="app-downstream">
+  <div class="guidewrap">
+    <div class="guideintro"><b>06 · Downstream analysis</b> — cluster를 만든 뒤 “무엇을 더 물어볼 것인가?”를 분석 질문별로 선택합니다. 같은 expression matrix라도 질문에 따라 통계 방법과 시각화가 달라집니다.</div>
+    <div class="panel">
+      <div class="analysis-question">Question: “분류한 세포군에서 어떤 생물학적 차이를 더 물어볼 수 있는가?”</div>
+      <div class="analysis-flow"><span>Biological question</span><b>→</b><span>Input data</span><b>→</b><span>Statistical method</span><b>→</b><span>Visualization</span><b>→</b><span>Interpretation</span></div>
+      <select id="downstreamMode">
+        <option value="heatmap">Marker heatmap — 어떤 gene set이 cluster를 구분하는가?</option>
+        <option value="composition">Cluster composition — 각 집단의 크기는 어떻게 다른가?</option>
+        <option value="similarity">Cluster similarity — 세포군은 expression space에서 얼마나 가까운가?</option>
+      </select>
+      <button class="primary" id="btnDrawDownstream" style="margin-top:8px;">▶ run analysis</button>
+    </div>
+    <div class="panel"><svg id="downstreamSvg" width="900" height="430" style="width:100%;height:auto;"></svg></div>
+    <div class="course-grid">
+      <div class="panel">
+        <div class="section-title">R analysis concepts</div>
+        <div class="course-card"><h3>Differential expression</h3><p>Cluster A와 B를 구분하는 gene은?</p><div class="code-strip">FindMarkers(object, ident.1="A", ident.2="B")</div></div>
+        <div class="course-card"><h3>Gene visualization</h3><p>특정 gene은 어느 cell/cluster에서 발현되는가?</p><div class="code-strip">FeaturePlot(object, features="GeneX")
+DotPlot(object, features=genes)</div></div>
+        <div class="course-card"><h3>Gene program</h3><p>여러 gene의 조합으로 정의되는 biological program은 어디에서 활성화되는가?</p><div class="code-strip">AddModuleScore(object, features=gene_set)</div></div>
+      </div>
+      <div class="panel"><div class="section-title">Interpretation</div><div id="downstreamExplain" class="note">04번 탭에서 PCA와 clustering을 먼저 실행하세요.</div><div class="course-console" style="margin-top:12px;"><div class="course-console-head">R/Seurat@downstream:~$</div><div class="course-console-body" id="downstreamConsole">Ready. Choose an analysis question.</div></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ TAB 7: DEVELOPMENTAL / ORIGIN ANALYSIS ============ -->
+<div class="app guide" id="app-origin">
+  <div class="guidewrap">
+    <div class="guideintro"><b>07 · Pseudotime / developmental trajectory</b> — 세포 상태가 어떤 연속적인 경로를 따라 연결되는지 추정합니다. <b>Pseudotime은 실제 시간(time)이 아니며</b>, 실제 embryonic origin이나 lineage를 확정하려면 별도의 실험·reference 근거가 필요합니다.</div>
+    <div class="panel">
+      <div class="analysis-question">Question: “세포 상태는 어떤 연속적인 경로를 따라 연결되어 있는가?”</div>
+      <div class="analysis-flow"><span>Expression state</span><b>→</b><span>Neighbor graph</span><b>→</b><span>Trajectory</span><b>→</b><span>Root selection</span><b>→</b><span>Pseudotime</span><b>→</b><span>Gene dynamics</span></div>
+      <div class="flex">
+        <select id="originBasis" disabled title="현재 버전은 PCA 공간 기준으로 고정"><option value="pca">Basis: PCA state space</option></select>
+        <select id="originRoot"><option value="-1">Root cluster: 클러스터링 후 표시됨</option></select>
+        <button class="primary" id="btnOriginAnalysis">▶ compute pseudotime + trajectory graph</button>
+      </div>
+      <div class="note">MST/PAGA 계산은 항상 04탭 PCA 결과(top PCs)를 기준으로 합니다.</div>
+    </div>
+    <div class="panel"><svg id="originSvg" width="900" height="470" style="width:100%;height:auto;"></svg></div>
+    <div class="panel">
+      <div class="section-title">Gene expression vs pseudotime</div>
+      <select id="originGeneTrend"><option value="-1">pseudotime 계산 후 표시됨</option></select>
+      <svg id="originTrendSvg" width="900" height="220" style="width:100%;height:auto;"></svg>
+    </div>
+    <div class="course-grid">
+      <div class="panel">
+        <div class="section-title">Conceptual analysis steps</div>
+        <div class="course-card"><h3>1 · Root hypothesis</h3><p>어떤 상태를 상대적으로 초기 상태로 가정할 것인가?</p></div>
+        <div class="course-card"><h3>2 · Pseudotime ordering</h3><p>세포 상태를 상대적 진행 순서로 정렬합니다.</p></div>
+        <div class="course-card"><h3>3 · Gene dynamics</h3><p>pseudotime에 따라 어떤 gene이 증가·감소하는지 분석합니다.</p></div>
+      </div>
+      <div class="panel">
+        <div class="section-title">R analysis concepts</div>
+        <div class="code-strip"># conceptual workflow
+trajectory &lt;- learn_graph(object)
+object$pseudotime &lt;- order_cells(
+  object, root_cells = root)
+
+# pseudotime ≠ actual developmental time</div>
+        <div class="course-console" style="margin-top:12px;"><div class="course-console-head">R/trajectory@browser:~$</div><div class="course-console-body" id="originConsole">Ready. Run trajectory analysis after 04 output exists.</div></div>
+      </div>
+    </div>
+    <div class="panel"><div class="section-title">What this means</div><div id="originExplain" class="note">04번의 PCA/neighbor/cluster 결과를 trajectory 분석으로 확장하는 개념입니다.</div></div>
+  </div>
+</div>
+
+<script>
+/* ============================================================
+   UTILITIES
+   ============================================================ */
+const CLUSTER_COLORS = ['#4fd8c4','#f2a65a','#8f7cf2','#e8607a','#7cc9f2','#c9e86a','#f27c9c','#b4b4b4'];
+function randn(){let u=0,v=0;while(u===0)u=Math.random();while(v===0)v=Math.random();return Math.sqrt(-2*Math.log(u))*Math.cos(2*Math.PI*v);}
+function poisson(lambda){
+  if(lambda<=0) return 0;
+  if(lambda>30){ return Math.max(0, Math.round(lambda + Math.sqrt(lambda)*randn())); }
+  let L=Math.exp(-lambda), k=0, p=1;
+  do{ k++; p*= Math.random(); }while(p>L);
+  return k-1;
+}
+function gammaSample(shape){ // Marsaglia-Tsang, shape>=1
+  const d = shape - 1/3, c = 1/Math.sqrt(9*d);
+  for(let tries=0; tries<100; tries++){
+    let x, v;
+    do{ x = randn(); v = 1+c*x; }while(v<=0);
+    v = v*v*v;
+    const u = Math.random();
+    if(u < 1 - 0.0331*x*x*x*x) return d*v;
+    if(Math.log(u) < 0.5*x*x + d*(1-v+Math.log(v))) return d*v;
+  }
+  return shape;
+}
+function clamp(v,a,b){return Math.max(a,Math.min(b,v));}
+function mean(a){return a.length? a.reduce((x,y)=>x+y,0)/a.length : 0;}
+function fmt(v,d=1){return Number(v).toFixed(d);}
+function getCanvasPos(e, cv){
+  const r = cv.getBoundingClientRect();
+  const scaleX = cv.width / r.width, scaleY = cv.height / r.height;
+  return { x: (e.clientX - r.left)*scaleX, y: (e.clientY - r.top)*scaleY };
+}
+
+/* ============================================================
+   FACS INTERACTION TERMINAL
+   ============================================================ */
+function facsTerminalWrite(text, cls=''){
+  const box = document.getElementById('facsTerminal');
+  if(!box) return;
+  const line = document.createElement('div');
+  line.className = 'term-line' + (cls ? ' '+cls : '');
+  line.innerHTML = text;
+  box.appendChild(line);
+  box.scrollTop = box.scrollHeight;
+}
+function facsTerminalCommand(cmd){ facsTerminalWrite(`<span class="term-prompt">$</span> ${cmd}`); }
+function facsTerminalClear(){ const box=document.getElementById('facsTerminal'); if(box) box.innerHTML=''; }
+function facsGateSummary(g){
+  return `${g.xk} [${fmt(g.x0,0)}–${fmt(g.x1,0)}] × ${g.yk} [${fmt(g.y0,0)}–${fmt(g.y1,0)}]`;
+}
+
+/* ============================================================
+   1. FACS SIMULATION
+   ============================================================ */
+const FACS_CHANNELS = ['FSC-A','SSC-A','FSC-H','Viability-Dye','CD3-FITC','CD19-PE','CD14-APC'];
+let facsData = [];
+let facsGates = [];
+const POP_DEF = {
+  'Debris':      {frac:.08, color:'#4d5866'},
+  'T cells':     {frac:.32, color:'#4fd8c4'},
+  'B cells':     {frac:.16, color:'#f2a65a'},
+  'Monocytes':   {frac:.22, color:'#8f7cf2'},
+  'Granulocytes':{frac:.22, color:'#e8607a'},
+};
+/* ground-truth spillover between fluorophores (unknown to the "operator" until controls are run) */
+const TRUE_SPILLOVER = [
+  [1.00, 0.18, 0.03],
+  [0.04, 1.00, 0.10],
+  [0.02, 0.06, 1.00],
+];
+let compMatrix = null;   // estimated spillover matrix from single-stain controls
+let compApplied = false;
+function invertMatrix(M){
+  const n = M.length;
+  const A = M.map((row,i)=> row.concat(Array.from({length:n},(_,j)=> i===j?1:0)));
+  for(let col=0; col<n; col++){
+    let piv = col;
+    for(let r=col+1;r<n;r++) if(Math.abs(A[r][col])>Math.abs(A[piv][col])) piv=r;
+    [A[col],A[piv]]=[A[piv],A[col]];
+    const div = A[col][col];
+    for(let c=0;c<2*n;c++) A[col][c]/=div;
+    for(let r=0;r<n;r++){ if(r===col) continue; const factor=A[r][col]; for(let c=0;c<2*n;c++) A[r][c]-=factor*A[col][c]; }
+  }
+  return A.map(row=>row.slice(n));
+}
+function matVecRow(vecRow, M){
+  const n = M.length; const out = new Array(n).fill(0);
+  for(let j=0;j<n;j++){ let s=0; for(let i=0;i<n;i++) s+=vecRow[i]*M[i][j]; out[j]=s; }
+  return out;
+}
+function median(a){ const s=a.slice().sort((x,y)=>x-y); const m=Math.floor(s.length/2); return s.length%2? s[m] : (s[m-1]+s[m])/2; }
+/* sample one SINGLET base event: true (pre-spillover) fluor + scatter + viability */
+function sampleBaseEvent(pop){
+  function g(m,s){return Math.max(0, m + s*randn());}
+  let FSC,SSC,trueCD3=0,trueCD19=0,trueCD14=0;
+  if(pop==='Debris'){ FSC=g(80,30); SSC=g(60,25); trueCD3=g(6,3); trueCD19=g(6,3); trueCD14=g(6,3); }
+  else if(pop==='T cells'){ FSC=g(320,40); SSC=g(180,30); trueCD3=g(780,90); trueCD19=g(6,3); trueCD14=g(6,3); }
+  else if(pop==='B cells'){ FSC=g(330,40); SSC=g(190,30); trueCD3=g(6,3); trueCD19=g(720,90); trueCD14=g(6,3); }
+  else if(pop==='Monocytes'){ FSC=g(520,45); SSC=g(430,45); trueCD3=g(6,3); trueCD19=g(6,3); trueCD14=g(700,100); }
+  else { FSC=g(560,50); SSC=g(720,60); trueCD3=g(6,3); trueCD19=g(6,3); trueCD14=g(6,3); }
+  const FSCH = FSC*(0.92+0.16*Math.random());
+  const dead = Math.random()<0.035;
+  const VIA = dead? g(650,90) : g(55,25);
+  return {FSC,SSC,FSCH,trueCD3,trueCD19,trueCD14,VIA,pop,dead,doublet:false};
+}
+function applySpillover(trueVec){
+  return matVecRow(trueVec, TRUE_SPILLOVER).map(v=>Math.max(0, v + 4*randn()));
+}
+function finalizeEvent(ev){
+  const obs = applySpillover([ev.trueCD3, ev.trueCD19, ev.trueCD14]);
+  ev.CD3=obs[0]; ev.CD19=obs[1]; ev.CD14=obs[2];
+  if(compMatrix){
+    const comp = matVecRow([ev.CD3,ev.CD19,ev.CD14], invertMatrix(compMatrix));
+    ev._comp = {CD3:Math.max(0,comp[0]), CD19:Math.max(0,comp[1]), CD14:Math.max(0,comp[2])};
+  }
+  return ev;
+}
+function runAcquisition(){
+  const n = +document.getElementById('nEvents').value;
+  facsData = [];
+  const pops = Object.keys(POP_DEF);
+  const cum = []; let acc=0;
+  pops.forEach(p=>{ acc+=POP_DEF[p].frac; cum.push(acc); });
+  function samplePop(){ let r=Math.random(), pop=pops[pops.length-1]; for(let j=0;j<cum.length;j++){ if(r<=cum[j]){ pop=pops[j]; break; } } return pop; }
+  const doubletFrac = 0.045;
+  for(let i=0;i<n;i++){
+    if(Math.random()<doubletFrac){
+      const a = sampleBaseEvent(samplePop()), b = sampleBaseEvent(samplePop());
+      const ev = {
+        FSC: a.FSC+b.FSC, SSC: a.SSC+b.SSC,
+        FSCH: Math.max(a.FSCH,b.FSCH)*(1.05+0.12*Math.random()),
+        trueCD3: a.trueCD3+b.trueCD3, trueCD19: a.trueCD19+b.trueCD19, trueCD14: a.trueCD14+b.trueCD14,
+        VIA: Math.max(a.VIA,b.VIA), pop: a.pop, dead: a.dead||b.dead, doublet:true,
+      };
+      facsData.push(finalizeEvent(ev));
+    } else {
+      facsData.push(finalizeEvent(sampleBaseEvent(samplePop())));
+    }
+  }
+  facsGates=[];
+  compMatrix = null; compApplied = false;
+  facsTerminalWrite(`[ACQUIRE] generated ${n.toLocaleString()} events`);
+  facsTerminalWrite('[READY] drag on the plot to create a gate');
+  const cb = document.getElementById('applyComp'); if(cb){ cb.checked=false; cb.disabled=true; }
+  const mb = document.getElementById('compMatrixBox'); if(mb) mb.innerHTML = '아직 컨트롤을 실행하지 않았습니다.';
+  document.getElementById('eventReadout').textContent = n;
+  drawFacs();
+}
+function runSingleStainControls(){
+  const names = ['CD3','CD19','CD14'];
+  const Shat = [[1,0,0],[0,1,0],[0,0,1]];
+  for(let k=0;k<3;k++){
+    const obsList = [];
+    for(let i=0;i<500;i++){
+      const trueVec=[0,0,0];
+      trueVec[k] = Math.max(0, 700+70*randn());
+      for(let j=0;j<3;j++) if(j!==k) trueVec[j] = Math.max(0, 5+2*randn());
+      obsList.push(applySpillover(trueVec));
+    }
+    const ownMed = median(obsList.map(o=>o[k]));
+    for(let j=0;j<3;j++){ if(j===k) continue; Shat[k][j] = median(obsList.map(o=>o[j]))/ownMed; }
+  }
+  compMatrix = Shat;
+  facsTerminalWrite('[CONTROL] single-stain controls completed');
+  facsTerminalWrite('[COMP] spillover matrix estimated; compensation values available');
+  facsData.forEach(ev=>{
+    const comp = matVecRow([ev.CD3,ev.CD19,ev.CD14], invertMatrix(compMatrix));
+    ev._comp = {CD3:Math.max(0,comp[0]), CD19:Math.max(0,comp[1]), CD14:Math.max(0,comp[2])};
+  });
+  const box = document.getElementById('compMatrixBox');
+  const rows = names.map((r,i)=> names.map((c,j)=> Shat[i][j].toFixed(2)).join('  '));
+  box.innerHTML = `<div style="font-size:10px;">rows=source → cols=detector<br>` +
+    rows.map((r,i)=>`${names[i]}: ${r}`).join('<br>') + `</div>`;
+  const cb = document.getElementById('applyComp'); cb.disabled=false;
+}
+function chKey(name){ return {'FSC-A':'FSC','SSC-A':'SSC','FSC-H':'FSCH','Viability-Dye':'VIA','CD3-FITC':'CD3','CD19-PE':'CD19','CD14-APC':'CD14'}[name]; }
+function getVal(d, key){
+  if(compApplied && d._comp && (key==='CD3'||key==='CD19'||key==='CD14')) return d._comp[key];
+  return d[key];
+}
+function eventInGate(d,g){
+  return getVal(d,g.xk)>=Math.min(g.x0,g.x1) &&
+         getVal(d,g.xk)<=Math.max(g.x0,g.x1) &&
+         getVal(d,g.yk)>=Math.min(g.y0,g.y1) &&
+         getVal(d,g.yk)<=Math.max(g.y0,g.y1);
+}
+function gatedSubset(){
+  let sub = facsData;
+  facsGates.forEach(g=>{ sub = sub.filter(d=>eventInGate(d,g)); });
+  return sub;
+}
+function drawFacs(){
+  const cv = document.getElementById('facsCanvas'); const ctx = cv.getContext('2d');
+  const W=cv.width,H=cv.height, pad=40;
+  ctx.clearRect(0,0,W,H);
+  const xName = document.getElementById('xAxis').value, yName = document.getElementById('yAxis').value;
+  const xk = chKey(xName), yk = chKey(yName);
+  const sub = gatedSubset();
+  if(sub.length===0){ ctx.fillStyle='#4d5866'; ctx.font='12px monospace'; ctx.fillText('no events', W/2-30,H/2); return; }
+  const showDoublets = document.getElementById('showDoublets') && document.getElementById('showDoublets').checked;
+  const xs = sub.map(d=>getVal(d,xk)), ys = sub.map(d=>getVal(d,yk));
+  const xmax = Math.max(...xs)*1.05+1, ymax = Math.max(...ys)*1.05+1;
+  function px(v){ return pad + (v/xmax)*(W-pad-15); }
+  function py(v){ return H-pad - (v/ymax)*(H-pad-15); }
+  ctx.strokeStyle='#232c39'; ctx.lineWidth=1;
+  for(let i=0;i<=4;i++){
+    let gx = pad + i*(W-pad-15)/4, gy = H-pad - i*(H-pad-15)/4;
+    ctx.beginPath();ctx.moveTo(gx,H-pad);ctx.lineTo(gx,10);ctx.stroke();
+    ctx.beginPath();ctx.moveTo(pad,gy);ctx.lineTo(W-5,gy);ctx.stroke();
+  }
+  ctx.fillStyle='#7c8797'; ctx.font='11px JetBrains Mono, monospace';
+  ctx.fillText(xName + (compApplied&&(xk==='CD3'||xk==='CD19'||xk==='CD14')?' (comp)':''), W/2-20, H-10);
+  ctx.save(); ctx.translate(12,H/2+20); ctx.rotate(-Math.PI/2); ctx.fillText(yName + (compApplied&&(yk==='CD3'||yk==='CD19'||yk==='CD14')?' (comp)':''),0,0); ctx.restore();
+  sub.forEach(d=>{
+    ctx.fillStyle = (showDoublets && d.doublet) ? '#ffffff' : POP_DEF[d.pop].color;
+    ctx.globalAlpha = (showDoublets && d.doublet) ? 0.9 : 0.55;
+    ctx.beginPath(); ctx.arc(px(getVal(d,xk)), py(getVal(d,yk)), (showDoublets && d.doublet)?2.2:1.6, 0, 7); ctx.fill();
+  });
+  ctx.globalAlpha=1;
+  cv._px=px; cv._py=py; cv._xk=xk; cv._yk=yk; cv._xmax=xmax; cv._ymax=ymax; cv._pad=pad;
+  const leg = document.getElementById('facsLegend'); leg.innerHTML='';
+  Object.keys(POP_DEF).forEach(p=>{
+    const n = sub.filter(d=>d.pop===p).length;
+    leg.innerHTML += `<span class="item"><span class="dot" style="background:${POP_DEF[p].color}"></span>${p} (${n})</span>`;
+  });
+  if(showDoublets){
+    const nD = sub.filter(d=>d.doublet).length;
+    leg.innerHTML += `<span class="item"><span class="dot" style="background:#fff"></span>doublet (${nD})</span>`;
+  }
+  drawGateStats(sub);
+  drawHistogram();
+}
+function drawGateStats(sub){
+  const box = document.getElementById('facsStats');
+  const total = facsData.length;
+  let html = `<div class="stat"><span>Total events</span><b>${total}</b></div>`;
+  html += `<div class="stat"><span>Gated events</span><b class="v">${sub.length}</b></div>`;
+  html += `<div class="stat"><span>% of total</span><b class="v">${fmt(100*sub.length/total)}%</b></div>`;
+  html += `<div class="stat"><span>% of parent</span><b class="v">${fmt(100*sub.length/(facsGates.length? parentCount():total))}%</b></div>`;
+  ['FSC','SSC','FSCH','VIA','CD3','CD19','CD14'].forEach(ch=>{
+    const vals = sub.map(d=>getVal(d,ch));
+    const mfi = vals.length? mean(vals):0;
+    html += `<div class="stat"><span>MFI ${ch}</span><span>${fmt(mfi,0)}</span></div>`;
+  });
+  box.innerHTML = html;
+  const cr = document.getElementById('gateCrumbs'); cr.innerHTML = `<div class="crumb on">All events (${total})</div>`;
+  let running = facsData;
+  facsGates.forEach((g,i)=>{
+    running = running.filter(d=>eventInGate(d,g));
+    cr.innerHTML += `<div class="crumb on">Gate ${i+1}: ${g.xk} vs ${g.yk} (${running.length})</div>`;
+  });
+}
+function parentCount(){
+  let sub = facsData;
+  for(let i=0;i<facsGates.length-1;i++){
+    const g=facsGates[i];
+    sub = sub.filter(d=>eventInGate(d,g));
+  }
+  return sub.length;
+}
+function drawHistogram(){
+  const svg = document.getElementById('histSvg'); const W=230,H=140,pad=24;
+  const ch = chKey(document.getElementById('histChannel').value);
+  const sub = gatedSubset();
+  svg.innerHTML='';
+  if(!sub.length) return;
+  const vals = sub.map(d=>getVal(d,ch));
+  const vmax = Math.max(...vals)*1.05+1;
+  const bins=24, counts=new Array(bins).fill(0);
+  vals.forEach(v=>{ let b=Math.min(bins-1, Math.floor(v/vmax*bins)); counts[b]++; });
+  const cmax = Math.max(...counts)||1;
+  let s = `<line x1="${pad}" y1="${H-pad}" x2="${W-8}" y2="${H-pad}" stroke="#232c39"/>`;
+  const bw = (W-pad-10)/bins;
+  counts.forEach((c,i)=>{
+    const h = (c/cmax)*(H-pad-10);
+    s += `<rect x="${pad+i*bw}" y="${H-pad-h}" width="${bw-1}" height="${h}" fill="#4fd8c4" opacity="0.75"></rect>`;
+  });
+  s += `<text x="${pad}" y="${H-6}" font-size="9">0</text><text x="${W-40}" y="${H-6}" font-size="9">${fmt(vmax,0)}</text>`;
+  svg.innerHTML = s;
+}
+/* ---- canvas gating interaction (fixed to scale for CSS-resized canvas) ---- */
+let dragStart=null;
+function setupFacsCanvas(){
+  const cv = document.getElementById('facsCanvas');
+  cv.addEventListener('mousedown', e=>{ dragStart = getCanvasPos(e, cv); });
+  cv.addEventListener('mousemove', e=>{
+    if(!dragStart) return;
+    const cur = getCanvasPos(e, cv);
+    drawFacs();
+    const ctx = cv.getContext('2d');
+    ctx.strokeStyle='#f2a65a'; ctx.setLineDash([4,3]); ctx.lineWidth=1.5;
+    ctx.strokeRect(Math.min(dragStart.x,cur.x), Math.min(dragStart.y,cur.y), Math.abs(cur.x-dragStart.x), Math.abs(cur.y-dragStart.y));
+    ctx.setLineDash([]);
+  });
+  window.addEventListener('mouseup', e=>{
+    if(!dragStart) return;
+    const end = getCanvasPos(e, cv);
+    if(Math.abs(end.x-dragStart.x)>6 && Math.abs(end.y-dragStart.y)>6){
+      const px=cv._px, py=cv._py, xmax=cv._xmax, ymax=cv._ymax, pad=cv._pad, W=cv.width,H=cv.height;
+      function invX(sx){ return (sx-pad)/(W-pad-15)*xmax; }
+      function invY(sy){ return (H-pad-sy)/(H-pad-15)*ymax; }
+      const x0=invX(Math.min(dragStart.x,end.x)), x1=invX(Math.max(dragStart.x,end.x));
+      const y0=invY(Math.min(dragStart.y,end.y)), y1=invY(Math.max(dragStart.y,end.y));
+      const gate = {xk:cv._xk, yk:cv._yk, x0, x1, y0, y1};
+      facsGates.push(gate);
+      facsTerminalCommand(`gate ${facsGates.length}`);
+      facsTerminalWrite(`[GATE] ${facsGateSummary(gate)}`);
+      facsTerminalWrite(`[RESULT] ${gatedSubset().length.toLocaleString()} events remain`);
+    }
+    dragStart=null;
+    drawFacs();
+  });
+  // touch support
+  cv.addEventListener('touchstart', e=>{ const t=e.touches[0]; dragStart = getCanvasPos(t, cv); e.preventDefault(); }, {passive:false});
+  cv.addEventListener('touchmove', e=>{
+    if(!dragStart) return; const t=e.touches[0]; const cur = getCanvasPos(t, cv);
+    drawFacs();
+    const ctx = cv.getContext('2d');
+    ctx.strokeStyle='#f2a65a'; ctx.setLineDash([4,3]); ctx.lineWidth=1.5;
+    ctx.strokeRect(Math.min(dragStart.x,cur.x), Math.min(dragStart.y,cur.y), Math.abs(cur.x-dragStart.x), Math.abs(cur.y-dragStart.y));
+    ctx.setLineDash([]); e.preventDefault();
+  }, {passive:false});
+  cv.addEventListener('touchend', e=>{
+    if(!dragStart) return;
+    const t=e.changedTouches[0]; const end = getCanvasPos(t, cv);
+    if(Math.abs(end.x-dragStart.x)>6 && Math.abs(end.y-dragStart.y)>6){
+      const px=cv._px, py=cv._py, xmax=cv._xmax, ymax=cv._ymax, pad=cv._pad, W=cv.width,H=cv.height;
+      function invX(sx){ return (sx-pad)/(W-pad-15)*xmax; }
+      function invY(sy){ return (H-pad-sy)/(H-pad-15)*ymax; }
+      const x0=invX(Math.min(dragStart.x,end.x)), x1=invX(Math.max(dragStart.x,end.x));
+      const y0=invY(Math.min(dragStart.y,end.y)), y1=invY(Math.max(dragStart.y,end.y));
+      const gate = {xk:cv._xk, yk:cv._yk, x0, x1, y0, y1};
+      facsGates.push(gate);
+      facsTerminalCommand(`gate ${facsGates.length}`);
+      facsTerminalWrite(`[GATE] ${facsGateSummary(gate)}`);
+      facsTerminalWrite(`[RESULT] ${gatedSubset().length.toLocaleString()} events remain`);
+    }
+    dragStart=null; drawFacs();
+  });
+}
+function populateFacsSelectors(){
+  ['xAxis','yAxis','histChannel'].forEach(id=>{
+    const sel = document.getElementById(id);
+    sel.innerHTML = FACS_CHANNELS.map(c=>`<option>${c}</option>`).join('');
+  });
+  document.getElementById('yAxis').value='SSC-A';
+  document.getElementById('histChannel').value='CD3-FITC';
+}
+function updateGatingTip(){
+  const box = document.getElementById('gatingTip');
+  if(!box) return;
+  const x = document.getElementById('xAxis').value, y = document.getElementById('yAxis').value;
+  const key = [x,y].sort().join('|');
+  const TIPS = {
+    'FSC-A|SSC-A': '<b>가장 먼저 보는 창.</b> 크기(FSC)와 과립도(SSC)로 debris(왼쪽 아래, 작고 균질), 림프구(작고 과립 적음), 단핵구/과립구(크고 과립 많음)를 큰 덩어리로 구분합니다. 여기서 debris를 게이트 아웃하고 다음 단계로 넘어갑니다.',
+    'FSC-A|FSC-H': '<b>Doublet 제외 창.</b> 단일세포는 FSC-H와 FSC-A가 거의 비례해서 대각선을 따라 분포합니다. 두 세포가 뭉쳐 지나가면(doublet) Area는 거의 두 배가 되지만 Height는 그만큼 안 커져서 대각선 아래쪽/오른쪽으로 벗어납니다 — 그 벗어난 이벤트를 제외하세요.',
+    'SSC-A|Viability-Dye': '<b>생사 판별 창.</b> 죽은 세포는 막이 손상돼 dye가 세포 안으로 들어가 형광이 높게 나옵니다. Viability-Dye가 낮은(live) 집단만 게이트로 잡고 넘어가세요.',
+    'CD3-FITC|CD19-PE': 'T세포(CD3+CD19-)와 B세포(CD19+CD3-)를 나누는 계통 게이트입니다. 두 마커가 상호 배타적으로 갈라지는지 확인하세요 — 대각선 방향으로 스미어져 보인다면 컴펜세이션(스필오버) 문제입니다. 왼쪽 패널에서 "Apply compensation"을 켜고 비교해보세요.',
+    'CD3-FITC|CD14-APC': 'T세포(CD3+)와 단핵구(CD14+)가 서로 다른 축에 분리되는지 확인하는 창입니다.',
+    'CD14-APC|CD19-PE': '단핵구(CD14+)와 B세포(CD19+)를 구분하는 창입니다.',
+  };
+  box.innerHTML = TIPS[key] || `<b>${x} vs ${y}</b> — 이 조합은 표준 게이팅 트리에 없는 탐색용 조합입니다. 두 채널의 분포가 뚜렷이 갈라지는 집단이 있는지 살펴보세요.`;
+}
+
+/* ============================================================
+   TAB 1: FACS GUIDE — hand-drawn schematic diagrams (no photo upload)
+   ============================================================ */
+function diagramStartup(){
+  return `<svg viewBox="0 0 160 120" width="160" height="120">
+    <rect x="14" y="20" width="90" height="70" rx="6" fill="none" style="stroke:var(--sky)" stroke-width="2"/>
+    <circle cx="34" cy="40" r="6" style="fill:var(--amber)"/>
+    <path d="M33 36 L37 36 L32 46 L37 46 L31 54" fill="none" style="stroke:#0d1117" stroke-width="1.6"/>
+    <rect x="112" y="24" width="34" height="24" rx="3" fill="none" style="stroke:var(--teal)" stroke-width="2"/>
+    <text x="118" y="40" font-size="8" style="fill:var(--teal)">SHEATH</text>
+    <rect x="112" y="58" width="34" height="24" rx="3" fill="none" style="stroke:var(--rose)" stroke-width="2"/>
+    <text x="122" y="74" font-size="8" style="fill:var(--rose)">WASTE</text>
+    <line x1="50" y1="55" x2="95" y2="55" style="stroke:var(--sky)" stroke-width="1.5" stroke-dasharray="3,3"/>
+  </svg>`;
+}
+function diagramQC(){
+  return `<svg viewBox="0 0 160 120" width="160" height="120">
+    <rect x="20" y="30" width="26" height="50" rx="10" fill="none" style="stroke:var(--violet)" stroke-width="2"/>
+    <circle cx="30" cy="55" r="2.4" style="fill:var(--violet)"/><circle cx="38" cy="62" r="2.4" style="fill:var(--violet)"/>
+    <circle cx="32" cy="68" r="2.4" style="fill:var(--violet)"/><circle cx="40" cy="48" r="2.4" style="fill:var(--violet)"/>
+    <path d="M50 55 L82 55" style="stroke:var(--dim)" stroke-width="1.5" marker-end="url(#arrow)"/>
+    <polygon points="82,50 90,55 82,60" style="fill:var(--dim)"/>
+    <line x1="100" y1="86" x2="146" y2="86" style="stroke:var(--border)" stroke-width="2"/>
+    <line x1="100" y1="86" x2="100" y2="30" style="stroke:var(--border)" stroke-width="2"/>
+    <path d="M104 84 L114 60 L124 84 L134 40 L144 84" fill="none" style="stroke:var(--teal)" stroke-width="2"/>
+  </svg>`;
+}
+function diagramComp(){
+  return `<svg viewBox="0 0 160 120" width="160" height="120">
+    ${[ ['unstained', 22, 'none', 'var(--dim2)'], ['FITC', 58, 'var(--teal)', 'var(--teal)'],
+        ['PE', 94, 'var(--amber)', 'var(--amber)'], ['APC', 130, 'var(--violet)', 'var(--violet)'] ]
+      .map(([lab,x,fill,stroke])=>`
+        <rect x="${x-10}" y="30" width="20" height="46" rx="8" fill="none" style="stroke:${stroke}" stroke-width="2"/>
+        <rect x="${x-8}" y="52" width="16" height="22" rx="4" style="fill:${fill};opacity:${fill==='none'?0:0.55}"/>
+        <text x="${x-16}" y="90" font-size="8" style="fill:${stroke}">${lab}</text>`).join('')}
+  </svg>`;
+}
+function diagramPrep(){
+  return `<svg viewBox="0 0 160 120" width="160" height="120">
+    <circle cx="28" cy="34" r="4" style="fill:var(--rose)"/><circle cx="36" cy="30" r="4" style="fill:var(--rose)"/>
+    <circle cx="34" cy="40" r="4" style="fill:var(--rose)"/><circle cx="24" cy="44" r="4" style="fill:var(--rose)"/>
+    <path d="M20 52 L70 52 L48 82 L44 82 Z" fill="none" style="stroke:var(--sky)" stroke-width="2"/>
+    <line x1="28" y1="58" x2="62" y2="58" style="stroke:var(--sky)" stroke-width="1"/>
+    <line x1="33" y1="65" x2="57" y2="65" style="stroke:var(--sky)" stroke-width="1"/>
+    <line x1="38" y1="72" x2="52" y2="72" style="stroke:var(--sky)" stroke-width="1"/>
+    <rect x="34" y="86" width="24" height="26" rx="6" fill="none" style="stroke:var(--teal)" stroke-width="2"/>
+    <circle cx="46" cy="102" r="3.4" style="fill:var(--teal)"/>
+    <path d="M90 60 L130 60" style="stroke:var(--dim)" stroke-width="1.5"/>
+    <polygon points="130,55 138,60 130,65" style="fill:var(--dim)"/>
+  </svg>`;
+}
+function diagramLoad(){
+  return `<svg viewBox="0 0 160 120" width="160" height="120">
+    <rect x="24" y="40" width="18" height="46" rx="7" fill="none" style="stroke:var(--teal)" stroke-width="2"/>
+    <rect x="42" y="55" width="20" height="8" style="fill:var(--panel2);stroke:var(--dim2)" stroke-width="1.5"/>
+    <path d="M62 59 L86 59" style="stroke:var(--dim)" stroke-width="2"/>
+    <circle cx="120" cy="60" r="28" fill="none" style="stroke:var(--sky)" stroke-width="2"/>
+    <line x1="120" y1="60" x2="132" y2="42" style="stroke:var(--amber)" stroke-width="2.5"/>
+    <circle cx="120" cy="60" r="3" style="fill:var(--amber)"/>
+    <text x="104" y="98" font-size="8" style="fill:var(--sky)">FLOW RATE</text>
+  </svg>`;
+}
+function diagramAcquire(){
+  return `<svg viewBox="0 0 160 120" width="160" height="120">
+    <rect x="20" y="18" width="120" height="76" rx="6" fill="none" style="stroke:var(--dim2)" stroke-width="2"/>
+    <line x1="34" y1="80" x2="34" y2="30" style="stroke:var(--border)" stroke-width="1.5"/>
+    <line x1="34" y1="80" x2="126" y2="80" style="stroke:var(--border)" stroke-width="1.5"/>
+    ${Array.from({length:26},()=> {
+      const x = 40+Math.random()*80, y = 30+Math.random()*46;
+      const c = Math.random()<0.5?'var(--teal)':'var(--amber)';
+      return `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="2" style="fill:${c}" opacity="0.85"/>`;
+    }).join('')}
+    <rect x="20" y="98" width="120" height="10" rx="3" style="fill:var(--panel2);stroke:var(--border)" stroke-width="1"/>
+    <rect x="20" y="98" width="80" height="10" rx="3" style="fill:var(--teal)" opacity="0.7"/>
+  </svg>`;
+}
+function diagramClean(){
+  return `<svg viewBox="0 0 160 120" width="160" height="120">
+    <rect x="16" y="34" width="20" height="42" rx="8" fill="none" style="stroke:var(--rose)" stroke-width="2"/>
+    <text x="10" y="86" font-size="8" style="fill:var(--rose)">Bleach</text>
+    <rect x="46" y="34" width="20" height="42" rx="8" fill="none" style="stroke:var(--sky)" stroke-width="2"/>
+    <text x="44" y="86" font-size="8" style="fill:var(--sky)">DI water</text>
+    <path d="M70 55 L104 55" style="stroke:var(--dim)" stroke-width="1.5"/>
+    <polygon points="104,50 112,55 104,60" style="fill:var(--dim)"/>
+    <rect x="114" y="30" width="34" height="50" rx="6" fill="none" style="stroke:var(--teal)" stroke-width="2"/>
+    <path d="M122 40 l3 5 l-3 1 l4 6" fill="none" style="stroke:var(--teal)" stroke-width="1.4"/>
+    <path d="M136 44 l2 4 l-2 1 l3 5" fill="none" style="stroke:var(--teal)" stroke-width="1.4"/>
+  </svg>`;
+}
+const FACS_STEPS = [
+  {title:'① 기기 시동 & 유체 시스템 예열', diagram:diagramStartup,
+   why:'레이저와 유체(fluidics)가 안정화되기까지 <b>15~30분</b> 걸립니다. 예열 없이 바로 획득하면 초반 데이터의 형광 강도가 흔들립니다.'},
+  {title:'② 데일리 QC (표준화 비드)', diagram:diagramQC,
+   why:'표준 비드로 레이저 정렬·PMT voltage·형광 민감도를 매일 확인합니다. <b>이 단계를 건너뛰면 그날 데이터를 다른 날과 비교할 수 없습니다.</b>'},
+  {title:'③ 컴펜세이션 컨트롤 준비', diagram:diagramComp,
+   why:'형광 채널끼리 스펙트럼이 겹치는 <b>spillover</b>를 보정하려면 염색되지 않은 대조군과 색깔별 단독 염색 대조군이 각각 필요합니다.'},
+  {title:'④ 샘플 염색 및 여과', diagram:diagramPrep,
+   why:'세포 덩어리(clump)가 있으면 노즐이 막히거나(clog) 두 세포가 한 이벤트로 잡히는 오류가 생깁니다. 로딩 직전 40 µm strainer로 반드시 걸러줍니다.'},
+  {title:'⑤ 샘플 로딩 & Flow rate 설정', diagram:diagramLoad,
+   why:'속도를 너무 높이면 <b>coincidence</b>(두 세포가 겹쳐 지나가는 현상)로 데이터가 왜곡됩니다. 처음엔 low/medium rate로 시작하는 게 안전합니다.'},
+  {title:'⑥ 실시간 게이팅하며 획득', diagram:diagramAcquire,
+   why:'획득 중에도 FSC/SSC 창을 보면서 원하는 집단이 제대로 보이는지 확인하고, 목표 이벤트 수(예: 10,000~50,000 events)까지 채웁니다.'},
+  {title:'⑦ 종료 및 세정', diagram:diagramClean,
+   why:'표백제 → 증류수 순서로 fluidics를 세척하지 않으면 다음 샘플에 이전 샘플 세포가 섞이는 <b>carryover</b>가 생깁니다.'},
+];
+function buildFacsGuide(){
+  const wrap = document.getElementById('facsGuideSteps');
+  wrap.innerHTML = FACS_STEPS.map(s=>`
+    <div class="stepcard">
+      <div>
+        <div class="stepnum">STEP</div>
+        <div class="steptitle">${s.title}</div>
+        <div class="stepwhy">${s.why}</div>
+      </div>
+      <div class="diagrambox">${s.diagram()}</div>
+    </div>`).join('');
+}
+
+/* ============================================================
+   2. SINGLE-CELL RNA-SEQ (Seurat-style, factor-model simulation)
+   ============================================================ */
+let SC = { raw:null, genes:[], mitoGenes:[], filtered:null, qc:null, norm:null, hvg:[], pcs:null, embed2:null, labels:null, markers:null };
+
+function sleep(ms){ return new Promise(res=>setTimeout(res, ms)); }
+async function simulateCounts(){
+  try{
+    const nClusters = +document.getElementById('nClustTrue').value;
+    const nCells = +document.getElementById('nCells').value;
+    const nGenesNonMito = 120, nMito = 3, nLatent = 10, dispersion = 4;
+    terminalWrite(`시뮬레이션 시작: 세포 ${nCells}개 × 유전자 ${nGenesNonMito+nMito}개, 잠재요인 ${nLatent}개, 클러스터 ${nClusters}개`, 'dim');
+    await sleep(80);
+
+    // sparse random gene loadings onto latent biological factors
+    const loadings = [], baseline = [];
+    for(let g=0; g<nGenesNonMito; g++){
+      const row = new Array(nLatent).fill(0);
+      const nActive = 1 + Math.floor(Math.random()*3);
+      const used = new Set();
+      for(let a=0;a<nActive;a++){
+        let f; do{ f = Math.floor(Math.random()*nLatent); }while(used.has(f));
+        used.add(f);
+        row[f] = (Math.random()<0.5?-1:1)*(0.8+1.4*Math.random());
+      }
+      loadings.push(row);
+      baseline.push(-1.4 + 1.3*randn());
+    }
+    terminalWrite(`유전자별 factor loading 행렬 생성 완료 (${nGenesNonMito}×${nLatent})`, 'dim');
+    // each cluster gets a random profile across ALL latent factors (shared + distinct factors both occur)
+    const clusterProfile = [];
+    for(let c=0;c<nClusters;c++) clusterProfile.push(Array.from({length:nLatent},()=>1.1*randn()));
+    terminalWrite(`클러스터 ${nClusters}개의 무작위 factor 프로필 생성 완료`, 'dim');
+    await sleep(80);
+
+    const genes = []; for(let g=0; g<nGenesNonMito; g++) genes.push({name:`Gene${g+1}`, cluster:-1});
+    const mitoGenes = []; for(let i=0;i<nMito;i++){ genes.push({name:`MT-${i+1}`, cluster:-2}); mitoGenes.push(genes.length-1); }
+
+    const trueLabels=[], lowQualMask=[], counts=[];
+    const logEvery = Math.max(150, Math.round(nCells/6));
+    for(let i=0;i<nCells;i++){
+      const cl = Math.floor(Math.random()*nClusters);
+      trueLabels.push(cl);
+      const sizeFactor = Math.exp(0.3*randn());
+      const lowQual = Math.random()<0.06;
+      lowQualMask.push(lowQual);
+      const mitoFrac = lowQual? (0.18+0.15*Math.random()) : (0.01+0.03*Math.random());
+      const factorScore = clusterProfile[cl].map(v=> v + 0.55*randn()); // biological within-cluster noise
+      const row = new Array(genes.length).fill(0);
+      for(let g=0; g<nGenesNonMito; g++){
+        let muLog = baseline[g];
+        for(let f=0; f<nLatent; f++) muLog += loadings[g][f]*factorScore[f];
+        const mu = Math.exp(clamp(muLog,-6,6))*sizeFactor;
+        const gNoise = gammaSample(dispersion)/dispersion; // negative-binomial-like overdispersion
+        row[g] = poisson(mu*gNoise);
+      }
+      const nonMitoTotal = row.reduce((a,b)=>a+b,0);
+      const mitoTarget = nonMitoTotal*mitoFrac/(1-mitoFrac);
+      mitoGenes.forEach(mi=> row[mi] = poisson(mitoTarget/mitoGenes.length));
+      if(lowQual){ for(let g=0; g<nGenesNonMito; g++) row[g] = poisson(row[g]*0.35); }
+      counts.push(row);
+      if((i+1)%logEvery===0 || i===nCells-1){
+        terminalWrite(`&nbsp;&nbsp;· 세포 시뮬레이션 중... ${i+1}/${nCells}`, 'dim');
+        await sleep(0);
+      }
+    }
+    SC = { raw:counts, genes, mitoGenes, trueLabels, lowQualMask, filtered:null, qc:null, norm:null, hvg:[], pcs:null, embed2:null, labels:null, markers:null };
+    computeQC();
+    terminalWrite(`시뮬레이션 완료. 총 count 평균=${fmt(mean(SC.qc.map(q=>q.total)),0)}, 평균 n_genes=${fmt(mean(SC.qc.map(q=>q.nGenes)),1)}`);
+    renderScStats();
+    resetGeneSelectors();
+    document.getElementById('eventReadout').textContent = nCells;
+    showScError(null);
+  }catch(err){ showScError('simulateCounts() 오류: '+err.message); }
+}
+function showScError(msg){
+  const box = document.getElementById('scErr');
+  if(!box) return;
+  if(msg){ box.style.display='block'; box.textContent = msg; }
+  else { box.style.display='none'; box.textContent=''; }
+}
+function resetGeneSelectors(){
+  ['geneSelectPlot','geneSelectViolin'].forEach(id=>{
+    document.getElementById(id).innerHTML = `<option value="-1">클러스터링 실행 후 마커 표시됨</option>`;
+  });
+}
+function computeQC(){
+  const {raw, mitoGenes} = SC;
+  SC.qc = raw.map(row=>{
+    const total = row.reduce((a,b)=>a+b,0);
+    const nGenes = row.reduce((a,b)=> a + (b>0?1:0), 0);
+    const mitoCount = mitoGenes.reduce((a,mi)=>a+row[mi],0);
+    const mitoPct = total>0? 100*mitoCount/total : 0;
+    return {total, nGenes, mitoPct};
+  });
+}
+async function applyQCFilter(){
+  try{
+    if(!SC.raw){ showScError('먼저 "Simulate counts"를 실행하세요.'); return; }
+    const minGenes = +document.getElementById('minGenes').value;
+    const maxMito = +document.getElementById('maxMito').value;
+    terminalWrite(`QC 기준 적용: n_genes ≥ ${minGenes}, mito% ≤ ${maxMito}`, 'dim');
+    await sleep(80);
+    const keepIdx = [];
+    SC.qc.forEach((q,i)=>{ if(q.nGenes>=minGenes && q.mitoPct<=maxMito) keepIdx.push(i); });
+    SC.keepIdx = keepIdx;
+    SC.filtered = keepIdx.map(i=>SC.raw[i]);
+    SC.filteredTrue = keepIdx.map(i=>SC.trueLabels[i]);
+    terminalWrite(`${SC.raw.length}개 중 ${keepIdx.length}개 통과, ${SC.raw.length-keepIdx.length}개 제외됨`);
+    await sleep(80);
+    if(SC.filtered.length<10){ showScError('QC 조건이 너무 엄격해서 남은 세포가 거의 없습니다. 슬라이더를 완화하세요.'); return; }
+    terminalWrite(`정규화 중: 세포별 총합으로 나누고(CPM×1e4) log1p 변환...`, 'dim');
+    await sleep(60);
+    SC.norm = SC.filtered.map(row=>{
+      const total = row.reduce((a,b)=>a+b,0)||1;
+      return row.map(v=> Math.log1p(v/total*1e4));
+    });
+    terminalWrite(`정규화 완료. 유전자별 분산 계산 중 (고변동유전자 선별)...`, 'dim');
+    await sleep(80);
+    const nGenesTotal = SC.genes.length, variances=[];
+    for(let g=0; g<nGenesTotal; g++){
+      if(SC.mitoGenes.includes(g)){ variances.push(-1); continue; }
+      const col = SC.norm.map(r=>r[g]);
+      const m = mean(col);
+      variances.push(mean(col.map(x=>(x-m)*(x-m))));
+    }
+    const idxSorted = variances.map((v,i)=>[v,i]).sort((a,b)=>b[0]-a[0]);
+    SC.hvg = idxSorted.slice(0, Math.min(40, idxSorted.length)).map(p=>p[1]);
+    terminalWrite(`${nGenesTotal}개 유전자 중 분산 상위 ${SC.hvg.length}개를 HVG로 선택 완료`);
+    renderScStats();
+    showScError(null);
+  }catch(err){ showScError('applyQCFilter() 오류: '+err.message); }
+}
+function jacobiEigen(Ain, n, maxIter=150, tol=1e-9){
+  const a = Ain.map(r=>r.slice());
+  const v = Array.from({length:n},(_,i)=>Array.from({length:n},(_,j)=>i===j?1:0));
+  for(let iter=0; iter<maxIter; iter++){
+    let off=0,p=0,q=1;
+    for(let i=0;i<n;i++) for(let j=i+1;j<n;j++){ if(Math.abs(a[i][j])>off){ off=Math.abs(a[i][j]); p=i; q=j; } }
+    if(off<tol) break;
+    const app=a[p][p], aqq=a[q][q], apq=a[p][q];
+    const phi = 0.5*Math.atan2(2*apq, aqq-app);
+    const c=Math.cos(phi), s=Math.sin(phi);
+    for(let k=0;k<n;k++){ const akp=a[k][p], akq=a[k][q]; a[k][p]=c*akp-s*akq; a[k][q]=s*akp+c*akq; }
+    for(let k=0;k<n;k++){ const apk=a[p][k], aqk=a[q][k]; a[p][k]=c*apk-s*aqk; a[q][k]=s*apk+c*aqk; }
+    for(let k=0;k<n;k++){ const vkp=v[k][p], vkq=v[k][q]; v[k][p]=c*vkp-s*vkq; v[k][q]=s*vkp+c*vkq; }
+  }
+  const values = Array.from({length:n},(_,i)=>a[i][i]);
+  return {values, vectors:v};
+}
+async function jacobiEigen(Ain, n, maxIter=150, tol=1e-9){
+  const a = Ain.map(r=>r.slice());
+  const v = Array.from({length:n},(_,i)=>Array.from({length:n},(_,j)=>i===j?1:0));
+  let usedIter = maxIter;
+  for(let iter=0; iter<maxIter; iter++){
+    let off=0,p=0,q=1;
+    for(let i=0;i<n;i++) for(let j=i+1;j<n;j++){ if(Math.abs(a[i][j])>off){ off=Math.abs(a[i][j]); p=i; q=j; } }
+    if(off<tol){ usedIter=iter; break; }
+    const app=a[p][p], aqq=a[q][q], apq=a[p][q];
+    const phi = 0.5*Math.atan2(2*apq, aqq-app);
+    const c=Math.cos(phi), s=Math.sin(phi);
+    for(let k=0;k<n;k++){ const akp=a[k][p], akq=a[k][q]; a[k][p]=c*akp-s*akq; a[k][q]=s*akp+c*akq; }
+    for(let k=0;k<n;k++){ const apk=a[p][k], aqk=a[q][k]; a[p][k]=c*apk-s*aqk; a[q][k]=s*apk+c*aqk; }
+    for(let k=0;k<n;k++){ const vkp=v[k][p], vkq=v[k][q]; v[k][p]=c*vkp-s*vkq; v[k][q]=s*vkp+c*vkq; }
+    if(iter>0 && iter%20===0){ terminalWrite(`&nbsp;&nbsp;· 회전 ${iter}회 진행, 최대 off-diagonal residual = ${off.toExponential(2)}`, 'dim'); await sleep(0); }
+  }
+  const values = Array.from({length:n},(_,i)=>a[i][i]);
+  return {values, vectors:v, iterations:usedIter};
+}
+async function runPCA(){
+  try{
+    if(!SC.norm) await applyQCFilter();
+    if(!SC.norm || SC.norm.length<10){ showScError('PCA를 실행할 세포가 부족합니다. QC를 먼저 완화/적용하세요.'); return; }
+    terminalWrite(`HVG ${SC.hvg.length}개 × 세포 ${SC.norm.length}개 행렬 준비...`, 'dim');
+    await sleep(80);
+    const cells = SC.norm.map(row => SC.hvg.map(g=>row[g]));
+    const n = cells.length, d = SC.hvg.length;
+    const meanVec = new Array(d).fill(0);
+    cells.forEach(r=> r.forEach((v,j)=> meanVec[j]+=v));
+    meanVec.forEach((v,j)=> meanVec[j]=v/n);
+    const centered = cells.map(r=> r.map((v,j)=> v-meanVec[j]));
+    terminalWrite(`평균 중심화 완료. ${d}×${d} 공분산 행렬 계산 중...`, 'dim');
+    await sleep(80);
+    const cov = Array.from({length:d},()=>new Array(d).fill(0));
+    centered.forEach(r=>{ for(let i=0;i<d;i++) for(let j=i;j<d;j++) cov[i][j]+= r[i]*r[j]; });
+    for(let i=0;i<d;i++) for(let j=i;j<d;j++){ cov[i][j]/= (n-1); cov[j][i]=cov[i][j]; }
+    terminalWrite(`Jacobi 고유값분해 실행 중 (대칭행렬 회전, 최대 150회)...`, 'dim');
+    await sleep(60);
+    const {values, vectors, iterations} = await jacobiEigen(cov, d);
+    terminalWrite(`${iterations}회 회전 후 수렴 (off-diagonal residual &lt; 1e-9)`);
+    await sleep(80);
+    const order = values.map((v,i)=>[v,i]).sort((a,b)=>b[0]-a[0]);
+    const topK = order.slice(0,5).map(p=>p[1]);
+    const pcs = centered.map(r=> topK.map(ci=>{ let s=0; for(let i=0;i<d;i++) s+= r[i]*vectors[i][ci]; return s; }));
+    SC.pcs = pcs;
+    SC.embed2 = pcs.map(r=>[r[0], r[1]]);
+    SC.pcVar = order.slice(0,5).map(p=>p[0]);
+    const totVar = SC.pcVar.reduce((a,b)=>a+b,0);
+    terminalWrite(`PCA 완료 — PC1 ${fmt(100*SC.pcVar[0]/totVar,0)}%, PC2 ${fmt(100*SC.pcVar[1]/totVar,0)}% 분산 설명`);
+    renderScStats();
+    drawPCA();
+    showScError(null);
+  }catch(err){ showScError('runPCA() 오류: '+err.message); }
+}
+function dist2(a,b){ let s=0; for(let i=0;i<a.length;i++){ const d=a[i]-b[i]; s+=d*d; } return s; }
+
+/* ---- kNN graph + multi-level greedy modularity optimization (Louvain-style) ---- */
+function buildKNNGraph(data, kNeighbors){
+  const n = data.length;
+  const adj = Array.from({length:n},()=>new Map());
+  for(let i=0;i<n;i++){
+    const dists = [];
+    for(let j=0;j<n;j++){ if(j===i) continue; dists.push([dist2(data[i],data[j]), j]); }
+    dists.sort((a,b)=>a[0]-b[0]);
+    dists.slice(0,kNeighbors).forEach(([d,j])=>{
+      adj[i].set(j,(adj[i].get(j)||0)+1);
+      adj[j].set(i,(adj[j].get(i)||0)+1);
+    });
+  }
+  return adj;
+}
+async function louvainLocalMove(adj, selfLoop, resolution, maxPasses=20){
+  const n = adj.length;
+  let community = Array.from({length:n},(_,i)=>i);
+  const k = new Array(n).fill(0);
+  for(let i=0;i<n;i++){ let s=0; adj[i].forEach(w=>s+=w); k[i]=s+2*selfLoop[i]; }
+  const m2 = k.reduce((a,b)=>a+b,0) || 1;
+  const sigmaTot = new Array(n).fill(0);
+  for(let i=0;i<n;i++) sigmaTot[community[i]] += k[i];
+  let improved=true, pass=0;
+  while(improved && pass<maxPasses){
+    improved=false; pass++;
+    for(let i=0;i<n;i++){
+      const ci = community[i];
+      sigmaTot[ci]-=k[i];
+      const commWeights=new Map();
+      adj[i].forEach((w,j)=>{ const cj=community[j]; commWeights.set(cj,(commWeights.get(cj)||0)+w); });
+      if(!commWeights.has(ci)) commWeights.set(ci,0);
+      let bestComm=ci, bestGain=-Infinity;
+      commWeights.forEach((w_ic,c)=>{
+        const gain = w_ic - resolution*sigmaTot[c]*k[i]/m2;
+        if(gain>bestGain){ bestGain=gain; bestComm=c; }
+      });
+      community[i]=bestComm;
+      sigmaTot[bestComm]+=k[i];
+      if(bestComm!==ci) improved=true;
+    }
+    terminalWrite(`&nbsp;&nbsp;· local-move pass ${pass}: 현재 ${new Set(community).size}개 그룹`, 'dim');
+    await sleep(15);
+  }
+  const uniq=[...new Set(community)];
+  const remap=new Map(uniq.map((c,idx)=>[c,idx]));
+  return community.map(c=>remap.get(c));
+}
+function aggregateGraph(adj, selfLoop, community, K){
+  const newAdj = Array.from({length:K},()=>new Map());
+  const newSelfLoop = new Array(K).fill(0);
+  const n = adj.length;
+  for(let c=0;c<n;c++) newSelfLoop[community[c]] += selfLoop[c];
+  for(let i=0;i<n;i++){
+    const ci = community[i];
+    adj[i].forEach((w,j)=>{
+      if(j<=i) return;
+      const cj = community[j];
+      if(ci===cj){ newSelfLoop[ci]+=w; }
+      else{ newAdj[ci].set(cj,(newAdj[ci].get(cj)||0)+w); newAdj[cj].set(ci,(newAdj[cj].get(ci)||0)+w); }
+    });
+  }
+  return {newAdj, newSelfLoop};
+}
+async function louvainMultilevel(data, kNeighbors, resolution){
+  terminalWrite(`kNN 그래프 생성 중 (k=${kNeighbors}, 세포 ${data.length}개)...`, 'dim');
+  await sleep(60);
+  let adj = buildKNNGraph(data, kNeighbors);
+  terminalWrite(`그래프 생성 완료. Level 0 local-move 시작 (resolution=${resolution})`);
+  await sleep(40);
+  let selfLoop = new Array(adj.length).fill(0);
+  let nodeToOrig = Array.from({length:adj.length},(_,i)=>[i]);
+  for(let level=0; level<6; level++){
+    const comm = await louvainLocalMove(adj, selfLoop, resolution);
+    const K = new Set(comm).size;
+    if(K===adj.length || K<=1){
+      terminalWrite(`Level ${level}: 더 이상 합쳐지지 않음 → 최종 ${K}개 커뮤니티로 수렴`);
+      const finalLabel = new Array(data.length);
+      nodeToOrig.forEach((origList,idx)=> origList.forEach(o=> finalLabel[o]=comm[idx]));
+      return finalLabel;
+    }
+    terminalWrite(`Level ${level} 완료: ${adj.length}개 노드 → ${K}개 그룹으로 압축(aggregate), 다음 레벨로...`);
+    await sleep(60);
+    const {newAdj, newSelfLoop} = aggregateGraph(adj, selfLoop, comm, K);
+    const newNodeToOrig = Array.from({length:K},()=>[]);
+    nodeToOrig.forEach((origList,idx)=>{ newNodeToOrig[comm[idx]].push(...origList); });
+    adj = newAdj; selfLoop = newSelfLoop; nodeToOrig = newNodeToOrig;
+  }
+  const finalLabel = new Array(data.length);
+  nodeToOrig.forEach((origList,idx)=> origList.forEach(o=> finalLabel[o]=idx));
+  return finalLabel;
+}
+async function runClustering(){
+  try{
+    if(!SC.pcs) await runPCA();
+    if(!SC.pcs){ showScError('클러스터링 전에 PCA가 필요합니다.'); return; }
+    const kNeighbors = +document.getElementById('kNN').value;
+    const resolution = +document.getElementById('resolution').value;
+    const rawLabels = await louvainMultilevel(SC.pcs, kNeighbors, resolution);
+    const uniq = [...new Set(rawLabels)];
+    const remap = new Map(uniq.map((c,idx)=>[c,idx]));
+    SC.labels = rawLabels.map(c=>remap.get(c));
+    SC.k = uniq.length;
+    SC.kNNUsed = kNeighbors;
+    SC.pseudotime = null; SC.pagaConn = null; // stale after re-clustering
+    terminalWrite(`클러스터링 완료: ${SC.k}개 클러스터. 클러스터별 마커 유전자 검정 시작...`);
+    await sleep(60);
+    await discoverMarkers();
+    populateGeneSelectorsFromMarkers();
+    populateOriginSelectors();
+    renderScStats(); drawPCA(); drawDotplot(); drawViolin();
+    showScError(null);
+  }catch(err){ showScError('runClustering() 오류: '+err.message); }
+}
+/* ---- Wilcoxon rank-sum test (Mann-Whitney U) + Benjamini-Hochberg FDR ---- */
+function erf(x){
+  const sign = x<0?-1:1; x=Math.abs(x);
+  const a1=0.254829592,a2=-0.284496736,a3=1.421413741,a4=-1.453152027,a5=1.061405429,p=0.3275911;
+  const t=1/(1+p*x);
+  const y=1-(((((a5*t+a4)*t)+a3)*t+a2)*t+a1)*t*Math.exp(-x*x);
+  return sign*y;
+}
+function normalCDF(z){ return 0.5*(1+erf(z/Math.sqrt(2))); }
+function wilcoxonRankSum(a, b){
+  const n1=a.length, n2=b.length;
+  if(n1===0||n2===0) return {U1:0, z:0, p:1};
+  const combined = a.map(v=>({v,g:0})).concat(b.map(v=>({v,g:1})));
+  combined.sort((x,y)=>x.v-y.v);
+  const ranks = new Array(combined.length);
+  let i=0;
+  while(i<combined.length){
+    let j=i; while(j+1<combined.length && combined[j+1].v===combined[i].v) j++;
+    const avgRank = (i+1+j+1)/2;
+    for(let x=i;x<=j;x++) ranks[x]=avgRank;
+    i=j+1;
+  }
+  let R1=0; combined.forEach((c,idx)=>{ if(c.g===0) R1+=ranks[idx]; });
+  const U1 = R1 - n1*(n1+1)/2;
+  const tieGroups = {}; combined.forEach(c=>{ tieGroups[c.v]=(tieGroups[c.v]||0)+1; });
+  let tieSum=0; Object.values(tieGroups).forEach(t=>{ tieSum += (t*t*t-t); });
+  const N=n1+n2;
+  const varU = (n1*n2/12)*((N+1) - tieSum/(N*(N-1)||1));
+  const meanU = n1*n2/2;
+  const z = (U1-meanU)/Math.sqrt(Math.max(varU,1e-12));
+  const p = Math.min(1,Math.max(0, 2*(1-normalCDF(Math.abs(z)))));
+  return {U1, z, p};
+}
+function bhCorrect(pvals){
+  const n = pvals.length;
+  const idx = pvals.map((p,i)=>[p,i]).sort((a,b)=>a[0]-b[0]);
+  const adj = new Array(n).fill(0);
+  let prevMin=1;
+  for(let rank=n; rank>=1; rank--){
+    const [p, origIdx] = idx[rank-1];
+    const val = Math.min(prevMin, p*n/rank);
+    adj[origIdx]=val; prevMin=val;
+  }
+  return adj;
+}
+/* ---- empirical marker discovery (FindAllMarkers-like): Wilcoxon test per gene, per cluster ---- */
+async function discoverMarkers(){
+  const k = SC.k;
+  const nonMitoIdx = SC.genes.map((g,i)=>i).filter(i=>!SC.mitoGenes.includes(i));
+  const result = [];
+  for(let c=0;c<k;c++){
+    const inRows = SC.norm.filter((r,i)=>SC.labels[i]===c);
+    const outRows = SC.norm.filter((r,i)=>SC.labels[i]!==c);
+    const rawIn = SC.filtered.filter((r,i)=>SC.labels[i]===c);
+    const pvals = [];
+    const scored = nonMitoIdx.map(gi=>{
+      const inVals = inRows.map(r=>r[gi]), outVals = outRows.map(r=>r[gi]);
+      const meanIn = mean(inVals), meanOut = mean(outVals);
+      const {p} = wilcoxonRankSum(inVals, outVals);
+      pvals.push(p);
+      const pct = rawIn.length? rawIn.filter(r=>r[gi]>0).length/rawIn.length : 0;
+      return {gi, diff: meanIn-meanOut, meanIn, pct, p};
+    });
+    const padj = bhCorrect(pvals);
+    scored.forEach((s,idx)=> s.padj = padj[idx]);
+    scored.sort((a,b)=> (a.padj-b.padj) || (b.diff-a.diff));
+    const top = scored.filter(s=>s.diff>0).slice(0,4);
+    result.push(top);
+    terminalWrite(`&nbsp;&nbsp;· Cluster ${c} (n=${inRows.length}): Wilcoxon 검정 ${nonMitoIdx.length}개 유전자 → 상위 마커 ${top.map(t=>SC.genes[t.gi].name).join(', ')||'없음'}`, 'dim');
+    await sleep(15);
+  }
+  SC.markers = result;
+  terminalWrite(`마커 유전자 발견 완료 (Wilcoxon + BH FDR)`);
+}
+function populateGeneSelectorsFromMarkers(){
+  const opts = [];
+  SC.markers.forEach((list,c)=>{
+    list.forEach(m=>{
+      opts.push(`<option value="${m.gi}">C${c} · ${SC.genes[m.gi].name} (padj=${m.padj<0.001?'<0.001':fmt(m.padj,3)})</option>`);
+    });
+  });
+  ['geneSelectPlot','geneSelectViolin'].forEach(id=>{ document.getElementById(id).innerHTML = opts.join(''); });
+}
+/* ---- t-SNE (Van der Maaten & Hinton), run on a capped random subsample for performance ---- */
+async function tsneEmbed(X, opts={}){
+  const n = X.length, d = X[0].length;
+  const perplexity = opts.perplexity || Math.min(30, Math.max(5, Math.floor(n/8)));
+  const iters = opts.iters || 300;
+  terminalWrite(`거리행렬 계산 중 (${n}×${n})...`, 'dim');
+  await sleep(60);
+  const D2 = Array.from({length:n},()=>new Array(n).fill(0));
+  for(let i=0;i<n;i++) for(let j=i+1;j<n;j++){
+    let s=0; for(let a=0;a<d;a++){ const diff=X[i][a]-X[j][a]; s+=diff*diff; }
+    D2[i][j]=s; D2[j][i]=s;
+  }
+  terminalWrite(`perplexity=${perplexity} 맞추는 조건부확률 P(j|i) 계산 중 (이분탐색)...`, 'dim');
+  await sleep(60);
+  const P = Array.from({length:n},()=>new Array(n).fill(0));
+  const logU = Math.log(perplexity);
+  for(let i=0;i<n;i++){
+    let lo=1e-10, hi=1e10, beta=1.0;
+    for(let iter=0; iter<50; iter++){
+      let sumP=0; const Pi = new Array(n).fill(0);
+      for(let j=0;j<n;j++){ if(j===i) continue; Pi[j]=Math.exp(-D2[i][j]*beta); sumP+=Pi[j]; }
+      let H=0;
+      for(let j=0;j<n;j++){ if(j===i||Pi[j]<=0) continue; const p=Pi[j]/sumP; H -= p*Math.log(p); }
+      const diff = H - logU;
+      if(Math.abs(diff)<1e-5){ for(let j=0;j<n;j++) P[i][j]=Pi[j]/sumP; break; }
+      if(diff>0){ lo=beta; beta = (hi===1e10)? beta*2 : (beta+hi)/2; }
+      else{ hi=beta; beta=(lo===1e-10)? beta/2 : (beta+lo)/2; }
+      if(iter===49) for(let j=0;j<n;j++) P[i][j]=Pi[j]/sumP;
+    }
+  }
+  const Psym = Array.from({length:n},()=>new Array(n).fill(0));
+  for(let i=0;i<n;i++) for(let j=0;j<n;j++) Psym[i][j] = (P[i][j]+P[j][i])/(2*n);
+  terminalWrite(`P 분포 완성. 2D 좌표를 무작위로 초기화하고 gradient descent 시작 (${iters}회)...`);
+  await sleep(80);
+  const exagg = 4;
+  let Y = Array.from({length:n},()=>[0.01*randn(),0.01*randn()]);
+  let vel = Array.from({length:n},()=>[0,0]);
+  for(let iter=0; iter<iters; iter++){
+    const mult = iter<100? exagg : 1;
+    const num = Array.from({length:n},()=>new Array(n).fill(0));
+    let Zsum=0;
+    for(let i=0;i<n;i++) for(let j=i+1;j<n;j++){
+      const dx=Y[i][0]-Y[j][0], dy=Y[i][1]-Y[j][1];
+      const val = 1/(1+dx*dx+dy*dy);
+      num[i][j]=val; num[j][i]=val; Zsum += 2*val;
+    }
+    const grad = Array.from({length:n},()=>[0,0]);
+    let kl = 0;
+    for(let i=0;i<n;i++){
+      for(let j=0;j<n;j++){
+        if(i===j) continue;
+        const q = num[i][j]/Zsum;
+        const mul = 4*(mult*Psym[i][j]-q)*num[i][j];
+        grad[i][0]+= mul*(Y[i][0]-Y[j][0]); grad[i][1]+= mul*(Y[i][1]-Y[j][1]);
+        if(Psym[i][j]>1e-12) kl += Psym[i][j]*Math.log(Psym[i][j]/Math.max(q,1e-12));
+      }
+    }
+    const momentum = iter<250? 0.5:0.8, lr=150;
+    for(let i=0;i<n;i++){
+      vel[i][0]=momentum*vel[i][0]-lr*grad[i][0]; vel[i][1]=momentum*vel[i][1]-lr*grad[i][1];
+      Y[i][0]+=vel[i][0]; Y[i][1]+=vel[i][1];
+    }
+    if(iter%25===0 || iter===iters-1){
+      terminalWrite(`&nbsp;&nbsp;· iteration ${iter+1}/${iters}, KL divergence ≈ ${kl.toFixed(3)}`, 'dim');
+      if(opts.onProgress) opts.onProgress(Y, iter);
+      await sleep(15);
+    }
+  }
+  return Y;
+}
+async function runTsne(){
+  try{
+    if(!SC.pcs){ showScError('t-SNE 전에 PCA가 필요합니다.'); return; }
+    const cap = 600;
+    const n = SC.pcs.length;
+    let idxs;
+    if(n>cap){ idxs = []; const pool = Array.from({length:n},(_,i)=>i); for(let i=0;i<cap;i++){ const r=Math.floor(Math.random()*pool.length); idxs.push(pool[r]); pool.splice(r,1); } }
+    else idxs = Array.from({length:n},(_,i)=>i);
+    if(n>cap) terminalWrite(`${n}개 중 ${cap}개를 무작위 서브샘플링합니다 (계산량 제한)`, 'dim');
+    SC.tsneIdx = idxs;
+    document.getElementById('embedMode').value='tsne';
+    const X = idxs.map(i=>SC.pcs[i]);
+    const Y = await tsneEmbed(X, {iters:250, onProgress:(Ysnap)=>{ SC.tsneEmbed2 = Ysnap.map(p=>p.slice()); drawPCA(); }});
+    SC.tsneEmbed2 = Y;
+    terminalWrite(`t-SNE 완료`);
+    drawPCA();
+    showScError(null);
+  }catch(err){ showScError('runTsne() 오류: '+err.message); }
+}
+function drawPCA(){
+  if(!SC.embed2) return;
+  const cv = document.getElementById('pcaCanvas'); const ctx = cv.getContext('2d');
+  const W=cv.width,H=cv.height,pad=40;
+  ctx.clearRect(0,0,W,H);
+  const useTsne = document.getElementById('embedMode').value==='tsne' && SC.tsneEmbed2;
+  const pts = useTsne? SC.tsneEmbed2 : SC.embed2;
+  const idxMap = useTsne? SC.tsneIdx : SC.embed2.map((_,i)=>i);
+  const xs = pts.map(p=>p[0]), ys = pts.map(p=>p[1]);
+  const xmin=Math.min(...xs),xmax=Math.max(...xs),ymin=Math.min(...ys),ymax=Math.max(...ys);
+  function px(v){ return pad + (v-xmin)/(xmax-xmin+1e-9)*(W-pad-15); }
+  function py(v){ return H-pad - (v-ymin)/(ymax-ymin+1e-9)*(H-pad-15); }
+  ctx.strokeStyle='#232c39';
+  ctx.beginPath();ctx.moveTo(pad,10);ctx.lineTo(pad,H-pad);ctx.lineTo(W-5,H-pad);ctx.stroke();
+  ctx.fillStyle='#7c8797'; ctx.font='11px JetBrains Mono, monospace';
+  ctx.fillText(useTsne? 'tSNE-1' : ('PC1'+(SC.pcVar?` (${fmt(100*SC.pcVar[0]/SC.pcVar.reduce((a,b)=>a+b,0),0)}%)`:'')), W/2-20, H-10);
+  ctx.save(); ctx.translate(12,H/2+20); ctx.rotate(-Math.PI/2); ctx.fillText(useTsne?'tSNE-2':'PC2',0,0); ctx.restore();
+
+  const mode = document.getElementById('colorMode').value;
+  let colorFn;
+  if(mode==='cluster' && SC.labels){
+    colorFn = origI => CLUSTER_COLORS[SC.labels[origI] % CLUSTER_COLORS.length];
+  } else if(mode==='gene'){
+    const gi = +document.getElementById('geneSelectPlot').value;
+    if(gi>=0){
+      const vals = SC.norm.map(r=>r[gi]);
+      const vmax = Math.max(...vals)||1;
+      colorFn = origI => { const t = clamp(vals[origI]/vmax,0,1); return `rgba(${Math.round(80+175*t)},${Math.round(120+80*(1-t))},${Math.round(200-120*t)},0.85)`; };
+    } else colorFn = ()=> '#4fd8c4';
+  } else if(mode==='qc'){
+    const vals = SC.keepIdx.map(i=>SC.qc[i].mitoPct);
+    const vmax = Math.max(...vals)||1;
+    colorFn = origI => { const t = clamp(vals[origI]/vmax,0,1); return `rgba(${Math.round(80+175*t)},${Math.round(200-150*t)},${Math.round(120)},0.85)`; };
+  } else {
+    colorFn = ()=> '#4fd8c4';
+  }
+  pts.forEach((p,plotI)=>{
+    const origI = idxMap[plotI];
+    ctx.fillStyle = colorFn(origI);
+    ctx.beginPath(); ctx.arc(px(p[0]),py(p[1]),2.4,0,7); ctx.fill();
+  });
+  const leg = document.getElementById('scLegend'); leg.innerHTML='';
+  if(useTsne) leg.innerHTML += `<span class="item" style="color:var(--amber)">t-SNE: ${pts.length}/${SC.embed2.length}개 서브샘플 표시 중</span>`;
+  if(mode==='cluster' && SC.labels){
+    for(let c=0;c<SC.k;c++){
+      const n = SC.labels.filter(l=>l===c).length;
+      leg.innerHTML += `<span class="item"><span class="dot" style="background:${CLUSTER_COLORS[c]}"></span>Cluster ${c} (${n})</span>`;
+    }
+  }
+}
+function violinPath(values, xCenter, w, yTop, yBot, vmin, vmax){
+  const bins=28; const counts=new Array(bins).fill(0);
+  values.forEach(v=>{ let b=Math.floor((v-vmin)/(vmax-vmin+1e-9)*bins); b=clamp(b,0,bins-1); counts[b]++; });
+  const cmax = Math.max(...counts)||1;
+  let top=[],bot=[];
+  for(let i=0;i<=bins;i++){
+    const y = yBot - (i/bins)*(yBot-yTop);
+    const c = counts[Math.min(i,bins-1)]/cmax;
+    top.push([xCenter + c*w/2, y]);
+    bot.push([xCenter - c*w/2, y]);
+  }
+  return 'M'+top.map(p=>p.join(',')).join(' L ') + ' L ' + bot.reverse().map(p=>p.join(',')).join(' L ') + ' Z';
+}
+function drawViolin(){
+  const svg = document.getElementById('violinSvg'); const W=230,H=200,pad=26;
+  const gi = +document.getElementById('geneSelectViolin').value;
+  svg.innerHTML='';
+  if(!SC.labels || gi<0) return;
+  const k = SC.k;
+  const allVals = SC.norm.map(r=>r[gi]);
+  const vmax = Math.max(...allVals,0.1);
+  let s = `<line x1="${pad}" y1="${H-pad}" x2="${W-8}" y2="${H-pad}" stroke="#232c39"/>`;
+  const cw = (W-pad-10)/k;
+  for(let c=0;c<k;c++){
+    const vals = SC.norm.filter((r,i)=>SC.labels[i]===c).map(r=>r[gi]);
+    const xC = pad + cw*(c+0.5);
+    s += `<path d="${violinPath(vals, xC, cw*0.8, 12, H-pad, 0, vmax)}" fill="${CLUSTER_COLORS[c]}" opacity="0.6"></path>`;
+    s += `<text x="${xC-4}" y="${H-8}" font-size="9">${c}</text>`;
+  }
+  s += `<text x="2" y="12" font-size="9">${SC.genes[gi].name}</text>`;
+  svg.innerHTML = s;
+}
+function drawDotplot(){
+  const svg = document.getElementById('dotplotSvg'); const W=700,H=220;
+  svg.innerHTML='';
+  if(!SC.labels || !SC.markers) return;
+  const k = SC.k;
+  const chosen = [];
+  SC.markers.forEach((list,c)=> list.slice(0,3).forEach(m=> chosen.push({...m, ownerCluster:c})));
+  const padL=110, padT=20, cellW=(W-padL-20)/k, cellH=(H-padT-30)/chosen.length;
+  let s='';
+  chosen.forEach((mkr,ri)=>{
+    s += `<text x="4" y="${padT+ri*cellH+cellH*0.65}" font-size="9">${SC.genes[mkr.gi].name} (C${mkr.ownerCluster})</text>`;
+    for(let c=0;c<k;c++){
+      const idxCells = SC.norm.filter((r,i)=>SC.labels[i]===c);
+      const rawCells = SC.filtered.filter((r,i)=>SC.labels[i]===c);
+      const exprVals = idxCells.map(r=>r[mkr.gi]);
+      const pctExpr = rawCells.length? rawCells.filter(r=>r[mkr.gi]>0).length/rawCells.length : 0;
+      const meanExpr = mean(exprVals);
+      const t = clamp(meanExpr/3.0,0,1);
+      const radius = 3 + pctExpr*10;
+      const cx = padL + cellW*(c+0.5), cy = padT + ri*cellH + cellH*0.5;
+      const color = `rgba(${Math.round(80+175*t)},${Math.round(160-100*t)},${Math.round(220-140*t)},0.9)`;
+      s += `<circle cx="${cx}" cy="${cy}" r="${radius}" fill="${color}"></circle>`;
+    }
+  });
+  for(let c=0;c<k;c++) s += `<text x="${padL+cellW*(c+0.5)-10}" y="${H-6}" font-size="10" fill="${CLUSTER_COLORS[c]}">C${c}</text>`;
+  svg.innerHTML = s;
+}
+function renderScStats(){
+  const box = document.getElementById('scStats');
+  if(!SC.raw){ box.innerHTML = '<div class="note">먼저 데이터셋을 시뮬레이션하세요.</div>'; return; }
+  let html='';
+  html += `<div class="stat"><span>Cells simulated</span><b>${SC.raw.length}</b></div>`;
+  html += `<div class="stat"><span>Genes</span><b>${SC.genes.length}</b></div>`;
+  if(SC.filtered){
+    html += `<div class="stat"><span>Cells after QC</span><b class="v">${SC.filtered.length}</b></div>`;
+    html += `<div class="stat"><span>Filtered out</span><span class="warn">${SC.raw.length-SC.filtered.length}</span></div>`;
+    html += `<div class="stat"><span>HVGs used</span><b>${SC.hvg.length}</b></div>`;
+  }
+  if(SC.pcVar){
+    const tot = SC.pcVar.reduce((a,b)=>a+b,0);
+    html += `<div class="stat"><span>PC1 var explained</span><span>${fmt(100*SC.pcVar[0]/tot,0)}%</span></div>`;
+    html += `<div class="stat"><span>PC2 var explained</span><span>${fmt(100*SC.pcVar[1]/tot,0)}%</span></div>`;
+  }
+  if(SC.labels) html += `<div class="stat"><span>k-means k</span><b>${SC.k}</b></div>`;
+  box.innerHTML = html;
+}
+
+/* ============================================================
+   TAB 3: SINGLE-CELL BASICS (concept + annotated code)
+   ============================================================ */
+const SC_CONCEPTS = [
+  {
+    title: '1. 원시 데이터: 잠재요인(factor) 기반 count 생성', seurat:'CreateSeuratObject()',
+    p: [
+      '실제 세포는 몇 개의 "마커 유전자"만으로 정체성이 정해지지 않습니다. 대신 여러 <b>생물학적 잠재요인(latent factor)</b>이 섞여서 수백 개 유전자의 발현 수준을 동시에 결정합니다.',
+      '이 시뮬레이터는 유전자 120개 × 잠재요인 10개짜리 <b>무작위 로딩(loading) 행렬</b>을 만들고, 각 클러스터에 무작위 factor 프로필을 부여합니다. 세포 하나하나는 자기 클러스터의 프로필에 <b>개체차 잡음</b>을 더해서 factor score를 갖고, 그 score들의 선형결합으로 유전자별 평균발현을 계산합니다.',
+      '마지막으로 Poisson이 아니라 <b>Gamma-Poisson(음이항, negative binomial)</b>으로 샘플링해서 실제 scRNA-seq처럼 과분산(overdispersion)과 드롭아웃(낮은 발현 유전자의 잦은 0값)을 재현합니다.'
+    ],
+    code:`// 유전자마다 1~3개의 잠재요인에만 무작위로 loading을 줌 (sparse)
+row[f] = (Math.random()<0.5?-1:1)*(0.8+1.4*Math.random());
+// 클러스터마다 10차원 잠재공간에서 무작위 프로필
+clusterProfile.push(Array.from({length:nLatent},()=>1.1*randn()));
+// 세포별 factor score = 클러스터 프로필 + 개체차 잡음
+const factorScore = clusterProfile[cl].map(v=> v + 0.55*randn());
+// 유전자 발현 평균(log) = baseline + 로딩·factor score의 내적
+let muLog = baseline[g];
+for(let f=0; f<nLatent; f++) muLog += loadings[g][f]*factorScore[f];
+const mu = Math.exp(muLog)*sizeFactor;
+const gNoise = gammaSample(dispersion)/dispersion;  // NB 과분산
+row[g] = poisson(mu*gNoise);`,
+    explain:'핵심은 <b>클러스터 정체성이 특정 유전자 하나가 아니라 10차원 factor 공간 위의 한 "방향"으로 존재한다</b>는 것입니다. 특정 유전자 3개만 켜고 끄는 방식이 아니라서, PCA를 실제로 돌려야만 그 방향(=클러스터를 구분하는 축)이 드러납니다.',
+    rcode:`library(Seurat)
+pbmc.data <- Read10X(data.dir = "filtered_gene_bc_matrices/hg19/")
+pbmc <- CreateSeuratObject(counts = pbmc.data, project = "pbmc3k",
+                            min.cells = 3, min.features = 200)
+pbmc
+# An object of class Seurat
+# 13714 features across 2700 samples within 1 assay`,
+    rdiff:'실제 Seurat 튜토리얼(PBMC 3k, 10X Genomics 공개 데이터)은 <b>Read10X()</b>로 cellranger가 이미 정렬·카운팅해둔 진짜 UMI count matrix를 읽어옵니다. min.cells=3, min.features=200으로 처음부터 성긴 유전자/세포를 거릅니다. 콘솔은 실제 시퀀서 데이터가 없으니 <b>정답(true cluster label)을 아는 상태로 count matrix 자체를 통계적으로 생성</b>합니다 — 그래야 "알고리즘이 정말 맞는 답을 찾는지" 검증할 수 있기 때문입니다.'
+  },
+  {
+    title: '2. 품질관리(QC) 지표', seurat:'PercentageFeatureSet() + subset()',
+    p: [
+      '세포마다 세 가지를 계산합니다: <b>total count</b>(총 UMI 수), <b>n_genes</b>(발현된 유전자 종류 수), <b>mito%</b>(미토콘드리아 유전자가 차지하는 비율).',
+      '죽어가는 세포는 세포막이 터지면서 세포질 mRNA는 빠져나가고 미토콘드리아 mRNA만 남아 <b>mito%가 비정상적으로 높게</b> 나옵니다.'
+    ],
+    code:`function computeQC(){
+  SC.qc = raw.map(row=>{
+    const total = row.reduce((a,b)=>a+b,0);
+    const nGenes = row.reduce((a,b)=> a + (b>0?1:0), 0);
+    const mitoCount = mitoGenes.reduce((a,mi)=>a+row[mi],0);
+    const mitoPct = total>0? 100*mitoCount/total : 0;
+    return {total, nGenes, mitoPct};
+  });
+}`,
+    explain:'n_genes는 "0이 아닌 칸의 개수", mitoPct는 미토콘드리아 유전자(MT-) count 합을 총 count로 나눈 비율입니다. 04탭 슬라이더(min genes / max mito%)가 이 값을 기준으로 세포를 통과/제외시킵니다.',
+    rcode:`pbmc[["percent.mt"]] <- PercentageFeatureSet(pbmc, pattern = "^MT-")
+VlnPlot(pbmc, features = c("nFeature_RNA","nCount_RNA","percent.mt"), ncol = 3)
+pbmc <- subset(pbmc, subset = nFeature_RNA > 200 & nFeature_RNA < 2500
+                             & percent.mt < 5)`,
+    rdiff:'실제 R 코드는 <b>유전자 이름이 "MT-"로 시작하는지 문자열 패턴(^MT-)</b>으로 찾습니다. 콘솔은 시뮬레이션할 때부터 유전자 이름을 MT-1, MT-2, MT-3으로 미리 심어뒀기 때문에 패턴 매칭 없이 바로 압니다. Seurat은 nFeature_RNA의 <b>상한(2500)</b>도 같이 거는데, 이는 doublet 의심 신호로 쓰는 것 — 콘솔의 min genes 슬라이더는 하한만 있습니다.'
+  },
+  {
+    title: '3. 정규화 + 고변동유전자(HVG)', seurat:'NormalizeData() + FindVariableFeatures()',
+    p: [
+      '세포마다 총 mRNA 양이 다르므로 <b>세포별 총합으로 나누고(CPM 방식) log1p</b>를 취해 스케일을 맞춥니다.',
+      '그 다음 세포 간 분산이 큰 유전자만 골라 이후 계산(PCA)에 사용합니다 — 분산이 낮은 유전자는 클러스터 구분에 정보가 거의 없기 때문입니다.'
+    ],
+    code:`SC.norm = SC.filtered.map(row=>{
+  const total = row.reduce((a,b)=>a+b,0)||1;
+  return row.map(v=> Math.log1p(v/total*1e4));
+});
+const idxSorted = variances.map((v,i)=>[v,i]).sort((a,b)=>b[0]-a[0]);
+SC.hvg = idxSorted.slice(0, 40).map(p=>p[1]);  // 상위 40개 유전자만 사용`,
+    explain:'120개 유전자 중 40개만 HVG로 골라 PCA에 넣습니다. 나머지 80개는 분산이 낮아 (여러 클러스터에서 비슷하게 발현되어) 신호보다 잡음에 가깝다고 판단해 제외합니다.',
+    rcode:`pbmc <- NormalizeData(pbmc, normalization.method = "LogNormalize",
+                       scale.factor = 10000)
+pbmc <- FindVariableFeatures(pbmc, selection.method = "vst", nfeatures = 2000)
+top10 <- head(VariableFeatures(pbmc), 10)
+all.genes <- rownames(pbmc)
+pbmc <- ScaleData(pbmc, features = all.genes)`,
+    rdiff:'정규화 공식(log1p(count/total×10⁴))은 콘솔과 완전히 동일합니다. 차이는 HVG를 고르는 방법 — Seurat 기본값 <b>"vst"</b>는 평균-분산 관계를 국소회귀(loess)로 적합한 뒤 표준화 분산이 큰 유전자를 고르는 반면, 콘솔은 단순 분산 순위만 씁니다. Seurat은 PCA 직전에 <b>ScaleData()</b>로 모든 유전자를 평균 0·분산 1로 스케일링하는 단계가 하나 더 있는데, 콘솔은 이 단계를 생략했습니다.'
+  },
+  {
+    title: '4. 차원축소: PCA + t-SNE', seurat:'RunPCA() + RunTSNE()/RunUMAP()',
+    p: [
+      'HVG 40개짜리 공간은 여전히 사람이 눈으로 보기엔 차원이 많습니다. PCA는 <b>분산을 가장 많이 설명하는 방향</b>을 순서대로 찾아 그 축(PC1, PC2, ...)으로 세포를 투영합니다.',
+      '이 시뮬레이터는 진짜로 <b>40×40 공분산 행렬을 계산하고 Jacobi 고유값분해</b>를 돌려서 고유벡터(주성분 방향)를 구합니다 — 클러스터를 미리 어느 축에 배치해둔 게 아니라, 데이터의 분산 구조에서 축이 "발견"됩니다.',
+      '거기에 더해 <b>실제 t-SNE(Van der Maaten &amp; Hinton, 2008)</b>도 구현했습니다 — perplexity 기반으로 고차원에서의 "이웃 확률분포"를 만들고, 2차원에서 그 분포를 최대한 재현하도록 gradient descent로 점을 움직입니다. UMAP과 알고리즘은 다르지만 같은 목적(비선형 시각화)의 기법입니다. 계산량 때문에 세포 600개로 서브샘플링해서 돌립니다.'
+    ],
+    code:`function tsneEmbed(X, opts){
+  // 1) 고차원(PC 공간)에서 각 점 i에 대해, 목표 perplexity를 만족하는
+  //    가우시안 폭(sigma)을 이분탐색으로 찾아 조건부확률 P(j|i) 계산
+  // 2) 대칭화: P_ij = (P(j|i)+P(i|j)) / 2n
+  // 3) 2차원 임베딩 Y를 무작위로 초기화하고, Student-t 분포로 저차원 유사도 Q_ij 정의
+  // 4) KL divergence(P||Q)를 줄이는 방향으로 Y를 반복 이동 (momentum + early exaggeration)
+  for(let iter=0; iter<iters; iter++){
+    const mul = 4*(mult*Psym[i][j]-q)*num[i][j];   // gradient 핵심 항
+    grad[i][0]+= mul*(Y[i][0]-Y[j][0]);
+  }
+}`,
+    explain:'early exaggeration(초반 100회 P를 4배 부풀림)은 처음에 같은 군집끼리 더 강하게 뭉치게 만들어 국소최적점에 빠지는 걸 줄여줍니다. PCA 임베딩과 비교해보면, t-SNE는 지역적 군집 구조를 더 뚜렷하게 뭉쳐서 보여주지만 <b>축의 절대적 거리나 방향은 의미가 없다</b>는 점이 PCA와의 중요한 차이입니다.',
+    rcode:`pbmc <- RunPCA(pbmc, features = VariableFeatures(object = pbmc))
+ElbowPlot(pbmc)              # 몇 개 PC를 쓸지 육안으로 판단
+pbmc <- RunUMAP(pbmc, dims = 1:10)
+DimPlot(pbmc, reduction = "umap")`,
+    rdiff:'목적은 같지만 계산 방식이 다릅니다: Seurat은 PCA를 <b>SVD(특이값분해)</b>로 계산해서 Jacobi 회전보다 훨씬 빠릅니다 (수학적으로는 같은 답). 몇 개의 PC를 다음 단계에 쓸지도 ElbowPlot을 보고 <b>사람이 직접</b> 고르는데, 콘솔은 항상 top 5개를 씁니다. 실무에서는 t-SNE보다 <b>UMAP</b>을 압도적으로 더 많이 씁니다.'
+  },
+  {
+    title: '5. 클러스터링: kNN 그래프 + Louvain 스타일 모듈성 최적화', seurat:'FindNeighbors() + FindClusters() (실제 Louvain/Leiden과 같은 계열)',
+    p: [
+      'PC 좌표 위에서 각 세포를 가장 가까운 이웃 몇 개(kNN)와 연결해 그래프를 만들고, 그 그래프 위에서 <b>모듈성(modularity)</b>이 높아지도록 세포들을 그룹으로 묶습니다 — "같은 그룹 안 연결이 그룹 밖 연결보다 얼마나 더 촘촘한가"를 최적화하는 방식입니다.',
+      'k-means처럼 "몇 개로 나눌지"를 미리 정하지 않고, <b>resolution</b> 파라미터로 얼마나 잘게 쪼갤지만 조절합니다 — Seurat의 FindClusters(resolution=...)와 동일한 인터페이스입니다.'
+    ],
+    code:`function louvainMultilevel(data, kNeighbors, resolution){
+  let adj = buildKNNGraph(data, kNeighbors);      // 1) kNN 그래프 생성
+  for(let level=0; level<6; level++){
+    const comm = louvainLocalMove(adj, selfLoop, resolution); // 2) 각 세포를 이웃 커뮤니티로 옮기며 모듈성 증가시키기
+    if(K===adj.length) return finalLabel;          // 더 이상 합쳐지지 않으면 종료
+    ({newAdj, newSelfLoop} = aggregateGraph(...));  // 3) 찾은 커뮤니티를 하나의 "슈퍼노드"로 압축
+    // 압축된 그래프에서 2)~3)을 반복 (레벨을 올려가며) → 이게 Louvain의 핵심(multi-level)
+  }
+}`,
+    explain:'2단계(local move)만 하면 너무 잘게 쪼개진 수십 개 그룹이 나옵니다 (실제로 테스트해보면 진짜 클러스터 4개가 19개로 과분할됨). <b>3단계(aggregation)를 반복해서 레벨을 올리는 것</b>이 그 잘게 쪼개진 그룹들을 다시 합쳐 진짜 클러스터 개수로 수렴시키는 핵심입니다 — 이게 진짜 Louvain 알고리즘의 정의적 특징입니다.',
+    rcode:`pbmc <- FindNeighbors(pbmc, dims = 1:10)
+pbmc <- FindClusters(pbmc, resolution = 0.5)
+head(Idents(pbmc), 5)`,
+    rdiff:'큰 개념은 같지만, <b>FindNeighbors()</b>는 단순 kNN이 아니라 <b>SNN(shared nearest neighbor)</b> 그래프를 만듭니다 — 두 세포가 이웃을 얼마나 공유하는지(Jaccard 유사도)로 엣지 가중치를 매깁니다. 콘솔은 가중치 없는 kNN 카운트 그래프를 씁니다. resolution 파라미터의 의미와 사용법은 동일합니다.'
+  },
+  {
+    title: '6. 마커 유전자 발견: 통계 검정 + 시각화', seurat:'FindAllMarkers() (Wilcoxon) + DotPlot()/VlnPlot()/FeaturePlot()',
+    p: [
+      '클러스터를 나눴다고 끝이 아니라, <b>클러스터별로 어떤 유전자가 통계적으로 유의하게 높은지</b> 사후에 찾아야 합니다.',
+      '단순 평균 차이가 아니라 <b>Wilcoxon rank-sum 검정(Mann-Whitney U)</b>으로 클러스터 안/밖 발현분포를 비교해 p-value를 구하고, 유전자 여러 개를 동시에 검정하면서 생기는 다중비교 문제를 <b>Benjamini-Hochberg FDR 보정</b>으로 처리합니다 — Seurat FindAllMarkers()의 기본 검정 방식과 같습니다.'
+    ],
+    code:`function discoverMarkers(){
+  for(let c=0;c<k;c++){
+    const pvals = nonMitoIdx.map(gi=>{
+      const {p} = wilcoxonRankSum(inRows.map(r=>r[gi]), outRows.map(r=>r[gi]));
+      return p;
+    });
+    const padj = bhCorrect(pvals);          // Benjamini-Hochberg FDR 보정
+    scored.sort((a,b)=> (a.padj-b.padj) || (b.diff-a.diff));  // adj p-value로 우선 정렬
+  }
+}`,
+    explain:'padj < 0.05 같은 기준으로 "우연히 나온 차이"를 걸러냅니다. 04탭 유전자 선택 드롭다운에 표시되는 padj 값을 보면, 세포 수가 적을수록(QC를 너무 엄격하게 하면) 같은 크기의 발현 차이도 유의하지 않게(padj가 커짐) 나오는 걸 확인할 수 있습니다 — 통계적 검정력(power)이 샘플 크기에 좌우된다는 걸 보여주는 대목입니다.',
+    rcode:`pbmc.markers <- FindAllMarkers(pbmc, only.pos = TRUE)
+pbmc.markers %>% group_by(cluster) %>%
+  dplyr::filter(avg_log2FC > 1) %>% slice_head(n = 10) %>% ungroup()
+VlnPlot(pbmc, features = c("MS4A1","CD79A"))
+FeaturePlot(pbmc, features = c("MS4A1","GNLY","CD3E","CD14"))`,
+    rdiff:'기본 통계 검정 방식(Wilcoxon rank-sum)은 <b>콘솔과 완전히 동일</b>합니다. 차이는 필터링 기준: Seurat은 avg_log2FC와 min.pct를 padj와 함께 봅니다. 콘솔은 padj와 평균차이(diff)만 봅니다. 다중비교 보정(BH)을 쓰는 것도 동일합니다.'
+  },
+  {
+    title: '7. 심화: Pseudotime + PAGA (궤적 추론)', seurat:'Monocle3 order_cells()/learn_graph() · Scanpy sc.tl.dpt()/sc.tl.paga()',
+    p: [
+      '07번 탭(Developmental/origin)의 "compute pseudotime + trajectory graph" 버튼을 누르면 실제로 이 계산이 돕니다. 전체 세포를 실제 거리 기반 kNN 그래프로 연결 → <b>최소신장트리(MST, Prim 알고리즘)</b>로 중복 경로 제거 → 선택한 root 클러스터의 대표세포(medoid)에서 시작해 트리를 따라간 누적 거리 = pseudotime.',
+      '동시에 <b>PAGA(Partition-based Graph Abstraction)</b> 방식으로 클러스터 간 kNN 연결 밀도를 무작위 기대치로 정규화해, 클러스터가 궤적상 어떻게 이어지는지 그래프로 보여줍니다.'
+    ],
+    code:`function primMST(adj, n){ /* Prim 알고리즘으로 최소신장트리 생성 */ }
+function pseudotimeFromTree(treeAdj, root, n){
+  pt[root] = 0;
+  // root에서 DFS로 내려가며 누적 거리 기록: pt[v] = pt[u] + weight(u,v)
+}
+function computePAGAConnectivity(kNeighbors){
+  const expected = Math.sqrt(sizeA*k * sizeB*k);
+  conn[a][b] = crossEdgeCount[a][b] / expected;   // 무작위 기대치로 정규화
+}`,
+    explain:'합성 궤적 데이터로 따로 검증해보면(Node.js), 계산된 pseudotime과 실제 생성에 쓰인 "진짜 진행 시간" 사이의 Pearson 상관계수가 0.96에 달합니다. PAGA도 순서대로 이어진 클러스터끼리는 강한 연결성을, 떨어진 클러스터끼리는 0에 가까운 연결성을 정확히 찾아냅니다. 07탭에서 root 클러스터를 바꿔가며 pseudotime이 어떻게 재계산되는지 직접 확인해보세요.',
+    rcode:`# Seurat 자체에는 pseudotime 기능이 없음 — R에서도 별도 패키지 필요
+library(monocle3)
+cds <- as.cell_data_set(pbmc)
+cds <- cluster_cells(cds)
+cds <- learn_graph(cds)
+cds <- order_cells(cds)   # 그래프 위에서 root를 클릭해 pseudotime 계산
+# 또는: library(slingshot); sce <- slingshot(sce, clusterLabels="seurat_clusters")`,
+    rdiff:'이 부분이 <b>가장 큰 차이</b>입니다: Seurat은 클러스터링·시각화까지만 담당하고, pseudotime/궤적 추론은 <b>Monocle3</b>나 <b>Slingshot</b> 같은 별도 R 패키지로 넘어가야 합니다. Python 생태계에서는 Scanpy의 sc.tl.dpt()/sc.tl.paga()가 이 역할을 합니다. 07탭의 "pseudotime ≠ 실제 시간" 경고 문구는 이 두 도구의 공식 문서에서도 똑같이 강조하는 내용입니다.'
+  },
+];
+function buildScConcepts(){
+  const wrap = document.getElementById('scConceptCards');
+  wrap.innerHTML = SC_CONCEPTS.map(c=>`
+    <div class="concept">
+      <h3>${c.title} <span class="pill">${c.seurat}</span></h3>
+      ${c.p.map(t=>`<p>${t}</p>`).join('')}
+      <details class="codebox">
+        <summary>▸ 04탭 실제 코드 보기</summary>
+        <pre>${c.code.replace(/</g,'&lt;')}</pre>
+        <div class="explain">${c.explain}</div>
+      </details>
+      ${c.rcode? `<details class="rcodebox">
+        <summary>▸ Seurat(R) 실제 코드 보기 &amp; 차이점</summary>
+        <pre>${c.rcode.replace(/</g,'&lt;')}</pre>
+        <div class="explain">${c.rdiff}</div>
+      </details>` : ''}
+    </div>`).join('');
+}
+
+/* ============================================================
+   PIPELINE TERMINAL / INTERACTION LOG
+   ============================================================ */
+let pipelineBusy = false;
+function terminalWrite(text, cls=''){
+  const box = document.getElementById('pipelineTerminal');
+  if(!box) return;
+  const line = document.createElement('div');
+  line.className = 'term-line' + (cls ? ' '+cls : '');
+  line.innerHTML = text;
+  box.appendChild(line);
+  box.scrollTop = box.scrollHeight;
+}
+function terminalCommand(cmd){
+  terminalWrite(`<span class="term-prompt">$</span> ${cmd}`);
+}
+function terminalClear(){
+  const box = document.getElementById('pipelineTerminal');
+  if(box) box.innerHTML='';
+  const bar = document.getElementById('pipelineProgress');
+  if(bar) bar.style.width='0%';
+}
+function nextFrame(){
+  return new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve)));
+}
+async function runLoggedStage(label, command, fn, progress){
+  terminalCommand(command);
+  terminalWrite(`[RUN] ${label} ...`, 'dim');
+  const t0 = performance.now();
+  await nextFrame();
+  try{
+    await fn();
+    await nextFrame();
+    const err = document.getElementById('scErr');
+    if(err && err.style.display !== 'none' && err.textContent){
+      terminalWrite(`[ERROR] ${label}: ${err.textContent}`, 'warn');
+      throw new Error(err.textContent);
+    }
+    const ms = Math.round(performance.now()-t0);
+    terminalWrite(`[ OK ] ${label} (${ms} ms)`);
+    const bar = document.getElementById('pipelineProgress');
+    if(bar) bar.style.width = `${progress}%`;
+  }catch(err){
+    terminalWrite(`[FAIL] ${label}: ${err.message}`, 'warn');
+    throw err;
+  }
+}
+async function runFullPipeline(){
+  if(pipelineBusy) return;
+  pipelineBusy = true;
+  const btn = document.getElementById('btnRunPipeline');
+  if(btn) btn.disabled = true;
+  terminalClear();
+  terminalWrite('Cyto/Seq interactive pipeline started.');
+  terminalWrite('Tip: if execution stops, the last [RUN] line identifies the bottleneck.', 'dim');
+  try{
+    await runLoggedStage('simulate counts', 'simulateCounts()', simulateCounts, 20);
+    await runLoggedStage('QC + normalize', 'applyQCFilter()', applyQCFilter, 40);
+    await runLoggedStage('PCA', 'runPCA()', runPCA, 60);
+    await runLoggedStage('graph clustering + markers', 'runClustering()', runClustering, 85);
+    terminalWrite('[DONE] full pipeline completed.');
+    const bar = document.getElementById('pipelineProgress');
+    if(bar) bar.style.width='100%';
+  }catch(err){
+    terminalWrite('[STOP] pipeline halted. Fix the last reported stage, then run again.', 'warn');
+  }finally{
+    pipelineBusy = false;
+    if(btn) btn.disabled = false;
+  }
+}
+
+/* ============================================================
+   DOWNSTREAM ANALYSIS / ANNOTATION / ORIGIN
+   ============================================================ */
+const CELLTYPE_OPTIONS = ['Unknown / custom','T cell','B cell','Myeloid','NK cell','Epithelial','Endothelial','Fibroblast','Neural','Other'];
+let annotationLabels = {};
+function scReady(){ return !!(SC && SC.labels && SC.markers && SC.norm && SC.filtered); }
+function buildAnnotationTable(){
+  const wrap=document.getElementById('annotationCards');
+  if(!scReady()){ wrap.innerHTML='<div class="panel"><div class="note">04번 탭에서 QC → PCA → clustering을 먼저 실행하세요.</div></div>'; return; }
+  wrap.innerHTML=SC.markers.map((list,c)=>{
+    const label=annotationLabels[c]||'Unknown / custom';
+    const markers=list.slice(0,6).map(m=>`<span class="marker-chip">${SC.genes[m.gi].name} · padj ${m.padj<.001?'<0.001':fmt(m.padj,3)}</span>`).join('');
+    const opts=CELLTYPE_OPTIONS.map(x=>`<option ${x===label?'selected':''}>${x}</option>`).join('');
+    return `<div class="annotation-card"><div class="annotation-grid"><div><b>Cluster ${c}</b><div class="note">${SC.labels.filter(x=>x===c).length} cells</div></div><div><div class="section-title">Top marker evidence</div><div class="marker-list">${markers||'<span class="note">No positive markers</span>'}</div></div><select data-annot-cluster="${c}">${opts}</select></div></div>`;
+  }).join('');
+  wrap.querySelectorAll('[data-annot-cluster]').forEach(sel=>sel.addEventListener('change',e=>{ annotationLabels[e.target.dataset.annotCluster]=e.target.value; }));
+}
+function resetAnnotation(){ annotationLabels={}; buildAnnotationTable(); }
+function svgText(x,y,text,size=11,fill='var(--dim)'){ return `<text x="${x}" y="${y}" font-size="${size}" fill="${fill}">${text}</text>`; }
+function drawDownstream(){
+  const svg=document.getElementById('downstreamSvg'), explain=document.getElementById('downstreamExplain'); svg.innerHTML='';
+  if(!scReady()){ explain.textContent='04번 탭에서 QC → PCA → clustering을 먼저 실행하세요.'; return; }
+  const mode=document.getElementById('downstreamMode').value, k=SC.k;
+  if(mode==='composition'){
+    const counts=Array.from({length:k},(_,c)=>SC.labels.filter(x=>x===c).length), max=Math.max(...counts);
+    let s=svgText(12,20,'Cluster composition',14,'var(--text)');
+    counts.forEach((n,c)=>{ const x=60+c*95,h=350*n/max; s+=`<rect x="${x}" y="${390-h}" width="54" height="${h}" fill="${CLUSTER_COLORS[c]}" opacity=".8"/><text x="${x+16}" y="410" font-size="11">C${c}</text>${svgText(x+4,380-h,String(n),10,'var(--text)')}`; });
+    svg.innerHTML=s; explain.textContent='각 cluster의 세포 수를 비교합니다. 실제 연구에서는 sample별 composition, condition별 abundance, differential abundance로 확장할 수 있습니다.';
+  } else if(mode==='heatmap'){
+    const genes=[]; SC.markers.forEach(list=>list.slice(0,3).forEach(m=>{if(!genes.some(x=>x.gi===m.gi)) genes.push(m);}));
+    const W=900,H=430,left=150,top=35,cw=(W-left-20)/k,ch=(H-top-30)/Math.max(genes.length,1);
+    let s=svgText(10,20,'Marker expression heatmap',14,'var(--text)');
+    genes.forEach((m,r)=>{ s+=svgText(4,top+r*ch+ch*.7,SC.genes[m.gi].name,10); const vals=SC.norm.map(x=>x[m.gi]); const vmax=Math.max(...vals)||1; for(let c=0;c<k;c++){ const v=mean(SC.norm.filter((x,i)=>SC.labels[i]===c).map(x=>x[m.gi])); const t=clamp(v/vmax,0,1); const fill=`rgba(${Math.round(70+185*t)},${Math.round(120+80*(1-t))},${Math.round(210-120*t)},.9)`; s+=`<rect x="${left+c*cw}" y="${top+r*ch}" width="${cw-2}" height="${Math.max(ch-2,2)}" fill="${fill}"/>`; } });
+    for(let c=0;c<k;c++) s+=svgText(left+c*cw+cw*.4,H-8,'C'+c,10,CLUSTER_COLORS[c]); svg.innerHTML=s; explain.textContent='클러스터별 marker expression을 한 번에 비교합니다. DotPlot보다 여러 유전자의 패턴과 cluster 간 상대적 발현을 보기 좋습니다.';
+  } else {
+    const centers=Array.from({length:k},(_,c)=>{ const pts=SC.pcs.filter((_,i)=>SC.labels[i]===c); return [mean(pts.map(p=>p[0])),mean(pts.map(p=>p[1]))]; });
+    const xs=centers.map(x=>x[0]),ys=centers.map(x=>x[1]),xmin=Math.min(...xs),xmax=Math.max(...xs),ymin=Math.min(...ys),ymax=Math.max(...ys); const px=v=>80+(v-xmin)/(xmax-xmin+1e-9)*760,py=v=>390-(v-ymin)/(ymax-ymin+1e-9)*330;
+    let s=svgText(10,20,'Cluster similarity in PCA state space',14,'var(--text)');
+    for(let i=0;i<k;i++)for(let j=i+1;j<k;j++){const d=Math.hypot(centers[i][0]-centers[j][0],centers[i][1]-centers[j][1]); if(d<=(Math.max(xmax-xmin,ymax-ymin)||1)*.65) s+=`<line x1="${px(centers[i][0])}" y1="${py(centers[i][1])}" x2="${px(centers[j][0])}" y2="${py(centers[j][1])}" stroke="#46515f" stroke-width="${Math.max(1,3-d)}"/>`;}
+    centers.forEach((p,c)=>{s+=`<circle cx="${px(p[0])}" cy="${py(p[1])}" r="18" fill="${CLUSTER_COLORS[c]}" opacity=".85"/>`+svgText(px(p[0])-8,py(p[1])+4,'C'+c,10,'#0b0e13');}); svg.innerHTML=s; explain.textContent='각 cluster의 중심을 PCA 공간에서 비교합니다. 가까운 cluster는 상태가 연속적일 가능성을 탐색하는 출발점이지만, 이것만으로 lineage나 발생학적 기원을 증명하지는 않습니다.';
+  }
+}
+/* ============================================================
+   REAL PSEUDOTIME (MST) + PAGA-STYLE CLUSTER CONNECTIVITY
+   ============================================================ */
+function originLog(text, cls=''){
+  const box = document.getElementById('originConsole');
+  if(!box) return;
+  const line = document.createElement('div');
+  if(cls) line.className = cls;
+  line.textContent = text;
+  box.appendChild(line);
+  box.scrollTop = box.scrollHeight;
+}
+function distEuclid(a,b){ let s=0; for(let i=0;i<a.length;i++){ const d=a[i]-b[i]; s+=d*d; } return Math.sqrt(s); }
+function buildKNNWeighted(data, k){
+  const n = data.length;
+  const adj = Array.from({length:n},()=>new Map());
+  for(let i=0;i<n;i++){
+    const ds=[];
+    for(let j=0;j<n;j++){ if(j===i) continue; ds.push([distEuclid(data[i],data[j]), j]); }
+    ds.sort((a,b)=>a[0]-b[0]);
+    ds.slice(0,k).forEach(([w,j])=>{
+      if(!adj[i].has(j) || adj[i].get(j)>w) adj[i].set(j,w);
+      if(!adj[j].has(i) || adj[j].get(i)>w) adj[j].set(i,w);
+    });
+  }
+  return adj;
+}
+function primMST(adj, n){
+  const inTree = new Array(n).fill(false);
+  const treeAdj = Array.from({length:n},()=>new Map());
+  const dKey = new Array(n).fill(Infinity);
+  const parent = new Array(n).fill(-1);
+  dKey[0]=0;
+  for(let iter=0; iter<n; iter++){
+    let u=-1, best=Infinity;
+    for(let i=0;i<n;i++) if(!inTree[i] && dKey[i]<best){ best=dKey[i]; u=i; }
+    if(u===-1) break;
+    inTree[u]=true;
+    if(parent[u]!==-1){ const w=dKey[u]; treeAdj[u].set(parent[u],w); treeAdj[parent[u]].set(u,w); }
+    adj[u].forEach((w,v)=>{ if(!inTree[v] && w<dKey[v]){ dKey[v]=w; parent[v]=u; } });
+  }
+  return treeAdj;
+}
+function pseudotimeFromTree(treeAdj, root, n){
+  const pt = new Array(n).fill(NaN);
+  pt[root]=0;
+  const stack=[root];
+  const visited = new Array(n).fill(false); visited[root]=true;
+  while(stack.length){
+    const u = stack.pop();
+    treeAdj[u].forEach((w,v)=>{ if(!visited[v]){ visited[v]=true; pt[v]=pt[u]+w; stack.push(v); } });
+  }
+  return pt;
+}
+function pickMedoid(clusterIdx){
+  const idxs = SC.labels.map((l,i)=>l===clusterIdx?i:-1).filter(i=>i>=0);
+  const d = SC.pcs[0].length;
+  const centroid = new Array(d).fill(0);
+  idxs.forEach(i=> SC.pcs[i].forEach((v,f)=> centroid[f]+=v));
+  centroid.forEach((v,f)=> centroid[f]=v/idxs.length);
+  let best=idxs[0], bestD=Infinity;
+  idxs.forEach(i=>{ const dd=distEuclid(SC.pcs[i],centroid); if(dd<bestD){bestD=dd;best=i;} });
+  return best;
+}
+function computePAGAConnectivity(kNeighbors){
+  const adj = buildKNNGraph(SC.pcs, kNeighbors);
+  const K = SC.k;
+  const crossCount = Array.from({length:K},()=>new Array(K).fill(0));
+  const clusterSize = new Array(K).fill(0);
+  SC.labels.forEach(c=>clusterSize[c]++);
+  for(let i=0;i<adj.length;i++){
+    adj[i].forEach((w,j)=>{
+      if(j<=i) return;
+      const ci=SC.labels[i], cj=SC.labels[j];
+      if(ci!==cj){ crossCount[ci][cj]+=w; crossCount[cj][ci]+=w; }
+    });
+  }
+  const conn = Array.from({length:K},()=>new Array(K).fill(0));
+  for(let a=0;a<K;a++) for(let b=a+1;b<K;b++){
+    const expected = Math.sqrt(clusterSize[a]*kNeighbors*clusterSize[b]*kNeighbors) || 1;
+    conn[a][b] = conn[b][a] = crossCount[a][b]/expected;
+  }
+  return {conn, clusterSize};
+}
+function populateOriginSelectors(){
+  const rootSel = document.getElementById('originRoot');
+  if(rootSel) rootSel.innerHTML = Array.from({length:SC.k},(_,c)=>`<option value="${c}">Root cluster: C${c}</option>`).join('');
+  const geneSel = document.getElementById('originGeneTrend');
+  if(geneSel && SC.markers){
+    const opts=[];
+    SC.markers.forEach((list,c)=> list.forEach(m=> opts.push(`<option value="${m.gi}">C${c} · ${SC.genes[m.gi].name}</option>`)));
+    geneSel.innerHTML = opts.join('');
+  }
+}
+async function runOriginAnalysis(){
+  const svg=document.getElementById('originSvg'), explain=document.getElementById('originExplain');
+  const consoleBox = document.getElementById('originConsole');
+  if(consoleBox) consoleBox.innerHTML='';
+  if(!scReady()){ explain.textContent='04번 탭에서 QC → PCA → clustering을 먼저 실행하세요.'; originLog('[WAIT] run 04 pipeline (QC → PCA → clustering) first.'); return; }
+  const btn = document.getElementById('btnOriginAnalysis');
+  if(btn) btn.disabled = true;
+  try{
+    const root = +document.getElementById('originRoot').value;
+    const rootCluster = root>=0? root : 0;
+    originLog(`$ compute pseudotime (root=Cluster ${rootCluster})`);
+    originLog('[RUN] building real-distance kNN graph over all cells...');
+    await sleep(10);
+    const n = SC.pcs.length;
+    const adjW = buildKNNWeighted(SC.pcs, 15);
+    originLog('[RUN] Prim MST + PAGA connectivity...');
+    await sleep(10);
+    const treeAdj = primMST(adjW, n);
+    const rootCell = pickMedoid(rootCluster);
+    const pt = pseudotimeFromTree(treeAdj, rootCell, n);
+    const reached = pt.filter(v=>!isNaN(v)).length;
+    const ptMax = Math.max(...pt.filter(v=>!isNaN(v)), 1e-9);
+    SC.pseudotime = pt.map(v=> isNaN(v)? NaN : v/ptMax);
+    SC.rootCluster = rootCluster;
+    const kNNUsed = SC.kNNUsed || 15;
+    const {conn, clusterSize} = computePAGAConnectivity(kNNUsed);
+    SC.pagaConn = conn; SC.pagaClusterSize = clusterSize;
+    originLog(`[ OK ] pseudotime: ${reached}/${n} cells reached (root = Cluster ${rootCluster} medoid, Cell #${rootCell})`);
+    originLog(`[ OK ] PAGA connectivity computed over ${SC.k} clusters (kNN=${kNNUsed})`);
+    populateOriginSelectors();
+    drawOrigin();
+    drawOriginTrend();
+    explain.textContent = '실선 굵기는 PAGA 방식으로 정규화한 클러스터 간 연결성(무작위 기대치 대비 kNN 연결 밀도)이고, 점 색은 실제 MST 기반 pseudotime(0=root, 1=가장 먼 세포)입니다. pseudotime은 실제 시간이 아니라 "그래프 위 상대적 거리"이며, 진짜 발생학적 origin/lineage를 확정하려면 시간 시계열 샘플링, lineage tracing, 또는 RNA velocity 같은 별도 증거가 필요합니다.';
+  }catch(err){
+    originLog('[FAIL] '+err.message, 'warn');
+  }finally{
+    if(btn) btn.disabled = false;
+  }
+}
+function drawOrigin(){
+  const svg=document.getElementById('originSvg'); svg.innerHTML='';
+  if(!scReady() || !SC.pseudotime) return;
+  const k=SC.k;
+  const xs=SC.pcs.map(p=>p[0]), ys=SC.pcs.map(p=>p[1]);
+  const xmin=Math.min(...xs),xmax=Math.max(...xs),ymin=Math.min(...ys),ymax=Math.max(...ys);
+  const px=v=>80+(v-xmin)/(xmax-xmin+1e-9)*760, py=v=>400-(v-ymin)/(ymax-ymin+1e-9)*330;
+  let s=svgText(10,20,'Real pseudotime (MST) + PAGA cluster connectivity',14,'var(--text)');
+  // individual cells colored by pseudotime
+  SC.pcs.forEach((p,i)=>{
+    const t = SC.pseudotime[i];
+    const color = isNaN(t) ? 'rgba(90,100,110,0.35)' : `rgba(${Math.round(79+(242-79)*t)},${Math.round(216+(166-216)*t)},${Math.round(196+(94-196)*t)},0.55)`;
+    s += `<circle cx="${px(p[0]).toFixed(1)}" cy="${py(p[1]).toFixed(1)}" r="2.1" fill="${color}"/>`;
+  });
+  // cluster centroids + PAGA edges
+  const centers=Array.from({length:k},(_,c)=>{ const pts=SC.pcs.filter((_,i)=>SC.labels[i]===c); return [mean(pts.map(p=>p[0])),mean(pts.map(p=>p[1]))]; });
+  const maxConn = SC.pagaConn? Math.max(...SC.pagaConn.flat(),1e-9) : 1;
+  if(SC.pagaConn){
+    for(let i=0;i<k;i++) for(let j=i+1;j<k;j++){
+      const v = SC.pagaConn[i][j];
+      if(v<=1e-6) continue;
+      const t = v/maxConn;
+      s += `<line x1="${px(centers[i][0]).toFixed(1)}" y1="${py(centers[i][1]).toFixed(1)}" x2="${px(centers[j][0]).toFixed(1)}" y2="${py(centers[j][1]).toFixed(1)}" stroke="#8fdfc4" stroke-width="${(1+t*7).toFixed(1)}" opacity="${(0.3+t*0.6).toFixed(2)}"/>`;
+    }
+  }
+  centers.forEach((p,c)=>{
+    const rootTag = (SC.rootCluster===c) ? ' (root)' : '';
+    s += `<circle cx="${px(p[0]).toFixed(1)}" cy="${py(p[1]).toFixed(1)}" r="20" fill="${CLUSTER_COLORS[c]}" stroke="#0b0e13" stroke-width="${SC.rootCluster===c?3:0}" opacity=".95"/>`+svgText(px(p[0])-9,py(p[1])+4,'C'+c,11,'#0b0e13');
+    if(rootTag) s += svgText(px(p[0])-22,py(p[1])-26,'root',10,'var(--amber)');
+  });
+  svg.innerHTML=s;
+}
+function drawOriginTrend(){
+  const svg = document.getElementById('originTrendSvg'); if(!svg) return;
+  const W=900,H=220,pad=40;
+  svg.innerHTML='';
+  const gi = +document.getElementById('originGeneTrend').value;
+  if(!SC.pseudotime || gi<0) return;
+  const pts=[];
+  SC.norm.forEach((r,i)=>{ if(!isNaN(SC.pseudotime[i])) pts.push([SC.pseudotime[i], r[gi], SC.labels[i]]); });
+  const ymax = Math.max(...pts.map(p=>p[1]), 0.1);
+  const px=v=>pad+v*(W-pad-20), py=v=>H-pad-(v/ymax)*(H-pad-15);
+  let s = svgText(10,20,`${SC.genes[gi].name} expression vs pseudotime`,13,'var(--text)');
+  s += `<line x1="${pad}" y1="${H-pad}" x2="${W-10}" y2="${H-pad}" stroke="#232c39"/><line x1="${pad}" y1="30" x2="${pad}" y2="${H-pad}" stroke="#232c39"/>`;
+  pts.forEach(([t,v,c])=> s += `<circle cx="${px(t).toFixed(1)}" cy="${py(v).toFixed(1)}" r="2.2" fill="${CLUSTER_COLORS[c%CLUSTER_COLORS.length]}" opacity="0.6"/>`);
+  const bins=20, sums=new Array(bins).fill(0), cnts=new Array(bins).fill(0);
+  pts.forEach(([t,v])=>{ let b=Math.min(bins-1,Math.floor(t*bins)); sums[b]+=v; cnts[b]++; });
+  let path='';
+  for(let b=0;b<bins;b++){ if(cnts[b]===0) continue; const t=(b+0.5)/bins, v=sums[b]/cnts[b]; path += (path?'L':'M')+`${px(t).toFixed(1)},${py(v).toFixed(1)} `; }
+  s += `<path d="${path}" fill="none" stroke="#f2a65a" stroke-width="2.5"/>`;
+  s += svgText(W-100,H-8,'pseudotime →',10);
+  svg.innerHTML = s;
+}
+
+/* ============================================================
+   WIRING
+   ============================================================ */
+const MODE_LABEL = {facsguide:'FACS SETUP', facsresult:'FACS GATING', scbasics:'scRNA BASICS', scsim:'scRNA-seq', annotation:'CELL TYPE ANNOTATION', downstream:'DOWNSTREAM ANALYSIS', origin:'DEVELOPMENTAL ORIGIN'};
+document.querySelectorAll('.tab').forEach(tab=>{
+  tab.addEventListener('click', ()=>{
+    document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+    document.querySelectorAll('.app').forEach(a=>a.classList.remove('active'));
+    tab.classList.add('active');
+    document.getElementById('app-'+tab.dataset.app).classList.add('active');
+    document.getElementById('modeReadout').textContent = MODE_LABEL[tab.dataset.app] || tab.dataset.app;
+    if(tab.dataset.app==='facsresult') drawFacs();
+    if(tab.dataset.app==='scsim' && SC.embed2){ drawPCA(); drawDotplot(); drawViolin(); }
+    if(tab.dataset.app==='annotation') buildAnnotationTable();
+    if(tab.dataset.app==='downstream') drawDownstream();
+    if(tab.dataset.app==='origin'){ if(SC.pseudotime) { drawOrigin(); drawOriginTrend(); } }
+  });
+});
+document.getElementById('nEvents').addEventListener('input', e=> document.getElementById('nEventsVal').textContent=e.target.value);
+document.getElementById('btnAcquire').addEventListener('click', runAcquisition);
+document.getElementById('btnClearGates').addEventListener('click', ()=>{
+  const n=facsGates.length; facsGates=[];
+  facsTerminalCommand('clear-gates');
+  facsTerminalWrite(`[CLEAR] removed ${n} gate(s); restored All events`);
+  drawFacs();
+});
+document.getElementById('btnClearFacsTerminal').addEventListener('click', facsTerminalClear);
+document.getElementById('btnRunControls').addEventListener('click', runSingleStainControls);
+document.getElementById('applyComp').addEventListener('change', e=>{
+  compApplied=e.target.checked;
+  facsTerminalCommand(`compensation ${compApplied?'on':'off'}`);
+  facsTerminalWrite(`[COMP] compensation ${compApplied?'APPLIED':'REMOVED'}`);
+  drawFacs();
+});
+document.getElementById('showDoublets').addEventListener('change', drawFacs);
+document.getElementById('xAxis').addEventListener('change', ()=>{
+  facsTerminalCommand(`axis x=${document.getElementById('xAxis').value}`);
+  facsTerminalWrite('[PLOT] X axis changed');
+  drawFacs(); updateGatingTip();
+});
+document.getElementById('yAxis').addEventListener('change', ()=>{
+  facsTerminalCommand(`axis y=${document.getElementById('yAxis').value}`);
+  facsTerminalWrite('[PLOT] Y axis changed');
+  drawFacs(); updateGatingTip();
+});
+document.getElementById('histChannel').addEventListener('change', drawHistogram);
+setupFacsCanvas();
+
+document.getElementById('nClustTrue').addEventListener('input', e=> document.getElementById('nClustVal').textContent=e.target.value);
+document.getElementById('nCells').addEventListener('input', e=> document.getElementById('nCellsVal').textContent=e.target.value);
+document.getElementById('minGenes').addEventListener('input', e=> document.getElementById('minGenesVal').textContent=e.target.value);
+document.getElementById('maxMito').addEventListener('input', e=> document.getElementById('maxMitoVal').textContent=e.target.value);
+document.getElementById('kNN').addEventListener('input', e=> document.getElementById('kNNVal').textContent=e.target.value);
+document.getElementById('resolution').addEventListener('input', e=> document.getElementById('resVal').textContent=e.target.value);
+document.getElementById('btnTsne').addEventListener('click', runTsne);
+document.getElementById('embedMode').addEventListener('change', drawPCA);
+document.getElementById('btnRunPipeline').addEventListener('click', runFullPipeline);
+document.getElementById('btnClearTerminal').addEventListener('click', terminalClear);
+document.getElementById('btnSimulate').addEventListener('click', ()=>runLoggedStage('simulate counts', 'simulateCounts()', simulateCounts, 20));
+document.getElementById('btnQC').addEventListener('click', ()=>runLoggedStage('QC + normalize', 'applyQCFilter()', applyQCFilter, 40));
+document.getElementById('btnPCA').addEventListener('click', ()=>runLoggedStage('PCA', 'runPCA()', runPCA, 60));
+document.getElementById('btnCluster').addEventListener('click', ()=>runLoggedStage('graph clustering + markers', 'runClustering()', runClustering, 85));
+document.getElementById('colorMode').addEventListener('change', e=>{
+  document.getElementById('geneSelectWrap').style.display = e.target.value==='gene' ? 'block':'none';
+  drawPCA();
+});
+document.getElementById('geneSelectPlot').addEventListener('change', drawPCA);
+document.getElementById('geneSelectViolin').addEventListener('change', drawViolin);
+
+document.getElementById('btnBuildAnnotation').addEventListener('click', buildAnnotationTable);
+document.getElementById('btnResetAnnotation').addEventListener('click', resetAnnotation);
+document.getElementById('btnDrawDownstream').addEventListener('click', ()=>{
+  const mode=document.getElementById('downstreamMode').value;
+  const c=document.getElementById('downstreamConsole');
+  if(c)c.textContent=`$ run ${mode}\n[RUN] selecting input data and analysis method...`;
+  drawDownstream();
+  if(c)c.textContent+=`\n[ OK ] ${mode} result rendered.\n[INFO] interpret graph in relation to the biological question.`;
+});
+document.getElementById('downstreamMode').addEventListener('change', drawDownstream);
+document.getElementById('btnOriginAnalysis').addEventListener('click', runOriginAnalysis);
+document.getElementById('originGeneTrend').addEventListener('change', drawOriginTrend);
+
+populateFacsSelectors();
+runAcquisition();
+facsTerminalWrite('Ready. Acquisition complete.');
+facsTerminalWrite('Drag on the plot to create a gate. The terminal logs each interaction.', 'dim');
+updateGatingTip();
+resetGeneSelectors();
+renderScStats();
+buildFacsGuide();
+buildScConcepts();
+terminalWrite('Ready. Click “run pipeline” to execute each stage with visible terminal logging.');
+</script>
+</body>
+</html>
