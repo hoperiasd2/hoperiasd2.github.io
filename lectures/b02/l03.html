@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>B02-L03 세포주기, 세포사멸과 자가포식</title>
+<meta name="description" content="Cell Cycle, Cell Death and Autophagy">
+<link rel="stylesheet" href="../assets/lecture.css">
+</head>
+<body>
+<header class="mast">
+  <div class="mast__in">
+    <a class="mast__home" href="../index.html">의생명 강의록 아카이브</a>
+    <a class="mast__site" href="../../index.html">KimjintaeHYU</a>
+  </div>
+</header>
+
+<main class="lec">
+  <div class="crumb"><a href="../index.html">전체</a> / <a href="index.html">B02 의학분자생물학</a> / 세포생물학</div>
+  <header class="hero">
+    <div class="hero__code">B02-L03</div>
+    <h1>세포주기, 세포사멸과 자가포식</h1>
+    <p class="hero__en">Cell Cycle, Cell Death and Autophagy</p>
+    <div class="hero__meta">
+      <span class="chip">세포생물학</span>
+      <span class="chip">본문 6개 절</span>
+      <span class="chip">자가평가 4문항</span>
+      <a class="btn" href="ppt/b02-l03.pptx" download>PPT 내려받기</a>
+      <button class="btn btn--ghost" type="button" onclick="window.print()">인쇄 / PDF</button>
+    </div>
+  </header>
+  <div class="lec__grid">
+    <aside class="toc"><div class="toc__in"><b>목차</b><ol><li><a href="#obj">학습 목표</a></li><li><a href="#s1">1. 세포주기의 구조와 엔진</a></li><li><a href="#s2">2. 점검점과 p53</a></li><li><a href="#s3">3. 세포자멸사(apoptosis)</a></li><li><a href="#s4">4. 조절된 괴사성 세포사</a></li><li><a href="#s5">5. 자가포식(autophagy)</a></li><li><a href="#s6">6. 세포 노화와 조직 항상성</a></li><li><a href="#frontier">연구 최전선</a></li><li><a href="#summary">요약</a></li><li><a href="#quiz">자가 평가</a></li><li><a href="#ref">참고 문헌</a></li></ol></div></aside>
+    <article class="doc">
+<section id="obj" class="sec"><h2>학습 목표</h2><ol class="obj"><li>세포주기 단계와 사이클린–CDK–CKI 조절, Rb–E2F 축을 설명한다.</li><li>G1/S, G2/M, 방추체 점검점과 p53의 역할을 설명한다.</li><li>내인성·외인성 세포자멸사 경로(BCL-2 계열, 카스페이스)와 BH3 모방제를 설명한다.</li><li>괴사성 세포사(괴사, 네크롭토시스, 파이롭토시스, 페로토시스)를 비교한다.</li><li>자가포식의 분자기전과 질환(신경퇴행, 감염, 암)과의 관계를 설명한다.</li></ol></section>
+<section id="s1" class="sec"><h2><span class="sec__no">1</span>세포주기의 구조와 엔진</h2><ul><li>단계: G1(성장, 제한점 R) → S(DNA 복제) → G2 → M(전기–전중기–중기–후기–말기 + 세포질분열). G0는 휴지 상태(신경세포, 간세포 일부, 기억 림프구).</li><li><strong>CDK</strong>(사이클린 의존성 키나아제)는 일정량 존재하고 <strong>사이클린</strong>이 주기적으로 합성·분해되어 활성을 정한다.</li></ul>
+<div class="tbl"><table><thead><tr><th>시기</th><th>사이클린–CDK</th><th>핵심 기질/역할</th></tr></thead><tbody><tr><td>초기–중기 G1</td><td>사이클린 D–CDK4/6</td><td>성장인자 의존(Ras–MAPK가 사이클린 D 유도); Rb 1차 인산화</td></tr><tr><td>G1/S</td><td>사이클린 E–CDK2</td><td>Rb 과인산화, 복제 기점 발화 준비</td></tr><tr><td>S</td><td>사이클린 A–CDK2</td><td>복제 개시·재복제 방지</td></tr><tr><td>G2/M</td><td>사이클린 A·B–CDK1</td><td>핵막 붕괴(라민 인산화), 염색체 응축, 방추체</td></tr></tbody></table></div>
+<ul><li><strong>CDK 억제제(CKI)</strong>: INK4 계열(p16<sup>INK4a</sup>, p15 — CDK4/6 특이), CIP/KIP 계열(p21<sup>CIP1</sup>, p27<sup>KIP1</sup>, p57 — 광범위).</li><li><strong>Rb–E2F</strong>: 저인산화 Rb는 E2F에 결합해 S기 유전자(사이클린 E, DNA 중합효소, TS, DHFR)를 억제. CDK4/6·CDK2가 Rb를 인산화하면 E2F가 풀려 S기 진입 → '제한점' 통과(이후 성장인자 비의존).</li><li>유비퀴틴 리가아제: <strong>SCF</strong>(G1/S; p27·사이클린 E 분해), <strong>APC/C</strong>(후기 진입; 세큐린·사이클린 B 분해 → 분리효소가 코헤신 절단).</li></ul>
+<aside class="box box--clin"><b>임상 연계</b><p>CDK4/6 억제제(팔보시클립, 리보시클립, 아베마시클립) + 내분비요법은 HR⁺/HER2⁻ 진행성 유방암의 표준이다. Rb가 없는 종양(<em>RB1</em> 결손)에서는 효과가 없다. <em>CDKN2A</em>(p16) 결실은 흑색종·췌장암·교모세포종에서 흔하며, 생식세포 변이는 가족성 흑색종-췌장암 증후군을 일으킨다. HPV E7은 Rb를, E6는 p53을 불활성화해 자궁경부암을 유발하며 p16 과발현이 HPV 관련 종양의 대리 지표가 된다.</p></aside></section>
+<section id="s2" class="sec"><h2><span class="sec__no">2</span>점검점과 p53</h2><ul><li><strong>DNA 손상 점검점</strong>: 이중가닥 절단 → <strong>ATM</strong>(MRN 복합체) → CHK2; 단일가닥·복제 스트레스 → <strong>ATR</strong>–ATRIP → CHK1. CHK1/2가 CDC25 포스파타아제 억제 → CDK 비활성 → 주기 정지.</li><li><strong>p53('유전체의 수호자')</strong>: 평상시 <strong>MDM2</strong>(E3 리가아제)에 의해 빠르게 분해. 손상 시 ATM/CHK2가 p53 인산화 → MDM2 결합 해리 → 안정화 → 표적 유전자 전사:<ul><li><em>CDKN1A</em>(p21) → G1 정지</li><li><em>GADD45</em>, DNA 수선</li><li><em>BAX</em>, <em>PUMA</em>, <em>NOXA</em> → 세포자멸사</li><li>노화(senescence) 유도</li></ul></li><li><strong>방추체 조립 점검점(SAC)</strong>: 키네토코어에 미부착 염색체 → MAD2·BUBR1이 CDC20 격리 → APC/C 억제 → 후기 지연. 실패 시 이수성(aneuploidy).</li></ul>
+<div class="tbl"><table><thead><tr><th>질환</th><th>유전자</th><th>소견</th></tr></thead><tbody><tr><td>리-프라우메니 증후군</td><td><em>TP53</em> 생식세포</td><td>육종, 유방암(조기), 뇌종양, 부신피질암, 백혈병 — 전신 MRI 감시</td></tr><tr><td>모세혈관확장성 운동실조증</td><td><em>ATM</em></td><td>소뇌 운동실조, 안구피부 모세혈관확장, 면역결핍, 방사선 과민, 림프종</td></tr><tr><td>니메헨 파손 증후군</td><td><em>NBN</em></td><td>소두증, 면역결핍, 림프종</td></tr><tr><td>블룸 증후군</td><td><em>BLM</em> 헬리케이스</td><td>자매염색분체 교환↑, 저신장, 광과민, 암</td></tr></tbody></table></div>
+<ul><li>인간 암의 약 50%가 <em>TP53</em> 변이를 가진다. 변이 p53을 재접힘시키는 약물(APR-246 엡레네타펨드, Y220C 재활성화제 레조타펜)과 MDM2 억제제(p53 야생형 종양)가 연구되고 있다.</li></ul></section>
+<section id="s3" class="sec"><h2><span class="sec__no">3</span>세포자멸사(apoptosis)</h2><p>세포자멸사는 염증 없이 세포를 제거하는 프로그램된 세포사이다. 형태: 세포 수축, 염색질 응축(핵농축), 핵 단편화, 세포막 기포 형성, 자멸소체; PS 외엽 노출 → 대식세포 탐식(efferocytosis).</p>
+<ul><li><strong>내인성(미토콘드리아) 경로</strong>: DNA 손상, 성장인자 결핍, ER 스트레스 → BH3-only 단백질(BIM, PUMA, NOXA, BID, BAD) 활성 → <strong>BAX/BAK</strong> 올리고머화 → 미토콘드리아 외막 투과(MOMP) → <strong>사이토크롬 c</strong> 방출 → APAF-1·카스페이스-9 <strong>아포토좀</strong> → 카스페이스-3/7.<ul><li>항자멸 단백질: <strong>BCL-2</strong>, BCL-XL, MCL-1이 BAX/BAK와 BH3-only 단백질을 격리.</li><li>SMAC/DIABLO는 IAP(XIAP) 억제를 해제.</li></ul></li><li><strong>외인성(사멸수용체) 경로</strong>: FasL–Fas, TNF–TNFR1, TRAIL–DR4/5 → FADD → 카스페이스-8 (DISC) → 카스페이스-3 직접 활성, 또는 BID 절단(tBID)으로 내인성 증폭.</li><li>집행 카스페이스: 카스페이스-3/6/7이 ICAD 절단(→ CAD가 뉴클레오솜 사이 DNA 절단: 180 bp 사다리), 라민·PARP 절단.</li></ul>
+<div class="tbl"><table><thead><tr><th>질환/약물</th><th>기전</th></tr></thead><tbody><tr><td>여포성 림프종 t(14;18)</td><td><em>IGH</em>–<em>BCL2</em> 전위 → BCL-2 과발현 → 자멸 저항</td></tr><tr><td><strong>베네토클락스</strong></td><td>BH3 모방 BCL-2 선택 억제 → CLL, AML(+ 아자시티딘); 종양용해증후군 주의</td></tr><tr><td>자가면역 림프증식 증후군(ALPS)</td><td><em>FAS</em> 변이 → 이중음성 T세포 증가, 림프절병증, 자가면역</td></tr><tr><td>신경퇴행·허혈</td><td>과도한 자멸</td></tr></tbody></table></div></section>
+<section id="s4" class="sec"><h2><span class="sec__no">4</span>조절된 괴사성 세포사</h2><div class="tbl"><table><thead><tr><th>형태</th><th>핵심 분자</th><th>형태학·결과</th><th>의학적 맥락</th></tr></thead><tbody><tr><td>우발적 괴사</td><td>ATP 고갈, 막 파열</td><td>세포 부종, 내용물 유출(DAMP) → 염증</td><td>허혈 경색(응고괴사), 화상</td></tr><tr><td><strong>네크롭토시스</strong></td><td>RIPK1 → RIPK3 → <strong>MLKL</strong> 인산화·막 구멍</td><td>카스페이스-8 억제 시 대체 경로</td><td>바이러스 방어, 허혈-재관류, 염증성 장질환</td></tr><tr><td><strong>파이롭토시스</strong></td><td>인플라마좀(NLRP3, NLRC4, AIM2) → 카스페이스-1 (비정형: 카스페이스-4/5/11 ← LPS) → <strong>가스더민 D</strong> 절단 → 막 구멍, IL-1β·IL-18 방출</td><td>염증성</td><td>패혈증, 통풍, 자가염증질환(CAPS: <em>NLRP3</em>)</td></tr><tr><td><strong>페로토시스</strong></td><td>철 의존 지질 과산화; GPX4·FSP1·시스틴(xCT, <em>SLC7A11</em>) 방어</td><td>미토콘드리아 축소</td><td>신경퇴행, 신손상, 암 치료 표적</td></tr><tr><td>NETosis</td><td>PAD4 히스톤 시트룰린화 → 호중구 세포외 덫</td><td>병원체 포획, 혈전</td><td>혈전증, 루푸스, COVID-19</td></tr><tr><td>큐프로토시스</td><td>구리가 지질화된 TCA 효소(DLAT) 응집</td><td></td><td>윌슨병, 암</td></tr></tbody></table></div>
+<aside class="box box--clin"><b>임상 연계</b><p><strong>크리오피린 연관 주기성 증후군(CAPS)</strong>은 <em>NLRP3</em> 기능획득 변이로 추위 유발 두드러기 유사 발진, 발열, 감각신경성 난청, 아밀로이드증을 일으키며 IL-1 차단제(아나킨라, 카나키누맙, 릴로나셉트)에 극적으로 반응한다.</p></aside></section>
+<section id="s5" class="sec"><h2><span class="sec__no">5</span>자가포식(autophagy)</h2><p>자가포식은 세포질 구성물을 이중막 <strong>자가포식소체(autophagosome)</strong>로 감싸 리소좀으로 보내 분해하는 재활용 체계이다.</p>
+<ul><li>개시: 영양 결핍 → <strong>mTORC1 억제</strong> + AMPK 활성 → <strong>ULK1 복합체</strong> 활성 → VPS34(PI3K III)–Beclin-1 복합체 → PI3P 생성.</li><li>확장: ATG12–ATG5–ATG16L1 접합, <strong>LC3</strong>(ATG8)-I → PE 결합 LC3-II(자가포식소체 표지).</li><li>화물 선택: 수용체 p62/SQSTM1, NBR1, OPTN, NDP52가 유비퀴틴화 화물과 LC3를 연결(선택적 자가포식).</li><li>융합·분해: 리소좀 융합(STX17–SNAP29–VAMP8) → 자가리소좀.</li><li>선택적 형태: <strong>미토파지</strong>(PINK1–Parkin; 손상 미토콘드리아의 막전위 소실 → PINK1 외막 축적 → Parkin 유비퀴틴화), 제노파지(세균), 어그리파지(단백 응집체), 리포파지(지방구), ER-파지.</li></ul>
+<div class="tbl"><table><thead><tr><th>연관 질환</th><th>유전자/기전</th></tr></thead><tbody><tr><td>조기발병 파킨슨병</td><td><em>PINK1</em>, <em>PRKN</em> (미토파지 결함)</td></tr><tr><td>ALS/FTD</td><td><em>C9orf72</em>, <em>OPTN</em>, <em>TBK1</em>, <em>SQSTM1</em>, <em>UBQLN2</em></td></tr><tr><td>크론병</td><td><em>ATG16L1</em> T300A, <em>IRGM</em> → 파네트 세포 이상, 세균 제거 저하</td></tr><tr><td>정적 뇌병증(BPAN)</td><td><em>WDR45</em> (WIPI4) — 뇌 철 축적 신경퇴행</td></tr><tr><td>다논병</td><td><em>LAMP2</em> — 심근병증, 근병증, 지적장애</td></tr><tr><td>결핵</td><td>결핵균이 자가포식소체 성숙을 억제; 비타민 D가 자가포식 유도</td></tr></tbody></table></div>
+<aside class="box box--key"><b>핵심</b><p>암에서 자가포식은 양면적이다: 초기에는 손상 소기관 제거로 종양을 억제하지만(<em>BECN1</em> 단일대립 결실), 진행 종양은 영양 결핍을 견디는 데 자가포식을 이용한다(KRAS 췌장암 → 하이드록시클로로퀸 병용 시험).</p></aside></section>
+<section id="s6" class="sec"><h2><span class="sec__no">6</span>세포 노화와 조직 항상성</h2><ul><li><strong>세포 노화(senescence)</strong>: 비가역적 주기 정지(p16–Rb, p53–p21), SA-β-gal 양성, <strong>노화 연관 분비 표현형(SASP)</strong>(IL-6, IL-8, MMP).<ul><li>원인: 텔로미어 단축(복제 노화), 종양유전자 유도(OIS; 양성 모반의 BRAF), DNA 손상, 산화 스트레스.</li><li>이중성: 종양 억제·상처 치유 vs 만성 염증·조직 노화 → <strong>세놀리틱스</strong>(다사티닙 + 퀘르세틴, 나비토클락스) 연구(B04 L09).</li></ul></li><li>조직 항상성: 증식(줄기세포) – 분화 – 세포사의 균형. 위축·비대·증식·화생은 적응 반응이다.</li></ul></section>
+<section id="frontier" class="sec sec--frontier"><h2>연구 최전선</h2><ul><li>세포사의 '가소성': 하나의 자극이 상황에 따라 자멸·네크롭토시스·파이롭토시스로 전환되는 PANoptosis 개념과 카스페이스-8의 중심 스위치 역할이 연구되고 있다.</li><li>가스더민 계열(GSDMB, GSDME)이 항암 면역과 화학요법 부작용(GSDME → 장점막 파이롭토시스)에 관여한다는 것이 밝혀졌다.</li><li>GPX4 억제·시스틴 고갈로 페로토시스를 유도해 치료 저항성 '지속 세포(persister)'를 제거하는 전략, 페로토시스 억제제(리프록스타틴)로 장기 손상을 막는 전략이 병행 개발 중이다.</li><li>자가포식 측정은 LC3-II '플럭스'(리소좀 억제제 존재/부재 비교)로 해야 하며, 단일 시점 LC3-II 증가만으로 '자가포식 증가'라 해석하는 오류가 흔하다.</li></ul></section>
+<section id="summary" class="sec sec--summary"><h2>요약</h2><ul><li>세포주기는 사이클린–CDK가 구동하고 CKI가 제동하며, Rb 인산화가 G1/S 제한점을 연다.</li><li>ATM/ATR–CHK–p53 점검점이 DNA 손상 시 주기를 멈추고 수선 또는 자멸을 결정한다.</li><li>세포자멸사는 BCL-2 계열이 MOMP를 조절하는 내인성 경로와 사멸수용체 외인성 경로로 카스페이스를 활성화한다.</li><li>네크롭토시스(MLKL), 파이롭토시스(가스더민 D), 페로토시스(GPX4)는 염증성·조절된 괴사이다.</li><li>자가포식(mTORC1–ULK1–LC3)은 단백질·소기관 품질 관리를 담당하며 파킨슨병·크론병·암과 연결된다.</li></ul></section>
+<section id="quiz" class="sec"><h2>자가 평가</h2><ol class="quiz"><li><p class="q">HPV 양성 구인두암에서 p16 면역염색이 강하게 양성인 이유를 분자적으로 설명하라.</p><details><summary>해설 보기</summary><p>HPV E7이 Rb를 결합·분해해 E2F가 상시 활성화된다. Rb는 정상적으로 p16(<em>CDKN2A</em>) 발현을 음성 되먹임으로 억제하는데, Rb 기능이 소실되면 이 되먹임이 사라져 p16이 과발현된다. 따라서 p16은 HPV 관련 종양의 대리 지표가 된다.</p></details></li><li><p class="q">베네토클락스 투여 초기 종양용해증후군 위험이 높은 이유는?</p><details><summary>해설 보기</summary><p>CLL 세포는 생존을 BCL-2에 크게 의존한다('BCL-2 의존 프라이밍'). BH3 모방제가 BCL-2를 억제하면 격리되어 있던 BIM 등이 풀려 BAX/BAK가 즉시 활성화되어 수 시간 내 대량 세포자멸이 일어난다. 따라서 5주에 걸친 점진적 용량 증량과 수액·요산 저하제 예방이 필요하다.</p></details></li><li><p class="q">크론병 위험 변이 <em>ATG16L1</em> T300A가 장 염증을 유발하는 기전 가설을 두 가지 제시하라.</p><details><summary>해설 보기</summary><p>(1) 파네트 세포의 분비과립 이상으로 항균 펩타이드(디펜신) 분비가 저하된다. (2) 세포 내 세균에 대한 제노파지가 약해져 세균 제거가 줄고 NOD2 신호와의 상호작용이 손상되어 염증성 사이토카인(IL-1β)이 과다 생성된다. 카스페이스-3에 의한 ATG16L1 분해 감수성 증가가 기전이다.</p></details></li><li><p class="q">파이롭토시스와 세포자멸사의 차이를 분자 집행자와 염증 결과 측면에서 비교하라.</p><details><summary>해설 보기</summary><p>세포자멸사는 카스페이스-3/7이 집행하고 막이 유지된 채 자멸소체로 포장되어 탐식되므로 비염증성이다. 파이롭토시스는 인플라마좀 → 카스페이스-1(또는 4/5/11)이 가스더민 D를 절단해 N말단 단편이 막 구멍을 만들어 세포가 부풀어 터지고 IL-1β·IL-18과 DAMP가 방출되어 강한 염증을 일으킨다.</p></details></li></ol></section>
+<section id="ref" class="sec sec--ref"><h2>참고 문헌</h2><ul><li>Morgan DO. <em>The Cell Cycle: Principles of Control</em>. New Science Press, 2007.</li><li>Galluzzi L et al. Molecular mechanisms of cell death: recommendations of the NCCD 2018. <em>Cell Death Differ</em> 2018;25:486–541.</li><li>Levine B, Kroemer G. Biological functions of autophagy genes: a disease perspective. <em>Cell</em> 2019;176:11–42.</li><li>Roberts AW et al. Targeting BCL2 with venetoclax in relapsed chronic lymphocytic leukemia. <em>N Engl J Med</em> 2016;374:311–322.</li><li>Stockwell BR. Ferroptosis turns 10: emerging mechanisms, physiological functions, and therapeutic applications. <em>Cell</em> 2022;185:2401–2421.</li></ul></section>
+<nav class="pn"><a class="pn__prev" href="l02.html"><small>이전</small>세포 신호전달</a><span></span></nav>
+    </article>
+  </div>
+</main>
+<footer class="foot">
+  <span>의학생화학 · 의학분자생물학 · 신경과학 강의록</span>
+  <a href="../index.html">전체 목록</a>
+</footer>
+<script src="../assets/lecture.js"></script>
+</body>
+</html>

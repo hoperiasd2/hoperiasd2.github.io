@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>B02-L02 세포 신호전달</title>
+<meta name="description" content="Cell Signaling">
+<link rel="stylesheet" href="../assets/lecture.css">
+</head>
+<body>
+<header class="mast">
+  <div class="mast__in">
+    <a class="mast__home" href="../index.html">의생명 강의록 아카이브</a>
+    <a class="mast__site" href="../../index.html">KimjintaeHYU</a>
+  </div>
+</header>
+
+<main class="lec">
+  <div class="crumb"><a href="../index.html">전체</a> / <a href="index.html">B02 의학분자생물학</a> / 세포생물학</div>
+  <header class="hero">
+    <div class="hero__code">B02-L02</div>
+    <h1>세포 신호전달</h1>
+    <p class="hero__en">Cell Signaling</p>
+    <div class="hero__meta">
+      <span class="chip">세포생물학</span>
+      <span class="chip">본문 6개 절</span>
+      <span class="chip">자가평가 4문항</span>
+      <a class="btn" href="ppt/b02-l02.pptx" download>PPT 내려받기</a>
+      <button class="btn btn--ghost" type="button" onclick="window.print()">인쇄 / PDF</button>
+    </div>
+  </header>
+  <div class="lec__grid">
+    <aside class="toc"><div class="toc__in"><b>목차</b><ol><li><a href="#obj">학습 목표</a></li><li><a href="#s1">1. 신호전달의 일반 원리</a></li><li><a href="#s2">2. G단백질연결수용체(GPCR)</a></li><li><a href="#s3">3. 수용체 티로신 키나아제와 Ras–MAPK</a></li><li><a href="#s4">4. PI3K–AKT–mTOR와 인슐린 신호</a></li><li><a href="#s5">5. JAK–STAT, TGF-β, Wnt, Notch, Hedgehog, NF-κB</a></li><li><a href="#s6">6. Ca²⁺ 신호, 핵수용체, 가스 신호</a></li><li><a href="#frontier">연구 최전선</a></li><li><a href="#summary">요약</a></li><li><a href="#quiz">자가 평가</a></li><li><a href="#ref">참고 문헌</a></li></ol></div></aside>
+    <article class="doc">
+<section id="obj" class="sec"><h2>학습 목표</h2><ol class="obj"><li>신호전달의 일반 원리(리간드, 수용체, 증폭, 종결, 교차대화)를 설명한다.</li><li>G단백질연결수용체(GPCR)와 cAMP·IP₃/DAG/Ca²⁺ 2차 전령, 세균 독소·약물 작용을 설명한다.</li><li>수용체 티로신 키나아제(RTK)의 Ras–MAPK, PI3K–AKT–mTOR 경로와 암 표적치료를 연결한다.</li><li>JAK–STAT, TGF-β–SMAD, Wnt, Notch, Hedgehog, NF-κB 경로의 핵심과 질환을 설명한다.</li><li>핵수용체와 가스 신호(NO)의 작용 원리를 이해한다.</li></ol></section>
+<section id="s1" class="sec"><h2><span class="sec__no">1</span>신호전달의 일반 원리</h2><ul><li>신호 양식: 내분비, 측분비, 자가분비, 접촉의존(주변분비), 시냅스.</li><li>수용체 위치: <strong>세포막</strong>(친수성 리간드: 펩타이드, 카테콜아민) vs <strong>세포 내</strong>(소수성: 스테로이드, 갑상선호르몬, 레티노산, 비타민 D).</li><li>막 수용체 4대 계열: 이온통로형, GPCR, 효소연결(RTK, 세린/트레오닌 키나아제, 사이토카인 수용체–JAK), 기타(Notch, Wnt Frizzled).</li><li>증폭: 1개 수용체 → 다수 G단백 → 다수 cAMP → 키나아제 연쇄.</li><li>종결·탈감작: GTP 가수분해(GTPase 내재·GAP), 포스파타아제, PDE, <strong>GRK 인산화 + β-아레스틴 결합 → 내재화</strong>, 수용체 하향조절.</li><li>결과: 빠른 반응(효소·통로 변화, 초–분) vs 느린 반응(유전자 발현, 시간).</li></ul></section>
+<section id="s2" class="sec"><h2><span class="sec__no">2</span>G단백질연결수용체(GPCR)</h2><p>GPCR은 7회 막관통 수용체로 인간 유전체에 약 800개가 있으며 승인 약물의 약 1/3이 표적한다. 리간드 결합 → 이종삼량체 G단백질(Gα·Gβγ)의 Gα GDP → GTP 교환 → Gα–GTP와 Gβγ가 분리되어 효과기를 조절.</p>
+<div class="tbl"><table><thead><tr><th>Gα</th><th>효과기</th><th>2차 전령</th><th>대표 수용체</th></tr></thead><tbody><tr><td>Gs</td><td>아데닐산 고리화효소 ↑</td><td>cAMP ↑ → PKA, EPAC</td><td>β₁/β₂, D₁, H₂, V₂, 글루카곤, TSH, ACTH, PTH, GLP-1</td></tr><tr><td>Gi/o</td><td>아데닐산 고리화효소 ↓; Gβγ → GIRK 개방, Ca²⁺ 통로 억제</td><td>cAMP ↓</td><td>α₂, M₂, D₂, μ-오피오이드, CB1, GABA_B, 5-HT1</td></tr><tr><td>Gq</td><td>포스포리파아제 Cβ ↑</td><td>IP₃ → ER Ca²⁺ 방출, DAG → PKC</td><td>α₁, M₁/M₃, H₁, V₁, AT₁, 5-HT2, 칼슘감지수용체(CaSR)</td></tr><tr><td>G12/13</td><td>RhoGEF</td><td>Rho–ROCK</td><td>트롬빈 수용체(PAR)</td></tr><tr><td>Gt (트랜스듀신)</td><td>cGMP PDE ↑</td><td>cGMP ↓</td><td>로돕신</td></tr><tr><td>세균 독소</td><td>표적</td><td>결과</td></tr><tr><td>콜레라 독소</td><td>Gαs ADP-리보실화 → GTP 가수분해 불가(지속 활성)</td><td>장세포 cAMP↑ → CFTR Cl⁻ 분비 → 쌀뜨물 설사</td></tr><tr><td>백일해 독소</td><td>Gαi ADP-리보실화 → 수용체와 결합 불가(불활성)</td><td>cAMP↑, 림프구증가, 인슐린 분비↑</td></tr><tr><td>탄저균 부종인자</td><td>자체가 아데닐산 고리화효소</td><td>cAMP↑, 부종</td></tr><tr><td>대장균 열불안정 독소(LT)</td><td>Gαs (콜레라 유사)</td><td>여행자 설사</td></tr></tbody></table></div>
+<ul><li><strong>편향 작용제(biased agonism)</strong>: 같은 수용체에서 G단백 경로와 β-아레스틴 경로를 선택적으로 활성화(예: 올리세리딘 μ-오피오이드).</li></ul>
+<aside class="box box--clin"><b>임상 연계</b><p><strong>맥큔-올브라이트 증후군</strong>: <em>GNAS</em> 체세포 활성 변이(Gαs R201) 모자이크 → 다골성 섬유성 이형성, 밀크커피 반점(해안선 경계), 성조숙증·갑상선항진·성장호르몬 과잉. 생식세포 <em>GNAS</em> 기능소실은 <strong>알브라이트 유전성 골이영양증</strong>(가성부갑상선기능저하증 1a; PTH 저항성, 짧은 4·5번째 중수골)으로 각인(모계 유전 시 호르몬 저항)과 연결된다.</p></aside></section>
+<section id="s3" class="sec"><h2><span class="sec__no">3</span>수용체 티로신 키나아제와 Ras–MAPK</h2><ul><li>리간드(EGF, PDGF, FGF, VEGF, 인슐린, NGF) → 수용체 이량체화 → 상호 <strong>자가인산화</strong> → 인산화 티로신이 SH2/PTB 도메인 단백질 결합 부위가 됨.</li><li><strong>Ras–MAPK</strong>: Grb2(SH2)–SOS(GEF) → <strong>Ras-GDP → Ras-GTP</strong> → RAF → MEK → ERK → 핵 전사인자(Elk-1, c-Fos, c-Myc) → 증식·분화. Ras GAP(NF1의 뉴로피브로민)이 GTP 가수분해를 촉진해 끈다.</li><li>종양유전자 변이: <em>KRAS</em> G12C/G12D/G12V(췌장암 &gt;90%, 대장암 40%, 폐선암 30%), <em>BRAF</em> V600E(흑색종 50%, 갑상선 유두암, 털세포백혈병), <em>EGFR</em> 엑손19 결실·L858R(동아시아 비흡연 폐선암), <em>HER2</em> 증폭(유방암 15–20%), <em>ALK</em>·<em>ROS1</em>·<em>RET</em>·<em>NTRK</em> 융합.</li></ul>
+<div class="tbl"><table><thead><tr><th>약물</th><th>표적</th></tr></thead><tbody><tr><td>오시머티닙 (3세대)</td><td>EGFR 감작 + T790M 내성 변이</td></tr><tr><td>트라스투주맙, 트라스투주맙 데룩스테칸</td><td>HER2 (항체·항체-약물접합체)</td></tr><tr><td>다브라페닙 + 트라메티닙</td><td>BRAF V600E + MEK</td></tr><tr><td>소토라십, 아다그라십</td><td>KRAS G12C (불활성 GDP 결합형 공유결합)</td></tr><tr><td>알렉티닙, 로라티닙</td><td>ALK</td></tr><tr><td>라로트렉티닙, 엔트렉티닙</td><td>NTRK 융합 (조직 불문 승인)</td></tr><tr><td>이마티닙</td><td>BCR-ABL, KIT, PDGFRA</td></tr></tbody></table></div>
+<ul><li><strong>라소병증(RASopathy)</strong>: 생식세포 Ras–MAPK 활성 변이 → 누난 증후군(<em>PTPN11</em>, <em>SOS1</em>, <em>RAF1</em>), 심장-안면-피부 증후군, 코스텔로(<em>HRAS</em>), 신경섬유종증 1형(<em>NF1</em>). 공통적으로 저신장, 심장 결함(폐동맥판 협착, 비대 심근병증), 특징적 얼굴. MEK 억제제 셀루메티닙이 NF1 총상 신경섬유종에 승인되었다.</li></ul></section>
+<section id="s4" class="sec"><h2><span class="sec__no">4</span>PI3K–AKT–mTOR와 인슐린 신호</h2><ul><li>RTK/IRS → <strong>PI3K</strong> → PIP₂ → <strong>PIP₃</strong> → PDK1·mTORC2가 <strong>AKT</strong> 인산화·활성 → 생존(BAD·FOXO 억제), 포도당 흡수(AS160 → GLUT4), 글리코겐 합성(GSK3 억제), 단백질 합성(TSC2 억제 → Rheb → <strong>mTORC1</strong> → S6K, 4E-BP1).</li><li><strong>PTEN</strong>(지질 포스파타아제)이 PIP₃ → PIP₂로 되돌려 경로를 끈다.</li><li>mTORC1은 성장인자(AKT–TSC), 아미노산(Rag GTPase; 류신 센서 Sestrin2, 아르기닌 센서 CASTOR1), 에너지(AMPK → TSC2·Raptor 인산화)를 통합하는 '성장 스위치'.</li></ul>
+<div class="tbl"><table><thead><tr><th>질환</th><th>유전자</th><th>소견·치료</th></tr></thead><tbody><tr><td>결절성 경화증(TSC)</td><td><em>TSC1/TSC2</em></td><td>mTORC1 과활성: 피질결절, 영아연축, 심장 횡문근종, 신장 혈관근지방종, 림프관평활근종증 → <strong>에베롤리무스·시롤리무스</strong></td></tr><tr><td>PTEN 과오종 종양 증후군</td><td><em>PTEN</em></td><td>카우든 증후군: 대두증, 유방·갑상선·자궁내막암 위험</td></tr><tr><td><em>PIK3CA</em> 관련 과성장(PROS)</td><td>체세포 <em>PIK3CA</em></td><td>비대칭 과성장, 혈관 기형 → 알펠리십</td></tr><tr><td>유방암</td><td><em>PIK3CA</em> 변이(~40% HR⁺)</td><td>알펠리십, 이나볼리십, 카피바설팁(AKT)</td></tr></tbody></table></div>
+<aside class="box box--clin"><b>임상 연계</b><p>mTOR 억제제(라파마이신 유사체)는 이식 거부 억제·약물 용출 스텐트·TSC 치료에 쓰이며, 모델 생물에서 수명 연장 효과가 가장 재현성 높게 확인된 약물이다(B04 L10).</p></aside></section>
+<section id="s5" class="sec"><h2><span class="sec__no">5</span>JAK–STAT, TGF-β, Wnt, Notch, Hedgehog, NF-κB</h2><div class="tbl"><table><thead><tr><th>경로</th><th>핵심 기전</th><th>질환·약물</th></tr></thead><tbody><tr><td><strong>JAK–STAT</strong></td><td>사이토카인 수용체 → JAK 상호 인산화 → STAT 인산화·이량체 → 핵; SOCS 음성 되먹임</td><td><em>JAK2</em> V617F: 진성적혈구증가증(~95%), 본태성 혈소판증가증·골수섬유증 → 룩솔리티닙; JAK 억제제(토파시티닙, 바리시티닙, 우파다시티닙): 류마티스관절염·아토피·원형탈모; <em>JAK3</em>/<em>IL2RG</em> 결손 SCID; <em>STAT3</em> 기능소실 고IgE 증후군</td></tr><tr><td><strong>TGF-β–SMAD</strong></td><td>TGF-β → II형 수용체가 I형(ALK5) 인산화 → R-SMAD(2/3) + SMAD4 → 핵</td><td>초기 종양 억제·후기 EMT·전이, 섬유화; 마르판(<em>FBN1</em>; TGF-β 과활성)·로이스-디츠(<em>TGFBR1/2</em>); BMP 경로 <em>ACVR1</em> R206H 진행성 골화성 섬유이형성증(FOP; 팔로바로텐), <em>BMPR2</em> 유전성 폐동맥고혈압(소타터셉트: 액티빈 신호 균형)</td></tr><tr><td><strong>Wnt/β-카테닌</strong></td><td>Wnt 없음: 파괴복합체(APC·Axin·GSK3·CK1)가 β-카테닌 인산화 → 분해 / Wnt → Frizzled·LRP5/6 → β-카테닌 안정 → 핵 TCF/LEF</td><td><em>APC</em> 결손: 가족성 선종성 용종증·산발 대장암 80%; <em>CTNNB1</em> 활성: 간모세포종; <em>LRP5</em> 기능소실 골다공증-가성신경교종, 기능획득 고골량; 스클레로스틴 항체 <strong>로모소주맙</strong></td></tr><tr><td><strong>Notch</strong></td><td>리간드(Delta/Jagged) 접촉 → ADAM·<strong>γ-세크레타아제</strong> 절단 → NICD 핵 이동 → CSL</td><td>T-ALL(<em>NOTCH1</em> 활성 &gt;50%), 알라질 증후군(<em>JAG1</em>), CADASIL(<em>NOTCH3</em>); γ-세크레타아제 억제제 니로가세스타트(데스모이드 종양)</td></tr><tr><td><strong>Hedgehog</strong></td><td>SHH → PTCH1 억제 해제 → SMO 활성 → GLI 전사</td><td>전전뇌증(<em>SHH</em>), 고린 증후군(<em>PTCH1</em>; 기저세포암·수모세포종), SMO 억제제 비스모데깁·소니데깁; 콜레스테롤 의존(SLO 증후군, B01 L07)</td></tr><tr><td><strong>NF-κB</strong></td><td>자극(TNF, IL-1, TLR) → IKK → IκB 인산화·분해 → p65/p50 핵</td><td>염증의 주조절자; 글루코코르티코이드가 억제; <em>IKBKG</em>(NEMO) 결손 색소실조증·면역결핍</td></tr></tbody></table></div>
+<aside class="box box--key"><b>핵심</b><p>같은 경로가 발생(형태 형성), 줄기세포 유지, 암에서 반복 등장한다. 생식세포 변이는 발생 증후군, 체세포 변이는 암을 일으키는 '동일 경로–다른 질환' 패턴을 기억하라.</p></aside></section>
+<section id="s6" class="sec"><h2><span class="sec__no">6</span>Ca²⁺ 신호, 핵수용체, 가스 신호</h2><ul><li><strong>Ca²⁺</strong>: 세포질 ~100 nM vs 세포외 ~1–2 mM (10,000배). 유입(전압개폐 통로, 저장소작동 Ca²⁺ 유입 <strong>STIM1–ORAI1</strong>), 방출(IP₃R, RyR), 제거(PMCA, SERCA, NCX). 센서: 칼모듈린 → CaMKII, 칼시뉴린(→ NFAT 탈인산화 → T세포 활성; 사이클로스포린·타크롤리무스 표적).</li><li><strong>핵수용체</strong>(리간드 의존 전사인자; 48종):<ul><li>I형(스테로이드: GR, MR, AR, ER, PR): 세포질에서 HSP90과 결합 → 리간드 결합 후 이량체 → 핵 → 호르몬 반응 요소(HRE).</li><li>II형(TR, RAR, VDR, PPAR, LXR, FXR): <strong>RXR과 이형이량체</strong>로 DNA에 상주, 리간드가 공동억제자 → 공동활성자 전환.</li><li>약물: 타목시펜(SERM), 엔잘루타마이드(AR), 미페프리스톤, 피오글리타존(PPARγ), 오베티콜산(FXR), 전-트랜스 레티노산(<strong>APL의 PML-RARα</strong> 분화 유도).</li></ul></li><li><strong>산화질소(NO)</strong>: 세포막 자유 확산 → 가용성 구아닐산 고리화효소의 헴에 결합 → cGMP → PKG → 평활근 이완. 리오시구앗(sGC 자극제) 폐고혈압, 베리시구앗 심부전.</li></ul>
+<aside class="box box--clin"><b>임상 연계</b><p>안드로겐 무감응 증후군(<em>AR</em> 기능소실, X연관): 46,XY이지만 완전형은 여성 외부생식기, 맹관 질, 자궁 없음(AMH 정상 작용), 사춘기 유방 발달(테스토스테론의 방향족화), 겨드랑이·음모 결여, 잠복고환(생식세포종양 위험).</p></aside></section>
+<section id="frontier" class="sec sec--frontier"><h2>연구 최전선</h2><ul><li>GPCR의 크라이오-EM 구조 폭증으로 구조 기반 약물 설계와 '알로스테릭 조절제'가 확대되었다. GLP-1 수용체 작용제(세마글루타이드)와 GIP/GLP-1(티르제파타이드), GIP/GLP-1/글루카곤 삼중 작용제(레타트루타이드)는 비만·당뇨·심혈관·신장·MASH·수면무호흡 치료를 재편하고 있다.</li><li>KRAS '불가능한 표적'의 극복: G12C 이후 G12D 억제제(MRTX1133), 범-RAS(ON) 억제제(다라삭시닙/RMC-6236)가 임상에 진입했다.</li><li>공간·단일세포 인산화체학과 광유전학적 신호 조작으로 '신호의 동역학(진동·펄스)'이 정보를 부호화한다는 개념(ERK 펄스 빈도 → 증식 결정)이 정립되었다.</li></ul></section>
+<section id="summary" class="sec sec--summary"><h2>요약</h2><ul><li>신호전달은 수용체 활성 → 증폭 → 효과기 → 종결(탈감작)의 원리를 따른다.</li><li>GPCR은 Gs(cAMP↑), Gi(cAMP↓), Gq(IP₃/DAG/Ca²⁺)로 나뉘고 콜레라·백일해 독소가 각각 Gs·Gi를 변형한다.</li><li>RTK–Ras–MAPK와 PI3K–AKT–mTOR는 증식·생존의 두 축이며 대표적 종양유전자 표적이다(EGFR, BRAF, KRAS, PIK3CA).</li><li>JAK–STAT, TGF-β, Wnt, Notch, Hedgehog, NF-κB는 발생 증후군과 암, 염증의 공통 경로이다.</li><li>핵수용체는 리간드 의존 전사인자이며 Ca²⁺–칼시뉴린–NFAT은 면역억제제의 표적이다.</li></ul></section>
+<section id="quiz" class="sec"><h2>자가 평가</h2><ol class="quiz"><li><p class="q">콜레라 독소와 백일해 독소는 모두 cAMP를 증가시킨다. 각각의 분자 기전 차이를 설명하라.</p><details><summary>해설 보기</summary><p>콜레라 독소는 Gαs를 ADP-리보실화해 내재 GTP 가수분해 활성을 없애 Gαs가 지속적으로 활성(GTP 결합) 상태에 머물게 한다. 백일해 독소는 Gαi를 ADP-리보실화해 수용체와의 결합(GDP–GTP 교환)을 막아 Gαi가 불활성 상태에 갇히므로 아데닐산 고리화효소에 대한 억제가 사라진다.</p></details></li><li><p class="q">KRAS 활성 변이 대장암에서 항EGFR 항체(세툭시맙)가 효과가 없는 이유는?</p><details><summary>해설 보기</summary><p>KRAS는 EGFR의 하류에 있으므로, KRAS가 GTP 결합형으로 지속 활성화되어 있으면 상류 EGFR을 차단해도 MAPK 신호가 계속 전달된다. 따라서 RAS 야생형(및 BRAF 야생형) 확인 후 항EGFR 치료를 선택한다.</p></details></li><li><p class="q">결절성 경화증 환자에서 에베롤리무스가 혈관근지방종·뇌실막하 거대세포 성상세포종을 줄이는 원리는?</p><details><summary>해설 보기</summary><p>TSC1/TSC2 복합체는 Rheb의 GAP으로서 mTORC1을 억제한다. TSC 결손 시 Rheb–GTP가 증가해 mTORC1이 지속 활성화되어 세포 성장·증식이 증가한다. 에베롤리무스는 FKBP12와 결합해 mTORC1을 억제하므로 과성장이 억제된다.</p></details></li><li><p class="q">진성적혈구증가증의 <em>JAK2</em> V617F 변이가 에리트로포이에틴 없이도 적혈구 생성을 증가시키는 기전과 진단적 의의는?</p><details><summary>해설 보기</summary><p>V617F는 JAK2의 자기억제 유사키나아제(JH2) 도메인 변이로 키나아제가 리간드 없이 활성화되어 EPO 수용체–STAT5 신호가 지속된다. 그 결과 혈청 EPO는 낮은데도 적혈구가 증가한다. 진성적혈구증가증의 약 95%에서 발견되어 2차성 적혈구증가증과의 감별에 핵심이다.</p></details></li></ol></section>
+<section id="ref" class="sec sec--ref"><h2>참고 문헌</h2><ul><li>Alberts B et al. <em>Molecular Biology of the Cell</em>, 7th ed. Ch. 15.</li><li>Hauser AS et al. Trends in GPCR drug discovery: new agents, targets and indications. <em>Nat Rev Drug Discov</em> 2017;16:829–842.</li><li>Hanahan D. Hallmarks of cancer: new dimensions. <em>Cancer Discov</em> 2022;12:31–46.</li><li>Liu GY, Sabatini DM. mTOR at the nexus of nutrition, growth, ageing and disease. <em>Nat Rev Mol Cell Biol</em> 2020;21:183–203.</li><li>Punekar SR et al. The current state of the art and future trends in RAS-targeted cancer therapies. <em>Nat Rev Clin Oncol</em> 2022;19:637–655.</li></ul></section>
+<nav class="pn"><a class="pn__prev" href="l01.html"><small>이전</small>막 수송, 세포소기관과 단백질 분류</a><a class="pn__next" href="l03.html"><small>다음</small>세포주기, 세포사멸과 자가포식</a></nav>
+    </article>
+  </div>
+</main>
+<footer class="foot">
+  <span>의학생화학 · 의학분자생물학 · 신경과학 강의록</span>
+  <a href="../index.html">전체 목록</a>
+</footer>
+<script src="../assets/lecture.js"></script>
+</body>
+</html>
