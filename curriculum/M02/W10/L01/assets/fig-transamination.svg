@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 400" width="820" height="400" role="img"
+     aria-label="Transamination funnels alpha-amino groups of most amino acids into glutamate using ALT and AST with pyridoxal phosphate as coenzyme">
+  <style>
+    .o { fill:#fff; stroke:#c6d2dd; stroke-width:1.8; }
+    .ok { fill:#fff5d6; stroke:#f2b705; stroke-width:2.2; }
+    .tb { font:700 13px sans-serif; fill:#003c71; }
+    .t { font:12px sans-serif; fill:#16191d; }
+    .s { font:11px sans-serif; fill:#4a5159; }
+    .ar { stroke:#003c71; stroke-width:2.2; fill:none; marker-end:url(#m2); }
+    .rev { stroke:#003c71; stroke-width:2.2; fill:none; marker-end:url(#m2); marker-start:url(#m2s); }
+  </style>
+  <defs>
+    <marker id="m2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker>
+    <marker id="m2s" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10 0 L0 5 L10 10 z" fill="#003c71"/></marker>
+  </defs>
+
+  <text class="tb" x="30" y="32">GENERAL REACTION (freely reversible, Keq near 1)</text>
+  <text class="t" x="30" y="60">amino acid 1  +  alpha-keto acid 2</text>
+  <path class="rev" d="M300 56 L372 56"/>
+  <text class="s" x="304" y="46">PLP</text>
+  <text class="t" x="382" y="60">alpha-keto acid 1  +  amino acid 2</text>
+
+  <rect class="o" x="30" y="86" width="360" height="112" rx="9"/>
+  <text class="tb" x="46" y="110">ALT (alanine aminotransferase)</text>
+  <text class="t" x="46" y="134">alanine + alpha-ketoglutarate</text>
+  <path class="rev" d="M262 130 L318 130"/>
+  <text class="t" x="46" y="158">pyruvate + GLUTAMATE</text>
+  <text class="s" x="46" y="182">liver-specific; marker of hepatocyte injury</text>
+
+  <rect class="o" x="420" y="86" width="372" height="112" rx="9"/>
+  <text class="tb" x="436" y="110">AST (aspartate aminotransferase)</text>
+  <text class="t" x="436" y="134">aspartate + alpha-ketoglutarate</text>
+  <path class="rev" d="M664 130 L720 130"/>
+  <text class="t" x="436" y="158">oxaloacetate + GLUTAMATE</text>
+  <text class="s" x="436" y="182">also in heart, muscle, kidney, erythrocyte</text>
+
+  <rect class="ok" x="270" y="226" width="280" height="68" rx="10"/>
+  <text class="tb" x="288" y="252">GLUTAMATE</text>
+  <text class="t" x="288" y="274">common collector of amino nitrogen</text>
+
+  <path class="ar" d="M210 202 L300 222"/>
+  <path class="ar" d="M606 202 L520 222"/>
+
+  <rect class="o" x="30" y="226" width="200" height="68" rx="9"/>
+  <text class="tb" x="46" y="250">PLP CYCLE</text>
+  <text class="s" x="46" y="270">pyridoxal-P to pyridoxamine-P</text>
+  <text class="s" x="46" y="288">vitamin B6 derivative</text>
+
+  <rect class="o" x="590" y="226" width="202" height="68" rx="9"/>
+  <text class="tb" x="606" y="250">EXCEPTIONS</text>
+  <text class="s" x="606" y="270">lysine and threonine are</text>
+  <text class="s" x="606" y="288">not transaminated</text>
+
+  <path class="ar" d="M410 298 L410 334"/>
+  <rect class="o" x="190" y="338" width="440" height="50" rx="9"/>
+  <text class="t" x="206" y="360">To mitochondrial matrix: oxidative deamination by glutamate dehydrogenase,</text>
+  <text class="t" x="206" y="378">or amidation by glutamine synthetase for transport in blood.</text>
+</svg>

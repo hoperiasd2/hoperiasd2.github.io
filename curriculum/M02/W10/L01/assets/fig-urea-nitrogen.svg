@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 360" width="800" height="360" role="img"
+     aria-label="Origin of the two nitrogen atoms and the carbon atom of urea and the ATP accounting of one turn of the urea cycle">
+  <style>
+    .o { fill:#fff; stroke:#c6d2dd; stroke-width:1.8; }
+    .ok { fill:#fff5d6; stroke:#f2b705; stroke-width:2.2; }
+    .tb { font:700 13px sans-serif; fill:#003c71; }
+    .t { font:12px sans-serif; fill:#16191d; }
+    .s { font:11px sans-serif; fill:#4a5159; }
+    .ar { stroke:#003c71; stroke-width:2.4; fill:none; marker-end:url(#m2); }
+  </style>
+  <defs>
+    <marker id="m2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker>
+  </defs>
+
+  <rect class="o" x="24" y="36" width="250" height="76" rx="9"/>
+  <text class="tb" x="40" y="60">NITROGEN 1</text>
+  <text class="t" x="40" y="82">free NH3, via CPS I</text>
+  <text class="s" x="40" y="102">from GDH and from glutaminase</text>
+
+  <rect class="o" x="24" y="132" width="250" height="76" rx="9"/>
+  <text class="tb" x="40" y="156">NITROGEN 2</text>
+  <text class="t" x="40" y="178">amino group of ASPARTATE</text>
+  <text class="s" x="40" y="198">supplied by AST from glutamate</text>
+
+  <rect class="o" x="24" y="228" width="250" height="76" rx="9"/>
+  <text class="tb" x="40" y="252">CARBON</text>
+  <text class="t" x="40" y="274">HCO3- (from CO2)</text>
+  <text class="s" x="40" y="294">not from the amino acid skeleton</text>
+
+  <rect class="ok" x="330" y="120" width="190" height="100" rx="12"/>
+  <text class="tb" x="352" y="150">UREA</text>
+  <text class="t" x="352" y="176">H2N-CO-NH2</text>
+  <text class="s" x="352" y="200">Mr 60, highly water soluble</text>
+
+  <path class="ar" d="M278 74 L324 142"/>
+  <path class="ar" d="M278 170 L324 170"/>
+  <path class="ar" d="M278 266 L324 198"/>
+
+  <rect class="o" x="566" y="36" width="212" height="128" rx="9"/>
+  <text class="tb" x="582" y="60">ATP ACCOUNTING</text>
+  <text class="t" x="582" y="84">CPS I: 2 ATP to 2 ADP</text>
+  <text class="t" x="582" y="104">ASS1: 1 ATP to AMP + PPi</text>
+  <text class="s" x="582" y="124">AMP needs 2 bonds to restore</text>
+  <text class="t" x="582" y="150">total 4 ATP equivalents</text>
+
+  <rect class="o" x="566" y="184" width="212" height="120" rx="9"/>
+  <text class="tb" x="582" y="208">PARTIAL RECOVERY</text>
+  <text class="t" x="582" y="230">fumarate to malate to</text>
+  <text class="t" x="582" y="250">oxaloacetate yields NADH</text>
+  <text class="s" x="582" y="272">about 2.5 ATP, so the net cost</text>
+  <text class="s" x="582" y="290">of disposing of 2 N is modest</text>
+
+  <path class="ar" d="M524 170 L562 120"/>
+  <path class="ar" d="M524 180 L562 230"/>
+
+  <rect class="o" x="330" y="248" width="190" height="56" rx="9"/>
+  <text class="t" x="346" y="270">Blood urea nitrogen</text>
+  <text class="t" x="346" y="290">7-20 mg/dL</text>
+  <path class="ar" d="M425 224 L425 244"/>
+</svg>

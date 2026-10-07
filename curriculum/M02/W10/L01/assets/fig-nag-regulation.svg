@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 400" width="820" height="400" role="img"
+     aria-label="Regulation of carbamoyl phosphate synthetase I by N-acetylglutamate, whose synthase is activated by arginine, together with long-term induction of urea cycle enzymes by dietary protein">
+  <style>
+    .o { fill:#fff; stroke:#c6d2dd; stroke-width:1.8; }
+    .ok { fill:#fff5d6; stroke:#f2b705; stroke-width:2.2; }
+    .tb { font:700 13px sans-serif; fill:#003c71; }
+    .t { font:12px sans-serif; fill:#16191d; }
+    .s { font:11px sans-serif; fill:#4a5159; }
+    .ar { stroke:#003c71; stroke-width:2.4; fill:none; marker-end:url(#m2); }
+    .act { stroke:#9a6700; stroke-width:2.4; fill:none; marker-end:url(#m3); }
+  </style>
+  <defs>
+    <marker id="m2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker>
+    <marker id="m3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#9a6700"/></marker>
+  </defs>
+
+  <rect class="o" x="26" y="40" width="226" height="92" rx="10"/>
+  <text class="tb" x="42" y="64">HIGH PROTEIN MEAL</text>
+  <text class="t" x="42" y="86">or net protein breakdown</text>
+  <text class="s" x="42" y="108">amino acid load reaches the liver</text>
+
+  <rect class="o" x="26" y="168" width="226" height="92" rx="10"/>
+  <text class="tb" x="42" y="192">GLUTAMATE  +  ARGININE</text>
+  <text class="t" x="42" y="214">both rise in the hepatocyte</text>
+  <text class="s" x="42" y="236">glutamate is substrate, arginine is signal</text>
+  <path class="ar" d="M139 136 L139 164"/>
+
+  <rect class="o" x="306" y="150" width="226" height="128" rx="10"/>
+  <text class="tb" x="322" y="174">NAGS</text>
+  <text class="s" x="322" y="192">N-acetylglutamate synthase</text>
+  <text class="t" x="322" y="216">acetyl-CoA + glutamate</text>
+  <text class="t" x="322" y="238">to N-ACETYLGLUTAMATE</text>
+  <text class="s" x="322" y="260">arginine is an allosteric activator</text>
+  <path class="ar" d="M256 214 L302 214"/>
+  <path class="act" d="M170 186 L300 160"/>
+
+  <rect class="ok" x="586" y="130" width="212" height="150" rx="10"/>
+  <text class="tb" x="602" y="154">CPS I</text>
+  <text class="s" x="602" y="172">mitochondrial matrix</text>
+  <text class="t" x="602" y="198">obligatory allosteric</text>
+  <text class="t" x="602" y="218">activator: NAG</text>
+  <text class="s" x="602" y="242">no NAG, no activity at all</text>
+  <text class="s" x="602" y="262">rate-limiting step of the cycle</text>
+  <path class="act" d="M536 214 L582 206"/>
+
+  <rect class="o" x="306" y="306" width="492" height="76" rx="10"/>
+  <text class="tb" x="322" y="330">LONG-TERM (transcriptional) CONTROL</text>
+  <text class="t" x="322" y="352">All five enzymes plus NAGS are induced 10-20 fold by a high protein diet</text>
+  <text class="t" x="322" y="372">and by prolonged starvation, when body protein is the fuel.</text>
+  <path class="ar" d="M139 264 L139 344 L302 344"/>
+
+  <rect class="o" x="26" y="306" width="226" height="76" rx="10"/>
+  <text class="tb" x="42" y="330">TIME SCALE</text>
+  <text class="s" x="42" y="350">allosteric: minutes</text>
+  <text class="s" x="42" y="370">transcriptional: days</text>
+</svg>

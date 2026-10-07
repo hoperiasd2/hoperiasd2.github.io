@@ -331,7 +331,7 @@ def lesson_html(row, meta, named, lists, secs, quiz, prev_r, next_r, lesson_dir=
     <a class="brand" href="{up}index.html">의생명과학 교육과정</a>
     <nav>
       <a href="{up}curriculum/index.html">전체 수업</a>
-      <a href="{up}curriculum/M07/index.html">실습</a>
+      <a href="{up}curriculum/materials.html">자료 내려받기</a>
       <a href="{up}archive/index.html">아카이브</a>
     </nav>
   </div>

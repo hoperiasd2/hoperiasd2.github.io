@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 440" width="900" height="440" role="img"
+     aria-label="Histone tail modifications: acetylation, methylation, phosphorylation and ubiquitination on H3 and H4 tails, with the transcriptional consequence of each mark">
+  <style>
+    .ttl{font:700 14px sans-serif;fill:#003c71}
+    .nm{font:700 12px sans-serif;fill:#003c71}
+    .sub{font:11px sans-serif;fill:#4a5159}
+    .core{fill:#003c71;stroke:#16191d;stroke-width:1.2}
+    .cl{font:700 11px sans-serif;fill:#ffffff}
+    .tail{stroke:#16191d;stroke-width:2;fill:none}
+    .ac{fill:#f2b705;stroke:#16191d;stroke-width:1}
+    .me{fill:#ffffff;stroke:#003c71;stroke-width:1.4}
+    .ph{fill:#4a5159;stroke:#16191d;stroke-width:1}
+    .ub{fill:#fff5d6;stroke:#003c71;stroke-width:1.3}
+    .mk{font:700 9px sans-serif;fill:#16191d}
+    .mkw{font:700 9px sans-serif;fill:#ffffff}
+    .bx{fill:#ffffff;stroke:#c6d2dd;stroke-width:1.3}
+    .hl{fill:#fff5d6;stroke:#003c71;stroke-width:1.3}
+    .out{font:700 11px sans-serif;fill:#8a6300}
+  </style>
+  <text class="ttl" x="20" y="24">A. Nucleosome and the histone tails that carry the marks</text>
+  <ellipse class="core" cx="250" cy="130" rx="92" ry="62"/>
+  <text class="cl" x="196" y="126">histone octamer</text>
+  <text class="cl" x="206" y="146">H2A H2B H3 H4</text>
+  <path class="tail" d="M158 96 C120 70 100 62 62 58"/>
+  <path class="tail" d="M158 164 C120 190 100 198 62 202"/>
+  <path class="tail" d="M342 96 C380 70 400 62 438 58"/>
+  <path class="tail" d="M342 164 C380 190 400 198 438 202"/>
+  <text class="nm" x="36" y="46">H3 tail</text>
+  <text class="nm" x="36" y="222">H4 tail</text>
+  <text class="nm" x="430" y="46">H3 tail</text>
+  <text class="nm" x="430" y="222">H2B tail</text>
+  <circle class="ac" cx="112" cy="70" r="9"/><text class="mk" x="106" y="74">Ac</text>
+  <circle class="me" cx="84" cy="62" r="9"/><text class="mk" x="78" y="66">Me</text>
+  <circle class="ac" cx="112" cy="192" r="9"/><text class="mk" x="106" y="196">Ac</text>
+  <circle class="ph" cx="392" cy="70" r="9"/><text class="mkw" x="387" y="74">P</text>
+  <circle class="ub" cx="396" cy="192" r="10"/><text class="mk" x="389" y="196">Ub</text>
+  <text class="sub" x="150" y="214">lysine-rich tails protrude from the core and are the substrate of all four modifications</text>
+
+  <text class="ttl" x="20" y="268">B. What each mark does</text>
+  <rect class="hl" x="20" y="282" width="420" height="140" rx="8"/>
+  <text class="nm" x="34" y="304">Acetylation of lysine (H3K9ac, H3K27ac)</text>
+  <text class="sub" x="34" y="324">neutralizes the positive charge of lysine, loosens the</text>
+  <text class="sub" x="34" y="342">histone-DNA contact. Always permissive for transcription.</text>
+  <text class="nm" x="34" y="368">Phosphorylation of serine (H3S10ph)</text>
+  <text class="sub" x="34" y="388">adds negative charge; mitotic condensation and</text>
+  <text class="sub" x="34" y="406">immediate-early gene induction.</text>
+  <rect class="bx" x="460" y="282" width="420" height="140" rx="8"/>
+  <text class="nm" x="474" y="304">Methylation of lysine or arginine</text>
+  <text class="sub" x="474" y="324">charge is unchanged, so the effect depends on position:</text>
+  <text class="sub" x="474" y="342">H3K4me3 active promoter; H3K36me3 active body;</text>
+  <text class="sub" x="474" y="360">H3K9me3 and H3K27me3 repressed.</text>
+  <text class="nm" x="474" y="386">Ubiquitination (H2BK120ub, H2AK119ub)</text>
+  <text class="sub" x="474" y="406">bulky mark; H2BK120ub supports elongation, H2AK119ub represses.</text>
+  <text class="out" x="20" y="256">acetylation acts through charge; methylation acts through the reader it attracts</text>
+</svg>

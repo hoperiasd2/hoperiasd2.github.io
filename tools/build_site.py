@@ -78,8 +78,9 @@ def page(title, body, depth, desc="", extra_head=""):
     <a class="brand" href="{up}index.html">의생명과학 교육과정</a>
     <nav>
       <a href="{up}curriculum/index.html">전체 수업</a>
+      <a href="{up}curriculum/materials.html">자료 내려받기</a>
       <a href="{up}curriculum/M07/index.html">실습</a>
-      <a href="{up}archive/lectures/index.html">강의록 아카이브</a>
+      <a href="{up}archive/index.html">아카이브</a>
     </nav>
   </div>
 </header>
@@ -166,6 +167,10 @@ def build_root(mods, force):
   <div class="callout">
     <b><a href="curriculum/index.html">전체 수업 인덱스</a></b> — {total}개 수업을 구성요소·주차·키워드로 걸러 찾고
     제작 상태와 슬라이드 내려받기를 한 화면에서 확인한다.
+  </div>
+  <div class="callout">
+    <b><a href="curriculum/materials.html">자료 내려받기</a></b> — 수업 슬라이드와 기존 강의·실습 자료를
+    한곳에서 받는다. 현재 147개 파일.
   </div>
   <div class="callout">
     <b><a href="archive/lectures/index.html">강의록 아카이브</a></b> — 이전에 제작한 10묶음 123강.

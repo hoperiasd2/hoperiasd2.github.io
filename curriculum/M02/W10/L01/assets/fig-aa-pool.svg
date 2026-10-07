@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 430" width="820" height="430" role="img"
+     aria-label="Free amino acid pool with inputs from dietary protein, body protein degradation and de novo synthesis, and outputs to protein synthesis, nitrogen-containing products, and carbon skeletons, with nitrogen leaving as urea">
+  <style>
+    .o { fill:#fff; stroke:#c6d2dd; stroke-width:1.8; }
+    .ok { fill:#fff5d6; stroke:#f2b705; stroke-width:2.2; }
+    .tb { font:700 13px sans-serif; fill:#003c71; }
+    .t { font:12px sans-serif; fill:#16191d; }
+    .s { font:11px sans-serif; fill:#4a5159; }
+    .ar { stroke:#003c71; stroke-width:2.4; fill:none; marker-end:url(#m2); }
+    .arg { stroke:#9a6700; stroke-width:2.4; fill:none; marker-end:url(#m3); }
+  </style>
+  <defs>
+    <marker id="m2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker>
+    <marker id="m3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#9a6700"/></marker>
+  </defs>
+
+  <rect class="ok" x="290" y="170" width="240" height="90" rx="12"/>
+  <text class="tb" x="310" y="198">FREE AMINO ACID POOL</text>
+  <text class="t" x="310" y="220">about 100 g, 20 amino acids</text>
+  <text class="s" x="310" y="240">no storage form; all pathways share it</text>
+
+  <rect class="o" x="30" y="40" width="210" height="58" rx="9"/>
+  <text class="tb" x="46" y="64">DIETARY PROTEIN</text>
+  <text class="t" x="46" y="84">70-100 g / day</text>
+
+  <rect class="o" x="30" y="128" width="210" height="76" rx="9"/>
+  <text class="tb" x="46" y="152">BODY PROTEIN</text>
+  <text class="t" x="46" y="172">about 12 kg, turnover</text>
+  <text class="t" x="46" y="190">300-400 g / day</text>
+
+  <rect class="o" x="30" y="234" width="210" height="76" rx="9"/>
+  <text class="tb" x="46" y="258">DE NOVO SYNTHESIS</text>
+  <text class="t" x="46" y="278">11 non-essential</text>
+  <text class="t" x="46" y="296">amino acids only</text>
+
+  <path class="ar" d="M244 76 L270 76 L270 196 L286 196"/>
+  <path class="ar" d="M244 166 L286 196"/>
+  <path class="ar" d="M244 272 L270 272 L270 226 L286 226"/>
+
+  <rect class="o" x="586" y="36" width="206" height="64" rx="9"/>
+  <text class="tb" x="602" y="60">PROTEIN SYNTHESIS</text>
+  <text class="s" x="602" y="80">300-400 g / day, re-enters pool</text>
+
+  <rect class="o" x="586" y="118" width="206" height="76" rx="9"/>
+  <text class="tb" x="602" y="142">NITROGEN PRODUCTS</text>
+  <text class="t" x="602" y="162">heme, purine, creatine,</text>
+  <text class="t" x="602" y="180">neurotransmitters</text>
+
+  <rect class="o" x="586" y="212" width="206" height="76" rx="9"/>
+  <text class="tb" x="602" y="236">CARBON SKELETON</text>
+  <text class="t" x="602" y="256">glucose, ketone bodies,</text>
+  <text class="t" x="602" y="274">TCA cycle, CO2 + H2O</text>
+
+  <path class="ar" d="M534 196 L560 196 L560 68 L582 68"/>
+  <path class="ar" d="M534 196 L560 196 L560 156 L582 156"/>
+  <path class="ar" d="M534 214 L560 214 L560 250 L582 250"/>
+
+  <rect class="ok" x="586" y="306" width="206" height="76" rx="9"/>
+  <text class="tb" x="602" y="330">UREA, urine</text>
+  <text class="t" x="602" y="350">10-20 g N / day</text>
+  <text class="s" x="602" y="368">80-90% of urinary nitrogen</text>
+
+  <path class="arg" d="M410 264 L410 344 L582 344"/>
+  <text class="s" x="300" y="300">alpha-amino nitrogen</text>
+  <text class="s" x="300" y="318">removed first</text>
+
+  <rect class="o" x="30" y="344" width="420" height="56" rx="9"/>
+  <text class="t" x="46" y="366">Nitrogen balance: intake N = output N in a healthy adult.</text>
+  <text class="s" x="46" y="386">Negative balance in sepsis, trauma, starvation; positive in growth and recovery.</text>
+</svg>

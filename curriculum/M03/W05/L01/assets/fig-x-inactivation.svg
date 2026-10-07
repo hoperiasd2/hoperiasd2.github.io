@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 400" width="900" height="400" role="img"
+     aria-label="X chromosome inactivation: XIST RNA coating of one X, spread of repressive marks, formation of the Barr body and the resulting mosaicism">
+  <style>
+    .ttl{font:700 14px sans-serif;fill:#003c71}
+    .nm{font:700 12px sans-serif;fill:#003c71}
+    .sub{font:11px sans-serif;fill:#4a5159}
+    .x{fill:#ffffff;stroke:#16191d;stroke-width:1.8}
+    .xi{fill:#003c71;stroke:#16191d;stroke-width:1.6}
+    .rna{stroke:#f2b705;stroke-width:2.4;fill:none}
+    .ln{stroke:#003c71;stroke-width:1.7;fill:none}
+    .cell{fill:#ffffff;stroke:#c6d2dd;stroke-width:1.4}
+    .cellp{fill:#fff5d6;stroke:#003c71;stroke-width:1.4}
+    .gl{font:700 10px sans-serif;fill:#16191d}
+    .out{font:700 11px sans-serif;fill:#8a6300}
+  </style>
+  <defs>
+    <marker id="c1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#003c71"/>
+    </marker>
+  </defs>
+  <text class="ttl" x="20" y="24">A. One of the two X chromosomes is silenced in each female cell</text>
+  <path class="x" d="M70 50 L110 110 M110 50 L70 110"/>
+  <path class="x" d="M160 50 L200 110 M200 50 L160 110"/>
+  <text class="gl" x="64" y="130">X (mat)</text>
+  <text class="gl" x="156" y="130">X (pat)</text>
+  <text class="sub" x="56" y="152">random choice in the early embryo</text>
+  <path class="ln" d="M240 80 L300 80" marker-end="url(#c1)"/>
+  <text class="sub" x="236" y="68">XIST on</text>
+  <text class="sub" x="236" y="104">one allele</text>
+
+  <path class="x" d="M340 50 L380 110 M380 50 L340 110"/>
+  <text class="gl" x="336" y="130">active X</text>
+  <path class="xi" d="M440 50 L480 110 M480 50 L440 110"/>
+  <ellipse class="rna" cx="460" cy="80" rx="34" ry="44"/>
+  <text class="gl" x="500" y="66">XIST lncRNA, 17 kb,</text>
+  <text class="gl" x="500" y="84">coats the chromosome</text>
+  <text class="gl" x="500" y="102">in cis</text>
+  <path class="ln" d="M700 80 L760 80" marker-end="url(#c1)"/>
+  <path class="xi" d="M790 50 L830 110 M830 50 L790 110"/>
+  <text class="gl" x="776" y="130">Barr body</text>
+
+  <text class="ttl" x="20" y="200">B. The silencing cascade</text>
+  <rect class="cellp" x="30" y="214" width="150" height="54" rx="6"/>
+  <text class="sub" x="42" y="236">XIST RNA spreads</text>
+  <text class="sub" x="42" y="254">along the chromosome</text>
+  <path class="ln" d="M186 241 L222 241" marker-end="url(#c1)"/>
+  <rect class="cell" x="228" y="214" width="150" height="54" rx="6"/>
+  <text class="sub" x="240" y="236">PRC2 recruited,</text>
+  <text class="sub" x="240" y="254">H3K27me3 deposited</text>
+  <path class="ln" d="M384 241 L420 241" marker-end="url(#c1)"/>
+  <rect class="cell" x="426" y="214" width="160" height="54" rx="6"/>
+  <text class="sub" x="438" y="236">histone deacetylation,</text>
+  <text class="sub" x="438" y="254">macroH2A loading</text>
+  <path class="ln" d="M592 241 L628 241" marker-end="url(#c1)"/>
+  <rect class="cellp" x="634" y="214" width="180" height="54" rx="6"/>
+  <text class="sub" x="646" y="236">CpG island methylation</text>
+  <text class="sub" x="646" y="254">locks the state heritably</text>
+
+  <text class="ttl" x="20" y="316">C. The consequence is mosaicism</text>
+  <circle class="cell" cx="80" cy="356" r="24"/><text class="gl" x="64" y="360">mat on</text>
+  <circle class="cellp" cx="140" cy="356" r="24"/><text class="gl" x="126" y="360">pat on</text>
+  <circle class="cellp" cx="200" cy="356" r="24"/><text class="gl" x="186" y="360">pat on</text>
+  <circle class="cell" cx="260" cy="356" r="24"/><text class="gl" x="244" y="360">mat on</text>
+  <text class="out" x="310" y="344">A heterozygous female is a mixture of two cell populations.</text>
+  <text class="sub" x="310" y="366">Skewed inactivation explains why some carriers of X-linked disease are affected</text>
+  <text class="sub" x="310" y="386">and why monozygotic twin carriers can differ. Genes in the pseudoautosomal region escape.</text>
+</svg>

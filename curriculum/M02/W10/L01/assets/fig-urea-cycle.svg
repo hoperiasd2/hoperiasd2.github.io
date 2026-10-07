@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 500" width="860" height="500" role="img"
+     aria-label="The five reactions of the urea cycle with their compartments, the ORNT1 transporter, the aspartate-argininosuccinate shunt and ATP costs">
+  <style>
+    .o { fill:#fff; stroke:#c6d2dd; stroke-width:1.8; }
+    .ok { fill:#fff5d6; stroke:#f2b705; stroke-width:2.2; }
+    .mito { fill:#eff4f8; stroke:#003c71; stroke-width:2; stroke-dasharray:7 5; }
+    .tb { font:700 13px sans-serif; fill:#003c71; }
+    .t { font:12px sans-serif; fill:#16191d; }
+    .s { font:11px sans-serif; fill:#4a5159; }
+    .ar { stroke:#003c71; stroke-width:2.4; fill:none; marker-end:url(#m2); }
+    .arg { stroke:#9a6700; stroke-width:2.2; fill:none; marker-end:url(#m3); }
+  </style>
+  <defs>
+    <marker id="m2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker>
+    <marker id="m3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#9a6700"/></marker>
+  </defs>
+
+  <rect class="mito" x="20" y="34" width="350" height="440" rx="14"/>
+  <text class="tb" x="38" y="58">MITOCHONDRIAL MATRIX</text>
+  <rect class="o" x="396" y="34" width="444" height="440" rx="14" stroke="#c6d2dd"/>
+  <text class="tb" x="414" y="58">CYTOSOL</text>
+
+  <rect class="ok" x="40" y="76" width="310" height="104" rx="10"/>
+  <text class="tb" x="56" y="100">1. CPS I  (carbamoyl phosphate synthetase I)</text>
+  <text class="t" x="56" y="122">NH3 + HCO3- + 2 ATP</text>
+  <text class="t" x="56" y="142">to carbamoyl phosphate + 2 ADP + Pi</text>
+  <text class="s" x="56" y="164">rate-limiting step; needs N-acetylglutamate</text>
+
+  <rect class="o" x="40" y="206" width="310" height="86" rx="10"/>
+  <text class="tb" x="56" y="230">2. OTC  (ornithine transcarbamylase)</text>
+  <text class="t" x="56" y="252">carbamoyl phosphate + ORNITHINE</text>
+  <text class="t" x="56" y="272">to CITRULLINE + Pi</text>
+  <path class="ar" d="M195 184 L195 202"/>
+
+  <rect class="o" x="420" y="92" width="400" height="92" rx="10"/>
+  <text class="tb" x="436" y="116">3. Argininosuccinate synthetase (ASS1)</text>
+  <text class="t" x="436" y="138">CITRULLINE + ASPARTATE + ATP</text>
+  <text class="t" x="436" y="158">to ARGININOSUCCINATE + AMP + PPi</text>
+  <text class="s" x="436" y="178">second nitrogen enters here; costs 2 ATP equivalents</text>
+
+  <rect class="o" x="420" y="210" width="400" height="86" rx="10"/>
+  <text class="tb" x="436" y="234">4. Argininosuccinate lyase (ASL)</text>
+  <text class="t" x="436" y="256">ARGININOSUCCINATE</text>
+  <text class="t" x="436" y="276">to ARGININE + FUMARATE</text>
+  <path class="ar" d="M620 188 L620 206"/>
+
+  <rect class="o" x="420" y="322" width="400" height="86" rx="10"/>
+  <text class="tb" x="436" y="346">5. Arginase I  (liver only)</text>
+  <text class="t" x="436" y="368">ARGININE + H2O</text>
+  <text class="t" x="436" y="388">to UREA + ORNITHINE</text>
+  <path class="ar" d="M620 300 L620 318"/>
+
+  <rect class="o" x="40" y="320" width="310" height="86" rx="10"/>
+  <text class="tb" x="56" y="344">ORNT1  (SLC25A15) antiporter</text>
+  <text class="t" x="56" y="366">ornithine in, citrulline out</text>
+  <text class="s" x="56" y="388">links the two compartments</text>
+
+  <path class="ar" d="M280 296 L280 310 L300 310 L300 318"/>
+  <text class="s" x="206" y="310">citrulline exits</text>
+  <path class="ar" d="M416 364 L390 364 L390 350 L354 350"/>
+  <path class="ar" d="M120 318 L120 296"/>
+  <text class="s" x="56" y="312">ornithine returns</text>
+
+  <rect class="ok" x="420" y="426" width="400" height="36" rx="8"/>
+  <text class="t" x="436" y="450">UREA: 2 N, 1 C from HCO3-; to blood, then urine</text>
+
+  <path class="arg" d="M740 300 L770 300 L770 316"/>
+  <text class="s" x="610" y="314">fumarate to malate to oxaloacetate to aspartate</text>
+  <rect class="o" x="40" y="426" width="310" height="36" rx="8"/>
+  <text class="t" x="56" y="450">Net cost: 4 ATP equivalents per urea</text>
+</svg>

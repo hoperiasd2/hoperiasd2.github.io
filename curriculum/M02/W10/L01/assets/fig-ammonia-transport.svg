@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 440" width="840" height="440" role="img"
+     aria-label="Transport of ammonia nitrogen from peripheral tissues to the liver as glutamine and as alanine, with renal glutaminase generating ammonium for acid excretion">
+  <style>
+    .o { fill:#fff; stroke:#c6d2dd; stroke-width:1.8; }
+    .ok { fill:#fff5d6; stroke:#f2b705; stroke-width:2.2; }
+    .tb { font:700 13px sans-serif; fill:#003c71; }
+    .t { font:12px sans-serif; fill:#16191d; }
+    .s { font:11px sans-serif; fill:#4a5159; }
+    .ar { stroke:#003c71; stroke-width:2.4; fill:none; marker-end:url(#m2); }
+    .arg { stroke:#9a6700; stroke-width:2.4; fill:none; marker-end:url(#m3); }
+  </style>
+  <defs>
+    <marker id="m2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker>
+    <marker id="m3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#9a6700"/></marker>
+  </defs>
+
+  <rect class="o" x="24" y="40" width="226" height="130" rx="10"/>
+  <text class="tb" x="40" y="64">MUSCLE, BRAIN, MOST TISSUES</text>
+  <text class="t" x="40" y="88">glutamate + NH3 + ATP</text>
+  <path class="ar" d="M40 98 L40 112"/>
+  <text class="s" x="54" y="110">glutamine synthetase</text>
+  <text class="t" x="40" y="130">GLUTAMINE  (2 N per molecule)</text>
+  <text class="s" x="40" y="152">non-toxic, neutral, high plasma level</text>
+
+  <rect class="o" x="24" y="206" width="226" height="118" rx="10"/>
+  <text class="tb" x="40" y="230">SKELETAL MUSCLE</text>
+  <text class="t" x="40" y="254">pyruvate + glutamate</text>
+  <path class="ar" d="M40 264 L40 278"/>
+  <text class="s" x="54" y="276">ALT</text>
+  <text class="t" x="40" y="296">ALANINE  (1 N per molecule)</text>
+  <text class="s" x="40" y="316">carries nitrogen and carbon together</text>
+
+  <rect class="ok" x="356" y="96" width="222" height="170" rx="12"/>
+  <text class="tb" x="372" y="122">LIVER (periportal)</text>
+  <text class="t" x="372" y="146">glutaminase: Gln to Glu + NH3</text>
+  <text class="t" x="372" y="166">GDH: Glu to aKG + NH3</text>
+  <text class="t" x="372" y="186">ALT: Ala to pyruvate + Glu</text>
+  <text class="s" x="372" y="208">pyruvate enters gluconeogenesis</text>
+  <text class="tb" x="372" y="236">UREA CYCLE</text>
+  <text class="s" x="372" y="256">only site of urea synthesis</text>
+
+  <path class="ar" d="M254 110 L352 130"/>
+  <text class="s" x="266" y="98">portal and systemic blood</text>
+  <path class="ar" d="M254 270 L352 222"/>
+  <path class="arg" d="M372 268 L300 300 L254 290"/>
+  <text class="s" x="282" y="330">glucose back to muscle</text>
+
+  <rect class="o" x="356" y="300" width="222" height="112" rx="10"/>
+  <text class="tb" x="372" y="324">GUT (enterocyte, bacteria)</text>
+  <text class="t" x="372" y="346">glutamine oxidation</text>
+  <text class="t" x="372" y="366">bacterial urease on urea</text>
+  <text class="s" x="372" y="388">NH3 enters the portal vein</text>
+  <path class="ar" d="M466 296 L466 272"/>
+
+  <rect class="o" x="620" y="96" width="196" height="150" rx="10"/>
+  <text class="tb" x="636" y="120">KIDNEY</text>
+  <text class="t" x="636" y="144">glutaminase, glutamate</text>
+  <text class="t" x="636" y="164">dehydrogenase</text>
+  <text class="t" x="636" y="186">NH3 + H+ to NH4+</text>
+  <text class="s" x="636" y="208">excreted in urine; disposes of</text>
+  <text class="s" x="636" y="226">protons in metabolic acidosis</text>
+  <path class="ar" d="M582 150 L616 150"/>
+
+  <rect class="o" x="620" y="276" width="196" height="92" rx="10"/>
+  <text class="tb" x="636" y="300">PLASMA AMMONIA</text>
+  <text class="t" x="636" y="322">normal adult</text>
+  <text class="t" x="636" y="342">11-32 micromol/L</text>
+  <text class="s" x="636" y="360">free NH3 is always kept low</text>
+</svg>
