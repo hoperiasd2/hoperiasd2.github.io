@@ -180,9 +180,9 @@ def render_blocks(blocks):
                          for r in rest)
             out.append(f'<div class="tw"><table><thead><tr>{th}</tr></thead><tbody>{tr}</tbody></table></div>')
         elif kind == "limit":
-            out.append('<div class="box box--limit"><b>조건과 한계</b> ' + _inline(buf[0]) + "</div>")
+            out.append('<div class="box box--limit"><b>임상 연계</b> ' + _inline(buf[0]) + "</div>")
         elif kind == "result":
-            out.append('<div class="box box--result"><b>귀결</b> ' + _inline(buf[0]) + "</div>")
+            out.append('<div class="box box--result"><b>핵심 정리</b> ' + _inline(buf[0]) + "</div>")
     return "\n  ".join(out)
 
 
@@ -230,9 +230,9 @@ def lesson_html(row, meta, named, lists, secs, quiz, prev_r, next_r):
 
     if secs:
         toc = "".join(
-            f'<li><a href="#s{i+1}">{_inline(s.question or s.title)}</a></li>'
+            f'<li><a href="#s{i+1}">{_inline(s.title)}</a></li>'
             for i, s in enumerate(secs))
-        label = "이 실습이 답하는 질문" if practicum else "이 수업이 답하는 질문"
+        label = "실습 구성" if practicum else "강의 구성"
         body.append(f'  <h2>{label}</h2>\n  <ol class="qlist">{toc}</ol>')
 
     if practicum and lists.get("materials"):
@@ -539,7 +539,7 @@ class Deck:
             p = tf.paragraphs[0]
             p.alignment = PP_ALIGN.LEFT
             r = p.add_run()
-            r.text = ("조건과 한계   " if kind == "limit" else "귀결   ")
+            r.text = ("임상 연계   " if kind == "limit" else "핵심 정리   ")
             set_font(r, 12, bold=True, color=NAVY if kind == "limit" else RGBColor(0x8A, 0x63, 0x00))
             add_rich(p, t, fs, color=INK)
             y += h + Inches(0.15)
@@ -576,8 +576,7 @@ def build_deck(row, meta, lists, secs, quiz, out):
     if row["kind"] == "practicum" and lists.get("materials"):
         d.bullets("준비물·시약·장비", lists["materials"], kicker="SETUP")
     if secs:
-        d.bullets("이 수업이 답하는 질문", [s.question or s.title for s in secs],
-                  kicker="OUTLINE", numbered=True)
+        d.bullets("강의 구성", [s.title for s in secs], kicker="OUTLINE", numbered=True)
     for i, sec in enumerate(secs, 1):
         if sec.question and sec.answer:
             d.qa(i, sec)
