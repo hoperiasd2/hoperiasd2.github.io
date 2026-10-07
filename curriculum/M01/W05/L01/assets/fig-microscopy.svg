@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 380" width="860" height="380" role="img"
+     aria-label="Logarithmic size scale of biological objects compared with the resolution limits of light, fluorescence, super-resolution and electron microscopy">
+  <style>
+    .ttl{font:700 15px sans-serif;fill:#003c71}
+    .sub{font:11.5px sans-serif;fill:#4a5159}
+    .lab{font:700 12px sans-serif;fill:#16191d}
+    .ax{stroke:#16191d;stroke-width:2.4}
+    .tick{stroke:#16191d;stroke-width:1.6}
+    .bar{stroke-width:12;stroke-linecap:butt;fill:none}
+    .box{fill:#fff5d6;stroke:#f2b705;stroke-width:1.6}
+    .lead{stroke:#4a5159;stroke-width:1;stroke-dasharray:3 3;fill:none}
+  </style>
+  <text class="ttl" x="26" y="26">Size of biological objects and resolution of microscopy techniques</text>
+  <text class="sub" x="26" y="45">Horizontal axis is logarithmic. Each bar spans the range a technique can resolve.</text>
+
+  <line class="ax" x1="90" y1="300" x2="820" y2="300"/>
+  <g class="tick">
+    <line x1="110" y1="294" x2="110" y2="308"/>
+    <line x1="230" y1="294" x2="230" y2="308"/>
+    <line x1="350" y1="294" x2="350" y2="308"/>
+    <line x1="470" y1="294" x2="470" y2="308"/>
+    <line x1="590" y1="294" x2="590" y2="308"/>
+    <line x1="710" y1="294" x2="710" y2="308"/>
+  </g>
+  <text class="sub" x="94" y="324">0.1 nm</text>
+  <text class="sub" x="218" y="324">1 nm</text>
+  <text class="sub" x="336" y="324">10 nm</text>
+  <text class="sub" x="452" y="324">100 nm</text>
+  <text class="sub" x="576" y="324">1 um</text>
+  <text class="sub" x="694" y="324">10 um</text>
+
+  <text class="lab" x="100" y="266">atom</text>
+  <path class="lead" d="M110 272 L110 294"/>
+  <text class="lab" x="206" y="266">amino acid</text>
+  <path class="lead" d="M230 272 L230 294"/>
+  <text class="lab" x="320" y="248">ribosome 25 nm</text>
+  <path class="lead" d="M378 254 L378 294"/>
+  <text class="lab" x="440" y="266">virus 100 nm</text>
+  <path class="lead" d="M470 272 L470 294"/>
+  <text class="lab" x="548" y="248">mitochondrion 1 um</text>
+  <path class="lead" d="M590 254 L590 294"/>
+  <text class="lab" x="684" y="266">animal cell</text>
+  <path class="lead" d="M718 272 L718 294"/>
+
+  <line class="bar" x1="470" y1="78" x2="818" y2="78" stroke="#4a5159"/>
+  <text class="lab" x="126" y="82">Light microscopy</text>
+  <text class="sub" x="126" y="98">bright-field, phase-contrast, fluorescence, confocal</text>
+  <text class="sub" x="478" y="68">limit 0.2 um</text>
+
+  <line class="bar" x1="350" y1="132" x2="818" y2="132" stroke="#003c71"/>
+  <text class="lab" x="126" y="136">Super-resolution</text>
+  <text class="sub" x="126" y="152">STED, PALM, STORM; 10-50 nm</text>
+
+  <line class="bar" x1="230" y1="186" x2="818" y2="186" stroke="#16191d"/>
+  <text class="lab" x="126" y="190">Electron microscopy</text>
+  <text class="sub" x="126" y="206">TEM 1-2 nm in sections; SEM about 10 nm for surfaces</text>
+
+  <line class="bar" x1="130" y1="232" x2="470" y2="232" stroke="#f2b705"/>
+  <text class="lab" x="126" y="228">Cryo-EM</text>
+  <text class="sub" x="300" y="228">0.2-0.4 nm for protein complexes</text>
+
+  <rect class="box" x="26" y="344" width="808" height="28" rx="4"/>
+  <text class="sub" x="36" y="362">Abbe limit: d = 0.61 lambda / (n sin alpha). Numerical aperture NA = n sin alpha. With lambda 500 nm and NA 1.4, d is about 0.2 um; electrons at 100 kV have lambda about 0.004 nm.</text>
+</svg>

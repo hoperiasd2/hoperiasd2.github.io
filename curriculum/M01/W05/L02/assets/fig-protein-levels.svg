@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 420" width="860" height="420" role="img"
+     aria-label="Four levels of protein structure: primary sequence, secondary alpha-helix and beta-sheet, tertiary fold with hydrophobic core, and quaternary assembly">
+  <style>
+    .ttl{font:700 15px sans-serif;fill:#003c71}
+    .hd{font:700 12.5px sans-serif;fill:#003c71}
+    .lab{font:700 11.5px sans-serif;fill:#16191d}
+    .sub{font:11px sans-serif;fill:#4a5159}
+    .box{fill:#ffffff;stroke:#c6d2dd;stroke-width:1.3}
+    .ch{stroke:#16191d;stroke-width:2.4;fill:none}
+    .hb{stroke:#4a5159;stroke-width:1.3;stroke-dasharray:3 3}
+    .aa{fill:#eff4f8;stroke:#16191d;stroke-width:1.3}
+    .ar{stroke:#f2b705;stroke-width:2.6;fill:none;marker-end:url(#ap)}
+  </style>
+  <defs>
+    <marker id="ap" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#f2b705"/>
+    </marker>
+  </defs>
+  <text class="ttl" x="26" y="24">Four levels of protein structure</text>
+
+  <rect class="box" x="26" y="38" width="394" height="150" rx="6"/>
+  <text class="hd" x="38" y="58">1. Primary structure: amino acid sequence</text>
+  <g>
+    <rect class="aa" x="42" y="76" width="40" height="30" rx="4"/><text class="lab" x="52" y="96">Met</text>
+    <rect class="aa" x="86" y="76" width="40" height="30" rx="4"/><text class="lab" x="97" y="96">Ala</text>
+    <rect class="aa" x="130" y="76" width="40" height="30" rx="4"/><text class="lab" x="141" y="96">Leu</text>
+    <rect class="aa" x="174" y="76" width="40" height="30" rx="4"/><text class="lab" x="185" y="96">Lys</text>
+    <rect class="aa" x="218" y="76" width="40" height="30" rx="4"/><text class="lab" x="229" y="96">Gly</text>
+    <rect class="aa" x="262" y="76" width="40" height="30" rx="4"/><text class="lab" x="273" y="96">Asp</text>
+    <rect class="aa" x="306" y="76" width="40" height="30" rx="4"/><text class="lab" x="317" y="96">Phe</text>
+    <text class="lab" x="356" y="96">...</text>
+  </g>
+  <text class="sub" x="42" y="128">Held by PEPTIDE BONDS (covalent). Written N terminus to C terminus.</text>
+  <text class="sub" x="42" y="146">Side chains: nonpolar (Gly Ala Val Leu Ile Met Phe Trp Pro), polar (Ser Thr Cys Tyr Asn Gln),</text>
+  <text class="sub" x="42" y="164">acidic (Asp Glu), basic (Lys Arg His). 20 amino acids in all.</text>
+  <text class="sub" x="42" y="182">The sequence determines every higher level (Anfinsen).</text>
+
+  <rect class="box" x="436" y="38" width="398" height="150" rx="6"/>
+  <text class="hd" x="448" y="58">2. Secondary structure: BACKBONE hydrogen bonds</text>
+  <path class="ch" d="M470 118 q12 -26 24 0 q12 26 24 0 q12 -26 24 0 q12 26 24 0 q12 -26 24 0" stroke="#003c71"/>
+  <text class="lab" x="470" y="146">alpha-helix</text>
+  <text class="sub" x="470" y="162">3.6 residues per turn,</text>
+  <text class="sub" x="470" y="176">pitch 0.54 nm, i to i+4 H bond</text>
+  <path class="ch" d="M662 96 h150 M662 124 h150 M662 152 h150"/>
+  <g class="hb">
+    <line x1="690" y1="96" x2="690" y2="124"/><line x1="730" y1="96" x2="730" y2="124"/>
+    <line x1="770" y1="96" x2="770" y2="124"/><line x1="690" y1="124" x2="690" y2="152"/>
+    <line x1="730" y1="124" x2="730" y2="152"/><line x1="770" y1="124" x2="770" y2="152"/>
+  </g>
+  <text class="lab" x="662" y="176">beta-sheet (parallel or antiparallel)</text>
+
+  <rect class="box" x="26" y="204" width="394" height="194" rx="6"/>
+  <text class="hd" x="38" y="224">3. Tertiary structure: one chain folds in three dimensions</text>
+  <ellipse cx="200" cy="304" rx="140" ry="62" fill="#eff4f8" stroke="#c6d2dd"/>
+  <ellipse cx="200" cy="304" rx="78" ry="34" fill="#fff5d6" stroke="#f2b705" stroke-width="1.6"/>
+  <text class="lab" x="150" y="300">hydrophobic</text>
+  <text class="lab" x="172" y="316">core</text>
+  <path class="ch" d="M78 282 q26 -22 48 4 q24 26 54 -8 q30 -32 62 6 q30 36 68 -4" stroke="#003c71" stroke-width="2"/>
+  <text class="sub" x="38" y="362">Nonpolar side chains buried, polar side chains on the surface.</text>
+  <text class="sub" x="38" y="378">Forces: hydrophobic interaction (largest), H bonds, ionic bonds, disulfide bridges.</text>
+  <text class="sub" x="38" y="392">Chaperones (Hsp70, chaperonin) shield exposed hydrophobic patches during folding.</text>
+
+  <rect class="box" x="436" y="204" width="398" height="194" rx="6"/>
+  <text class="hd" x="448" y="224">4. Quaternary structure: several chains assemble</text>
+  <circle cx="556" cy="286" r="42" fill="#eff4f8" stroke="#003c71" stroke-width="1.8"/>
+  <circle cx="644" cy="286" r="42" fill="#fff5d6" stroke="#003c71" stroke-width="1.8"/>
+  <circle cx="556" cy="352" r="30" fill="#eff4f8" stroke="#003c71" stroke-width="1.8"/>
+  <circle cx="644" cy="352" r="30" fill="#fff5d6" stroke="#003c71" stroke-width="1.8"/>
+  <text class="lab" x="544" y="292">alpha</text>
+  <text class="lab" x="634" y="292">beta</text>
+  <text class="lab" x="544" y="358">alpha</text>
+  <text class="lab" x="634" y="358">beta</text>
+  <text class="sub" x="700" y="268">Example: hemoglobin,</text>
+  <text class="sub" x="700" y="284">two alpha and two beta</text>
+  <text class="sub" x="700" y="300">chains.</text>
+  <text class="sub" x="700" y="326">Same forces act, but</text>
+  <text class="sub" x="700" y="342">between chains, which</text>
+  <text class="sub" x="700" y="358">allows cooperativity.</text>
+
+  <path class="ar" d="M420 112 L432 112"/>
+  <path class="ar" d="M220 192 L220 200"/>
+  <path class="ar" d="M420 300 L432 300"/>
+</svg>

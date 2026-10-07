@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 360" width="840" height="360" role="img"
+     aria-label="Transition from the RNA world to present-day cells, showing division of labour between DNA, RNA and protein and the relics left in modern cells">
+  <style>
+    .ttl{font:700 15px sans-serif;fill:#003c71}
+    .sub{font:12px sans-serif;fill:#4a5159}
+    .lab{font:700 13px sans-serif;fill:#16191d}
+    .big{font:700 16px sans-serif;fill:#003c71}
+    .box{fill:#ffffff;stroke:#c6d2dd;stroke-width:1.4}
+    .hl{fill:#fff5d6;stroke:#f2b705;stroke-width:1.8}
+    .ar{stroke:#16191d;stroke-width:2;fill:none;marker-end:url(#a1)}
+  </style>
+  <defs>
+    <marker id="a1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#16191d"/>
+    </marker>
+  </defs>
+  <text class="ttl" x="26" y="26">RNA world: one molecule carried both information and catalysis</text>
+
+  <rect class="hl" x="30" y="52" width="210" height="150" rx="8"/>
+  <text class="big" x="100" y="80">RNA</text>
+  <text class="lab" x="48" y="108">Information</text>
+  <text class="sub" x="48" y="124">base pairing allows copying</text>
+  <text class="lab" x="48" y="150">Catalysis</text>
+  <text class="sub" x="48" y="166">folding creates ribozymes</text>
+  <text class="sub" x="48" y="188">self-replicating system</text>
+
+  <path class="ar" d="M250 128 L320 128"/>
+  <text class="sub" x="252" y="118">division</text>
+  <text class="sub" x="252" y="146">of labour</text>
+
+  <rect class="box" x="336" y="42" width="200" height="74" rx="8"/>
+  <text class="big" x="396" y="68">DNA</text>
+  <text class="sub" x="352" y="90">stable information store;</text>
+  <text class="sub" x="352" y="106">double strand, repairable</text>
+
+  <rect class="box" x="336" y="132" width="200" height="66" rx="8"/>
+  <text class="big" x="384" y="158">Protein</text>
+  <text class="sub" x="352" y="180">efficient catalysis;</text>
+  <text class="sub" x="352" y="194">20 amino acid chemistry</text>
+
+  <rect class="box" x="336" y="214" width="200" height="66" rx="8"/>
+  <text class="big" x="396" y="240">RNA</text>
+  <text class="sub" x="352" y="262">intermediary: mRNA, tRNA,</text>
+  <text class="sub" x="352" y="276">rRNA, regulatory RNA</text>
+
+  <path class="ar" d="M546 160 L610 160"/>
+
+  <rect class="hl" x="624" y="52" width="196" height="228" rx="8"/>
+  <text class="lab" x="640" y="76">Relics in modern cells</text>
+  <text class="sub" x="640" y="100">Peptidyl transferase of the</text>
+  <text class="sub" x="640" y="115">ribosome is 23S / 28S rRNA</text>
+  <text class="sub" x="640" y="140">Spliceosome catalytic core</text>
+  <text class="sub" x="640" y="155">is snRNA, not protein</text>
+  <text class="sub" x="640" y="180">RNase P catalytic subunit</text>
+  <text class="sub" x="640" y="195">is RNA</text>
+  <text class="sub" x="640" y="220">Cofactors are nucleotides:</text>
+  <text class="sub" x="640" y="235">ATP, NAD+, FAD, coenzyme A</text>
+  <text class="sub" x="640" y="260">Telomerase uses an RNA</text>
+  <text class="sub" x="640" y="275">template</text>
+
+  <text class="sub" x="26" y="320">Lipid bilayer vesicles form spontaneously, so enclosure of a replicator needed no additional driving force.</text>
+  <text class="sub" x="26" y="340">Once enclosed, a replicator keeps the benefit of its own products and becomes a unit of selection.</text>
+</svg>

@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 400" width="860" height="400" role="img"
+     aria-label="Activation energy diagram showing how an enzyme stabilises the transition state and lowers the barrier without changing the free energy difference between reactants and products">
+  <style>
+    .ttl{font:700 15px sans-serif;fill:#003c71}
+    .hd{font:700 12.5px sans-serif;fill:#003c71}
+    .lab{font:700 11.5px sans-serif;fill:#16191d}
+    .sub{font:11px sans-serif;fill:#4a5159}
+    .ax{stroke:#16191d;stroke-width:2}
+    .un{stroke:#4a5159;stroke-width:2.6;fill:none}
+    .en{stroke:#003c71;stroke-width:2.8;fill:none}
+    .lv{stroke:#16191d;stroke-width:1.4;stroke-dasharray:5 4}
+    .box{fill:#ffffff;stroke:#c6d2dd;stroke-width:1.3}
+    .hl{fill:#fff5d6;stroke:#f2b705;stroke-width:1.6}
+    .arb{stroke:#4a5159;stroke-width:2;fill:none;marker-end:url(#ae);marker-start:url(#ae)}
+    .ary{stroke:#f2b705;stroke-width:2.4;fill:none;marker-end:url(#ae2);marker-start:url(#ae2)}
+  </style>
+  <defs>
+    <marker id="ae" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#4a5159"/>
+    </marker>
+    <marker id="ae2" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#f2b705"/>
+    </marker>
+  </defs>
+  <text class="ttl" x="26" y="24">An enzyme lowers the activation energy but not Delta G</text>
+
+  <line class="ax" x1="90" y1="324" x2="520" y2="324"/>
+  <line class="ax" x1="90" y1="324" x2="90" y2="60"/>
+  <text class="sub" x="40" y="72">free energy</text>
+  <text class="sub" x="300" y="344">reaction progress</text>
+
+  <line class="lv" x1="90" y1="252" x2="520" y2="252"/>
+  <line class="lv" x1="90" y1="302" x2="520" y2="302"/>
+
+  <path class="un" d="M110 252 L160 252 q70 0 100 -170 q30 170 100 170 L470 302"/>
+  <path class="en" d="M110 252 L160 252 q70 0 100 -96 q30 96 100 96 L470 302"/>
+
+  <text class="lab" x="236" y="74">transition state</text>
+  <text class="sub" x="214" y="92">(uncatalysed)</text>
+  <text class="lab" x="256" y="144">transition state stabilised</text>
+  <text class="sub" x="286" y="162">by the enzyme</text>
+
+  <text class="lab" x="104" y="244">substrate</text>
+  <text class="lab" x="440" y="320">product</text>
+
+  <path class="arb" d="M196 250 L196 90"/>
+  <text class="lab" x="130" y="170">Ea without</text>
+  <text class="lab" x="140" y="186">enzyme</text>
+
+  <path class="ary" d="M336 250 L336 162"/>
+  <text class="lab" x="346" y="206">Ea with enzyme</text>
+
+  <path class="arb" d="M496 252 L496 302" stroke="#16191d"/>
+  <text class="lab" x="500" y="282">Delta G</text>
+  <text class="sub" x="500" y="298">unchanged</text>
+
+  <rect class="hl" x="546" y="48" width="288" height="134" rx="6"/>
+  <text class="hd" x="558" y="70">What an enzyme does and does not do</text>
+  <text class="sub" x="558" y="94">DOES: lowers Ea, speeding forward and reverse</text>
+  <text class="sub" x="558" y="110">reactions by the SAME factor (10^6 to 10^17 fold)</text>
+  <text class="sub" x="558" y="134">DOES NOT: change Delta G standard or Keq, so the</text>
+  <text class="sub" x="558" y="150">position of equilibrium is identical</text>
+  <text class="sub" x="558" y="172">It changes how fast equilibrium is reached, not where it lies.</text>
+
+  <rect class="box" x="546" y="196" width="288" height="188" rx="6"/>
+  <text class="hd" x="558" y="218">Four catalytic strategies</text>
+  <text class="lab" x="558" y="244">Proximity and orientation</text>
+  <text class="sub" x="558" y="260">substrates held close and correctly aligned</text>
+  <text class="lab" x="558" y="284">Transition-state stabilisation</text>
+  <text class="sub" x="558" y="300">active site fits the transition state better</text>
+  <text class="sub" x="558" y="314">than the substrate; basis of drug design</text>
+  <text class="lab" x="558" y="338">Acid-base catalysis</text>
+  <text class="sub" x="558" y="354">His, Asp, Glu, Lys donate or accept protons</text>
+  <text class="lab" x="558" y="378">Covalent catalysis</text>
+
+  <rect class="box" x="26" y="358" width="492" height="30" rx="4"/>
+  <text class="sub" x="38" y="378">Cofactors: metal ions (Zn2+, Mg2+, Fe2+) stabilise charge; coenzymes (NAD+, FAD, CoA, TPP, biotin) carry electrons or small groups.</text>
+</svg>

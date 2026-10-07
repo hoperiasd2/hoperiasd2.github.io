@@ -1,4 +1,65 @@
 {
   "lesson_id": "M02-W07-L01",
-  "figures": []
+  "figures": [
+    {
+      "figure_id": "fig-fa-classes",
+      "lesson_id": "M02-W07-L01",
+      "html_anchor": "#fig-fa-classes",
+      "caption": "지방산의 명명과 분류. Delta 표기는 carboxyl 탄소에서, omega 표기는 methyl 말단에서 센다. 사람은 C9보다 methyl 쪽에 이중결합을 넣지 못하므로 n-6과 n-3 계열이 필수지방산이 된다.",
+      "asset_path": "assets/fig-fa-classes.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-tag-structure",
+      "lesson_id": "M02-W07-L01",
+      "html_anchor": "#fig-tag-structure",
+      "caption": "Triacylglycerol의 구조와 단계적 가수분해. sn-2의 ester 결합은 pancreatic lipase에 저항하므로 내강 소화 산물은 2-monoacylglycerol과 유리지방산 두 분자다.",
+      "asset_path": "assets/fig-tag-structure.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-micelle",
+      "lesson_id": "M02-W07-L01",
+      "html_anchor": "#fig-micelle",
+      "caption": "담즙산염의 두 가지 작용. 큰 지방 덩어리를 작은 입자로 쪼개 계면의 면적을 늘리고(emulsification), 소화 산물을 mixed micelle에 담아 unstirred water layer를 통과시킨다.",
+      "asset_path": "assets/fig-micelle.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-lipase",
+      "lesson_id": "M02-W07-L01",
+      "html_anchor": "#fig-lipase",
+      "caption": "Colipase가 담즙산염으로 덮인 계면에 lipase를 고정한다. 내강 지질 소화에 참여하는 효소들과 그 산물을 함께 정리했다.",
+      "asset_path": "assets/fig-lipase.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-chylomicron",
+      "lesson_id": "M02-W07-L01",
+      "html_anchor": "#fig-chylomicron",
+      "caption": "장 상피세포에서의 재합성과 chylomicron의 조립·분비. apoB-48과 MTP가 조립에 필수이고, 입자는 림프를 거쳐 혈액으로 들어간 뒤 apoC-II를 받아 lipoprotein lipase의 기질이 된다. 짧은·중간 사슬 지방산은 이 경로를 우회한다.",
+      "asset_path": "assets/fig-chylomicron.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    }
+  ]
 }

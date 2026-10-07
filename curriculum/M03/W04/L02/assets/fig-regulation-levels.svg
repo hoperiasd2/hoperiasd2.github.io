@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 440" width="860" height="440" role="img"
+     aria-label="Levels at which eukaryotic gene expression is controlled, from chromatin access through transcription, RNA processing, translation and protein degradation">
+  <style>
+    .ttl { font:700 14px sans-serif; fill:#003c71; }
+    .nm { font:700 13px sans-serif; fill:#003c71; }
+    .sub { font:11px sans-serif; fill:#4a5159; }
+    .lv { fill:#ffffff; stroke:#003c71; stroke-width:1.4; }
+    .lvh { fill:#fff5d6; stroke:#003c71; stroke-width:1.4; }
+    .ln { stroke:#003c71; stroke-width:2; fill:none; }
+    .tag { font:700 11px sans-serif; fill:#8a6300; }
+  </style>
+  <defs>
+    <marker id="r1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#003c71"/>
+    </marker>
+  </defs>
+  <text class="ttl" x="20" y="26">Six points of control between a gene and its working protein</text>
+  <text class="sub" x="20" y="46">Prokaryotes regulate mainly at transcription initiation; eukaryotes use every level, and the slowest levels are the most stable.</text>
+
+  <rect class="lvh" x="40" y="62" width="330" height="48" rx="6"/>
+  <text class="nm" x="56" y="82">1. Chromatin accessibility</text>
+  <text class="sub" x="56" y="100">histone acetylation and methylation, DNA methylation</text>
+  <text class="tag" x="392" y="84">time scale: hours to generations</text>
+  <text class="sub" x="392" y="102">heritable through cell division</text>
+  <path class="ln" d="M205 110 L205 128" marker-end="url(#r1)"/>
+
+  <rect class="lvh" x="40" y="128" width="330" height="48" rx="6"/>
+  <text class="nm" x="56" y="148">2. Transcription initiation</text>
+  <text class="sub" x="56" y="166">promoter, enhancer, transcription factor availability</text>
+  <text class="tag" x="392" y="150">minutes to hours</text>
+  <text class="sub" x="392" y="168">the main switch for most genes</text>
+  <path class="ln" d="M205 176 L205 194" marker-end="url(#r1)"/>
+
+  <rect class="lv" x="40" y="194" width="330" height="48" rx="6"/>
+  <text class="nm" x="56" y="214">3. RNA processing</text>
+  <text class="sub" x="56" y="232">alternative splicing, alternative poly(A) site</text>
+  <text class="tag" x="392" y="216">changes which protein, not how much</text>
+  <path class="ln" d="M205 242 L205 260" marker-end="url(#r1)"/>
+
+  <rect class="lv" x="40" y="260" width="330" height="48" rx="6"/>
+  <text class="nm" x="56" y="280">4. mRNA stability and export</text>
+  <text class="sub" x="56" y="298">poly(A) length, AU-rich elements, microRNA</text>
+  <text class="tag" x="392" y="282">minutes to days</text>
+  <text class="sub" x="392" y="300">sets how long a signal persists</text>
+  <path class="ln" d="M205 308 L205 326" marker-end="url(#r1)"/>
+
+  <rect class="lv" x="40" y="326" width="330" height="48" rx="6"/>
+  <text class="nm" x="56" y="346">5. Translation</text>
+  <text class="sub" x="56" y="364">eIF2 alpha phosphorylation, iron-responsive elements</text>
+  <text class="tag" x="392" y="348">seconds to minutes</text>
+  <text class="sub" x="392" y="366">fastest global brake</text>
+  <path class="ln" d="M205 374 L205 392" marker-end="url(#r1)"/>
+
+  <rect class="lv" x="40" y="392" width="330" height="40" rx="6"/>
+  <text class="nm" x="56" y="412">6. Protein degradation</text>
+  <text class="sub" x="56" y="428">ubiquitin-proteasome, lysosome</text>
+  <text class="tag" x="392" y="414">sets the steady-state amount together with level 2</text>
+</svg>

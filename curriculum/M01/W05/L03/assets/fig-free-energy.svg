@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 400" width="860" height="400" role="img"
+     aria-label="Free energy diagrams for exergonic and endergonic reactions and the relationship between standard free energy change and the equilibrium constant">
+  <style>
+    .ttl{font:700 15px sans-serif;fill:#003c71}
+    .hd{font:700 12.5px sans-serif;fill:#003c71}
+    .lab{font:700 11.5px sans-serif;fill:#16191d}
+    .sub{font:11px sans-serif;fill:#4a5159}
+    .ax{stroke:#16191d;stroke-width:2}
+    .cv{stroke:#003c71;stroke-width:2.6;fill:none}
+    .lv{stroke:#16191d;stroke-width:1.6;stroke-dasharray:5 4}
+    .box{fill:#ffffff;stroke:#c6d2dd;stroke-width:1.3}
+    .hl{fill:#fff5d6;stroke:#f2b705;stroke-width:1.6}
+    .ar{stroke:#f2b705;stroke-width:2.6;fill:none;marker-end:url(#af)}
+  </style>
+  <defs>
+    <marker id="af" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#f2b705"/>
+    </marker>
+  </defs>
+  <text class="ttl" x="26" y="24">Free energy decides direction, not speed</text>
+
+  <rect class="box" x="26" y="38" width="260" height="200" rx="6"/>
+  <text class="hd" x="38" y="58">EXERGONIC, Delta G below zero</text>
+  <line class="ax" x1="64" y1="216" x2="268" y2="216"/>
+  <line class="ax" x1="64" y1="216" x2="64" y2="76"/>
+  <text class="sub" x="30" y="92">G</text>
+  <text class="sub" x="150" y="234">reaction progress</text>
+  <line class="lv" x1="64" y1="104" x2="268" y2="104"/>
+  <line class="lv" x1="64" y1="182" x2="268" y2="182"/>
+  <path class="cv" d="M78 104 L130 104 q40 0 60 40 q22 38 56 38"/>
+  <text class="lab" x="78" y="98">A (reactants)</text>
+  <text class="lab" x="196" y="200">B (products)</text>
+  <path class="ar" d="M250 108 L250 178"/>
+  <text class="lab" x="200" y="146">Delta G &lt; 0</text>
+  <text class="sub" x="38" y="258">spontaneous; can do work</text>
+
+  <rect class="box" x="300" y="38" width="260" height="200" rx="6"/>
+  <text class="hd" x="312" y="58">ENDERGONIC, Delta G above zero</text>
+  <line class="ax" x1="338" y1="216" x2="542" y2="216"/>
+  <line class="ax" x1="338" y1="216" x2="338" y2="76"/>
+  <line class="lv" x1="338" y1="182" x2="542" y2="182"/>
+  <line class="lv" x1="338" y1="104" x2="542" y2="104"/>
+  <path class="cv" d="M352 182 L404 182 q40 0 60 -40 q22 -38 56 -38"/>
+  <text class="lab" x="352" y="200">A (reactants)</text>
+  <text class="lab" x="468" y="98">B (products)</text>
+  <path class="ar" d="M524 178 L524 108"/>
+  <text class="lab" x="474" y="146">Delta G &gt; 0</text>
+  <text class="sub" x="312" y="258">needs an input of energy</text>
+
+  <rect class="hl" x="574" y="38" width="260" height="200" rx="6"/>
+  <text class="hd" x="586" y="58">Delta G and the equilibrium constant</text>
+  <text class="lab" x="586" y="86">Delta G = Delta G standard</text>
+  <text class="lab" x="600" y="104">+ RT ln ([B]/[A])</text>
+  <text class="lab" x="586" y="134">At equilibrium Delta G = 0, so</text>
+  <text class="lab" x="586" y="156">Delta G standard = - RT ln Keq</text>
+  <text class="sub" x="586" y="186">R = 8.315 J/(mol K)</text>
+  <text class="sub" x="586" y="202">At 25 C a tenfold change in Keq</text>
+  <text class="sub" x="586" y="218">equals 5.7 kJ/mol.</text>
+
+  <rect class="box" x="26" y="256" width="808" height="124" rx="6"/>
+  <text class="hd" x="38" y="278">Delta G says nothing about rate</text>
+  <text class="sub" x="38" y="302">Glucose + 6 O2 to 6 CO2 + 6 H2O has Delta G standard about -2840 kJ/mol, strongly exergonic.</text>
+  <text class="sub" x="38" y="320">Yet a bag of sugar on the bench does not change for years, because the activation energy is high.</text>
+  <text class="sub" x="38" y="344">Standard conditions: all species at 1 M, 25 C, pH 7.0, water activity 1. The prime mark marks pH 7.</text>
+  <text class="sub" x="38" y="362">Inside a cell the actual concentrations differ from 1 M, so the actual Delta G can have the opposite sign from Delta G standard.</text>
+</svg>

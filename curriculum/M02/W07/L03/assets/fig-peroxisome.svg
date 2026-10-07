@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 370" width="860" height="370" role="img"
+     aria-label="Comparison of peroxisomal and mitochondrial fatty acid oxidation and the alpha-oxidation of phytanic acid">
+  <style>
+    .ttl { font:700 14px sans-serif; fill:#003c71; }
+    .nm { font:700 12.5px sans-serif; fill:#16191d; }
+    .mn { font:700 12px monospace; fill:#16191d; }
+    .sub { font:11.5px sans-serif; fill:#4a5159; }
+    .lab { font:700 11px sans-serif; fill:#8a6300; }
+    .bx { fill:#fff; stroke:#c6d2dd; stroke-width:1.5; }
+    .bk { fill:#fff5d6; stroke:#f2b705; stroke-width:2.2; }
+    .nv { fill:#003c71; }
+    .st { font:700 12px sans-serif; fill:#fff; }
+    .ar { stroke:#003c71; stroke-width:2.2; fill:none; marker-end:url(#h); }
+  </style>
+  <defs><marker id="h" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+    <path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker></defs>
+
+  <rect class="nv" x="20" y="34" width="406" height="26" rx="4"/>
+  <text class="st" x="40" y="52">Peroxisome</text>
+  <rect class="nv" x="440" y="34" width="406" height="26" rx="4"/>
+  <text class="st" x="460" y="52">Mitochondrion</text>
+
+  <rect class="bx" x="20" y="60" width="406" height="212" rx="0"/>
+  <rect class="bx" x="440" y="60" width="406" height="212" rx="0"/>
+
+  <text class="nm" x="40" y="88">Substrate</text>
+  <text class="sub" x="40" y="108">very-long-chain acids (&gt; 20 C), branched acids,</text>
+  <text class="sub" x="40" y="126">dicarboxylic acids</text>
+  <text class="nm" x="40" y="154">Entry</text>
+  <text class="sub" x="40" y="174">ABCD1 transporter; no carnitine needed</text>
+  <text class="nm" x="40" y="202">First oxidation</text>
+  <text class="sub" x="40" y="222">acyl-CoA oxidase; electrons go to O2 and make H2O2,</text>
+  <text class="sub" x="40" y="240">removed by catalase. No ATP is made at this step.</text>
+  <text class="lab" x="40" y="264">Product: shortened acyl-CoA, exported as carnitine ester</text>
+  <text class="nm" x="460" y="88">Substrate</text>
+  <text class="sub" x="460" y="108">short-, medium- and long-chain acids</text>
+  <text class="nm" x="460" y="154">Entry</text>
+  <text class="sub" x="460" y="174">carnitine shuttle for long chains</text>
+  <text class="nm" x="460" y="202">First oxidation</text>
+  <text class="sub" x="460" y="222">acyl-CoA dehydrogenase; FADH2 feeds the electron</text>
+  <text class="sub" x="460" y="240">transport chain, so ATP is made.</text>
+  <text class="lab" x="460" y="264">Product: acetyl-CoA, oxidised in the TCA cycle</text>
+
+  <text class="ttl" x="20" y="306">Alpha-oxidation, also peroxisomal</text>
+  <rect class="bk" x="20" y="316" width="826" height="44" rx="7"/>
+  <text class="mn" x="40" y="342">Phytanic acid (3-methyl branch)  to  pristanic acid, by phytanoyl-CoA hydroxylase (PHYH); then normal beta-oxidation</text>
+</svg>

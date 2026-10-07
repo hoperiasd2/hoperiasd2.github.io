@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 380" width="880" height="380" role="img"
+     aria-label="Reading frames and the effect of a single base insertion or deletion on the downstream codons and stop position">
+  <style>
+    .ttl { font:700 14px sans-serif; fill:#003c71; }
+    .nm { font:700 12px sans-serif; fill:#003c71; }
+    .sub { font:11px sans-serif; fill:#4a5159; }
+    .seq { font:700 15px monospace; fill:#16191d; }
+    .aaq { font:700 12px sans-serif; fill:#4a5159; }
+    .cod { fill:none; stroke:#c6d2dd; stroke-width:1.2; }
+    .mk { fill:#f2b705; stroke:#16191d; stroke-width:1.2; }
+    .stop { font:700 12px sans-serif; fill:#8a6300; }
+    .box { fill:#fff5d6; stroke:#c6d2dd; stroke-width:1; }
+  </style>
+  <text class="ttl" x="20" y="26">A reading frame is set by the start codon; an indel that is not a multiple of three shifts it</text>
+
+  <text class="nm" x="20" y="64">Normal</text>
+  <text class="seq" x="150" y="68">AUG  CCU  GAG  AAG  UCU  GCC  GUU  ACU  UAA</text>
+  <text class="aaq" x="150" y="90">Met  Pro  Glu  Lys  Ser  Ala  Val  Thr  stop</text>
+  <text class="sub" x="640" y="68">normal protein</text>
+
+  <text class="nm" x="20" y="134">Silent</text>
+  <text class="sub" x="20" y="150">third base change</text>
+  <text class="seq" x="150" y="138">AUG  CCU  GAG  AAG  UCU  GCC  GUU  ACU  UAA</text>
+  <rect class="mk" x="263" y="124" width="14" height="18"/>
+  <text class="seq" x="264" y="138">C</text>
+  <text class="aaq" x="150" y="160">Met  Pro  Glu  Lys  Ser  Ala  Val  Thr  stop</text>
+  <text class="sub" x="640" y="138">same sequence</text>
+
+  <text class="nm" x="20" y="204">Missense</text>
+  <text class="sub" x="20" y="220">A to U at codon 3</text>
+  <text class="seq" x="150" y="208">AUG  CCU  GUG  AAG  UCU  GCC  GUU  ACU  UAA</text>
+  <rect class="mk" x="248" y="194" width="14" height="18"/>
+  <text class="seq" x="249" y="208">U</text>
+  <text class="aaq" x="150" y="230">Met  Pro  Val  Lys  Ser  Ala  Val  Thr  stop</text>
+  <text class="sub" x="640" y="208">one residue replaced</text>
+
+  <text class="nm" x="20" y="274">Nonsense</text>
+  <text class="sub" x="20" y="290">G to U at codon 4</text>
+  <text class="seq" x="150" y="278">AUG  CCU  GAG  UAG</text>
+  <text class="aaq" x="150" y="300">Met  Pro  Glu  stop</text>
+  <text class="stop" x="340" y="278">translation ends early; transcript is usually removed by NMD</text>
+
+  <text class="nm" x="20" y="344">Frameshift</text>
+  <text class="sub" x="20" y="360">one base deleted in codon 2</text>
+  <text class="seq" x="150" y="348">AUG  CUG  AGA  AGU  CUG  CCG  UUA  CUU  AA</text>
+  <text class="aaq" x="150" y="370">Met  Leu  Arg  Ser  Leu  Pro  Leu  Leu  ...</text>
+  <text class="stop" x="640" y="348">every downstream codon differs</text>
+</svg>

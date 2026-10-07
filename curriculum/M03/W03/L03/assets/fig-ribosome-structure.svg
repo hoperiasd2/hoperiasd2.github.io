@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 400" width="880" height="400" role="img"
+     aria-label="Composition of the prokaryotic 70S ribosome, the eukaryotic 80S ribosome and the human mitochondrial 55S ribosome">
+  <style>
+    .ttl { font:700 14px sans-serif; fill:#003c71; }
+    .nm { font:700 13px sans-serif; fill:#003c71; }
+    .sub { font:11px sans-serif; fill:#4a5159; }
+    .big { fill:#003c71; stroke:#16191d; stroke-width:1.3; }
+    .small { fill:#f2b705; stroke:#16191d; stroke-width:1.3; }
+    .bl { font:700 13px sans-serif; fill:#ffffff; }
+    .sl { font:700 13px sans-serif; fill:#16191d; }
+    .t { font:11px sans-serif; fill:#16191d; }
+    .box { fill:#fff5d6; stroke:#c6d2dd; stroke-width:1; }
+  </style>
+  <text class="ttl" x="20" y="26">Ribosomes are two-thirds RNA by mass; the catalytic centre is rRNA, not protein</text>
+
+  <g>
+    <text class="nm" x="60" y="62">Prokaryote 70S</text>
+    <path class="big" d="M40 84 C40 70 190 70 190 84 L190 150 C190 170 40 170 40 150 Z"/>
+    <text class="bl" x="98" y="122">50S</text>
+    <path class="small" d="M40 176 C40 164 190 164 190 176 L190 222 C190 240 40 240 40 222 Z"/>
+    <text class="sl" x="98" y="206">30S</text>
+    <text class="t" x="40" y="262">50S: 23S rRNA (2,904 nt),</text>
+    <text class="t" x="40" y="280">5S rRNA (120 nt), 31 proteins</text>
+    <text class="t" x="40" y="302">30S: 16S rRNA (1,541 nt),</text>
+    <text class="t" x="40" y="320">21 proteins</text>
+  </g>
+  <g>
+    <text class="nm" x="320" y="62">Eukaryote 80S (cytosol)</text>
+    <path class="big" d="M300 78 C300 62 460 62 460 78 L460 152 C460 174 300 174 300 152 Z"/>
+    <text class="bl" x="358" y="122">60S</text>
+    <path class="small" d="M300 180 C300 166 460 166 460 180 L460 230 C460 250 300 250 300 230 Z"/>
+    <text class="sl" x="358" y="212">40S</text>
+    <text class="t" x="300" y="262">60S: 28S rRNA (about 4,700 nt),</text>
+    <text class="t" x="300" y="280">5.8S, 5S rRNA, about 47 proteins</text>
+    <text class="t" x="300" y="302">40S: 18S rRNA (about 1,900 nt),</text>
+    <text class="t" x="300" y="320">about 33 proteins</text>
+  </g>
+  <g>
+    <text class="nm" x="590" y="62">Human mitochondrion 55S</text>
+    <path class="big" d="M580 84 C580 70 720 70 720 84 L720 148 C720 168 580 168 580 148 Z"/>
+    <text class="bl" x="632" y="122">39S</text>
+    <path class="small" d="M580 174 C580 162 720 162 720 174 L720 220 C720 238 580 238 580 220 Z"/>
+    <text class="sl" x="632" y="204">28S</text>
+    <text class="t" x="580" y="262">16S rRNA (MT-RNR2) and</text>
+    <text class="t" x="580" y="280">12S rRNA (MT-RNR1)</text>
+    <text class="t" x="580" y="302">Bacteria-like: this is why some</text>
+    <text class="t" x="580" y="320">antibacterial drugs harm it</text>
+  </g>
+
+  <rect class="box" x="20" y="340" width="840" height="52" rx="4"/>
+  <text class="nm" x="36" y="362">Peptidyl transferase activity resides in the large subunit rRNA: the ribosome is a ribozyme.</text>
+  <text class="sub" x="36" y="382">Sequence differences between bacterial, cytosolic and mitochondrial rRNA are the structural basis of antibiotic selectivity and of its limits.</text>
+</svg>

@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 520" width="860" height="520" role="img"
+     aria-label="The ten steps of glycolysis divided into an energy investment phase and an energy payoff phase with the three irreversible steps marked">
+  <style>
+    .ttl{font:700 15px sans-serif;fill:#003c71}
+    .hd{font:700 12.5px sans-serif;fill:#003c71}
+    .lab{font:700 12px sans-serif;fill:#16191d}
+    .enz{font:700 11px sans-serif;fill:#003c71}
+    .sub{font:11px sans-serif;fill:#4a5159}
+    .box{fill:#ffffff;stroke:#c6d2dd;stroke-width:1.4}
+    .hl{fill:#fff5d6;stroke:#f2b705;stroke-width:2}
+    .ar{stroke:#16191d;stroke-width:2.2;fill:none;marker-end:url(#ag)}
+    .cost{stroke:#4a5159;stroke-width:1.6;fill:none;marker-end:url(#ag2)}
+    .gain{stroke:#f2b705;stroke-width:2;fill:none;marker-end:url(#ag3)}
+    .phase{fill:#eff4f8;stroke:#c6d2dd;stroke-width:1.2}
+  </style>
+  <defs>
+    <marker id="ag" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#16191d"/></marker>
+    <marker id="ag2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#4a5159"/></marker>
+    <marker id="ag3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#f2b705"/></marker>
+  </defs>
+  <text class="ttl" x="26" y="24">Glycolysis: ten steps in the cytosol</text>
+
+  <rect class="phase" x="20" y="38" width="406" height="458" rx="8"/>
+  <text class="hd" x="34" y="60">ENERGY INVESTMENT PHASE (steps 1-5): 2 ATP spent</text>
+
+  <rect class="hl" x="90" y="74" width="190" height="32" rx="4"/>
+  <text class="lab" x="140" y="96">Glucose (C6)</text>
+  <path class="ar" d="M185 106 L185 140"/>
+  <text class="enz" x="196" y="126">1 HEXOKINASE (irreversible)</text>
+  <path class="cost" d="M100 112 L170 128"/><text class="sub" x="40" y="112">ATP to ADP</text>
+
+  <rect class="box" x="90" y="140" width="190" height="30" rx="4"/>
+  <text class="lab" x="110" y="160">Glucose-6-phosphate</text>
+  <path class="ar" d="M185 170 L185 202"/>
+  <text class="enz" x="196" y="190">2 phosphoglucose isomerase</text>
+
+  <rect class="box" x="90" y="202" width="190" height="30" rx="4"/>
+  <text class="lab" x="106" y="222">Fructose-6-phosphate</text>
+  <path class="ar" d="M185 232 L185 266"/>
+  <text class="enz" x="196" y="252">3 PFK-1 (irreversible, rate-limiting)</text>
+  <path class="cost" d="M100 240 L170 254"/><text class="sub" x="40" y="240">ATP to ADP</text>
+
+  <rect class="hl" x="76" y="266" width="218" height="30" rx="4"/>
+  <text class="lab" x="86" y="286">Fructose-1,6-bisphosphate</text>
+  <path class="ar" d="M185 296 L185 330"/>
+  <text class="enz" x="196" y="316">4 aldolase (splits C6 into two C3)</text>
+
+  <rect class="box" x="48" y="330" width="130" height="44" rx="4"/>
+  <text class="lab" x="56" y="350">Dihydroxyacetone</text>
+  <text class="lab" x="56" y="366">phosphate</text>
+  <rect class="box" x="196" y="330" width="130" height="44" rx="4"/>
+  <text class="lab" x="204" y="350">Glyceraldehyde-</text>
+  <text class="lab" x="204" y="366">3-phosphate</text>
+  <path class="ar" d="M178 352 L192 352"/>
+  <text class="enz" x="56" y="394">5 triose phosphate isomerase</text>
+  <text class="sub" x="56" y="410">both halves become the same molecule,</text>
+  <text class="sub" x="56" y="426">so steps 6-10 run twice per glucose</text>
+  <path class="ar" d="M260 374 L260 452"/>
+  <text class="sub" x="56" y="460">Net at this point: -2 ATP, nothing gained</text>
+  <text class="sub" x="56" y="478">Phosphates keep the sugar trapped inside the cell.</text>
+
+  <rect class="phase" x="440" y="38" width="400" height="458" rx="8"/>
+  <text class="hd" x="454" y="60">ENERGY PAYOFF PHASE (steps 6-10), x2</text>
+
+  <rect class="box" x="494" y="74" width="200" height="44" rx="4"/>
+  <text class="lab" x="502" y="94">Glyceraldehyde-</text>
+  <text class="lab" x="502" y="110">3-phosphate</text>
+  <path class="ar" d="M594 118 L594 160"/>
+  <text class="enz" x="606" y="134">6 G3P dehydrogenase</text>
+  <path class="gain" d="M560 130 L478 148"/>
+  <text class="lab" x="446" y="162">NAD+ to NADH</text>
+  <text class="sub" x="606" y="150">+ inorganic phosphate</text>
+
+  <rect class="box" x="478" y="160" width="232" height="30" rx="4"/>
+  <text class="lab" x="488" y="180">1,3-Bisphosphoglycerate</text>
+  <text class="sub" x="716" y="180">-49.4 kJ/mol</text>
+  <path class="ar" d="M594 190 L594 226"/>
+  <text class="enz" x="606" y="212">7 phosphoglycerate kinase</text>
+  <path class="gain" d="M560 202 L478 220"/>
+  <text class="lab" x="446" y="234">ADP to ATP</text>
+
+  <rect class="box" x="494" y="226" width="200" height="30" rx="4"/>
+  <text class="lab" x="504" y="246">3-Phosphoglycerate</text>
+  <path class="ar" d="M594 256 L594 290"/>
+  <text class="enz" x="606" y="276">8 phosphoglycerate mutase</text>
+
+  <rect class="box" x="494" y="290" width="200" height="30" rx="4"/>
+  <text class="lab" x="504" y="310">2-Phosphoglycerate</text>
+  <path class="ar" d="M594 320 L594 354"/>
+  <text class="enz" x="606" y="340">9 enolase (loses H2O)</text>
+
+  <rect class="hl" x="494" y="354" width="200" height="30" rx="4"/>
+  <text class="lab" x="504" y="374">Phosphoenolpyruvate</text>
+  <text class="sub" x="700" y="374">-61.9 kJ/mol</text>
+  <path class="ar" d="M594 384 L594 420"/>
+  <text class="enz" x="606" y="406">10 PYRUVATE KINASE (irreversible)</text>
+  <path class="gain" d="M560 396 L478 414"/>
+  <text class="lab" x="446" y="428">ADP to ATP</text>
+
+  <rect class="hl" x="528" y="420" width="132" height="30" rx="4"/>
+  <text class="lab" x="562" y="440">Pyruvate</text>
+  <text class="sub" x="454" y="470">Net per glucose: 2 ATP, 2 NADH, 2 pyruvate.</text>
+  <text class="sub" x="454" y="488">Delta G standard about -74 kJ/mol; most energy still sits in pyruvate.</text>
+
+  <text class="sub" x="26" y="512">Only steps 1, 3 and 10 are irreversible. The other seven run near equilibrium, so gluconeogenesis only has to bypass these three.</text>
+</svg>

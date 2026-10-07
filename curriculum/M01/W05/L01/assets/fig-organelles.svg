@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 440" width="860" height="440" role="img"
+     aria-label="Organelles of an animal cell grouped by function: genetic information, secretory pathway, energy metabolism and cytoskeleton">
+  <style>
+    .ttl{font:700 15px sans-serif;fill:#003c71}
+    .sub{font:11.5px sans-serif;fill:#4a5159}
+    .lab{font:700 12px sans-serif;fill:#16191d}
+    .grp{font:700 12px sans-serif;fill:#003c71}
+    .mem{fill:#ffffff;stroke:#16191d;stroke-width:2.6}
+    .o1{fill:#ffffff;stroke:#003c71;stroke-width:2.2}
+    .o2{fill:#fff5d6;stroke:#003c71;stroke-width:1.6}
+    .o3{fill:#ffffff;stroke:#c6d2dd;stroke-width:1.6}
+    .fil{stroke:#4a5159;stroke-width:1.2;fill:none}
+    .ar{stroke:#f2b705;stroke-width:2.6;fill:none;marker-end:url(#a2)}
+    .key{fill:#ffffff;stroke:#c6d2dd;stroke-width:1.2}
+  </style>
+  <defs>
+    <marker id="a2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#f2b705"/>
+    </marker>
+  </defs>
+  <text class="ttl" x="26" y="26">Animal cell organelles grouped by function</text>
+
+  <ellipse class="mem" cx="400" cy="230" rx="350" ry="180"/>
+  <text class="sub" x="86" y="128">plasma membrane</text>
+
+  <circle class="o1" cx="300" cy="190" r="72"/>
+  <circle cx="300" cy="190" r="24" fill="#003c71" opacity="0.18"/>
+  <text class="lab" x="274" y="162">nucleus</text>
+  <text class="sub" x="272" y="224">nucleolus</text>
+  <text class="sub" x="236" y="118">DNA, transcription,</text>
+  <text class="sub" x="236" y="132">rRNA synthesis</text>
+
+  <g>
+    <path class="o2" d="M238 278 q44 -20 86 2 q-44 20 -86 -2 z"/>
+    <path class="o2" d="M236 304 q44 -20 86 2 q-44 20 -86 -2 z"/>
+    <circle cx="246" cy="272" r="2.4" fill="#16191d"/>
+    <circle cx="266" cy="268" r="2.4" fill="#16191d"/>
+    <circle cx="286" cy="268" r="2.4" fill="#16191d"/>
+    <circle cx="306" cy="274" r="2.4" fill="#16191d"/>
+    <text class="lab" x="200" y="340">rough ER</text>
+    <text class="sub" x="188" y="356">ribosomes attached;</text>
+    <text class="sub" x="188" y="370">secretory and membrane</text>
+    <text class="sub" x="188" y="384">protein synthesis</text>
+  </g>
+
+  <g>
+    <path class="o3" d="M148 206 q30 -26 56 -4 q-18 26 -56 4 z"/>
+    <text class="lab" x="118" y="190">smooth ER</text>
+    <text class="sub" x="100" y="244">lipid and steroid</text>
+    <text class="sub" x="100" y="258">synthesis, drug</text>
+    <text class="sub" x="100" y="272">metabolism, Ca2+ store</text>
+  </g>
+
+  <g>
+    <path class="o2" d="M420 266 q56 -14 84 6 q-56 14 -84 -6 z"/>
+    <path class="o2" d="M424 290 q56 -14 84 6 q-56 14 -84 -6 z"/>
+    <path class="o2" d="M428 314 q56 -14 84 6 q-56 14 -84 -6 z"/>
+    <text class="lab" x="420" y="348">Golgi apparatus</text>
+    <text class="sub" x="420" y="364">glycosylation, sorting</text>
+  </g>
+
+  <path class="ar" d="M330 292 L414 284"/>
+  <path class="ar" d="M520 300 L566 318"/>
+
+  <circle class="o3" cx="590" cy="330" r="20"/>
+  <text class="lab" x="562" y="368">lysosome</text>
+  <text class="sub" x="540" y="384">pH 5, ~60 hydrolases</text>
+
+  <circle class="o3" cx="640" cy="258" r="16"/>
+  <text class="lab" x="662" y="252">peroxisome</text>
+  <text class="sub" x="662" y="268">fatty acid oxidation, H2O2</text>
+
+  <ellipse class="o2" cx="498" cy="162" rx="48" ry="26"/>
+  <path class="fil" d="M462 162 q12 -15 24 0 q12 15 24 0 q12 -15 22 0" stroke="#003c71" stroke-width="1.8"/>
+  <text class="lab" x="466" y="122">mitochondrion</text>
+  <text class="sub" x="438" y="106">electron transport chain,</text>
+  <text class="sub" x="438" y="92">ATP synthase, own DNA</text>
+
+  <path class="fil" d="M120 300 L250 330 M140 330 L300 360 M560 120 L680 150 M600 200 L700 190"/>
+  <text class="lab" x="640" y="134">cytoskeleton</text>
+  <text class="sub" x="640" y="176">actin 7 nm, microtubule</text>
+  <text class="sub" x="640" y="190">25 nm, intermediate 10 nm</text>
+
+  <rect class="key" x="26" y="414" width="808" height="20" rx="4"/>
+  <text class="sub" x="36" y="428">Yellow arrows: the secretory pathway, rough ER to Golgi to secretory vesicle or lysosome. Each organelle is covered in later lessons.</text>
+</svg>

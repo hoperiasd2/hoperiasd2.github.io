@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 400" width="880" height="400" role="img"
+     aria-label="Handling of odd-chain fatty acids through propionyl-CoA to succinyl-CoA and of unsaturated fatty acids by isomerase and reductase">
+  <style>
+    .ttl { font:700 14px sans-serif; fill:#003c71; }
+    .nm { font:700 12px monospace; fill:#16191d; }
+    .en { font:700 11.5px sans-serif; fill:#003c71; }
+    .sub { font:11.5px sans-serif; fill:#4a5159; }
+    .lab { font:700 11px sans-serif; fill:#8a6300; }
+    .bx { fill:#fff; stroke:#c6d2dd; stroke-width:1.5; }
+    .bk { fill:#fff5d6; stroke:#f2b705; stroke-width:2.2; }
+    .ar { stroke:#003c71; stroke-width:2.2; fill:none; marker-end:url(#h); }
+  </style>
+  <defs><marker id="h" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+    <path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker></defs>
+
+  <text class="ttl" x="20" y="26">Odd-numbered chain: the last cycle leaves three carbons</text>
+  <rect class="bx" x="20" y="38" width="840" height="150" rx="7"/>
+  <text class="nm" x="38" y="66">Odd-chain acyl-CoA</text>
+  <path class="ar" d="M190 62 L250 62"/>
+  <text class="sub" x="194" y="52">beta-oxidation</text>
+  <text class="nm" x="258" y="66">Acetyl-CoA units + Propionyl-CoA (C3)</text>
+  <path class="ar" d="M330 74 L330 104"/>
+  <text class="en" x="340" y="94">propionyl-CoA carboxylase, biotin, ATP</text>
+  <text class="nm" x="258" y="124">D-Methylmalonyl-CoA</text>
+  <path class="ar" d="M330 132 L330 158"/>
+  <text class="en" x="340" y="150">racemase, then methylmalonyl-CoA mutase, vitamin B12</text>
+  <text class="nm" x="258" y="178">Succinyl-CoA</text>
+  <rect class="bk" x="560" y="110" width="286" height="66" rx="7"/>
+  <text class="lab" x="578" y="134">Propionyl-CoA is glucogenic</text>
+  <text class="sub" x="578" y="154">succinyl-CoA enters the TCA cycle and can</text>
+  <text class="sub" x="578" y="170">leave as oxaloacetate for gluconeogenesis</text>
+  <text class="sub" x="38" y="176">three carbons, not two</text>
+
+  <text class="ttl" x="20" y="222">Unsaturated chain: two extra enzymes, and less FADH2</text>
+  <rect class="bx" x="20" y="234" width="420" height="124" rx="7"/>
+  <text class="nm" x="38" y="260">Oleoyl-CoA 18:1(9)</text>
+  <text class="en" x="38" y="284">enoyl-CoA isomerase</text>
+  <text class="sub" x="38" y="304">moves the cis-delta-3 bond to trans-delta-2,</text>
+  <text class="sub" x="38" y="322">which the hydratase accepts</text>
+  <text class="lab" x="38" y="346">step 1 is skipped, so one FADH2 fewer</text>
+
+  <rect class="bx" x="456" y="234" width="404" height="124" rx="7"/>
+  <text class="nm" x="474" y="260">Linoleoyl-CoA 18:2(9,12)</text>
+  <text class="en" x="474" y="284">2,4-dienoyl-CoA reductase, NADPH</text>
+  <text class="sub" x="474" y="304">a conjugated diene cannot be hydrated, so it is</text>
+  <text class="sub" x="474" y="322">reduced first, then isomerised</text>
+  <text class="lab" x="474" y="346">costs one NADPH in addition</text>
+
+  <text class="sub" x="20" y="384">Energy consequence: unsaturated fatty acids give slightly less ATP per carbon than saturated ones of the same length.</text>
+</svg>

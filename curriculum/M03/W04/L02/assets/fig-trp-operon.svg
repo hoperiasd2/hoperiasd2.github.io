@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 430" width="880" height="430" role="img"
+     aria-label="The trp operon controlled at two levels: repression by tryptophan acting as a corepressor, and attenuation in which ribosome stalling at tandem tryptophan codons determines whether a terminator hairpin forms">
+  <style>
+    .ttl { font:700 14px sans-serif; fill:#003c71; }
+    .nm { font:700 12px sans-serif; fill:#003c71; }
+    .sub { font:11px sans-serif; fill:#4a5159; }
+    .gene { fill:#003c71; stroke:#16191d; stroke-width:1.1; }
+    .reg { fill:#f2b705; stroke:#16191d; stroke-width:1.1; }
+    .gl { font:700 11px sans-serif; fill:#ffffff; }
+    .rl { font:700 11px sans-serif; fill:#16191d; }
+    .rep { fill:#ffffff; stroke:#16191d; stroke-width:1.4; }
+    .ln { stroke:#16191d; stroke-width:1.6; fill:none; }
+    .rna { stroke:#003c71; stroke-width:2.2; fill:none; }
+    .rib { fill:#e8eef4; stroke:#003c71; stroke-width:1.3; }
+    .out { font:700 11px sans-serif; fill:#8a6300; }
+  </style>
+  <text class="ttl" x="20" y="24">A. Repression: tryptophan is a corepressor</text>
+
+  <rect class="reg" x="150" y="42" width="44" height="20"/><text class="rl" x="162" y="58">P</text>
+  <rect class="reg" x="194" y="42" width="44" height="20"/><text class="rl" x="208" y="58">O</text>
+  <rect class="reg" x="238" y="42" width="70" height="20"/><text class="rl" x="252" y="58">leader</text>
+  <rect class="gene" x="308" y="42" width="52" height="20"/><text class="gl" x="316" y="58">trpE</text>
+  <rect class="gene" x="360" y="42" width="52" height="20"/><text class="gl" x="368" y="58">trpD</text>
+  <rect class="gene" x="412" y="42" width="52" height="20"/><text class="gl" x="420" y="58">trpC</text>
+  <rect class="gene" x="464" y="42" width="52" height="20"/><text class="gl" x="472" y="58">trpB</text>
+  <rect class="gene" x="516" y="42" width="52" height="20"/><text class="gl" x="524" y="58">trpA</text>
+  <text class="sub" x="308" y="78">five genes for tryptophan biosynthesis</text>
+
+  <text class="nm" x="24" y="116">Tryptophan low</text>
+  <ellipse class="rep" cx="120" cy="112" rx="38" ry="15"/><text class="rl" x="100" y="117">Rep</text>
+  <text class="sub" x="166" y="116">repressor alone cannot bind the operator</text>
+  <path class="rna" d="M240 128 L560 128"/>
+  <text class="out" x="580" y="132">transcription proceeds</text>
+
+  <text class="nm" x="24" y="166">Tryptophan high</text>
+  <ellipse class="rep" cx="216" cy="162" rx="38" ry="15"/><text class="rl" x="196" y="167">Rep</text>
+  <circle class="reg" cx="256" cy="162" r="9"/>
+  <text class="sub" x="272" y="166">Trp bound: repressor binds the operator</text>
+  <text class="out" x="580" y="166">transcription blocked</text>
+
+  <text class="ttl" x="20" y="214">B. Attenuation: the leader peptide has two adjacent Trp codons</text>
+  <text class="sub" x="20" y="234">Transcription and translation are coupled, so a stalled ribosome changes which RNA hairpin forms.</text>
+
+  <text class="nm" x="24" y="282">Trp scarce</text>
+  <text class="sub" x="24" y="300">ribosome stalls</text>
+  <text class="sub" x="24" y="316">at the Trp codons</text>
+  <path class="rna" d="M170 286 L470 286"/>
+  <rect class="rib" x="186" y="266" width="54" height="26" rx="8"/>
+  <text class="rl" x="196" y="262">UGG UGG</text>
+  <path class="rna" d="M300 286 C306 258 340 258 346 286"/>
+  <text class="sub" x="300" y="310">2:3 pairing (antiterminator)</text>
+  <text class="out" x="500" y="282">RNA polymerase reads through:</text>
+  <text class="out" x="500" y="300">the five genes are transcribed</text>
+
+  <text class="nm" x="24" y="372">Trp plentiful</text>
+  <text class="sub" x="24" y="390">ribosome moves on</text>
+  <text class="sub" x="24" y="406">without stalling</text>
+  <path class="rna" d="M170 376 L370 376"/>
+  <rect class="rib" x="276" y="356" width="54" height="26" rx="8"/>
+  <path class="rna" d="M340 376 C346 346 380 346 386 376"/>
+  <text class="sub" x="330" y="400">3:4 pairing (terminator hairpin)</text>
+  <text class="out" x="500" y="372">transcription stops in the leader</text>
+  <text class="out" x="500" y="390">before the first gene</text>
+  <text class="sub" x="20" y="424">Repression and attenuation multiply, so the operon spans a far wider range of output than either mechanism alone.</text>
+</svg>

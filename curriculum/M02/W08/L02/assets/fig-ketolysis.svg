@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 400" width="880" height="400" role="img"
+     aria-label="Peripheral utilisation of ketone bodies by SCOT and thiolase, and the absence of SCOT in the liver">
+  <style>
+    .ttl { font:700 14px sans-serif; fill:#003c71; }
+    .nm { font:700 12.5px monospace; fill:#16191d; }
+    .en { font:700 11.5px sans-serif; fill:#003c71; }
+    .sub { font:11.5px sans-serif; fill:#4a5159; }
+    .lab { font:700 11px sans-serif; fill:#8a6300; }
+    .bx { fill:#fff; stroke:#c6d2dd; stroke-width:1.5; }
+    .bk { fill:#fff5d6; stroke:#f2b705; stroke-width:2.4; }
+    .no { fill:#fff; stroke:#16191d; stroke-width:2.4; stroke-dasharray:7 5; }
+    .ar { stroke:#003c71; stroke-width:2.2; fill:none; marker-end:url(#h); }
+  </style>
+  <defs><marker id="h" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+    <path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker></defs>
+
+  <text class="ttl" x="20" y="26">Extrahepatic tissue: muscle, heart, kidney cortex, brain after adaptation</text>
+  <rect class="bx" x="20" y="38" width="560" height="248" rx="7"/>
+
+  <text class="nm" x="40" y="72">beta-Hydroxybutyrate</text>
+  <path class="ar" d="M210 68 L270 68"/>
+  <text class="en" x="212" y="58">BDH, NAD+</text>
+  <text class="nm" x="278" y="72">Acetoacetate</text>
+  <path class="ar" d="M340 80 L340 120"/>
+  <rect class="bk" x="150" y="126" width="390" height="54" rx="6"/>
+  <text class="en" x="168" y="150">SCOT (succinyl-CoA:3-oxoacid CoA transferase)</text>
+  <text class="sub" x="168" y="170">takes CoA from succinyl-CoA; no ATP is spent</text>
+  <path class="ar" d="M340 186 L340 212"/>
+  <text class="nm" x="248" y="230">Acetoacetyl-CoA</text>
+  <path class="ar" d="M340 240 L340 262"/>
+  <text class="en" x="356" y="256">thiolase + CoA</text>
+  <text class="nm" x="248" y="278">2 Acetyl-CoA to the TCA cycle</text>
+
+  <text class="ttl" x="604" y="26">Liver</text>
+  <rect class="no" x="604" y="38" width="252" height="248" rx="7"/>
+  <text class="nm" x="622" y="72">Acetoacetate</text>
+  <path class="ar" d="M680 80 L680 120" stroke-dasharray="6 4"/>
+  <rect class="bx" x="622" y="126" width="216" height="54" rx="6"/>
+  <text class="en" x="640" y="150">SCOT is not expressed</text>
+  <text class="sub" x="640" y="170">in hepatocytes</text>
+  <text class="lab" x="622" y="206">The liver makes ketone bodies</text>
+  <text class="lab" x="622" y="224">but cannot use them.</text>
+  <text class="sub" x="622" y="248">One enzyme missing keeps the fuel</text>
+  <text class="sub" x="622" y="266">for the tissues that need it.</text>
+
+  <text class="sub" x="20" y="318">Each acetoacetate yields 2 acetyl-CoA, so about 23 ATP; each beta-hydroxybutyrate yields about 26, since its oxidation also gives one NADH.</text>
+  <text class="sub" x="20" y="338">Red blood cells cannot use ketone bodies either, because they have no mitochondria.</text>
+  <text class="sub" x="20" y="358">Acetone is not salvaged: it is exhaled and lost.</text>
+  <text class="sub" x="20" y="378">Brain uptake rises with plasma concentration; after several days of fasting ketone bodies supply up to about two thirds of its energy.</text>
+</svg>

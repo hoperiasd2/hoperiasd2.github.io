@@ -1,4 +1,77 @@
 {
   "lesson_id": "M03-W04-L01",
-  "figures": []
+  "figures": [
+    {
+      "figure_id": "fig-ptm-overview",
+      "lesson_id": "M03-W04-L01",
+      "html_anchor": "#fig-ptm-overview",
+      "caption": "번역 후 수정의 종류. 수정되는 잔기, 필요한 보조인자, 그리고 각 수정이 어떤 질환이나 약물과 연결되는지를 정리한다.",
+      "asset_path": "assets/fig-ptm-overview.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-signal-srp",
+      "lesson_id": "M03-W04-L01",
+      "html_anchor": "#fig-signal-srp",
+      "caption": "신호 서열에 의한 ER 표적화. SRP의 결합과 번역 정지, translocon으로의 도킹, signal peptidase에 의한 절단을 순서대로 보인다.",
+      "asset_path": "assets/fig-signal-srp.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-glycosylation",
+      "lesson_id": "M03-W04-L01",
+      "html_anchor": "#fig-glycosylation",
+      "caption": "N-linked와 O-linked glycosylation의 비교, 그리고 mannose-6-phosphate 표지에 의한 lysosome 선별.",
+      "asset_path": "assets/fig-glycosylation.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-chaperone-upr",
+      "lesson_id": "M03-W04-L01",
+      "html_anchor": "#fig-chaperone-upr",
+      "caption": "Chaperone에 의한 접힘 보조와 두 갈래의 출구, 그리고 unfolded protein response의 세 감지 경로.",
+      "asset_path": "assets/fig-chaperone-upr.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-ubiquitin",
+      "lesson_id": "M03-W04-L01",
+      "html_anchor": "#fig-ubiquitin",
+      "caption": "Ubiquitin-proteasome 경로. E1-E2-E3 단계, Lys48 연결 사슬의 형성, 26S proteasome에서의 분해를 보인다.",
+      "asset_path": "assets/fig-ubiquitin.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-misfolding-disease",
+      "lesson_id": "M03-W04-L01",
+      "html_anchor": "#fig-misfolding-disease",
+      "caption": "α1-Antitrypsin PiZ와 CFTR F508del. 하나는 ER 내 중합으로 간을 손상시키고 분비 감소로 폐를 손상시키며, 다른 하나는 세포 표면에 도달하지 못해 분해된다.",
+      "asset_path": "assets/fig-misfolding-disease.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    }
+  ]
 }

@@ -1,4 +1,77 @@
 {
   "lesson_id": "M01-W05-L02",
-  "figures": []
+  "figures": [
+    {
+      "figure_id": "fig-water-bonds",
+      "lesson_id": "M01-W05-L02",
+      "html_anchor": "#fig-water-bonds",
+      "caption": "물의 극성과 네 가지 비공유 상호작용. 수소결합, 이온결합, van der Waals 힘, 그리고 물의 엔트로피 변화로 설명되는 소수성 상호작용을 각각 나타낸다.",
+      "asset_path": "assets/fig-water-bonds.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-lipids",
+      "lesson_id": "M01-W05-L02",
+      "html_anchor": "#fig-lipids",
+      "caption": "막을 이루는 지질의 구조. 포화·불포화 지방산, triacylglycerol, glycerophospholipid, sphingomyelin, cholesterol을 극성 머리와 비극성 꼬리의 구분과 함께 보인다.",
+      "asset_path": "assets/fig-lipids.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-protein-levels",
+      "lesson_id": "M01-W05-L02",
+      "html_anchor": "#fig-protein-levels",
+      "caption": "단백질 구조의 네 수준. 아미노산 서열에서 α-helix와 β-sheet, 소수성 core가 있는 3차 구조, 여러 사슬의 4차 구조까지와 각 수준을 유지하는 힘을 보인다.",
+      "asset_path": "assets/fig-protein-levels.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-bilayer",
+      "lesson_id": "M01-W05-L02",
+      "html_anchor": "#fig-bilayer",
+      "caption": "지질 이중층의 자발적 형성과 유동성. Micelle과 이중층을 결정하는 분자 모양, 측방 확산·회전·flip-flop의 속도 차이, 지방산 사슬과 cholesterol이 유동성에 미치는 영향을 보인다.",
+      "asset_path": "assets/fig-bilayer.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-fluid-mosaic",
+      "lesson_id": "M01-W05-L02",
+      "html_anchor": "#fig-fluid-mosaic",
+      "caption": "유동 모자이크 모형과 막단백질의 분류. Single-pass와 multi-pass integral 단백질, peripheral 단백질, 지질 anchor 단백질, 그리고 세포 밖으로만 향하는 당사슬을 보인다.",
+      "asset_path": "assets/fig-fluid-mosaic.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-transport",
+      "lesson_id": "M01-W05-L02",
+      "html_anchor": "#fig-transport",
+      "caption": "세 가지 막수송의 비교. 단순확산, channel과 carrier를 통한 촉진확산, ATP를 쓰는 1차 능동수송과 기울기를 쓰는 2차 능동수송의 구동력, 그리고 농도에 따른 수송 속도 곡선의 차이를 보인다.",
+      "asset_path": "assets/fig-transport.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    }
+  ]
 }

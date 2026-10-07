@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 420" width="860" height="420" role="img"
+     aria-label="Overview of complete glucose oxidation in four stages with cellular locations, showing carbon leaving as carbon dioxide and electrons flowing to oxygen">
+  <style>
+    .ttl{font:700 15px sans-serif;fill:#003c71}
+    .hd{font:700 12.5px sans-serif;fill:#003c71}
+    .lab{font:700 12px sans-serif;fill:#16191d}
+    .sub{font:11px sans-serif;fill:#4a5159}
+    .box{fill:#ffffff;stroke:#c6d2dd;stroke-width:1.4}
+    .hl{fill:#fff5d6;stroke:#f2b705;stroke-width:1.8}
+    .cell{fill:#eff4f8;stroke:#16191d;stroke-width:2}
+    .mito{fill:#ffffff;stroke:#003c71;stroke-width:2.4}
+    .ar{stroke:#16191d;stroke-width:2.2;fill:none;marker-end:url(#ao)}
+    .are{stroke:#003c71;stroke-width:2.2;stroke-dasharray:6 4;fill:none;marker-end:url(#ao2)}
+    .arc{stroke:#4a5159;stroke-width:1.8;fill:none;marker-end:url(#ao3)}
+  </style>
+  <defs>
+    <marker id="ao" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#16191d"/></marker>
+    <marker id="ao2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker>
+    <marker id="ao3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#4a5159"/></marker>
+  </defs>
+  <text class="ttl" x="26" y="24">Complete oxidation of glucose: four stages</text>
+  <text class="sub" x="26" y="44">Overall: C6H12O6 + 6 O2 to 6 CO2 + 6 H2O, Delta G standard about -2840 kJ/mol</text>
+
+  <rect class="cell" x="26" y="58" width="246" height="330" rx="10"/>
+  <text class="hd" x="40" y="80">CYTOSOL</text>
+
+  <rect class="hl" x="52" y="96" width="196" height="40" rx="5"/>
+  <text class="lab" x="108" y="122">Glucose (C6)</text>
+  <path class="ar" d="M150 136 L150 176"/>
+  <rect class="box" x="52" y="176" width="196" height="60" rx="5"/>
+  <text class="lab" x="64" y="198">1. GLYCOLYSIS, 10 steps</text>
+  <text class="sub" x="64" y="216">net 2 ATP, 2 NADH</text>
+  <text class="sub" x="64" y="230">no oxygen required</text>
+  <path class="ar" d="M150 236 L150 268"/>
+  <rect class="hl" x="52" y="268" width="196" height="40" rx="5"/>
+  <text class="lab" x="90" y="294">2 Pyruvate (C3)</text>
+  <text class="sub" x="52" y="334">Without O2: pyruvate to lactate</text>
+  <text class="sub" x="52" y="350">regenerates NAD+ so glycolysis</text>
+  <text class="sub" x="52" y="366">can continue. No extra ATP.</text>
+
+  <rect class="mito" x="300" y="58" width="534" height="330" rx="14"/>
+  <rect x="314" y="72" width="506" height="302" rx="10" fill="#eff4f8" stroke="#003c71" stroke-width="1.6"/>
+  <text class="hd" x="328" y="92">MITOCHONDRION: matrix inside, inner membrane at the edge</text>
+
+  <path class="ar" d="M252 288 L330 250"/>
+  <rect class="box" x="332" y="112" width="214" height="62" rx="5"/>
+  <text class="lab" x="344" y="134">2. PYRUVATE OXIDATION</text>
+  <text class="sub" x="344" y="152">pyruvate dehydrogenase complex</text>
+  <text class="sub" x="344" y="166">2 NADH, 2 CO2 released</text>
+
+  <path class="ar" d="M439 174 L439 206"/>
+  <rect class="box" x="332" y="206" width="214" height="78" rx="5"/>
+  <text class="lab" x="344" y="228">3. TCA CYCLE</text>
+  <text class="sub" x="344" y="246">2 acetyl-CoA enter</text>
+  <text class="sub" x="344" y="262">6 NADH, 2 FADH2, 2 GTP</text>
+  <text class="sub" x="344" y="276">4 CO2 released</text>
+
+  <rect class="hl" x="588" y="150" width="226" height="134" rx="5"/>
+  <text class="lab" x="600" y="172">4. OXIDATIVE</text>
+  <text class="lab" x="600" y="190">PHOSPHORYLATION</text>
+  <text class="sub" x="600" y="212">inner membrane</text>
+  <text class="sub" x="600" y="230">electrons from NADH and FADH2</text>
+  <text class="sub" x="600" y="246">pass to O2 through complexes I-IV</text>
+  <text class="sub" x="600" y="262">proton gradient drives ATP synthase</text>
+  <text class="lab" x="600" y="280">about 26 ATP</text>
+
+  <path class="are" d="M550 234 L584 226"/>
+  <path class="are" d="M550 140 L584 180"/>
+  <text class="sub" x="552" y="206">electrons</text>
+
+  <path class="arc" d="M546 128 L620 108"/>
+  <path class="arc" d="M546 262 L620 128"/>
+  <text class="lab" x="628" y="106">6 CO2 out</text>
+  <text class="lab" x="700" y="306">O2 in, H2O out</text>
+  <path class="arc" d="M700 290 L700 266"/>
+
+  <text class="sub" x="26" y="408">Carbon leaves as CO2 in stages 2 and 3; electrons leave as water in stage 4. Most of the energy is carried by NADH and FADH2, not by ATP made in stages 1-3.</text>
+</svg>

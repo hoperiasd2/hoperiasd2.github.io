@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 430" width="880" height="430" role="img"
+     aria-label="The lac operon under four nutrient conditions, showing negative control by the repressor and positive control by the cAMP-CAP complex">
+  <style>
+    .ttl { font:700 14px sans-serif; fill:#003c71; }
+    .nm { font:700 12px sans-serif; fill:#003c71; }
+    .sub { font:11px sans-serif; fill:#4a5159; }
+    .gene { fill:#003c71; stroke:#16191d; stroke-width:1.1; }
+    .reg { fill:#f2b705; stroke:#16191d; stroke-width:1.1; }
+    .gl { font:700 11px sans-serif; fill:#ffffff; }
+    .rl { font:700 11px sans-serif; fill:#16191d; }
+    .ln { stroke:#16191d; stroke-width:1.6; fill:none; }
+    .rep { fill:#ffffff; stroke:#16191d; stroke-width:1.4; }
+    .out { font:700 11px sans-serif; fill:#8a6300; }
+    .rna { stroke:#003c71; stroke-width:2.4; fill:none; stroke-dasharray:6 3; }
+  </style>
+  <defs>
+    <marker id="l1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#003c71"/>
+    </marker>
+  </defs>
+  <text class="ttl" x="20" y="24">The lac operon: three enzymes for lactose use under one promoter</text>
+
+  <rect class="gene" x="60" y="44" width="56" height="22"/><text class="gl" x="70" y="60">lacI</text>
+  <rect class="reg" x="150" y="44" width="56" height="22"/><text class="rl" x="156" y="60">CAP</text>
+  <rect class="reg" x="206" y="44" width="46" height="22"/><text class="rl" x="216" y="60">P</text>
+  <rect class="reg" x="252" y="44" width="46" height="22"/><text class="rl" x="264" y="60">O</text>
+  <rect class="gene" x="298" y="44" width="90" height="22"/><text class="gl" x="312" y="60">lacZ</text>
+  <rect class="gene" x="388" y="44" width="76" height="22"/><text class="gl" x="402" y="60">lacY</text>
+  <rect class="gene" x="464" y="44" width="76" height="22"/><text class="gl" x="478" y="60">lacA</text>
+  <text class="sub" x="60" y="82">repressor gene,</text><text class="sub" x="60" y="96">always expressed</text>
+  <text class="sub" x="150" y="82">CAP site</text>
+  <text class="sub" x="200" y="96">promoter</text>
+  <text class="sub" x="252" y="82">operator</text>
+  <text class="sub" x="298" y="96">beta-galactosidase</text>
+  <text class="sub" x="392" y="82">permease</text>
+  <text class="sub" x="464" y="96">transacetylase</text>
+  <text class="sub" x="570" y="60">One mRNA carries all three genes: a polycistronic transcript.</text>
+  <text class="sub" x="570" y="78">The inducer is allolactose, made from lactose by beta-galactosidase.</text>
+  <text class="sub" x="570" y="96">cAMP rises only when glucose is low.</text>
+
+  <g>
+    <text class="nm" x="24" y="142">1. No lactose, no glucose</text>
+    <rect class="reg" x="252" y="130" width="46" height="20"/>
+    <rect class="gene" x="298" y="130" width="242" height="20"/>
+    <ellipse class="rep" cx="275" cy="112" rx="34" ry="14"/><text class="rl" x="258" y="117">Rep</text>
+    <text class="out" x="570" y="146">OFF: repressor sits on the operator</text>
+  </g>
+  <g>
+    <text class="nm" x="24" y="208">2. Lactose, no glucose</text>
+    <rect class="reg" x="252" y="196" width="46" height="20"/>
+    <rect class="gene" x="298" y="196" width="242" height="20"/>
+    <ellipse class="rep" cx="150" cy="180" rx="34" ry="14"/><text class="rl" x="133" y="185">Rep</text>
+    <circle class="reg" cx="196" cy="180" r="10"/>
+    <text class="sub" x="100" y="208">allolactose bound: repressor leaves</text>
+    <ellipse class="reg" cx="176" cy="150" rx="40" ry="13"/><text class="rl" x="146" y="155">cAMP-CAP</text>
+    <path class="rna" d="M300 170 L540 170" marker-end="url(#l1)"/>
+    <text class="out" x="570" y="212">FULLY ON: high transcription</text>
+  </g>
+  <g>
+    <text class="nm" x="24" y="282">3. Lactose and glucose</text>
+    <rect class="reg" x="252" y="270" width="46" height="20"/>
+    <rect class="gene" x="298" y="270" width="242" height="20"/>
+    <ellipse class="rep" cx="150" cy="254" rx="34" ry="14"/><text class="rl" x="133" y="259">Rep</text>
+    <text class="sub" x="100" y="282">no cAMP-CAP: promoter is weak</text>
+    <path class="rna" d="M300 248 L360 248" marker-end="url(#l1)"/>
+    <text class="out" x="570" y="286">BARELY ON: catabolite repression</text>
+  </g>
+  <g>
+    <text class="nm" x="24" y="348">4. No lactose, glucose present</text>
+    <rect class="reg" x="252" y="336" width="46" height="20"/>
+    <rect class="gene" x="298" y="336" width="242" height="20"/>
+    <ellipse class="rep" cx="275" cy="318" rx="34" ry="14"/><text class="rl" x="258" y="323">Rep</text>
+    <text class="out" x="570" y="352">OFF: both controls say no</text>
+  </g>
+  <text class="sub" x="24" y="398">Negative control (repressor and operator) sets whether transcription is allowed; positive control (cAMP-CAP) sets how strong it is.</text>
+  <text class="sub" x="24" y="416">The cell therefore uses glucose first and turns to lactose only when glucose runs out.</text>
+</svg>

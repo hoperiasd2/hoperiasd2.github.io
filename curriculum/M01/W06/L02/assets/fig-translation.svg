@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 430" width="860" height="430" role="img"
+     aria-label="Steps of translation on the ribosome showing the A, P and E sites, entry of aminoacyl transfer RNA, peptide bond formation, translocation and termination">
+  <style>
+    .ttl{font:700 15px sans-serif;fill:#003c71}
+    .hd{font:700 12.5px sans-serif;fill:#003c71}
+    .lab{font:700 11.5px sans-serif;fill:#16191d}
+    .sub{font:10.5px sans-serif;fill:#4a5159}
+    .rib{fill:#eff4f8;stroke:#003c71;stroke-width:2}
+    .small{fill:#ffffff;stroke:#003c71;stroke-width:2}
+    .mrna{stroke:#16191d;stroke-width:3;fill:none}
+    .trna{fill:none;stroke:#003c71;stroke-width:2.4}
+    .aa{fill:#f2b705;stroke:#16191d;stroke-width:1.2}
+    .ar{stroke:#16191d;stroke-width:2.2;fill:none;marker-end:url(#al)}
+    .box{fill:#ffffff;stroke:#c6d2dd;stroke-width:1.3}
+    .site{fill:#fff5d6;stroke:#f2b705;stroke-width:1.4}
+  </style>
+  <defs>
+    <marker id="al" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#16191d"/></marker>
+  </defs>
+  <text class="ttl" x="26" y="24">Translation: one elongation cycle on the ribosome</text>
+
+  <g transform="translate(40,50)">
+    <text class="hd" x="0" y="0">1. Aminoacyl-tRNA enters the A site</text>
+    <path class="rib" d="M10 30 q110 -22 220 0 q10 54 0 72 q-110 20 -220 0 q-10 -20 0 -72 z"/>
+    <rect class="site" x="40" y="74" width="54" height="26" rx="3"/><text class="lab" x="60" y="92">E</text>
+    <rect class="site" x="96" y="74" width="54" height="26" rx="3"/><text class="lab" x="116" y="92">P</text>
+    <rect class="site" x="152" y="74" width="54" height="26" rx="3"/><text class="lab" x="172" y="92">A</text>
+    <path class="mrna" d="M0 112 L240 112"/>
+    <text class="sub" x="0" y="130">mRNA, 5' to 3'</text>
+    <path class="trna" d="M120 74 L120 48"/>
+    <circle class="aa" cx="120" cy="40" r="8"/>
+    <path class="trna" d="M178 74 L178 48"/>
+    <circle class="aa" cx="178" cy="40" r="8"/>
+    <path class="ar" d="M212 24 L182 36"/>
+    <text class="sub" x="214" y="20">GTP used</text>
+  </g>
+
+  <g transform="translate(330,50)">
+    <text class="hd" x="0" y="0">2. Peptide bond formed by rRNA</text>
+    <path class="rib" d="M10 30 q110 -22 220 0 q10 54 0 72 q-110 20 -220 0 q-10 -20 0 -72 z"/>
+    <rect class="site" x="40" y="74" width="54" height="26" rx="3"/><text class="lab" x="60" y="92">E</text>
+    <rect class="site" x="96" y="74" width="54" height="26" rx="3"/><text class="lab" x="116" y="92">P</text>
+    <rect class="site" x="152" y="74" width="54" height="26" rx="3"/><text class="lab" x="172" y="92">A</text>
+    <path class="mrna" d="M0 112 L240 112"/>
+    <path class="trna" d="M120 74 L120 56"/>
+    <path class="trna" d="M178 74 L178 48"/>
+    <circle class="aa" cx="178" cy="40" r="8"/>
+    <circle class="aa" cx="160" cy="26" r="8"/>
+    <path class="mrna" d="M168 32 L174 36" stroke-width="2"/>
+    <text class="sub" x="0" y="132">peptidyl transferase activity is in the large subunit rRNA</text>
+  </g>
+
+  <g transform="translate(40,230)">
+    <text class="hd" x="0" y="0">3. Translocation by one codon; empty tRNA leaves at E</text>
+    <path class="rib" d="M68 30 q110 -22 220 0 q10 54 0 72 q-110 20 -220 0 q-10 -20 0 -72 z"/>
+    <rect class="site" x="98" y="74" width="54" height="26" rx="3"/><text class="lab" x="118" y="92">E</text>
+    <rect class="site" x="154" y="74" width="54" height="26" rx="3"/><text class="lab" x="174" y="92">P</text>
+    <rect class="site" x="210" y="74" width="54" height="26" rx="3"/><text class="lab" x="230" y="92">A</text>
+    <path class="mrna" d="M0 112 L300 112"/>
+    <path class="trna" d="M178 74 L178 48"/>
+    <circle class="aa" cx="178" cy="40" r="8"/>
+    <circle class="aa" cx="160" cy="26" r="8"/>
+    <path class="trna" d="M124 74 L124 56"/>
+    <path class="ar" d="M106 56 L72 44"/>
+    <text class="sub" x="12" y="38">tRNA exits</text>
+    <path class="ar" d="M28 112 L60 112"/>
+    <text class="sub" x="0" y="138">GTP used; ribosome moves 3 nucleotides along the mRNA, then the cycle repeats</text>
+  </g>
+
+  <rect class="box" x="440" y="230" width="394" height="104" rx="6"/>
+  <text class="hd" x="452" y="252">4. Termination</text>
+  <text class="sub" x="452" y="274">A stop codon (UAA, UAG, UGA) reaches the A site. No tRNA matches it.</text>
+  <text class="sub" x="452" y="292">A release factor binds and the finished chain is hydrolysed off the tRNA.</text>
+  <text class="sub" x="452" y="310">Subunits dissociate and are reused.</text>
+  <text class="sub" x="452" y="328">Cost: about 4 ATP equivalents per amino acid added.</text>
+
+  <rect class="box" x="26" y="366" width="808" height="56" rx="6"/>
+  <text class="hd" x="38" y="388">Initiation differs between prokaryotes and eukaryotes</text>
+  <text class="sub" x="38" y="408">Bacteria: 16S rRNA pairs with the Shine-Dalgarno sequence; several start sites per mRNA (polycistronic); first residue is N-formylmethionine.</text>
+  <text class="sub" x="38" y="420">Eukaryotes: initiation factors bind the 5' cap and scan for the first AUG; usually one protein per transcript (monocistronic); 80S ribosome (60S + 40S).</text>
+</svg>

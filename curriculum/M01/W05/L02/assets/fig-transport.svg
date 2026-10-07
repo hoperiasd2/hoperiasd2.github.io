@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 440" width="860" height="440" role="img"
+     aria-label="Comparison of simple diffusion, facilitated diffusion through channels and carriers, primary active transport and secondary active transport, with transport rate curves">
+  <style>
+    .ttl{font:700 15px sans-serif;fill:#003c71}
+    .hd{font:700 12.5px sans-serif;fill:#003c71}
+    .lab{font:700 11.5px sans-serif;fill:#16191d}
+    .sub{font:11px sans-serif;fill:#4a5159}
+    .head{fill:#003c71}
+    .tail{stroke:#16191d;stroke-width:1.4;fill:none}
+    .prot{fill:#fff5d6;stroke:#003c71;stroke-width:2}
+    .ar{stroke:#16191d;stroke-width:2;fill:none;marker-end:url(#at)}
+    .ary{stroke:#f2b705;stroke-width:2.6;fill:none;marker-end:url(#at2)}
+    .ax{stroke:#16191d;stroke-width:2}
+    .box{fill:#ffffff;stroke:#c6d2dd;stroke-width:1.2}
+  </style>
+  <defs>
+    <marker id="at" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#16191d"/>
+    </marker>
+    <marker id="at2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#f2b705"/>
+    </marker>
+    <g id="lt">
+      <circle class="head" cx="0" cy="0" r="4.5"/>
+      <path class="tail" d="M-2 4 l-1.6 8 l1.6 8 M2 4 l1.6 8 l-1.6 8"/>
+    </g>
+    <g id="bil">
+      <use href="#lt" x="0" y="0"/><use href="#lt" x="15" y="0"/><use href="#lt" x="30" y="0"/><use href="#lt" x="45" y="0"/>
+      <use href="#lt" x="60" y="0"/><use href="#lt" x="75" y="0"/><use href="#lt" x="90" y="0"/><use href="#lt" x="105" y="0"/>
+      <use href="#lt" x="120" y="0"/><use href="#lt" x="135" y="0"/><use href="#lt" x="150" y="0"/><use href="#lt" x="165" y="0"/>
+    </g>
+  </defs>
+  <text class="ttl" x="26" y="24">Three modes of membrane transport</text>
+  <text class="sub" x="26" y="44">High concentration is drawn above the membrane in every panel. OUT = extracellular, IN = cytosol.</text>
+
+  <g transform="translate(30,70)">
+    <text class="hd" x="0" y="0">1. Simple diffusion</text>
+    <use href="#bil" x="0" y="34"/>
+    <g transform="translate(0,124) scale(1,-1)"><use href="#bil" x="0" y="34"/></g>
+    <path class="ar" d="M44 20 L44 108"/>
+    <path class="ar" d="M118 20 L118 108"/>
+    <circle cx="44" cy="12" r="5" fill="#16191d"/>
+    <circle cx="118" cy="12" r="5" fill="#16191d"/>
+    <text class="sub" x="0" y="150">no protein; O2, CO2, N2,</text>
+    <text class="sub" x="0" y="166">water, urea, glycerol</text>
+    <text class="lab" x="0" y="188">driving force: gradient</text>
+    <text class="lab" x="0" y="204">not saturable</text>
+  </g>
+
+  <g transform="translate(240,70)">
+    <text class="hd" x="0" y="0">2. Facilitated diffusion</text>
+    <use href="#bil" x="0" y="34"/>
+    <g transform="translate(0,124) scale(1,-1)"><use href="#bil" x="0" y="34"/></g>
+    <rect class="prot" x="28" y="22" width="30" height="86" rx="6"/>
+    <rect x="38" y="22" width="10" height="86" fill="#ffffff" stroke="#003c71" stroke-width="1.2"/>
+    <path class="ar" d="M43 14 L43 116"/>
+    <text class="lab" x="14" y="150">channel</text>
+    <text class="sub" x="0" y="166">1e7-1e8 ions/s, gated</text>
+
+    <path class="prot" d="M118 22 q28 0 28 20 q0 23 -14 23 q14 0 14 23 q0 20 -28 20 q-28 0 -28 -20 q0 -23 14 -23 q-14 0 -14 -23 q0 -20 28 -20 z"/>
+    <circle cx="118" cy="40" r="6" fill="#f2b705" stroke="#16191d" stroke-width="1"/>
+    <path class="ar" d="M118 90 L118 118"/>
+    <text class="lab" x="100" y="188">carrier</text>
+    <text class="sub" x="86" y="204">1e2-1e4/s, GLUT1, GLUT4</text>
+  </g>
+
+  <g transform="translate(470,70)">
+    <text class="hd" x="0" y="0">3a. Primary active transport</text>
+    <use href="#bil" x="0" y="34"/>
+    <g transform="translate(0,124) scale(1,-1)"><use href="#bil" x="0" y="34"/></g>
+    <rect class="prot" x="46" y="22" width="44" height="86" rx="8"/>
+    <text class="lab" x="52" y="68">ATPase</text>
+    <path class="ary" d="M34 112 L34 18"/>
+    <text class="lab" x="8" y="14">Na+ out</text>
+    <path class="ary" d="M102 18 L102 112"/>
+    <text class="lab" x="96" y="14">K+ in</text>
+    <text class="sub" x="0" y="150">ATP to ADP + Pi directly</text>
+    <text class="sub" x="0" y="166">3 Na+ out, 2 K+ in per ATP</text>
+    <text class="sub" x="0" y="182">SERCA, H+/K+-ATPase,</text>
+    <text class="sub" x="0" y="198">P-glycoprotein</text>
+  </g>
+
+  <g transform="translate(680,70)">
+    <text class="hd" x="0" y="0">3b. Secondary active</text>
+    <use href="#bil" x="0" y="34"/>
+    <g transform="translate(0,124) scale(1,-1)"><use href="#bil" x="0" y="34"/></g>
+    <rect class="prot" x="52" y="22" width="44" height="86" rx="8"/>
+    <text class="lab" x="56" y="68">SGLT1</text>
+    <path class="ar" d="M40 18 L40 112"/>
+    <text class="lab" x="20" y="14">Na+ (down)</text>
+    <path class="ary" d="M108 18 L108 112"/>
+    <text class="lab" x="98" y="14">glucose (up)</text>
+    <text class="sub" x="0" y="150">uses the gradient made by</text>
+    <text class="sub" x="0" y="166">a primary pump</text>
+    <text class="sub" x="0" y="182">symport: same direction</text>
+    <text class="sub" x="0" y="198">antiport: opposite directions</text>
+  </g>
+
+  <rect class="box" x="26" y="296" width="380" height="126" rx="6"/>
+  <text class="hd" x="38" y="316">Transport rate against solute concentration</text>
+  <line class="ax" x1="70" y1="402" x2="380" y2="402"/>
+  <line class="ax" x1="70" y1="402" x2="70" y2="330"/>
+  <text class="sub" x="300" y="416">concentration</text>
+  <text class="sub" x="30" y="340">rate</text>
+  <path d="M70 402 L250 334" stroke="#16191d" stroke-width="2.4" fill="none"/>
+  <text class="lab" x="254" y="336">simple diffusion (linear)</text>
+  <path d="M70 402 q90 -50 180 -56 q60 -2 110 -2" stroke="#003c71" stroke-width="2.4" fill="none"/>
+  <text class="lab" x="200" y="378">carrier or pump (saturates)</text>
+
+  <rect class="box" x="422" y="296" width="412" height="126" rx="6"/>
+  <text class="hd" x="434" y="316">How to tell the modes apart experimentally</text>
+  <text class="sub" x="434" y="340">Raise the concentration: linear means no protein is involved.</text>
+  <text class="sub" x="434" y="358">Saturation means a finite number of binding sites, so a protein carries it.</text>
+  <text class="sub" x="434" y="376">Deplete ATP: if transport stops, it is active transport.</text>
+  <text class="sub" x="434" y="394">Remove only the Na+ gradient: if transport stops, it is secondary active.</text>
+  <text class="sub" x="434" y="412">Add a structural analogue: competition shows a specific binding site.</text>
+</svg>

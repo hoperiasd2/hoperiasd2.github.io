@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 420" width="840" height="420" role="img"
+     aria-label="SMN2 exon 7 splicing: the c.840C to T change turns an enhancer into a silencer bound by hnRNP A1, and an antisense oligonucleotide bound to ISS-N1 in intron 7 restores exon 7 inclusion">
+  <style>
+    .ex { fill:#003c71; stroke:#16191d; stroke-width:1.3; }
+    .e7 { fill:#f2b705; stroke:#16191d; stroke-width:1.3; }
+    .ln { stroke:#16191d; stroke-width:1.8; fill:none; }
+    .ttl { font:700 14px sans-serif; fill:#003c71; }
+    .nm { font:700 13px sans-serif; fill:#003c71; }
+    .sub { font:11px sans-serif; fill:#4a5159; }
+    .el { font:700 11px sans-serif; fill:#ffffff; }
+    .ek { font:700 11px sans-serif; fill:#16191d; }
+    .prot { fill:#fff5d6; stroke:#003c71; stroke-width:1.3; }
+    .pl { font:700 11px sans-serif; fill:#003c71; }
+    .out { font:700 11px sans-serif; fill:#8a6300; }
+    .aso { fill:#003c71; stroke:#16191d; stroke-width:1.2; }
+  </style>
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#16191d"/>
+    </marker>
+  </defs>
+  <text class="ttl" x="20" y="24">SMN1 versus SMN2: one silent nucleotide decides whether exon 7 is kept</text>
+
+  <text class="nm" x="20" y="64">SMN1</text>
+  <rect class="ex" x="110" y="52" width="70" height="22"/><text class="el" x="132" y="68">Ex6</text>
+  <rect class="e7" x="290" y="52" width="70" height="22"/><text class="ek" x="312" y="68">Ex7</text>
+  <rect class="ex" x="470" y="52" width="70" height="22"/><text class="el" x="492" y="68">Ex8</text>
+  <path class="ln" d="M180 63 L290 63 M360 63 L470 63"/>
+  <ellipse class="prot" cx="325" cy="28" rx="40" ry="14"/><text class="pl" x="300" y="33">SRSF1</text>
+  <text class="sub" x="300" y="92">C at exon 7 position 6: ESE intact</text>
+  <text class="out" x="580" y="68">Exon 7 included</text>
+  <text class="out" x="580" y="86">full-length SMN</text>
+
+  <text class="nm" x="20" y="168">SMN2</text>
+  <text class="sub" x="20" y="184">c.840C&gt;T, silent</text>
+  <rect class="ex" x="110" y="156" width="70" height="22"/><text class="el" x="132" y="172">Ex6</text>
+  <rect class="e7" x="290" y="156" width="70" height="22"/><text class="ek" x="312" y="172">Ex7</text>
+  <rect class="ex" x="470" y="156" width="70" height="22"/><text class="el" x="492" y="172">Ex8</text>
+  <path class="ln" d="M180 167 L290 167 M360 167 L470 167"/>
+  <ellipse class="prot" cx="325" cy="132" rx="52" ry="14"/><text class="pl" x="288" y="137">hnRNP A1</text>
+  <ellipse class="prot" cx="420" cy="132" rx="52" ry="14"/><text class="pl" x="383" y="137">hnRNP A1</text>
+  <text class="sub" x="382" y="196">ISS-N1 in intron 7</text>
+  <path class="ln" d="M180 182 L230 206 L420 206 L470 182" marker-end="url(#ar)"/>
+  <text class="out" x="580" y="166">Exon 7 skipped in</text>
+  <text class="out" x="580" y="184">80-90% of transcripts</text>
+  <text class="out" x="580" y="202">SMN delta-7: unstable</text>
+
+  <text class="nm" x="20" y="288">SMN2 + nusinersen</text>
+  <text class="sub" x="20" y="304">18-mer 2'-MOE</text>
+  <text class="sub" x="20" y="320">phosphorothioate ASO</text>
+  <rect class="ex" x="110" y="276" width="70" height="22"/><text class="el" x="132" y="292">Ex6</text>
+  <rect class="e7" x="290" y="276" width="70" height="22"/><text class="ek" x="312" y="292">Ex7</text>
+  <rect class="ex" x="470" y="276" width="70" height="22"/><text class="el" x="492" y="292">Ex8</text>
+  <path class="ln" d="M180 287 L290 287 M360 287 L470 287"/>
+  <rect class="aso" x="384" y="246" width="78" height="16" rx="8"/>
+  <text class="pl" x="392" y="240" fill="#003c71">ASO on ISS-N1</text>
+  <path class="ln" d="M423 262 L423 276"/>
+  <text class="sub" x="300" y="252">hnRNP A1 cannot bind</text>
+  <text class="out" x="580" y="286">Exon 7 inclusion</text>
+  <text class="out" x="580" y="304">restored, full-length</text>
+  <text class="out" x="580" y="322">SMN increases</text>
+
+  <rect x="20" y="346" width="800" height="58" rx="4" fill="#fff5d6" stroke="#c6d2dd"/>
+  <text class="nm" x="36" y="368">SMN2 copy number sets severity: 2 copies - type 1, 3 copies - type 2, 4 or more - type 3 or 4</text>
+  <text class="sub" x="36" y="390">ASO does not cross the blood-brain barrier, so nusinersen is given intrathecally; risdiplam is an oral small-molecule splicing modifier.</text>
+</svg>

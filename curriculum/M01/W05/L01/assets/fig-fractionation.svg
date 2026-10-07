@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 430" width="860" height="430" role="img"
+     aria-label="Differential centrifugation yielding nuclear, mitochondrial and microsomal pellets, and density gradient centrifugation separating by sedimentation velocity or by equilibrium density">
+  <style>
+    .ttl{font:700 15px sans-serif;fill:#003c71}
+    .sub{font:11px sans-serif;fill:#4a5159}
+    .lab{font:700 11.5px sans-serif;fill:#16191d}
+    .hd{font:700 13px sans-serif;fill:#003c71}
+    .tube{fill:#ffffff;stroke:#16191d;stroke-width:2}
+    .sup{fill:#eff4f8}
+    .pel{fill:#f2b705}
+    .grad{stroke:#c6d2dd;stroke-width:1}
+    .ar{stroke:#16191d;stroke-width:1.8;fill:none;marker-end:url(#a3)}
+  </style>
+  <defs>
+    <marker id="a3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#16191d"/>
+    </marker>
+  </defs>
+  <text class="ttl" x="26" y="24">Subcellular fractionation by centrifugation</text>
+
+  <text class="hd" x="26" y="52">A. Differential centrifugation: speed is raised stepwise</text>
+
+  <g>
+    <path class="tube" d="M40 70 h56 v110 q0 24 -28 24 q-28 0 -28 -24 z"/>
+    <path class="sup" d="M42 72 h52 v108 q0 22 -26 22 q-26 0 -26 -22 z"/>
+    <text class="lab" x="40" y="222">homogenate</text>
+    <text class="sub" x="34" y="238">cells broken,</text>
+    <text class="sub" x="34" y="252">organelles intact</text>
+    <path class="ar" d="M106 140 L142 140"/>
+  </g>
+
+  <g>
+    <path class="tube" d="M150 70 h56 v110 q0 24 -28 24 q-28 0 -28 -24 z"/>
+    <path class="sup" d="M152 72 h52 v108 q0 22 -26 22 q-26 0 -26 -22 z"/>
+    <path class="pel" d="M152 170 h52 v10 q0 22 -26 22 q-26 0 -26 -22 z"/>
+    <text class="lab" x="146" y="222">600 x g, 10 min</text>
+    <text class="sub" x="146" y="238">pellet: nuclei,</text>
+    <text class="sub" x="146" y="252">unbroken cells</text>
+    <path class="ar" d="M216 140 L252 140"/>
+  </g>
+
+  <g>
+    <path class="tube" d="M260 70 h56 v110 q0 24 -28 24 q-28 0 -28 -24 z"/>
+    <path class="sup" d="M262 72 h52 v108 q0 22 -26 22 q-26 0 -26 -22 z"/>
+    <path class="pel" d="M262 174 h52 v6 q0 22 -26 22 q-26 0 -26 -22 z"/>
+    <text class="lab" x="250" y="222">15000 x g, 15 min</text>
+    <text class="sub" x="252" y="238">mitochondria,</text>
+    <text class="sub" x="252" y="252">lysosomes, peroxisomes</text>
+    <path class="ar" d="M326 140 L362 140"/>
+  </g>
+
+  <g>
+    <path class="tube" d="M370 70 h56 v110 q0 24 -28 24 q-28 0 -28 -24 z"/>
+    <path class="sup" d="M372 72 h52 v108 q0 22 -26 22 q-26 0 -26 -22 z"/>
+    <path class="pel" d="M372 178 h52 v2 q0 22 -26 22 q-26 0 -26 -22 z"/>
+    <text class="lab" x="356" y="222">100000 x g, 60 min</text>
+    <text class="sub" x="358" y="238">microsomes from ER</text>
+    <text class="sub" x="358" y="252">and Golgi, membranes</text>
+    <text class="sub" x="358" y="272">supernatant: cytosol</text>
+  </g>
+
+  <text class="hd" x="500" y="52">B. Density gradient centrifugation</text>
+
+  <g>
+    <path class="tube" d="M520 70 h56 v110 q0 24 -28 24 q-28 0 -28 -24 z"/>
+    <g class="grad">
+      <line x1="522" y1="92" x2="574" y2="92"/>
+      <line x1="522" y1="112" x2="574" y2="112"/>
+      <line x1="522" y1="132" x2="574" y2="132"/>
+      <line x1="522" y1="152" x2="574" y2="152"/>
+      <line x1="522" y1="172" x2="574" y2="172"/>
+    </g>
+    <rect x="524" y="100" width="48" height="7" fill="#003c71"/>
+    <rect x="524" y="132" width="48" height="7" fill="#f2b705"/>
+    <rect x="524" y="162" width="48" height="7" fill="#4a5159"/>
+    <text class="lab" x="504" y="222">velocity sedimentation</text>
+    <text class="sub" x="504" y="238">shallow gradient, short run;</text>
+    <text class="sub" x="504" y="252">separates mainly by SIZE</text>
+    <text class="sub" x="504" y="266">example: ribosome subunits</text>
+  </g>
+
+  <g>
+    <path class="tube" d="M680 70 h56 v110 q0 24 -28 24 q-28 0 -28 -24 z"/>
+    <g class="grad">
+      <line x1="682" y1="92" x2="734" y2="92"/>
+      <line x1="682" y1="112" x2="734" y2="112"/>
+      <line x1="682" y1="132" x2="734" y2="132"/>
+      <line x1="682" y1="152" x2="734" y2="152"/>
+      <line x1="682" y1="172" x2="734" y2="172"/>
+    </g>
+    <rect x="684" y="118" width="48" height="7" fill="#003c71"/>
+    <rect x="684" y="146" width="48" height="7" fill="#f2b705"/>
+    <text class="lab" x="664" y="222">equilibrium (isopycnic)</text>
+    <text class="sub" x="664" y="238">steep gradient, long run;</text>
+    <text class="sub" x="664" y="252">each particle stops where</text>
+    <text class="sub" x="664" y="266">gradient DENSITY matches it</text>
+  </g>
+
+  <text class="hd" x="26" y="312">C. Marker enzymes used to check which organelle is in a fraction</text>
+  <text class="sub" x="26" y="334">Mitochondria: succinate dehydrogenase.   Lysosomes: acid phosphatase.   Endoplasmic reticulum: glucose-6-phosphatase.</text>
+  <text class="sub" x="26" y="352">Plasma membrane: Na+/K+-ATPase.   Cytosol: lactate dehydrogenase.   Peroxisomes: catalase.</text>
+  <text class="sub" x="26" y="378">Sedimentation rate depends on particle size, particle density, medium viscosity and centrifugal force.</text>
+  <text class="sub" x="26" y="396">Two activities in one fraction mean the organelles were not separated; switch to equilibrium density separation.</text>
+</svg>

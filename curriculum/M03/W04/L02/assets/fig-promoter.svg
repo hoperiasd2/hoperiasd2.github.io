@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 410" width="880" height="410" role="img"
+     aria-label="Architecture of a eukaryotic protein-coding gene: distal enhancer and silencer, proximal promoter elements, core promoter with TATA box, and the general transcription factor assembly on RNA polymerase II">
+  <style>
+    .ttl { font:700 14px sans-serif; fill:#003c71; }
+    .nm { font:700 12px sans-serif; fill:#003c71; }
+    .sub { font:11px sans-serif; fill:#4a5159; }
+    .dna { stroke:#16191d; stroke-width:2.6; fill:none; }
+    .enh { fill:#f2b705; stroke:#16191d; stroke-width:1.2; }
+    .sil { fill:#ffffff; stroke:#16191d; stroke-width:1.4; }
+    .core { fill:#003c71; stroke:#16191d; stroke-width:1.2; }
+    .gene { fill:#003c71; stroke:#16191d; stroke-width:1.2; }
+    .gl { font:700 11px sans-serif; fill:#ffffff; }
+    .rl { font:700 11px sans-serif; fill:#16191d; }
+    .pol { fill:#e8eef4; stroke:#003c71; stroke-width:1.4; }
+    .med { fill:#fff5d6; stroke:#003c71; stroke-width:1.3; }
+    .ln { stroke:#16191d; stroke-width:1.4; fill:none; }
+    .tag { font:700 11px sans-serif; fill:#8a6300; }
+  </style>
+  <defs>
+    <marker id="p1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#003c71"/>
+    </marker>
+  </defs>
+  <text class="ttl" x="20" y="26">Regulatory architecture of a eukaryotic gene</text>
+
+  <path class="dna" d="M30 230 L850 230"/>
+  <rect class="enh" x="60" y="218" width="90" height="24"/><text class="rl" x="76" y="235">enhancer</text>
+  <rect class="sil" x="176" y="218" width="84" height="24"/><text class="rl" x="190" y="235">silencer</text>
+  <rect class="sil" x="286" y="218" width="78" height="24"/><text class="rl" x="300" y="235">insulator</text>
+  <rect class="enh" x="430" y="218" width="64" height="24"/><text class="rl" x="438" y="235">GC box</text>
+  <rect class="enh" x="500" y="218" width="76" height="24"/><text class="rl" x="508" y="235">CAAT box</text>
+  <rect class="core" x="600" y="218" width="68" height="24"/><text class="gl" x="608" y="235">TATA</text>
+  <rect class="gene" x="690" y="214" width="160" height="32"/><text class="gl" x="730" y="235">coding region</text>
+  <path class="ln" d="M676 254 L690 240" marker-end="url(#p1)" stroke="#003c71"/>
+  <text class="tag" x="640" y="272">+1 start site</text>
+
+  <text class="sub" x="40" y="206">kilobases to megabases away,</text>
+  <text class="sub" x="40" y="192">works in either orientation</text>
+  <text class="sub" x="286" y="206">blocks enhancer</text>
+  <text class="sub" x="286" y="192">crossing (CTCF)</text>
+  <text class="sub" x="424" y="206">proximal elements,</text>
+  <text class="sub" x="424" y="192">about -40 to -110</text>
+  <text class="sub" x="586" y="206">core promoter,</text>
+  <text class="sub" x="586" y="192">about -25 to -35</text>
+
+  <ellipse class="pol" cx="640" cy="140" rx="76" ry="26"/>
+  <text class="nm" x="596" y="145">RNA Pol II</text>
+  <ellipse class="med" cx="640" cy="98" rx="110" ry="20"/>
+  <text class="nm" x="572" y="104">general factors TFIIA-H</text>
+  <path class="ln" d="M640 166 L640 212"/>
+  <ellipse class="med" cx="380" cy="104" rx="98" ry="22"/>
+  <text class="nm" x="296" y="110">Mediator complex</text>
+  <path class="ln" d="M478 104 L530 100"/>
+  <path class="ln" d="M105 214 C120 160 240 128 290 112" marker-end="url(#p1)" stroke="#003c71"/>
+  <text class="sub" x="120" y="146">DNA loops so that a distant</text>
+  <text class="sub" x="120" y="164">enhancer reaches the promoter</text>
+
+  <text class="nm" x="30" y="318">Three classes of sequence</text>
+  <text class="sub" x="30" y="340">Core promoter: where the polymerase and general factors assemble. Sets the start site.</text>
+  <text class="sub" x="30" y="358">Proximal elements: nearby boxes bound by common factors. Set the basal level.</text>
+  <text class="sub" x="30" y="376">Response elements and enhancers: bound by signal-dependent factors. Set when and where the gene is on.</text>
+  <text class="sub" x="30" y="398">A locus control region can coordinate a whole gene cluster, as in the beta-globin locus.</text>
+</svg>

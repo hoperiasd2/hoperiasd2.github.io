@@ -1,4 +1,77 @@
 {
   "lesson_id": "M02-W08-L03",
-  "figures": []
+  "figures": [
+    {
+      "figure_id": "fig-glycerophospholipid",
+      "lesson_id": "M02-W08-L03",
+      "html_anchor": "#fig-glycerophospholipid",
+      "caption": "Glycerophospholipid의 일반 구조와 머리 부분에 따른 분류. sn-2가 phospholipase A2의 작용 위치이고, 머리 부분의 종류가 분자의 기능을 정한다.",
+      "asset_path": "assets/fig-glycerophospholipid.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-pl-synthesis",
+      "lesson_id": "M02-W08-L03",
+      "html_anchor": "#fig-pl-synthesis",
+      "caption": "Phospholipid 합성의 두 활성화 방식. CDP-diacylglycerol 경로는 지질을, CDP-choline 경로는 머리 부분을 활성화한다. 두 경로 모두 CTP를 쓴다.",
+      "asset_path": "assets/fig-pl-synthesis.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-phospholipases",
+      "lesson_id": "M02-W08-L03",
+      "html_anchor": "#fig-phospholipases",
+      "caption": "Phospholipase A1·A2·C·D의 작용 위치와 산물. PLA2가 sn-2에서 arachidonate를 떼어 내는 것이 eicosanoid 합성의 committed step이고, PLC는 PIP₂에서 IP₃와 diacylglycerol을 만든다.",
+      "asset_path": "assets/fig-phospholipases.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-surfactant",
+      "lesson_id": "M02-W08-L03",
+      "html_anchor": "#fig-surfactant",
+      "caption": "폐 surfactant의 조성과 작용. Type II alveolar cell이 CDP-choline 경로로 DPPC를 만들어 lamellar body에 저장하고 분비한다. Surfactant가 없으면 작은 alveolus가 허탈한다.",
+      "asset_path": "assets/fig-surfactant.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-sphingolipid",
+      "lesson_id": "M02-W08-L03",
+      "html_anchor": "#fig-sphingolipid",
+      "caption": "Sphingolipid의 구조와 ceramide의 합성. Serine과 palmitoyl-CoA에서 시작하는 네 반응이 ceramide를 만들고, 여기서 sphingomyelin과 glycosphingolipid로 갈라진다.",
+      "asset_path": "assets/fig-sphingolipid.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-sphingolipidoses",
+      "lesson_id": "M02-W08-L03",
+      "html_anchor": "#fig-sphingolipidoses",
+      "caption": "Sphingolipid의 lysosome 분해 경로와 주요 sphingolipidosis. 결손 효소, 축적되는 기질, 특징적 소견이 서로 대응한다.",
+      "asset_path": "assets/fig-sphingolipidoses.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    }
+  ]
 }

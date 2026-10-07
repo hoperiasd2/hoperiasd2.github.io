@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 400" width="860" height="400" role="img"
+     aria-label="Classes of mutation and their consequences, with human haemoglobin and repeat expansion examples">
+  <style>
+    .ttl { font:700 14px sans-serif; fill:#003c71; }
+    .hdc { fill:#003c71; }
+    .hdt { font:700 12px sans-serif; fill:#ffffff; }
+    .cell { fill:#ffffff; stroke:#c6d2dd; stroke-width:0.9; }
+    .alt { fill:#fff5d6; stroke:#c6d2dd; stroke-width:0.9; }
+    .t { font:11px sans-serif; fill:#16191d; }
+    .tb { font:700 11px sans-serif; fill:#003c71; }
+    .sub { font:11px sans-serif; fill:#4a5159; }
+  </style>
+  <text class="ttl" x="20" y="26">Classes of mutation, their effect on protein, and clinical examples</text>
+  <rect class="hdc" x="20" y="40" width="150" height="30"/><text class="hdt" x="32" y="60">Class</text>
+  <rect class="hdc" x="170" y="40" width="190" height="30"/><text class="hdt" x="182" y="60">Change in codon</text>
+  <rect class="hdc" x="360" y="40" width="230" height="30"/><text class="hdt" x="372" y="60">Effect on protein</text>
+  <rect class="hdc" x="590" y="40" width="250" height="30"/><text class="hdt" x="602" y="60">Example</text>
+
+  <rect class="cell" x="20" y="70" width="150" height="46"/><text class="tb" x="32" y="90">Silent</text><text class="sub" x="32" y="106">synonymous</text>
+  <rect class="cell" x="170" y="70" width="190" height="46"/><text class="t" x="182" y="90">usually third base</text><text class="t" x="182" y="106">same amino acid</text>
+  <rect class="cell" x="360" y="70" width="230" height="46"/><text class="t" x="372" y="90">none, unless a splicing</text><text class="t" x="372" y="106">element or codon usage changes</text>
+  <rect class="cell" x="590" y="70" width="250" height="46"/><text class="t" x="602" y="90">HBB codon 24 GGT to GGA</text><text class="t" x="602" y="106">activates a cryptic donor site</text>
+
+  <rect class="alt" x="20" y="116" width="150" height="46"/><text class="tb" x="32" y="136">Missense</text><text class="sub" x="32" y="152">conservative or not</text>
+  <rect class="alt" x="170" y="116" width="190" height="46"/><text class="t" x="182" y="136">one base, new amino</text><text class="t" x="182" y="152">acid specified</text>
+  <rect class="alt" x="360" y="116" width="230" height="46"/><text class="t" x="372" y="136">single residue replaced; severity</text><text class="t" x="372" y="152">depends on position and chemistry</text>
+  <rect class="alt" x="590" y="116" width="250" height="46"/><text class="t" x="602" y="136">HbS: HBB Glu6Val (GAG to GTG)</text><text class="t" x="602" y="152">HbC: Glu6Lys</text>
+
+  <rect class="cell" x="20" y="162" width="150" height="46"/><text class="tb" x="32" y="182">Nonsense</text>
+  <rect class="cell" x="170" y="162" width="190" height="46"/><text class="t" x="182" y="182">sense codon becomes</text><text class="t" x="182" y="198">UAA, UAG or UGA</text>
+  <rect class="cell" x="360" y="162" width="230" height="46"/><text class="t" x="372" y="182">truncated protein, or no protein</text><text class="t" x="372" y="198">at all if NMD removes the mRNA</text>
+  <rect class="cell" x="590" y="162" width="250" height="46"/><text class="t" x="602" y="182">beta-zero thalassemia,</text><text class="t" x="602" y="198">DMD nonsense alleles</text>
+
+  <rect class="alt" x="20" y="208" width="150" height="46"/><text class="tb" x="32" y="228">Frameshift</text><text class="sub" x="32" y="244">indel not x3</text>
+  <rect class="alt" x="170" y="208" width="190" height="46"/><text class="t" x="182" y="228">reading frame shifts</text><text class="t" x="182" y="244">from the indel onward</text>
+  <rect class="alt" x="360" y="208" width="230" height="46"/><text class="t" x="372" y="228">all downstream residues wrong,</text><text class="t" x="372" y="244">usually a premature stop</text>
+  <rect class="alt" x="590" y="208" width="250" height="46"/><text class="t" x="602" y="228">Tay-Sachs HEXA 4 bp insertion;</text><text class="t" x="602" y="244">out-of-frame DMD deletions</text>
+
+  <rect class="cell" x="20" y="254" width="150" height="46"/><text class="tb" x="32" y="274">In-frame indel</text>
+  <rect class="cell" x="170" y="254" width="190" height="46"/><text class="t" x="182" y="274">multiple of three</text><text class="t" x="182" y="290">bases added or lost</text>
+  <rect class="cell" x="360" y="254" width="230" height="46"/><text class="t" x="372" y="274">frame kept; residues added or</text><text class="t" x="372" y="290">removed, often partial function</text>
+  <rect class="cell" x="590" y="254" width="250" height="46"/><text class="t" x="602" y="274">CFTR F508del;</text><text class="t" x="602" y="290">in-frame DMD deletion (Becker)</text>
+
+  <rect class="alt" x="20" y="300" width="150" height="46"/><text class="tb" x="32" y="320">Repeat expansion</text>
+  <rect class="alt" x="170" y="300" width="190" height="46"/><text class="t" x="182" y="320">trinucleotide repeat</text><text class="t" x="182" y="336">copy number grows</text>
+  <rect class="alt" x="360" y="300" width="230" height="46"/><text class="t" x="372" y="320">gain of toxic protein, or loss of</text><text class="t" x="372" y="336">expression by promoter silencing</text>
+  <rect class="alt" x="590" y="300" width="250" height="46"/><text class="t" x="602" y="320">HTT CAG, 36 or more;</text><text class="t" x="602" y="336">FMR1 CGG, over 200</text>
+
+  <rect class="cell" x="20" y="346" width="820" height="46"/>
+  <text class="tb" x="32" y="366">Mitochondrial tRNA genes</text>
+  <text class="t" x="232" y="366">a single base in a tRNA gene impairs decoding of every mRNA that uses that codon family</text>
+  <text class="t" x="232" y="384">MELAS m.3243A&gt;G in MT-TL1 (tRNA-Leu); MERRF m.8344A&gt;G in MT-TK (tRNA-Lys)</text>
+</svg>

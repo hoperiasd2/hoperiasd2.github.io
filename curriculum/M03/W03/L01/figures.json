@@ -1,4 +1,77 @@
 {
   "lesson_id": "M03-W03-L01",
-  "figures": []
+  "figures": [
+    {
+      "figure_id": "fig-splice-consensus",
+      "lesson_id": "M03-W03-L01",
+      "html_anchor": "#fig-splice-consensus",
+      "caption": "Splice site consensus 서열. 5' splice site의 GU, 분지점 아데노신, polypyrimidine tract, 3' splice site의 AG가 intron의 경계를 지정한다.",
+      "asset_path": "assets/fig-splice-consensus.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-splice-mechanism",
+      "lesson_id": "M03-W03-L01",
+      "html_anchor": "#fig-splice-mechanism",
+      "caption": "Spliceosome의 조립과 두 번의 transesterification. U1·U2의 결합, U6의 교체, 분지점 2'-OH의 공격으로 생기는 lariat, 두 exon의 연결까지를 보인다.",
+      "asset_path": "assets/fig-splice-mechanism.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-alt-splicing",
+      "lesson_id": "M03-W03-L01",
+      "html_anchor": "#fig-alt-splicing",
+      "caption": "대체 splicing의 다섯 가지 유형. exon skipping, 상호 배타적 exon, 대체 5'·3' splice site, intron retention을 같은 유전자 구조에서 비교한다.",
+      "asset_path": "assets/fig-alt-splicing.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-hbb-splice",
+      "lesson_id": "M03-W03-L01",
+      "html_anchor": "#fig-hbb-splice",
+      "caption": "*HBB* 유전자의 splicing 변이. 5' splice site 파괴, 약화, cryptic site 생성, exon 내부 침묵 변이가 각각 어떤 전사체를 만드는지 비교한다.",
+      "asset_path": "assets/fig-hbb-splice.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-smn2-aso",
+      "lesson_id": "M03-W03-L01",
+      "html_anchor": "#fig-smn2-aso",
+      "caption": "*SMN2* exon 7 splicing과 nusinersen의 작용. c.840C>T가 ESE를 silencer로 바꾸어 exon 7이 탈락하며, intron 7의 ISS-N1에 결합하는 antisense oligonucleotide가 hnRNP A1을 막아 exon 7 포함을 회복시킨다.",
+      "asset_path": "assets/fig-smn2-aso.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-mrna-decay",
+      "lesson_id": "M03-W03-L01",
+      "html_anchor": "#fig-mrna-decay",
+      "caption": "mRNA 분해 경로. deadenylation에서 decapping을 거친 exonuclease 분해와, EJC 위치로 조기 종결 코돈을 판별하는 nonsense-mediated decay를 함께 보인다.",
+      "asset_path": "assets/fig-mrna-decay.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    }
+  ]
 }

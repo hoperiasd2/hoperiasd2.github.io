@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 400" width="880" height="400" role="img"
+     aria-label="Comparison of fasting ketosis, diabetic ketoacidosis and alcoholic ketoacidosis by insulin, glucose, ketone level and treatment">
+  <style>
+    .ttl { font:700 14px sans-serif; fill:#003c71; }
+    .nm { font:700 12.5px sans-serif; fill:#16191d; }
+    .sub { font:11.5px sans-serif; fill:#4a5159; }
+    .lab { font:700 11px sans-serif; fill:#8a6300; }
+    .nv { fill:#003c71; }
+    .st { font:700 12px sans-serif; fill:#fff; }
+    .bx { fill:#fff; stroke:#c6d2dd; stroke-width:1.4; }
+    .hd { fill:#eff4f8; stroke:#c6d2dd; stroke-width:1.4; }
+    .bk { fill:#fff5d6; stroke:#f2b705; stroke-width:2.2; }
+  </style>
+
+  <rect class="nv" x="20" y="34" width="210" height="30"/>
+  <rect class="nv" x="230" y="34" width="206" height="30"/>
+  <rect class="nv" x="436" y="34" width="206" height="30"/>
+  <rect class="nv" x="642" y="34" width="206" height="30"/>
+  <text class="st" x="36" y="54">Feature</text>
+  <text class="st" x="246" y="54">Fasting ketosis</text>
+  <text class="st" x="452" y="54">Diabetic ketoacidosis</text>
+  <text class="st" x="658" y="54">Alcoholic ketoacidosis</text>
+
+  <rect class="hd" x="20" y="64" width="828" height="34"/>
+  <text class="nm" x="36" y="86">Insulin</text>
+  <text class="sub" x="246" y="86">low but present</text>
+  <text class="sub" x="452" y="86">absent or ineffective</text>
+  <text class="sub" x="658" y="86">low, plus poor intake</text>
+
+  <rect class="bx" x="20" y="98" width="828" height="34"/>
+  <text class="nm" x="36" y="120">Blood glucose</text>
+  <text class="sub" x="246" y="120">normal or low</text>
+  <text class="sub" x="452" y="120">high, often above 250 mg/dL</text>
+  <text class="sub" x="658" y="120">low, normal or mildly high</text>
+
+  <rect class="hd" x="20" y="132" width="828" height="34"/>
+  <text class="nm" x="36" y="154">Total ketones</text>
+  <text class="sub" x="246" y="154">about 2-6 mmol/L</text>
+  <text class="sub" x="452" y="154">often above 15 mmol/L</text>
+  <text class="sub" x="658" y="154">high, strongly shifted to BHB</text>
+
+  <rect class="bx" x="20" y="166" width="828" height="34"/>
+  <text class="nm" x="36" y="188">Arterial pH</text>
+  <text class="sub" x="246" y="188">near normal; ketosis, not acidosis</text>
+  <text class="sub" x="452" y="188">below 7.30, anion gap raised</text>
+  <text class="sub" x="658" y="188">low; often mixed with alkalosis</text>
+
+  <rect class="hd" x="20" y="200" width="828" height="34"/>
+  <text class="nm" x="36" y="222">Driving mechanism</text>
+  <text class="sub" x="246" y="222">glycogen depleted, lipolysis on</text>
+  <text class="sub" x="452" y="222">unrestrained lipolysis, no brake</text>
+  <text class="sub" x="658" y="222">high NADH blocks the TCA cycle</text>
+
+  <rect class="bx" x="20" y="234" width="828" height="34"/>
+  <text class="nm" x="36" y="256">First treatment</text>
+  <text class="sub" x="246" y="256">food</text>
+  <text class="sub" x="452" y="256">fluid, then insulin, then potassium</text>
+  <text class="sub" x="658" y="256">thiamine, then glucose and saline</text>
+
+  <rect class="bk" x="20" y="286" width="404" height="96" rx="7"/>
+  <text class="lab" x="38" y="310">Why alcohol causes ketosis without hyperglycaemia</text>
+  <text class="sub" x="38" y="332">Ethanol oxidation generates a large NADH load. High NADH</text>
+  <text class="sub" x="38" y="350">slows the TCA cycle and blocks gluconeogenesis, so acetyl-CoA</text>
+  <text class="sub" x="38" y="368">is diverted to ketone bodies while glucose stays low.</text>
+
+  <rect class="bk" x="440" y="286" width="408" height="96" rx="7"/>
+  <text class="lab" x="458" y="310">Why glucose before thiamine is dangerous</text>
+  <text class="sub" x="458" y="332">Thiamine is the cofactor of pyruvate dehydrogenase and of</text>
+  <text class="sub" x="458" y="350">2-oxoglutarate dehydrogenase. A glucose load in a thiamine-</text>
+  <text class="sub" x="458" y="368">deficient patient can precipitate Wernicke encephalopathy.</text>
+</svg>

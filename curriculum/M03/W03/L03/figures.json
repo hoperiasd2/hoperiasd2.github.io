@@ -1,4 +1,77 @@
 {
   "lesson_id": "M03-W03-L03",
-  "figures": []
+  "figures": [
+    {
+      "figure_id": "fig-ribosome-structure",
+      "lesson_id": "M03-W03-L03",
+      "html_anchor": "#fig-ribosome-structure",
+      "caption": "원핵 70S, 진핵 80S, 사람 미토콘드리아 55S ribosome의 구성. 촉매 활성이 대단위 rRNA에 있고, 미토콘드리아 ribosome이 세균형에 가깝다.",
+      "asset_path": "assets/fig-ribosome-structure.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-apesites",
+      "lesson_id": "M03-W03-L03",
+      "html_anchor": "#fig-apesites",
+      "caption": "Ribosome의 세 tRNA 자리. A 자리에 들어오는 aminoacyl-tRNA, P 자리의 peptidyl-tRNA, E 자리로 빠져나가는 비어 있는 tRNA와 두 기능 중심의 위치를 보인다.",
+      "asset_path": "assets/fig-apesites.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-initiation",
+      "lesson_id": "M03-W03-L03",
+      "html_anchor": "#fig-initiation",
+      "caption": "원핵과 진핵의 번역 개시. Shine-Dalgarno 서열에 의한 직접 배치와, cap 결합 복합체가 훑어 내려가 첫 AUG를 찾는 방식을 비교한다.",
+      "asset_path": "assets/fig-initiation.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-elongation",
+      "lesson_id": "M03-W03-L03",
+      "html_anchor": "#fig-elongation",
+      "caption": "신장 주기의 세 단계. EF-Tu에 의한 A 자리 결합, peptidyl transferase에 의한 사슬 전달, EF-G에 의한 translocation을 순서대로 보인다.",
+      "asset_path": "assets/fig-elongation.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-termination",
+      "lesson_id": "M03-W03-L03",
+      "html_anchor": "#fig-termination",
+      "caption": "종결과 재순환, 그리고 polysome. Release factor가 A 자리에 들어가 가수분해를 유도하고, 분리된 소단위와 mRNA가 재사용되며, 하나의 mRNA에 여러 ribosome이 동시에 올라탄다.",
+      "asset_path": "assets/fig-termination.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-antibiotics",
+      "lesson_id": "M03-W03-L03",
+      "html_anchor": "#fig-antibiotics",
+      "caption": "번역 저해 약물과 독소의 결합 부위와 저해 단계. 소단위에 작용하는 약물과 대단위에 작용하는 약물이 구분된다.",
+      "asset_path": "assets/fig-antibiotics.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    }
+  ]
 }

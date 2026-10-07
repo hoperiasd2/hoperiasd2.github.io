@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 380" width="860" height="380" role="img"
+     aria-label="Elongation of palmitate in the endoplasmic reticulum and desaturation by delta-9, delta-6 and delta-5 desaturases, leading to arachidonic acid">
+  <style>
+    .ttl { font:700 14px sans-serif; fill:#003c71; }
+    .nm { font:700 12.5px sans-serif; fill:#16191d; }
+    .mn { font:700 12px monospace; fill:#16191d; }
+    .sub { font:11.5px sans-serif; fill:#4a5159; }
+    .lab { font:700 11px sans-serif; fill:#8a6300; }
+    .bx { fill:#fff; stroke:#c6d2dd; stroke-width:1.5; }
+    .bk { fill:#fff5d6; stroke:#f2b705; stroke-width:2.2; }
+    .ar { stroke:#003c71; stroke-width:2.2; fill:none; marker-end:url(#h); }
+  </style>
+  <defs><marker id="h" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+    <path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker></defs>
+
+  <text class="ttl" x="20" y="26">Elongation: smooth ER, two carbons at a time</text>
+  <rect class="bx" x="20" y="38" width="820" height="90" rx="7"/>
+  <text class="mn" x="40" y="66">Palmitoyl-CoA (16:0)</text>
+  <path class="ar" d="M208 62 L286 62"/>
+  <text class="mn" x="292" y="66">Stearoyl-CoA (18:0)</text>
+  <path class="ar" d="M452 62 L530 62"/>
+  <text class="mn" x="536" y="66">Arachidyl-CoA (20:0)</text>
+  <text class="sub" x="40" y="92">Same four reactions as the cytosolic cycle, but on separate ER enzymes and with CoA, not ACP, as the carrier.</text>
+  <text class="sub" x="40" y="112">Donor is malonyl-CoA; reductant is NADPH. In brain, very-long-chain acids for sphingolipid are made here.</text>
+
+  <text class="ttl" x="20" y="166">Desaturation: ER mixed-function oxidase, needs O2, NADH and cytochrome b5</text>
+  <rect class="bx" x="20" y="178" width="400" height="130" rx="7"/>
+  <text class="nm" x="38" y="204">Delta-9 desaturase (SCD1)</text>
+  <text class="mn" x="38" y="228">18:0 to 18:1(9), oleate</text>
+  <text class="sub" x="38" y="250">the only desaturation humans perform de novo</text>
+  <text class="nm" x="38" y="276">Delta-6 and delta-5 desaturases</text>
+  <text class="sub" x="38" y="296">act only on acids already unsaturated at C9 or beyond</text>
+
+  <rect class="bk" x="440" y="178" width="400" height="130" rx="7"/>
+  <text class="lab" x="458" y="202">From diet to eicosanoid precursor</text>
+  <text class="mn" x="458" y="228">Linoleate 18:2(9,12)</text>
+  <path class="ar" d="M624 224 L664 224"/>
+  <text class="sub" x="670" y="228">delta-6</text>
+  <text class="mn" x="458" y="256">18:3(6,9,12)</text>
+  <path class="ar" d="M580 252 L620 252"/>
+  <text class="sub" x="626" y="256">elongation, then delta-5</text>
+  <text class="mn" x="458" y="284">Arachidonate 20:4(5,8,11,14)</text>
+  <text class="sub" x="700" y="288">n-6</text>
+
+  <text class="sub" x="20" y="340">No human desaturase can act between C10 and the methyl end, so the n-6 and n-3 positions must be supplied by the diet.</text>
+  <text class="sub" x="20" y="360">Consequence: linoleate and alpha-linolenate are essential, whereas oleate and palmitate are not.</text>
+</svg>

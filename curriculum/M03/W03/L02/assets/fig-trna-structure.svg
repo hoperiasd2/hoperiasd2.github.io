@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 430" width="900" height="430" role="img"
+     aria-label="Transfer RNA shown as a cloverleaf secondary structure with acceptor stem, D arm, anticodon arm and T arm, and as the folded L-shaped tertiary structure">
+  <style>
+    .st { stroke:#003c71; stroke-width:7; fill:none; stroke-linecap:round; }
+    .lp { stroke:#16191d; stroke-width:2.2; fill:none; }
+    .ln { stroke:#16191d; stroke-width:2; fill:none; }
+    .ttl { font:700 14px sans-serif; fill:#003c71; }
+    .nm { font:700 12px sans-serif; fill:#003c71; }
+    .sub { font:11px sans-serif; fill:#4a5159; }
+    .seq { font:700 12px monospace; fill:#16191d; }
+    .mk { fill:none; stroke:#f2b705; stroke-width:3; }
+    .lead { stroke:#4a5159; stroke-width:1.1; stroke-dasharray:4 3; fill:none; }
+    .aa { fill:#f2b705; stroke:#16191d; stroke-width:1.2; }
+  </style>
+  <text class="ttl" x="20" y="26">A. Cloverleaf secondary structure (73-93 nucleotides)</text>
+  <text class="ttl" x="560" y="26">B. L-shaped tertiary structure</text>
+
+  <path class="st" d="M230 74 L230 134"/>
+  <path class="st" d="M262 74 L262 134"/>
+  <path class="lp" d="M230 74 L230 60 M262 74 L262 60"/>
+  <text class="seq" x="206" y="54">5'</text>
+  <text class="seq" x="256" y="54">3'</text>
+  <text class="seq" x="276" y="70">A</text>
+  <text class="seq" x="276" y="56">C</text>
+  <text class="seq" x="276" y="42">C</text>
+  <circle class="aa" cx="312" cy="38" r="16"/>
+  <text class="nm" x="296" y="42" fill="#16191d">aa</text>
+  <path class="lead" d="M340 38 L392 38"/>
+  <text class="nm" x="398" y="34">Amino acid esterified to</text>
+  <text class="sub" x="398" y="52">the 3'-OH of the terminal A</text>
+  <text class="nm" x="150" y="106">Acceptor</text>
+  <text class="nm" x="158" y="122">stem</text>
+
+  <path class="st" d="M230 134 L146 160"/>
+  <path class="st" d="M242 160 L158 186"/>
+  <path class="lp" d="M146 160 C110 150 96 184 120 196 C138 206 152 192 158 186"/>
+  <text class="nm" x="86" y="226">D arm</text>
+  <text class="sub" x="62" y="242">dihydrouridine</text>
+
+  <path class="st" d="M262 134 L346 160"/>
+  <path class="st" d="M250 160 L334 186"/>
+  <path class="lp" d="M346 160 C382 150 396 184 372 196 C354 206 340 192 334 186"/>
+  <text class="nm" x="376" y="226">T arm</text>
+  <text class="sub" x="356" y="242">ribothymidine,</text>
+  <text class="sub" x="364" y="258">pseudouridine</text>
+
+  <path class="st" d="M242 186 L242 272"/>
+  <path class="st" d="M274 186 L274 272"/>
+  <path class="lp" d="M242 272 C236 310 282 310 274 272"/>
+  <text class="nm" x="208" y="234">Anticodon</text>
+  <text class="nm" x="226" y="250">stem</text>
+  <circle class="mk" cx="258" cy="300" r="26"/>
+  <text class="seq" x="238" y="328">3'-N N N-5'</text>
+  <path class="lead" d="M258 336 L258 356"/>
+  <text class="nm" x="196" y="374">Anticodon loop</text>
+  <text class="sub" x="150" y="392">reads the codon antiparallel; position 34</text>
+  <text class="sub" x="176" y="408">is the wobble base</text>
+  <text class="sub" x="330" y="286">variable loop</text>
+  <path class="lp" d="M292 186 C318 196 320 214 304 222"/>
+
+  <path class="st" d="M620 72 L620 212"/>
+  <path class="st" d="M620 212 L772 212"/>
+  <circle class="aa" cx="620" cy="56" r="16"/>
+  <text class="nm" x="604" y="60" fill="#16191d">aa</text>
+  <text class="nm" x="640" y="100">Acceptor end</text>
+  <text class="sub" x="640" y="118">CCA-3', binds the</text>
+  <text class="sub" x="640" y="136">peptidyl transferase site</text>
+  <circle class="mk" cx="784" cy="212" r="18"/>
+  <text class="nm" x="700" y="252">Anticodon end</text>
+  <text class="sub" x="652" y="270">about 7 nm from the acceptor end,</text>
+  <text class="sub" x="652" y="288">so one tRNA spans the ribosomal</text>
+  <text class="sub" x="652" y="306">decoding and catalytic centres</text>
+  <text class="sub" x="560" y="340">D arm and T arm loops pair with each other</text>
+  <text class="sub" x="560" y="358">to form the corner of the L.</text>
+  <text class="sub" x="560" y="384">Up to 10% of residues are modified bases;</text>
+  <text class="sub" x="560" y="402">inosine at position 34 widens codon reading.</text>
+</svg>

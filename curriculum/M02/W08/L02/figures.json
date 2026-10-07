@@ -1,4 +1,65 @@
 {
   "lesson_id": "M02-W08-L02",
-  "figures": []
+  "figures": [
+    {
+      "figure_id": "fig-ketone-structures",
+      "lesson_id": "M02-W08-L02",
+      "html_anchor": "#fig-ketone-structures",
+      "caption": "케톤체 세 가지의 구조. Acetoacetate와 beta-hydroxybutyrate는 pKa가 혈액 pH보다 훨씬 낮아 완전히 이온화되므로 방출될 때 proton을 함께 내놓는다. Acetone은 carboxyl기가 없어 산증에 기여하지 않고 호기로 배출된다.",
+      "asset_path": "assets/fig-ketone-structures.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-ketogenesis",
+      "lesson_id": "M02-W08-L02",
+      "html_anchor": "#fig-ketogenesis",
+      "caption": "간 미토콘드리아의 ketogenesis. HMG-CoA synthase가 rate-limiting step이고, HMG-CoA lyase가 acetoacetate를 내놓는다. 마지막 환원 반응의 평형은 미토콘드리아 NADH/NAD⁺ 비가 정한다.",
+      "asset_path": "assets/fig-ketogenesis.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-ketolysis",
+      "lesson_id": "M02-W08-L02",
+      "html_anchor": "#fig-ketolysis",
+      "caption": "말초 조직의 케톤체 이용과 간의 예외. SCOT이 succinyl-CoA에서 CoA를 옮겨 와 acetoacetate를 활성화한다. 간세포는 SCOT을 발현하지 않으므로 자신이 만든 케톤체를 쓰지 못한다.",
+      "asset_path": "assets/fig-ketolysis.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-ketoacidosis-types",
+      "lesson_id": "M02-W08-L02",
+      "html_anchor": "#fig-ketoacidosis-types",
+      "caption": "공복 ketosis, 당뇨병성 ketoacidosis, 알코올성 ketoacidosis의 비교. Insulin의 유무, 혈당, 케톤체 농도, 구동 기전, 일차 치료가 모두 다르다.",
+      "asset_path": "assets/fig-ketoacidosis-types.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-ketone-test",
+      "lesson_id": "M02-W08-L02",
+      "html_anchor": "#fig-ketone-test",
+      "caption": "케톤체 검사의 함정. Nitroprusside 시험지는 beta-hydroxybutyrate를 검출하지 못하고, NADH/NAD⁺ 비의 변화 때문에 내원 시에는 과소평가되고 치료 중에는 과대평가된다.",
+      "asset_path": "assets/fig-ketone-test.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    }
+  ]
 }

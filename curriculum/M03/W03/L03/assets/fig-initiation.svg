@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 420" width="880" height="420" role="img"
+     aria-label="Initiation of translation compared in prokaryotes, where the Shine-Dalgarno sequence positions the ribosome, and eukaryotes, where the cap-binding complex scans for the first AUG">
+  <style>
+    .ttl { font:700 14px sans-serif; fill:#003c71; }
+    .nm { font:700 13px sans-serif; fill:#003c71; }
+    .sub { font:11px sans-serif; fill:#4a5159; }
+    .mrna { stroke:#16191d; stroke-width:2.4; fill:none; }
+    .cod { font:700 12px monospace; fill:#16191d; }
+    .sub30 { fill:#f2b705; stroke:#16191d; stroke-width:1.2; }
+    .sub50 { fill:#003c71; stroke:#16191d; stroke-width:1.2; }
+    .bl { font:700 12px sans-serif; fill:#ffffff; }
+    .sl { font:700 12px sans-serif; fill:#16191d; }
+    .f { fill:#fff5d6; stroke:#003c71; stroke-width:1.2; }
+    .fl { font:700 11px sans-serif; fill:#003c71; }
+    .cap { fill:#f2b705; stroke:#16191d; stroke-width:1.2; }
+    .trna { stroke:#16191d; stroke-width:4.5; fill:none; stroke-linecap:round; }
+    .box { fill:#fff5d6; stroke:#c6d2dd; stroke-width:1; }
+  </style>
+  <defs>
+    <marker id="i1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#16191d"/>
+    </marker>
+  </defs>
+  <text class="ttl" x="20" y="26">A. Prokaryote: the Shine-Dalgarno sequence places the small subunit directly on the start codon</text>
+
+  <path class="mrna" d="M40 110 L700 110"/>
+  <text class="cod" x="20" y="114">5'</text><text class="cod" x="708" y="114">3'</text>
+  <rect class="box" x="150" y="96" width="96" height="28" rx="3"/>
+  <text class="cod" x="158" y="115">AGGAGG</text>
+  <text class="sub" x="140" y="90">Shine-Dalgarno</text>
+  <text class="cod" x="300" y="115">AUG</text>
+  <path class="sub30" d="M270 130 C270 120 420 120 420 130 L420 166 C420 182 270 182 270 166 Z"/>
+  <text class="sl" x="316" y="156">30S</text>
+  <path class="mrna" d="M200 134 C230 158 250 150 270 148" marker-end="url(#i1)"/>
+  <text class="sub" x="140" y="180">16S rRNA pairs with</text>
+  <text class="sub" x="150" y="196">Shine-Dalgarno</text>
+  <path class="trna" d="M300 96 L300 56"/>
+  <text class="fl" x="258" y="48">fMet-tRNA</text>
+  <ellipse class="f" cx="500" cy="112" rx="88" ry="16"/>
+  <text class="fl" x="448" y="117">IF-1, IF-2-GTP, IF-3</text>
+  <path class="sub50" d="M460 148 C460 138 610 138 610 148 L610 182 C610 198 460 198 460 182 Z"/>
+  <text class="bl" x="506" y="172">50S</text>
+  <path class="mrna" d="M450 166 L438 166" marker-end="url(#i1)"/>
+  <text class="sub" x="620" y="170">joins after GTP is</text>
+  <text class="sub" x="620" y="186">hydrolysed: 70S complex</text>
+
+  <text class="ttl" x="20" y="242">B. Eukaryote: the cap-binding complex loads at the 5' end and scans for the first AUG</text>
+
+  <circle class="cap" cx="54" cy="300" r="12"/>
+  <text class="sl" x="40" y="282">cap</text>
+  <path class="mrna" d="M66 300 L700 300"/>
+  <text class="cod" x="330" y="304">AUG</text>
+  <text class="cod" x="708" y="304">3'</text>
+  <ellipse class="f" cx="150" cy="268" rx="76" ry="16"/>
+  <text class="fl" x="92" y="273">eIF4E, 4G, 4A</text>
+  <path class="sub30" d="M106 316 C106 306 256 306 256 316 L256 352 C256 368 106 368 106 352 Z"/>
+  <text class="sl" x="140" y="342">40S + eIF2-GTP</text>
+  <path class="mrna" d="M266 336 L326 336" marker-end="url(#i1)"/>
+  <text class="sub" x="270" y="368">scanning, ATP-dependent</text>
+  <path class="trna" d="M160 306 L160 290"/>
+  <path class="sub50" d="M450 316 C450 306 600 306 600 316 L600 352 C600 368 450 368 450 352 Z"/>
+  <text class="bl" x="496" y="342">60S</text>
+  <text class="sub" x="620" y="330">eIF5 and eIF5B trigger</text>
+  <text class="sub" x="620" y="346">60S joining: 80S complex</text>
+  <text class="sub" x="330" y="402">eIF2 alpha phosphorylation (PKR, PERK, GCN2, HRI) blocks initiation globally and is the switch of the integrated stress response.</text>
+</svg>

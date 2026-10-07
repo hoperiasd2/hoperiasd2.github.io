@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 400" width="860" height="400" role="img"
+     aria-label="Coupled reactions sharing a common intermediate, with free energy values added to give a negative overall change, illustrated by hexokinase">
+  <style>
+    .ttl{font:700 15px sans-serif;fill:#003c71}
+    .hd{font:700 12.5px sans-serif;fill:#003c71}
+    .lab{font:700 12px sans-serif;fill:#16191d}
+    .sub{font:11px sans-serif;fill:#4a5159}
+    .box{fill:#ffffff;stroke:#c6d2dd;stroke-width:1.3}
+    .hl{fill:#fff5d6;stroke:#f2b705;stroke-width:1.8}
+    .ar{stroke:#16191d;stroke-width:2.2;fill:none;marker-end:url(#ac)}
+    .ary{stroke:#f2b705;stroke-width:2.6;fill:none;marker-end:url(#ac2)}
+    .bar{stroke-width:18;stroke-linecap:butt}
+    .ax{stroke:#16191d;stroke-width:2}
+  </style>
+  <defs>
+    <marker id="ac" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#16191d"/>
+    </marker>
+    <marker id="ac2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#f2b705"/>
+    </marker>
+  </defs>
+  <text class="ttl" x="26" y="24">Coupled reactions: free energies add because G is a state function</text>
+
+  <rect class="box" x="26" y="40" width="486" height="80" rx="6"/>
+  <text class="lab" x="40" y="66">Reaction 1 (endergonic, will not go alone)</text>
+  <text class="sub" x="40" y="88">Glucose + Pi  to  glucose-6-phosphate + H2O</text>
+  <text class="lab" x="40" y="108">Delta G standard = +13.8 kJ/mol</text>
+
+  <rect class="box" x="26" y="130" width="486" height="80" rx="6"/>
+  <text class="lab" x="40" y="156">Reaction 2 (exergonic, the energy source)</text>
+  <text class="sub" x="40" y="178">ATP + H2O  to  ADP + Pi</text>
+  <text class="lab" x="40" y="198">Delta G standard = -30.5 kJ/mol</text>
+
+  <rect class="hl" x="26" y="222" width="486" height="86" rx="6"/>
+  <text class="lab" x="40" y="248">Sum (what hexokinase actually catalyses)</text>
+  <text class="sub" x="40" y="270">Glucose + ATP  to  glucose-6-phosphate + ADP</text>
+  <text class="lab" x="40" y="292">Delta G standard = +13.8 - 30.5 = -16.7 kJ/mol, so it proceeds</text>
+
+  <line class="ax" x1="572" y1="300" x2="572" y2="60"/>
+  <text class="sub" x="552" y="52">kJ/mol</text>
+  <line class="bar" x1="610" y1="300" x2="610" y2="230" stroke="#c6d2dd"/>
+  <text class="sub" x="588" y="320">+13.8</text>
+  <line class="bar" x1="668" y1="300" x2="668" y2="146" stroke="#003c71"/>
+  <text class="sub" x="646" y="320">-30.5</text>
+  <line class="bar" x1="726" y1="300" x2="726" y2="216" stroke="#f2b705"/>
+  <text class="sub" x="704" y="320">-16.7</text>
+  <text class="sub" x="596" y="338">rxn 1</text>
+  <text class="sub" x="654" y="338">rxn 2</text>
+  <text class="sub" x="712" y="338">sum</text>
+
+  <rect class="box" x="26" y="326" width="486" height="58" rx="6"/>
+  <text class="hd" x="40" y="348">The reactions must share a COMMON INTERMEDIATE</text>
+  <text class="sub" x="40" y="370">Hexokinase transfers the gamma phosphate of ATP directly to the C6 hydroxyl of glucose; it is never released to water.</text>
+
+  <text class="hd" x="568" y="366">Three ways cells couple reactions</text>
+  <text class="sub" x="568" y="384">phosphoryl transfer / protein conformational change / exchange against a gradient</text>
+</svg>

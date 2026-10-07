@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 420" width="880" height="420" role="img"
+     aria-label="Protein folding helped by chaperones, and the three branches of the unfolded protein response when misfolded proteins accumulate in the endoplasmic reticulum">
+  <style>
+    .ttl { font:700 14px sans-serif; fill:#003c71; }
+    .nm { font:700 12px sans-serif; fill:#003c71; }
+    .sub { font:11px sans-serif; fill:#4a5159; }
+    .ch { stroke:#16191d; stroke-width:3; fill:none; stroke-linecap:round; }
+    .nat { fill:#003c71; stroke:#16191d; stroke-width:1.2; }
+    .mis { fill:#f2b705; stroke:#16191d; stroke-width:1.2; }
+    .cp { fill:#fff5d6; stroke:#003c71; stroke-width:1.3; }
+    .lb { font:700 11px sans-serif; fill:#003c71; }
+    .box { fill:#ffffff; stroke:#c6d2dd; stroke-width:1.2; }
+    .ln { stroke:#16191d; stroke-width:1.6; fill:none; }
+    .mem { fill:#c6d2dd; stroke:#16191d; stroke-width:1; }
+  </style>
+  <defs>
+    <marker id="c1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#16191d"/>
+    </marker>
+  </defs>
+  <text class="ttl" x="20" y="26">A. Folding is assisted, and failure has two exits</text>
+
+  <path class="ch" d="M40 80 C70 50 100 110 130 70 C160 40 180 100 210 78"/>
+  <text class="sub" x="52" y="118">nascent chain</text>
+  <path class="ln" d="M226 78 L286 78" marker-end="url(#c1)"/>
+  <ellipse class="cp" cx="256" cy="48" rx="56" ry="15"/>
+  <text class="lb" x="214" y="53">Hsp70, Hsp90</text>
+  <circle class="nat" cx="330" cy="78" r="26"/>
+  <text class="sub" x="302" y="124">native fold</text>
+  <path class="ln" d="M226 96 C256 140 290 150 324 150" marker-end="url(#c1)"/>
+  <path class="mis" d="M352 132 L398 140 L380 176 L344 164 Z"/>
+  <text class="sub" x="336" y="200">misfolded</text>
+  <path class="ln" d="M404 150 L466 150" marker-end="url(#c1)"/>
+  <ellipse class="cp" cx="536" cy="150" rx="68" ry="18"/>
+  <text class="lb" x="482" y="155">refold attempt</text>
+  <path class="ln" d="M404 168 C440 208 480 214 520 214" marker-end="url(#c1)"/>
+  <rect class="box" x="520" y="196" width="188" height="36" rx="4"/>
+  <text class="lb" x="534" y="220">ERAD: retro-translocation</text>
+  <path class="ln" d="M708 214 L760 214" marker-end="url(#c1)"/>
+  <text class="lb" x="766" y="210">ubiquitin-</text>
+  <text class="lb" x="766" y="226">proteasome</text>
+  <text class="sub" x="40" y="236">In the ER lumen: BiP holds unfolded chains, calnexin and calreticulin bind immature N-glycans,</text>
+  <text class="sub" x="40" y="254">protein disulfide isomerase forms and reshuffles disulfide bonds.</text>
+
+  <text class="ttl" x="20" y="296">B. Unfolded protein response: three sensors in the ER membrane</text>
+  <rect class="mem" x="20" y="312" width="840" height="14"/>
+  <rect class="box" x="60" y="332" width="230" height="74" rx="4"/>
+  <text class="nm" x="74" y="354">PERK</text>
+  <text class="sub" x="74" y="372">phosphorylates eIF2 alpha, so</text>
+  <text class="sub" x="74" y="390">global initiation slows and ATF4 rises</text>
+  <rect class="box" x="310" y="332" width="230" height="74" rx="4"/>
+  <text class="nm" x="324" y="354">ATF6</text>
+  <text class="sub" x="324" y="372">cleaved in the Golgi; the fragment</text>
+  <text class="sub" x="324" y="390">induces chaperone genes</text>
+  <rect class="box" x="560" y="332" width="280" height="74" rx="4"/>
+  <text class="nm" x="574" y="354">IRE1</text>
+  <text class="sub" x="574" y="372">splices XBP1 mRNA; spliced XBP1 induces</text>
+  <text class="sub" x="574" y="390">chaperones and ERAD components</text>
+  <text class="sub" x="60" y="328">Short term: fewer new proteins, more folding capacity. Sustained activation drives apoptosis.</text>
+</svg>

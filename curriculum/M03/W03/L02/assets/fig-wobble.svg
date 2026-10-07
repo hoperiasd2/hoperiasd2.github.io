@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 400" width="840" height="400" role="img"
+     aria-label="Wobble pairing between the first anticodon base and the third codon base, and the pairing rules for G, U and inosine">
+  <style>
+    .ttl { font:700 14px sans-serif; fill:#003c71; }
+    .nm { font:700 12px sans-serif; fill:#003c71; }
+    .sub { font:11px sans-serif; fill:#4a5159; }
+    .seq { font:700 16px monospace; fill:#16191d; }
+    .bar { stroke:#16191d; stroke-width:2; fill:none; }
+    .wob { stroke:#f2b705; stroke-width:3; fill:none; stroke-dasharray:5 3; }
+    .cell { fill:#ffffff; stroke:#c6d2dd; stroke-width:0.9; }
+    .hdc { fill:#003c71; }
+    .hdt { font:700 12px sans-serif; fill:#ffffff; }
+    .ct { font:700 12px monospace; fill:#16191d; }
+    .box { fill:#fff5d6; stroke:#c6d2dd; stroke-width:1; }
+  </style>
+  <text class="ttl" x="20" y="26">A. The codon and the anticodon pair antiparallel</text>
+
+  <text class="seq" x="150" y="76">5'-  C  U  G  -3'</text>
+  <text class="nm" x="60" y="76">mRNA codon</text>
+  <path class="bar" d="M198 86 L198 108 M246 86 L246 108"/>
+  <path class="wob" d="M296 86 L296 108"/>
+  <text class="seq" x="150" y="128">3'-  G  A  U  -5'</text>
+  <text class="nm" x="36" y="128">tRNA anticodon</text>
+  <text class="sub" x="152" y="152">position 36</text>
+  <text class="sub" x="248" y="152">position 34 (wobble base)</text>
+  <text class="sub" x="150" y="176">The third codon base is the least constrained: a single tRNA can read two or more codons.</text>
+  <text class="sub" x="150" y="194">A minimum of 31 tRNA species plus an initiator tRNA can read all 61 sense codons.</text>
+
+  <text class="ttl" x="20" y="240">B. Wobble pairing rules</text>
+  <rect class="hdc" x="20" y="252" width="200" height="28"/>
+  <text class="hdt" x="34" y="271">Anticodon base (position 34)</text>
+  <rect class="hdc" x="220" y="252" width="200" height="28"/>
+  <text class="hdt" x="234" y="271">Third codon base read</text>
+  <rect class="hdc" x="420" y="252" width="400" height="28"/>
+  <text class="hdt" x="434" y="271">Note</text>
+  <g>
+    <rect class="cell" x="20" y="280" width="200" height="28"/><text class="ct" x="34" y="299">C</text>
+    <rect class="cell" x="220" y="280" width="200" height="28"/><text class="ct" x="234" y="299">G only</text>
+    <rect class="cell" x="420" y="280" width="400" height="28"/><text class="ct" x="434" y="299">standard Watson-Crick pair</text>
+    <rect class="cell" x="20" y="308" width="200" height="28"/><text class="ct" x="34" y="327">A</text>
+    <rect class="cell" x="220" y="308" width="200" height="28"/><text class="ct" x="234" y="327">U only</text>
+    <rect class="cell" x="420" y="308" width="400" height="28"/><text class="ct" x="434" y="327">rare; usually converted to inosine</text>
+    <rect class="box" x="20" y="336" width="200" height="28"/><text class="ct" x="34" y="355">G</text>
+    <rect class="box" x="220" y="336" width="200" height="28"/><text class="ct" x="234" y="355">U or C</text>
+    <rect class="box" x="420" y="336" width="400" height="28"/><text class="ct" x="434" y="355">reads two codons of one family</text>
+    <rect class="box" x="20" y="364" width="200" height="28"/><text class="ct" x="34" y="383">U</text>
+    <rect class="box" x="220" y="364" width="200" height="28"/><text class="ct" x="234" y="383">A or G</text>
+    <rect class="box" x="420" y="364" width="400" height="28"/><text class="ct" x="434" y="383">modified U narrows or widens this</text>
+  </g>
+  <rect class="box" x="20" y="392" width="800" height="4"/>
+  <text class="nm" x="470" y="240">Inosine (I) at position 34 pairs with U, C or A - the widest reading</text>
+</svg>

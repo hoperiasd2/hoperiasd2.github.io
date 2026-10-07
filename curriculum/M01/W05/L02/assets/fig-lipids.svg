@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 420" width="860" height="420" role="img"
+     aria-label="Structures of membrane lipids: saturated and unsaturated fatty acids, triacylglycerol, glycerophospholipid, sphingomyelin and cholesterol">
+  <style>
+    .ttl{font:700 15px sans-serif;fill:#003c71}
+    .hd{font:700 12.5px sans-serif;fill:#003c71}
+    .lab{font:700 11.5px sans-serif;fill:#16191d}
+    .sub{font:11px sans-serif;fill:#4a5159}
+    .ch{stroke:#16191d;stroke-width:2.2;fill:none;stroke-linejoin:round}
+    .head{fill:#003c71}
+    .phos{fill:#f2b705;stroke:#16191d;stroke-width:1.2}
+    .box{fill:#ffffff;stroke:#c6d2dd;stroke-width:1.3}
+    .ring{stroke:#16191d;stroke-width:2;fill:none}
+  </style>
+  <text class="ttl" x="26" y="24">Lipids of the cell: polar heads (dark circles) and nonpolar tails (zig-zag chains)</text>
+
+  <rect class="box" x="26" y="38" width="250" height="168" rx="6"/>
+  <text class="hd" x="38" y="58">Fatty acids</text>
+  <circle class="head" cx="56" cy="92" r="9"/>
+  <text class="sub" x="40" y="78">COOH</text>
+  <path class="ch" d="M66 92 l14 -10 l14 10 l14 -10 l14 10 l14 -10 l14 10 l14 -10 l14 10 l14 -10"/>
+  <text class="lab" x="40" y="118">saturated, C16:0 palmitate</text>
+  <text class="sub" x="40" y="133">straight chain, melts at 63 C</text>
+  <circle class="head" cx="56" cy="166" r="9"/>
+  <path class="ch" d="M66 166 l14 -10 l14 10 l14 -10 l12 14 l16 -2 l14 10 l14 -10 l14 10"/>
+  <text class="lab" x="40" y="190">unsaturated, C18:1 oleate (cis)</text>
+  <text class="sub" x="40" y="202">kink of about 30 degrees, melts at 13 C</text>
+
+  <rect class="box" x="290" y="38" width="250" height="168" rx="6"/>
+  <text class="hd" x="302" y="58">Triacylglycerol</text>
+  <path class="ch" d="M318 78 L318 158" stroke-width="2.6"/>
+  <text class="sub" x="296" y="74">glycerol</text>
+  <g>
+    <path class="ch" d="M318 88 l16 0 l12 -8 l14 8 l14 -8 l14 8 l14 -8 l14 8"/>
+    <path class="ch" d="M318 118 l16 0 l12 -8 l14 8 l14 -8 l14 8 l14 -8 l14 8"/>
+    <path class="ch" d="M318 148 l16 0 l12 -8 l14 8 l14 -8 l14 8 l14 -8 l14 8"/>
+  </g>
+  <text class="sub" x="340" y="78">three ester bonds</text>
+  <text class="lab" x="302" y="182">no polar group: fully hydrophobic</text>
+  <text class="sub" x="302" y="196">energy store, 38 kJ per gram</text>
+
+  <rect class="box" x="554" y="38" width="280" height="168" rx="6"/>
+  <text class="hd" x="566" y="58">Glycerophospholipid</text>
+  <circle class="head" cx="588" cy="84" r="11"/>
+  <text class="sub" x="604" y="80">choline, ethanolamine,</text>
+  <text class="sub" x="604" y="94">serine or inositol</text>
+  <circle class="phos" cx="588" cy="112" r="9"/>
+  <text class="sub" x="604" y="116">phosphate</text>
+  <path class="ch" d="M588 122 L588 140" stroke-width="2.6"/>
+  <text class="sub" x="552" y="140">glycerol</text>
+  <path class="ch" d="M580 144 l0 14 l-10 10 l10 10 l-10 10 l10 10"/>
+  <path class="ch" d="M600 144 l0 14 l10 10 l-10 10 l10 10 l-10 10"/>
+  <text class="lab" x="566" y="196">amphipathic: polar head + two tails</text>
+
+  <rect class="box" x="26" y="222" width="250" height="176" rx="6"/>
+  <text class="hd" x="38" y="242">Sphingomyelin</text>
+  <circle class="head" cx="70" cy="268" r="11"/>
+  <text class="sub" x="86" y="264">phosphocholine</text>
+  <path class="ch" d="M70 280 L70 300" stroke-width="2.6"/>
+  <text class="sub" x="86" y="300">sphingosine backbone</text>
+  <path class="ch" d="M62 304 l0 14 l-10 10 l10 10 l-10 10 l10 10"/>
+  <path class="ch" d="M82 304 l0 14 l10 10 l-10 10 l10 10 l-10 10"/>
+  <text class="lab" x="38" y="386">same shape, different backbone</text>
+
+  <rect class="box" x="290" y="222" width="250" height="176" rx="6"/>
+  <text class="hd" x="302" y="242">Cholesterol</text>
+  <circle class="head" cx="330" cy="330" r="9"/>
+  <text class="sub" x="302" y="356">C3 -OH</text>
+  <path class="ring" d="M340 330 L340 300 L366 285 L392 300 L392 330 L366 345 Z"/>
+  <path class="ring" d="M392 300 L418 285 L444 300 L444 330 L418 345 L392 330"/>
+  <path class="ring" d="M444 300 L470 288 L488 312 L470 336 L444 330"/>
+  <path class="ch" d="M488 312 l16 -10 l14 10 l14 -10"/>
+  <text class="sub" x="300" y="268">27 carbons, four fused rings, rigid</text>
+  <text class="sub" x="300" y="284">side chain at C17</text>
+  <text class="lab" x="302" y="386">stiffens the head-side of the tails</text>
+
+  <rect class="box" x="554" y="222" width="280" height="176" rx="6"/>
+  <text class="hd" x="566" y="242">Why shape decides the aggregate</text>
+  <text class="sub" x="566" y="266">One tail, large head = cone shape</text>
+  <text class="lab" x="566" y="284">micelle</text>
+  <circle cx="660" cy="300" r="26" fill="#eff4f8" stroke="#c6d2dd"/>
+  <g stroke="#16191d" stroke-width="1.6">
+    <line x1="660" y1="280" x2="660" y2="300"/><line x1="678" y1="290" x2="660" y2="300"/>
+    <line x1="678" y1="310" x2="660" y2="300"/><line x1="660" y1="320" x2="660" y2="300"/>
+    <line x1="642" y1="310" x2="660" y2="300"/><line x1="642" y1="290" x2="660" y2="300"/>
+  </g>
+  <text class="sub" x="566" y="348">Two tails = cylinder shape</text>
+  <text class="lab" x="566" y="366">bilayer, which closes into a vesicle</text>
+  <text class="sub" x="566" y="386">bilayer thickness about 4-5 nm</text>
+</svg>

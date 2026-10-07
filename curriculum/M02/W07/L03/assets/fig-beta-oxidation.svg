@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 450" width="880" height="450" role="img"
+     aria-label="The four reactions of beta-oxidation: FAD-dependent oxidation, hydration, NAD-dependent oxidation and thiolytic cleavage, with the ATP yield from palmitate">
+  <style>
+    .ttl { font:700 14px sans-serif; fill:#003c71; }
+    .nm { font:700 12px monospace; fill:#16191d; }
+    .en { font:700 11.5px sans-serif; fill:#003c71; }
+    .sub { font:11.5px sans-serif; fill:#4a5159; }
+    .lab { font:700 11px sans-serif; fill:#8a6300; }
+    .bx { fill:#fff; stroke:#c6d2dd; stroke-width:1.5; }
+    .bk { fill:#fff5d6; stroke:#f2b705; stroke-width:2.2; }
+    .nv { fill:#003c71; }
+    .st { font:700 11px sans-serif; fill:#fff; }
+    .ar { stroke:#003c71; stroke-width:2.2; fill:none; marker-end:url(#h); }
+  </style>
+  <defs><marker id="h" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+    <path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker></defs>
+
+  <text class="ttl" x="20" y="26">One cycle removes two carbons as acetyl-CoA</text>
+
+  <rect class="nv" x="20" y="44" width="18" height="18" rx="3"/>
+  <text class="ttl" x="48" y="58">1  Oxidation</text>
+  <rect class="bx" x="20" y="68" width="470" height="62" rx="7"/>
+  <text class="nm" x="38" y="94">Acyl-CoA  to  trans-delta-2-Enoyl-CoA</text>
+  <text class="en" x="38" y="114">acyl-CoA dehydrogenase, FAD to FADH2</text>
+  <text class="sub" x="330" y="114">chain-length specific isoenzymes</text>
+
+  <rect class="nv" x="20" y="146" width="18" height="18" rx="3"/>
+  <text class="ttl" x="48" y="160">2  Hydration</text>
+  <rect class="bx" x="20" y="170" width="470" height="62" rx="7"/>
+  <text class="nm" x="38" y="196">trans-delta-2-Enoyl-CoA  to  L-3-Hydroxyacyl-CoA</text>
+  <text class="en" x="38" y="216">enoyl-CoA hydratase; water is added, L configuration</text>
+
+  <rect class="nv" x="20" y="248" width="18" height="18" rx="3"/>
+  <text class="ttl" x="48" y="262">3  Oxidation</text>
+  <rect class="bx" x="20" y="272" width="470" height="62" rx="7"/>
+  <text class="nm" x="38" y="298">L-3-Hydroxyacyl-CoA  to  3-Ketoacyl-CoA</text>
+  <text class="en" x="38" y="318">3-hydroxyacyl-CoA dehydrogenase, NAD+ to NADH</text>
+
+  <rect class="nv" x="20" y="350" width="18" height="18" rx="3"/>
+  <text class="ttl" x="48" y="364">4  Thiolysis</text>
+  <rect class="bk" x="20" y="374" width="470" height="62" rx="7"/>
+  <text class="nm" x="38" y="400">3-Ketoacyl-CoA + CoA  to  Acetyl-CoA + Acyl-CoA (n-2)</text>
+  <text class="en" x="38" y="420">thiolase; the shortened acyl-CoA re-enters step 1</text>
+
+  <path class="ar" d="M504 404 L520 404 L520 98 L496 98"/>
+  <text class="lab" x="528" y="240">Repeat</text>
+
+  <rect class="bx" x="586" y="44" width="272" height="188" rx="7"/>
+  <text class="ttl" x="604" y="68">Palmitate (16:0) balance sheet</text>
+  <text class="sub" x="604" y="94">activation costs 2 ATP equivalents</text>
+  <text class="sub" x="604" y="116">7 cycles, not 8</text>
+  <text class="sub" x="604" y="138">7 FADH2 and 7 NADH</text>
+  <text class="sub" x="604" y="160">8 acetyl-CoA to the TCA cycle</text>
+  <text class="lab" x="604" y="188">net about 106 ATP per palmitate</text>
+  <text class="sub" x="604" y="212">a glucose molecule yields about 32</text>
+
+  <rect class="bk" x="586" y="248" width="272" height="188" rx="7"/>
+  <text class="ttl" x="604" y="272">Chain-length specific dehydrogenases</text>
+  <text class="sub" x="604" y="298">VLCAD  14-20 carbons</text>
+  <text class="sub" x="604" y="320">LCAD   12-18 carbons</text>
+  <text class="sub" x="604" y="342">MCAD   4-12 carbons</text>
+  <text class="sub" x="604" y="364">SCAD   4-6 carbons</text>
+  <text class="lab" x="604" y="394">Each FADH2 passes electrons to ETF</text>
+  <text class="sub" x="604" y="414">and ETF-ubiquinone oxidoreductase,</text>
+  <text class="sub" x="604" y="432">then to coenzyme Q.</text>
+</svg>

@@ -1,4 +1,77 @@
 {
   "lesson_id": "M01-W05-L01",
-  "figures": []
+  "figures": [
+    {
+      "figure_id": "fig-cell-timeline",
+      "lesson_id": "M01-W05-L01",
+      "html_anchor": "#fig-cell-timeline",
+      "caption": "지구와 생명의 시간표. 지구 형성(약 46억 년 전), 최초의 세포 화석 증거(약 35억 년 전), 산소 발생 광합성의 확산(약 27억~24억 년 전), eukaryotic 세포(약 20억~18억 년 전), 다세포 생물(약 6억 년 전)의 순서를 보인다.",
+      "asset_path": "assets/fig-cell-timeline.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-rna-world",
+      "lesson_id": "M01-W05-L01",
+      "html_anchor": "#fig-rna-world",
+      "caption": "RNA world에서 현재 세포로의 전환. RNA가 정보 저장과 촉매를 함께 담당하던 단계에서, 촉매는 단백질로, 정보 저장은 DNA로 분업되는 과정과 현존 세포에 남은 흔적을 보인다.",
+      "asset_path": "assets/fig-rna-world.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-pro-euk",
+      "lesson_id": "M01-W05-L01",
+      "html_anchor": "#fig-pro-euk",
+      "caption": "Prokaryotic 세포와 eukaryotic 세포의 구조 비교. 같은 축척으로 두 세포를 나란히 두어 크기 차이와 구획화의 차이를 보인다.",
+      "asset_path": "assets/fig-pro-euk.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-organelles",
+      "lesson_id": "M01-W05-L01",
+      "html_anchor": "#fig-organelles",
+      "caption": "Eukaryotic 동물 세포의 소기관 배치. 핵, 분비 경로(rough ER → Golgi → vesicle), lysosome, peroxisome, 미토콘드리아, 세포골격을 기능군별로 구분해 보인다.",
+      "asset_path": "assets/fig-organelles.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-microscopy",
+      "lesson_id": "M01-W05-L01",
+      "html_anchor": "#fig-microscopy",
+      "caption": "관찰 대상의 크기와 각 현미경 기법의 분해능. 분자(1 nm), ribosome(25 nm), 미토콘드리아(1 μm), 세포(10 μm)의 축척 위에 광학 한계 0.2 μm와 Abbe 식의 변수를 함께 보인다.",
+      "asset_path": "assets/fig-microscopy.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-fractionation",
+      "lesson_id": "M01-W05-L01",
+      "html_anchor": "#fig-fractionation",
+      "caption": "차등 원심분리와 밀도구배 원심분리. 회전 속도를 올려가며 핵, 미토콘드리아, microsome을 차례로 얻는 과정과, 밀도구배에서 속도 침강과 평형 침강이 분리하는 기준의 차이를 보인다.",
+      "asset_path": "assets/fig-fractionation.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    }
+  ]
 }

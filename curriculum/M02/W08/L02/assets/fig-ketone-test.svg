@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 370" width="860" height="370" role="img"
+     aria-label="Pitfalls in ketone testing: the nitroprusside strip detects only acetoacetate, so the ratio shift during severe acidosis and during treatment misleads">
+  <style>
+    .ttl { font:700 14px sans-serif; fill:#003c71; }
+    .nm { font:700 12.5px sans-serif; fill:#16191d; }
+    .sub { font:11.5px sans-serif; fill:#4a5159; }
+    .lab { font:700 11px sans-serif; fill:#8a6300; }
+    .bx { fill:#fff; stroke:#c6d2dd; stroke-width:1.5; }
+    .bk { fill:#fff5d6; stroke:#f2b705; stroke-width:2.2; }
+    .ar { stroke:#003c71; stroke-width:2.2; fill:none; marker-end:url(#h); }
+  </style>
+  <defs><marker id="h" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+    <path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker></defs>
+
+  <text class="ttl" x="20" y="26">What the test measures</text>
+  <rect class="bx" x="20" y="38" width="406" height="120" rx="7"/>
+  <text class="nm" x="38" y="64">Nitroprusside strip, urine or serum</text>
+  <text class="sub" x="38" y="86">detects acetoacetate, weakly acetone</text>
+  <text class="sub" x="38" y="106">does NOT detect beta-hydroxybutyrate</text>
+  <text class="lab" x="38" y="132">beta-hydroxybutyrate is the majority species</text>
+  <text class="sub" x="38" y="150">so a strip can read low while total ketones are high</text>
+
+  <rect class="bk" x="442" y="38" width="404" height="120" rx="7"/>
+  <text class="nm" x="460" y="64">Blood beta-hydroxybutyrate assay</text>
+  <text class="sub" x="460" y="86">enzymatic, quantitative, point of care</text>
+  <text class="sub" x="460" y="106">normal fasting below 0.3 mmol/L</text>
+  <text class="sub" x="460" y="126">3.0 mmol/L or more supports ketoacidosis</text>
+  <text class="lab" x="460" y="150">preferred for diagnosis and for monitoring</text>
+
+  <text class="ttl" x="20" y="194">Two situations where the ratio misleads</text>
+  <rect class="bx" x="20" y="206" width="406" height="120" rx="7"/>
+  <text class="nm" x="38" y="232">At presentation, severe acidosis</text>
+  <text class="sub" x="38" y="254">tissue hypoxia raises NADH/NAD+, which</text>
+  <text class="sub" x="38" y="274">drives acetoacetate to beta-hydroxybutyrate</text>
+  <text class="lab" x="38" y="300">strip underestimates: falsely reassuring</text>
+  <text class="sub" x="38" y="318">worst case, a negative strip in real ketoacidosis</text>
+
+  <rect class="bx" x="442" y="206" width="404" height="120" rx="7"/>
+  <text class="nm" x="460" y="232">During recovery on insulin</text>
+  <text class="sub" x="460" y="254">NADH/NAD+ falls, so beta-hydroxybutyrate is</text>
+  <text class="sub" x="460" y="274">reconverted to acetoacetate</text>
+  <text class="lab" x="460" y="300">strip gets stronger while the patient improves</text>
+  <text class="sub" x="460" y="318">do not read this as treatment failure</text>
+
+  <text class="sub" x="20" y="356">Other traps: SGLT2 inhibitors can cause euglycaemic ketoacidosis, and captopril or other sulfhydryl drugs give a false positive strip.</text>
+</svg>

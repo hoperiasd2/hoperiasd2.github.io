@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 420" width="880" height="420" role="img"
+     aria-label="Two misfolding diseases compared: alpha-1-antitrypsin PiZ polymerising in the hepatocyte endoplasmic reticulum, and CFTR F508del degraded before reaching the cell surface">
+  <style>
+    .ttl { font:700 14px sans-serif; fill:#003c71; }
+    .nm { font:700 12px sans-serif; fill:#003c71; }
+    .sub { font:11px sans-serif; fill:#4a5159; }
+    .cell { fill:#ffffff; stroke:#003c71; stroke-width:1.4; }
+    .er { fill:#e8eef4; stroke:#003c71; stroke-width:1.2; }
+    .pol { fill:#f2b705; stroke:#16191d; stroke-width:1.2; }
+    .ln { stroke:#16191d; stroke-width:1.6; fill:none; }
+    .out { font:700 11px sans-serif; fill:#8a6300; }
+    .box { fill:#fff5d6; stroke:#c6d2dd; stroke-width:1; }
+    .mem { fill:#c6d2dd; stroke:#16191d; stroke-width:1; }
+  </style>
+  <defs>
+    <marker id="m1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#16191d"/>
+    </marker>
+  </defs>
+  <text class="ttl" x="20" y="26">A. Alpha-1-antitrypsin PiZ (Glu342Lys): one mutation, two organs, two mechanisms</text>
+
+  <rect class="cell" x="30" y="44" width="250" height="150" rx="14"/>
+  <text class="nm" x="44" y="66">Hepatocyte</text>
+  <rect class="er" x="56" y="80" width="196" height="96" rx="10"/>
+  <text class="sub" x="68" y="100">ER lumen</text>
+  <path class="pol" d="M90 120 l24 -10 l24 10 l24 -10 l24 10 l-12 26 l-24 -8 l-24 8 l-24 -8 z"/>
+  <text class="sub" x="86" y="170">PiZ polymers accumulate</text>
+  <path class="ln" d="M286 118 L336 118" marker-end="url(#m1)"/>
+  <text class="out" x="344" y="106">Gain of toxicity in liver:</text>
+  <text class="sub" x="344" y="124">PAS-positive, diastase-resistant globules;</text>
+  <text class="sub" x="344" y="142">neonatal jaundice, cirrhosis, hepatocellular carcinoma</text>
+
+  <path class="ln" d="M156 198 L156 238" marker-end="url(#m1)"/>
+  <text class="out" x="30" y="258">Little protein is secreted</text>
+  <text class="sub" x="30" y="276">ZZ plasma level is about 10-15% of normal</text>
+  <path class="ln" d="M286 262 L336 262" marker-end="url(#m1)"/>
+  <text class="out" x="344" y="250">Loss of function in lung:</text>
+  <text class="sub" x="344" y="268">neutrophil elastase is not inhibited, alveolar elastin is</text>
+  <text class="sub" x="344" y="286">destroyed - panlobular emphysema, worse in lower lobes</text>
+  <text class="sub" x="344" y="304">Smoking oxidises the active site methionine and accelerates it.</text>
+
+  <text class="ttl" x="20" y="344">B. CFTR F508del: an in-frame three-base deletion that fails quality control</text>
+  <rect class="mem" x="30" y="366" width="300" height="12"/>
+  <text class="sub" x="30" y="362">apical membrane: almost no channel reaches it</text>
+  <rect class="er" x="30" y="386" width="140" height="28" rx="6"/>
+  <text class="sub" x="44" y="404">ER: misfolded CFTR</text>
+  <path class="ln" d="M174 400 L214 400" marker-end="url(#m1)"/>
+  <text class="sub" x="220" y="404">ERAD and proteasome</text>
+  <rect class="box" x="380" y="356" width="480" height="58" rx="4"/>
+  <text class="nm" x="396" y="378">Correctors (lumacaftor, tezacaftor, elexacaftor) help the protein fold and reach the surface;</text>
+  <text class="sub" x="396" y="400">a potentiator (ivacaftor) then holds the channel open. The target is the folding defect, not the DNA.</text>
+</svg>

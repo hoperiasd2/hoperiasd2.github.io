@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 420" width="880" height="420" role="img"
+     aria-label="Bile salt action: large fat globule broken into emulsion droplets and then into mixed micelles that carry digestion products to the brush border">
+  <style>
+    .ttl { font:700 14px sans-serif; fill:#003c71; }
+    .nm { font:700 12px sans-serif; fill:#16191d; }
+    .sub { font:11.5px sans-serif; fill:#4a5159; }
+    .lab { font:700 11px sans-serif; fill:#8a6300; }
+    .fat { fill:#fff5d6; stroke:#f2b705; stroke-width:2; }
+    .bx { fill:#fff; stroke:#c6d2dd; stroke-width:1.4; }
+    .bs { stroke:#003c71; stroke-width:2.2; fill:none; }
+    .ar { stroke:#003c71; stroke-width:2.2; fill:none; marker-end:url(#h); }
+    .bb { fill:#eff4f8; stroke:#c6d2dd; stroke-width:1.6; }
+  </style>
+  <defs><marker id="h" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+    <path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker></defs>
+
+  <text class="ttl" x="20" y="24">Step 1. Emulsification</text>
+  <rect class="bx" x="20" y="36" width="230" height="200" rx="7"/>
+  <circle class="fat" cx="92" cy="104" r="48"/>
+  <text class="nm" x="60" y="108">fat globule</text>
+  <path class="ar" d="M152 150 L196 186"/>
+  <circle class="fat" cx="150" cy="196" r="18"/>
+  <circle class="fat" cx="196" cy="206" r="14"/>
+  <circle class="fat" cx="166" cy="224" r="11"/>
+  <circle class="fat" cx="214" cy="178" r="10"/>
+  <text class="sub" x="34" y="176">Bile salts coat the surface,</text>
+  <text class="sub" x="34" y="192">lower surface tension and</text>
+  <text class="sub" x="34" y="208">let churning break the</text>
+  <text class="sub" x="34" y="224">globule into droplets.</text>
+
+  <text class="ttl" x="300" y="24">Step 2. Luminal hydrolysis</text>
+  <rect class="bx" x="300" y="36" width="246" height="200" rx="7"/>
+  <circle class="fat" cx="372" cy="110" r="44"/>
+  <text class="nm" x="340" y="114">droplet</text>
+  <text class="sub" x="318" y="166">Lipase acts only at the</text>
+  <text class="sub" x="318" y="182">oil-water interface, so the</text>
+  <text class="sub" x="318" y="198">rate depends on the total</text>
+  <text class="sub" x="318" y="214">surface area created in</text>
+  <text class="sub" x="318" y="230">step 1.</text>
+  <path class="ar" d="M424 110 L470 110"/>
+  <text class="nm" x="462" y="92">FFA</text>
+  <text class="nm" x="462" y="140">2-MAG</text>
+
+  <text class="ttl" x="596" y="24">Step 3. Mixed micelle</text>
+  <rect class="bx" x="596" y="36" width="262" height="200" rx="7"/>
+  <circle cx="700" cy="118" r="52" fill="#fff5d6" stroke="#f2b705" stroke-width="2"/>
+  <g class="bs">
+    <path d="M700 66 L700 92"/><path d="M700 170 L700 144"/>
+    <path d="M648 118 L674 118"/><path d="M752 118 L726 118"/>
+    <path d="M664 82 L682 100"/><path d="M736 154 L718 136"/>
+    <path d="M736 82 L718 100"/><path d="M664 154 L682 136"/>
+  </g>
+  <text class="nm" x="668" y="122">core</text>
+  <text class="lab" x="610" y="196">Bile salt heads face water,</text>
+  <text class="sub" x="610" y="214">core holds 2-MAG, free fatty acids,</text>
+  <text class="sub" x="610" y="230">cholesterol and vitamins A, D, E, K.</text>
+
+  <path class="ar" d="M252 136 L296 136"/>
+  <path class="ar" d="M550 136 L592 136"/>
+
+  <rect class="bb" x="20" y="268" width="838" height="58" rx="7"/>
+  <text class="nm" x="40" y="292">Brush border of the jejunal enterocyte</text>
+  <text class="sub" x="40" y="314">The micelle is 4-6 nm across, small enough to diffuse through the unstirred water layer; it delivers its contents and the bile salts stay behind in the lumen.</text>
+  <path class="ar" d="M700 180 L700 262"/>
+
+  <text class="sub" x="20" y="356">Critical micellar concentration of bile salts is about 1-2 mmol/L; postprandial duodenal concentration is roughly 5-15 mmol/L.</text>
+  <text class="sub" x="20" y="376">Micelle formation is a solubilisation step, not a chemical reaction. Without it the products of digestion stay in the oil phase and are not absorbed.</text>
+  <text class="sub" x="20" y="396">Bile salts are reabsorbed later, in the terminal ileum, not here.</text>
+</svg>

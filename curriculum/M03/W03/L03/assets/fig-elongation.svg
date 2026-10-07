@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 450" width="880" height="450" role="img"
+     aria-label="The elongation cycle: binding of aminoacyl-tRNA to the A site by EF-Tu, peptide bond formation by peptidyl transferase and translocation driven by EF-G">
+  <style>
+    .ttl { font:700 14px sans-serif; fill:#003c71; }
+    .nm { font:700 13px sans-serif; fill:#003c71; }
+    .sub { font:11px sans-serif; fill:#4a5159; }
+    .rib { fill:#e8eef4; stroke:#003c71; stroke-width:1.4; }
+    .mrna { stroke:#16191d; stroke-width:2.2; fill:none; }
+    .trna { stroke:#16191d; stroke-width:4.5; fill:none; stroke-linecap:round; }
+    .aa { fill:#ffffff; stroke:#16191d; stroke-width:1.2; }
+    .aan { fill:#f2b705; stroke:#16191d; stroke-width:1.2; }
+    .lab { font:700 11px sans-serif; fill:#003c71; }
+    .st { font:700 12px sans-serif; fill:#8a6300; }
+    .box { fill:#fff5d6; stroke:#c6d2dd; stroke-width:1; }
+  </style>
+  <defs>
+    <marker id="e1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#003c71"/>
+    </marker>
+  </defs>
+  <text class="ttl" x="20" y="26">One elongation cycle adds one residue and uses two GTP</text>
+
+  <g>
+    <text class="nm" x="24" y="58">1. A-site binding</text>
+    <rect class="rib" x="150" y="48" width="320" height="86" rx="12"/>
+    <path class="mrna" d="M140 124 L480 124"/>
+    <text class="sub" x="404" y="66">E   P   A</text>
+    <path class="trna" d="M300 120 L300 70"/>
+    <circle class="aa" cx="300" cy="60" r="9"/><circle class="aa" cx="282" cy="50" r="9"/>
+    <path class="trna" d="M380 120 L380 78"/>
+    <circle class="aan" cx="380" cy="68" r="9"/>
+    <text class="lab" x="492" y="88">EF-Tu-GTP delivers the</text>
+    <text class="sub" x="492" y="104">aminoacyl-tRNA; GTP is</text>
+    <text class="sub" x="492" y="120">hydrolysed only if the</text>
+    <text class="sub" x="492" y="136">codon-anticodon pair is correct</text>
+    <text class="sub" x="492" y="56">eEF1A in eukaryotes</text>
+  </g>
+  <path class="mrna" d="M300 150 L300 176" marker-end="url(#e1)" stroke="#003c71"/>
+  <g>
+    <text class="nm" x="24" y="212">2. Peptide bond</text>
+    <rect class="rib" x="150" y="196" width="320" height="86" rx="12"/>
+    <path class="mrna" d="M140 272 L480 272"/>
+    <path class="trna" d="M300 268 L300 224"/>
+    <path class="trna" d="M380 268 L380 214"/>
+    <circle class="aa" cx="380" cy="204" r="9"/><circle class="aa" cx="362" cy="194" r="9"/><circle class="aan" cx="398" cy="196" r="9"/>
+    <text class="st" x="492" y="216">Peptidyl transferase (rRNA)</text>
+    <text class="sub" x="492" y="234">transfers the whole chain from the P-site</text>
+    <text class="sub" x="492" y="250">tRNA onto the A-site amino acid.</text>
+    <text class="sub" x="492" y="266">No GTP or ATP is used here: the energy</text>
+    <text class="sub" x="492" y="282">comes from the aminoacyl-tRNA ester bond.</text>
+  </g>
+  <path class="mrna" d="M300 298 L300 324" marker-end="url(#e1)" stroke="#003c71"/>
+  <g>
+    <text class="nm" x="24" y="360">3. Translocation</text>
+    <rect class="rib" x="150" y="344" width="320" height="86" rx="12"/>
+    <path class="mrna" d="M140 420 L480 420"/>
+    <path class="trna" d="M224 416 L224 372"/>
+    <path class="trna" d="M300 416 L300 362"/>
+    <circle class="aa" cx="300" cy="352" r="9"/><circle class="aa" cx="282" cy="342" r="9"/><circle class="aan" cx="318" cy="344" r="9"/>
+    <text class="lab" x="492" y="364">EF-G-GTP (eEF2) moves the ribosome</text>
+    <text class="sub" x="492" y="382">three nucleotides along the mRNA.</text>
+    <text class="sub" x="492" y="398">Peptidyl-tRNA shifts A to P, deacylated</text>
+    <text class="sub" x="492" y="414">tRNA shifts P to E and leaves; the A site</text>
+    <text class="sub" x="492" y="430">is empty for the next codon.</text>
+  </g>
+  <rect class="box" x="20" y="436" width="130" height="10"/>
+  <text class="st" x="24" y="408">4 high-energy</text>
+  <text class="st" x="24" y="424">phosphates per</text>
+  <text class="st" x="24" y="440">residue added</text>
+</svg>

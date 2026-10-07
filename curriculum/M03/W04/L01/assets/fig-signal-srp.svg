@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 400" width="880" height="400" role="img"
+     aria-label="Targeting of a secretory protein to the endoplasmic reticulum: the N-terminal signal sequence is bound by the signal recognition particle, the ribosome docks on the translocon and signal peptidase removes the sequence">
+  <style>
+    .ttl { font:700 14px sans-serif; fill:#003c71; }
+    .nm { font:700 12px sans-serif; fill:#003c71; }
+    .sub { font:11px sans-serif; fill:#4a5159; }
+    .rib { fill:#e8eef4; stroke:#003c71; stroke-width:1.4; }
+    .mem { fill:#c6d2dd; stroke:#16191d; stroke-width:1.2; }
+    .tl { fill:#003c71; stroke:#16191d; stroke-width:1.2; }
+    .srp { fill:#f2b705; stroke:#16191d; stroke-width:1.2; }
+    .ch { stroke:#16191d; stroke-width:3; fill:none; stroke-linecap:round; }
+    .sig { stroke:#f2b705; stroke-width:5; fill:none; stroke-linecap:round; }
+    .mrna { stroke:#16191d; stroke-width:2; fill:none; }
+    .lb { font:700 11px sans-serif; fill:#16191d; }
+    .box { fill:#fff5d6; stroke:#c6d2dd; stroke-width:1; }
+  </style>
+  <defs>
+    <marker id="s1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#003c71"/>
+    </marker>
+  </defs>
+  <text class="ttl" x="20" y="26">A signal sequence decides whether a protein is made in the cytosol or in the ER lumen</text>
+
+  <text class="nm" x="24" y="62">1. Translation starts in the cytosol</text>
+  <rect class="rib" x="120" y="74" width="110" height="46" rx="10"/>
+  <path class="mrna" d="M100 114 L250 114"/>
+  <path class="sig" d="M174 74 L200 50"/>
+  <text class="lb" x="206" y="46">signal sequence</text>
+  <text class="sub" x="206" y="62">15-30 residues, mostly hydrophobic, N-terminal</text>
+
+  <text class="nm" x="24" y="162">2. SRP binds and pauses translation</text>
+  <rect class="rib" x="120" y="174" width="110" height="46" rx="10"/>
+  <path class="mrna" d="M100 214 L250 214"/>
+  <path class="sig" d="M174 174 L200 150"/>
+  <ellipse class="srp" cx="238" cy="148" rx="34" ry="15"/>
+  <text class="lb" x="224" y="153">SRP</text>
+  <text class="sub" x="286" y="152">SRP binds the emerging signal sequence</text>
+  <text class="sub" x="286" y="170">and halts elongation until docking occurs</text>
+  <path class="mrna" d="M300 212 L360 212" marker-end="url(#s1)" stroke="#003c71"/>
+
+  <rect class="mem" x="420" y="196" width="440" height="20"/>
+  <text class="sub" x="424" y="190">ER membrane</text>
+  <rect class="tl" x="560" y="192" width="46" height="28"/>
+  <text class="lb" x="614" y="188" fill="#003c71">translocon (Sec61)</text>
+  <ellipse class="srp" cx="500" cy="186" rx="52" ry="14"/>
+  <text class="lb" x="462" y="191">SRP receptor</text>
+
+  <text class="nm" x="420" y="258">3. Docking, translocation, cleavage</text>
+  <rect class="rib" x="520" y="262" width="110" height="46" rx="10"/>
+  <path class="ch" d="M576 262 L576 230 L576 196"/>
+  <path class="ch" d="M576 196 C560 170 600 160 596 140"/>
+  <path class="sig" d="M596 140 L620 126"/>
+  <ellipse class="tl" cx="672" cy="140" rx="40" ry="14"/>
+  <text class="lb" x="640" y="145" fill="#ffffff">peptidase</text>
+  <text class="sub" x="420" y="330">GTP-dependent docking releases SRP; the chain threads through the translocon into the lumen,</text>
+  <text class="sub" x="420" y="348">signal peptidase removes the signal sequence, and N-glycosylation begins while translation continues.</text>
+
+  <rect class="box" x="20" y="300" width="380" height="80" rx="4"/>
+  <text class="nm" x="36" y="322">No signal sequence</text>
+  <text class="sub" x="36" y="342">Translation finishes on free ribosomes in the cytosol.</text>
+  <text class="sub" x="36" y="360">Other short signals then route the protein to the nucleus,</text>
+  <text class="sub" x="36" y="378">mitochondria or peroxisomes after folding.</text>
+</svg>

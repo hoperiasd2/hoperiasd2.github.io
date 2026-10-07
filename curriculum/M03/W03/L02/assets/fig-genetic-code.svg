@@ -1,0 +1,246 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1124 450" width="1124" height="450" role="img"
+     aria-label="The standard genetic code table: 64 codons read five prime to three prime, 61 specifying amino acids and three stop codons, with AUG as the start codon">
+  <style>
+    .ttl { font:700 15px sans-serif; fill:#003c71; }
+    .sub { font:12px sans-serif; fill:#4a5159; }
+    .hd { font:700 13px sans-serif; fill:#003c71; }
+    .cd { font:700 12px monospace; fill:#16191d; }
+    .aa { font:11px sans-serif; fill:#4a5159; }
+    .cell { fill:#ffffff; stroke:#c6d2dd; stroke-width:0.8; }
+    .stopc { fill:#fff5d6; stroke:#c6d2dd; stroke-width:0.8; }
+    .startc { fill:#f2b705; stroke:#16191d; stroke-width:1.2; }
+    .stl { font:700 12px monospace; fill:#16191d; }
+  </style>
+  <text class="ttl" x="24" y="30">The standard genetic code (mRNA codons, read 5' to 3')</text>
+  <text class="sub" x="24" y="52">61 codons specify 20 amino acids; UAA, UAG and UGA are stop codons (shaded). AUG is both start and Met (yellow).</text>
+  <text class="sub" x="24" y="72">Degeneracy is concentrated in the third base, which is read by wobble pairing.</text>
+  <text class="hd" x="30" y="98">1st</text>
+  <text class="hd" x="133" y="98">U</text>
+  <text class="hd" x="241" y="98">C</text>
+  <text class="hd" x="349" y="98">A</text>
+  <text class="hd" x="457" y="98">G</text>
+  <text class="hd" x="524" y="98">3rd</text>
+  <text class="sub" x="366" y="76">2nd base</text>
+  <text class="hd" x="36" y="176">U</text>
+  <text class="hd" x="526" y="129">U</text>
+  <rect class="cell" x="84" y="108" width="108" height="32"/>
+  <text class="cd" x="91" y="129">UUU</text>
+  <text class="aa" x="139" y="129">Phe F</text>
+  <rect class="cell" x="192" y="108" width="108" height="32"/>
+  <text class="cd" x="199" y="129">UCU</text>
+  <text class="aa" x="247" y="129">Ser S</text>
+  <rect class="cell" x="300" y="108" width="108" height="32"/>
+  <text class="cd" x="307" y="129">UAU</text>
+  <text class="aa" x="355" y="129">Tyr Y</text>
+  <rect class="cell" x="408" y="108" width="108" height="32"/>
+  <text class="cd" x="415" y="129">UGU</text>
+  <text class="aa" x="463" y="129">Cys C</text>
+  <text class="hd" x="526" y="161">C</text>
+  <rect class="cell" x="84" y="140" width="108" height="32"/>
+  <text class="cd" x="91" y="161">UUC</text>
+  <text class="aa" x="139" y="161">Phe F</text>
+  <rect class="cell" x="192" y="140" width="108" height="32"/>
+  <text class="cd" x="199" y="161">UCC</text>
+  <text class="aa" x="247" y="161">Ser S</text>
+  <rect class="cell" x="300" y="140" width="108" height="32"/>
+  <text class="cd" x="307" y="161">UAC</text>
+  <text class="aa" x="355" y="161">Tyr Y</text>
+  <rect class="cell" x="408" y="140" width="108" height="32"/>
+  <text class="cd" x="415" y="161">UGC</text>
+  <text class="aa" x="463" y="161">Cys C</text>
+  <text class="hd" x="526" y="193">A</text>
+  <rect class="cell" x="84" y="172" width="108" height="32"/>
+  <text class="cd" x="91" y="193">UUA</text>
+  <text class="aa" x="139" y="193">Leu L</text>
+  <rect class="cell" x="192" y="172" width="108" height="32"/>
+  <text class="cd" x="199" y="193">UCA</text>
+  <text class="aa" x="247" y="193">Ser S</text>
+  <rect class="stopc" x="300" y="172" width="108" height="32"/>
+  <text class="stl" x="307" y="193">UAA</text>
+  <text class="aa" x="355" y="193">STOP</text>
+  <rect class="stopc" x="408" y="172" width="108" height="32"/>
+  <text class="stl" x="415" y="193">UGA</text>
+  <text class="aa" x="463" y="193">STOP</text>
+  <text class="hd" x="526" y="225">G</text>
+  <rect class="cell" x="84" y="204" width="108" height="32"/>
+  <text class="cd" x="91" y="225">UUG</text>
+  <text class="aa" x="139" y="225">Leu L</text>
+  <rect class="cell" x="192" y="204" width="108" height="32"/>
+  <text class="cd" x="199" y="225">UCG</text>
+  <text class="aa" x="247" y="225">Ser S</text>
+  <rect class="stopc" x="300" y="204" width="108" height="32"/>
+  <text class="stl" x="307" y="225">UAG</text>
+  <text class="aa" x="355" y="225">STOP</text>
+  <rect class="cell" x="408" y="204" width="108" height="32"/>
+  <text class="cd" x="415" y="225">UGG</text>
+  <text class="aa" x="463" y="225">Trp W</text>
+  <text class="hd" x="36" y="304">C</text>
+  <text class="hd" x="526" y="257">U</text>
+  <rect class="cell" x="84" y="236" width="108" height="32"/>
+  <text class="cd" x="91" y="257">CUU</text>
+  <text class="aa" x="139" y="257">Leu L</text>
+  <rect class="cell" x="192" y="236" width="108" height="32"/>
+  <text class="cd" x="199" y="257">CCU</text>
+  <text class="aa" x="247" y="257">Pro P</text>
+  <rect class="cell" x="300" y="236" width="108" height="32"/>
+  <text class="cd" x="307" y="257">CAU</text>
+  <text class="aa" x="355" y="257">His H</text>
+  <rect class="cell" x="408" y="236" width="108" height="32"/>
+  <text class="cd" x="415" y="257">CGU</text>
+  <text class="aa" x="463" y="257">Arg R</text>
+  <text class="hd" x="526" y="289">C</text>
+  <rect class="cell" x="84" y="268" width="108" height="32"/>
+  <text class="cd" x="91" y="289">CUC</text>
+  <text class="aa" x="139" y="289">Leu L</text>
+  <rect class="cell" x="192" y="268" width="108" height="32"/>
+  <text class="cd" x="199" y="289">CCC</text>
+  <text class="aa" x="247" y="289">Pro P</text>
+  <rect class="cell" x="300" y="268" width="108" height="32"/>
+  <text class="cd" x="307" y="289">CAC</text>
+  <text class="aa" x="355" y="289">His H</text>
+  <rect class="cell" x="408" y="268" width="108" height="32"/>
+  <text class="cd" x="415" y="289">CGC</text>
+  <text class="aa" x="463" y="289">Arg R</text>
+  <text class="hd" x="526" y="321">A</text>
+  <rect class="cell" x="84" y="300" width="108" height="32"/>
+  <text class="cd" x="91" y="321">CUA</text>
+  <text class="aa" x="139" y="321">Leu L</text>
+  <rect class="cell" x="192" y="300" width="108" height="32"/>
+  <text class="cd" x="199" y="321">CCA</text>
+  <text class="aa" x="247" y="321">Pro P</text>
+  <rect class="cell" x="300" y="300" width="108" height="32"/>
+  <text class="cd" x="307" y="321">CAA</text>
+  <text class="aa" x="355" y="321">Gln Q</text>
+  <rect class="cell" x="408" y="300" width="108" height="32"/>
+  <text class="cd" x="415" y="321">CGA</text>
+  <text class="aa" x="463" y="321">Arg R</text>
+  <text class="hd" x="526" y="353">G</text>
+  <rect class="cell" x="84" y="332" width="108" height="32"/>
+  <text class="cd" x="91" y="353">CUG</text>
+  <text class="aa" x="139" y="353">Leu L</text>
+  <rect class="cell" x="192" y="332" width="108" height="32"/>
+  <text class="cd" x="199" y="353">CCG</text>
+  <text class="aa" x="247" y="353">Pro P</text>
+  <rect class="cell" x="300" y="332" width="108" height="32"/>
+  <text class="cd" x="307" y="353">CAG</text>
+  <text class="aa" x="355" y="353">Gln Q</text>
+  <rect class="cell" x="408" y="332" width="108" height="32"/>
+  <text class="cd" x="415" y="353">CGG</text>
+  <text class="aa" x="463" y="353">Arg R</text>
+  <text class="hd" x="580" y="98">1st</text>
+  <text class="hd" x="683" y="98">U</text>
+  <text class="hd" x="791" y="98">C</text>
+  <text class="hd" x="899" y="98">A</text>
+  <text class="hd" x="1007" y="98">G</text>
+  <text class="hd" x="1074" y="98">3rd</text>
+  <text class="sub" x="916" y="76">2nd base</text>
+  <text class="hd" x="586" y="176">A</text>
+  <text class="hd" x="1076" y="129">U</text>
+  <rect class="cell" x="634" y="108" width="108" height="32"/>
+  <text class="cd" x="641" y="129">AUU</text>
+  <text class="aa" x="689" y="129">Ile I</text>
+  <rect class="cell" x="742" y="108" width="108" height="32"/>
+  <text class="cd" x="749" y="129">ACU</text>
+  <text class="aa" x="797" y="129">Thr T</text>
+  <rect class="cell" x="850" y="108" width="108" height="32"/>
+  <text class="cd" x="857" y="129">AAU</text>
+  <text class="aa" x="905" y="129">Asn N</text>
+  <rect class="cell" x="958" y="108" width="108" height="32"/>
+  <text class="cd" x="965" y="129">AGU</text>
+  <text class="aa" x="1013" y="129">Ser S</text>
+  <text class="hd" x="1076" y="161">C</text>
+  <rect class="cell" x="634" y="140" width="108" height="32"/>
+  <text class="cd" x="641" y="161">AUC</text>
+  <text class="aa" x="689" y="161">Ile I</text>
+  <rect class="cell" x="742" y="140" width="108" height="32"/>
+  <text class="cd" x="749" y="161">ACC</text>
+  <text class="aa" x="797" y="161">Thr T</text>
+  <rect class="cell" x="850" y="140" width="108" height="32"/>
+  <text class="cd" x="857" y="161">AAC</text>
+  <text class="aa" x="905" y="161">Asn N</text>
+  <rect class="cell" x="958" y="140" width="108" height="32"/>
+  <text class="cd" x="965" y="161">AGC</text>
+  <text class="aa" x="1013" y="161">Ser S</text>
+  <text class="hd" x="1076" y="193">A</text>
+  <rect class="cell" x="634" y="172" width="108" height="32"/>
+  <text class="cd" x="641" y="193">AUA</text>
+  <text class="aa" x="689" y="193">Ile I</text>
+  <rect class="cell" x="742" y="172" width="108" height="32"/>
+  <text class="cd" x="749" y="193">ACA</text>
+  <text class="aa" x="797" y="193">Thr T</text>
+  <rect class="cell" x="850" y="172" width="108" height="32"/>
+  <text class="cd" x="857" y="193">AAA</text>
+  <text class="aa" x="905" y="193">Lys K</text>
+  <rect class="cell" x="958" y="172" width="108" height="32"/>
+  <text class="cd" x="965" y="193">AGA</text>
+  <text class="aa" x="1013" y="193">Arg R</text>
+  <text class="hd" x="1076" y="225">G</text>
+  <rect class="startc" x="634" y="204" width="108" height="32"/>
+  <text class="stl" x="641" y="225">AUG</text>
+  <text class="aa" x="689" y="225">Met M</text>
+  <rect class="cell" x="742" y="204" width="108" height="32"/>
+  <text class="cd" x="749" y="225">ACG</text>
+  <text class="aa" x="797" y="225">Thr T</text>
+  <rect class="cell" x="850" y="204" width="108" height="32"/>
+  <text class="cd" x="857" y="225">AAG</text>
+  <text class="aa" x="905" y="225">Lys K</text>
+  <rect class="cell" x="958" y="204" width="108" height="32"/>
+  <text class="cd" x="965" y="225">AGG</text>
+  <text class="aa" x="1013" y="225">Arg R</text>
+  <text class="hd" x="586" y="304">G</text>
+  <text class="hd" x="1076" y="257">U</text>
+  <rect class="cell" x="634" y="236" width="108" height="32"/>
+  <text class="cd" x="641" y="257">GUU</text>
+  <text class="aa" x="689" y="257">Val V</text>
+  <rect class="cell" x="742" y="236" width="108" height="32"/>
+  <text class="cd" x="749" y="257">GCU</text>
+  <text class="aa" x="797" y="257">Ala A</text>
+  <rect class="cell" x="850" y="236" width="108" height="32"/>
+  <text class="cd" x="857" y="257">GAU</text>
+  <text class="aa" x="905" y="257">Asp D</text>
+  <rect class="cell" x="958" y="236" width="108" height="32"/>
+  <text class="cd" x="965" y="257">GGU</text>
+  <text class="aa" x="1013" y="257">Gly G</text>
+  <text class="hd" x="1076" y="289">C</text>
+  <rect class="cell" x="634" y="268" width="108" height="32"/>
+  <text class="cd" x="641" y="289">GUC</text>
+  <text class="aa" x="689" y="289">Val V</text>
+  <rect class="cell" x="742" y="268" width="108" height="32"/>
+  <text class="cd" x="749" y="289">GCC</text>
+  <text class="aa" x="797" y="289">Ala A</text>
+  <rect class="cell" x="850" y="268" width="108" height="32"/>
+  <text class="cd" x="857" y="289">GAC</text>
+  <text class="aa" x="905" y="289">Asp D</text>
+  <rect class="cell" x="958" y="268" width="108" height="32"/>
+  <text class="cd" x="965" y="289">GGC</text>
+  <text class="aa" x="1013" y="289">Gly G</text>
+  <text class="hd" x="1076" y="321">A</text>
+  <rect class="cell" x="634" y="300" width="108" height="32"/>
+  <text class="cd" x="641" y="321">GUA</text>
+  <text class="aa" x="689" y="321">Val V</text>
+  <rect class="cell" x="742" y="300" width="108" height="32"/>
+  <text class="cd" x="749" y="321">GCA</text>
+  <text class="aa" x="797" y="321">Ala A</text>
+  <rect class="cell" x="850" y="300" width="108" height="32"/>
+  <text class="cd" x="857" y="321">GAA</text>
+  <text class="aa" x="905" y="321">Glu E</text>
+  <rect class="cell" x="958" y="300" width="108" height="32"/>
+  <text class="cd" x="965" y="321">GGA</text>
+  <text class="aa" x="1013" y="321">Gly G</text>
+  <text class="hd" x="1076" y="353">G</text>
+  <rect class="cell" x="634" y="332" width="108" height="32"/>
+  <text class="cd" x="641" y="353">GUG</text>
+  <text class="aa" x="689" y="353">Val V</text>
+  <rect class="cell" x="742" y="332" width="108" height="32"/>
+  <text class="cd" x="749" y="353">GCG</text>
+  <text class="aa" x="797" y="353">Ala A</text>
+  <rect class="cell" x="850" y="332" width="108" height="32"/>
+  <text class="cd" x="857" y="353">GAG</text>
+  <text class="aa" x="905" y="353">Glu E</text>
+  <rect class="cell" x="958" y="332" width="108" height="32"/>
+  <text class="cd" x="965" y="353">GGG</text>
+  <text class="aa" x="1013" y="353">Gly G</text>
+  <rect x="24" y="384" width="1076" height="56" rx="4" fill="#fff5d6" stroke="#c6d2dd"/>
+  <text class="hd" x="40" y="406">Met and Trp have one codon each; Leu, Ser and Arg have six each. The code is non-overlapping and commaless.</text>
+  <text class="sub" x="40" y="426">Human mitochondria deviate: UGA = Trp, AUA = Met, AGA and AGG = stop. UGA is recoded as selenocysteine when a SECIS element is present.</text>
+</svg>

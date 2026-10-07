@@ -1,4 +1,65 @@
 {
   "lesson_id": "M01-W05-L03",
-  "figures": []
+  "figures": [
+    {
+      "figure_id": "fig-free-energy",
+      "lesson_id": "M01-W05-L03",
+      "html_anchor": "#fig-free-energy",
+      "caption": "자유에너지와 반응의 방향. Exergonic 반응과 endergonic 반응의 에너지 다이어그램, ΔG와 평형상수의 관계, 그리고 ΔG가 속도와 무관하다는 점을 보인다.",
+      "asset_path": "assets/fig-free-energy.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-coupling",
+      "lesson_id": "M01-W05-L03",
+      "html_anchor": "#fig-coupling",
+      "caption": "짝반응의 원리. Endergonic 반응과 exergonic 반응이 공통 중간체를 공유해 하나의 효소 활성 부위에서 진행하며, 전체 ΔG가 두 ΔG의 합이 되는 과정을 보인다.",
+      "asset_path": "assets/fig-coupling.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-atp",
+      "lesson_id": "M01-W05-L03",
+      "html_anchor": "#fig-atp",
+      "caption": "ATP의 구조와 가수분해. Adenine, ribose, 세 인산기의 배치, α·β·γ 표기, phosphoanhydride 결합의 위치, 그리고 가수분해 자유에너지가 큰 세 가지 근거를 보인다.",
+      "asset_path": "assets/fig-atp.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-redox",
+      "lesson_id": "M01-W05-L03",
+      "html_anchor": "#fig-redox",
+      "caption": "표준 환원 전위의 척도와 전자 운반체. NADH에서 O₂까지의 전위 차이 1.14 V가 자유에너지 약 220 kJ/mol에 해당하며, 전자는 전위가 낮은 쪽에서 높은 쪽으로 흐른다는 것을 보인다.",
+      "asset_path": "assets/fig-redox.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-activation",
+      "lesson_id": "M01-W05-L03",
+      "html_anchor": "#fig-activation",
+      "caption": "활성화 에너지와 효소의 작용. 효소가 전이 상태를 안정화해 활성화 에너지를 낮추지만 반응물과 생성물의 자유에너지 차이, 즉 ΔG와 평형상수는 바꾸지 않는다는 것을 보인다.",
+      "asset_path": "assets/fig-activation.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    }
+  ]
 }

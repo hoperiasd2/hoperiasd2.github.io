@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 430" width="860" height="430" role="img"
+     aria-label="Spontaneous formation of the lipid bilayer, the three motions of membrane lipids and the determinants of membrane fluidity">
+  <style>
+    .ttl{font:700 15px sans-serif;fill:#003c71}
+    .hd{font:700 12.5px sans-serif;fill:#003c71}
+    .lab{font:700 11.5px sans-serif;fill:#16191d}
+    .sub{font:11px sans-serif;fill:#4a5159}
+    .box{fill:#ffffff;stroke:#c6d2dd;stroke-width:1.3}
+    .hl{fill:#fff5d6;stroke:#f2b705;stroke-width:1.6}
+    .head{fill:#003c71}
+    .tail{stroke:#16191d;stroke-width:1.6;fill:none}
+    .ar{stroke:#f2b705;stroke-width:2.4;fill:none;marker-end:url(#ab)}
+    .arb{stroke:#16191d;stroke-width:1.8;fill:none;marker-end:url(#ab2)}
+  </style>
+  <defs>
+    <marker id="ab" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#f2b705"/>
+    </marker>
+    <marker id="ab2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#16191d"/>
+    </marker>
+    <g id="lip">
+      <circle class="head" cx="0" cy="0" r="5.5"/>
+      <path class="tail" d="M-2.5 5 l-2 10 l2 10 M2.5 5 l2 10 l-2 10"/>
+    </g>
+  </defs>
+  <text class="ttl" x="26" y="24">The lipid bilayer: spontaneous assembly, lipid motion and fluidity</text>
+
+  <rect class="box" x="26" y="38" width="300" height="168" rx="6"/>
+  <text class="hd" x="38" y="58">A. Assembly is driven by water entropy</text>
+  <g>
+    <use href="#lip" x="60" y="92" transform="rotate(20 60 92)"/>
+    <use href="#lip" x="110" y="86" transform="rotate(-50 110 86)"/>
+    <use href="#lip" x="160" y="100" transform="rotate(120 160 100)"/>
+    <use href="#lip" x="90" y="130" transform="rotate(200 90 130)"/>
+  </g>
+  <text class="sub" x="40" y="166">dispersed: ordered water, low entropy</text>
+  <path class="ar" d="M200 112 L236 112"/>
+  <g>
+    <use href="#lip" x="256" y="86"/><use href="#lip" x="270" y="86"/><use href="#lip" x="284" y="86"/><use href="#lip" x="298" y="86"/>
+    <g transform="translate(0,172) scale(1,-1)">
+      <use href="#lip" x="256" y="86"/><use href="#lip" x="270" y="86"/><use href="#lip" x="284" y="86"/><use href="#lip" x="298" y="86"/>
+    </g>
+  </g>
+  <text class="sub" x="40" y="184">bilayer: water released, high entropy; Delta G is negative</text>
+  <text class="sub" x="40" y="200">no enzyme and no input of energy are required</text>
+
+  <rect class="box" x="340" y="38" width="238" height="168" rx="6"/>
+  <text class="hd" x="352" y="58">B. Three motions of a lipid</text>
+  <g>
+    <use href="#lip" x="390" y="86"/><use href="#lip" x="404" y="86"/><use href="#lip" x="418" y="86"/>
+    <use href="#lip" x="446" y="86"/><use href="#lip" x="460" y="86"/><use href="#lip" x="474" y="86"/>
+    <g transform="translate(0,172) scale(1,-1)">
+      <use href="#lip" x="390" y="86"/><use href="#lip" x="404" y="86"/><use href="#lip" x="418" y="86"/>
+      <use href="#lip" x="446" y="86"/><use href="#lip" x="460" y="86"/><use href="#lip" x="474" y="86"/>
+    </g>
+  </g>
+  <path class="arb" d="M424 78 L442 78"/>
+  <text class="sub" x="492" y="82">lateral, about 2 um/s</text>
+  <path class="arb" d="M510 92 a10 10 0 1 1 -8 -8"/>
+  <text class="sub" x="492" y="116">rotation, fast</text>
+  <path class="arb" d="M432 100 L432 130"/>
+  <text class="sub" x="352" y="158">flip-flop: hours to days by itself;</text>
+  <text class="sub" x="352" y="174">flippase, floppase and scramblase</text>
+  <text class="sub" x="352" y="190">catalyse it and set membrane asymmetry</text>
+
+  <rect class="box" x="592" y="38" width="242" height="168" rx="6"/>
+  <text class="hd" x="604" y="58">C. Membrane asymmetry</text>
+  <text class="sub" x="604" y="80">outer leaflet of the red cell membrane:</text>
+  <text class="lab" x="604" y="98">phosphatidylcholine, sphingomyelin</text>
+  <g>
+    <use href="#lip" x="620" y="118"/><use href="#lip" x="640" y="118"/><use href="#lip" x="660" y="118"/><use href="#lip" x="680" y="118"/><use href="#lip" x="700" y="118"/>
+    <g transform="translate(0,236) scale(1,-1)">
+      <use href="#lip" x="620" y="118"/><use href="#lip" x="640" y="118"/><use href="#lip" x="660" y="118"/><use href="#lip" x="680" y="118"/><use href="#lip" x="700" y="118"/>
+    </g>
+  </g>
+  <text class="sub" x="604" y="172">inner leaflet:</text>
+  <text class="lab" x="604" y="190">phosphatidylserine, phosphatidylethanolamine</text>
+
+  <rect class="hl" x="26" y="222" width="808" height="190" rx="6"/>
+  <text class="hd" x="40" y="244">D. What sets membrane fluidity</text>
+
+  <text class="lab" x="56" y="272">Shorter chains = MORE fluid</text>
+  <path class="tail" d="M60 288 l0 30 M76 288 l0 30" stroke-width="2.2"/>
+  <path class="tail" d="M110 288 l0 54 M126 288 l0 54" stroke-width="2.2"/>
+  <text class="sub" x="56" y="364">fewer van der Waals contacts</text>
+  <text class="sub" x="56" y="380">between neighbouring chains</text>
+
+  <text class="lab" x="266" y="272">cis double bonds = MORE fluid</text>
+  <path class="tail" d="M272 288 l0 54 M288 288 l0 54" stroke-width="2.2"/>
+  <path class="tail" d="M330 288 l0 16 l-10 10 l10 10 l0 18 M352 288 l0 16 l10 10 l-10 10 l0 18" stroke-width="2.2"/>
+  <text class="sub" x="266" y="364">kinks prevent tight packing;</text>
+  <text class="sub" x="266" y="380">C16:0 melts at 63 C, C18:1 at 13 C</text>
+
+  <text class="lab" x="520" y="272">Cholesterol = BOTH directions</text>
+  <g>
+    <use href="#lip" x="540" y="296"/><use href="#lip" x="562" y="296"/><use href="#lip" x="606" y="296"/><use href="#lip" x="628" y="296"/>
+  </g>
+  <rect x="578" y="300" width="16" height="26" rx="3" fill="#f2b705" stroke="#16191d" stroke-width="1.2"/>
+  <text class="sub" x="520" y="348">above the phase transition temperature it</text>
+  <text class="sub" x="520" y="364">RESTRAINS the tails and lowers fluidity;</text>
+  <text class="sub" x="520" y="380">below it, it blocks ordered packing and</text>
+  <text class="sub" x="520" y="396">PREVENTS the gel state</text>
+</svg>

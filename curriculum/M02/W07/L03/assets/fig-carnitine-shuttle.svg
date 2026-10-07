@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 400" width="880" height="400" role="img"
+     aria-label="Carnitine shuttle: CPT-I on the outer membrane, the carnitine-acylcarnitine translocase and CPT-II on the inner membrane, with malonyl-CoA inhibiting CPT-I">
+  <style>
+    .ttl { font:700 14px sans-serif; fill:#003c71; }
+    .nm { font:700 12.5px monospace; fill:#16191d; }
+    .en { font:700 11.5px sans-serif; fill:#003c71; }
+    .sub { font:11.5px sans-serif; fill:#4a5159; }
+    .lab { font:700 11px sans-serif; fill:#8a6300; }
+    .bx { fill:#fff; stroke:#c6d2dd; stroke-width:1.5; }
+    .bk { fill:#fff5d6; stroke:#f2b705; stroke-width:2.4; }
+    .mem { fill:#eff4f8; stroke:#003c71; stroke-width:2; }
+    .ar { stroke:#003c71; stroke-width:2.2; fill:none; marker-end:url(#h); }
+    .inh { stroke:#8a6300; stroke-width:2.6; fill:none; }
+  </style>
+  <defs><marker id="h" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+    <path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker></defs>
+
+  <text class="ttl" x="20" y="26">Cytosol</text>
+  <text class="ttl" x="318" y="26">Outer membrane</text>
+  <text class="ttl" x="500" y="26">Intermembrane space</text>
+  <text class="ttl" x="700" y="26">Matrix</text>
+
+  <rect class="mem" x="300" y="38" width="36" height="300"/>
+  <rect class="mem" x="636" y="38" width="36" height="300"/>
+  <rect class="bx" x="336" y="38" width="300" height="300" rx="0"/>
+
+  <text class="nm" x="24" y="110">Long-chain fatty acid</text>
+  <path class="ar" d="M90 118 L90 150"/>
+  <text class="en" x="100" y="140">acyl-CoA synthetase</text>
+  <text class="sub" x="100" y="158">ATP to AMP + PPi</text>
+  <text class="nm" x="24" y="186">Acyl-CoA</text>
+  <path class="ar" d="M110 182 L292 182"/>
+
+  <rect class="bk" x="286" y="142" width="64" height="80" rx="6"/>
+  <text class="en" x="296" y="178">CPT-I</text>
+  <text class="sub" x="294" y="196">outer</text>
+  <path class="inh" d="M200 262 L310 230"/>
+  <circle cx="200" cy="262" r="4" fill="#8a6300"/>
+  <text class="lab" x="24" y="268">Malonyl-CoA inhibits CPT-I</text>
+  <text class="sub" x="24" y="288">so synthesis and oxidation are not</text>
+  <text class="sub" x="24" y="306">switched on at the same time</text>
+
+  <text class="nm" x="360" y="178">Acylcarnitine</text>
+  <text class="sub" x="360" y="198">CoA is exchanged for carnitine</text>
+  <path class="ar" d="M466 182 L624 182"/>
+  <rect class="bk" x="470" y="212" width="150" height="46" rx="6"/>
+  <text class="en" x="484" y="232">translocase</text>
+  <text class="sub" x="484" y="250">CACT, antiport</text>
+  <path class="ar" d="M624 240 L560 240" stroke-dasharray="6 4"/>
+  <text class="nm" x="360" y="276">free carnitine</text>
+  <path class="ar" d="M466 272 L300 272" stroke-dasharray="6 4"/>
+
+  <rect class="bk" x="622" y="142" width="64" height="80" rx="6"/>
+  <text class="en" x="630" y="178">CPT-II</text>
+  <text class="sub" x="632" y="196">inner</text>
+  <text class="nm" x="700" y="178">Acyl-CoA</text>
+  <path class="ar" d="M686 182 L696 182"/>
+  <path class="ar" d="M740 190 L740 226"/>
+  <rect class="bk" x="696" y="232" width="160" height="50" rx="6"/>
+  <text class="en" x="712" y="254">beta-oxidation</text>
+  <text class="sub" x="712" y="272">4 reactions per cycle</text>
+
+  <text class="sub" x="20" y="358">Short- and medium-chain fatty acids cross the inner membrane without carnitine, which is why MCAD deficiency and carnitine deficiency differ.</text>
+  <text class="sub" x="20" y="378">Carnitine comes from the diet, mainly meat and dairy, and from synthesis in liver and kidney out of lysine and methionine.</text>
+  <text class="sub" x="20" y="396">The three steps are: activation in the cytosol, exchange of CoA for carnitine, transport, and exchange back to CoA in the matrix.</text>
+</svg>

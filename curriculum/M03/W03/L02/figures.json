@@ -1,4 +1,77 @@
 {
   "lesson_id": "M03-W03-L02",
-  "figures": []
+  "figures": [
+    {
+      "figure_id": "fig-genetic-code",
+      "lesson_id": "M03-W03-L02",
+      "html_anchor": "#fig-genetic-code",
+      "caption": "표준 유전암호표. 61개 코돈이 아미노산을, UAA·UAG·UGA가 종결을 지정하고 AUG가 개시 코돈이다. 축퇴성이 세 번째 염기에 집중되어 있다.",
+      "asset_path": "assets/fig-genetic-code.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-reading-frame",
+      "lesson_id": "M03-W03-L02",
+      "html_anchor": "#fig-reading-frame",
+      "caption": "Reading frame과 변이의 결과. silent, missense, nonsense 변이는 하나의 코돈만 바꾸지만 frameshift는 하류의 모든 코돈을 바꾼다.",
+      "asset_path": "assets/fig-reading-frame.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-trna-structure",
+      "lesson_id": "M03-W03-L02",
+      "html_anchor": "#fig-trna-structure",
+      "caption": "tRNA의 구조. cloverleaf 2차 구조의 네 팔과, D·T 고리의 결합으로 접힌 L자형 3차 구조에서 두 기능 말단이 분자의 양 끝에 놓인다.",
+      "asset_path": "assets/fig-trna-structure.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-wobble",
+      "lesson_id": "M03-W03-L02",
+      "html_anchor": "#fig-wobble",
+      "caption": "Wobble 짝짓기. 코돈과 anticodon의 역평행 결합에서 세 번째 코돈 염기만 느슨하게 읽히며, G·U·inosine의 확장된 짝짓기 규칙이 tRNA 수를 줄인다.",
+      "asset_path": "assets/fig-wobble.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-aars",
+      "lesson_id": "M03-W03-L02",
+      "html_anchor": "#fig-aars",
+      "caption": "Aminoacyl-tRNA synthetase의 두 단계 반응. aminoacyl-AMP 중간체 형성과 tRNA로의 전달, 그리고 잘못 충전된 산물을 가수분해하는 교정 부위를 보인다.",
+      "asset_path": "assets/fig-aars.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-mutation-types",
+      "lesson_id": "M03-W03-L02",
+      "html_anchor": "#fig-mutation-types",
+      "caption": "변이의 종류와 결과. silent, missense, nonsense, frameshift, in-frame indel, 반복서열 확장의 기전과 임상 예를 정리한다.",
+      "asset_path": "assets/fig-mutation-types.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    }
+  ]
 }

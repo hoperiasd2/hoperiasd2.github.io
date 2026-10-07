@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 420" width="820" height="420" role="img"
+     aria-label="Five types of alternative splicing: exon skipping, mutually exclusive exons, alternative five prime site, alternative three prime site and intron retention">
+  <style>
+    .ex { fill:#003c71; stroke:#16191d; stroke-width:1.2; }
+    .alt { fill:#f2b705; stroke:#16191d; stroke-width:1.2; }
+    .ret { fill:#fff5d6; stroke:#16191d; stroke-width:1.2; }
+    .ln { stroke:#16191d; stroke-width:1.6; fill:none; }
+    .ttl { font:700 14px sans-serif; fill:#003c71; }
+    .nm { font:700 12px sans-serif; fill:#003c71; }
+    .sub { font:11px sans-serif; fill:#4a5159; }
+    .el { font:700 10px sans-serif; fill:#ffffff; }
+    .ek { font:700 10px sans-serif; fill:#16191d; }
+  </style>
+  <text class="ttl" x="20" y="24">Five patterns of alternative splicing (pre-mRNA above, two mRNA outcomes below)</text>
+  <text class="sub" x="20" y="42">Blue = constitutive exon, yellow = regulated exon or segment</text>
+
+  <g>
+    <text class="nm" x="20" y="76">1. Exon skipping</text>
+    <text class="sub" x="20" y="92">most common in human</text>
+    <rect class="ex" x="230" y="62" width="60" height="20"/><text class="el" x="252" y="77">E1</text>
+    <rect class="alt" x="350" y="62" width="60" height="20"/><text class="ek" x="372" y="77">E2</text>
+    <rect class="ex" x="470" y="62" width="60" height="20"/><text class="el" x="492" y="77">E3</text>
+    <path class="ln" d="M290 72 L350 72 M410 72 L470 72"/>
+    <rect class="ex" x="580" y="54" width="36" height="16"/><rect class="alt" x="616" y="54" width="36" height="16"/><rect class="ex" x="652" y="54" width="36" height="16"/>
+    <rect class="ex" x="580" y="80" width="36" height="16"/><rect class="ex" x="616" y="80" width="36" height="16"/>
+    <text class="sub" x="696" y="66">include</text><text class="sub" x="696" y="92">skip</text>
+  </g>
+  <g>
+    <text class="nm" x="20" y="146">2. Mutually exclusive exons</text>
+    <rect class="ex" x="230" y="132" width="50" height="20"/><text class="el" x="248" y="147">E1</text>
+    <rect class="alt" x="320" y="132" width="50" height="20"/><text class="ek" x="336" y="147">E2a</text>
+    <rect class="alt" x="410" y="132" width="50" height="20"/><text class="ek" x="426" y="147">E2b</text>
+    <rect class="ex" x="500" y="132" width="50" height="20"/><text class="el" x="518" y="147">E3</text>
+    <path class="ln" d="M280 142 L320 142 M370 142 L410 142 M460 142 L500 142"/>
+    <rect class="ex" x="580" y="124" width="36" height="16"/><rect class="alt" x="616" y="124" width="36" height="16"/><rect class="ex" x="652" y="124" width="36" height="16"/>
+    <rect class="ex" x="580" y="150" width="36" height="16"/><rect class="alt" x="616" y="150" width="36" height="16"/><rect class="ex" x="652" y="150" width="36" height="16"/>
+    <text class="sub" x="696" y="136">E2a only</text><text class="sub" x="696" y="162">E2b only</text>
+  </g>
+  <g>
+    <text class="nm" x="20" y="216">3. Alternative 5' splice site</text>
+    <rect class="ex" x="230" y="202" width="60" height="20"/><text class="el" x="252" y="217">E1</text>
+    <rect class="alt" x="290" y="202" width="34" height="20"/>
+    <rect class="ex" x="470" y="202" width="60" height="20"/><text class="el" x="492" y="217">E2</text>
+    <path class="ln" d="M324 212 L470 212"/>
+    <path class="ln" d="M290 226 L290 234 L470 234 L470 222"/>
+    <text class="sub" x="580" y="208">long form keeps the yellow tail</text>
+    <text class="sub" x="580" y="228">short form ends earlier</text>
+  </g>
+  <g>
+    <text class="nm" x="20" y="286">4. Alternative 3' splice site</text>
+    <rect class="ex" x="230" y="272" width="60" height="20"/><text class="el" x="252" y="287">E1</text>
+    <rect class="alt" x="436" y="272" width="34" height="20"/>
+    <rect class="ex" x="470" y="272" width="60" height="20"/><text class="el" x="492" y="287">E2</text>
+    <path class="ln" d="M290 282 L436 282"/>
+    <path class="ln" d="M290 296 L290 304 L470 304 L470 292"/>
+    <text class="sub" x="580" y="278">exon 2 start shifts</text>
+    <text class="sub" x="580" y="298">frame may change</text>
+  </g>
+  <g>
+    <text class="nm" x="20" y="356">5. Intron retention</text>
+    <rect class="ex" x="230" y="342" width="60" height="20"/><text class="el" x="252" y="357">E1</text>
+    <rect class="ex" x="470" y="342" width="60" height="20"/><text class="el" x="492" y="357">E2</text>
+    <path class="ln" d="M290 352 L470 352"/>
+    <rect class="ret" x="290" y="342" width="180" height="20"/>
+    <text class="ek" x="340" y="357">intron retained</text>
+    <text class="sub" x="580" y="348">often targeted by</text>
+    <text class="sub" x="580" y="366">nonsense-mediated decay</text>
+  </g>
+  <text class="sub" x="20" y="402">About 95% of human multi-exon genes undergo alternative splicing; SR protein and hnRNP levels set the outcome in each tissue.</text>
+</svg>

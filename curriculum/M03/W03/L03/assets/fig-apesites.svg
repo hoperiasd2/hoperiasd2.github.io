@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 380" width="860" height="380" role="img"
+     aria-label="The three tRNA binding sites of the ribosome: A site for incoming aminoacyl-tRNA, P site for peptidyl-tRNA and E site for the exiting deacylated tRNA">
+  <style>
+    .ttl { font:700 14px sans-serif; fill:#003c71; }
+    .nm { font:700 13px sans-serif; fill:#003c71; }
+    .sub { font:11px sans-serif; fill:#4a5159; }
+    .big { fill:#003c71; stroke:#16191d; stroke-width:1.3; }
+    .small { fill:#f2b705; stroke:#16191d; stroke-width:1.3; }
+    .bl { font:700 13px sans-serif; fill:#ffffff; }
+    .trna { stroke:#16191d; stroke-width:5; fill:none; stroke-linecap:round; }
+    .aa { fill:#ffffff; stroke:#16191d; stroke-width:1.3; }
+    .mrna { stroke:#16191d; stroke-width:2.4; fill:none; }
+    .cod { font:700 12px monospace; fill:#16191d; }
+    .site { font:700 20px sans-serif; fill:#003c71; }
+    .box { fill:#fff5d6; stroke:#c6d2dd; stroke-width:1; }
+    .t { font:11px sans-serif; fill:#16191d; }
+  </style>
+  <text class="ttl" x="20" y="26">Three tRNA sites, read right to left as the ribosome moves along the mRNA</text>
+
+  <path class="big" d="M110 56 C110 40 700 40 700 56 L700 160 C700 184 110 184 110 160 Z"/>
+  <text class="bl" x="130" y="80">Large subunit: peptidyl transferase centre and polypeptide exit tunnel</text>
+  <path class="small" d="M110 212 C110 196 700 196 700 212 L700 282 C700 304 110 304 110 282 Z"/>
+  <text class="t" x="130" y="296">Small subunit: decoding centre, checks the codon-anticodon pair</text>
+
+  <path class="mrna" d="M90 258 L720 258"/>
+  <text class="cod" x="60" y="262">5'</text><text class="cod" x="726" y="262">3'</text>
+  <text class="cod" x="540" y="280">E</text><text class="cod" x="400" y="280">P</text><text class="cod" x="260" y="280">A</text>
+
+  <path class="trna" d="M540 250 L540 150"/>
+  <text class="site" x="530" y="136">E</text>
+  <text class="sub" x="474" y="116">deacylated tRNA</text>
+  <text class="sub" x="500" y="100">leaves here</text>
+
+  <path class="trna" d="M400 250 L400 120"/>
+  <circle class="aa" cx="400" cy="108" r="11"/>
+  <circle class="aa" cx="378" cy="94" r="11"/>
+  <circle class="aa" cx="356" cy="82" r="11"/>
+  <circle class="aa" cx="334" cy="72" r="11"/>
+  <text class="site" x="390" y="150" fill="#ffffff">P</text>
+  <text class="sub" x="300" y="56">growing chain on peptidyl-tRNA</text>
+
+  <path class="trna" d="M260 250 L260 150"/>
+  <circle class="aa" cx="260" cy="138" r="11"/>
+  <text class="site" x="250" y="136" fill="#003c71">A</text>
+  <text class="sub" x="170" y="176" fill="#ffffff">incoming aminoacyl-tRNA</text>
+
+  <rect class="box" x="20" y="320" width="820" height="52" rx="4"/>
+  <text class="nm" x="36" y="342">A = aminoacyl, P = peptidyl, E = exit. The peptide bond is made in the large subunit; the codon is checked in the small subunit.</text>
+  <text class="sub" x="36" y="362">One tRNA spans both centres because its L-shape places the anticodon and the CCA end about 7 nm apart.</text>
+</svg>

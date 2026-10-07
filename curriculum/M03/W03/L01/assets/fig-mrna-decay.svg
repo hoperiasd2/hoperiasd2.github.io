@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 420" width="860" height="420" role="img"
+     aria-label="Pathways of mRNA turnover: deadenylation then decapping and exonuclease digestion, and nonsense-mediated decay triggered by an exon junction complex downstream of the stop codon">
+  <style>
+    .ln { stroke:#16191d; stroke-width:1.8; fill:none; }
+    .cap { fill:#f2b705; stroke:#16191d; stroke-width:1.2; }
+    .cds { fill:#003c71; stroke:#16191d; stroke-width:1.2; }
+    .ttl { font:700 14px sans-serif; fill:#003c71; }
+    .nm { font:700 12px sans-serif; fill:#003c71; }
+    .sub { font:11px sans-serif; fill:#4a5159; }
+    .el { font:700 10px sans-serif; fill:#ffffff; }
+    .ek { font:700 10px sans-serif; fill:#16191d; }
+    .enz { fill:#fff5d6; stroke:#003c71; stroke-width:1.2; }
+    .pl { font:700 11px sans-serif; fill:#003c71; }
+    .out { font:700 11px sans-serif; fill:#8a6300; }
+    .pan { stroke:#16191d; stroke-width:1.4; fill:none; }
+  </style>
+  <defs>
+    <marker id="d" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#16191d"/>
+    </marker>
+  </defs>
+  <text class="ttl" x="20" y="24">A. General decay: deadenylation is the rate-limiting step</text>
+
+  <circle class="cap" cx="54" cy="62" r="11"/><text class="ek" x="38" y="42">cap</text>
+  <rect class="cds" x="70" y="52" width="250" height="20"/><text class="el" x="162" y="67">coding region</text>
+  <path class="ln" d="M320 62 L390 62"/><text class="sub" x="330" y="46">3' UTR</text>
+  <path class="pan" d="M390 62 q10 -10 20 0 q10 10 20 0 q10 -10 20 0 q10 10 20 0 q10 -10 20 0 q10 10 20 0"/>
+  <text class="sub" x="400" y="86">poly(A) about 200 nt</text>
+  <ellipse class="enz" cx="440" cy="36" rx="34" ry="13"/><text class="pl" x="424" y="41">PABP</text>
+
+  <path class="ln" d="M560 62 L610 62" marker-end="url(#d)"/>
+  <ellipse class="enz" cx="660" cy="40" rx="78" ry="14"/><text class="pl" x="606" y="45">CCR4-NOT, PAN2-PAN3</text>
+  <text class="nm" x="622" y="68">deadenylation</text>
+  <text class="sub" x="596" y="86">below 10-12 A: PABP falls off</text>
+
+  <path class="ln" d="M160 92 L160 122" marker-end="url(#d)"/>
+  <circle class="cap" cx="54" cy="150" r="11"/>
+  <rect class="cds" x="70" y="140" width="250" height="20"/>
+  <path class="ln" d="M320 150 L360 150"/>
+  <ellipse class="enz" cx="54" cy="184" rx="30" ry="13"/><text class="pl" x="38" y="189">DCP2</text>
+  <text class="nm" x="390" y="146">decapping, then exonucleases</text>
+  <text class="sub" x="390" y="164">XRN1: 5' to 3'</text>
+  <text class="sub" x="390" y="182">exosome complex: 3' to 5'</text>
+  <text class="sub" x="390" y="200">AU-rich element in 3' UTR: ZFP36 destabilizes, HuR stabilizes</text>
+
+  <text class="ttl" x="20" y="248">B. Nonsense-mediated decay: the exon junction complex reports the stop position</text>
+
+  <text class="nm" x="20" y="286">Normal stop</text>
+  <circle class="cap" cx="150" cy="300" r="10"/>
+  <rect class="cds" x="166" y="290" width="110" height="20"/>
+  <rect class="cds" x="286" y="290" width="110" height="20"/>
+  <rect class="cds" x="406" y="290" width="150" height="20"/>
+  <ellipse class="enz" cx="281" cy="270" rx="22" ry="12"/><text class="pl" x="270" y="275">EJC</text>
+  <ellipse class="enz" cx="401" cy="270" rx="22" ry="12"/><text class="pl" x="390" y="275">EJC</text>
+  <text class="ek" x="470" y="330">STOP (last exon)</text>
+  <path class="ln" d="M486 312 L486 322"/>
+  <text class="out" x="596" y="298">no EJC downstream</text>
+  <text class="out" x="596" y="316">mRNA is translated</text>
+
+  <text class="nm" x="20" y="372">Premature stop</text>
+  <circle class="cap" cx="150" cy="386" r="10"/>
+  <rect class="cds" x="166" y="376" width="110" height="20"/>
+  <rect class="cds" x="286" y="376" width="110" height="20"/>
+  <rect class="cds" x="406" y="376" width="150" height="20"/>
+  <ellipse class="enz" cx="281" cy="356" rx="22" ry="12"/><text class="pl" x="270" y="361">EJC</text>
+  <ellipse class="enz" cx="401" cy="356" rx="22" ry="12"/><text class="pl" x="390" y="361">EJC</text>
+  <text class="ek" x="196" y="416">PTC</text>
+  <path class="ln" d="M206 398 L206 406"/>
+  <ellipse class="enz" cx="330" cy="414" rx="56" ry="13"/><text class="pl" x="292" y="419">UPF1 + SMG</text>
+  <text class="out" x="596" y="384">stop is more than 50-55 nt</text>
+  <text class="out" x="596" y="402">upstream of the last junction</text>
+  <text class="out" x="596" y="420">transcript is degraded</text>
+</svg>

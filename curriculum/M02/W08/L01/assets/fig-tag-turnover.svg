@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 400" width="880" height="400" role="img"
+     aria-label="Triacylglycerol turnover between adipose tissue and liver in the fed and fasted states, with VLDL export and the futile cycle of re-esterification">
+  <style>
+    .ttl { font:700 14px sans-serif; fill:#003c71; }
+    .nm { font:700 12.5px sans-serif; fill:#16191d; }
+    .sub { font:11.5px sans-serif; fill:#4a5159; }
+    .lab { font:700 11px sans-serif; fill:#8a6300; }
+    .bx { fill:#fff; stroke:#c6d2dd; stroke-width:1.5; }
+    .bk { fill:#fff5d6; stroke:#f2b705; stroke-width:2.2; }
+    .ar { stroke:#003c71; stroke-width:2.2; fill:none; marker-end:url(#h); }
+    .ar2 { stroke:#8a6300; stroke-width:2.2; fill:none; marker-end:url(#g); }
+  </style>
+  <defs>
+    <marker id="h" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker>
+    <marker id="g" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0 L10 5 L0 10 z" fill="#8a6300"/></marker>
+  </defs>
+
+  <text class="ttl" x="20" y="26">Fed state: net storage</text>
+  <rect class="bx" x="20" y="38" width="840" height="140" rx="7"/>
+  <text class="nm" x="40" y="66">Dietary fat, chylomicron</text>
+  <path class="ar" d="M212 62 L286 62"/>
+  <text class="nm" x="292" y="66">LPL at the adipose capillary</text>
+  <path class="ar" d="M492 62 L556 62"/>
+  <text class="nm" x="562" y="66">Fatty acid taken up</text>
+  <path class="ar" d="M700 72 L700 102"/>
+  <text class="nm" x="40" y="116">Liver de novo synthesis, VLDL</text>
+  <path class="ar" d="M248 112 L556 112"/>
+  <text class="sub" x="300" y="102">VLDL triacylglycerol is also hydrolysed by the same LPL</text>
+  <text class="nm" x="562" y="118">Stored as triacylglycerol</text>
+  <text class="sub" x="40" y="150">Insulin raises adipose LPL, raises GLUT4 so glycerol 3-phosphate is available, and inhibits HSL. All three push the same way.</text>
+  <text class="lab" x="40" y="170">Adipose tissue cannot store fat without glucose, because its glycerol 3-phosphate comes from glycolysis.</text>
+
+  <text class="ttl" x="20" y="214">Fasting state: net release</text>
+  <rect class="bx" x="20" y="226" width="840" height="120" rx="7"/>
+  <text class="nm" x="40" y="254">Stored triacylglycerol</text>
+  <path class="ar" d="M186 250 L250 250"/>
+  <text class="sub" x="186" y="240">ATGL, HSL, MGL</text>
+  <text class="nm" x="256" y="254">3 FFA + glycerol</text>
+  <path class="ar" d="M392 250 L456 250"/>
+  <text class="nm" x="462" y="254">muscle, heart, liver</text>
+  <path class="ar2" d="M330 262 L330 298 L120 298 L120 266" stroke-dasharray="6 4"/>
+  <text class="lab" x="140" y="292">30-40 percent is re-esterified in place: a futile cycle that costs ATP</text>
+  <text class="sub" x="40" y="330">In the liver the incoming fatty acid has three fates: oxidation, ketone body formation, or re-esterification and export as VLDL.</text>
+
+  <text class="sub" x="20" y="374">Turnover is continuous in both states; what changes is the balance. A 70 kg adult stores roughly 10-15 kg of triacylglycerol, enough for weeks.</text>
+  <text class="sub" x="20" y="394">Glycogen stores, by contrast, last less than a day.</text>
+</svg>

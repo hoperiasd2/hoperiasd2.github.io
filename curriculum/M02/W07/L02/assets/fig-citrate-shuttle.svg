@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 420" width="880" height="420" role="img"
+     aria-label="Citrate shuttle carrying acetyl units from the mitochondrial matrix to the cytosol, with ATP-citrate lyase, malate dehydrogenase and malic enzyme">
+  <style>
+    .ttl { font:700 14px sans-serif; fill:#003c71; }
+    .nm { font:700 12.5px monospace; fill:#16191d; }
+    .en { font:11.5px sans-serif; fill:#4a5159; }
+    .lab { font:700 11px sans-serif; fill:#8a6300; }
+    .bx { fill:#fff; stroke:#c6d2dd; stroke-width:1.5; }
+    .bk { fill:#fff5d6; stroke:#f2b705; stroke-width:2.2; }
+    .mito { fill:#eff4f8; stroke:#003c71; stroke-width:2; }
+    .ar { stroke:#003c71; stroke-width:2.2; fill:none; marker-end:url(#h); }
+    .sub { font:11.5px sans-serif; fill:#4a5159; }
+  </style>
+  <defs><marker id="h" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+    <path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker></defs>
+
+  <rect class="mito" x="20" y="40" width="300" height="300" rx="10"/>
+  <text class="ttl" x="40" y="66">Mitochondrial matrix</text>
+  <text class="ttl" x="520" y="66">Cytosol</text>
+  <rect class="bx" x="470" y="40" width="390" height="300" rx="10"/>
+
+  <text class="nm" x="44" y="108">Pyruvate</text>
+  <path class="ar" d="M70 118 L70 150"/>
+  <text class="en" x="80" y="140">PDH complex</text>
+  <text class="nm" x="44" y="170">Acetyl-CoA</text>
+  <text class="nm" x="200" y="170">Oxaloacetate</text>
+  <path class="ar" d="M126 166 L196 166"/>
+  <text class="en" x="118" y="196">citrate synthase</text>
+  <rect class="bk" x="152" y="206" width="146" height="40" rx="6"/>
+  <text class="nm" x="196" y="232">Citrate</text>
+
+  <path class="ar" d="M298 226 L516 226"/>
+  <text class="lab" x="330" y="216">tricarboxylate transporter</text>
+  <text class="sub" x="330" y="248">acetyl-CoA itself cannot cross the inner membrane</text>
+
+  <rect class="bk" x="520" y="206" width="140" height="40" rx="6"/>
+  <text class="nm" x="560" y="232">Citrate</text>
+  <path class="ar" d="M590 202 L590 174"/>
+  <text class="en" x="600" y="192">ATP-citrate lyase (ACL), ATP</text>
+  <text class="nm" x="498" y="152">Acetyl-CoA</text>
+  <text class="nm" x="650" y="152">Oxaloacetate</text>
+  <path class="ar" d="M672 142 L672 118"/>
+  <text class="en" x="682" y="134">malate dehydrogenase, NADH</text>
+  <text class="nm" x="650" y="104">Malate</text>
+  <path class="ar" d="M646 100 L560 100"/>
+  <text class="en" x="498" y="86">malic enzyme</text>
+  <text class="lab" x="498" y="118">NADPH + CO2</text>
+
+  <path class="ar" d="M540 142 L540 288"/>
+  <rect class="bk" x="488" y="292" width="340" height="40" rx="6"/>
+  <text class="nm" x="508" y="318">Malonyl-CoA, then palmitate</text>
+
+  <path class="ar" d="M620 96 L620 60 L316 60 L316 100" stroke-dasharray="7 5"/>
+  <text class="sub" x="340" y="52">malate returns through the dicarboxylate transporter</text>
+
+  <text class="sub" x="20" y="366">Net result per turn: one acetyl unit is delivered to the cytosol, one ATP is spent, and one NADPH is produced by malic enzyme.</text>
+  <text class="sub" x="20" y="386">Citrate leaves the matrix only when it accumulates, that is when ATP and acetyl-CoA are plentiful and isocitrate dehydrogenase is inhibited.</text>
+  <text class="sub" x="20" y="406">The same citrate then activates acetyl-CoA carboxylase in the cytosol, so the carrier is also the signal.</text>
+</svg>

@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 420" width="880" height="420" role="img"
+     aria-label="Regulation of acetyl-CoA carboxylase by citrate, palmitoyl-CoA, phosphorylation by AMPK and glucagon, dephosphorylation by insulin and long-term transcriptional control">
+  <style>
+    .ttl { font:700 14px sans-serif; fill:#003c71; }
+    .nm { font:700 13px sans-serif; fill:#16191d; }
+    .mn { font:700 12.5px monospace; fill:#16191d; }
+    .sub { font:11.5px sans-serif; fill:#4a5159; }
+    .lab { font:700 11px sans-serif; fill:#8a6300; }
+    .bx { fill:#fff; stroke:#c6d2dd; stroke-width:1.5; }
+    .bk { fill:#fff5d6; stroke:#f2b705; stroke-width:2.4; }
+    .ar { stroke:#003c71; stroke-width:2.2; fill:none; marker-end:url(#h); }
+    .act { stroke:#8a6300; stroke-width:2.4; fill:none; marker-end:url(#g); }
+    .inh { stroke:#16191d; stroke-width:2.4; fill:none; }
+  </style>
+  <defs>
+    <marker id="h" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker>
+    <marker id="g" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0 L10 5 L0 10 z" fill="#8a6300"/></marker>
+  </defs>
+
+  <rect class="bk" x="310" y="166" width="262" height="86" rx="8"/>
+  <text class="nm" x="330" y="192">Acetyl-CoA carboxylase</text>
+  <text class="sub" x="330" y="212">biotin-dependent carboxylation</text>
+  <text class="lab" x="330" y="234">RATE-LIMITING STEP</text>
+
+  <text class="mn" x="78" y="198">Acetyl-CoA</text>
+  <path class="ar" d="M190 194 L304 194"/>
+  <text class="sub" x="196" y="182">+ HCO3-, ATP</text>
+  <text class="mn" x="610" y="198">Malonyl-CoA</text>
+  <path class="ar" d="M578 194 L604 194"/>
+
+  <text class="ttl" x="40" y="40">Allosteric control</text>
+  <rect class="bx" x="40" y="52" width="320" height="94" rx="7"/>
+  <text class="nm" x="58" y="76">Citrate</text>
+  <text class="sub" x="150" y="76">polymerises the enzyme to the active filament</text>
+  <text class="nm" x="58" y="104">Palmitoyl-CoA</text>
+  <text class="sub" x="190" y="104">depolymerises it</text>
+  <text class="sub" x="58" y="130">substrate feed-forward and product feedback on one enzyme</text>
+  <path class="act" d="M200 150 L380 160"/>
+  <path class="inh" d="M300 150 L350 162"/>
+
+  <text class="ttl" x="520" y="40">Covalent control, minutes</text>
+  <rect class="bx" x="520" y="52" width="336" height="94" rx="7"/>
+  <text class="nm" x="538" y="76">Glucagon, epinephrine, AMPK</text>
+  <text class="sub" x="538" y="96">phosphorylate the enzyme, which inactivates it</text>
+  <text class="nm" x="538" y="122">Insulin</text>
+  <text class="sub" x="596" y="122">promotes dephosphorylation, which activates it</text>
+  <path class="ar" d="M640 150 L520 160"/>
+
+  <text class="ttl" x="40" y="294">Transcriptional control, hours to days</text>
+  <rect class="bx" x="40" y="306" width="816" height="72" rx="7"/>
+  <text class="nm" x="58" y="330">High-carbohydrate, low-fat diet, high insulin</text>
+  <text class="sub" x="440" y="330">SREBP-1c and ChREBP raise ACC and FAS transcription</text>
+  <text class="nm" x="58" y="358">Fasting, high fat diet, high glucagon</text>
+  <text class="sub" x="440" y="358">transcription of both enzymes falls</text>
+  <path class="ar" d="M440 300 L440 262"/>
+
+  <text class="sub" x="40" y="402">Malonyl-CoA has a second job: it inhibits carnitine palmitoyltransferase I, so synthesis and oxidation are never both switched on.</text>
+</svg>

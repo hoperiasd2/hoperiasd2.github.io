@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 400" width="880" height="400" role="img"
+     aria-label="Cleavage sites of phospholipases A1, A2, C and D on a glycerophospholipid, with the products of each">
+  <style>
+    .b { stroke:#16191d; stroke-width:2.2; fill:none; stroke-linecap:round; }
+    .es { stroke:#003c71; stroke-width:2.6; fill:none; }
+    .cut { stroke:#f2b705; stroke-width:3; fill:none; }
+    .ttl { font:700 14px sans-serif; fill:#003c71; }
+    .nm { font:700 12.5px sans-serif; fill:#16191d; }
+    .at { font:600 11.5px monospace; fill:#16191d; }
+    .sub { font:11.5px sans-serif; fill:#4a5159; }
+    .lab { font:700 12px sans-serif; fill:#8a6300; }
+    .bx { fill:#fff; stroke:#c6d2dd; stroke-width:1.5; }
+    .bk { fill:#fff5d6; stroke:#f2b705; stroke-width:2.2; }
+    .nv { fill:#003c71; }
+    .st { font:700 11.5px sans-serif; fill:#fff; }
+    .hd { fill:#eff4f8; stroke:#c6d2dd; stroke-width:1.3; }
+  </style>
+
+  <text class="ttl" x="20" y="26">Four cleavage sites on one molecule</text>
+  <rect class="bx" x="20" y="38" width="420" height="200" rx="7"/>
+  <text class="at" x="60" y="80">CH2</text>
+  <text class="at" x="60" y="140">CH</text>
+  <text class="at" x="60" y="200">CH2</text>
+  <path class="b" d="M70 88 L70 130"/>
+  <path class="b" d="M70 148 L70 190"/>
+
+  <text class="at" x="100" y="80">O</text>
+  <path class="es" d="M118 76 L140 76"/>
+  <text class="at" x="144" y="80">CO-R1</text>
+  <path class="cut" d="M130 60 L130 92"/>
+  <text class="lab" x="226" y="80">PLA1</text>
+
+  <text class="at" x="100" y="140">O</text>
+  <path class="es" d="M118 136 L140 136"/>
+  <text class="at" x="144" y="140">CO-R2</text>
+  <path class="cut" d="M130 120 L130 152"/>
+  <text class="lab" x="226" y="140">PLA2</text>
+
+  <text class="at" x="100" y="200">O</text>
+  <path class="es" d="M118 196 L140 196"/>
+  <text class="at" x="144" y="200">PO3</text>
+  <path class="es" d="M188 196 L210 196"/>
+  <text class="at" x="214" y="200">X</text>
+  <path class="cut" d="M134 180 L134 212"/>
+  <text class="lab" x="100" y="230">PLC</text>
+  <path class="cut" d="M200 180 L200 212"/>
+  <text class="lab" x="238" y="200">PLD</text>
+
+  <rect class="nv" x="462" y="38" width="130" height="26"/>
+  <rect class="nv" x="592" y="38" width="130" height="26"/>
+  <rect class="nv" x="722" y="38" width="130" height="26"/>
+  <text class="st" x="476" y="56">Enzyme</text>
+  <text class="st" x="606" y="56">Products</text>
+  <text class="st" x="736" y="56">Where it matters</text>
+
+  <rect class="hd" x="462" y="64" width="390" height="42"/>
+  <text class="sub" x="476" y="82">PLA1</text>
+  <text class="sub" x="606" y="82">fatty acid +</text>
+  <text class="sub" x="606" y="98">2-lysophospholipid</text>
+  <text class="sub" x="736" y="90">lipid remodelling</text>
+
+  <rect class="bx" x="462" y="106" width="390" height="56"/>
+  <text class="sub" x="476" y="124">PLA2</text>
+  <text class="sub" x="606" y="124">arachidonate +</text>
+  <text class="sub" x="606" y="140">1-lysophospholipid</text>
+  <text class="sub" x="736" y="124">eicosanoid release;</text>
+  <text class="sub" x="736" y="140">pancreatic, venom,</text>
+  <text class="sub" x="736" y="156">cytosolic forms</text>
+
+  <rect class="hd" x="462" y="162" width="390" height="56"/>
+  <text class="sub" x="476" y="180">PLC</text>
+  <text class="sub" x="606" y="180">diacylglycerol +</text>
+  <text class="sub" x="606" y="196">IP3 (from PIP2)</text>
+  <text class="sub" x="736" y="180">signal transduction:</text>
+  <text class="sub" x="736" y="196">DAG to PKC, IP3 to</text>
+  <text class="sub" x="736" y="212">calcium release</text>
+
+  <rect class="bx" x="462" y="218" width="390" height="42"/>
+  <text class="sub" x="476" y="236">PLD</text>
+  <text class="sub" x="606" y="236">phosphatidate +</text>
+  <text class="sub" x="606" y="252">free head group</text>
+  <text class="sub" x="736" y="244">vesicle traffic</text>
+
+  <rect class="bk" x="20" y="276" width="832" height="104" rx="7"/>
+  <text class="lab" x="40" y="300">Why PLA2 is the one to remember</text>
+  <text class="sub" x="40" y="322">It releases arachidonate from the sn-2 position, the committed step of eicosanoid synthesis. Glucocorticoids inhibit it indirectly,</text>
+  <text class="sub" x="40" y="340">which is why they suppress both the cyclooxygenase and the lipoxygenase branches, while NSAIDs block only cyclooxygenase.</text>
+  <text class="sub" x="40" y="362">Its other product, lysophospholipid, has detergent properties; snake and bee venom PLA2 lyse red cell membranes this way.</text>
+</svg>

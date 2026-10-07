@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 440" width="860" height="440" role="img"
+     aria-label="Structure of a replication fork with helicase, leading strand continuous synthesis, lagging strand Okazaki fragments, primase and ligase">
+  <style>
+    .ttl{font:700 15px sans-serif;fill:#003c71}
+    .hd{font:700 12.5px sans-serif;fill:#003c71}
+    .lab{font:700 12px sans-serif;fill:#16191d}
+    .sub{font:11px sans-serif;fill:#4a5159}
+    .old{stroke:#16191d;stroke-width:3;fill:none}
+    .new{stroke:#003c71;stroke-width:3;fill:none}
+    .pri{stroke:#f2b705;stroke-width:4;fill:none}
+    .enz{fill:#fff5d6;stroke:#003c71;stroke-width:1.8}
+    .ar{stroke:#16191d;stroke-width:2;fill:none;marker-end:url(#ar2)}
+    .box{fill:#ffffff;stroke:#c6d2dd;stroke-width:1.3}
+  </style>
+  <defs>
+    <marker id="ar2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#16191d"/></marker>
+  </defs>
+  <text class="ttl" x="26" y="24">The replication fork</text>
+  <text class="sub" x="26" y="44">Every DNA polymerase synthesises only 5' to 3' and cannot start without a primer. These two limits force the two strands to be copied differently.</text>
+
+  <path class="old" d="M660 110 L420 110 L300 170"/>
+  <path class="old" d="M660 260 L420 260 L300 200"/>
+  <text class="lab" x="672" y="114">3'</text>
+  <text class="lab" x="672" y="264">5'</text>
+  <text class="sub" x="564" y="94">parental duplex (not yet unwound)</text>
+
+  <ellipse class="enz" cx="420" cy="185" rx="34" ry="46"/>
+  <text class="lab" x="398" y="182">heli-</text>
+  <text class="lab" x="400" y="198">case</text>
+  <path class="ar" d="M460 185 L510 185"/>
+  <text class="sub" x="466" y="174">fork moves</text>
+
+  <path class="new" d="M296 168 L80 168"/>
+  <path class="pri" d="M330 169 L296 169"/>
+  <text class="lab" x="60" y="156">5'</text>
+  <text class="lab" x="258" y="152">3'</text>
+  <text class="hd" x="86" y="134">LEADING STRAND</text>
+  <text class="sub" x="86" y="200">one primer, then continuous synthesis</text>
+  <text class="sub" x="86" y="216">in the same direction as the fork</text>
+
+  <path class="pri" d="M300 206 L266 206"/>
+  <path class="new" d="M266 206 L176 206"/>
+  <path class="pri" d="M170 206 L136 206"/>
+  <path class="new" d="M136 206 L56 206"/>
+  <text class="hd" x="86" y="258">LAGGING STRAND</text>
+  <text class="sub" x="86" y="278">Okazaki fragments, each with its own primer,</text>
+  <text class="sub" x="86" y="294">made away from the fork</text>
+  <text class="sub" x="86" y="310">bacteria 1000-2000 nt; eukaryotes 100-200 nt</text>
+  <circle cx="176" cy="206" r="7" fill="#ffffff" stroke="#16191d" stroke-width="2"/>
+  <text class="sub" x="150" y="238">gap sealed by DNA ligase</text>
+
+  <rect class="box" x="26" y="336" width="400" height="96" rx="6"/>
+  <text class="hd" x="38" y="358">Proteins at the fork</text>
+  <text class="sub" x="38" y="380">helicase: unwinds using ATP (DnaB in bacteria, MCM in eukaryotes)</text>
+  <text class="sub" x="38" y="396">single-strand binding protein: keeps strands apart</text>
+  <text class="sub" x="38" y="412">topoisomerase: relieves supercoils ahead of the fork</text>
+  <text class="sub" x="38" y="428">primase: lays down short RNA primers (shown in yellow)</text>
+
+  <rect class="box" x="440" y="300" width="394" height="132" rx="6"/>
+  <text class="hd" x="452" y="322">The end-replication problem and telomeres</text>
+  <text class="sub" x="452" y="344">When the last primer of the lagging strand is removed there is no</text>
+  <text class="sub" x="452" y="360">upstream primer to fill the gap, so a linear chromosome shortens.</text>
+  <text class="sub" x="452" y="382">Telomere: repeat sequence at the end, TTAGGG in humans.</text>
+  <text class="sub" x="452" y="398">Telomerase: a reverse transcriptase carrying its OWN RNA template,</text>
+  <text class="sub" x="452" y="414">so it can extend the end with no DNA template.</text>
+  <text class="sub" x="452" y="430">Most somatic cells have little activity; about 90 percent of cancers restore it.</text>
+
+  <rect class="box" x="440" y="300" width="0" height="0"/>
+  <text class="sub" x="440" y="284">Origins: one in E. coli, tens of thousands in a human chromosome.</text>
+</svg>

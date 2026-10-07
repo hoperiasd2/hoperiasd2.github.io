@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 440" width="880" height="440" role="img"
+     aria-label="Ketogenesis in liver mitochondria from acetyl-CoA through acetoacetyl-CoA and HMG-CoA to acetoacetate and beta-hydroxybutyrate">
+  <style>
+    .ttl { font:700 14px sans-serif; fill:#003c71; }
+    .nm { font:700 12.5px monospace; fill:#16191d; }
+    .en { font:700 11.5px sans-serif; fill:#003c71; }
+    .sub { font:11.5px sans-serif; fill:#4a5159; }
+    .lab { font:700 11px sans-serif; fill:#8a6300; }
+    .bx { fill:#fff; stroke:#c6d2dd; stroke-width:1.5; }
+    .bk { fill:#fff5d6; stroke:#f2b705; stroke-width:2.4; }
+    .mito { fill:#eff4f8; stroke:#003c71; stroke-width:2; }
+    .ar { stroke:#003c71; stroke-width:2.2; fill:none; marker-end:url(#h); }
+  </style>
+  <defs><marker id="h" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+    <path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker></defs>
+
+  <rect class="mito" x="20" y="36" width="520" height="330" rx="10"/>
+  <text class="ttl" x="40" y="62">Liver mitochondrial matrix</text>
+
+  <text class="nm" x="44" y="100">Fatty acid</text>
+  <path class="ar" d="M70 108 L70 134"/>
+  <text class="en" x="80" y="126">beta-oxidation</text>
+  <rect class="bx" x="40" y="140" width="190" height="34" rx="5"/>
+  <text class="nm" x="56" y="163">Acetyl-CoA (excess)</text>
+  <path class="ar" d="M232 157 L300 157"/>
+  <text class="en" x="236" y="146">thiolase</text>
+  <rect class="bx" x="306" y="140" width="190" height="34" rx="5"/>
+  <text class="nm" x="320" y="163">Acetoacetyl-CoA</text>
+
+  <path class="ar" d="M400 180 L400 212"/>
+  <text class="en" x="410" y="200">HMG-CoA synthase, + acetyl-CoA</text>
+  <text class="lab" x="410" y="218">RATE-LIMITING STEP</text>
+  <rect class="bk" x="306" y="218" width="190" height="34" rx="5"/>
+  <text class="nm" x="340" y="241">HMG-CoA</text>
+
+  <path class="ar" d="M400 258 L400 288"/>
+  <text class="en" x="410" y="278">HMG-CoA lyase, releases acetyl-CoA</text>
+  <rect class="bk" x="306" y="294" width="190" height="34" rx="5"/>
+  <text class="nm" x="328" y="317">Acetoacetate</text>
+
+  <path class="ar" d="M300 311 L236 311"/>
+  <text class="en" x="60" y="290">beta-hydroxybutyrate</text>
+  <text class="en" x="60" y="306">dehydrogenase, NADH</text>
+  <rect class="bk" x="40" y="294" width="190" height="34" rx="5"/>
+  <text class="nm" x="48" y="317">beta-Hydroxybutyrate</text>
+  <text class="sub" x="40" y="350">the ratio tracks the mitochondrial NADH/NAD+ ratio</text>
+
+  <path class="ar" d="M232 320 L600 320"/>
+  <path class="ar" d="M500 300 L600 290"/>
+  <rect class="bx" x="606" y="266" width="250" height="68" rx="7"/>
+  <text class="ttl" x="624" y="292">Exported to blood</text>
+  <text class="sub" x="624" y="314">water soluble, no carrier needed,</text>
+  <text class="sub" x="624" y="330">crosses the blood-brain barrier</text>
+
+  <rect class="bk" x="606" y="60" width="250" height="186" rx="7"/>
+  <text class="lab" x="624" y="84">What turns ketogenesis on</text>
+  <text class="sub" x="624" y="108">low insulin, high glucagon</text>
+  <text class="sub" x="624" y="128">high fatty acid delivery from</text>
+  <text class="sub" x="624" y="144">adipose lipolysis</text>
+  <text class="sub" x="624" y="166">low malonyl-CoA, so CPT-I is</text>
+  <text class="sub" x="624" y="182">open and oxidation runs</text>
+  <text class="sub" x="624" y="204">oxaloacetate drawn off into</text>
+  <text class="sub" x="624" y="220">gluconeogenesis, so acetyl-CoA</text>
+  <text class="sub" x="624" y="236">cannot all enter the TCA cycle</text>
+
+  <text class="sub" x="20" y="394">Two HMG-CoA pools exist and do not mix: the mitochondrial pool shown here makes ketone bodies, the cytosolic pool makes cholesterol.</text>
+  <text class="sub" x="20" y="414">Net stoichiometry: 2 acetyl-CoA give 1 acetoacetate. The acetyl-CoA added by the synthase is returned by the lyase.</text>
+  <text class="sub" x="20" y="434">Normal fasting blood ketone concentration is below 0.3 mmol/L; after several days of fasting it reaches 4-6 mmol/L.</text>
+</svg>

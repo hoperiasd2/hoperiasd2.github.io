@@ -1,4 +1,77 @@
 {
   "lesson_id": "M03-W04-L02",
-  "figures": []
+  "figures": [
+    {
+      "figure_id": "fig-regulation-levels",
+      "lesson_id": "M03-W04-L02",
+      "html_anchor": "#fig-regulation-levels",
+      "caption": "진핵세포의 유전자 발현 조절 단계. chromatin 접근성에서 단백질 분해까지 여섯 지점이 있고, 단계마다 작동 속도와 지속성이 다르다.",
+      "asset_path": "assets/fig-regulation-levels.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-lac-operon",
+      "lesson_id": "M03-W04-L02",
+      "html_anchor": "#fig-lac-operon",
+      "caption": "Lac operon의 네 가지 영양 조건. 억제자에 의한 음성 조절과 cAMP-CAP에 의한 양성 조절이 조합되어 네 가지 발현 수준을 만든다.",
+      "asset_path": "assets/fig-lac-operon.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-trp-operon",
+      "lesson_id": "M03-W04-L02",
+      "html_anchor": "#fig-trp-operon",
+      "caption": "Trp operon의 두 층 조절. tryptophan이 보조억제자로 작용하는 억제와, leader peptide의 tryptophan 코돈에서 ribosome이 멈추는지에 따라 종결 구조가 결정되는 attenuation을 보인다.",
+      "asset_path": "assets/fig-trp-operon.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-coordinate",
+      "lesson_id": "M03-W04-L02",
+      "html_anchor": "#fig-coordinate",
+      "caption": "여러 유전자를 함께 조절하는 두 방식. 원핵세포는 유전자를 하나의 operon에 묶고, 진핵세포는 서로 떨어진 유전자가 같은 반응 요소를 공유한다.",
+      "asset_path": "assets/fig-coordinate.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-chromatin",
+      "lesson_id": "M03-W04-L02",
+      "html_anchor": "#fig-chromatin",
+      "caption": "Chromatin 수준의 조절. nucleosome의 구성과, acetylation에 의한 개방 상태 및 deacetylation·DNA methylation에 의한 폐쇄 상태를 비교한다.",
+      "asset_path": "assets/fig-chromatin.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-promoter",
+      "lesson_id": "M03-W04-L02",
+      "html_anchor": "#fig-promoter",
+      "caption": "진핵세포 유전자의 조절 서열 구성. core promoter, 근위 요소, 반응 요소와 enhancer가 각각 다른 질문에 답한다.",
+      "asset_path": "assets/fig-promoter.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    }
+  ]
 }

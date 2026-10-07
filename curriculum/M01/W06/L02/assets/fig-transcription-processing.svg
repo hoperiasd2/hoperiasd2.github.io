@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 440" width="860" height="440" role="img"
+     aria-label="Transcription from a promoter and the three processing steps of eukaryotic messenger RNA: capping, splicing and polyadenylation, followed by export through the nuclear pore">
+  <style>
+    .ttl{font:700 15px sans-serif;fill:#003c71}
+    .hd{font:700 12.5px sans-serif;fill:#003c71}
+    .lab{font:700 12px sans-serif;fill:#16191d}
+    .sub{font:11px sans-serif;fill:#4a5159}
+    .dna{stroke:#16191d;stroke-width:3;fill:none}
+    .ex{fill:#003c71}
+    .intr{fill:#eff4f8;stroke:#c6d2dd;stroke-width:1.4}
+    .rna{stroke:#003c71;stroke-width:3;fill:none}
+    .enz{fill:#fff5d6;stroke:#003c71;stroke-width:1.8}
+    .ar{stroke:#16191d;stroke-width:2.2;fill:none;marker-end:url(#at1)}
+    .box{fill:#ffffff;stroke:#c6d2dd;stroke-width:1.3}
+    .nuc{fill:none;stroke:#003c71;stroke-width:2.4}
+  </style>
+  <defs>
+    <marker id="at1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#16191d"/></marker>
+  </defs>
+  <text class="ttl" x="26" y="24">Transcription and processing of a eukaryotic mRNA</text>
+
+  <text class="hd" x="26" y="52">NUCLEUS</text>
+  <path class="nuc" d="M20 60 L840 60"/>
+
+  <path class="dna" d="M60 108 L800 108"/>
+  <rect x="86" y="98" width="58" height="20" fill="#f2b705" stroke="#16191d" stroke-width="1.4"/>
+  <text class="sub" x="86" y="92">promoter</text>
+  <text class="sub" x="86" y="136">TATA box, general transcription factors, RNA Pol II</text>
+  <rect class="ex" x="176" y="98" width="70" height="20"/>
+  <rect class="intr" x="246" y="98" width="110" height="20"/>
+  <rect class="ex" x="356" y="98" width="60" height="20"/>
+  <rect class="intr" x="416" y="98" width="130" height="20"/>
+  <rect class="ex" x="546" y="98" width="80" height="20"/>
+  <text class="lab" x="192" y="92">exon</text>
+  <text class="lab" x="276" y="92">intron</text>
+  <text class="lab" x="368" y="92">exon</text>
+  <text class="lab" x="456" y="92">intron</text>
+  <text class="lab" x="564" y="92">exon</text>
+  <ellipse class="enz" cx="300" cy="146" rx="0" ry="0"/>
+
+  <path class="ar" d="M350 152 L350 182"/>
+  <text class="sub" x="362" y="172">transcription, 5' to 3', no primer needed</text>
+
+  <text class="hd" x="26" y="200">PRIMARY TRANSCRIPT (pre-mRNA)</text>
+  <path class="rna" d="M176 216 L626 216"/>
+  <rect class="ex" x="176" y="206" width="70" height="20"/>
+  <rect class="intr" x="246" y="206" width="110" height="20"/>
+  <rect class="ex" x="356" y="206" width="60" height="20"/>
+  <rect class="intr" x="416" y="206" width="130" height="20"/>
+  <rect class="ex" x="546" y="206" width="80" height="20"/>
+
+  <circle cx="162" cy="216" r="12" fill="#f2b705" stroke="#16191d" stroke-width="1.6"/>
+  <text class="lab" x="86" y="200">5' CAP</text>
+  <text class="sub" x="60" y="248">7-methylguanosine</text>
+
+  <path class="ar" d="M400 232 L400 266"/>
+  <text class="hd" x="412" y="252">SPLICING by the spliceosome (catalytic core is snRNA)</text>
+  <text class="sub" x="412" y="268">recognises GU at the 5' end and AG at the 3' end of each intron</text>
+
+  <text class="hd" x="26" y="292">MATURE mRNA</text>
+  <path class="rna" d="M176 308 L516 308"/>
+  <rect class="ex" x="176" y="298" width="70" height="20"/>
+  <rect class="ex" x="246" y="298" width="60" height="20"/>
+  <rect class="ex" x="306" y="298" width="80" height="20"/>
+  <circle cx="162" cy="308" r="12" fill="#f2b705" stroke="#16191d" stroke-width="1.6"/>
+  <path class="rna" d="M386 308 q16 -10 32 0 q16 10 32 0 q16 -10 32 0 q16 10 32 0"/>
+  <text class="lab" x="420" y="340">poly(A) tail, 100-250 A residues</text>
+  <text class="sub" x="420" y="356">added without a template; stability and translation efficiency</text>
+
+  <path class="nuc" d="M20 374 L840 374"/>
+  <circle cx="300" cy="374" r="14" fill="#ffffff" stroke="#003c71" stroke-width="2"/>
+  <text class="hd" x="26" y="396">CYTOSOL: ready for translation</text>
+  <text class="sub" x="320" y="378">nuclear pore</text>
+
+  <rect class="box" x="440" y="384" width="394" height="48" rx="6"/>
+  <text class="sub" x="452" y="404">Alternative splicing recombines exons from one transcript, so a single gene</text>
+  <text class="sub" x="452" y="420">yields several proteins. Over 90 percent of human genes are spliced this way.</text>
+</svg>

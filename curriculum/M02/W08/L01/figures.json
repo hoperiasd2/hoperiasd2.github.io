@@ -1,4 +1,65 @@
 {
   "lesson_id": "M02-W08-L01",
-  "figures": []
+  "figures": [
+    {
+      "figure_id": "fig-tag-synthesis",
+      "lesson_id": "M02-W08-L01",
+      "html_anchor": "#fig-tag-synthesis",
+      "caption": "Triacylglycerol 합성의 두 경로. 간과 지방조직은 glycerol 3-phosphate에서 출발하고, 소장 상피세포는 2-monoacylglycerol에서 출발한다. DGAT가 두 경로가 공유하는 마지막 committed step이다.",
+      "asset_path": "assets/fig-tag-synthesis.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-lipid-droplet",
+      "lesson_id": "M02-W08-L01",
+      "html_anchor": "#fig-lipid-droplet",
+      "caption": "Lipid droplet 표면의 perilipin과 세 lipase의 순차적 작용. PKA가 perilipin과 HSL을 함께 인산화하므로, 조절의 1차 관문은 효소 활성이 아니라 기질에 대한 접근이다.",
+      "asset_path": "assets/fig-lipid-droplet.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-lpl-hsl",
+      "lesson_id": "M02-W08-L01",
+      "html_anchor": "#fig-lpl-hsl",
+      "caption": "Lipoprotein lipase와 hormone-sensitive lipase의 대조. 위치, 기질, 보조인자, insulin에 대한 반응 방향이 모두 다르다.",
+      "asset_path": "assets/fig-lpl-hsl.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-ffa-transport",
+      "lesson_id": "M02-W08-L01",
+      "html_anchor": "#fig-ffa-transport",
+      "caption": "지방 분해 산물의 운명. 유리지방산은 알부민에 결합해 근육·심장·간으로, glycerol은 유리 상태로 간으로 가서 gluconeogenesis에 쓰인다.",
+      "asset_path": "assets/fig-ffa-transport.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-tag-turnover",
+      "lesson_id": "M02-W08-L01",
+      "html_anchor": "#fig-tag-turnover",
+      "caption": "식후와 공복의 triacylglycerol 회전. 식후에는 LPL·GLUT4·HSL 억제가 모두 저장 쪽으로 작동하고, 공복에는 분해 산물이 조직으로 분배되며 일부는 지방세포 안에서 다시 ester화된다.",
+      "asset_path": "assets/fig-tag-turnover.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    }
+  ]
 }

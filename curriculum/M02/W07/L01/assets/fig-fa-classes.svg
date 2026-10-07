@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 470" width="880" height="470" role="img"
+     aria-label="Fatty acid nomenclature and classification showing palmitic, oleic, linoleic and alpha-linolenic acids with delta and omega numbering">
+  <style>
+    .b { stroke:#16191d; stroke-width:2.2; fill:none; stroke-linecap:round; }
+    .db { stroke:#f2b705; stroke-width:3.2; fill:none; }
+    .ttl { font:700 14px sans-serif; fill:#003c71; }
+    .nm { font:700 13px sans-serif; fill:#16191d; }
+    .sh { font:600 12px monospace; fill:#003c71; }
+    .sub { font:12px sans-serif; fill:#4a5159; }
+    .num { font:600 11px monospace; fill:#16191d; }
+    .lab { font:700 11px sans-serif; fill:#8a6300; }
+    .bx { fill:#fff; stroke:#c6d2dd; stroke-width:1.4; }
+    .bk { fill:#fff5d6; stroke:#f2b705; stroke-width:2.2; }
+  </style>
+  <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+    <path d="M0 0 L10 5 L0 10 z" fill="#8a6300"/></marker></defs>
+
+  <text class="ttl" x="24" y="26">Two numbering systems for the same chain</text>
+  <rect class="bx" x="24" y="38" width="832" height="86" rx="7"/>
+  <text class="num" x="44" y="62">COOH</text>
+  <path class="b" d="M86 72 L116 90 L146 72 L176 90 L206 72 L236 90 L266 72 L296 90 L326 72 L356 90 L386 72"/>
+  <text class="num" x="398" y="78">CH3</text>
+  <text class="lab" x="78" y="110">C1 = carboxyl carbon</text>
+  <text class="lab" x="330" y="110">omega (n) end</text>
+  <path class="b" d="M44 66 L44 52" stroke="none"/>
+  <text class="sub" x="470" y="60">Delta numbering counts from the carboxyl carbon (C1).</text>
+  <text class="sub" x="470" y="80">Omega (n) numbering counts from the terminal methyl carbon.</text>
+  <text class="sub" x="470" y="100">18:2(9,12) is the same acid as 18:2 n-6.</text>
+
+  <text class="ttl" x="24" y="156">Saturated</text>
+  <text class="nm" x="24" y="180">Palmitic acid</text><text class="sh" x="150" y="180">16:0</text>
+  <path class="b" d="M224 180 L254 162 L284 180 L314 162 L344 180 L374 162 L404 180 L434 162 L464 180"/>
+  <text class="sub" x="490" y="184">no double bond; straight chain, packs tightly, solid at room temperature</text>
+
+  <text class="ttl" x="24" y="222">Monounsaturated</text>
+  <text class="nm" x="24" y="246">Oleic acid</text><text class="sh" x="150" y="246">18:1(9) n-9</text>
+  <path class="b" d="M250 246 L280 228 L310 246"/>
+  <path class="db" d="M310 246 L350 246"/>
+  <path class="b" d="M350 246 L350 266 L380 284 L410 266 L440 284"/>
+  <text class="lab" x="312" y="238">cis C9=C10</text>
+  <text class="sub" x="490" y="250">one cis double bond puts a bend in the chain; liquid oil</text>
+
+  <text class="ttl" x="24" y="316">Polyunsaturated, essential</text>
+  <text class="nm" x="24" y="340">Linoleic acid</text><text class="sh" x="150" y="340">18:2(9,12) n-6</text>
+  <path class="b" d="M276 340 L300 326 L324 340"/>
+  <path class="db" d="M324 340 L356 340"/>
+  <path class="b" d="M356 340 L380 354"/>
+  <path class="db" d="M380 354 L412 354"/>
+  <path class="b" d="M412 354 L436 340 L460 354"/>
+  <text class="nm" x="24" y="386">alpha-Linolenic acid</text><text class="sh" x="186" y="386">18:3(9,12,15) n-3</text>
+  <path class="b" d="M330 386 L352 372 L374 386"/>
+  <path class="db" d="M374 386 L404 386"/>
+  <path class="b" d="M404 386 L426 400"/>
+  <path class="db" d="M426 400 L456 400"/>
+  <path class="b" d="M456 400 L478 386"/>
+  <path class="db" d="M478 386 L508 386"/>
+  <rect class="bk" x="548" y="312" width="308" height="92" rx="7"/>
+  <text class="lab" x="566" y="334">Essential fatty acids</text>
+  <text class="sub" x="566" y="354">Humans cannot insert a double bond beyond C9,</text>
+  <text class="sub" x="566" y="372">so n-6 and n-3 acids must come from the diet.</text>
+  <text class="sub" x="566" y="390">Precursors of arachidonate and of EPA / DHA.</text>
+
+  <text class="sub" x="24" y="438">Chain length: short (2-4 C), medium (6-12 C), long (14-20 C), very long (&gt; 20 C). Chain length decides the route of absorption and of mitochondrial entry.</text>
+  <text class="sub" x="24" y="458">Trans double bonds, formed by partial hydrogenation, restore a straight chain and so behave like saturated acids.</text>
+</svg>

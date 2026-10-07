@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 440" width="860" height="440" role="img"
+     aria-label="Electron transport chain complexes one to four in the inner mitochondrial membrane with proton pumping and ATP synthase driven by the proton gradient">
+  <style>
+    .ttl{font:700 15px sans-serif;fill:#003c71}
+    .hd{font:700 12.5px sans-serif;fill:#003c71}
+    .lab{font:700 12px sans-serif;fill:#16191d}
+    .sm{font:700 10.5px sans-serif;fill:#16191d}
+    .sub{font:11px sans-serif;fill:#4a5159}
+    .mem{fill:#eff4f8;stroke:#16191d;stroke-width:2}
+    .cx{fill:#fff5d6;stroke:#003c71;stroke-width:2}
+    .mob{fill:#ffffff;stroke:#003c71;stroke-width:1.8}
+    .e{stroke:#003c71;stroke-width:2.2;fill:none;marker-end:url(#ae1)}
+    .h{stroke:#f2b705;stroke-width:2.6;fill:none;marker-end:url(#ae2)}
+    .box{fill:#ffffff;stroke:#c6d2dd;stroke-width:1.2}
+  </style>
+  <defs>
+    <marker id="ae1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker>
+    <marker id="ae2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#f2b705"/></marker>
+  </defs>
+  <text class="ttl" x="26" y="24">Electron transport chain and chemiosmosis</text>
+
+  <text class="hd" x="26" y="52">INTERMEMBRANE SPACE: high H+, pH about 0.75 units lower</text>
+  <rect class="mem" x="26" y="132" width="808" height="88"/>
+  <text class="sub" x="34" y="180">inner membrane</text>
+  <text class="hd" x="26" y="250">MATRIX: low H+, membrane potential about -160 mV</text>
+
+  <rect class="cx" x="76" y="118" width="88" height="116" rx="8"/>
+  <text class="sm" x="106" y="166">I</text>
+  <text class="sm" x="80" y="186">NADH</text>
+  <text class="sm" x="80" y="200">dehydro-</text>
+  <text class="sm" x="80" y="214">genase</text>
+  <path class="h" d="M120 118 L120 70"/>
+  <text class="lab" x="112" y="62">H+</text>
+  <text class="lab" x="36" y="282">NADH to NAD+</text>
+  <path class="e" d="M90 268 L110 240"/>
+
+  <rect class="cx" x="212" y="150" width="84" height="84" rx="8"/>
+  <text class="sm" x="246" y="186">II</text>
+  <text class="sm" x="216" y="206">succinate</text>
+  <text class="sm" x="216" y="220">dehydrogenase</text>
+  <text class="sub" x="206" y="256">no proton pump</text>
+  <text class="lab" x="206" y="282">FADH2 (succinate)</text>
+  <path class="e" d="M252 268 L252 240"/>
+
+  <circle class="mob" cx="336" cy="176" r="24"/>
+  <text class="sm" x="324" y="180">CoQ</text>
+  <text class="sub" x="310" y="216">mobile in lipid</text>
+  <path class="e" d="M168 170 L308 174"/>
+  <path class="e" d="M300 180 L314 178"/>
+
+  <rect class="cx" x="396" y="118" width="88" height="116" rx="8"/>
+  <text class="sm" x="430" y="166">III</text>
+  <text class="sm" x="400" y="186">cytochrome</text>
+  <text class="sm" x="400" y="200">bc1</text>
+  <path class="h" d="M440 118 L440 70"/>
+  <text class="lab" x="432" y="62">H+</text>
+  <path class="e" d="M362 174 L390 174"/>
+
+  <circle class="mob" cx="540" cy="104" r="22"/>
+  <text class="sm" x="528" y="108">cyt c</text>
+  <text class="sub" x="512" y="86">mobile, 1 e- at a time</text>
+  <path class="e" d="M486 150 L520 118"/>
+
+  <rect class="cx" x="606" y="118" width="96" height="116" rx="8"/>
+  <text class="sm" x="644" y="166">IV</text>
+  <text class="sm" x="610" y="186">cytochrome c</text>
+  <text class="sm" x="610" y="200">oxidase</text>
+  <path class="h" d="M654 118 L654 70"/>
+  <text class="lab" x="646" y="62">H+</text>
+  <path class="e" d="M560 116 L612 142"/>
+  <text class="lab" x="610" y="282">1/2 O2 + 2 H+ to H2O</text>
+  <path class="e" d="M654 234 L654 264"/>
+
+  <rect class="cx" x="748" y="112" width="64" height="128" rx="8"/>
+  <text class="sm" x="770" y="140">F0</text>
+  <circle class="cx" cx="780" cy="268" r="34"/>
+  <text class="sm" x="770" y="272">F1</text>
+  <path class="h" d="M780 70 L780 240"/>
+  <text class="lab" x="792" y="62">H+ back in</text>
+  <text class="lab" x="700" y="320">ADP + Pi to ATP</text>
+  <text class="sub" x="668" y="338">about 3-4 H+ per ATP</text>
+
+  <rect class="box" x="26" y="352" width="400" height="76" rx="6"/>
+  <text class="hd" x="38" y="372">Which complexes pump protons</text>
+  <text class="sub" x="38" y="394">I, III and IV pump. II does NOT, so electrons entering from FADH2 skip</text>
+  <text class="sub" x="38" y="410">one pumping site. That is why FADH2 yields 1.5 ATP and NADH 2.5 ATP.</text>
+
+  <rect class="box" x="440" y="352" width="394" height="76" rx="6"/>
+  <text class="hd" x="452" y="372">Inhibitors map the chain</text>
+  <text class="sub" x="452" y="394">rotenone: complex I.  antimycin A: complex III.  cyanide and CO: complex IV.</text>
+  <text class="sub" x="452" y="410">2,4-dinitrophenol and UCP1: carry H+ across, abolishing the gradient (uncouplers).</text>
+</svg>

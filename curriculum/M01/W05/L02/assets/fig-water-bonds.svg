@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 400" width="860" height="400" role="img"
+     aria-label="Polarity of water and the four noncovalent interactions: hydrogen bond, ionic bond, van der Waals force and the hydrophobic effect explained by water entropy">
+  <style>
+    .ttl{font:700 15px sans-serif;fill:#003c71}
+    .hd{font:700 12.5px sans-serif;fill:#003c71}
+    .lab{font:700 12px sans-serif;fill:#16191d}
+    .sub{font:11px sans-serif;fill:#4a5159}
+    .atom{stroke:#16191d;stroke-width:1.6}
+    .bond{stroke:#16191d;stroke-width:2.2;fill:none}
+    .hb{stroke:#4a5159;stroke-width:1.8;stroke-dasharray:4 3;fill:none}
+    .box{fill:#ffffff;stroke:#c6d2dd;stroke-width:1.3}
+    .hl{fill:#fff5d6;stroke:#f2b705;stroke-width:1.6}
+    .ar{stroke:#f2b705;stroke-width:2.4;fill:none;marker-end:url(#aw)}
+  </style>
+  <defs>
+    <marker id="aw" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#f2b705"/>
+    </marker>
+  </defs>
+  <text class="ttl" x="26" y="24">Water and the four noncovalent interactions</text>
+
+  <rect class="box" x="26" y="38" width="188" height="150" rx="6"/>
+  <text class="hd" x="38" y="58">Polarity of water</text>
+  <circle class="atom" cx="112" cy="104" r="20" fill="#003c71" opacity="0.85"/>
+  <text x="104" y="109" font="700 14px sans-serif" fill="#ffffff">O</text>
+  <circle class="atom" cx="76" cy="138" r="13" fill="#ffffff"/>
+  <text x="71" y="143" font="700 12px sans-serif" fill="#16191d">H</text>
+  <circle class="atom" cx="148" cy="138" r="13" fill="#ffffff"/>
+  <text x="143" y="143" font="700 12px sans-serif" fill="#16191d">H</text>
+  <path class="bond" d="M98 118 L86 129 M126 118 L138 129"/>
+  <text class="sub" x="134" y="92">d-</text>
+  <text class="sub" x="56" y="162">d+</text>
+  <text class="sub" x="160" y="162">d+</text>
+  <text class="sub" x="38" y="180">bond angle 104.5 degrees</text>
+
+  <rect class="box" x="230" y="38" width="188" height="150" rx="6"/>
+  <text class="hd" x="242" y="58">Hydrogen bond</text>
+  <text class="sub" x="242" y="76">4-13 kJ/mol, 0.27-0.30 nm</text>
+  <circle class="atom" cx="278" cy="112" r="15" fill="#003c71" opacity="0.8"/>
+  <text x="272" y="117" font="700 11px sans-serif" fill="#ffffff">N</text>
+  <circle class="atom" cx="314" cy="112" r="10" fill="#ffffff"/>
+  <text x="310" y="116" font="700 10px sans-serif" fill="#16191d">H</text>
+  <path class="bond" d="M292 112 L304 112"/>
+  <path class="hb" d="M326 112 L358 112"/>
+  <circle class="atom" cx="374" cy="112" r="15" fill="#003c71" opacity="0.8"/>
+  <text x="368" y="117" font="700 11px sans-serif" fill="#ffffff">O</text>
+  <text class="sub" x="242" y="152">donor - H ... acceptor</text>
+  <text class="sub" x="242" y="170">DNA base pairs, alpha-helix</text>
+
+  <rect class="box" x="434" y="38" width="188" height="150" rx="6"/>
+  <text class="hd" x="446" y="58">Ionic bond</text>
+  <text class="sub" x="446" y="76">3-7 kJ/mol in water</text>
+  <circle class="atom" cx="494" cy="118" r="20" fill="#f2b705"/>
+  <text x="482" y="123" font="700 12px sans-serif" fill="#16191d">COO-</text>
+  <circle class="atom" cx="564" cy="118" r="20" fill="#c6d2dd"/>
+  <text x="550" y="123" font="700 12px sans-serif" fill="#16191d">NH3+</text>
+  <path class="hb" d="M516 118 L542 118"/>
+  <text class="sub" x="446" y="158">Asp or Glu with Lys or Arg</text>
+  <text class="sub" x="446" y="176">weakened by water shielding</text>
+
+  <rect class="box" x="638" y="38" width="196" height="150" rx="6"/>
+  <text class="hd" x="650" y="58">van der Waals force</text>
+  <text class="sub" x="650" y="76">0.4-4 kJ/mol, optimum 0.35 nm</text>
+  <circle class="atom" cx="700" cy="124" r="22" fill="#eff4f8"/>
+  <circle class="atom" cx="752" cy="124" r="22" fill="#eff4f8"/>
+  <text class="sub" x="716" y="100">0.35 nm</text>
+  <path class="hb" d="M722 124 L730 124"/>
+  <text class="sub" x="650" y="166">transient dipoles; additive when</text>
+  <text class="sub" x="650" y="180">surfaces fit closely</text>
+
+  <rect class="hl" x="26" y="202" width="808" height="150" rx="6"/>
+  <text class="hd" x="40" y="224">Hydrophobic interaction: the driving force is the ENTROPY OF WATER, not attraction between the molecules</text>
+
+  <circle cx="140" cy="290" r="18" fill="#16191d"/>
+  <circle cx="230" cy="276" r="18" fill="#16191d"/>
+  <circle cx="200" cy="326" r="18" fill="#16191d"/>
+  <g stroke="#003c71" stroke-width="1.1" fill="none">
+    <circle cx="140" cy="290" r="30"/><circle cx="230" cy="276" r="30"/><circle cx="200" cy="326" r="30"/>
+  </g>
+  <text class="lab" x="78" y="256">dispersed nonpolar groups</text>
+  <text class="sub" x="86" y="370">ordered water shells; LOW water entropy</text>
+
+  <path class="ar" d="M300 296 L400 296"/>
+
+  <circle cx="470" cy="296" r="18" fill="#16191d"/>
+  <circle cx="502" cy="280" r="18" fill="#16191d"/>
+  <circle cx="500" cy="316" r="18" fill="#16191d"/>
+  <circle cx="486" cy="298" r="60" stroke="#003c71" stroke-width="1.1" fill="none"/>
+  <text class="lab" x="438" y="256">clustered nonpolar groups</text>
+  <text class="sub" x="406" y="370">one small shell; water released, HIGH water entropy</text>
+
+  <text class="lab" x="630" y="268">Delta S of water is positive,</text>
+  <text class="lab" x="630" y="288">so Delta G is negative.</text>
+  <text class="sub" x="630" y="312">This single effect explains the</text>
+  <text class="sub" x="630" y="328">hydrophobic core of proteins and</text>
+  <text class="sub" x="630" y="344">the spontaneous lipid bilayer.</text>
+
+  <text class="sub" x="26" y="382">Covalent bonds are 200-400 kJ/mol. Noncovalent interactions are weak enough to form and break at body temperature, which is what makes binding reversible.</text>
+</svg>

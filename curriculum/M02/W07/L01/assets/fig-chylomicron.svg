@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 440" width="880" height="440" role="img"
+     aria-label="Enterocyte resynthesis of triacylglycerol, chylomicron assembly with apoB-48 and MTP, secretion into lymph and remodelling in plasma">
+  <style>
+    .ttl { font:700 14px sans-serif; fill:#003c71; }
+    .nm { font:700 12.5px sans-serif; fill:#16191d; }
+    .sub { font:11.5px sans-serif; fill:#4a5159; }
+    .lab { font:700 11px sans-serif; fill:#8a6300; }
+    .bx { fill:#fff; stroke:#c6d2dd; stroke-width:1.4; }
+    .bk { fill:#fff5d6; stroke:#f2b705; stroke-width:2.2; }
+    .cell { fill:#eff4f8; stroke:#c6d2dd; stroke-width:1.8; }
+    .ar { stroke:#003c71; stroke-width:2.2; fill:none; marker-end:url(#h); }
+    .ar2 { stroke:#8a6300; stroke-width:2.2; fill:none; marker-end:url(#g); }
+  </style>
+  <defs>
+    <marker id="h" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker>
+    <marker id="g" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0 L10 5 L0 10 z" fill="#8a6300"/></marker>
+  </defs>
+
+  <text class="ttl" x="20" y="24">Lumen</text>
+  <text class="ttl" x="196" y="24">Enterocyte</text>
+  <text class="ttl" x="640" y="24">Lymph and blood</text>
+
+  <rect class="cell" x="188" y="36" width="416" height="300" rx="8"/>
+  <text class="nm" x="24" y="76">2-MAG</text>
+  <text class="nm" x="24" y="104">free fatty acids</text>
+  <text class="nm" x="24" y="132">cholesterol</text>
+  <text class="sub" x="24" y="156">inside a mixed micelle</text>
+  <path class="ar" d="M140 104 L182 104"/>
+  <text class="lab" x="118" y="92">NPC1L1</text>
+  <text class="sub" x="24" y="196">short- and medium-chain</text>
+  <text class="sub" x="24" y="214">fatty acids</text>
+  <path class="ar2" d="M140 206 L640 206" stroke-dasharray="7 5"/>
+  <text class="lab" x="372" y="198">direct to portal vein, bound to albumin</text>
+
+  <rect class="bx" x="206" y="58" width="166" height="56" rx="6"/>
+  <text class="nm" x="222" y="80">Re-esterification</text>
+  <text class="sub" x="222" y="100">smooth ER, MGAT then DGAT</text>
+  <path class="ar" d="M378 86 L404 86"/>
+  <rect class="bx" x="410" y="58" width="178" height="56" rx="6"/>
+  <text class="nm" x="426" y="80">Triacylglycerol</text>
+  <text class="sub" x="426" y="100">plus cholesteryl ester (ACAT)</text>
+
+  <path class="ar" d="M498 118 L498 144"/>
+  <rect class="bk" x="236" y="150" width="352" height="80" rx="7"/>
+  <text class="lab" x="254" y="174">Chylomicron assembly in the ER</text>
+  <text class="sub" x="254" y="196">apoB-48 (edited *APOB* transcript) + MTP loads the lipid core</text>
+  <text class="sub" x="254" y="216">surface: phospholipid, free cholesterol, apoA-I, apoA-IV</text>
+
+  <path class="ar" d="M412 236 L412 262"/>
+  <rect class="bx" x="236" y="268" width="352" height="54" rx="6"/>
+  <text class="nm" x="254" y="292">Golgi, then secretory vesicle to the basolateral membrane</text>
+  <text class="sub" x="254" y="312">exocytosis; the particle is too large for the capillary wall</text>
+
+  <path class="ar" d="M594 294 L652 294"/>
+  <rect class="bx" x="658" y="252" width="200" height="84" rx="7"/>
+  <text class="nm" x="676" y="276">Lacteal to thoracic duct</text>
+  <text class="sub" x="676" y="296">then left subclavian vein</text>
+  <text class="sub" x="676" y="316">bypassing the portal vein</text>
+
+  <rect class="bx" x="658" y="58" width="200" height="172" rx="7"/>
+  <text class="ttl" x="676" y="82">In plasma</text>
+  <text class="sub" x="676" y="104">receives apoC-II and apoE</text>
+  <text class="sub" x="676" y="122">from HDL</text>
+  <text class="nm" x="676" y="148">apoC-II activates</text>
+  <text class="nm" x="676" y="166">lipoprotein lipase</text>
+  <text class="sub" x="676" y="188">core triacylglycerol is</text>
+  <text class="sub" x="676" y="206">hydrolysed in capillaries</text>
+  <text class="sub" x="676" y="224">remnant cleared by apoE</text>
+  <path class="ar" d="M758 246 L758 236"/>
+
+  <text class="sub" x="20" y="366">Chylomicron is the largest and least dense lipoprotein: diameter 75-1200 nm, about 85 percent triacylglycerol by mass.</text>
+  <text class="sub" x="20" y="386">apoB-48 is the obligatory structural protein. Without it no chylomicron leaves the cell and lipid accumulates in the enterocyte.</text>
+  <text class="sub" x="20" y="406">Plasma half-life of a chylomicron is under one hour; a fasting sample normally contains none.</text>
+  <text class="sub" x="20" y="426">Fat-soluble vitamins travel in the core, which is why their absorption fails whenever any step of this route fails.</text>
+</svg>

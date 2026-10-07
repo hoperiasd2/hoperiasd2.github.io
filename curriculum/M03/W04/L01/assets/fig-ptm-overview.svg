@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 420" width="880" height="420" role="img"
+     aria-label="Overview of post-translational modifications grouped by modified residue, cofactor required and clinical example">
+  <style>
+    .ttl { font:700 14px sans-serif; fill:#003c71; }
+    .hdc { fill:#003c71; }
+    .hdt { font:700 11px sans-serif; fill:#ffffff; }
+    .cell { fill:#ffffff; stroke:#c6d2dd; stroke-width:0.9; }
+    .alt { fill:#fff5d6; stroke:#c6d2dd; stroke-width:0.9; }
+    .t { font:11px sans-serif; fill:#16191d; }
+    .tb { font:700 11px sans-serif; fill:#003c71; }
+    .sub { font:11px sans-serif; fill:#4a5159; }
+  </style>
+  <text class="ttl" x="20" y="26">Post-translational modifications: residue modified, cofactor needed, clinical handle</text>
+  <rect class="hdc" x="20" y="40" width="160" height="28"/><text class="hdt" x="30" y="59">Modification</text>
+  <rect class="hdc" x="180" y="40" width="150" height="28"/><text class="hdt" x="190" y="59">Residue modified</text>
+  <rect class="hdc" x="330" y="40" width="200" height="28"/><text class="hdt" x="340" y="59">Cofactor or donor</text>
+  <rect class="hdc" x="530" y="40" width="330" height="28"/><text class="hdt" x="540" y="59">Clinical handle</text>
+
+  <rect class="alt" x="20" y="68" width="160" height="30"/><text class="tb" x="30" y="88">Phosphorylation</text>
+  <rect class="alt" x="180" y="68" width="150" height="30"/><text class="t" x="190" y="88">Ser, Thr, Tyr</text>
+  <rect class="alt" x="330" y="68" width="200" height="30"/><text class="t" x="340" y="88">ATP, protein kinases</text>
+  <rect class="alt" x="530" y="68" width="330" height="30"/><text class="t" x="540" y="88">target of tyrosine kinase inhibitors in cancer</text>
+
+  <rect class="cell" x="20" y="98" width="160" height="30"/><text class="tb" x="30" y="118">N-glycosylation</text>
+  <rect class="cell" x="180" y="98" width="150" height="30"/><text class="t" x="190" y="118">Asn in Asn-X-Ser/Thr</text>
+  <rect class="cell" x="330" y="98" width="200" height="30"/><text class="t" x="340" y="118">dolichol-linked 14-sugar core</text>
+  <rect class="cell" x="530" y="98" width="330" height="30"/><text class="t" x="540" y="118">congenital disorders of glycosylation (PMM2-CDG)</text>
+
+  <rect class="alt" x="20" y="128" width="160" height="30"/><text class="tb" x="30" y="148">O-glycosylation</text>
+  <rect class="alt" x="180" y="128" width="150" height="30"/><text class="t" x="190" y="148">Ser, Thr hydroxyl</text>
+  <rect class="alt" x="330" y="128" width="200" height="30"/><text class="t" x="340" y="148">nucleotide sugars, in Golgi</text>
+  <rect class="alt" x="530" y="128" width="330" height="30"/><text class="t" x="540" y="148">HbA1c is non-enzymatic glycation, not this</text>
+
+  <rect class="cell" x="20" y="158" width="160" height="30"/><text class="tb" x="30" y="178">Hydroxylation</text>
+  <rect class="cell" x="180" y="158" width="150" height="30"/><text class="t" x="190" y="178">Pro, Lys in collagen</text>
+  <rect class="cell" x="330" y="158" width="200" height="30"/><text class="t" x="340" y="178">vitamin C, Fe(II), O2, 2-OG</text>
+  <rect class="cell" x="530" y="158" width="330" height="30"/><text class="t" x="540" y="178">scurvy: weak collagen, bleeding gums</text>
+
+  <rect class="alt" x="20" y="188" width="160" height="30"/><text class="tb" x="30" y="208">Gamma-carboxylation</text>
+  <rect class="alt" x="180" y="188" width="150" height="30"/><text class="t" x="190" y="208">Glu in factors II, VII, IX, X</text>
+  <rect class="alt" x="330" y="188" width="200" height="30"/><text class="t" x="340" y="208">reduced vitamin K, CO2, O2</text>
+  <rect class="alt" x="530" y="188" width="330" height="30"/><text class="t" x="540" y="208">warfarin blocks VKORC1 recycling of vitamin K</text>
+
+  <rect class="cell" x="20" y="218" width="160" height="30"/><text class="tb" x="30" y="238">Prenylation</text>
+  <rect class="cell" x="180" y="218" width="150" height="30"/><text class="t" x="190" y="238">C-terminal Cys</text>
+  <rect class="cell" x="330" y="218" width="200" height="30"/><text class="t" x="340" y="238">farnesyl or geranylgeranyl-PP</text>
+  <rect class="cell" x="530" y="218" width="330" height="30"/><text class="t" x="540" y="238">Ras anchoring; lonafarnib in progeria</text>
+
+  <rect class="alt" x="20" y="248" width="160" height="30"/><text class="tb" x="30" y="268">Acetylation, methylation</text>
+  <rect class="alt" x="180" y="248" width="150" height="30"/><text class="t" x="190" y="268">Lys, Arg (histones)</text>
+  <rect class="alt" x="330" y="248" width="200" height="30"/><text class="t" x="340" y="268">acetyl-CoA, S-adenosylmethionine</text>
+  <rect class="alt" x="530" y="248" width="330" height="30"/><text class="t" x="540" y="268">chromatin control; HDAC inhibitors</text>
+
+  <rect class="cell" x="20" y="278" width="160" height="30"/><text class="tb" x="30" y="298">Disulfide bonds</text>
+  <rect class="cell" x="180" y="278" width="150" height="30"/><text class="t" x="190" y="298">pairs of Cys</text>
+  <rect class="cell" x="330" y="278" width="200" height="30"/><text class="t" x="340" y="298">protein disulfide isomerase, ER</text>
+  <rect class="cell" x="530" y="278" width="330" height="30"/><text class="t" x="540" y="298">only in secreted and membrane proteins</text>
+
+  <rect class="alt" x="20" y="308" width="160" height="30"/><text class="tb" x="30" y="328">Proteolytic activation</text>
+  <rect class="alt" x="180" y="308" width="150" height="30"/><text class="t" x="190" y="328">specific peptide bonds</text>
+  <rect class="alt" x="330" y="308" width="200" height="30"/><text class="t" x="340" y="328">proteases, irreversible</text>
+  <rect class="alt" x="530" y="308" width="330" height="30"/><text class="t" x="540" y="328">proinsulin to insulin + C-peptide; zymogens</text>
+
+  <rect class="cell" x="20" y="338" width="160" height="30"/><text class="tb" x="30" y="358">Ubiquitination</text>
+  <rect class="cell" x="180" y="338" width="150" height="30"/><text class="t" x="190" y="358">Lys</text>
+  <rect class="cell" x="330" y="338" width="200" height="30"/><text class="t" x="340" y="358">ATP, E1-E2-E3 cascade</text>
+  <rect class="cell" x="530" y="338" width="330" height="30"/><text class="t" x="540" y="358">K48 chain marks for proteasome; bortezomib</text>
+
+  <text class="sub" x="20" y="394">Reversible marks (phosphorylation, acetylation) act as switches; irreversible ones (proteolysis, carboxylation) set a protein's final form.</text>
+  <text class="sub" x="20" y="412">Non-enzymatic glycation of lysine residues is a separate, concentration-driven process and is the basis of the HbA1c assay.</text>
+</svg>

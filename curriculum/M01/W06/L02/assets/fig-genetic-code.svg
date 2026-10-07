@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 460" width="860" height="460" role="img"
+     aria-label="The genetic code table of 64 codons with stop codons marked, and the cloverleaf and L-shaped structure of transfer RNA">
+  <style>
+    .ttl{font:700 15px sans-serif;fill:#003c71}
+    .hd{font:700 12px sans-serif;fill:#003c71}
+    .c{font:10.5px monospace;fill:#16191d}
+    .cb{font:700 10.5px monospace;fill:#003c71}
+    .lab{font:700 11.5px sans-serif;fill:#16191d}
+    .sub{font:10.5px sans-serif;fill:#4a5159}
+    .box{fill:#ffffff;stroke:#c6d2dd;stroke-width:1.2}
+    .stop{fill:#fff5d6;stroke:#f2b705;stroke-width:1.4}
+    .start{fill:#eff4f8;stroke:#003c71;stroke-width:1.6}
+    .rna{stroke:#003c71;stroke-width:2.6;fill:none}
+  </style>
+  <text class="ttl" x="26" y="24">The genetic code and transfer RNA</text>
+
+  <text class="hd" x="26" y="48">64 codons: 61 specify amino acids, 3 specify stop</text>
+
+  <g>
+    <rect class="box" x="26" y="58" width="128" height="112" rx="4"/>
+    <text class="cb" x="34" y="76">UUU Phe</text><text class="cb" x="34" y="92">UUC Phe</text>
+    <text class="c" x="34" y="108">UUA Leu</text><text class="c" x="34" y="124">UUG Leu</text>
+    <text class="c" x="34" y="140">CUU CUC Leu</text><text class="c" x="34" y="156">CUA CUG Leu</text>
+    <rect class="box" x="162" y="58" width="128" height="112" rx="4"/>
+    <text class="cb" x="170" y="76">UCU UCC Ser</text><text class="cb" x="170" y="92">UCA UCG Ser</text>
+    <text class="c" x="170" y="108">CCU CCC Pro</text><text class="c" x="170" y="124">CCA CCG Pro</text>
+    <text class="c" x="170" y="140">ACU ACC Thr</text><text class="c" x="170" y="156">ACA ACG Thr</text>
+    <rect class="box" x="298" y="58" width="128" height="112" rx="4"/>
+    <text class="cb" x="306" y="76">UAU UAC Tyr</text>
+    <text class="c" x="306" y="92">CAU CAC His</text><text class="c" x="306" y="108">CAA CAG Gln</text>
+    <text class="c" x="306" y="124">AAU AAC Asn</text><text class="c" x="306" y="140">AAA AAG Lys</text>
+    <text class="c" x="306" y="156">GAU GAC Asp</text>
+    <rect class="box" x="434" y="58" width="128" height="112" rx="4"/>
+    <text class="c" x="442" y="76">UGU UGC Cys</text><text class="c" x="442" y="92">UGG Trp</text>
+    <text class="c" x="442" y="108">CGU CGC Arg</text><text class="c" x="442" y="124">CGA CGG Arg</text>
+    <text class="c" x="442" y="140">AGU AGC Ser</text><text class="c" x="442" y="156">AGA AGG Arg</text>
+    <rect class="box" x="570" y="58" width="128" height="112" rx="4"/>
+    <text class="c" x="578" y="76">GUU GUC Val</text><text class="c" x="578" y="92">GUA GUG Val</text>
+    <text class="c" x="578" y="108">GCU GCC Ala</text><text class="c" x="578" y="124">GCA GCG Ala</text>
+    <text class="c" x="578" y="140">GAA GAG Glu</text>
+    <text class="c" x="578" y="156">GGU GGC GGA GGG Gly</text>
+  </g>
+
+  <rect class="start" x="26" y="182" width="200" height="34" rx="4"/>
+  <text class="lab" x="36" y="204">AUG = Met = START codon</text>
+  <rect class="stop" x="238" y="182" width="280" height="34" rx="4"/>
+  <text class="lab" x="248" y="204">UAA, UAG, UGA = STOP, no tRNA matches them</text>
+  <rect class="box" x="530" y="182" width="168" height="34" rx="4"/>
+  <text class="lab" x="540" y="204">Leu has 6 codons; Met</text>
+  <text class="sub" x="540" y="214">and Trp have only 1</text>
+
+  <rect class="box" x="26" y="232" width="400" height="212" rx="6"/>
+  <text class="hd" x="38" y="254">Five properties of the code</text>
+  <text class="sub" x="38" y="278">1. Read in triplets, so 4 cubed = 64 combinations.</text>
+  <text class="sub" x="38" y="300">2. Degenerate: most amino acids have several codons, which usually</text>
+  <text class="sub" x="52" y="316">differ only in the THIRD base. This buffers mutations.</text>
+  <text class="sub" x="38" y="338">3. Unambiguous: one codon specifies only one amino acid.</text>
+  <text class="sub" x="38" y="360">4. No overlap and no punctuation, so the READING FRAME matters.</text>
+  <text class="sub" x="38" y="382">5. Nearly universal from bacteria to humans; mitochondria differ slightly.</text>
+  <text class="sub" x="38" y="412">Frameshift: an insertion or deletion that is not a multiple of three</text>
+  <text class="sub" x="52" y="428">changes every codon downstream.</text>
+
+  <rect class="box" x="440" y="232" width="394" height="212" rx="6"/>
+  <text class="hd" x="452" y="254">Transfer RNA: 70-90 nucleotides, L-shaped</text>
+  <path class="rna" d="M560 282 L560 330 L520 362 L520 404"/>
+  <path class="rna" d="M560 306 L616 306 L640 288"/>
+  <path class="rna" d="M560 340 L612 352 L634 376"/>
+  <circle cx="560" cy="276" r="9" fill="#f2b705" stroke="#16191d" stroke-width="1.4"/>
+  <text class="lab" x="576" y="272">3' end: AMINO ACID attached</text>
+  <text class="sub" x="576" y="288">by ester bond</text>
+  <rect class="stop" x="488" y="404" width="68" height="22" rx="3"/>
+  <text class="lab" x="494" y="420">ANTICODON</text>
+  <text class="sub" x="568" y="420">pairs with the mRNA codon</text>
+  <text class="sub" x="452" y="440">Aminoacyl-tRNA synthetase (one per amino acid, 20 in all) uses ATP to load the correct amino acid; it is where the code is enforced.</text>
+</svg>

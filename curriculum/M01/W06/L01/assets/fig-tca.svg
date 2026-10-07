@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 460" width="860" height="460" role="img"
+     aria-label="The eight steps of the TCA cycle with carbon counts, the two decarboxylation steps and the points where NADH, FADH2 and GTP are produced">
+  <style>
+    .ttl{font:700 15px sans-serif;fill:#003c71}
+    .hd{font:700 12.5px sans-serif;fill:#003c71}
+    .lab{font:700 12px sans-serif;fill:#16191d}
+    .enz{font:700 10.5px sans-serif;fill:#003c71}
+    .sub{font:11px sans-serif;fill:#4a5159}
+    .box{fill:#ffffff;stroke:#c6d2dd;stroke-width:1.4}
+    .hl{fill:#fff5d6;stroke:#f2b705;stroke-width:1.8}
+    .cyc{fill:none;stroke:#16191d;stroke-width:2.4;marker-end:url(#ak)}
+    .out{stroke:#4a5159;stroke-width:1.6;fill:none;marker-end:url(#ak2)}
+  </style>
+  <defs>
+    <marker id="ak" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#16191d"/></marker>
+    <marker id="ak2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#4a5159"/></marker>
+  </defs>
+  <text class="ttl" x="26" y="24">TCA cycle in the mitochondrial matrix</text>
+
+  <rect class="hl" x="330" y="40" width="200" height="34" rx="5"/>
+  <text class="lab" x="356" y="62">Acetyl-CoA (C2) enters</text>
+
+  <rect class="box" x="118" y="92" width="150" height="34" rx="5"/>
+  <text class="lab" x="130" y="114">Oxaloacetate (C4)</text>
+  <path class="cyc" d="M268 108 L324 86"/>
+  <text class="enz" x="258" y="80">1 citrate synthase (irreversible)</text>
+
+  <rect class="box" x="590" y="92" width="130" height="34" rx="5"/>
+  <text class="lab" x="612" y="114">Citrate (C6)</text>
+  <path class="cyc" d="M530 70 L602 90"/>
+  <path class="cyc" d="M662 126 L662 164"/>
+  <text class="enz" x="676" y="150">2 aconitase</text>
+
+  <rect class="box" x="590" y="164" width="130" height="34" rx="5"/>
+  <text class="lab" x="606" y="186">Isocitrate (C6)</text>
+  <path class="cyc" d="M662 198 L662 240"/>
+  <text class="enz" x="676" y="216">3 isocitrate dehydrogenase</text>
+  <text class="enz" x="676" y="232">RATE-LIMITING STEP</text>
+  <path class="out" d="M588 212 L512 212"/>
+  <text class="lab" x="446" y="208">CO2 + NADH</text>
+
+  <rect class="hl" x="578" y="240" width="156" height="34" rx="5"/>
+  <text class="lab" x="588" y="262">a-Ketoglutarate (C5)</text>
+  <path class="cyc" d="M656 274 L640 318"/>
+  <text class="enz" x="664" y="296">4 a-KG dehydrogenase</text>
+  <text class="enz" x="664" y="312">(irreversible)</text>
+  <path class="out" d="M576 276 L512 268"/>
+  <text class="lab" x="446" y="264">CO2 + NADH</text>
+
+  <rect class="box" x="516" y="318" width="146" height="34" rx="5"/>
+  <text class="lab" x="528" y="340">Succinyl-CoA (C4)</text>
+  <path class="cyc" d="M516 340 L448 356"/>
+  <text class="enz" x="452" y="382">5 succinyl-CoA synthetase</text>
+  <path class="out" d="M560 352 L560 392"/>
+  <text class="lab" x="542" y="408">GTP</text>
+
+  <rect class="box" x="330" y="356" width="118" height="34" rx="5"/>
+  <text class="lab" x="340" y="378">Succinate (C4)</text>
+  <path class="cyc" d="M330 372 L256 360"/>
+  <text class="enz" x="214" y="402">6 succinate dehydrogenase</text>
+  <text class="enz" x="214" y="418">= complex II of the chain</text>
+  <path class="out" d="M300 356 L300 324"/>
+  <text class="lab" x="276" y="318">FADH2</text>
+
+  <rect class="box" x="148" y="340" width="110" height="34" rx="5"/>
+  <text class="lab" x="160" y="362">Fumarate (C4)</text>
+  <path class="cyc" d="M190 340 L190 300"/>
+  <text class="enz" x="60" y="322">7 fumarase</text>
+
+  <rect class="box" x="140" y="266" width="110" height="34" rx="5"/>
+  <text class="lab" x="158" y="288">Malate (C4)</text>
+  <path class="cyc" d="M190 266 L190 130"/>
+  <text class="enz" x="48" y="214">8 malate dehydrogenase</text>
+  <path class="out" d="M250 210 L310 210"/>
+  <text class="lab" x="318" y="206">NADH</text>
+
+  <rect class="box" x="26" y="430" width="808" height="24" rx="4"/>
+  <text class="sub" x="38" y="446">Per acetyl-CoA: 2 CO2, 3 NADH, 1 FADH2, 1 GTP. Per glucose, double it. Citrate, a-ketoglutarate, oxaloacetate and succinyl-CoA also leave for biosynthesis, so anaplerotic reactions such as pyruvate carboxylase refill the cycle.</text>
+</svg>

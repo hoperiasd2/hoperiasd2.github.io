@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 420" width="880" height="420" role="img"
+     aria-label="The ubiquitin-proteasome pathway: E1 activation, E2 conjugation, E3 ligase selection of the substrate, polyubiquitin chain formation and degradation by the 26S proteasome">
+  <style>
+    .ttl { font:700 14px sans-serif; fill:#003c71; }
+    .nm { font:700 12px sans-serif; fill:#003c71; }
+    .sub { font:11px sans-serif; fill:#4a5159; }
+    .ub { fill:#f2b705; stroke:#16191d; stroke-width:1.2; }
+    .ubl { font:700 10px sans-serif; fill:#16191d; }
+    .enz { fill:#ffffff; stroke:#003c71; stroke-width:1.4; }
+    .el { font:700 12px sans-serif; fill:#003c71; }
+    .sub2 { fill:#003c71; stroke:#16191d; stroke-width:1.2; }
+    .sl { font:700 11px sans-serif; fill:#ffffff; }
+    .ln { stroke:#16191d; stroke-width:1.6; fill:none; }
+    .cap { fill:#e8eef4; stroke:#003c71; stroke-width:1.4; }
+    .core { fill:#003c71; stroke:#16191d; stroke-width:1.4; }
+    .box { fill:#fff5d6; stroke:#c6d2dd; stroke-width:1; }
+  </style>
+  <defs>
+    <marker id="u1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#16191d"/>
+    </marker>
+  </defs>
+  <text class="ttl" x="20" y="26">Ubiquitin-proteasome pathway: ATP is used twice, for tagging and for unfolding</text>
+
+  <circle class="ub" cx="60" cy="80" r="18"/><text class="ubl" x="52" y="84">Ub</text>
+  <text class="sub" x="24" y="116">76 residues</text>
+  <path class="ln" d="M82 80 L130 80" marker-end="url(#u1)"/>
+  <text class="sub" x="86" y="70">ATP</text>
+  <ellipse class="enz" cx="176" cy="80" rx="42" ry="20"/><text class="el" x="162" y="85">E1</text>
+  <text class="sub" x="138" y="120">activating</text>
+  <path class="ln" d="M220 80 L268 80" marker-end="url(#u1)"/>
+  <ellipse class="enz" cx="314" cy="80" rx="42" ry="20"/><text class="el" x="300" y="85">E2</text>
+  <text class="sub" x="276" y="120">conjugating</text>
+  <path class="ln" d="M358 80 L406 80" marker-end="url(#u1)"/>
+  <ellipse class="enz" cx="462" cy="80" rx="52" ry="22"/><text class="el" x="448" y="85">E3</text>
+  <text class="sub" x="406" y="124">ligase: over 600 in human,</text>
+  <text class="sub" x="440" y="140">gives the specificity</text>
+  <rect class="sub2" x="546" y="64" width="150" height="32" rx="4"/>
+  <text class="sl" x="562" y="85">target protein</text>
+  <path class="ln" d="M516 80 L544 80" marker-end="url(#u1)"/>
+  <circle class="ub" cx="716" cy="60" r="13"/><circle class="ub" cx="744" cy="52" r="13"/>
+  <circle class="ub" cx="772" cy="60" r="13"/><circle class="ub" cx="800" cy="52" r="13"/>
+  <path class="ln" d="M696 72 L704 64"/>
+  <text class="sub" x="700" y="98">chain of four or more ubiquitins on a lysine,</text>
+  <text class="sub" x="700" y="114">linked through Lys48</text>
+
+  <path class="ln" d="M620 104 L620 160" marker-end="url(#u1)"/>
+  <text class="nm" x="20" y="200">26S proteasome</text>
+  <rect class="cap" x="520" y="166" width="200" height="30" rx="8"/>
+  <text class="sub" x="548" y="186">19S cap: recognises the chain, uses ATP</text>
+  <rect class="core" x="520" y="196" width="200" height="74"/>
+  <text class="sl" x="556" y="226">20S core: threonine</text>
+  <text class="sl" x="556" y="246">proteases inside</text>
+  <rect class="cap" x="520" y="270" width="200" height="30" rx="8"/>
+  <text class="sub" x="560" y="290">19S cap on the other face</text>
+  <path class="ln" d="M620 304 L620 340" marker-end="url(#u1)"/>
+  <text class="nm" x="548" y="360">short peptides, then amino acids</text>
+  <text class="sub" x="520" y="380">ubiquitin is released and reused</text>
+
+  <rect class="box" x="20" y="166" width="470" height="200" rx="4"/>
+  <text class="nm" x="36" y="190">What marks a protein for degradation</text>
+  <text class="sub" x="36" y="212">- exposed hydrophobic patches of a misfolded protein</text>
+  <text class="sub" x="36" y="232">- short destruction signals (degrons), including PEST-rich regions</text>
+  <text class="sub" x="36" y="252">- the identity of the N-terminal residue (N-end rule)</text>
+  <text class="sub" x="36" y="272">- phosphorylation that creates an E3 binding site</text>
+  <text class="nm" x="36" y="302">Drugs that use this pathway</text>
+  <text class="sub" x="36" y="324">Bortezomib and carfilzomib inhibit the 20S core and are used</text>
+  <text class="sub" x="36" y="342">in multiple myeloma; thalidomide analogues redirect the CRBN</text>
+  <text class="sub" x="36" y="360">E3 ligase onto new substrates.</text>
+</svg>

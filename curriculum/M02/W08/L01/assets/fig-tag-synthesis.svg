@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 400" width="880" height="400" role="img"
+     aria-label="Two routes to triacylglycerol: the glycerol 3-phosphate pathway of liver and adipose tissue and the monoacylglycerol pathway of the enterocyte">
+  <style>
+    .ttl { font:700 14px sans-serif; fill:#003c71; }
+    .nm { font:700 12px monospace; fill:#16191d; }
+    .en { font:700 11.5px sans-serif; fill:#003c71; }
+    .sub { font:11.5px sans-serif; fill:#4a5159; }
+    .lab { font:700 11px sans-serif; fill:#8a6300; }
+    .bx { fill:#fff; stroke:#c6d2dd; stroke-width:1.5; }
+    .bk { fill:#fff5d6; stroke:#f2b705; stroke-width:2.2; }
+    .ar { stroke:#003c71; stroke-width:2.2; fill:none; marker-end:url(#h); }
+  </style>
+  <defs><marker id="h" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+    <path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker></defs>
+
+  <text class="ttl" x="20" y="26">Glycerol 3-phosphate pathway: liver and adipose tissue</text>
+  <rect class="bx" x="20" y="38" width="840" height="186" rx="7"/>
+
+  <text class="nm" x="40" y="68">Glucose</text>
+  <path class="ar" d="M104 64 L160 64"/>
+  <text class="sub" x="106" y="54">glycolysis</text>
+  <text class="nm" x="166" y="68">DHAP</text>
+  <path class="ar" d="M224 64 L280 64"/>
+  <text class="en" x="226" y="54">GPD, NADH</text>
+  <text class="nm" x="40" y="118">Glycerol</text>
+  <path class="ar" d="M112 114 L280 114"/>
+  <text class="en" x="120" y="104">glycerol kinase, ATP</text>
+  <text class="lab" x="120" y="134">liver and kidney only; adipose tissue lacks it</text>
+
+  <rect class="bk" x="286" y="76" width="192" height="42" rx="6"/>
+  <text class="nm" x="302" y="102">Glycerol 3-phosphate</text>
+  <path class="ar" d="M482 96 L534 96"/>
+  <text class="en" x="486" y="86">GPAT, acyl-CoA</text>
+  <text class="nm" x="540" y="100">Lysophosphatidate</text>
+  <path class="ar" d="M676 96 L700 96"/>
+  <text class="nm" x="706" y="100">Phosphatidate</text>
+  <text class="en" x="540" y="140">AGPAT, acyl-CoA</text>
+  <path class="ar" d="M770 106 L770 142"/>
+  <text class="en" x="500" y="166">phosphatidate phosphatase (lipin)</text>
+  <text class="nm" x="706" y="160">Diacylglycerol</text>
+  <path class="ar" d="M770 166 L770 196"/>
+  <text class="en" x="560" y="200">DGAT, acyl-CoA</text>
+  <rect class="bk" x="690" y="196" width="152" height="22" rx="4"/>
+  <text class="nm" x="700" y="212">Triacylglycerol</text>
+  <text class="lab" x="40" y="166">Phosphatidate is also the branch point to</text>
+  <text class="sub" x="40" y="186">CDP-diacylglycerol and the acidic phospholipids</text>
+  <text class="sub" x="40" y="206">(see the phospholipid lesson).</text>
+
+  <text class="ttl" x="20" y="256">Monoacylglycerol pathway: enterocyte after a meal</text>
+  <rect class="bx" x="20" y="268" width="840" height="76" rx="7"/>
+  <text class="nm" x="40" y="298">2-Monoacylglycerol</text>
+  <path class="ar" d="M186 294 L240 294"/>
+  <text class="en" x="190" y="284">MGAT</text>
+  <text class="nm" x="246" y="298">Diacylglycerol</text>
+  <path class="ar" d="M356 294 L410 294"/>
+  <text class="en" x="360" y="284">DGAT</text>
+  <text class="nm" x="416" y="298">Triacylglycerol</text>
+  <text class="sub" x="560" y="298">no glycerol 3-phosphate is needed; the backbone arrives intact from the lumen</text>
+  <text class="sub" x="40" y="326">DGAT is the committed, shared final step of both routes, so it is the point at which the molecule becomes storage fat.</text>
+
+  <text class="sub" x="20" y="372">Because adipose tissue has no glycerol kinase, the glycerol released by its own lipolysis cannot be reused there; it must travel to the liver.</text>
+  <text class="sub" x="20" y="392">Adipose glycerol 3-phosphate therefore comes from glucose, which is why insulin and glucose availability are required for fat storage.</text>
+</svg>

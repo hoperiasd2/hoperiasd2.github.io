@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 430" width="880" height="430" role="img"
+     aria-label="Spliceosome assembly and the two transesterification reactions producing a lariat intron and ligated exons">
+  <style>
+    .ex { fill:#003c71; stroke:#16191d; stroke-width:1.4; }
+    .exl { font:700 13px sans-serif; fill:#ffffff; }
+    .ln { stroke:#16191d; stroke-width:2; fill:none; }
+    .sn { fill:#fff5d6; stroke:#003c71; stroke-width:1.4; }
+    .snl { font:700 12px sans-serif; fill:#003c71; }
+    .step { font:700 13px sans-serif; fill:#003c71; }
+    .sub { font:12px sans-serif; fill:#4a5159; }
+    .seq { font:700 12px monospace; fill:#16191d; }
+    .at { stroke:#f2b705; stroke-width:2.4; fill:none; }
+    .ttl { font:700 14px sans-serif; fill:#003c71; }
+  </style>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#16191d"/>
+    </marker>
+    <marker id="y" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#f2b705"/>
+    </marker>
+  </defs>
+  <text class="ttl" x="24" y="24">Two transesterifications: no net ATP is used in catalysis</text>
+
+  <text class="step" x="24" y="56">1. E / A complex</text>
+  <rect class="ex" x="150" y="62" width="100" height="30"/><text class="exl" x="178" y="82">Exon 1</text>
+  <path class="ln" d="M250 77 L620 77"/>
+  <rect class="ex" x="620" y="62" width="100" height="30"/><text class="exl" x="648" y="82">Exon 2</text>
+  <ellipse class="sn" cx="262" cy="46" rx="26" ry="16"/><text class="snl" x="252" y="51">U1</text>
+  <ellipse class="sn" cx="470" cy="46" rx="26" ry="16"/><text class="snl" x="460" y="51">U2</text>
+  <ellipse class="sn" cx="596" cy="46" rx="34" ry="16"/><text class="snl" x="575" y="51">U2AF</text>
+  <text class="seq" x="252" y="110">GU</text>
+  <text class="seq" x="462" y="110">A</text>
+  <text class="seq" x="596" y="110">AG</text>
+
+  <text class="step" x="24" y="152">2. B* complex</text>
+  <text class="sub" x="24" y="170">U1 leaves, U6 takes</text>
+  <text class="sub" x="24" y="186">its place; U4 is released</text>
+  <rect class="ex" x="150" y="158" width="100" height="30"/><text class="exl" x="178" y="178">Exon 1</text>
+  <path class="ln" d="M250 173 L620 173"/>
+  <rect class="ex" x="620" y="158" width="100" height="30"/><text class="exl" x="648" y="178">Exon 2</text>
+  <ellipse class="sn" cx="262" cy="142" rx="26" ry="16"/><text class="snl" x="252" y="147">U6</text>
+  <ellipse class="sn" cx="470" cy="142" rx="26" ry="16"/><text class="snl" x="460" y="147">U2</text>
+  <ellipse class="sn" cx="366" cy="206" rx="26" ry="16"/><text class="snl" x="356" y="211">U5</text>
+  <path class="at" d="M460 198 C420 222 300 214 256 192" marker-end="url(#y)"/>
+  <text class="step" x="300" y="246" fill="#8a6300">Attack 1: branch point 2'-OH</text>
+  <text class="sub" x="300" y="262">attacks the 5' splice site phosphate</text>
+
+  <text class="step" x="24" y="316">3. Lariat intermediate</text>
+  <rect class="ex" x="150" y="300" width="100" height="30"/><text class="exl" x="178" y="320">Exon 1</text>
+  <text class="seq" x="254" y="320">3'-OH</text>
+  <path class="ln" d="M330 315 C360 272 470 272 470 315 C470 345 420 345 400 330"/>
+  <path class="ln" d="M400 330 L600 330"/>
+  <rect class="ex" x="600" y="315" width="100" height="30"/><text class="exl" x="628" y="335">Exon 2</text>
+  <text class="sub" x="414" y="294">2'-5' bond at branch point</text>
+  <path class="at" d="M290 334 C320 362 520 364 604 348" marker-end="url(#y)"/>
+  <text class="step" x="330" y="384" fill="#8a6300">Attack 2: 3'-OH of exon 1 attacks the 3' splice site</text>
+
+  <text class="step" x="24" y="412">4. Product</text>
+  <rect class="ex" x="150" y="396" width="100" height="26"/><text class="exl" x="172" y="414">Exon 1</text>
+  <rect class="ex" x="250" y="396" width="100" height="26"/><text class="exl" x="272" y="414">Exon 2</text>
+  <text class="sub" x="366" y="414">Ligated exons + lariat intron (debranched and degraded). EJC is deposited 20-24 nt upstream of the junction.</text>
+</svg>

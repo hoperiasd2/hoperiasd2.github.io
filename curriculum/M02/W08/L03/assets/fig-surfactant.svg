@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 400" width="880" height="400" role="img"
+     aria-label="Pulmonary surfactant made by type II alveolar cells, its composition, the effect on alveolar surface tension and neonatal respiratory distress syndrome">
+  <style>
+    .ttl { font:700 14px sans-serif; fill:#003c71; }
+    .nm { font:700 12.5px sans-serif; fill:#16191d; }
+    .sub { font:11.5px sans-serif; fill:#4a5159; }
+    .lab { font:700 11px sans-serif; fill:#8a6300; }
+    .bx { fill:#fff; stroke:#c6d2dd; stroke-width:1.5; }
+    .bk { fill:#fff5d6; stroke:#f2b705; stroke-width:2.2; }
+    .alv { fill:#eff4f8; stroke:#003c71; stroke-width:2; }
+    .ar { stroke:#003c71; stroke-width:2.2; fill:none; marker-end:url(#h); }
+  </style>
+  <defs><marker id="h" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+    <path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker></defs>
+
+  <text class="ttl" x="20" y="26">Without surfactant</text>
+  <circle class="alv" cx="110" cy="128" r="72"/>
+  <circle class="alv" cx="236" cy="150" r="34"/>
+  <text class="sub" x="76" y="132">large</text>
+  <text class="sub" x="214" y="154">small</text>
+  <text class="sub" x="20" y="222">Laplace: pressure is higher in the smaller</text>
+  <text class="sub" x="20" y="240">alveolus, so it empties into the larger one</text>
+  <text class="sub" x="20" y="258">and collapses. Each breath must then re-</text>
+  <text class="sub" x="20" y="276">open it, which is why the work of breathing</text>
+  <text class="sub" x="20" y="294">is so high.</text>
+
+  <text class="ttl" x="330" y="26">Composition of surfactant</text>
+  <rect class="bx" x="330" y="38" width="250" height="188" rx="7"/>
+  <text class="nm" x="348" y="64">About 90 percent lipid</text>
+  <text class="sub" x="348" y="86">dipalmitoylphosphatidylcholine</text>
+  <text class="sub" x="348" y="104">(DPPC), the main active agent</text>
+  <text class="sub" x="348" y="126">phosphatidylglycerol</text>
+  <text class="sub" x="348" y="148">cholesterol</text>
+  <text class="nm" x="348" y="176">About 10 percent protein</text>
+  <text class="sub" x="348" y="198">SP-A and SP-D: host defence</text>
+  <text class="sub" x="348" y="216">SP-B and SP-C: spreading</text>
+
+  <text class="ttl" x="604" y="26">Type II alveolar cell</text>
+  <rect class="bx" x="604" y="38" width="250" height="188" rx="7"/>
+  <text class="sub" x="622" y="64">makes DPPC by the CDP-choline</text>
+  <text class="sub" x="622" y="82">route, with two 16:0 chains</text>
+  <text class="sub" x="622" y="106">stores it in lamellar bodies and</text>
+  <text class="sub" x="622" y="124">secretes it into the alveolus</text>
+  <text class="sub" x="622" y="148">recycles it; half-life is hours</text>
+  <text class="lab" x="622" y="178">Synthesis rises sharply after</text>
+  <text class="lab" x="622" y="196">gestational week 32, under</text>
+  <text class="lab" x="622" y="214">cortisol and thyroid hormone</text>
+
+  <path class="ar" d="M604 132 L586 132"/>
+
+  <rect class="bk" x="330" y="244" width="524" height="136" rx="7"/>
+  <text class="ttl" x="348" y="268">Neonatal respiratory distress syndrome</text>
+  <text class="sub" x="348" y="292">Prematurity is the main risk; maternal diabetes and caesarean delivery without labour add to it.</text>
+  <text class="sub" x="348" y="312">Amniotic fluid lecithin to sphingomyelin ratio: 2.0 or above suggests maturity, below 1.5 suggests risk.</text>
+  <text class="sub" x="348" y="332">Antenatal corticosteroid to the mother accelerates synthesis; exogenous surfactant is given into the trachea.</text>
+  <text class="sub" x="348" y="356">Genetic forms exist: SP-B deficiency (SFTPB gene) and ABCA3 deficiency cause respiratory failure at term.</text>
+  <text class="lab" x="348" y="376">The deficiency is of one phospholipid species, and the whole clinical picture follows from surface tension.</text>
+</svg>

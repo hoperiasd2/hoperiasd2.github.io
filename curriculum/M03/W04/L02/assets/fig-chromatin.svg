@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 420" width="880" height="420" role="img"
+     aria-label="Chromatin level control: nucleosome structure, histone acetylation opening chromatin, histone deacetylation and DNA methylation closing it">
+  <style>
+    .ttl { font:700 14px sans-serif; fill:#003c71; }
+    .nm { font:700 12px sans-serif; fill:#003c71; }
+    .sub { font:11px sans-serif; fill:#4a5159; }
+    .core { fill:#003c71; stroke:#16191d; stroke-width:1.2; }
+    .dna { stroke:#16191d; stroke-width:2.4; fill:none; }
+    .tail { stroke:#16191d; stroke-width:1.6; fill:none; }
+    .ac { fill:#f2b705; stroke:#16191d; stroke-width:1; }
+    .me { fill:#ffffff; stroke:#16191d; stroke-width:1.2; }
+    .lb { font:700 11px sans-serif; fill:#16191d; }
+    .enz { fill:#fff5d6; stroke:#003c71; stroke-width:1.2; }
+    .el { font:700 11px sans-serif; fill:#003c71; }
+    .ln { stroke:#003c71; stroke-width:1.8; fill:none; }
+    .out { font:700 11px sans-serif; fill:#8a6300; }
+  </style>
+  <defs>
+    <marker id="h1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#003c71"/>
+    </marker>
+  </defs>
+  <text class="ttl" x="20" y="26">A. The nucleosome is the unit of packaging and of control</text>
+  <circle class="core" cx="150" cy="96" r="34"/>
+  <path class="dna" d="M100 76 C120 58 180 58 200 76 C220 94 212 126 186 132 C150 140 110 126 100 110"/>
+  <text class="sub" x="236" y="80">Histone octamer: two each of H2A, H2B, H3 and H4,</text>
+  <text class="sub" x="236" y="98">wrapped by about 146 base pairs of DNA; H1 binds the linker.</text>
+  <text class="sub" x="236" y="116">The N-terminal tails of H3 and H4 carry the modifications.</text>
+  <path class="tail" d="M150 62 L140 40 M166 66 L180 44"/>
+  <text class="lb" x="104" y="36">tails</text>
+
+  <text class="ttl" x="20" y="176">B. Two opposing states</text>
+
+  <g>
+    <circle class="core" cx="150" cy="248" r="28"/>
+    <circle class="core" cx="250" cy="248" r="28"/>
+    <path class="dna" d="M80 248 C110 220 190 276 220 248 C248 222 300 274 330 248"/>
+    <circle class="ac" cx="140" cy="212" r="8"/><circle class="ac" cx="162" cy="208" r="8"/>
+    <circle class="ac" cx="240" cy="212" r="8"/><circle class="ac" cx="262" cy="208" r="8"/>
+    <text class="nm" x="80" y="192">Open (euchromatin)</text>
+    <ellipse class="enz" cx="150" cy="300" rx="52" ry="15"/><text class="el" x="112" y="305">HAT: acetylates</text>
+    <text class="sub" x="80" y="336">Acetyl groups neutralise the positive charge of lysine,</text>
+    <text class="sub" x="80" y="354">so histone tails grip DNA less tightly.</text>
+    <text class="sub" x="80" y="372">H3K4 methylation also marks active genes.</text>
+    <text class="out" x="80" y="398">Transcription factors can reach the DNA</text>
+  </g>
+  <path class="ln" d="M352 268 L404 268" marker-end="url(#h1)"/>
+  <path class="ln" d="M404 292 L352 292" marker-end="url(#h1)"/>
+  <text class="sub" x="356" y="262">HDAC</text>
+  <text class="sub" x="366" y="312">HAT</text>
+
+  <g>
+    <circle class="core" cx="500" cy="248" r="28"/>
+    <circle class="core" cx="562" cy="248" r="28"/>
+    <circle class="core" cx="624" cy="248" r="28"/>
+    <path class="dna" d="M466 248 C486 228 514 268 532 248 C548 228 576 268 594 248 C610 230 638 266 658 248"/>
+    <rect class="me" x="492" y="206" width="16" height="14"/><text class="lb" x="494" y="218">M</text>
+    <rect class="me" x="556" y="206" width="16" height="14"/><text class="lb" x="558" y="218">M</text>
+    <rect class="me" x="618" y="206" width="16" height="14"/><text class="lb" x="620" y="218">M</text>
+    <text class="nm" x="466" y="192">Closed (heterochromatin)</text>
+    <ellipse class="enz" cx="562" cy="300" rx="86" ry="15"/><text class="el" x="494" y="305">HDAC and DNMT: remove, add</text>
+    <text class="sub" x="466" y="336">HDAC removes acetyl groups; DNA methyltransferase adds</text>
+    <text class="sub" x="466" y="354">methyl groups to cytosine in CpG islands, and reader proteins</text>
+    <text class="sub" x="466" y="372">such as MeCP2 recruit further repressors.</text>
+    <text class="out" x="466" y="398">The promoter is silenced, and the state is inherited</text>
+  </g>
+</svg>

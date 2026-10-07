@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 460" width="880" height="460" role="img"
+     aria-label="Lysosomal degradation of sphingolipids and the enzyme defect, stored substrate and key finding of each sphingolipidosis">
+  <style>
+    .ttl { font:700 14px sans-serif; fill:#003c71; }
+    .nm { font:700 12px sans-serif; fill:#16191d; }
+    .mn { font:700 11.5px monospace; fill:#16191d; }
+    .sub { font:11px sans-serif; fill:#4a5159; }
+    .lab { font:700 11px sans-serif; fill:#8a6300; }
+    .bx { fill:#fff; stroke:#c6d2dd; stroke-width:1.3; }
+    .hd { fill:#eff4f8; stroke:#c6d2dd; stroke-width:1.3; }
+    .bk { fill:#fff5d6; stroke:#f2b705; stroke-width:2.2; }
+    .nv { fill:#003c71; }
+    .st { font:700 11.5px sans-serif; fill:#fff; }
+    .ar { stroke:#003c71; stroke-width:2; fill:none; marker-end:url(#h); }
+  </style>
+  <defs><marker id="h" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+    <path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker></defs>
+
+  <text class="ttl" x="20" y="26">Degradation runs inward from the sugar end, one residue at a time, inside the lysosome</text>
+  <rect class="bk" x="20" y="38" width="840" height="48" rx="7"/>
+  <text class="mn" x="40" y="68">GM2 ganglioside  to  GM3  to  lactosylceramide  to  glucocerebroside  to  CERAMIDE  to  sphingosine + fatty acid</text>
+
+  <rect class="nv" x="20" y="104" width="196" height="26"/>
+  <rect class="nv" x="216" y="104" width="186" height="26"/>
+  <rect class="nv" x="402" y="104" width="186" height="26"/>
+  <rect class="nv" x="588" y="104" width="272" height="26"/>
+  <text class="st" x="34" y="122">Disease</text>
+  <text class="st" x="230" y="122">Missing enzyme</text>
+  <text class="st" x="416" y="122">Substrate stored</text>
+  <text class="st" x="602" y="122">Key clinical finding</text>
+
+  <rect class="hd" x="20" y="130" width="840" height="46"/>
+  <text class="nm" x="34" y="152">Tay-Sachs</text>
+  <text class="sub" x="34" y="168">autosomal recessive</text>
+  <text class="sub" x="230" y="152">hexosaminidase A</text>
+  <text class="sub" x="416" y="152">GM2 ganglioside</text>
+  <text class="sub" x="602" y="152">cherry-red macula, startle response,</text>
+  <text class="sub" x="602" y="168">no hepatosplenomegaly</text>
+
+  <rect class="bx" x="20" y="176" width="840" height="46"/>
+  <text class="nm" x="34" y="198">Gaucher</text>
+  <text class="sub" x="34" y="214">most common of the group</text>
+  <text class="sub" x="230" y="198">glucocerebrosidase</text>
+  <text class="sub" x="416" y="198">glucocerebroside</text>
+  <text class="sub" x="602" y="198">hepatosplenomegaly, bone pain and</text>
+  <text class="sub" x="602" y="214">fractures, Gaucher cells in marrow</text>
+
+  <rect class="hd" x="20" y="222" width="840" height="46"/>
+  <text class="nm" x="34" y="244">Niemann-Pick A and B</text>
+  <text class="sub" x="230" y="244">sphingomyelinase</text>
+  <text class="sub" x="416" y="244">sphingomyelin</text>
+  <text class="sub" x="602" y="244">hepatosplenomegaly plus cherry-red</text>
+  <text class="sub" x="602" y="260">macula; foam cells</text>
+
+  <rect class="bx" x="20" y="268" width="840" height="46"/>
+  <text class="nm" x="34" y="290">Fabry</text>
+  <text class="sub" x="34" y="306">X-linked</text>
+  <text class="sub" x="230" y="290">alpha-galactosidase A</text>
+  <text class="sub" x="416" y="290">globotriaosylceramide</text>
+  <text class="sub" x="602" y="290">angiokeratoma, acroparaesthesia,</text>
+  <text class="sub" x="602" y="306">renal failure, stroke</text>
+
+  <rect class="hd" x="20" y="314" width="840" height="46"/>
+  <text class="nm" x="34" y="336">Krabbe</text>
+  <text class="sub" x="230" y="336">galactocerebrosidase</text>
+  <text class="sub" x="416" y="336">galactocerebroside,</text>
+  <text class="sub" x="416" y="352">psychosine</text>
+  <text class="sub" x="602" y="336">demyelination, globoid cells,</text>
+  <text class="sub" x="602" y="352">optic atrophy</text>
+
+  <rect class="bx" x="20" y="360" width="840" height="46"/>
+  <text class="nm" x="34" y="382">Metachromatic</text>
+  <text class="nm" x="34" y="398">leukodystrophy</text>
+  <text class="sub" x="230" y="382">arylsulfatase A</text>
+  <text class="sub" x="416" y="382">sulfatide</text>
+  <text class="sub" x="602" y="382">central and peripheral demyelination,</text>
+  <text class="sub" x="602" y="398">gait disorder then dementia</text>
+
+  <text class="lab" x="20" y="430">Shared pattern: autosomal recessive except Fabry, which is X-linked; progressive storage; no acute crises; diagnosis by enzyme assay in leukocytes.</text>
+  <text class="sub" x="20" y="450">Sphingolipid turnover is highest in neural tissue, so most of these diseases are primarily neurological. Where the substrate is also abundant in macrophages, the organs enlarge.</text>
+</svg>

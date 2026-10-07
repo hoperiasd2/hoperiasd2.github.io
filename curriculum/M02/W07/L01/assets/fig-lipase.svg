@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 400" width="880" height="400" role="img"
+     aria-label="Pancreatic lipase anchored by colipase at the lipid droplet surface, with the enzymes of luminal lipid digestion and their products">
+  <style>
+    .ttl { font:700 14px sans-serif; fill:#003c71; }
+    .nm { font:700 12.5px sans-serif; fill:#16191d; }
+    .sub { font:11.5px sans-serif; fill:#4a5159; }
+    .lab { font:700 11px sans-serif; fill:#8a6300; }
+    .bx { fill:#fff; stroke:#c6d2dd; stroke-width:1.4; }
+    .bk { fill:#fff5d6; stroke:#f2b705; stroke-width:2.2; }
+    .nv { fill:#003c71; }
+    .st { font:700 12px sans-serif; fill:#fff; }
+    .ar { stroke:#003c71; stroke-width:2.2; fill:none; marker-end:url(#h); }
+    .fat { fill:#fff5d6; stroke:#f2b705; stroke-width:2; }
+  </style>
+  <defs><marker id="h" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+    <path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker></defs>
+
+  <text class="ttl" x="20" y="24">Colipase anchors lipase to a bile-salt-coated surface</text>
+  <path class="fat" d="M20 150 Q140 92 300 150 L300 240 L20 240 Z"/>
+  <text class="nm" x="96" y="206">lipid droplet core</text>
+  <text class="sub" x="52" y="226">triacylglycerol</text>
+  <rect class="nv" x="118" y="92" width="92" height="30" rx="5"/>
+  <text class="st" x="138" y="112">lipase</text>
+  <rect class="bk" x="118" y="122" width="92" height="26" rx="5"/>
+  <text class="lab" x="130" y="140">colipase</text>
+  <g stroke="#003c71" stroke-width="2" fill="none">
+    <path d="M40 142 L40 124"/><path d="M70 132 L70 114"/><path d="M240 128 L240 110"/><path d="M272 146 L272 128"/>
+  </g>
+  <text class="sub" x="20" y="268">Bile salts cover the surface and repel lipase.</text>
+  <text class="sub" x="20" y="286">Colipase binds the surface and binds lipase, in</text>
+  <text class="sub" x="20" y="304">a 1:1 complex, restoring access to the esters.</text>
+  <text class="sub" x="20" y="322">Procolipase is secreted inactive and is cut by</text>
+  <text class="sub" x="20" y="340">trypsin in the duodenum.</text>
+
+  <text class="ttl" x="346" y="24">Enzymes of luminal lipid digestion</text>
+  <rect class="bx" x="346" y="36" width="512" height="222" rx="7"/>
+  <text class="nm" x="364" y="62">Lingual and gastric lipase</text>
+  <text class="sub" x="364" y="80">acid-stable; act on short- and medium-chain triacylglycerol</text>
+  <text class="nm" x="364" y="110">Pancreatic lipase + colipase</text>
+  <text class="sub" x="364" y="128">triacylglycerol at sn-1 and sn-3 to 2-monoacylglycerol + 2 free fatty acids</text>
+  <text class="nm" x="364" y="158">Cholesterol esterase (carboxyl ester lipase)</text>
+  <text class="sub" x="364" y="176">cholesteryl ester to cholesterol + fatty acid; also hydrolyses 2-MAG</text>
+  <text class="nm" x="364" y="206">Phospholipase A2 (secreted as proenzyme, cut by trypsin)</text>
+  <text class="sub" x="364" y="224">phospholipid at sn-2 to lysophospholipid + fatty acid; needs Ca2+</text>
+  <text class="sub" x="364" y="246">Secretion is driven by cholecystokinin; bicarbonate from secretin raises pH to the optimum of about 6-8.</text>
+
+  <text class="ttl" x="346" y="292">Net products delivered to the micelle</text>
+  <rect class="bk" x="346" y="304" width="512" height="76" rx="7"/>
+  <text class="nm" x="364" y="328">2-monoacylglycerol · free fatty acids · cholesterol · lysophospholipid</text>
+  <text class="sub" x="364" y="350">plus the fat-soluble vitamins A, D, E and K released from the fat phase</text>
+  <text class="sub" x="364" y="370">Short- and medium-chain fatty acids need neither micelles nor chylomicrons.</text>
+</svg>

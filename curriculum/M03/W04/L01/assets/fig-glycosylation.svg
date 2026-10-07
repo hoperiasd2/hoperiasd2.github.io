@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 410" width="880" height="410" role="img"
+     aria-label="N-linked and O-linked glycosylation compared, and the mannose-6-phosphate tag that sorts enzymes to the lysosome">
+  <style>
+    .ttl { font:700 14px sans-serif; fill:#003c71; }
+    .nm { font:700 12px sans-serif; fill:#003c71; }
+    .sub { font:11px sans-serif; fill:#4a5159; }
+    .pro { fill:#003c71; stroke:#16191d; stroke-width:1.2; }
+    .pl { font:700 11px sans-serif; fill:#ffffff; }
+    .sug { fill:#f2b705; stroke:#16191d; stroke-width:1.1; }
+    .sug2 { fill:#ffffff; stroke:#16191d; stroke-width:1.1; }
+    .ln { stroke:#16191d; stroke-width:1.5; fill:none; }
+    .lb { font:700 11px sans-serif; fill:#16191d; }
+    .box { fill:#fff5d6; stroke:#c6d2dd; stroke-width:1; }
+    .org { fill:#e8eef4; stroke:#003c71; stroke-width:1.3; }
+  </style>
+  <defs>
+    <marker id="g1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#003c71"/>
+    </marker>
+  </defs>
+  <text class="ttl" x="20" y="26">A. N-linked versus O-linked glycosylation</text>
+
+  <rect class="pro" x="40" y="62" width="300" height="26" rx="4"/>
+  <text class="pl" x="54" y="80">polypeptide in the ER lumen</text>
+  <text class="lb" x="150" y="108">Asn-X-Ser/Thr  (X is not Pro)</text>
+  <path class="ln" d="M190 92 L190 100"/>
+  <circle class="sug" cx="190" cy="44" r="9"/><circle class="sug" cx="208" cy="34" r="9"/>
+  <circle class="sug2" cx="226" cy="44" r="9"/><circle class="sug2" cx="244" cy="34" r="9"/><circle class="sug2" cx="262" cy="44" r="9"/>
+  <path class="ln" d="M190 53 L190 62"/>
+  <text class="nm" x="286" y="40">N-linked</text>
+  <text class="sub" x="286" y="58">14-sugar core (2 GlcNAc, 9 Man, 3 Glc) is built on</text>
+  <text class="sub" x="286" y="76">dolichol pyrophosphate and transferred in one block</text>
+  <text class="sub" x="286" y="94">to the Asn amide nitrogen, then trimmed in ER and Golgi.</text>
+
+  <rect class="pro" x="40" y="166" width="300" height="26" rx="4"/>
+  <text class="pl" x="54" y="184">polypeptide in the Golgi</text>
+  <text class="lb" x="156" y="212">Ser or Thr hydroxyl</text>
+  <path class="ln" d="M190 196 L190 204"/>
+  <circle class="sug" cx="190" cy="148" r="9"/><circle class="sug2" cx="190" cy="128" r="9"/>
+  <path class="ln" d="M190 157 L190 166 M190 137 L190 148"/>
+  <text class="nm" x="286" y="144">O-linked</text>
+  <text class="sub" x="286" y="162">Sugars are added one at a time from nucleotide sugars,</text>
+  <text class="sub" x="286" y="180">in the Golgi, with no lipid carrier and no core block.</text>
+  <text class="sub" x="286" y="198">Mucins and proteoglycans carry dense O-linked chains.</text>
+
+  <text class="ttl" x="20" y="256">B. Mannose-6-phosphate sorts hydrolases to the lysosome</text>
+  <rect class="org" x="40" y="272" width="120" height="60" rx="8"/>
+  <text class="nm" x="60" y="306">cis-Golgi</text>
+  <path class="ln" d="M160 302 L224 302" marker-end="url(#g1)" stroke="#003c71"/>
+  <text class="sub" x="166" y="292">GlcNAc</text>
+  <text class="sub" x="166" y="328">phosphotransferase</text>
+  <rect class="org" x="224" y="272" width="150" height="60" rx="8"/>
+  <text class="nm" x="236" y="298">enzyme carries</text>
+  <text class="nm" x="236" y="318">mannose-6-P tag</text>
+  <path class="ln" d="M374 302 L438 302" marker-end="url(#g1)" stroke="#003c71"/>
+  <text class="sub" x="378" y="292">M6P receptor</text>
+  <rect class="org" x="438" y="272" width="130" height="60" rx="8"/>
+  <text class="nm" x="462" y="306">lysosome</text>
+  <path class="ln" d="M299 272 L299 250" marker-end="url(#g1)" stroke="#003c71"/>
+    <text class="sub" x="310" y="248">no tag: enzyme is secreted instead</text>
+
+  <rect class="box" x="596" y="258" width="264" height="140" rx="4"/>
+  <text class="nm" x="612" y="282">I-cell disease (mucolipidosis II)</text>
+  <text class="sub" x="612" y="302">GNPTAB defect: no M6P tag is added.</text>
+  <text class="sub" x="612" y="320">Hydrolases are secreted, so plasma</text>
+  <text class="sub" x="612" y="338">lysosomal enzyme activity is HIGH while</text>
+  <text class="sub" x="612" y="356">lysosomes fill with undigested material.</text>
+  <text class="sub" x="612" y="378">Fibroblasts show dense inclusions;</text>
+  <text class="sub" x="612" y="394">coarse features and early death follow.</text>
+</svg>

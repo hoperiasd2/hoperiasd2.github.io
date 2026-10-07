@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 420" width="880" height="420" role="img"
+     aria-label="Sphingolipid architecture built on ceramide, and the synthesis of ceramide from serine and palmitoyl-CoA with its branches to sphingomyelin and glycosphingolipids">
+  <style>
+    .b { stroke:#16191d; stroke-width:2.2; fill:none; stroke-linecap:round; }
+    .ttl { font:700 14px sans-serif; fill:#003c71; }
+    .nm { font:700 12.5px sans-serif; fill:#16191d; }
+    .mn { font:700 12px monospace; fill:#16191d; }
+    .at { font:600 11.5px monospace; fill:#16191d; }
+    .sub { font:11.5px sans-serif; fill:#4a5159; }
+    .lab { font:700 11px sans-serif; fill:#8a6300; }
+    .en { font:700 11.5px sans-serif; fill:#003c71; }
+    .bx { fill:#fff; stroke:#c6d2dd; stroke-width:1.5; }
+    .bk { fill:#fff5d6; stroke:#f2b705; stroke-width:2.4; }
+    .ar { stroke:#003c71; stroke-width:2.2; fill:none; marker-end:url(#h); }
+  </style>
+  <defs><marker id="h" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+    <path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker></defs>
+
+  <text class="ttl" x="20" y="26">Architecture: one backbone, three layers</text>
+  <rect class="bx" x="20" y="38" width="420" height="190" rx="7"/>
+  <text class="nm" x="38" y="64">Sphingosine</text>
+  <text class="sub" x="150" y="64">amino alcohol with an 18-carbon chain</text>
+  <path class="b" d="M38 78 L38 92"/>
+  <text class="nm" x="38" y="112">+ fatty acid on the amino group</text>
+  <text class="mn" x="38" y="136">= CERAMIDE</text>
+  <text class="sub" x="160" y="136">the common core of every sphingolipid</text>
+  <path class="b" d="M38 148 L38 162"/>
+  <text class="nm" x="38" y="182">+ phosphocholine</text>
+  <text class="mn" x="220" y="182">Sphingomyelin</text>
+  <text class="nm" x="38" y="206">+ sugar or sugar chain</text>
+  <text class="mn" x="220" y="206">Glycosphingolipid</text>
+
+  <text class="ttl" x="464" y="26">Compare with a glycerophospholipid</text>
+  <rect class="bx" x="464" y="38" width="396" height="190" rx="7"/>
+  <text class="sub" x="482" y="64">Backbone: sphingosine, not glycerol</text>
+  <text class="sub" x="482" y="86">One fatty acid, not two, joined by an amide</text>
+  <text class="sub" x="482" y="104">bond rather than an ester bond</text>
+  <text class="sub" x="482" y="126">Sphingomyelin is the only sphingolipid with</text>
+  <text class="sub" x="482" y="144">phosphate; the rest carry sugars instead</text>
+  <text class="lab" x="482" y="172">Both are amphipathic and both sit in the outer</text>
+  <text class="lab" x="482" y="190">leaflet, so sphingomyelin can substitute for</text>
+  <text class="lab" x="482" y="208">phosphatidylcholine in the membrane</text>
+
+  <text class="ttl" x="20" y="268">Synthesis of ceramide: smooth ER</text>
+  <rect class="bx" x="20" y="280" width="840" height="98" rx="7"/>
+  <text class="mn" x="40" y="308">Serine + Palmitoyl-CoA</text>
+  <path class="ar" d="M216 304 L276 304"/>
+  <text class="en" x="200" y="326">serine palmitoyltransferase, rate-limiting</text>
+  <text class="mn" x="282" y="308">3-Ketosphinganine</text>
+  <path class="ar" d="M414 304 L474 304"/>
+  <text class="en" x="416" y="294">NADPH</text>
+  <text class="mn" x="480" y="308">Sphinganine</text>
+  <path class="ar" d="M580 304 L640 304"/>
+  <text class="en" x="576" y="294">acyl-CoA, then FAD</text>
+  <rect class="bk" x="646" y="288" width="140" height="30" rx="5"/>
+  <text class="mn" x="672" y="308">Ceramide</text>
+  <text class="sub" x="40" y="352">Sugars are added in the Golgi: glucose or galactose first, then further residues and sialic acid for the gangliosides.</text>
+  <text class="sub" x="40" y="370">Each transfer uses a UDP sugar or CMP-sialic acid donor and its own glycosyltransferase.</text>
+
+  <text class="sub" x="20" y="404">Ceramide is also a signalling molecule in its own right, linked to apoptosis, which is one reason its level is tightly held.</text>
+</svg>

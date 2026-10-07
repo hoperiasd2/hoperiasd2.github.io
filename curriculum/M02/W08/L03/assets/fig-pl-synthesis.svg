@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 420" width="880" height="420" role="img"
+     aria-label="Two activated intermediates in phospholipid synthesis: CDP-diacylglycerol and CDP-choline, and the salvage and de novo routes to phosphatidylcholine">
+  <style>
+    .ttl { font:700 14px sans-serif; fill:#003c71; }
+    .nm { font:700 12px monospace; fill:#16191d; }
+    .en { font:700 11.5px sans-serif; fill:#003c71; }
+    .sub { font:11.5px sans-serif; fill:#4a5159; }
+    .lab { font:700 11px sans-serif; fill:#8a6300; }
+    .bx { fill:#fff; stroke:#c6d2dd; stroke-width:1.5; }
+    .bk { fill:#fff5d6; stroke:#f2b705; stroke-width:2.4; }
+    .ar { stroke:#003c71; stroke-width:2.2; fill:none; marker-end:url(#h); }
+  </style>
+  <defs><marker id="h" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+    <path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker></defs>
+
+  <text class="ttl" x="20" y="26">Route A: the lipid is activated (CDP-diacylglycerol)</text>
+  <rect class="bx" x="20" y="38" width="840" height="130" rx="7"/>
+  <text class="nm" x="40" y="68">Phosphatidate</text>
+  <path class="ar" d="M156 64 L216 64"/>
+  <text class="en" x="158" y="54">CTP, releases PPi</text>
+  <rect class="bk" x="222" y="46" width="200" height="30" rx="5"/>
+  <text class="nm" x="236" y="68">CDP-diacylglycerol</text>
+  <path class="ar" d="M428 62 L488 62"/>
+  <text class="nm" x="494" y="66">Phosphatidylinositol</text>
+  <path class="ar" d="M322 80 L322 110"/>
+  <text class="nm" x="236" y="128">Phosphatidylglycerol</text>
+  <path class="ar" d="M404 124 L464 124"/>
+  <text class="nm" x="470" y="128">Cardiolipin</text>
+  <text class="sub" x="40" y="112">The head group alcohol attacks CDP-diacylglycerol</text>
+  <text class="sub" x="40" y="132">and CMP leaves. Used for the acidic phospholipids.</text>
+  <text class="sub" x="40" y="152">Cardiolipin is made only in the inner mitochondrial membrane.</text>
+
+  <text class="ttl" x="20" y="208">Route B: the head group is activated (CDP-choline)</text>
+  <rect class="bx" x="20" y="220" width="840" height="130" rx="7"/>
+  <text class="nm" x="40" y="250">Choline (diet)</text>
+  <path class="ar" d="M152 246 L206 246"/>
+  <text class="en" x="152" y="236">choline kinase, ATP</text>
+  <text class="nm" x="212" y="250">Phosphocholine</text>
+  <path class="ar" d="M330 246 L390 246"/>
+  <text class="en" x="332" y="236">CTP, rate-limiting</text>
+  <rect class="bk" x="396" y="228" width="152" height="30" rx="5"/>
+  <text class="nm" x="414" y="250">CDP-choline</text>
+  <path class="ar" d="M554 244 L614 244"/>
+  <text class="en" x="556" y="234">+ diacylglycerol</text>
+  <rect class="bk" x="620" y="228" width="200" height="30" rx="5"/>
+  <text class="nm" x="632" y="250">Phosphatidylcholine</text>
+  <text class="sub" x="40" y="284">Rate-limiting enzyme: CTP:phosphocholine cytidylyltransferase. It is active only when bound to the membrane, so it senses</text>
+  <text class="sub" x="40" y="302">the lipid composition of the membrane it is building.</text>
+  <text class="lab" x="40" y="330">Second route to phosphatidylcholine: liver PEMT methylates phosphatidylethanolamine three times, using S-adenosylmethionine.</text>
+
+  <text class="sub" x="20" y="382">CTP, not ATP, is the nucleotide of phospholipid synthesis, just as UTP is for glycogen and GTP for gluconeogenesis.</text>
+  <text class="sub" x="20" y="402">Both routes converge on diacylglycerol or phosphatidate, so triacylglycerol and membrane lipid synthesis compete for the same intermediates.</text>
+</svg>

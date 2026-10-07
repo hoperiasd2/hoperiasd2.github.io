@@ -1,4 +1,65 @@
 {
   "lesson_id": "M02-W07-L03",
-  "figures": []
+  "figures": [
+    {
+      "figure_id": "fig-carnitine-shuttle",
+      "lesson_id": "M02-W07-L03",
+      "html_anchor": "#fig-carnitine-shuttle",
+      "caption": "Carnitine shuttle. 세포질에서 활성화된 긴 사슬 acyl-CoA는 CPT-I, CACT, CPT-II를 거쳐 기질로 들어간다. Malonyl-CoA가 CPT-I을 억제하므로 합성이 켜진 상태에서는 산화가 일어나지 않는다.",
+      "asset_path": "assets/fig-carnitine-shuttle.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-beta-oxidation",
+      "lesson_id": "M02-W07-L03",
+      "html_anchor": "#fig-beta-oxidation",
+      "caption": "beta-oxidation의 네 반응과 사슬 길이별 dehydrogenase. 두 번의 산화 사이에 수화가 끼어 있고, thiolase가 acetyl-CoA를 떼어 낸다. Palmitate 한 분자에서 7회 순환, 8 acetyl-CoA, 7 FADH₂, 7 NADH가 나온다.",
+      "asset_path": "assets/fig-beta-oxidation.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-odd-unsat",
+      "lesson_id": "M02-W07-L03",
+      "html_anchor": "#fig-odd-unsat",
+      "caption": "홀수 사슬과 불포화 지방산의 처리. Propionyl-CoA는 biotin과 vitamin B₁₂ 의존 반응을 거쳐 succinyl-CoA가 되고, 불포화 사슬은 isomerase와 reductase를 추가로 거치며 ATP 수득이 조금 줄어든다.",
+      "asset_path": "assets/fig-odd-unsat.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-peroxisome",
+      "lesson_id": "M02-W07-L03",
+      "html_anchor": "#fig-peroxisome",
+      "caption": "Peroxisome과 미토콘드리아의 산화 비교, 그리고 phytanic acid의 alpha-oxidation. Peroxisome의 첫 산화는 H₂O₂를 만들고 ATP를 만들지 않는다.",
+      "asset_path": "assets/fig-peroxisome.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-fasting-fuel",
+      "lesson_id": "M02-W07-L03",
+      "html_anchor": "#fig-fasting-fuel",
+      "caption": "공복 기간에 따른 조직별 연료 선택. 뇌는 유리지방산을 쓸 수 없으나 케톤체는 쓸 수 있고, 적혈구는 미토콘드리아가 없어 끝까지 포도당에 의존한다.",
+      "asset_path": "assets/fig-fasting-fuel.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    }
+  ]
 }

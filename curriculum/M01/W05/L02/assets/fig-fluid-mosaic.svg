@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 400" width="860" height="400" role="img"
+     aria-label="Fluid mosaic model showing single-pass and multi-pass integral proteins, peripheral proteins, lipid-anchored proteins and glycosylation on the extracellular face only">
+  <style>
+    .ttl{font:700 15px sans-serif;fill:#003c71}
+    .hd{font:700 12.5px sans-serif;fill:#003c71}
+    .lab{font:700 11.5px sans-serif;fill:#16191d}
+    .sub{font:11px sans-serif;fill:#4a5159}
+    .head{fill:#003c71}
+    .tail{stroke:#16191d;stroke-width:1.5;fill:none}
+    .prot{fill:#fff5d6;stroke:#003c71;stroke-width:2}
+    .per{fill:#eff4f8;stroke:#4a5159;stroke-width:1.8}
+    .sug{fill:none;stroke:#16191d;stroke-width:1.4}
+    .lead{stroke:#4a5159;stroke-width:1;stroke-dasharray:3 3;fill:none}
+    .box{fill:#ffffff;stroke:#c6d2dd;stroke-width:1.2}
+  </style>
+  <defs>
+    <g id="lp">
+      <circle class="head" cx="0" cy="0" r="5"/>
+      <path class="tail" d="M-2.2 4.5 l-1.8 9 l1.8 9 M2.2 4.5 l1.8 9 l-1.8 9"/>
+    </g>
+  </defs>
+  <text class="ttl" x="26" y="24">Fluid mosaic model and classes of membrane protein</text>
+  <text class="sub" x="26" y="44">Singer and Nicolson, 1972. Both lipids and proteins diffuse within the plane of the membrane.</text>
+
+  <text class="hd" x="26" y="74">EXTRACELLULAR SPACE</text>
+  <text class="hd" x="26" y="326">CYTOSOL</text>
+
+  <g>
+    <use href="#lp" x="44" y="140"/><use href="#lp" x="62" y="140"/><use href="#lp" x="80" y="140"/>
+    <use href="#lp" x="140" y="140"/><use href="#lp" x="158" y="140"/>
+    <use href="#lp" x="246" y="140"/><use href="#lp" x="264" y="140"/><use href="#lp" x="282" y="140"/>
+    <use href="#lp" x="384" y="140"/><use href="#lp" x="402" y="140"/><use href="#lp" x="420" y="140"/>
+    <use href="#lp" x="480" y="140"/><use href="#lp" x="498" y="140"/><use href="#lp" x="516" y="140"/>
+    <use href="#lp" x="580" y="140"/><use href="#lp" x="598" y="140"/><use href="#lp" x="616" y="140"/>
+    <use href="#lp" x="700" y="140"/><use href="#lp" x="718" y="140"/><use href="#lp" x="736" y="140"/><use href="#lp" x="754" y="140"/><use href="#lp" x="772" y="140"/>
+    <g transform="translate(0,420) scale(1,-1)">
+      <use href="#lp" x="44" y="140"/><use href="#lp" x="62" y="140"/><use href="#lp" x="80" y="140"/>
+      <use href="#lp" x="140" y="140"/><use href="#lp" x="158" y="140"/>
+      <use href="#lp" x="246" y="140"/><use href="#lp" x="264" y="140"/><use href="#lp" x="282" y="140"/>
+      <use href="#lp" x="384" y="140"/><use href="#lp" x="402" y="140"/><use href="#lp" x="420" y="140"/>
+      <use href="#lp" x="480" y="140"/><use href="#lp" x="498" y="140"/><use href="#lp" x="516" y="140"/>
+      <use href="#lp" x="580" y="140"/><use href="#lp" x="598" y="140"/><use href="#lp" x="616" y="140"/>
+      <use href="#lp" x="700" y="140"/><use href="#lp" x="718" y="140"/><use href="#lp" x="736" y="140"/><use href="#lp" x="754" y="140"/><use href="#lp" x="772" y="140"/>
+    </g>
+  </g>
+
+  <rect class="prot" x="100" y="128" width="30" height="104" rx="6"/>
+  <path class="sug" d="M115 128 L115 108 M115 108 l-8 -8 M115 108 l8 -8"/>
+  <circle cx="115" cy="104" r="3.5" fill="#f2b705" stroke="#16191d" stroke-width="1"/>
+  <circle cx="105" cy="96" r="3.5" fill="#f2b705" stroke="#16191d" stroke-width="1"/>
+  <circle cx="125" cy="96" r="3.5" fill="#f2b705" stroke="#16191d" stroke-width="1"/>
+  <path class="lead" d="M115 240 L115 268"/>
+  <text class="lab" x="56" y="286">single-pass integral</text>
+  <text class="sub" x="56" y="302">one transmembrane helix</text>
+
+  <rect class="prot" x="186" y="124" width="54" height="112" rx="8"/>
+  <g stroke="#003c71" stroke-width="1.4">
+    <line x1="198" y1="130" x2="198" y2="230"/><line x1="213" y1="130" x2="213" y2="230"/><line x1="228" y1="130" x2="228" y2="230"/>
+  </g>
+  <path class="lead" d="M213 244 L213 268"/>
+  <text class="lab" x="170" y="286">multi-pass integral</text>
+  <text class="sub" x="160" y="302">transporters, 7-pass GPCR;</text>
+  <text class="sub" x="160" y="318">detergent needed to extract</text>
+
+  <path class="prot" d="M320 118 q34 -16 56 10 q-26 26 -56 -10 z"/>
+  <rect class="prot" x="328" y="128" width="26" height="104" rx="6"/>
+  <text class="lab" x="306" y="98">receptor with large</text>
+  <text class="lab" x="306" y="84">extracellular domain</text>
+
+  <ellipse class="per" cx="470" cy="256" rx="42" ry="20"/>
+  <text class="lab" x="446" y="260">peripheral</text>
+  <text class="sub" x="416" y="300">bound to lipid heads or to</text>
+  <text class="sub" x="416" y="316">another protein; removed by</text>
+  <text class="sub" x="416" y="332">high salt or pH change</text>
+
+  <circle class="per" cx="562" cy="248" r="18" fill="#fff5d6" stroke="#003c71"/>
+  <path class="tail" d="M556 232 l-2 -16 M568 232 l2 -16" stroke-width="2.2"/>
+  <text class="lab" x="596" y="244">lipid-anchored (cytosolic)</text>
+  <text class="sub" x="596" y="260">myristoyl or prenyl group,</text>
+  <text class="sub" x="596" y="276">for example Ras</text>
+
+  <circle class="per" cx="676" cy="92" r="18" fill="#fff5d6" stroke="#003c71"/>
+  <path class="tail" d="M670 110 l-2 18 M682 110 l2 18" stroke-width="2.2"/>
+  <text class="lab" x="700" y="86">GPI-anchored</text>
+  <text class="sub" x="700" y="102">on the outer face only</text>
+
+  <rect class="box" x="26" y="354" width="808" height="38" rx="4"/>
+  <text class="sub" x="38" y="372">A transmembrane alpha-helix needs about 20-25 nonpolar residues, because the hydrophobic core is about 3 nm thick and a helix rises 0.15 nm per residue.</text>
+  <text class="sub" x="38" y="388">Sugar chains are added in the ER lumen, so glycosylation marks the extracellular face and never the cytosolic face. Beta-barrels are the exception to the helix rule.</text>
+</svg>

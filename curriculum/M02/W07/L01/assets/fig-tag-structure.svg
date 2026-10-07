@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 380" width="860" height="380" role="img"
+     aria-label="Structure of triacylglycerol with glycerol backbone and three fatty acids esterified at carbons 1, 2 and 3, compared with diacylglycerol and 2-monoacylglycerol">
+  <style>
+    .b { stroke:#16191d; stroke-width:2.2; fill:none; stroke-linecap:round; }
+    .es { stroke:#003c71; stroke-width:2.6; fill:none; }
+    .ttl { font:700 14px sans-serif; fill:#003c71; }
+    .nm { font:700 13px sans-serif; fill:#16191d; }
+    .num { font:600 11px monospace; fill:#16191d; }
+    .lab { font:700 11px sans-serif; fill:#8a6300; }
+    .sub { font:12px sans-serif; fill:#4a5159; }
+    .bx { fill:#fff; stroke:#c6d2dd; stroke-width:1.4; }
+    .bk { fill:#fff5d6; stroke:#f2b705; stroke-width:2.2; }
+    .mk { fill:none; stroke:#f2b705; stroke-width:3; }
+  </style>
+  <text class="ttl" x="24" y="26">Triacylglycerol: glycerol plus three fatty acids joined by ester bonds</text>
+
+  <rect class="bx" x="24" y="40" width="430" height="256" rx="7"/>
+  <text class="num" x="56" y="82">CH2</text>
+  <text class="num" x="56" y="156">CH</text>
+  <text class="num" x="56" y="230">CH2</text>
+  <path class="b" d="M66 90 L66 144"/>
+  <path class="b" d="M66 164 L66 218"/>
+  <text class="lab" x="32" y="78">sn-1</text>
+  <text class="lab" x="32" y="152">sn-2</text>
+  <text class="lab" x="32" y="226">sn-3</text>
+
+  <text class="num" x="96" y="82">O</text>
+  <text class="num" x="96" y="156">O</text>
+  <text class="num" x="96" y="230">O</text>
+  <path class="es" d="M84 78 L92 78"/>
+  <path class="es" d="M84 152 L92 152"/>
+  <path class="es" d="M84 226 L92 226"/>
+  <path class="es" d="M110 78 L134 78"/>
+  <path class="es" d="M110 152 L134 152"/>
+  <path class="es" d="M110 226 L134 226"/>
+  <text class="num" x="136" y="82">C=O</text>
+  <text class="num" x="136" y="156">C=O</text>
+  <text class="num" x="136" y="230">C=O</text>
+  <path class="b" d="M180 78 L206 64 L232 78 L258 64 L284 78 L310 64 L336 78 L362 64 L388 78"/>
+  <path class="b" d="M180 152 L206 138 L232 152 L258 138 L284 152 L310 138 L336 152 L362 138"/>
+  <path class="b" d="M180 226 L206 212 L232 226 L258 212 L284 226 L310 212 L336 226"/>
+  <circle class="mk" cx="148" cy="152" r="18"/>
+  <text class="sub" x="40" y="272">Glycerol backbone on the left, three fatty acyl chains on the right.</text>
+  <text class="sub" x="40" y="290">The three acids are usually different in chain length and saturation.</text>
+
+  <rect class="bk" x="476" y="40" width="380" height="104" rx="7"/>
+  <text class="lab" x="494" y="64">Why the sn-2 position matters</text>
+  <text class="sub" x="494" y="86">Pancreatic lipase removes only the sn-1 and sn-3 acyl</text>
+  <text class="sub" x="494" y="104">groups. The sn-2 ester resists hydrolysis, so the</text>
+  <text class="sub" x="494" y="122">products of luminal digestion are 2-monoacylglycerol</text>
+  <text class="sub" x="494" y="138">plus two free fatty acids.</text>
+
+  <text class="ttl" x="476" y="180">Stepwise hydrolysis</text>
+  <rect class="bx" x="476" y="192" width="380" height="104" rx="7"/>
+  <text class="nm" x="494" y="216">Triacylglycerol</text><text class="sub" x="640" y="216">3 acyl groups</text>
+  <text class="nm" x="494" y="244">1,2-Diacylglycerol</text><text class="sub" x="640" y="244">sn-3 removed</text>
+  <text class="nm" x="494" y="272">2-Monoacylglycerol</text><text class="sub" x="640" y="272">sn-1 also removed</text>
+
+  <text class="sub" x="24" y="326">Triacylglycerol carries about 9 kcal per gram, more than twice the yield of carbohydrate or protein, and is stored without water.</text>
+  <text class="sub" x="24" y="346">It is uncharged and fully hydrophobic, so it cannot cross the unstirred water layer of the intestine on its own.</text>
+  <text class="sub" x="24" y="366">About 90 percent of dietary lipid is triacylglycerol; the rest is phospholipid, cholesterol, cholesteryl ester and fat-soluble vitamins.</text>
+</svg>

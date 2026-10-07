@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 400" width="860" height="400" role="img"
+     aria-label="Fuel selection by tissue during feeding, overnight fast and prolonged fast, showing the shift from glucose to fatty acids and ketone bodies">
+  <style>
+    .ttl { font:700 14px sans-serif; fill:#003c71; }
+    .nm { font:700 12.5px sans-serif; fill:#16191d; }
+    .sub { font:11.5px sans-serif; fill:#4a5159; }
+    .lab { font:700 11px sans-serif; fill:#8a6300; }
+    .bx { fill:#fff; stroke:#c6d2dd; stroke-width:1.5; }
+    .bk { fill:#fff5d6; stroke:#f2b705; stroke-width:2.2; }
+    .nv { fill:#003c71; }
+    .st { font:700 12px sans-serif; fill:#fff; }
+    .hd { fill:#eff4f8; stroke:#c6d2dd; stroke-width:1.4; }
+    .ar { stroke:#003c71; stroke-width:2.2; fill:none; marker-end:url(#h); }
+  </style>
+  <defs><marker id="h" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+    <path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker></defs>
+
+  <text class="ttl" x="20" y="26">Fuel chosen by each tissue as fasting proceeds</text>
+
+  <rect class="nv" x="20" y="38" width="200" height="30"/>
+  <rect class="nv" x="220" y="38" width="208" height="30"/>
+  <rect class="nv" x="428" y="38" width="208" height="30"/>
+  <rect class="nv" x="636" y="38" width="208" height="30"/>
+  <text class="st" x="36" y="58">Tissue</text>
+  <text class="st" x="236" y="58">Fed state</text>
+  <text class="st" x="444" y="58">Overnight fast, 12-24 h</text>
+  <text class="st" x="652" y="58">Prolonged fast, &gt; 3 days</text>
+
+  <rect class="hd" x="20" y="68" width="824" height="42"/>
+  <text class="nm" x="36" y="94">Liver</text>
+  <text class="sub" x="236" y="94">glucose, makes fat</text>
+  <text class="sub" x="444" y="94">oxidises fatty acids</text>
+  <text class="sub" x="652" y="94">makes ketone bodies, cannot use them</text>
+
+  <rect class="bx" x="20" y="110" width="824" height="42"/>
+  <text class="nm" x="36" y="136">Skeletal muscle, resting</text>
+  <text class="sub" x="236" y="136">glucose</text>
+  <text class="sub" x="444" y="136">fatty acids</text>
+  <text class="sub" x="652" y="136">fatty acids, ketone bodies fall off later</text>
+
+  <rect class="hd" x="20" y="152" width="824" height="42"/>
+  <text class="nm" x="36" y="178">Cardiac muscle</text>
+  <text class="sub" x="236" y="178">fatty acids, lactate</text>
+  <text class="sub" x="444" y="178">fatty acids</text>
+  <text class="sub" x="652" y="178">fatty acids, ketone bodies</text>
+
+  <rect class="bx" x="20" y="194" width="824" height="42"/>
+  <text class="nm" x="36" y="220">Brain</text>
+  <text class="sub" x="236" y="220">glucose only</text>
+  <text class="sub" x="444" y="220">glucose only</text>
+  <text class="sub" x="652" y="220">ketone bodies supply up to about two thirds</text>
+
+  <rect class="hd" x="20" y="236" width="824" height="42"/>
+  <text class="nm" x="36" y="262">Red blood cell</text>
+  <text class="sub" x="236" y="262">glucose only</text>
+  <text class="sub" x="444" y="262">glucose only</text>
+  <text class="sub" x="652" y="262">glucose only, no mitochondria</text>
+
+  <rect class="bk" x="20" y="292" width="404" height="78" rx="7"/>
+  <text class="lab" x="38" y="316">Why the brain switches but the red cell cannot</text>
+  <text class="sub" x="38" y="338">Fatty acids are bound to albumin and do not cross the</text>
+  <text class="sub" x="38" y="356">blood-brain barrier; ketone bodies do. Red cells have no</text>
+  <text class="sub" x="38" y="368">mitochondria at all.</text>
+
+  <rect class="bk" x="440" y="292" width="404" height="78" rx="7"/>
+  <text class="lab" x="458" y="316">Why this matters clinically</text>
+  <text class="sub" x="458" y="338">A fatty acid oxidation defect is silent while the patient eats</text>
+  <text class="sub" x="458" y="356">and becomes dangerous during fasting or illness, when the</text>
+  <text class="sub" x="458" y="368">body must switch to this fuel.</text>
+</svg>

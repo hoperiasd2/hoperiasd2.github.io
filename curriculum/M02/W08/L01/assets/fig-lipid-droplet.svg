@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 420" width="880" height="420" role="img"
+     aria-label="Lipid droplet surface with perilipin, and the sequential action of ATGL, hormone-sensitive lipase and monoacylglycerol lipase under PKA control">
+  <style>
+    .ttl { font:700 14px sans-serif; fill:#003c71; }
+    .nm { font:700 12.5px sans-serif; fill:#16191d; }
+    .mn { font:700 12px monospace; fill:#16191d; }
+    .sub { font:11.5px sans-serif; fill:#4a5159; }
+    .lab { font:700 11px sans-serif; fill:#8a6300; }
+    .bx { fill:#fff; stroke:#c6d2dd; stroke-width:1.5; }
+    .bk { fill:#fff5d6; stroke:#f2b705; stroke-width:2.2; }
+    .core { fill:#fff5d6; stroke:#f2b705; stroke-width:2.4; }
+    .ar { stroke:#003c71; stroke-width:2.2; fill:none; marker-end:url(#h); }
+    .nv { fill:#003c71; }
+    .st { font:700 11px sans-serif; fill:#fff; }
+  </style>
+  <defs><marker id="h" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+    <path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker></defs>
+
+  <text class="ttl" x="20" y="26">The droplet surface is a regulated barrier</text>
+  <circle class="core" cx="170" cy="168" r="112"/>
+  <text class="nm" x="112" y="162">Triacylglycerol</text>
+  <text class="sub" x="140" y="184">core</text>
+  <g>
+    <rect class="nv" x="146" y="44" width="56" height="18" rx="3"/>
+    <text class="st" x="152" y="58">perilipin</text>
+    <rect class="nv" x="40" y="236" width="56" height="18" rx="3"/>
+    <text class="st" x="46" y="250">perilipin</text>
+    <rect class="nv" x="252" y="236" width="56" height="18" rx="3"/>
+    <text class="st" x="258" y="250">perilipin</text>
+  </g>
+  <text class="sub" x="20" y="306">Unphosphorylated perilipin shields the core and holds</text>
+  <text class="sub" x="20" y="324">the ATGL activator CGI-58 away from the surface.</text>
+  <text class="lab" x="20" y="348">PKA phosphorylates perilipin; CGI-58 is released and</text>
+  <text class="lab" x="20" y="366">the lipases gain access. This is the gate, not the enzyme.</text>
+
+  <text class="ttl" x="336" y="26">Three lipases act in order</text>
+  <rect class="bx" x="336" y="38" width="524" height="236" rx="7"/>
+  <text class="nm" x="356" y="66">ATGL (adipose triglyceride lipase)</text>
+  <text class="mn" x="356" y="88">Triacylglycerol to Diacylglycerol + FFA</text>
+  <text class="sub" x="356" y="106">needs CGI-58 as coactivator; first and largely rate-setting step</text>
+  <text class="nm" x="356" y="138">HSL (hormone-sensitive lipase)</text>
+  <text class="mn" x="356" y="160">Diacylglycerol to Monoacylglycerol + FFA</text>
+  <text class="sub" x="356" y="178">activated by PKA phosphorylation; the hormone-controlled step</text>
+  <text class="nm" x="356" y="210">MGL (monoacylglycerol lipase)</text>
+  <text class="mn" x="356" y="232">Monoacylglycerol to Glycerol + FFA</text>
+  <text class="sub" x="356" y="250">constitutive, not hormonally regulated</text>
+
+  <rect class="bk" x="336" y="288" width="524" height="80" rx="7"/>
+  <text class="lab" x="356" y="312">Signals</text>
+  <text class="sub" x="356" y="334">Up: epinephrine and norepinephrine on beta-adrenergic receptors, glucagon, ACTH, cortisol, growth hormone, thyroid hormone</text>
+  <text class="sub" x="356" y="356">Down: insulin, through phosphodiesterase activation and protein phosphatase, and adenosine through A1 receptors</text>
+
+  <text class="sub" x="20" y="400">Products per triacylglycerol: three free fatty acids and one glycerol. They leave the cell by different routes and have different fates.</text>
+</svg>

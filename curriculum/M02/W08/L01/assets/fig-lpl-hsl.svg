@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 400" width="860" height="400" role="img"
+     aria-label="Comparison of lipoprotein lipase and hormone-sensitive lipase: location, substrate, activator and the opposite direction of insulin control">
+  <style>
+    .ttl { font:700 14px sans-serif; fill:#003c71; }
+    .nm { font:700 12.5px sans-serif; fill:#16191d; }
+    .sub { font:11.5px sans-serif; fill:#4a5159; }
+    .lab { font:700 11px sans-serif; fill:#8a6300; }
+    .nv { fill:#003c71; }
+    .st { font:700 12px sans-serif; fill:#fff; }
+    .bx { fill:#fff; stroke:#c6d2dd; stroke-width:1.4; }
+    .hd { fill:#eff4f8; stroke:#c6d2dd; stroke-width:1.4; }
+    .bk { fill:#fff5d6; stroke:#f2b705; stroke-width:2.2; }
+  </style>
+
+  <text class="ttl" x="20" y="26">Two lipases that both release fatty acids, controlled in opposite directions</text>
+
+  <rect class="nv" x="20" y="38" width="220" height="30"/>
+  <rect class="nv" x="240" y="38" width="300" height="30"/>
+  <rect class="nv" x="540" y="38" width="300" height="30"/>
+  <text class="st" x="36" y="58">Feature</text>
+  <text class="st" x="256" y="58">Lipoprotein lipase (LPL)</text>
+  <text class="st" x="556" y="58">Hormone-sensitive lipase (HSL)</text>
+
+  <rect class="hd" x="20" y="68" width="820" height="36"/>
+  <text class="nm" x="36" y="92">Location</text>
+  <text class="sub" x="256" y="92">capillary endothelial surface, extracellular</text>
+  <text class="sub" x="556" y="92">inside the adipocyte, at the droplet</text>
+
+  <rect class="bx" x="20" y="104" width="820" height="36"/>
+  <text class="nm" x="36" y="128">Substrate</text>
+  <text class="sub" x="256" y="128">triacylglycerol inside chylomicron and VLDL</text>
+  <text class="sub" x="556" y="128">diacylglycerol of the stored droplet</text>
+
+  <rect class="hd" x="20" y="140" width="820" height="36"/>
+  <text class="nm" x="36" y="164">Required partner</text>
+  <text class="sub" x="256" y="164">apoC-II on the particle; GPIHBP1 anchors LPL</text>
+  <text class="sub" x="556" y="164">phosphorylated perilipin; PKA</text>
+
+  <rect class="bx" x="20" y="176" width="820" height="36"/>
+  <text class="nm" x="36" y="200">Effect of insulin</text>
+  <text class="sub" x="256" y="200">raises LPL in adipose tissue: storage</text>
+  <text class="sub" x="556" y="200">inhibits HSL: no release</text>
+
+  <rect class="hd" x="20" y="212" width="820" height="36"/>
+  <text class="nm" x="36" y="236">Effect of fasting</text>
+  <text class="sub" x="256" y="236">adipose LPL falls, muscle LPL rises</text>
+  <text class="sub" x="556" y="236">HSL is phosphorylated and active</text>
+
+  <rect class="bx" x="20" y="248" width="820" height="36"/>
+  <text class="nm" x="36" y="272">Where the fatty acid goes</text>
+  <text class="sub" x="256" y="272">into the tissue whose capillary it is</text>
+  <text class="sub" x="556" y="272">out of the cell into the blood</text>
+
+  <rect class="bk" x="20" y="296" width="400" height="86" rx="7"/>
+  <text class="lab" x="38" y="320">Tissue-specific Km of LPL</text>
+  <text class="sub" x="38" y="342">Adipose LPL has a high Km, so it works only when</text>
+  <text class="sub" x="38" y="360">triacylglycerol is abundant after a meal. Cardiac and</text>
+  <text class="sub" x="38" y="376">muscle LPL has a low Km and keeps working in fasting.</text>
+
+  <rect class="bk" x="440" y="296" width="400" height="86" rx="7"/>
+  <text class="lab" x="458" y="320">Why both are needed</text>
+  <text class="sub" x="458" y="342">LPL opens the particle from outside so that the tissue</text>
+  <text class="sub" x="458" y="360">can take the fatty acid up. HSL opens the store from</text>
+  <text class="sub" x="458" y="376">inside so that the fatty acid can leave the cell.</text>
+</svg>

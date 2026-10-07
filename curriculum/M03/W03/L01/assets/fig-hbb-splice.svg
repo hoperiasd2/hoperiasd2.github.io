@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 400" width="860" height="400" role="img"
+     aria-label="Splicing mutations in the human HBB gene: destroyed donor site, weakened donor site, new cryptic acceptor site and a silent exonic change that creates a cryptic donor">
+  <style>
+    .ex { fill:#003c71; stroke:#16191d; stroke-width:1.2; }
+    .ln { stroke:#16191d; stroke-width:1.6; fill:none; }
+    .bad { stroke:#8a6300; stroke-width:1.8; fill:none; stroke-dasharray:5 3; }
+    .ttl { font:700 14px sans-serif; fill:#003c71; }
+    .nm { font:700 12px sans-serif; fill:#003c71; }
+    .sub { font:11px sans-serif; fill:#4a5159; }
+    .el { font:700 11px sans-serif; fill:#ffffff; }
+    .mk { fill:none; stroke:#f2b705; stroke-width:3; }
+    .ret { fill:#f2b705; stroke:#16191d; stroke-width:1.2; }
+    .out { font:700 11px sans-serif; fill:#8a6300; }
+  </style>
+  <text class="ttl" x="20" y="24">HBB splicing mutations and the transcripts they produce</text>
+
+  <text class="nm" x="20" y="58">Normal HBB</text>
+  <rect class="ex" x="150" y="46" width="70" height="20"/><text class="el" x="176" y="61">Ex1</text>
+  <rect class="ex" x="360" y="46" width="90" height="20"/><text class="el" x="394" y="61">Ex2</text>
+  <rect class="ex" x="650" y="46" width="90" height="20"/><text class="el" x="684" y="61">Ex3</text>
+  <path class="ln" d="M220 56 L360 56 M450 56 L650 56"/>
+  <text class="sub" x="262" y="42">IVS1 (130 nt)</text>
+  <text class="sub" x="510" y="42">IVS2 (850 nt)</text>
+  <text class="out" x="762" y="61">full beta-globin</text>
+
+  <text class="nm" x="20" y="124">IVS1-1 G to A</text>
+  <text class="sub" x="20" y="140">donor GU destroyed</text>
+  <rect class="ex" x="150" y="112" width="70" height="20"/><text class="el" x="176" y="127">Ex1</text>
+  <rect class="ex" x="360" y="112" width="90" height="20"/><text class="el" x="394" y="127">Ex2</text>
+  <rect class="ex" x="650" y="112" width="90" height="20"/><text class="el" x="684" y="127">Ex3</text>
+  <circle class="mk" cx="226" cy="122" r="12"/>
+  <path class="bad" d="M238 122 L360 122"/>
+  <path class="ln" d="M450 122 L650 122"/>
+  <text class="out" x="762" y="122">beta-zero: no normal mRNA</text>
+  <text class="out" x="762" y="138">cryptic sites only</text>
+
+  <text class="nm" x="20" y="190">IVS1-5 G to C</text>
+  <text class="sub" x="20" y="206">donor weakened</text>
+  <rect class="ex" x="150" y="178" width="70" height="20"/><text class="el" x="176" y="193">Ex1</text>
+  <rect class="ex" x="360" y="178" width="90" height="20"/><text class="el" x="394" y="193">Ex2</text>
+  <rect class="ex" x="650" y="178" width="90" height="20"/><text class="el" x="684" y="193">Ex3</text>
+  <circle class="mk" cx="234" cy="188" r="12"/>
+  <path class="ln" d="M246 188 L360 188 M450 188 L650 188"/>
+  <text class="out" x="762" y="188">beta-plus: reduced</text>
+  <text class="out" x="762" y="204">normal splicing</text>
+
+  <text class="nm" x="20" y="256">IVS1-110 G to A</text>
+  <text class="sub" x="20" y="272">new 3' splice site</text>
+  <rect class="ex" x="150" y="244" width="70" height="20"/><text class="el" x="176" y="259">Ex1</text>
+  <rect class="ret" x="341" y="244" width="19" height="20"/>
+  <rect class="ex" x="360" y="244" width="90" height="20"/><text class="el" x="394" y="259">Ex2</text>
+  <rect class="ex" x="650" y="244" width="90" height="20"/><text class="el" x="684" y="259">Ex3</text>
+  <circle class="mk" cx="341" cy="254" r="12"/>
+  <path class="ln" d="M220 254 L341 254 M450 254 L650 254"/>
+  <text class="out" x="762" y="254">90% keep 19 intron nt</text>
+  <text class="out" x="762" y="270">frameshift, severe beta-plus</text>
+
+  <text class="nm" x="20" y="322">Codon 24 GGT to GGA</text>
+  <text class="sub" x="20" y="338">silent, cryptic donor in exon 1</text>
+  <rect class="ex" x="150" y="310" width="70" height="20"/><text class="el" x="176" y="325">Ex1</text>
+  <rect class="ex" x="360" y="310" width="90" height="20"/><text class="el" x="394" y="325">Ex2</text>
+  <rect class="ex" x="650" y="310" width="90" height="20"/><text class="el" x="684" y="325">Ex3</text>
+  <circle class="mk" cx="200" cy="320" r="12"/>
+  <path class="bad" d="M200 334 L200 346 L360 346 L360 332"/>
+  <path class="ln" d="M220 320 L360 320 M450 320 L650 320"/>
+  <text class="out" x="762" y="320">same amino acid,</text>
+  <text class="out" x="762" y="336">aberrant transcript</text>
+
+  <text class="sub" x="20" y="384">Yellow circle marks the changed nucleotide; dashed line marks a splicing event that is lost or newly created.</text>
+</svg>

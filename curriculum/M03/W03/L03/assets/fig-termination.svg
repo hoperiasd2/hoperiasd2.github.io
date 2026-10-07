@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 380" width="860" height="380" role="img"
+     aria-label="Termination of translation by release factors reading the stop codon, hydrolysis of the peptidyl-tRNA ester bond, and recycling of the subunits, together with polysome formation">
+  <style>
+    .ttl { font:700 14px sans-serif; fill:#003c71; }
+    .nm { font:700 13px sans-serif; fill:#003c71; }
+    .sub { font:11px sans-serif; fill:#4a5159; }
+    .rib { fill:#e8eef4; stroke:#003c71; stroke-width:1.4; }
+    .mrna { stroke:#16191d; stroke-width:2.2; fill:none; }
+    .trna { stroke:#16191d; stroke-width:4.5; fill:none; stroke-linecap:round; }
+    .aa { fill:#ffffff; stroke:#16191d; stroke-width:1.2; }
+    .rf { fill:#f2b705; stroke:#16191d; stroke-width:1.2; }
+    .rfl { font:700 12px sans-serif; fill:#16191d; }
+    .cod { font:700 12px monospace; fill:#16191d; }
+    .box { fill:#fff5d6; stroke:#c6d2dd; stroke-width:1; }
+  </style>
+  <defs>
+    <marker id="t1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#003c71"/>
+    </marker>
+  </defs>
+  <text class="ttl" x="20" y="26">A. Termination and recycling</text>
+  <rect class="rib" x="120" y="48" width="280" height="80" rx="12"/>
+  <path class="mrna" d="M100 118 L420 118"/>
+  <text class="cod" x="296" y="138">UAA</text>
+  <path class="trna" d="M240 114 L240 70"/>
+  <circle class="aa" cx="240" cy="60" r="9"/><circle class="aa" cx="222" cy="50" r="9"/><circle class="aa" cx="204" cy="42" r="9"/>
+  <ellipse class="rf" cx="316" cy="92" rx="38" ry="16"/>
+  <text class="rfl" x="300" y="97">RF</text>
+  <text class="sub" x="440" y="64">Bacteria: RF1 reads UAA and UAG,</text>
+  <text class="sub" x="440" y="82">RF2 reads UAA and UGA, RF3 is a GTPase</text>
+  <text class="sub" x="440" y="100">Eukaryotes: eRF1 reads all three, with eRF3</text>
+  <text class="sub" x="440" y="124">The release factor enters the A site in place of a tRNA</text>
+  <text class="sub" x="440" y="142">and makes the peptidyl transferase centre use water.</text>
+
+  <path class="mrna" d="M260 150 L260 176" marker-end="url(#t1)" stroke="#003c71"/>
+  <text class="nm" x="60" y="196">Products</text>
+  <rect class="rib" x="120" y="186" width="130" height="40" rx="10"/>
+  <text class="sub" x="134" y="211">large subunit</text>
+  <rect class="rib" x="266" y="186" width="130" height="40" rx="10"/>
+  <text class="sub" x="282" y="211">small subunit</text>
+  <path class="mrna" d="M420 206 L470 206"/>
+  <circle class="aa" cx="500" cy="206" r="9"/><circle class="aa" cx="520" cy="198" r="9"/><circle class="aa" cx="540" cy="208" r="9"/><circle class="aa" cx="560" cy="198" r="9"/>
+  <text class="sub" x="584" y="210">free polypeptide, N-terminus first</text>
+  <text class="sub" x="134" y="246">Bacteria recycle with RRF and EF-G; eukaryotes use ABCE1. mRNA and tRNA are released and reused.</text>
+
+  <text class="ttl" x="20" y="288">B. Polysome: many ribosomes translate one mRNA at once</text>
+  <path class="mrna" d="M60 338 L800 338"/>
+  <text class="cod" x="36" y="342">5'</text><text class="cod" x="808" y="342">3'</text>
+  <g>
+    <rect class="rib" x="120" y="318" width="70" height="30" rx="8"/>
+    <rect class="rib" x="250" y="318" width="70" height="30" rx="8"/>
+    <rect class="rib" x="380" y="318" width="70" height="30" rx="8"/>
+    <rect class="rib" x="510" y="318" width="70" height="30" rx="8"/>
+    <rect class="rib" x="640" y="318" width="70" height="30" rx="8"/>
+  </g>
+  <circle class="aa" cx="286" cy="304" r="7"/>
+  <circle class="aa" cx="416" cy="304" r="7"/><circle class="aa" cx="402" cy="294" r="7"/>
+  <circle class="aa" cx="546" cy="304" r="7"/><circle class="aa" cx="532" cy="294" r="7"/><circle class="aa" cx="518" cy="286" r="7"/>
+  <circle class="aa" cx="676" cy="304" r="7"/><circle class="aa" cx="662" cy="294" r="7"/><circle class="aa" cx="648" cy="286" r="7"/><circle class="aa" cx="634" cy="280" r="7"/>
+  <text class="sub" x="60" y="372">In bacteria transcription and translation are coupled, so ribosomes load onto an mRNA that is still being made.</text>
+</svg>
