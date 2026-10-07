@@ -122,6 +122,8 @@ def parse_source(path):
 
     for ln in body.split("\n"):
         m = re.match(r"^@(\w+)\s*(.*)$", ln)
+        if m and m.group(1) == "fig":
+            m = None          # @fig는 절 안의 블록이므로 상위 태그로 보지 않는다
         if m:
             close()
             tag, rest = m.group(1), m.group(2).strip()
@@ -514,7 +516,7 @@ class Deck:
         pages, cur, load = [], [], 0
         for lvl, t in norm:
             c = len(plain(t))
-            if cur and (load + c > 640 or len(cur) >= 8):
+            if cur and (load + c > 760 or len(cur) >= 9):
                 pages.append(cur)
                 cur, load = [], 0
             cur.append((lvl, t))
@@ -526,7 +528,7 @@ class Deck:
             s = self._base(ttl, kicker)
             tf = textbox(s, Inches(0.7), Inches(1.4), Inches(11.9), Inches(5.5))
             dens = sum(len(plain(t)) for _, t in pg)
-            fs = 20 if dens < 240 else (18 if dens < 420 else (16 if dens < 560 else 15))
+            fs = 20 if dens < 240 else (18 if dens < 420 else (16 if dens < 600 else 14))
             for j, (lvl, t) in enumerate(pg):
                 p = tf.paragraphs[0] if j == 0 else tf.add_paragraph()
                 p.space_after = Pt(9 if lvl == 0 else 5)

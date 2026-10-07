@@ -1,4 +1,65 @@
 {
   "lesson_id": "M02-W09-L02",
-  "figures": []
+  "figures": [
+    {
+      "figure_id": "fig-chol-structure",
+      "lesson_id": "M02-W09-L02",
+      "html_anchor": "#fig-chol-structure",
+      "caption": "Cholesterol의 구조. 고리 A~D가 steroid nucleus를 이루고, C3의 hydroxyl기, C5=C6 이중결합, C17의 side chain이 분자의 성질을 결정한다.",
+      "asset_path": "assets/fig-chol-structure.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-chol-synthesis",
+      "lesson_id": "M02-W09-L02",
+      "html_anchor": "#fig-chol-synthesis",
+      "caption": "Cholesterol 생합성의 네 단계. 탄소 수가 C2에서 C6, C5 단위, C15, C30을 거쳐 C27로 바뀐다. 2단계의 HMG-CoA reductase가 rate-limiting step이고, 3단계의 farnesyl-PP에서 CoQ10·dolichol·prenyl기로 가지가 갈라진다.",
+      "asset_path": "assets/fig-chol-synthesis.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-ldl-receptor",
+      "lesson_id": "M02-W09-L02",
+      "html_anchor": "#fig-ldl-receptor",
+      "caption": "LDL receptor 경로. 결합에서 endocytosis, endosome에서의 분리, 수용체 재순환, lysosome 분해까지의 순환과 유리 cholesterol이 일으키는 세 가지 되먹임을 보인다. PCSK9는 수용체를 분해로 돌려 재순환을 막는다.",
+      "asset_path": "assets/fig-ldl-receptor.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-enterohepatic",
+      "lesson_id": "M02-W09-L02",
+      "html_anchor": "#fig-enterohepatic",
+      "caption": "담즙산의 장간 순환. 간에서 합성·접합된 담즙산이 담즙으로 분비되어 지방 소화를 돕고 회장 말단에서 재흡수되어 돌아온다. 하루 손실분만 새로 합성된다.",
+      "asset_path": "assets/fig-enterohepatic.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-steroidogenesis",
+      "lesson_id": "M02-W09-L02",
+      "html_anchor": "#fig-steroidogenesis",
+      "caption": "Steroid 호르몬의 합성. StAR에 의한 미토콘드리아 내막으로의 이동이 rate-limiting step이고, CYP11A1이 만든 pregnenolone에서 다섯 계열이 갈라진다.",
+      "asset_path": "assets/fig-steroidogenesis.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    }
+  ]
 }
