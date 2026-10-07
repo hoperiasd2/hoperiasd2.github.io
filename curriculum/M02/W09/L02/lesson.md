@@ -36,7 +36,7 @@ Cholesterol은 동물 조직에 들어 있는 대표적인 **steroid alcohol**�
 
 @fig fig-chol-structure Cholesterol의 구조. 고리 A~D가 steroid nucleus를 이루고, C3의 hydroxyl기, C5=C6 이중결합, C17의 side chain이 분자의 성질을 결정한다.
 
-이 구조에서 성질이 나온다. 분자의 대부분은 탄화수소(C와 H로만 이루어진 부분)여서 물과 섞이지 않는다. 그런데 C3의 -OH 하나만은 물과 친하다. 이렇게 한 분자 안에 물과 친한 부분과 친하지 않은 부분이 함께 있는 것을 **amphipathic**(양친매성)이라고 한다.
+이 구조에서 성질이 나온다. 분자의 대부분은 탄화수소(C와 H로만 이루어진 부분)여서 물과 섞이지 않는다. 그런데 C3의 -OH 하나만은 물과 친하다. 이렇게 한 분자 안에 물과 친한 부분과 친하지 않은 부분이 함께 있는 것을 **amphipathic**이라고 한다.
 
 그래서 cholesterol이 세포막에 끼어들 때 방향이 정해진다. -OH는 막 표면의 인지질 머리 쪽을 향하고, 고리와 곁사슬은 막 안쪽의 지방산 꼬리 사이에 자리 잡는다.
 
@@ -46,7 +46,7 @@ Cholesterol은 동물 조직에 들어 있는 대표적인 **steroid alcohol**�
 - **다른 분자의 전구체**: 담즙산, 다섯 계열의 steroid 호르몬, vitamin D가 모두 cholesterol에서 만들어진다. 이 장의 뒷부분이 그 각각이다.
 - **lipid raft의 구성**: sphingolipid와 함께 막의 특정 구역에 모여, 신호를 전달하는 단백질이 자리 잡는 발판을 만든다.
 
-**저장하거나 운반할 때는 모양을 바꾼다.** C3의 -OH에 지방산을 붙이면 **cholesteryl ester**가 된다. 에스터 결합이란 alcohol의 -OH와 carboxylic acid의 -COOH가 물 한 분자를 잃으면서 연결되는 결합이다. 이렇게 되면 유일하게 물과 친했던 -OH가 가려지므로 분자 전체가 거의 완전히 소수성이 된다. 그만큼 더 빽빽하게 쌓을 수 있어, 세포 안의 지질방울이나 lipoprotein 입자의 중심부에 저장 형태로 들어간다.
+**저장하거나 운반할 때는 모양을 바꾼다.** C3의 -OH에 지방산을 붙이면 **cholesteryl ester**가 된다. 에스터 결합이란 alcohol의 -OH와 carboxylic acid의 -COOH가 물 한 분자를 잃으면서 연결되는 결합이다. 이렇게 되면 유일하게 물과 친했던 -OH가 가려지므로 분자 전체가 거의 완전히 소수성이 된다. 그만큼 더 빽빽하게 쌓을 수 있어, 세포 안의 lipid droplet이나 lipoprotein 입자의 중심부에 저장 형태로 들어간다.
 
 에스터를 만드는 효소는 있는 장소에 따라 다르다.
 
@@ -57,7 +57,7 @@ Cholesterol은 동물 조직에 들어 있는 대표적인 **steroid alcohol**�
 |---|---|---|
 | C3 위치 | -OH가 드러나 있다 | 지방산이 에스터 결합으로 붙어 있다 |
 | 성질 | amphipathic | 거의 완전한 소수성 |
-| 있는 곳 | 세포막, lipoprotein 표면 | 세포질 지질방울, lipoprotein 중심 |
+| 있는 곳 | 세포막, lipoprotein 표면 | 세포질 lipid droplet, lipoprotein 중심 |
 | 만드는 효소 | — | 세포 안 ACAT, 혈장 LCAT |
 
 **양적 관계**도 알아둔다. 성인 몸 전체의 cholesterol은 약 140 g이다. 공급은 두 곳에서 온다. 식사로 하루 약 300~500 mg을 먹고, 몸에서 하루 약 700~900 mg을 새로 만든다. 즉 **먹는 것보다 만드는 것이 더 많다.** 식물성 식품에는 cholesterol이 없고 대신 sitosterol 같은 식물 sterol이 들어 있는데, 사람은 이것을 거의 흡수하지 않는다.
@@ -67,7 +67,7 @@ Cholesterol은 동물 조직에 들어 있는 대표적인 **steroid alcohol**�
 
 Acetyl-CoA는 탄소 두 개짜리 acetyl기가 coenzyme A에 붙어 있는 화합물로, 포도당·지방산·일부 아미노산이 분해될 때 공통으로 생기는 중간체다. 즉 cholesterol은 우리가 먹은 거의 모든 영양소에서 만들어질 수 있다.
 
-합성이 일어나는 곳은 간에서 가장 활발하지만 장, 부신피질, 생식샘을 비롯해 거의 모든 조직에서 일어난다. 효소는 세포질과 **활면소포체(smooth endoplasmic reticulum)** 막에 있다.
+합성이 일어나는 곳은 간에서 가장 활발하지만 장, 부신피질, 생식샘을 비롯해 거의 모든 조직에서 일어난다. 효소는 세포질과 **smooth endoplasmic reticulum(smooth ER)** 막에 있다.
 
 이 경로는 분자를 **만드는** 과정이므로 환원력이 많이 든다. 그 환원력은 **NADPH**가 공급하며, NADPH는 주로 pentose phosphate pathway에서 나온다. 에너지로는 ATP도 소비된다.
 
@@ -77,14 +77,14 @@ Acetyl-CoA는 탄소 두 개짜리 acetyl기가 coenzyme A에 붙어 있는 화�
 |---|---|---|---|
 | 1 | Acetyl-CoA(C2) ×3 → **HMG-CoA**(C6) | Thiolase, HMG-CoA synthase | **세포질**에서 일어난다 |
 | 2 | HMG-CoA → **Mevalonate**(C6) | **HMG-CoA reductase** | NADPH 2분자 소비, **rate-limiting step · 비가역** |
-| 3 | Mevalonate → **Isoprene 단위**(C5) → farnesyl pyrophosphate(C15) | Kinase 3종, isomerase, prenyltransferase | ATP 3분자 소비, 탈탄산 |
+| 3 | Mevalonate → **Isoprene 단위**(C5) → farnesyl pyrophosphate(C15) | Kinase 3종, isomerase, prenyltransferase | ATP 3분자 소비, decarboxylation |
 | 4 | Farnesyl-PP ×2 → **Squalene**(C30) → lanosterol(C30) → **Cholesterol**(C27) | Squalene synthase, squalene monooxygenase, cyclase 외 약 19단계 | 탄소 3개가 떨어져 나간다 |
 
 **1단계**에서 주의할 점이 있다. HMG-CoA는 케톤체 합성에도 쓰이는 중간체인데, 두 경로는 **세포 내 위치로 구분된다.** Cholesterol 합성용 HMG-CoA는 세포질의 HMG-CoA synthase가 만들고, 케톤체 합성용은 간 미토콘드리아 기질의 동위효소가 만든다. 같은 분자이지만 서로 다른 구획에 있어 섞이지 않는다.
 
 **2단계**가 경로 전체의 중심이다. HMG-CoA reductase는 소포체 막을 여러 번 관통하는 막단백이며, 활성 부위는 세포질 쪽을 향한다. HMG-CoA의 thioester를 환원해 1차 alcohol인 mevalonate를 만들고 이 과정에서 NADPH 2분자를 쓴다. **생리적 조건에서 비가역이고, 이 지점을 지나면 경로를 되돌릴 수 없다.** 그래서 조절이 여기에 집중된다.
 
-**3단계**에서 C6의 mevalonate가 ATP 세 분자를 써서 인산화된 뒤 탈탄산되어 **C5의 isoprene 단위**가 된다. 이것들이 머리-꼬리로 이어 붙어 C10(geranyl-PP), C15(farnesyl-PP)로 자란다.
+**3단계**에서 C6의 mevalonate가 ATP 세 분자를 써서 인산화된 뒤 decarboxylation을 거쳐 **C5의 isoprene 단위**가 된다. 이것들이 머리-꼬리로 이어 붙어 C10(geranyl-PP), C15(farnesyl-PP)로 자란다.
 
 **4단계**에서 farnesyl-PP 두 분자가 꼬리-꼬리로 결합해 C30의 squalene이 되고, 산소와 NADPH를 써서 epoxide가 된 뒤 고리화되어 lanosterol이 된다. 여기서 약 19단계를 더 거치며 탄소 세 개가 떨어져 나가 C27의 cholesterol이 완성된다.
 
@@ -138,11 +138,11 @@ Cholesterol은 물에 녹지 않으므로 혈액에서는 반드시 **lipoprotei
 
 LDL은 **간에서 말초로** cholesterol을 보내는 입자이고, HDL은 **말초에서 간으로** 되돌리는 입자다.
 
-**LDL receptor를 통한 흡수는 수용체 매개 세포내섭취(receptor-mediated endocytosis)의 교과서적 사례다.** 순서는 다음과 같다.
+**LDL receptor를 통한 흡수는 receptor-mediated endocytosis의 교과서적 사례다.** 순서는 다음과 같다.
 
 1. 세포막의 **clathrin coated pit**에 LDL receptor가 모여 있다.
 2. 수용체가 LDL 입자의 **apoB-100**을 인식해 결합한다(IDL의 apoE도 인식한다).
-3. 피막소포가 떨어져 나와 세포 안으로 들어가고 clathrin이 벗겨진다.
+3. coated vesicle이 떨어져 나와 세포 안으로 들어가고 clathrin이 벗겨진다.
 4. **endosome**에서 pH가 낮아지면 수용체와 LDL이 분리된다. 수용체는 세포막으로 **재순환**하고(한 수용체가 수백 회 재사용된다), LDL은 **lysosome**으로 간다.
 5. Lysosome에서 apoB-100은 아미노산으로 분해되고, cholesteryl ester는 **lysosomal acid lipase**에 의해 유리 cholesterol과 지방산으로 가수분해된다.
 
@@ -161,14 +161,14 @@ LDL은 **간에서 말초로** cholesterol을 보내는 입자이고, HDL은 **�
 @sec 5. 담즙산의 합성, 접합과 장간 순환
 사람은 cholesterol의 고리 구조를 열어 CO₂와 물로 분해하는 효소를 가지고 있지 않다. 따라서 과잉 cholesterol은 **분해되는 것이 아니라 배출된다.** 정량적으로 가장 중요한 배출 경로가 담즙산으로의 전환이다.
 
-**합성** 담즙산은 간에서만 만들어진다. 첫 반응이자 rate-limiting step은 **CYP7A1**(cholesterol 7α-hydroxylase)이 cholesterol의 C7에 수산기를 붙이는 것이다. 이후 고리의 추가 수산화, 이중결합 환원, 곁사슬 단축을 거쳐 탄소 24개의 **1차 담즙산** 두 가지가 만들어진다.
+**합성** 담즙산은 간에서만 만들어진다. 첫 반응이자 rate-limiting step은 **CYP7A1**(cholesterol 7α-hydroxylase)이 cholesterol의 C7에 hydroxyl기를 붙이는 것이다. 이후 고리의 추가 hydroxylation, 이중결합 환원, 곁사슬 단축을 거쳐 탄소 24개의 **1차 담즙산** 두 가지가 만들어진다.
 
-- **Cholic acid** — 수산기 3개(C3, C7, C12)
-- **Chenodeoxycholic acid** — 수산기 2개(C3, C7)
+- **Cholic acid** — hydroxyl기 3개(C3, C7, C12)
+- **Chenodeoxycholic acid** — hydroxyl기 2개(C3, C7)
 
-**접합** 만들어진 담즙산은 그대로 쓰이지 않는다. 곁사슬의 carboxyl기에 **glycine** 또는 **taurine**이 아미드 결합으로 붙는다. 접합의 의미는 pKa를 낮추는 데 있다. 접합되지 않은 담즙산의 pKa는 약 6이어서 소장의 pH에서 상당 부분이 비이온형으로 존재하지만, 접합하면 pKa가 1~4로 떨어져 **거의 완전히 이온화된 염(bile salt)** 형태가 된다. 이온화된 분자는 계면활성 능력이 크고 막을 그냥 통과하지 못하므로 장 내강에 머물며 지방을 유화할 수 있다.
+**접합** 만들어진 담즙산은 그대로 쓰이지 않는다. 곁사슬의 carboxyl기에 **glycine** 또는 **taurine**이 아미드 결합으로 붙는다. 접합의 의미는 pKa를 낮추는 데 있다. 접합되지 않은 담즙산의 pKa는 약 6이어서 소장의 pH에서 상당 부분이 비이온형으로 존재하지만, 접합하면 pKa가 1~4로 떨어져 **거의 완전히 이온화된 염(bile salt)** 형태가 된다. 이온화된 분자는 계면활성 능력이 크고 막을 그냥 통과하지 못하므로 장 내강에 머물며 지방을 emulsification할 수 있다.
 
-**2차 담즙산** 회장과 대장의 세균이 접합을 떼어내고(deconjugation) C7의 수산기를 제거하면(7α-dehydroxylation) **2차 담즙산**이 된다. Cholic acid에서 **deoxycholic acid**가, chenodeoxycholic acid에서 **lithocholic acid**가 생긴다.
+**2차 담즙산** 회장과 대장의 세균이 접합을 떼어내고(deconjugation) C7의 hydroxyl기를 제거하면(7α-dehydroxylation) **2차 담즙산**이 된다. Cholic acid에서 **deoxycholic acid**가, chenodeoxycholic acid에서 **lithocholic acid**가 생긴다.
 
 **장간 순환(enterohepatic circulation)** 담즙산은 담낭에서 십이지장으로 분비되어 지방 소화를 돕고, 회장 말단에서 수송체 **ASBT**를 통해 능동적으로 재흡수되어 문맥을 거쳐 간으로 돌아온다. 전체 담즙산 풀은 약 3 g이고 하루 6~10회 순환하므로 하루에 장으로 분비되는 총량은 20~30 g에 이르지만, **대변으로 빠져나가는 양은 하루 0.2~0.6 g에 그친다.** 간은 잃은 만큼만 새로 합성해 풀을 유지한다.
 
@@ -192,12 +192,12 @@ Cholesterol은 다섯 계열의 steroid 호르몬의 공통 전구체다. 합성
 | 계열 | 탄소 수 | 대표 호르몬 | 생성 조직 |
 |---|---|---|---|
 | Progestagen | C21 | Progesterone | 난소, 태반 |
-| Mineralocorticoid | C21 | Aldosterone | 부신피질 사구대 |
-| Glucocorticoid | C21 | Cortisol | 부신피질 속상대 |
-| Androgen | C19 | Testosterone | 정소, 부신피질 망상대 |
+| Mineralocorticoid | C21 | Aldosterone | 부신피질 zona glomerulosa |
+| Glucocorticoid | C21 | Cortisol | 부신피질 zona fasciculata |
+| Androgen | C19 | Testosterone | 정소, 부신피질 zona reticularis |
 | Estrogen | C18 | Estradiol | 난소 |
 
-부신피질은 세 층으로 나뉘고 각 층이 서로 다른 효소를 발현해 다른 산물을 만든다. 바깥에서부터 **사구대**(aldosterone), **속상대**(cortisol), **망상대**(androgen 전구체) 순이다.
+부신피질은 세 층으로 나뉘고 각 층이 서로 다른 효소를 발현해 다른 산물을 만든다. 바깥에서부터 **zona glomerulosa**(aldosterone), **zona fasciculata**(cortisol), **zona reticularis**(androgen 전구체) 순이다.
 
 > **임상 연계** **선천성 부신과형성(congenital adrenal hyperplasia)**의 90~95%는 **21-hydroxylase(CYP21A2)** 결손이다. 이 효소는 cortisol과 aldosterone 합성 경로에 모두 필요하므로 두 호르몬이 부족해진다. Cortisol이 부족하면 ACTH 억제가 풀려 부신이 계속 자극받고, 막힌 지점 위쪽의 전구체인 **17-hydroxyprogesterone**이 크게 축적된다. 축적된 전구체는 막히지 않은 androgen 경로로 흘러 androgen이 과다 생성되고, 그 결과 46,XX 여아에서 외성기 남성화가 나타난다. **즉 증상은 결핍(cortisol·aldosterone)과 축적·우회(androgen)가 함께 만든 결과다.** 신생아 선별검사에서 17-hydroxyprogesterone을 측정하는 근거가 여기에 있다.
 
@@ -206,10 +206,10 @@ Vitamin D도 cholesterol 대사의 산물이다. 엄밀히 말하면 비타민�
 
 출발 물질은 cholesterol 합성 경로의 마지막 직전 중간체인 **7-dehydrocholesterol**이다. 피부에서 이 분자가 **자외선(UVB)**을 받으면 B 고리가 열려 **cholecalciferol(vitamin D₃)**이 된다. 식사로 섭취하는 vitamin D₂(ergocalciferol, 식물·효모 유래)와 D₃도 같은 경로로 합류한다.
 
-활성화는 두 번의 수산화로 완성되며, 두 기관이 나누어 맡는다.
+활성화는 두 번의 hydroxylation으로 완성되며, 두 기관이 나누어 맡는다.
 
-1. **간**에서 C25가 수산화되어 **25-hydroxycholecalciferol(25-OH-D)**이 된다. 혈중 농도가 가장 높고 반감기가 길어 **vitamin D 영양 상태를 평가하는 검사 지표**로 쓰인다.
-2. **신장**에서 **1α-hydroxylase(CYP27B1)**가 C1을 수산화해 **1,25-dihydroxycholecalciferol(calcitriol)**을 만든다. 이것이 활성형이다. 이 효소는 **PTH와 저인산혈증에 의해 활성화**되고 FGF23에 의해 억제되므로, 활성형 생성량은 칼슘·인 요구에 따라 조절된다.
+1. **간**에서 C25가 hydroxylation되어 **25-hydroxycholecalciferol(25-OH-D)**이 된다. 혈중 농도가 가장 높고 반감기가 길어 **vitamin D 영양 상태를 평가하는 검사 지표**로 쓰인다.
+2. **신장**에서 **1α-hydroxylase(CYP27B1)**가 C1을 hydroxylation해 **1,25-dihydroxycholecalciferol(calcitriol)**을 만든다. 이것이 활성형이다. 이 효소는 **PTH와 저인산혈증에 의해 활성화**되고 FGF23에 의해 억제되므로, 활성형 생성량은 칼슘·인 요구에 따라 조절된다.
 
 Calcitriol은 핵수용체에 결합해 작용한다. 소장에서 칼슘과 인의 흡수를 늘리고, 뼈에서 재형성을 조절하며, 신장에서 칼슘 재흡수를 늘린다.
 
@@ -248,13 +248,13 @@ Q: 케톤체 합성과 cholesterol 합성은 둘 다 HMG-CoA를 중간체로 쓴
 A: 세포 내 위치가 다르기 때문이다. Cholesterol 합성용 HMG-CoA는 세포질의 HMG-CoA synthase가 만들고 세포질과 소포체에서 처리되며, 케톤체 합성용 HMG-CoA는 간 미토콘드리아 기질의 동위효소가 만들고 거기서 HMG-CoA lyase에 의해 acetoacetate로 분해된다. 같은 화합물이라도 서로 다른 구획에 존재하므로 각 경로의 효소만 접근할 수 있다. 구획화가 대사 경로를 분리하는 대표적인 예다.
 
 Q: 담즙산이 glycine이나 taurine과 접합되는 과정의 생화학적 의미를 설명하라.
-A: 접합은 담즙산의 pKa를 낮춘다. 접합되지 않은 담즙산의 pKa는 약 6이어서 소장의 pH에서 상당 부분이 비이온형으로 존재하지만, 접합하면 pKa가 1~4로 떨어져 장 내강에서 거의 완전히 이온화된 염 형태가 된다. 이온화된 분자는 계면활성 능력이 커서 지방을 효과적으로 유화하고, 동시에 막을 수동확산으로 통과하지 못해 장 내강에 머문다. 그 결과 소화 작용을 끝까지 수행한 뒤 회장 말단의 능동수송체를 통해서만 재흡수된다.
+A: 접합은 담즙산의 pKa를 낮춘다. 접합되지 않은 담즙산의 pKa는 약 6이어서 소장의 pH에서 상당 부분이 비이온형으로 존재하지만, 접합하면 pKa가 1~4로 떨어져 장 내강에서 거의 완전히 이온화된 염 형태가 된다. 이온화된 분자는 계면활성 능력이 커서 지방을 효과적으로 emulsification하고, 동시에 막을 수동확산으로 통과하지 못해 장 내강에 머문다. 그 결과 소화 작용을 끝까지 수행한 뒤 회장 말단의 능동수송체를 통해서만 재흡수된다.
 
 Q: 가족성 고콜레스테롤혈증의 원인 유전자가 *LDLR*, *APOB*, *PCSK9* 세 가지인 이유를 LDL receptor 경로로 설명하라.
 A: 세 유전자가 모두 같은 경로의 서로 다른 지점에 해당하기 때문이다. *LDLR* 변이는 수용체 자체의 수나 기능을 떨어뜨린다. *APOB* 변이는 LDL 입자 표면에서 수용체가 인식하는 리간드인 apoB-100을 바꾸어 결합을 방해한다. *PCSK9*의 기능 획득 변이는 LDL receptor의 분해를 과도하게 촉진해 세포 표면의 수용체 수를 줄인다. 어느 지점이 망가지든 결과는 같다. 간의 LDL 제거가 느려져 혈중 LDL-C가 올라간다.
 
 Q: 만성 신질환 환자에서 혈중 25-hydroxyvitamin D가 정상인데도 저칼슘혈증이 생길 수 있다. 그 기전과 적절한 치료를 설명하라.
-A: Vitamin D의 활성화는 간의 25-수산화와 신장의 1α-수산화 두 단계로 이루어진다. 만성 신질환에서는 신장의 1α-hydroxylase(CYP27B1) 활성이 떨어져 25-OH-D가 정상이어도 활성형인 1,25-dihydroxyvitamin D가 부족해진다. 활성형이 부족하면 소장의 칼슘 흡수가 줄어 저칼슘혈증이 생기고, 이것이 PTH 분비를 자극해 이차성 부갑상선기능항진증으로 이어진다. 따라서 일반 vitamin D 보충으로는 교정되지 않으며 calcitriol 같은 활성형 유사체를 투여해야 한다.
+A: Vitamin D의 활성화는 간의 간의 25-hydroxylation과 신장의 1α-hydroxylation 두 단계로 이루어진다. 만성 신질환에서는 신장의 1α-hydroxylase(CYP27B1) 활성이 떨어져 25-OH-D가 정상이어도 활성형인 1,25-dihydroxyvitamin D가 부족해진다. 활성형이 부족하면 소장의 칼슘 흡수가 줄어 저칼슘혈증이 생기고, 이것이 PTH 분비를 자극해 이차성 부갑상선기능항진증으로 이어진다. 따라서 일반 vitamin D 보충으로는 교정되지 않으며 calcitriol 같은 활성형 유사체를 투여해야 한다.
 
 Q: 21-hydroxylase 결손 환자에서 cortisol과 aldosterone이 부족한 것은 효소가 막혔기 때문이다. 그런데 왜 androgen은 오히려 과다해지는가.
 A: 막힌 지점 위쪽의 전구체가 쌓이고, 그 전구체가 막히지 않은 다른 경로로 흘러가기 때문이다. 21-hydroxylase가 작동하지 않으면 기질인 17-hydroxyprogesterone이 축적된다. 동시에 cortisol이 부족해 ACTH에 대한 음성 되먹임이 풀리므로 부신이 계속 자극을 받아 전구체가 더 많이 만들어진다. 축적된 17-hydroxyprogesterone은 androgen 합성 경로로 전환되어 androstenedione과 testosterone을 과다 생성하고, 태아기 노출로 46,XX 여아에서 외성기 남성화가 나타난다.
