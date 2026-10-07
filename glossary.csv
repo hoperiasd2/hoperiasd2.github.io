@@ -1,0 +1,11 @@
+term_en,term_ko,usage,module,note
+oxidative phosphorylation,산화적 인산화,한글+영문 병기,"M01,M02",확립된 한국 의학용어
+gluconeogenesis,당신생,한글+영문 병기,M02,확립된 한국 의학용어
+glomerular filtration rate,사구체여과율,한글+영문 병기(GFR),M05,약어 GFR 사용
+HMG-CoA reductase,,영문 그대로,M02,효소명은 번역하지 않는다
+LDL receptor,,영문 그대로,"M02,M05",유전자는 *LDLR*
+SREBP-2,,영문 그대로,M02,
+nanopore sequencing,,영문 그대로,"M03,M07",
+astrocyte,,영문 그대로,"M04,M06",성상교세포 표기 혼용 금지
+microglia,,영문 그대로,"M04,M06",
+channelopathy,,영문 그대로,M04,

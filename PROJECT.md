@@ -680,7 +680,7 @@ Lippincott 1~26장을 36회로 편성한다. 장수에 비례한 균등 배분 �
 |---|---:|---|---|
 | M07-W17-L01 | 17 | 서열분석 입문: 명령행 환경, FASTQ·SAM·VCF 포맷, QC 지표 | `ngs.html`, `lecture1.pptx` |
 | M07-W18-L01 | 18 | Illumina 단편 시퀀싱 실습: base calling에서 정렬까지 | `lab1.html` |
-| M07-W19-L01 | 19 | 변이 검출과 해석: 참조 게놈 정렬, VCF 생성과 필터링 | 참조 게놈 파일 |
+| M07-W19-L01 | 19 | 변이 검출과 해석: 참조 게놈 정렬, VCF 생성과 필터링 | `GCF_000005845.2_ASM584v2_genomic.fna.gz` |
 | M07-W20-L01 | 20 | 롱리드 시퀀싱 실습: Nanopore isoform·poly(A) 길이·m6A | `lab2.html` |
 | M07-W21-L01 | 21 | Bulk RNA-seq: 정량·정규화·차등발현과 경로 해석의 한계 | — |
 | M07-W22-L01 | 22 | 단일세포 전사체 실습: QC, 차원 축소, clustering과 세포 주석 | `lab3.html` |

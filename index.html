@@ -3,199 +3,104 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>김진태 · 기초의학실습캠프</title>
-<meta name="description" content="lab1~lab3 실습 페이지와 관련 자료 파일 모음">
-<link rel="stylesheet" href="style.css">
+<title>의생명과학 교육과정</title>
+<meta name="description" content="의학생화학·세포생물학·오믹스·신경과학·계통별 기초의학과 실습을 포괄하는 교육과정">
+<link rel="stylesheet" href="assets/site.css">
 </head>
 <body>
 
 <header class="masthead">
   <div class="wrap">
-    <a href="index.html">KimjintaeHYU</a>
-    <span class="masthead__right">Hanyang Univ.</span>
+    <a class="brand" href="index.html">의생명과학 교육과정</a>
+    <nav>
+      <a href="curriculum/index.html">전체 수업</a>
+      <a href="curriculum/M07/index.html">실습</a>
+      <a href="archive/lectures/index.html">강의록 아카이브</a>
+    </nav>
   </div>
 </header>
 
-<main>
+<main class="wrap">
+<nav class="crumb" aria-label="이동 경로"><span>대문</span></nav>
 
-  <!-- ============ 커리큘럼 (3단 접힘 구조) ============ -->
-  <!--
-    트랙별 details를 열고 닫아 각 모듈을 확인합니다.
-    준비중(track__item--soon) 항목은 아직 파일이 없어 링크가 비어 있습니다.
-    자료가 준비되면 <span class="track__item-title">를 <a class="track__link" href="파일명.html">로 바꾸고
-    lab__dl 방식대로 다운로드 링크를 추가하면 됩니다.
-    이 섹션만 wrap--wide로 화면을 더 넓게 씁니다.
-  -->
-  <section class="section">
-   <div class="wrap wrap--wide">
-    <h2>커리큘럼</h2>
-
-    <nav class="track-jump" aria-label="커리큘럼 트랙 바로가기">
-      <a href="#track-a" data-jump="track-a"><b>A</b> 시퀀싱 · NGS</a>
-      <a href="#track-b" data-jump="track-b"><b>B</b> 분자생물학 기초 · 가상실습</a>
-      <a href="#track-c" data-jump="track-c"><b>C</b> 바이오인포매틱스 프로젝트</a>
-    </nav>
-
-    <p class="note callout">
-      <b>강의록 아카이브</b> — 의학생화학 · 의학분자생물학 · 신경과학 10묶음 강의록(HTML · PPT)은
-      <a href="lectures/index.html">lectures/</a>에서 볼 수 있습니다.
-    </p>
-
-    <p class="note callout">
-      <b>NGS Illumina sequencing</b> 실습만 파일을 저장한 뒤 열어서 진행하세요. 웹에서 바로 열면 파일 업로드 이후 단계가 동작하지 않습니다.
-      나머지 모듈은 웹에서 바로 진행해도 됩니다.
-    </p>
-
-    <div class="track-grid">
-
-      <!-- 트랙 A: 시퀀싱 · NGS -->
-      <details class="track" id="track-a" open>
-        <summary class="track__head">
-          <span class="track__no">A</span>
-          <span class="track__title">
-            시퀀싱 · NGS
-            <span class="track__sub">유전체학·전사체학 기초부터 실습까지</span>
-          </span>
-          <span class="track__chevron"></span>
-        </summary>
-        <ul class="track__list">
-          <li class="track__item">
-            <a class="track__link" href="lecture1.pptx" download>유전체학과 전사체학의 기초와 기원</a>
-            <a class="track__item-tag" href="lecture1.pptx" download>내려받기</a>
-          </li>
-          <li class="track__item">
-            <a class="track__link" href="lab1.html">NGS Illumina sequencing</a>
-            <a class="track__item-tag" href="lab1.html" download="lab1.html">저장</a>
-          </li>
-          <li class="track__item">
-            <a class="track__link" href="GCF_000005845.2_ASM584v2_genomic.fna.gz" download>참조 게놈 (E. coli K-12 MG1655, FASTA)</a>
-            <a class="track__item-tag" href="GCF_000005845.2_ASM584v2_genomic.fna.gz" download>내려받기</a>
-          </li>
-          <li class="track__item">
-            <a class="track__link" href="lab2.html">NGS long read sequencing</a>
-          </li>
-          <li class="track__item track__item--soon">
-            <span class="track__item-title">Bulk RNA-seq</span>
-            <span class="track__item-tag">준비중</span>
-          </li>
-          <li class="track__item">
-            <a class="track__link" href="lab3.html">Single cell sequencing</a>
-          </li>
-          <li class="track__item">
-            <a class="track__link" href="lab4.html">Spatial transcriptomics</a>
-          </li>
-        </ul>
-      </details>
-
-      <!-- 트랙 B: 분자생물학 기초 · 가상실습 -->
-      <details class="track" id="track-b">
-        <summary class="track__head">
-          <span class="track__no">B</span>
-          <span class="track__title">
-            분자생물학 기초 · 가상실습
-            <span class="track__sub">핵산 · RNA · 단백질과 가상실습공간</span>
-          </span>
-          <span class="track__chevron"></span>
-        </summary>
-        <ul class="track__list">
-          <li class="track__item">
-            <a class="track__link" href="lecture2.pptx" download>분자생물학 개론</a>
-            <a class="track__item-tag" href="lecture2.pptx" download>내려받기</a>
-          </li>
-          <li class="track__item track__item--soon">
-            <span class="track__item-title">핵산 (DNA/RNA 구조와 성질)</span>
-            <span class="track__item-tag">준비중</span>
-          </li>
-          <li class="track__item track__item--soon">
-            <span class="track__item-title">RNA (전사와 가공)</span>
-            <span class="track__item-tag">준비중</span>
-          </li>
-          <li class="track__item track__item--soon">
-            <span class="track__item-title">단백질 (번역과 구조)</span>
-            <span class="track__item-tag">준비중</span>
-          </li>
-          <li class="track__item">
-            <a class="track__link" href="hyms1.html">가상실습공간 · HYMS wet lab 1</a>
-          </li>
-          <li class="track__item">
-            <a class="track__link" href="hyms2.html">가상실습공간 · HYMS wet lab 2</a>
-          </li>
-          <li class="track__item">
-            <a class="track__link" href="hym4.html">가상실습공간 · HYMS wet lab 3</a>
-          </li>
-        </ul>
-      </details>
-
-      <!-- 트랙 C: 바이오인포매틱스 프로젝트 -->
-      <details class="track" id="track-c">
-        <summary class="track__head">
-          <span class="track__no">C</span>
-          <span class="track__title">
-            바이오인포매틱스 프로젝트
-            <span class="track__sub">실제 공개 데이터로 분석 완주하기</span>
-          </span>
-          <span class="track__chevron"></span>
-        </summary>
-        <ul class="track__list">
-          <li class="track__item track__item--soon">
-            <span class="track__item-title">RNA-seq 프로젝트 (GEO 데이터)</span>
-            <span class="track__item-tag">준비중</span>
-          </li>
-          <li class="track__item track__item--soon">
-            <span class="track__item-title">Single-cell 프로젝트 (GEO 데이터)</span>
-            <span class="track__item-tag">준비중</span>
-          </li>
-        </ul>
-      </details>
-
-    </div>
-   </div>
+  <section class="hero">
+    <p class="eyebrow">Biomedical Science Curriculum · 7 Modules · 258 Sessions</p>
+    <h1>의생명과학 교육과정</h1>
+    <p class="lede">인체생물학과 세포생물학에서 대사생화학, 오믹스와 임상중개, 신경과학, 계통별 심화,
+    최신 연구 쟁점까지 여섯 구성요소로 나누고, 이를 직접 측정하고 분석하는 실습 구성요소를 더해
+    모두 258회로 편성했다. 각 수업은 독립적으로 읽을 수 있는 HTML 문서와 편집 가능한 슬라이드로 제공된다.</p>
   </section>
 
-  <!-- ============ 파일 다운로드 ============ -->
-  <!--
-    파일은 index.html과 같은 위치(저장소 루트)에 올려두면 됩니다.
-    href 값은 실제 파일명과 대소문자까지 정확히 같아야 합니다.
-  -->
-  <section class="section">
-   <div class="wrap">
-    <h2>자료 다운로드</h2>
-    <p class="note">클릭하면 바로 저장됩니다.</p>
+  <h2>구성요소</h2>
+  <div class="grid grid--modules">
+      <a class="card" href="curriculum/M01/index.html">
+        <div class="card__no">M01</div>
+        <div class="card__title">인체일반생물학과 기초세포생물학</div>
+        <div class="card__en">Human Biology and Cell Biology</div>
+        <div class="card__meta">12주 · 주 3회 · 36회 &nbsp;·&nbsp; 제작 0/36</div>
+        <div class="bar"><i style="width:0%"></i></div>
+      </a>
+      <a class="card" href="curriculum/M02/index.html">
+        <div class="card__no">M02</div>
+        <div class="card__title">대사생화학</div>
+        <div class="card__en">Metabolic Biochemistry</div>
+        <div class="card__meta">12주 · 주 3회 · 36회 &nbsp;·&nbsp; 제작 0/36</div>
+        <div class="bar"><i style="width:0%"></i></div>
+      </a>
+      <a class="card" href="curriculum/M03/index.html">
+        <div class="card__no">M03</div>
+        <div class="card__title">의료유전체와 오믹스 + 임상중개대사학</div>
+        <div class="card__en">Medical Genomics, Omics and Translational Metabolism</div>
+        <div class="card__meta">12주 · 주 3회 · 36회 &nbsp;·&nbsp; 제작 0/36</div>
+        <div class="bar"><i style="width:0%"></i></div>
+      </a>
+      <a class="card" href="curriculum/M04/index.html">
+        <div class="card__no">M04</div>
+        <div class="card__title">기초신경과학과 신경유전/신경중개의과학특론</div>
+        <div class="card__en">Neuroscience, Neurogenetics and Translational Neuroscience</div>
+        <div class="card__meta">12주 · 주 3회 · 36회 &nbsp;·&nbsp; 제작 0/36</div>
+        <div class="bar"><i style="width:0%"></i></div>
+      </a>
+      <a class="card" href="curriculum/M05/index.html">
+        <div class="card__no">M05</div>
+        <div class="card__title">계통별기초의학심화</div>
+        <div class="card__en">Systems-Based Biomedical Science</div>
+        <div class="card__meta">12주 · 주 3회 · 36회 &nbsp;·&nbsp; 제작 0/36</div>
+        <div class="bar"><i style="width:0%"></i></div>
+      </a>
+      <a class="card" href="curriculum/M06/index.html">
+        <div class="card__no">M06</div>
+        <div class="card__title">최신의과학이슈와 생명과학·뇌과학심화</div>
+        <div class="card__en">Current Issues in Biomedical and Brain Science</div>
+        <div class="card__meta">16주 · 주 3회 · 48회 &nbsp;·&nbsp; 제작 0/48</div>
+        <div class="bar"><i style="width:0%"></i></div>
+      </a>
+      <a class="card" href="curriculum/M07/index.html">
+        <div class="card__no">M07</div>
+        <div class="card__title">기초의과학 실습</div>
+        <div class="card__en">Basic Biomedical Science Laboratory</div>
+        <div class="card__meta">30주 · 주 1회 · 30회 &nbsp;·&nbsp; 제작 0/30</div>
+        <div class="bar"><i style="width:0%"></i></div>
+      </a>
+  </div>
 
-    <ul class="files">
-      <li>
-        <a class="file" href="intro.pptx" download>
-          <span class="file__ext">PPTX</span>
-          <span class="file__name">
-            intro.pptx
-            <span class="file__desc">오리엔테이션 · 실습 개요</span>
-          </span>
-          <span class="file__dl">내려받기</span>
-        </a>
-      </li>
-    </ul>
-   </div>
-  </section>
+  <h2>자료 찾기</h2>
+  <div class="callout">
+    <b><a href="curriculum/index.html">전체 수업 인덱스</a></b> — 258개 수업을 구성요소·주차·키워드로 걸러 찾고
+    제작 상태와 슬라이드 내려받기를 한 화면에서 확인한다.
+  </div>
+  <div class="callout">
+    <b><a href="archive/lectures/index.html">강의록 아카이브</a></b> — 이전에 제작한 10묶음 123강.
+    현재 교육과정의 수업으로 편입하는 중이며 그동안 읽기 전용으로 유지한다.
+  </div>
 
 </main>
 
 <footer class="foot wrap">
   <span>© 2026 Kim Jintae · Hanyang University</span>
-  <a href="https://github.com/kimjintaehyu/kimjintaehyu.github.io">GitHub 저장소</a>
+  <a href="https://github.com/hoperiasd2/hoperiasd2.github.io">GitHub 저장소</a>
 </footer>
 
-<script>
-  document.querySelectorAll('.track-jump a').forEach(function (link) {
-    link.addEventListener('click', function () {
-      var target = document.getElementById(this.getAttribute('data-jump'));
-      if (target) target.open = true;
-    });
-  });
-  if (location.hash) {
-    var initial = document.getElementById(location.hash.slice(1));
-    if (initial && initial.tagName === 'DETAILS') initial.open = true;
-  }
-</script>
-
+<script src="assets/site.js"></script>
 </body>
 </html>

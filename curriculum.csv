@@ -245,7 +245,7 @@ M07-W15-L01,M07,기초의과학 실습,15,1,동물 실습과 조직 처리,"마�
 M07-W16-L01,M07,기초의과학 실습,16,1,동물 실습과 조직 처리,"조직 처리: 고정·포매·절편, H&E와 면역조직화학의 판독",,practicum,curriculum/M07/W16/L01/,설계,,,
 M07-W17-L01,M07,기초의과학 실습,17,1,오믹스 dry lab,"서열분석 입문: 명령행 환경, FASTQ·SAM·VCF 포맷, QC 지표","ngs.html, lecture1.pptx",practicum,curriculum/M07/W17/L01/,설계,,,
 M07-W18-L01,M07,기초의과학 실습,18,1,오믹스 dry lab,Illumina 단편 시퀀싱 실습: base calling에서 정렬까지,lab1.html,practicum,curriculum/M07/W18/L01/,설계,,,
-M07-W19-L01,M07,기초의과학 실습,19,1,오믹스 dry lab,"변이 검출과 해석: 참조 게놈 정렬, VCF 생성과 필터링",참조 게놈 파일,practicum,curriculum/M07/W19/L01/,설계,,,
+M07-W19-L01,M07,기초의과학 실습,19,1,오믹스 dry lab,"변이 검출과 해석: 참조 게놈 정렬, VCF 생성과 필터링",GCF_000005845.2_ASM584v2_genomic.fna.gz,practicum,curriculum/M07/W19/L01/,설계,,,
 M07-W20-L01,M07,기초의과학 실습,20,1,오믹스 dry lab,롱리드 시퀀싱 실습: Nanopore isoform·poly(A) 길이·m6A,lab2.html,practicum,curriculum/M07/W20/L01/,설계,,,
 M07-W21-L01,M07,기초의과학 실습,21,1,오믹스 dry lab,Bulk RNA-seq: 정량·정규화·차등발현과 경로 해석의 한계,,practicum,curriculum/M07/W21/L01/,설계,,,
 M07-W22-L01,M07,기초의과학 실습,22,1,오믹스 dry lab,"단일세포 전사체 실습: QC, 차원 축소, clustering과 세포 주석",lab3.html,practicum,curriculum/M07/W22/L01/,설계,,,
