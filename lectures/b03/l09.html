@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>B03-L09 임상화학 검사와 바이오마커 해석</title>
+<meta name="description" content="Clinical Chemistry and Biomarker Interpretation">
+<link rel="stylesheet" href="../assets/lecture.css">
+</head>
+<body>
+<header class="mast">
+  <div class="mast__in">
+    <a class="mast__home" href="../index.html">의생명 강의록 아카이브</a>
+    <a class="mast__site" href="../../index.html">KimjintaeHYU</a>
+  </div>
+</header>
+
+<main class="lec">
+  <div class="crumb"><a href="../index.html">전체</a> / <a href="index.html">B03 중개의학과 생화학</a> / 기타 임상의학과 생화학</div>
+  <header class="hero">
+    <div class="hero__code">B03-L09</div>
+    <h1>임상화학 검사와 바이오마커 해석</h1>
+    <p class="hero__en">Clinical Chemistry and Biomarker Interpretation</p>
+    <div class="hero__meta">
+      <span class="chip">기타 임상의학과 생화학</span>
+      <span class="chip">본문 5개 절</span>
+      <span class="chip">자가평가 4문항</span>
+      <a class="btn" href="ppt/b03-l09.pptx" download>PPT 내려받기</a>
+      <button class="btn btn--ghost" type="button" onclick="window.print()">인쇄 / PDF</button>
+    </div>
+  </header>
+  <div class="lec__grid">
+    <aside class="toc"><div class="toc__in"><b>목차</b><ol><li><a href="#obj">학습 목표</a></li><li><a href="#s1">1. 검사 과정과 오류</a></li><li><a href="#s2">2. 검사 성능 지표와 베이즈 추론</a></li><li><a href="#s3">3. 효소·단백 검사</a></li><li><a href="#s4">4. 신기능과 당대사 검사의 한계</a></li><li><a href="#s5">5. 종양·염증 표지자와 면역분석 간섭</a></li><li><a href="#frontier">연구 최전선</a></li><li><a href="#summary">요약</a></li><li><a href="#quiz">자가 평가</a></li><li><a href="#ref">참고 문헌</a></li></ol></div></aside>
+    <article class="doc">
+<section id="obj" class="sec"><h2>학습 목표</h2><ol class="obj"><li>검사 전·중·후 단계의 오류 원인과 품질 관리(정밀도, 정확도, 기준범위, 임계값)를 설명한다.</li><li>민감도·특이도·예측도·우도비·ROC 곡선을 이용해 검사 결과를 해석한다.</li><li>효소 검사(트로포닌, CK, 아밀라아제·리파아제, ALP 동종효소)와 단백 전기영동을 해석한다.</li><li>신기능(크레아티닌, 시스타틴 C, eGFR, 알부민뇨)·당대사(HbA1c, 포도당) 검사의 생화학적 한계를 설명한다.</li><li>종양 표지자·염증 표지자의 올바른 사용과 간섭 요인(이종항체, 비오틴, 훅 효과)을 이해한다.</li></ol></section>
+<section id="s1" class="sec"><h2><span class="sec__no">1</span>검사 과정과 오류</h2><ul><li>오류의 약 60–70%는 <strong>검사 전(pre-analytical)</strong> 단계: 환자 확인 오류, 채혈 순서(EDTA 오염 → 가성 고칼륨·저칼슘), 지혈대 장시간·주먹 쥐기(K⁺↑), 용혈(K⁺, LDH, AST, Mg 상승), 지연 분석(포도당↓, K⁺ 변동), 정맥 수액 측 채혈(희석), 자세(누운 자세에서 단백·칼슘 낮음), 공복 여부, 일내 변동(코르티솔, 철), 약물(비오틴).</li><li>검사 중: 기기·시약·간섭(용혈·황달·지질혈 지수 HIL), 검출 한계.</li><li>검사 후: 전사 오류, 단위 혼동, 결과 해석·통보 지연.</li><li><strong>품질 관리</strong>: 내부 정도관리(Levey-Jennings 차트, 웨스트가드 규칙), 외부 정도관리(숙련도 검사), 측정 불확도.</li><li><strong>정밀도</strong>(재현성; 변동계수 CV) vs <strong>정확도</strong>(참값과의 근접; 편향).</li><li><strong>기준범위</strong>: 건강 참조 집단의 중앙 95%(평균 ± 2SD 또는 2.5–97.5 백분위) → 건강인 20명 중 1명은 한 검사에서 '이상'; 20개 검사 시 적어도 하나 이상일 확률 약 64%.</li><li><strong>임상 결정 한계</strong>(예: HbA1c 6.5%, LDL 목표)는 기준범위와 다르다.</li><li><strong>임계값(critical value)</strong>: K⁺ &lt;2.5 또는 &gt;6.5, Na⁺ &lt;120, 포도당 &lt;40 등 즉시 통보.</li><li><strong>최소 유의 변화(RCV)</strong>: 분석 변동 + 개인 내 생물학적 변동으로 계산 — 연속 측정값의 변화가 실제 변화인지 판단(예: 크레아티닌 변화).</li></ul></section>
+<section id="s2" class="sec"><h2><span class="sec__no">2</span>검사 성능 지표와 베이즈 추론</h2><ul><li>민감도 = TP/(TP+FN), 특이도 = TN/(TN+FP).</li><li><strong>양성 예측도(PPV)</strong>·음성 예측도(NPV)는 <strong>유병률(사전 확률)</strong>에 따라 달라진다.</li><li><strong>우도비(LR)</strong>: LR+ = 민감도/(1−특이도), LR− = (1−민감도)/특이도. 사후 오즈 = 사전 오즈 × LR. LR+ &gt;10, LR− &lt;0.1은 결정적.</li><li><strong>ROC 곡선</strong>: 다양한 임계값의 민감도 vs 1−특이도; AUC 0.5(무작위)–1.0(완벽). 임계값 선택은 목적(선별 = 민감도↑, 확진 = 특이도↑)에 따라.</li><li>예: D-이합체는 민감도 높고 특이도 낮음 → <strong>낮은 사전 확률(Wells 점수)에서 음성</strong>이면 폐색전증 배제; 높은 사전 확률에서는 바로 영상.</li><li>스펙트럼 편향, 검증 편향, 표본 설계(사례-대조 연구는 성능 과대평가).</li></ul>
+<aside class="box box--key"><b>핵심</b><p>같은 검사라도 '누구에게' 하느냐가 결과의 의미를 바꾼다. 유병률 1%인 집단에서 민감도·특이도 99%인 검사의 양성 예측도는 50%에 불과하다 — 선별검사 결과를 진단으로 오인하지 않는 습관이 중요하다.</p></aside></section>
+<section id="s3" class="sec"><h2><span class="sec__no">3</span>효소·단백 검사</h2><div class="tbl"><table><thead><tr><th>검사</th><th>해석 포인트</th></tr></thead><tbody><tr><td><strong>고감도 심장 트로포닌</strong></td><td>심근 특이; 99백분위(성별 기준) 초과 = 심근 손상, 동적 변화 + 임상 = 경색(제4차 정의); 신부전·심부전·패혈증·폐색전·심근염에서 만성 상승; 0/1시간 알고리즘</td></tr><tr><td>CK</td><td>근육 손상(횡문근융해 &gt;5배; 근이영양증, 스타틴, 갑상선기능저하), CK-MB(심근 일부), 대분자 CK(매크로 CK)</td></tr><tr><td>아밀라아제·리파아제</td><td>급성 췌장염: <strong>리파아제 &gt;3배 ULN</strong>이 더 특이·지속적; 아밀라아제는 침샘·대분자아밀라아제혈증·신부전·장 허혈에서 상승</td></tr><tr><td>ALP</td><td>간담도 vs 뼈(GGT·5'-뉴클레오티다아제로 구분, ALP 동종효소 전기영동), 태반(임신 3분기 2배), 소아 성장기 높음; <strong>저ALP</strong>: 저포스파타아제증(<em>ALPL</em> → 아스포타제 알파), 윌슨병 전격형</td></tr><tr><td>LDH</td><td>비특이(용혈, 림프종·종양량, 허혈); 동종효소 LD1&gt;LD2('뒤집힘')는 심근·용혈</td></tr><tr><td>ACE</td><td>사르코이드증 활성 보조(비특이), ACEi 복용 시 저하</td></tr><tr><td>콜린에스테라아제</td><td>유기인 중독(적혈구 AChE), 숙시닐콜린 무호흡(혈장 부티릴콜린에스테라아제 변이)</td></tr></tbody></table></div>
+<ul><li><strong>혈청 단백 전기영동(SPEP)</strong>: 알부민, α1(α1-항트립신; 결핍 시 감소), α2(합토글로빈·α2-마크로글로불린; 신증후군↑), β(트랜스페린, C3), γ(면역글로불린).<ul><li><strong>M 스파이크(단클론)</strong> → 면역고정 전기영동(IFE)으로 중쇄·경쇄 확인 → 혈청 유리경쇄 κ/λ 비 → MGUS, 다발골수종, 발덴스트룀, AL 아밀로이드증.</li><li>다클론 증가: 만성 염증·간경변(β-γ 다리), HIV.</li><li>신증후군: 알부민↓, α2↑.</li></ul></li></ul></section>
+<section id="s4" class="sec"><h2><span class="sec__no">4</span>신기능과 당대사 검사의 한계</h2><ul><li><strong>크레아티닌</strong>: 근육량·식이(조리 육류)·세뇨관 분비(트리메토프림, 시메티딘, 돌루테그라비르가 분비 억제 → 가성 상승) 영향. GFR이 절반으로 떨어져야 뚜렷이 상승(비선형).</li><li><strong>시스타틴 C</strong>: 모든 유핵세포가 일정하게 생성, 근육량 무관 → 근감소·절단·간경변 환자에서 유용; 갑상선·스테로이드·염증 영향.</li><li><strong>eGFR</strong>: CKD-EPI 2021(인종 계수 제거) 크레아티닌 ± 시스타틴 C 결합식 권장. 급성신손상(AKI)에서는 정상상태가 아니라 부정확.</li><li><strong>알부민뇨</strong>: 소변 알부민/크레아티닌 비(UACR) ≥30 mg/g — 신장·심혈관 위험 독립 예측. KDIGO 'G × A' 열지도 분류.</li><li><strong>BUN/크레아티닌 비</strong> &gt;20: 신전성(탈수), 상부 위장관 출혈, 스테로이드, 고단백 이화.</li><li><strong>포도당</strong>: 혈장 vs 전혈(혈장이 ~11% 높음), 지연 분석 해당, 모세혈관(식후 높음). 진단 기준: 공복 ≥126, 75 g OGTT 2시간 ≥200, HbA1c ≥6.5%, 무작위 ≥200 + 증상.</li><li><strong>HbA1c 간섭</strong>: 적혈구 수명(용혈↓, 철결핍↑, 신부전·EPO), 혈색소 변이체(측정법 의존), 수혈, 임신. 대안: 프럭토사민·당화알부민(2–3주), <strong>CGM 지표</strong>(TIR 70–180 mg/dL &gt;70%, GMI).</li><li><strong>C-펩타이드</strong>: 내인성 인슐린 분비 지표(외인성 인슐린과 구분) — 인공 저혈당(인슐린 주사: 인슐린↑ C-펩타이드↓ vs 설폰요소: 둘 다↑, 약물 선별 양성; 인슐린종: 둘 다↑, 약물 음성).</li></ul></section>
+<section id="s5" class="sec"><h2><span class="sec__no">5</span>종양·염증 표지자와 면역분석 간섭</h2><div class="tbl"><table><thead><tr><th>표지자</th><th>주 용도</th><th>주의</th></tr></thead><tbody><tr><td>PSA</td><td>전립선암 선별(공유 의사결정)·추적</td><td>BPH·전립선염·사정·생검 후 상승; 5α-환원효소 억제제는 50% 감소</td></tr><tr><td>CEA</td><td>대장암 수술 후 추적</td><td>흡연, 염증성 장질환</td></tr><tr><td>CA 19-9</td><td>췌장암 추적</td><td>담즙정체에서 상승, 루이스 항원 음성(~7%)은 생성 불가</td></tr><tr><td>CA-125</td><td>난소암 추적·골반 종괴 위험(ROMA)</td><td>자궁내막증, 월경, 복막 자극</td></tr><tr><td>AFP</td><td>간세포암·생식세포종양; 신생아 생리적 고값</td><td>임신, 간재생</td></tr><tr><td>β-hCG</td><td>생식세포종양, 임신성 융모성 질환</td><td>뇌하수체 hCG(폐경 후), 이종항체</td></tr><tr><td>칼시토닌</td><td>갑상선 수질암(MEN2)</td><td></td></tr><tr><td>크로모그라닌 A</td><td>신경내분비종양</td><td>PPI 복용 시 위상승</td></tr></tbody></table></div>
+<ul><li>종양 표지자는 대부분 <strong>선별용이 아니라 진단된 암의 추적용</strong>이다(PSA·AFP 고위험군 감시 예외).</li><li><strong>염증 표지자</strong>: CRP(6–8시간 내 상승, 반감기 19시간; hsCRP는 심혈관 위험), ESR(피브리노겐·면역글로불린 영향, 느림; 거대세포동맥염·PMR), <strong>프로칼시토닌</strong>(세균 감염에서 상승 → 항생제 중단 결정 보조; 바이러스·자가면역에서 낮음), 페리틴 극상승(&gt;10,000: HLH, 성인 스틸병), IL-6.</li><li><strong>면역분석 간섭</strong>:<ul><li><strong>비오틴</strong>(고용량 보충제 5–10 mg 이상): 스트렙타비딘-비오틴 기반 분석에서 샌드위치법은 위음성(트로포닌 위음성으로 MI 놓침 — FDA 경고), 경쟁법은 위양성(TSH 낮고 FT4 높게 → 가짜 갑상선항진).</li><li><strong>이종친화 항체</strong>(HAMA, 류마티스 인자): 샌드위치를 연결해 위양성(가짜 hCG → 불필요 항암 사례). 다른 플랫폼 재측정, 차단 시약, 연속 희석 비선형성, 소변 hCG(항체가 소변에 없음) 확인.</li><li><strong>훅(hook) 효과</strong>: 극고농도 항원이 포획·검출 항체를 각각 포화 → 위음성(거대 프로락틴종, 대량 hCG) → 희석 재측정.</li><li><strong>매크로 효소·호르몬</strong>(매크로프로락틴, 매크로 AST, 매크로 CK): 면역글로불린 복합체로 제거 지연 → 생물학적 활성 없는 고값; PEG 침전으로 확인.</li></ul></li></ul></section>
+<section id="frontier" class="sec sec--frontier"><h2>연구 최전선</h2><ul><li>혈액 기반 다중 단백·cfDNA 바이오마커(알츠하이머 p-tau217, 다중암 조기진단)와 AI 기반 검사 결과 통합 해석이 진단 의학을 재편하고 있으나, 실제 임상 결과 개선(사망률, 비용)에 대한 근거 축적이 필요하다.</li><li>현장 검사(POCT)와 웨어러블 연속 측정(CGM, 땀 전해질, 케톤 센서)이 확산되며 측정 정확도·보정·데이터 품질 관리 체계가 과제이다.</li><li>개인 맞춤 기준범위(개인 내 변동 기반 '자기 기준')가 고빈도 측정 시대에 더 민감한 이상 탐지 방법으로 제안된다.</li></ul></section>
+<section id="summary" class="sec sec--summary"><h2>요약</h2><ul><li>검사 오류의 대부분은 검사 전 단계(용혈, 채혈 순서, 지연)에서 생기며 품질 관리와 기준범위 개념을 이해해야 한다.</li><li>PPV·NPV는 유병률에 따라 달라지므로 우도비와 사전 확률로 결과를 해석한다.</li><li>트로포닌·리파아제·ALP·SPEP 등 효소·단백 검사는 특이도·간섭·임상 맥락을 함께 고려한다.</li><li>크레아티닌·eGFR·HbA1c는 생물학적 한계가 있어 시스타틴 C·알부민뇨·프럭토사민·CGM 등 보완 지표를 사용한다.</li><li>종양 표지자는 주로 추적용이며, 비오틴·이종항체·훅 효과·매크로 분자 간섭을 인식해야 한다.</li></ul></section>
+<section id="quiz" class="sec"><h2>자가 평가</h2><ol class="quiz"><li><p class="q">고용량 비오틴(10 mg/일)을 복용하는 흉통 환자의 고감도 트로포닌이 정상으로 나왔다. 해석은?</p><details><summary>해설 보기</summary><p>스트렙타비딘-비오틴 기반 샌드위치 면역분석에서는 과량의 유리 비오틴이 스트렙타비딘 결합 부위를 차지해 검출 복합체가 고체상에 붙지 못하므로 위음성이 생길 수 있다. 비오틴 비간섭 플랫폼으로 재측정하거나 비오틴 중단 후(수 시간~수 일) 재검하며, 임상 소견(심전도·영상)으로 판단해야 한다.</p></details></li><li><p class="q">질병 유병률이 50%인 집단과 1%인 집단에서 민감도 90%, 특이도 95%인 검사의 양성 예측도는 각각 대략 얼마인가?</p><details><summary>해설 보기</summary><p>유병률 50%: 1,000명 중 환자 500 → TP 450, 비환자 500 → FP 25 → PPV = 450/475 ≈ 95%. 유병률 1%: 환자 10 → TP 9, 비환자 990 → FP 49.5 → PPV ≈ 9/58.5 ≈ 15%. 같은 검사라도 사전 확률에 따라 양성 결과의 의미가 크게 달라진다.</p></details></li><li><p class="q">저혈당으로 반복 입원한 간호사의 공복 저혈당 시 인슐린 매우 높음, C-펩타이드 억제됨. 해석은?</p><details><summary>해설 보기</summary><p>외인성 인슐린 투여에 의한 인공 저혈당이다. 상업용 인슐린에는 C-펩타이드가 없으므로 인슐린은 높지만 내인성 분비(프로인슐린 → 인슐린 + C-펩타이드)는 저혈당과 외인성 인슐린에 의해 억제되어 C-펩타이드가 낮다. 인슐린종이나 설폰요소 복용이라면 C-펩타이드도 함께 높다.</p></details></li><li><p class="q">거대 뇌하수체 종양 환자의 프로락틴이 경도 상승(60 ng/mL)으로만 나왔다. 확인해야 할 검사 문제는?</p><details><summary>해설 보기</summary><p>훅 효과 가능성이다. 거대 프로락틴종에서 극고농도 프로락틴이 1단계 샌드위치 분석의 포획·검출 항체를 각각 포화시켜 위음성 또는 낮은 값을 낸다. 검체를 1:100 등으로 희석해 재측정해야 하며, 이는 프로락틴종(약물치료)과 비기능성 선종의 줄기 효과(수술)를 구분하는 데 결정적이다.</p></details></li></ol></section>
+<section id="ref" class="sec sec--ref"><h2>참고 문헌</h2><ul><li>Rifai N (ed). <em>Tietz Textbook of Laboratory Medicine</em>, 7th ed. Elsevier, 2022.</li><li>Thygesen K et al. Fourth universal definition of myocardial infarction (2018). <em>Circulation</em> 2018;138:e618–e651.</li><li>Inker LA et al. New creatinine- and cystatin C-based equations to estimate GFR without race. <em>N Engl J Med</em> 2021;385:1737–1749.</li><li>Li D et al. Association of biotin ingestion with performance of hormone and nonhormone assays in healthy adults. <em>JAMA</em> 2017;318:1150–1160.</li><li>Grimes DA, Schulz KF. Refining clinical diagnosis with likelihood ratios. <em>Lancet</em> 2005;365:1500–1505.</li></ul></section>
+<nav class="pn"><a class="pn__prev" href="l08.html"><small>이전</small>철·헴 대사 장애: 빈혈, 혈색소증, 혈색소병증</a><a class="pn__next" href="l10.html"><small>다음</small>약물대사와 약물유전체학</a></nav>
+    </article>
+  </div>
+</main>
+<footer class="foot">
+  <span>의학생화학 · 의학분자생물학 · 신경과학 강의록</span>
+  <a href="../index.html">전체 목록</a>
+</footer>
+<script src="../assets/lecture.js"></script>
+</body>
+</html>
