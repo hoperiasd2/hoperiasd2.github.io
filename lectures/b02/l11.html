@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>B02-L11 전사체학, 단일세포와 공간 오믹스</title>
+<meta name="description" content="Transcriptomics, Single-cell and Spatial Omics">
+<link rel="stylesheet" href="../assets/lecture.css">
+</head>
+<body>
+<header class="mast">
+  <div class="mast__in">
+    <a class="mast__home" href="../index.html">의생명 강의록 아카이브</a>
+    <a class="mast__site" href="../../index.html">KimjintaeHYU</a>
+  </div>
+</header>
+
+<main class="lec">
+  <div class="crumb"><a href="../index.html">전체</a> / <a href="index.html">B02 의학분자생물학</a> / 오믹스의학</div>
+  <header class="hero">
+    <div class="hero__code">B02-L11</div>
+    <h1>전사체학, 단일세포와 공간 오믹스</h1>
+    <p class="hero__en">Transcriptomics, Single-cell and Spatial Omics</p>
+    <div class="hero__meta">
+      <span class="chip">오믹스의학</span>
+      <span class="chip">본문 5개 절</span>
+      <span class="chip">자가평가 4문항</span>
+      <a class="btn" href="ppt/b02-l11.pptx" download>PPT 내려받기</a>
+      <button class="btn btn--ghost" type="button" onclick="window.print()">인쇄 / PDF</button>
+    </div>
+  </header>
+  <div class="lec__grid">
+    <aside class="toc"><div class="toc__in"><b>목차</b><ol><li><a href="#obj">학습 목표</a></li><li><a href="#s1">1. 벌크 RNA-seq</a></li><li><a href="#s2">2. 단일세포 RNA-seq</a></li><li><a href="#s3">3. 공간 전사체학</a></li><li><a href="#s4">4. 다중 단일세포 모달리티와 아틀라스</a></li><li><a href="#s5">5. 전사체 기반 임상 검사</a></li><li><a href="#frontier">연구 최전선</a></li><li><a href="#summary">요약</a></li><li><a href="#quiz">자가 평가</a></li><li><a href="#ref">참고 문헌</a></li></ol></div></aside>
+    <article class="doc">
+<section id="obj" class="sec"><h2>학습 목표</h2><ol class="obj"><li>벌크 RNA-seq의 실험 설계, 정규화, 차등 발현 분석과 경로 분석을 설명한다.</li><li>단일세포 RNA-seq(scRNA-seq)의 플랫폼, 분석 흐름(QC → 군집화 → 주석 → 궤적)을 설명한다.</li><li>공간 전사체학(시퀀싱 기반 vs 영상 기반)의 원리와 해상도를 비교한다.</li><li>다중 단일세포 모달리티(CITE-seq, scATAC, 멀티옴)와 세포 아틀라스 프로젝트를 이해한다.</li><li>전사체 기반 임상 검사(유방암 재발 점수, 원발부위 불명암 분류)를 설명한다.</li></ol></section>
+<section id="s1" class="sec"><h2><span class="sec__no">1</span>벌크 RNA-seq</h2><ul><li>흐름: RNA 추출(RIN 품질) → 폴리A 선택 또는 rRNA 제거 → cDNA·라이브러리 → 시퀀싱(유전자 발현 2,000만–3,000만 판독/검체) → 정렬(STAR) 또는 의사정렬(Salmon, kallisto) → 계수 행렬.</li><li><strong>정규화</strong>: 라이브러리 크기·조성 보정 — TPM(검체 내 비교), DESeq2 크기 인자·edgeR TMM(검체 간 비교).</li><li><strong>차등 발현(DE)</strong>: 음이항 분포 모델(DESeq2, edgeR), 다중 비교 보정(FDR, Benjamini-Hochberg), 효과 크기(log₂ fold change).</li><li><strong>실험 설계</strong>: 생물학적 반복(최소 3, 가능하면 더), 배치 효과(무작위화·차단; ComBat 보정), 교란 변수(성별, 나이, 세포 조성).</li><li><strong>기능 해석</strong>: 과대표현 분석(GO, KEGG, Reactome), <strong>GSEA</strong>(순위 기반), 상류 조절자·전사인자 활성 추론, 세포 조성 디컨볼루션(CIBERSORTx).</li><li>응용: 이소형 정량, 융합 유전자 검출, 대립 특이 발현, 스플라이싱 이상(진단, B02 L08), eQTL 매핑(GTEx).</li></ul>
+<aside class="box box--clin"><b>임상 연계</b><p>벌크 RNA-seq는 조직의 '평균'이므로 세포 조성 변화와 세포 내 발현 변화를 구분하지 못한다. 예를 들어 알츠하이머 뇌에서 신경세포 유전자 감소는 신경세포 손실과 교세포 증가(조성 변화)를 반영할 수 있다 — 단일세포 분석의 필요성.</p></aside></section>
+<section id="s2" class="sec"><h2><span class="sec__no">2</span>단일세포 RNA-seq</h2><div class="tbl"><table><thead><tr><th>플랫폼</th><th>원리</th><th>처리량</th><th>특징</th></tr></thead><tbody><tr><td>액적 기반(10x Chromium)</td><td>바코드 비드 + 세포를 기름 방울에 포획, 3'/5' 계수</td><td>수천~수만/검체</td><td>표준; UMI</td></tr><tr><td>판 기반(Smart-seq3)</td><td>웰당 1세포, 전장 전사체</td><td>수백</td><td>이소형·민감도 높음</td></tr><tr><td>조합 색인(SPLiT-seq, sci-RNA-seq)</td><td>분할-풀 바코딩</td><td>수십만~백만</td><td>저비용 대규모</td></tr><tr><td>단일핵(snRNA-seq)</td><td>핵 분리</td><td></td><td>냉동 조직·뇌·지방·근육에 적합</td></tr></tbody></table></div>
+<ul><li>분석 흐름:<ul><li>QC: 유전자 수, UMI 수, 미토콘드리아 판독 비율(손상 세포), 이중체(doublet) 제거(scDblFinder), 배경 RNA 보정(SoupX/CellBender).</li><li>정규화·고변동 유전자 → PCA → 배치 통합(Harmony, scVI) → 이웃 그래프 → <strong>군집화</strong>(Leiden) → 시각화(UMAP).</li><li><strong>세포 유형 주석</strong>: 표지 유전자, 참조 아틀라스 매핑(Azimuth, CellTypist).</li><li>하위 분석: 군집별 DE, <strong>궤적·의사시간</strong>(Monocle, Slingshot), <strong>RNA 속도</strong>(스플라이싱 전/후 비율로 방향 추정), 세포 간 소통(CellChat; 리간드–수용체), 유전자 조절 네트워크(SCENIC), 복제수 추론(inferCNV — 종양 세포 판별).</li></ul></li><li>함정: 탈락(dropout; 0 과잉), 분리 과정 스트레스 유전자 유도, 세포 유형별 포획 편향(신경세포·호중구 손실), 의사복제(세포를 반복 단위로 오용 → 검체 수준 '의사벌크' 분석 권장).</li></ul>
+<aside class="box box--clin"><b>임상 연계</b><p>대표적 임상·연구 발견: 낭성섬유증 CFTR 발현의 주세포인 <strong>폐 이온세포(ionocyte)</strong> 발견(2018), 알츠하이머 질환 연관 미세아교세포(DAM; TREM2 의존; B08 L04), COVID-19 중증에서 비정상 골수성 세포, CAR-T 반응 예측 세포 상태, 종양 내 이질성과 내성 지속 세포.</p></aside></section>
+<section id="s3" class="sec"><h2><span class="sec__no">3</span>공간 전사체학</h2><p>조직 절편에서 유전자 발현과 위치를 동시에 측정해 '어디서'를 보존한다(2020 Nature Methods 올해의 기술).</p>
+<div class="tbl"><table><thead><tr><th>방식</th><th>예</th><th>해상도</th><th>범위</th></tr></thead><tbody><tr><td>시퀀싱 기반(위치 바코드 포획)</td><td>10x Visium(55 µm 점, 1–10세포), Visium HD(2 µm), Slide-seq, Stereo-seq(나노볼 500 nm)</td><td>다세포~세포 이하</td><td>전사체 전체(비편향)</td></tr><tr><td>영상 기반(원위치 혼성화/시퀀싱)</td><td>MERFISH, Xenium, CosMx, seqFISH+</td><td>단일세포·세포 이하</td><td>수백~6천 유전자(표적)</td></tr><tr><td>관심 영역(ROI)</td><td>GeoMx DSP</td><td>영역</td><td>전사체·단백</td></tr><tr><td>단백 다중 영상</td><td>CODEX/PhenoCycler, 영상 질량세포분석(IMC), MIBI</td><td>단일세포</td><td>40–100 단백</td></tr></tbody></table></div>
+<ul><li>분석: 단일세포 참조로 점(spot) 디컨볼루션(cell2location, RCTD), 공간 변이 유전자, 세포 이웃·니치 분석, 조직학(H&amp;E)과의 정합, 딥러닝으로 H&amp;E에서 발현 예측.</li><li>응용: 종양 미세환경(3차 림프 구조와 면역치료 반응), 뇌 층·영역 아틀라스, 알츠하이머 플라크 주변 유전자 반응(PIG), 심근경색 경계 구역, 신장 사구체 질환.</li></ul></section>
+<section id="s4" class="sec"><h2><span class="sec__no">4</span>다중 단일세포 모달리티와 아틀라스</h2><ul><li><strong>CITE-seq</strong>: 항체-올리고 바코드로 표면 단백 + RNA 동시 측정(면역세포 아형 정밀 구분).</li><li><strong>scATAC-seq</strong>: Tn5 전이효소로 개방 크로마틴 측정 → 세포 유형별 조절 영역 → GWAS 변이 해석. <strong>10x 멀티옴</strong>: 같은 핵에서 RNA + ATAC.</li><li><strong>scTCR/BCR-seq</strong>: 클론형 추적(종양 침윤 T세포, 자가면역).</li><li><strong>Perturb-seq</strong>: CRISPR 교란 + scRNA-seq로 수천 유전자 기능을 한 번에(Replogle et al., Cell 2022 전장 유전체 규모).</li><li><strong>계통 추적</strong>: CRISPR 바코드 '기록', 미토콘드리아 변이를 자연 바코드로 사용.</li><li><strong>세포 아틀라스</strong>: 인간세포아틀라스(HCA; 2024 첫 통합 지도 공개), 뇌 이니셔티브 세포 센서스 네트워크(BICCN — 인간 뇌 3천 개 이상 세포 아형, 2023 Science 특별호), Tabula Sapiens(24개 장기), HuBMAP, 질병 아틀라스(HTAN 종양).</li></ul>
+<aside class="box box--key"><b>핵심</b><p>단일세포·공간 데이터는 크기(수백만 세포 × 수만 특징)가 매우 커서 표준화된 데이터 형식(AnnData, h5ad), 공개 저장소(CELLxGENE), 재현 가능한 파이프라인이 필수이다. 기초의학 실습에서 scRNA-seq·공간 전사체를 직접 분석해 보는 것이 가장 좋은 학습법이다(본 사이트 실습 트랙 A 참조).</p></aside></section>
+<section id="s5" class="sec"><h2><span class="sec__no">5</span>전사체 기반 임상 검사</h2><div class="tbl"><table><thead><tr><th>검사</th><th>원리</th><th>임상 결정</th></tr></thead><tbody><tr><td>Oncotype DX(21유전자 재발 점수)</td><td>RT-PCR</td><td>HR⁺/HER2⁻ 조기 유방암 보조항암 필요 여부(TAILORx, RxPONDER)</td></tr><tr><td>MammaPrint(70유전자)</td><td>마이크로어레이</td><td>임상 고위험·유전체 저위험 환자 항암 생략(MINDACT)</td></tr><tr><td>PAM50/Prosigna</td><td>nCounter</td><td>내재 아형(Luminal A/B, HER2-enriched, Basal)</td></tr><tr><td>Decipher, Oncotype GPS</td><td></td><td>전립선암 위험도</td></tr><tr><td>원발부위 불명암 분류기</td><td>발현·메틸화</td><td>기원 조직 예측 → 부위 특이 치료</td></tr><tr><td>Afirma GSC</td><td>RNA-seq</td><td>갑상선 미결정 결절의 양성 판별(불필요 수술 회피)</td></tr><tr><td>AlloMap</td><td>혈액 유전자 발현</td><td>심장이식 거부 감시</td></tr><tr><td>인터페론 시그니처</td><td>혈액 ISG 점수</td><td>SLE 아형, 인터페로노병증 진단</td></tr><tr><td>패혈증 숙주 반응</td><td>혈중 mRNA 패널</td><td>세균/바이러스 감별(연구·일부 승인)</td></tr></tbody></table></div>
+<ul><li>뇌종양은 <strong>DNA 메틸화 분류기</strong>(독일 DKFZ 하이델베르크 분류기)가 WHO CNS5 진단에 통합되어 형태학적으로 애매한 종양의 진단을 바꾸고 있다(B09 L05).</li></ul></section>
+<section id="frontier" class="sec sec--frontier"><h2>연구 최전선</h2><ul><li>공간 다중오믹스(같은 절편에서 전사체 + 단백 + 대사체 + 크로마틴)와 3차원 조직 재구성, 수백만 세포 규모의 '가상 조직'이 등장했다.</li><li>단일세포 기반 '기초 모델'(scGPT, Geneformer)이 세포 상태·유전자 교란 반응을 예측하려 하지만, 단순 기준선 모델을 넘지 못한다는 비판적 벤치마크도 있다.</li><li>임상 검체(생검·혈액)의 일상적 단일세포·공간 분석(예: 백혈병 MRD, 이식 거부, 신장 생검)이 진단 병리로 들어오고 있다.</li></ul></section>
+<section id="summary" class="sec sec--summary"><h2>요약</h2><ul><li>벌크 RNA-seq는 정규화·음이항 모델 DE·GSEA로 조직 평균 발현을 분석하며 세포 조성 교란에 주의해야 한다.</li><li>scRNA-seq는 QC → 통합 → 군집 → 주석 → 궤적·소통 분석으로 세포 이질성을 밝힌다.</li><li>공간 전사체학은 시퀀싱 기반(비편향, 낮은 해상도)과 영상 기반(표적, 높은 해상도)으로 나뉜다.</li><li>CITE-seq, scATAC, 멀티옴, Perturb-seq가 단일세포 모달리티를 확장하고 세포 아틀라스가 참조가 된다.</li><li>Oncotype DX·MammaPrint·메틸화 분류기 등 전사체/후성 시그니처가 임상 결정에 쓰인다.</li></ul></section>
+<section id="quiz" class="sec"><h2>자가 평가</h2><ol class="quiz"><li><p class="q">scRNA-seq 데이터에서 한 군집이 높은 미토콘드리아 유전자 비율과 낮은 유전자 수를 보인다. 해석과 조치는?</p><details><summary>해설 보기</summary><p>손상되거나 죽어가는 세포(세포질 mRNA 유출, 미토콘드리아 전사체 상대 증가) 또는 저품질 액적일 가능성이 높다. 조직 특성(심근·신장은 원래 미토 비율이 높음)을 고려해 검체별 임계값으로 필터링하고, 해당 군집이 생물학적 실체인지 표지 유전자로 재확인한다.</p></details></li><li><p class="q">질환군과 대조군 각 3명의 조직에서 각각 5,000개 세포를 얻어, 세포 30,000개를 독립 표본으로 DE 분석해 수천 개의 유의 유전자를 얻었다. 문제점과 대안은?</p><details><summary>해설 보기</summary><p>같은 개인의 세포는 독립적이지 않으므로(의사복제) 표본 수가 부풀려져 위양성이 폭증한다. 세포 유형별로 개인 단위로 합산한 '의사벌크' 분석(DESeq2/edgeR) 또는 개인을 무작위 효과로 둔 혼합 모델을 사용해야 하며, 생물학적 반복(개인 수)을 늘려야 한다.</p></details></li><li><p class="q">Visium(55 µm)과 Xenium(영상 기반)을 연구 목적에 따라 어떻게 선택하는가?</p><details><summary>해설 보기</summary><p>사전 가설 없이 전사체 전체를 비편향적으로 탐색하고 조직 영역 수준의 패턴을 보려면 Visium이 적합하다(단, 점마다 여러 세포가 섞여 디컨볼루션 필요). 알려진 세포 유형·표지 유전자 패널로 단일세포 해상도의 위치·이웃 관계를 정밀하게 보려면 Xenium 등 영상 기반 방법이 적합하다.</p></details></li><li><p class="q">Oncotype DX 재발 점수가 낮은 폐경 후 HR⁺/HER2⁻ 림프절 음성 유방암 환자에게 항암화학요법을 생략할 수 있는 근거는?</p><details><summary>해설 보기</summary><p>TAILORx 시험에서 재발 점수 11–25(50세 초과)의 환자는 내분비요법 단독과 항암 병용 사이 무침습질환 생존에 차이가 없었다. 즉 21유전자 발현 패턴으로 항암 이득이 거의 없는 환자를 식별해 독성을 피할 수 있다(50세 이하 일부 중간 점수 군에서는 소폭 이득).</p></details></li></ol></section>
+<section id="ref" class="sec sec--ref"><h2>참고 문헌</h2><ul><li>Stark R, Grzelak M, Hadfield J. RNA sequencing: the teenage years. <em>Nat Rev Genet</em> 2019;20:631–656.</li><li>Heumos L et al. Best practices for single-cell analysis across modalities. <em>Nat Rev Genet</em> 2023;24:550–572.</li><li>Moses L, Pachter L. Museum of spatial transcriptomics. <em>Nat Methods</em> 2022;19:534–546.</li><li>Squair JW et al. Confronting false discoveries in single-cell differential expression. <em>Nat Commun</em> 2021;12:5692.</li><li>Sparano JA et al. Adjuvant chemotherapy guided by a 21-gene expression assay in breast cancer (TAILORx). <em>N Engl J Med</em> 2018;379:111–121.</li></ul></section>
+<nav class="pn"><a class="pn__prev" href="l10.html"><small>이전</small>유전체학과 NGS의 임상 활용</a><a class="pn__next" href="l12.html"><small>다음</small>단백체·대사체·다중오믹스와 정밀의학</a></nav>
+    </article>
+  </div>
+</main>
+<footer class="foot">
+  <span>의학생화학 · 의학분자생물학 · 신경과학 강의록</span>
+  <a href="../index.html">전체 목록</a>
+</footer>
+<script src="../assets/lecture.js"></script>
+</body>
+</html>

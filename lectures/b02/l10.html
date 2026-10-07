@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>B02-L10 유전체학과 NGS의 임상 활용</title>
+<meta name="description" content="Clinical Genomics and Next-Generation Sequencing">
+<link rel="stylesheet" href="../assets/lecture.css">
+</head>
+<body>
+<header class="mast">
+  <div class="mast__in">
+    <a class="mast__home" href="../index.html">의생명 강의록 아카이브</a>
+    <a class="mast__site" href="../../index.html">KimjintaeHYU</a>
+  </div>
+</header>
+
+<main class="lec">
+  <div class="crumb"><a href="../index.html">전체</a> / <a href="index.html">B02 의학분자생물학</a> / 오믹스의학</div>
+  <header class="hero">
+    <div class="hero__code">B02-L10</div>
+    <h1>유전체학과 NGS의 임상 활용</h1>
+    <p class="hero__en">Clinical Genomics and Next-Generation Sequencing</p>
+    <div class="hero__meta">
+      <span class="chip">오믹스의학</span>
+      <span class="chip">본문 7개 절</span>
+      <span class="chip">자가평가 4문항</span>
+      <a class="btn" href="ppt/b02-l10.pptx" download>PPT 내려받기</a>
+      <button class="btn btn--ghost" type="button" onclick="window.print()">인쇄 / PDF</button>
+    </div>
+  </header>
+  <div class="lec__grid">
+    <aside class="toc"><div class="toc__in"><b>목차</b><ol><li><a href="#obj">학습 목표</a></li><li><a href="#s1">1. 시퀀싱 기술의 발전</a></li><li><a href="#s2">2. NGS 분석 파이프라인</a></li><li><a href="#s3">3. 패널, 엑솜, 유전체의 선택</a></li><li><a href="#s4">4. 암 유전체학</a></li><li><a href="#s5">5. 액체생검과 cfDNA</a></li><li><a href="#s6">6. 약물유전체와 개인 유전체</a></li><li><a href="#s7">7. 윤리·법·사회적 쟁점(ELSI)</a></li><li><a href="#frontier">연구 최전선</a></li><li><a href="#summary">요약</a></li><li><a href="#quiz">자가 평가</a></li><li><a href="#ref">참고 문헌</a></li></ol></div></aside>
+    <article class="doc">
+<section id="obj" class="sec"><h2>학습 목표</h2><ol class="obj"><li>생어 시퀀싱, 단판독 NGS(합성에 의한 시퀀싱), 장판독(PacBio, Nanopore)의 원리와 장단점을 비교한다.</li><li>NGS 분석 파이프라인(정렬, 변이 호출, 주석, 필터링)과 품질 지표를 설명한다.</li><li>패널·엑솜·유전체 검사의 선택 기준과 희귀질환 진단 전략을 설명한다.</li><li>암 유전체 검사(체세포 변이, TMB, MSI, 융합)와 액체생검(ctDNA)의 임상 활용을 설명한다.</li><li>약물유전체, 산전·신생아 유전체 검사와 윤리·법적 쟁점을 이해한다.</li></ol></section>
+<section id="s1" class="sec"><h2><span class="sec__no">1</span>시퀀싱 기술의 발전</h2><div class="tbl"><table><thead><tr><th>기술</th><th>원리</th><th>판독 길이</th><th>정확도</th><th>강점 / 약점</th></tr></thead><tbody><tr><td>생어(1977)</td><td>다이데옥시 사슬 종결, 모세관 전기영동</td><td>700–1000 bp</td><td>매우 높음</td><td>확진 표준 / 저처리량</td></tr><tr><td>Illumina SBS</td><td>가역적 종결자 형광, 브리지 증폭 클러스터</td><td>2×150 bp</td><td>&gt;99.9% (Q30)</td><td>저비용 대용량 / 반복·구조변이·위유전자 약함</td></tr><tr><td>PacBio HiFi</td><td>단일분자 실시간(ZMW), 원형 합의</td><td>15–25 kb</td><td>&gt;99.9%</td><td>구조변이·위상(phasing)·메틸화 / 비용</td></tr><tr><td>Oxford Nanopore</td><td>나노포어 통과 이온 전류 변화</td><td>수 kb ~ &gt;1 Mb</td><td>~99% (최신 화학)</td><td>초장판독, 실시간, 휴대, 직접 RNA·메틸화 / 동종중합체 오류</td></tr><tr><td>이온 반도체</td><td>H⁺ 방출 pH 감지</td><td>200–400 bp</td><td></td><td>빠름 / 동종중합체</td></tr></tbody></table></div>
+<ul><li>비용: 인간 게놈 프로젝트(약 30억 달러, 13년) → 현재 전장 유전체 약 200–600달러, 수 일.</li><li><strong>신속 전장 유전체(rWGS)</strong>: 신생아 중환자실에서 7–8시간 내 진단 보고(기네스 기록), 진단율 30–40%, 1/4 이상에서 치료 변경.</li></ul></section>
+<section id="s2" class="sec"><h2><span class="sec__no">2</span>NGS 분석 파이프라인</h2><ul><li>라이브러리 준비: DNA 절편화 → 어댑터 결찰(인덱스 바코드) → (표적 포획: 혼성화 프로브 또는 앰플리콘) → 증폭.</li><li>1차 분석: 염기 호출(FASTQ; Phred 품질 Q = −10 log₁₀ P).</li><li>2차 분석:<ul><li>참조 정렬(BWA-MEM, minimap2 → BAM; GRCh38 또는 T2T-CHM13)</li><li>중복 제거, 염기 품질 재보정</li><li>변이 호출(GATK HaplotypeCaller, DeepVariant → VCF): SNV/indel, CNV(판독 깊이), SV(분할 판독·쌍 이상), 반복 확장(ExpansionHunter), 미토콘드리아.</li></ul></li><li>3차 분석: 주석(유전자, 영향, gnomAD 빈도, ClinVar, 예측 점수) → 필터링(빈도 &lt;1% 열성 / &lt;0.01% 우성, 유전 양식, 표현형 HPO 기반 우선순위 — Exomiser) → ACMG 분류 → 보고.</li><li>품질 지표: 평균 깊이(엑솜 100×, 유전체 30×), 표적 커버리지(≥20× 비율 &gt;95%), 정렬률, 오염·성별 확인.</li><li><strong>트리오 분석</strong>(환자 + 부모): de novo 변이 확인, 위상 판정(복합 이형접합 <em>trans</em> 확인), 진단율 향상.</li></ul>
+<aside class="box box--clin"><b>임상 연계</b><p>변이 확인: 고품질 NGS 변이는 생어 확인이 필수가 아니라는 연구가 많아졌으나, 낮은 품질·위유전자 영역·구조변이는 직교 방법(생어, MLPA, 장판독)으로 확인한다. 위유전자가 있는 <em>PMS2</em>, <em>CYP21A2</em>(선천성 부신과형성), <em>SMN1</em>, <em>GBA1</em>, *PKD1*은 단판독 NGS의 대표적 사각지대이다.</p></aside></section>
+<section id="s3" class="sec"><h2><span class="sec__no">3</span>패널, 엑솜, 유전체의 선택</h2><div class="tbl"><table><thead><tr><th>검사</th><th>범위</th><th>진단율(희귀질환)</th><th>장점</th><th>한계</th></tr></thead><tbody><tr><td>유전자 패널</td><td>수십~수백 유전자</td><td>질환군별 10–50%</td><td>깊은 커버리지, 해석 용이, 저비용, 2차 발견 적음</td><td>새 유전자·표현형 확장 놓침</td></tr><tr><td>염색체 마이크로어레이(CMA)</td><td>전 유전체 CNV</td><td>발달지연·다발기형 15–20%</td><td>1차 검사(ACMG)</td><td>균형 전위·SNV 불가</td></tr><tr><td>엑솜(ES)</td><td>단백 부호화 ~1–2%</td><td>25–40% (트리오 높음)</td><td>재분석 가능</td><td>비부호화·구조변이·반복 약함</td></tr><tr><td>유전체(GS)</td><td>전체</td><td>30–60%</td><td>CNV·SV·반복·미토·심부 인트론 동시</td><td>비용, 데이터 양, VUS 증가</td></tr><tr><td>RNA-seq 보조</td><td>발현·스플라이싱</td><td>+7–35%</td><td>기능적 근거</td><td>조직 접근성</td></tr></tbody></table></div>
+<ul><li>ACMG(2021): 선천기형·발달지연·지적장애 환자에게 <strong>ES/GS를 1차 또는 2차 검사</strong>로 권고.</li><li><strong>재분석</strong>: 1–3년 후 동일 데이터 재해석 시 진단율 10–15% 추가(새 유전자·지식).</li><li>진단의 가치: 예후·재발 위험 상담, 맞춤 치료(대사질환, 뇌전증 약물 선택), 불필요 검사 중단('진단 오디세이' 종결; B10 L11).</li></ul>
+<aside class="box box--clin"><b>임상 연계</b><p>한국은 2017년 이후 희귀질환 유전자 패널·엑솜 검사가 건강보험 급여화되었고, '희귀질환 진단지원사업'과 국가 유전체 사업(국가바이오빅데이터)이 진행 중이다. 검사 전후 유전상담이 필수이며 「생명윤리법」상 동의 절차를 지켜야 한다.</p></aside></section>
+<section id="s4" class="sec"><h2><span class="sec__no">4</span>암 유전체학</h2><ul><li><strong>체세포 vs 생식세포</strong>: 종양-정상 쌍 분석으로 체세포 변이 구분. 종양만 검사하면 생식세포 변이(BRCA, 린치)가 함께 발견될 수 있어 상담 필요(종양 검사의 약 10% 내외에서 병원성 생식세포 변이).</li><li><strong>포괄적 유전체 프로파일링(CGP)</strong>: 수백 유전자 패널 → 표적 가능 변이(EGFR, ALK, BRAF, KRAS G12C, HER2, NTRK, RET, MET 엑손14, FGFR, IDH1/2, PIK3CA, BRCA), <strong>TMB</strong>(종양 돌연변이 부담 ≥10 mut/Mb → 펨브롤리주맙 조직 불문 승인), <strong>MSI</strong>, HRD, 융합(RNA 기반 검출이 더 민감).</li><li><strong>분자종양위원회(MTB)</strong>: 변이 해석 등급(AMP/ASCO/CAP Tier I–IV, ESMO ESCAT)으로 치료 권고.</li><li>종양 진화: 클론·하위클론 구조, 치료 압력 하 선택(EGFR T790M/C797S, ESR1 변이), 클론성 조혈(CHIP) 오염 주의.</li><li>대표 진단 분자 표지: 신경교종(<em>IDH</em>, 1p/19q 공동결실, <em>H3</em> K27M, <em>CDKN2A/B</em>, MGMT) — 2021 WHO CNS 분류는 분자 진단을 통합했다(B09 L05).</li></ul></section>
+<section id="s5" class="sec"><h2><span class="sec__no">5</span>액체생검과 cfDNA</h2><ul><li><strong>cfDNA</strong>: 주로 조혈세포 자멸 유래, 약 167 bp(뉴클레오솜 보호). 종양 유래 <strong>ctDNA</strong>는 총 cfDNA의 0.01%~수십 %.</li><li>활용:<ul><li>진단 시 조직 부족 시 변이 확인(EGFR 등).</li><li><strong>미세잔존질환(MRD)</strong>: 수술 후 종양 특이 변이 추적(종양 정보 기반 맞춤 패널) → 재발 예측이 영상보다 수개월 앞섬; DYNAMIC 시험(2기 대장암)에서 ctDNA 기반으로 보조항암 사용을 줄여도 결과 동등.</li><li>내성 모니터링, 치료 반응 평가.</li><li><strong>다중암 조기진단(MCED)</strong>: cfDNA 메틸화 패턴 + 조직 기원 예측(Galleri). 위양성·과잉진단·사망률 이득 미확정(NHS-Galleri 시험 결과 대기).</li></ul></li><li><strong>비침습 산전검사(NIPT)</strong>: 태반 cfDNA (B02 L06). <strong>이식 신장 공여자 유래 cfDNA</strong>: 거부 반응 감시.</li><li>기술: 디지털 PCR, 오류 보정 NGS(UMI 분자 바코드), 단편체학(fragmentomics; 길이·말단 모티프 패턴).</li></ul></section>
+<section id="s6" class="sec"><h2><span class="sec__no">6</span>약물유전체와 개인 유전체</h2><div class="tbl"><table><thead><tr><th>유전자</th><th>약물</th><th>결과</th><th>조치</th></tr></thead><tbody><tr><td><em>HLA-B*15:02</em></td><td>카르바마제핀, 페니토인</td><td>SJS/TEN (동남아·한족)</td><td>투여 전 검사</td></tr><tr><td><em>HLA-B*58:01</em></td><td>알로퓨리놀</td><td>SJS/TEN (한국·한족·태국)</td><td>투여 전 검사 권고</td></tr><tr><td><em>HLA-B*57:01</em></td><td>아바카비르</td><td>과민반응</td><td>투여 전 필수</td></tr><tr><td><em>CYP2C19</em> 기능소실(*2, *3; 동아시아 ~15% 저대사자)</td><td>클로피도그렐</td><td>활성화 저하 → 스텐트 혈전</td><td>티카그렐러·프라수그렐 대체</td></tr><tr><td><em>CYP2D6</em> (초고속/저대사)</td><td>코데인, 트라마돌, 타목시펜</td><td>모르핀 과다(소아 사망) / 효과 저하</td><td>대체 약물</td></tr><tr><td><em>CYP2C9</em> + <em>VKORC1</em></td><td>와파린</td><td>용량 요구 차이(아시아인 <em>VKORC1</em> -1639A 빈도 높아 저용량)</td><td>유전형 기반 용량 알고리즘</td></tr><tr><td><em>TPMT</em>, <em>NUDT15</em></td><td>티오퓨린</td><td>골수억제</td><td>감량(B01 L12)</td></tr><tr><td><em>DPYD</em></td><td>5-FU</td><td>치명적 독성</td><td>감량·대체</td></tr><tr><td><em>UGT1A1*28/*6</em></td><td>이리노테칸</td><td>호중구감소·설사</td><td>감량</td></tr><tr><td><em>SLCO1B1</em></td><td>심바스타틴</td><td>근병증</td><td>다른 스타틴</td></tr><tr><td><em>G6PD</em></td><td>라스부리카아제, 프리마퀸, 다프손</td><td>용혈</td><td>금기/검사</td></tr></tbody></table></div>
+<ul><li>선제적 약물유전체(preemptive PGx) 패널은 PREPARE 시험(유럽)에서 부작용을 30% 줄였다.</li><li>개인 소비자 직접(DTC) 유전자 검사: 한국은 허용 항목이 제한되어 있으며, 질환 위험 해석의 오용·개인정보 문제가 있다.</li></ul></section>
+<section id="s7" class="sec"><h2><span class="sec__no">7</span>윤리·법·사회적 쟁점(ELSI)</h2><ul><li>사전 동의: 검사 목적, 가능한 결과(양성·음성·VUS·2차 발견), 가족에 대한 함의, 데이터 보관·공유.</li><li>소아 검사: 성인 발병·치료 불가 질환(헌팅턴 등)의 예측 검사는 원칙적으로 성인이 될 때까지 유보.</li><li>유전 차별 금지(미국 GINA; 한국 「생명윤리법」 제46조 유전정보에 의한 차별 금지) — 생명·장기요양 보험의 공백.</li><li>가족 통보 의무와 비밀유지의 충돌.</li><li>데이터 공유와 재식별 위험, 집단 간 참조 데이터 불균형(유럽계 편중)으로 인한 VUS 비율 격차.</li></ul></section>
+<section id="frontier" class="sec sec--frontier"><h2>연구 최전선</h2><ul><li>장판독 기반 '원스톱' 임상 유전체(SV·반복·메틸화·위상 동시)가 상용화 단계이며, 나노포어 초고속 분석으로 수술 중 뇌종양 메틸화 분류(Sturgeon 신경망; 40분 내)가 가능해졌다(Vermeulen et al., Nature 2023).</li><li>집단 유전체 선별(예: 미국 Geisinger MyCode, 호주 DNA Screen)로 CDC Tier 1 질환(BRCA, 린치, FH) 보인자를 찾아 예방하는 '유전체 공중보건'이 확대되고 있다.</li><li>대규모 언어모델·AI가 표현형 기반 변이 우선순위와 문헌 근거 수집을 자동화하고 있으나 검증·책임 문제가 남아 있다.</li></ul></section>
+<section id="summary" class="sec sec--summary"><h2>요약</h2><ul><li>단판독 NGS는 저비용·고정확, 장판독은 구조변이·반복·위상·메틸화에 강하다.</li><li>분석은 정렬 → 변이 호출 → 주석 → 표현형 기반 필터 → ACMG 분류의 단계로 진행된다.</li><li>희귀질환은 CMA·엑솜·유전체(트리오), 재분석, RNA-seq 보조로 진단율을 높인다.</li><li>암 유전체 검사는 표적 변이·TMB·MSI·HRD·융합을 평가하고, ctDNA는 MRD·내성·조기진단에 쓰인다.</li><li>HLA·CYP·TPMT/NUDT15·DPYD 약물유전체와 ELSI는 유전체 의학 실무의 필수 요소이다.</li></ul></section>
+<section id="quiz" class="sec"><h2>자가 평가</h2><ol class="quiz"><li><p class="q">발달지연과 다발기형이 있는 아동에서 가장 먼저 권고되는 유전 검사 전략은? 그리고 결과가 음성이면?</p><details><summary>해설 보기</summary><p>염색체 마이크로어레이(CMA) 또는 엑솜/유전체 검사(가능하면 부모 포함 트리오)를 1차로 시행한다(ACMG 2021은 ES/GS를 1·2차 검사로 권고). 음성이면 유전체 검사로 확대, 표현형 재평가, RNA-seq·메틸화 검사, 1–3년 후 데이터 재분석을 고려한다.</p></details></li><li><p class="q">폐선암 환자의 조직이 부족해 혈장 ctDNA 검사를 했더니 EGFR 변이가 음성이었다. 해석은?</p><details><summary>해설 보기</summary><p>ctDNA 음성은 '변이 없음'이 아니라 종양 DNA 방출량이 적어 검출 한계 이하일 수 있다(위음성). 판독 지표(다른 종양 변이·ctDNA 분율)를 확인하고, 가능하면 조직 재생검을 시행해야 한다. 반대로 양성은 신뢰도가 높아 치료 결정에 사용할 수 있다.</p></details></li><li><p class="q">한국인 환자에게 알로퓨리놀을 처음 투여하기 전에 <em>HLA-B*58:01</em> 검사를 권고하는 이유는?</p><details><summary>해설 보기</summary><p><em>HLA-B*58:01</em> 보유자는 알로퓨리놀(옥시퓨리놀)에 대한 T세포 매개 중증 피부이상반응(SJS/TEN, DRESS) 위험이 수십~수백 배 높고, 이 대립유전자 빈도가 한국인 등 동아시아 집단에서 높기 때문이다(특히 신기능 저하 시 위험 증가). 양성이면 페북소스타트 등 대체 약물을 사용한다.</p></details></li><li><p class="q">종양 단독 NGS에서 <em>BRCA2</em> 병원성 변이(VAF 약 50%)가 검출되었다. 추가로 해야 할 일은?</p><details><summary>해설 보기</summary><p>VAF 약 50%는 생식세포 변이 가능성을 시사하므로 유전상담 후 정상 조직(혈액·타액) 생식세포 검사로 확인한다. 생식세포 변이이면 환자의 다른 암 위험 관리와 가족 연쇄 검사가 필요하며, 체세포·생식세포 모두 PARP 억제제 적응 판단에 사용될 수 있다.</p></details></li></ol></section>
+<section id="ref" class="sec sec--ref"><h2>참고 문헌</h2><ul><li>Shendure J et al. DNA sequencing at 40: past, present and future. <em>Nature</em> 2017;550:345–353.</li><li>Manickam K et al. Exome and genome sequencing for pediatric patients with congenital anomalies or intellectual disability: ACMG guideline. <em>Genet Med</em> 2021;23:2029–2037.</li><li>Wenger AM et al. Accurate circular consensus long-read sequencing improves variant detection. <em>Nat Biotechnol</em> 2019;37:1155–1162.</li><li>Tie J et al. Circulating tumor DNA analysis guiding adjuvant therapy in stage II colon cancer (DYNAMIC). <em>N Engl J Med</em> 2022;386:2261–2272.</li><li>Swen JJ et al. A 12-gene pharmacogenetic panel to prevent adverse drug reactions (PREPARE). <em>Lancet</em> 2023;401:347–356.</li></ul></section>
+<nav class="pn"><a class="pn__prev" href="l09.html"><small>이전</small>번역, 단백질 접힘·변형·분해</a><a class="pn__next" href="l11.html"><small>다음</small>전사체학, 단일세포와 공간 오믹스</a></nav>
+    </article>
+  </div>
+</main>
+<footer class="foot">
+  <span>의학생화학 · 의학분자생물학 · 신경과학 강의록</span>
+  <a href="../index.html">전체 목록</a>
+</footer>
+<script src="../assets/lecture.js"></script>
+</body>
+</html>

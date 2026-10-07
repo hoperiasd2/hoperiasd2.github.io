@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>B02-L12 단백체·대사체·다중오믹스와 정밀의학</title>
+<meta name="description" content="Proteomics, Metabolomics, Multi-omics and Precision Medicine">
+<link rel="stylesheet" href="../assets/lecture.css">
+</head>
+<body>
+<header class="mast">
+  <div class="mast__in">
+    <a class="mast__home" href="../index.html">의생명 강의록 아카이브</a>
+    <a class="mast__site" href="../../index.html">KimjintaeHYU</a>
+  </div>
+</header>
+
+<main class="lec">
+  <div class="crumb"><a href="../index.html">전체</a> / <a href="index.html">B02 의학분자생물학</a> / 오믹스의학</div>
+  <header class="hero">
+    <div class="hero__code">B02-L12</div>
+    <h1>단백체·대사체·다중오믹스와 정밀의학</h1>
+    <p class="hero__en">Proteomics, Metabolomics, Multi-omics and Precision Medicine</p>
+    <div class="hero__meta">
+      <span class="chip">오믹스의학</span>
+      <span class="chip">본문 6개 절</span>
+      <span class="chip">자가평가 4문항</span>
+      <a class="btn" href="ppt/b02-l12.pptx" download>PPT 내려받기</a>
+      <button class="btn btn--ghost" type="button" onclick="window.print()">인쇄 / PDF</button>
+    </div>
+  </header>
+  <div class="lec__grid">
+    <aside class="toc"><div class="toc__in"><b>목차</b><ol><li><a href="#obj">학습 목표</a></li><li><a href="#s1">1. 질량분석 기반 단백체학</a></li><li><a href="#s2">2. 번역후 변형·구조·공간 단백체</a></li><li><a href="#s3">3. 대사체학</a></li><li><a href="#s4">4. 장내 미생물체학</a></li><li><a href="#s5">5. 다중오믹스 통합과 인과 추론</a></li><li><a href="#s6">6. 정밀의학의 치료 도구</a></li><li><a href="#frontier">연구 최전선</a></li><li><a href="#summary">요약</a></li><li><a href="#quiz">자가 평가</a></li><li><a href="#ref">참고 문헌</a></li></ol></div></aside>
+    <article class="doc">
+<section id="obj" class="sec"><h2>학습 목표</h2><ol class="obj"><li>질량분석 기반 단백체학(DDA, DIA, 표적)과 친화도 기반 단백체(Olink, SomaScan)를 비교한다.</li><li>번역후 변형 단백체(인산화체)와 구조 단백체의 의미를 설명한다.</li><li>대사체학(표적/비표적, LC-MS, NMR)과 동위원소 추적 플럭스 분석을 설명한다.</li><li>장내 미생물체학과 다중오믹스 통합(멘델 무작위분석, 네트워크)의 원리를 이해한다.</li><li>정밀의학의 도구(유전자 치료, 유전자 편집, 세포 치료)와 근거·한계를 정리한다.</li></ol></section>
+<section id="s1" class="sec"><h2><span class="sec__no">1</span>질량분석 기반 단백체학</h2><ul><li>상향식(bottom-up): 단백질 → 트립신 절단 → 펩타이드 → <strong>LC-MS/MS</strong>(액체크로마토그래피 분리 → 전기분무 이온화 → 질량 분석 → 단편화 스펙트럼) → 데이터베이스 검색으로 펩타이드·단백질 동정.</li></ul>
+<div class="tbl"><table><thead><tr><th>획득 방식</th><th>원리</th><th>장점 / 한계</th></tr></thead><tbody><tr><td>DDA(데이터 의존)</td><td>강한 이온부터 선택 단편화</td><td>동정 깊이 / 결측값 많음</td></tr><tr><td><strong>DIA</strong>(데이터 비의존, SWATH)</td><td>모든 질량 창 체계적 단편화</td><td>재현성·정량 우수, 대규모 코호트에 표준화</td></tr><tr><td>표적(MRM/PRM)</td><td>미리 정한 펩타이드만</td><td>높은 민감도·정확도; 임상 검사 전환</td></tr><tr><td>하향식(top-down)</td><td>손상 없는 단백질</td><td>단백 이소형(proteoform)</td></tr></tbody></table></div>
+<ul><li>정량: 무표지(LFQ), 동위원소 표지(SILAC, TMT 다중화 16–35검체).</li><li><strong>혈장 단백체의 난제</strong>: 동적 범위 10¹⁰ 이상(알부민 ~40 g/L vs 사이토카인 pg/mL) → 고함량 단백 제거, 나노입자 단백 코로나 농축.</li><li><strong>친화도 기반</strong>: Olink(근접 연장 분석; 항체 쌍 + DNA 바코드 PCR/NGS, 3,000–5,400 단백), SomaScan(압타머, ~11,000 단백). 수십만 명 바이오뱅크 단백체(UK Biobank Pharma Proteomics Project)가 가능해짐 — 단, 플랫폼 간 상관이 단백에 따라 낮을 수 있어 교차 검증 필요.</li><li><strong>pQTL</strong>: 혈장 단백 수준에 영향을 주는 유전 변이 → 멘델 무작위분석으로 약물 표적 인과성 검증.</li></ul></section>
+<section id="s2" class="sec"><h2><span class="sec__no">2</span>번역후 변형·구조·공간 단백체</h2><ul><li><strong>인산화체학</strong>: TiO₂/IMAC 농축 → 수만 인산화 부위 → 키나아제 활성 추론(KSEA) → 신호 경로·약물 반응·내성 기전 분석.</li><li>유비퀴틴체(K-ε-GG 항체), 아세틸체, 당단백체, 시트룰린체.</li><li><strong>상호작용체</strong>: 친화 정제-MS(AP-MS; BioPlex), 근접 표지(BioID, TurboID, APEX) → 세포 소기관 지도.</li><li><strong>구조 단백체</strong>: 교차결합-MS, 수소-중수소 교환, 제한적 단백분해-MS(구조 변화), 열 단백체 프로파일링(TPP; 약물 표적 동정 — 약물 결합 시 열안정성 변화).</li><li>공간 단백체: 영상 질량분석(MALDI-IMS), 레이저 미세절제 + 초고감도 MS(단일세포 단백체 'deep visual proteomics' — 독성 표피괴사융해의 JAK/STAT 발견 → JAK 억제제 치료 사례, Nature 2023).</li><li><strong>단백체 임상 활용</strong>: 신생아 선별(MS/MS 아미노산·아실카르니틴은 대사체), 아밀로이드 유형 확인(LMD-MS — AL vs ATTR 구분 표준), 세균 동정(<strong>MALDI-TOF</strong> — 수 분 내 균종 동정), 갑상선 글로불린 등 표적 MS 검사, 혈장 p-tau217(MS 및 면역분석; 알츠하이머 진단, B08 L12).</li></ul></section>
+<section id="s3" class="sec"><h2><span class="sec__no">3</span>대사체학</h2><ul><li>정의: 세포·조직·체액의 저분자(&lt;1.5 kDa) 대사물 총체. 유전체·전사체·단백체의 하류이자 환경(식이·약물·미생물)의 직접 반영 → 표현형에 가장 가까운 오믹스.</li></ul>
+<div class="tbl"><table><thead><tr><th>측면</th><th>비표적(untargeted)</th><th>표적(targeted)</th></tr></thead><tbody><tr><td>목적</td><td>가설 생성, 신규 대사물</td><td>정량·검증</td></tr><tr><td>플랫폼</td><td>고해상도 LC-MS(Orbitrap, Q-TOF), GC-MS</td><td>삼중 사중극자 MRM</td></tr><tr><td>한계</td><td>동정(annotation) 병목 — 특징의 대부분이 미동정</td><td>미리 정한 대사물만</td></tr></tbody></table></div>
+<ul><li><strong>NMR</strong>: 비파괴·고재현성·정량, 민감도 낮음 → 대규모 코호트 지단백 아입자·대사물(Nightingale 플랫폼, UK Biobank 50만 명).</li><li><strong>지질체학</strong>: 수천 지질 분자종(세라마이드 위험 점수, B01 L08).</li><li><strong>동위원소 추적(플럭스 분석)</strong>: ¹³C-포도당/글루타민/젖산을 주입 → 대사물 표지 패턴(동위원소 분포)으로 경로 활성 계산. 환자 수술 중 주입 연구로 종양이 생체 내에서 젖산을 TCA 연료로 쓰고, 폐암은 포도당 산화를 활발히 한다는 사실을 밝혔다(Faubert et al., Cell 2017).</li><li><strong>임상 대사체</strong>: 선천대사이상 확장 진단(비표적 혈장 대사체로 수백 질환 선별), 소변 유기산(GC-MS), 신생아 선별(B01 L10), 2형 당뇨 예측(BCAA), TMAO(장내미생물–심혈관), 암 2-HG(<em>IDH</em> 변이 신경교종의 MR 분광 검출).</li></ul></section>
+<section id="s4" class="sec"><h2><span class="sec__no">4</span>장내 미생물체학</h2><ul><li>방법: 16S rRNA 앰플리콘(속 수준 조성), 샷건 메타유전체(종·균주·기능 유전자), 메타전사체, 대사체 결합.</li><li>기능: 단쇄지방산(부티르산 → 대장세포 연료, 조절 T세포 유도), 담즙산 2차 대사(데옥시콜산; FXR·TGR5 신호), 트립토판 대사(인돌 → AhR), 비타민 K·B12 합성, 약물 대사(레보도파 탈카복실화 <em>Enterococcus</em>; 디곡신 불활성화 <em>Eggerthella</em>; 이리노테칸 β-글루쿠로니다아제 재활성 → 설사).</li><li>질환 연관: 염증성 장질환, 비만·대사증후군, <em>C. difficile</em> 감염(<strong>대변미생물이식</strong> 재발 치료 성공률 ~90%; 2022–2023 표준화 미생물 제제 Rebyota, Vowst 승인), 면역관문억제제 반응(<em>Akkermansia</em>, <em>Bifidobacterium</em>), 파킨슨병·자폐(인과성 논쟁; B08 L11).</li><li>함정: 연관 대 인과, 식이·약물(메트포르민, PPI)의 강한 교란, 조성 데이터의 상대성(compositionality).</li></ul></section>
+<section id="s5" class="sec"><h2><span class="sec__no">5</span>다중오믹스 통합과 인과 추론</h2><ul><li>통합 전략:<ul><li>조기 통합(특징 연결) / 중간 통합(MOFA+ 잠재 인자, 유사도 네트워크 융합) / 후기 통합(모델별 예측 결합).</li><li>지식 기반: 경로·네트워크(유전자–단백–대사물) 위로 투영.</li></ul></li><li><strong>멘델 무작위분석(MR)</strong>: 출생 시 무작위로 배분되는 유전 변이를 노출의 도구 변수로 사용 → 교란·역인과 회피.<ul><li>가정: 관련성, 독립성, 배제 제한(다면발현 없음) — 다면발현 강건 방법(MR-Egger, 가중 중앙값).</li><li>사례: LDL·Lp(a)는 인과(관상동맥질환), HDL은 비인과, CRP는 비인과(반면 IL-6 신호는 인과 → IL-6 차단 시험), 알코올 적정 음주의 '보호 효과'는 교란(MR에서 J곡선 소실).</li></ul></li><li><strong>약물 표적 유전학</strong>: 유전적 근거가 있는 표적은 임상 승인 확률이 약 2.6배(Minikel et al., Nature 2024). 기능소실 인간 '자연 실험'(PCSK9, ANGPTL3, APOC3, CCR5Δ32, <em>SLC30A8</em> LoF의 2형 당뇨 보호)이 신약 개발의 출발점이 된다.</li><li><strong>콜로칼리제이션</strong>: GWAS 신호와 eQTL/pQTL 신호가 같은 원인 변이를 공유하는지 확인해 원인 유전자 추정.</li></ul></section>
+<section id="s6" class="sec"><h2><span class="sec__no">6</span>정밀의학의 치료 도구</h2><div class="tbl"><table><thead><tr><th>도구</th><th>원리</th><th>예</th></tr></thead><tbody><tr><td>AAV 유전자 보충</td><td>비통합 에피솜; 혈청형별 조직 지향성</td><td>보레티진(RPE65 망막), 오나셈노진(SMA), 에트라나코진·피다나코진(혈우병 B), 발록토코진(혈우병 A), 델란디스트로진(DMD 마이크로디스트로핀; 효능 논쟁)</td></tr><tr><td>렌티바이러스 체외 HSC</td><td>통합 벡터로 자가 조혈모세포 교정</td><td>베티베글로진(β-지중해빈혈), 로보티베글로진(겸상), 엘리발도진(CALD), 아티다르사진(MLD)</td></tr><tr><td>CRISPR 체외 편집</td><td>Cas9 DSB → 인핸서 파괴</td><td>엑사감글로진(Casgevy; 2023 겸상·β-지중해빈혈 최초 CRISPR 승인)</td></tr><tr><td>체내 편집</td><td>LNP-Cas9 mRNA, 염기편집, 프라임 편집</td><td>NTLA-2001(TTR), VERVE-102(PCSK9 염기편집), 개인 맞춤 염기편집(CPS1 결핍 영아, 2025)</td></tr><tr><td>CAR-T</td><td>환자 T세포에 키메라 항원 수용체</td><td>CD19(ALL, DLBCL), BCMA(골수종), 자가면역(루푸스 CD19 CAR-T 관해 보고), 고형암·뇌종양 시험(B09 L06)</td></tr><tr><td>올리고뉴클레오타이드</td><td>ASO, siRNA</td><td>B02 L08 참조</td></tr></tbody></table></div>
+<ul><li>위험·과제: AAV 면역원성(기존 항체 배제), 고용량 간독성·혈전성 미세혈관병증·사망 사례, 렌티 삽입 돌연변이(일부 2차 골수성 종양), 오프타깃 편집, 초고가(수십억 원) 접근성, 장기 추적 15년 요구.</li><li><strong>정밀의학의 근거</strong>: '표적 변이 → 표적 약물' 매칭의 전체 생존 이득은 일부 암·희귀질환에서 뚜렷하지만, 범암 바스켓 시험에서는 매칭 가능한 환자 비율이 10–20%에 그친다. 정밀의학은 '모든 환자를 위한 것'이 아니라 '근거가 있는 하위군을 찾아내는 과정'이다.</li></ul></section>
+<section id="frontier" class="sec sec--frontier"><h2>연구 최전선</h2><ul><li>단백체 기반 질병 예측: 혈장 단백 수천 개로 수십 질환의 10년 위험을 임상 지표보다 잘 예측(Carrasco-Zanini et al., Nat Med 2024)하고, '장기 나이(organ age)' 단백 시계가 제안되었다(Oh et al., Nature 2023).</li><li>단일세포 단백체(MS 기반)와 단일세포 대사체가 기술적 한계를 넘어 시작 단계이며, 대사 이미징(MALDI-2, DESI) 해상도가 단일세포 수준에 근접했다.</li><li>디지털 트윈: 개인의 유전체·오믹스·웨어러블 데이터를 통합해 질병 경과·치료 반응을 시뮬레이션하려는 시도가 있으나 아직 검증 초기이다.</li></ul></section>
+<section id="summary" class="sec sec--summary"><h2>요약</h2><ul><li>단백체는 LC-MS/MS(DDA·DIA·표적)와 친화도 플랫폼(Olink, SomaScan)으로 측정하며 pQTL이 약물 표적 검증에 쓰인다.</li><li>인산화체·상호작용체·구조 단백체가 신호와 약물 작용을 해석하고, MALDI-TOF·LMD-MS 등은 이미 임상 표준이다.</li><li>대사체는 표현형에 가장 가까운 오믹스이며 동위원소 추적으로 생체 내 경로 플럭스를 측정한다.</li><li>미생물체는 단쇄지방산·담즙산·약물 대사로 숙주에 영향을 주지만 인과 추론에 주의해야 한다.</li><li>멘델 무작위분석과 인간 유전학은 인과 표적을 찾고, AAV·렌티·CRISPR·CAR-T·RNA 치료가 정밀의학을 구현한다.</li></ul></section>
+<section id="quiz" class="sec"><h2>자가 평가</h2><ol class="quiz"><li><p class="q">관찰 연구에서 혈중 HDL-C가 높을수록 관상동맥질환이 적었지만 HDL을 올리는 약물은 실패했다. 멘델 무작위분석은 이 문제를 어떻게 설명했는가?</p><details><summary>해설 보기</summary><p>HDL-C를 올리는 유전 변이(예: <em>LIPG</em> N396S)는 관상동맥질환 위험을 낮추지 않아, HDL-C가 인과 인자가 아니라 다른 위험 요인(중성지방·인슐린 저항성 등)과 얽힌 표지자임을 보였다. 반면 LDL-C를 낮추는 변이는 일관되게 위험을 낮춰 인과성을 지지했다.</p></details></li><li><p class="q">원인 불명 아밀로이드 심근병증 생검에서 레이저 미세절제 질량분석(LMD-MS)을 시행하는 이유는?</p><details><summary>해설 보기</summary><p>면역조직화학은 AL(경쇄)과 ATTR(트랜스티레틴) 등을 오분류할 수 있는데, LMD-MS는 콩고레드 양성 침착물만 절제해 구성 단백을 직접 동정하므로 아밀로이드 유형을 정확히 결정한다. AL은 항형질세포 치료, ATTR은 안정제·침묵제로 치료가 완전히 다르기 때문에 필수적이다.</p></details></li><li><p class="q">혈우병 B에 대한 AAV 유전자 치료 전 AAV 중화항체 검사를 하는 이유와 치료 후 간효소를 추적하는 이유는?</p><details><summary>해설 보기</summary><p>기존 AAV 혈청형 중화항체가 있으면 벡터가 간세포에 도달하기 전에 중화되어 효과가 없으므로 투여 대상을 선별한다. 투여 후에는 형질도입된 간세포에 대한 캡시드 특이 T세포 반응으로 간 효소가 상승하고 인자 IX 발현이 소실될 수 있어 ALT 추적과 필요 시 코르티코스테로이드 투여가 필요하다.</p></details></li><li><p class="q">종양의 ¹³C-포도당 주입 동위원소 추적 연구가 배양세포 연구와 다른 결론을 낸 예를 들고 그 의미를 설명하라.</p><details><summary>해설 보기</summary><p>배양세포 연구는 암이 포도당을 주로 젖산으로 배출한다(Warburg)고 강조했지만, 환자 폐암 주입 연구는 종양이 포도당과 순환 젖산을 TCA 회로에서 활발히 산화함을 보였다. 이는 생체 내 영양 환경·미세환경이 대사를 크게 바꾸므로 대사 표적 치료의 근거는 생체 내 플럭스 데이터에 기반해야 함을 의미한다.</p></details></li></ol></section>
+<section id="ref" class="sec sec--ref"><h2>참고 문헌</h2><ul><li>Aebersold R, Mann M. Mass-spectrometric exploration of proteome structure and function. <em>Nature</em> 2016;537:347–355.</li><li>Sun BB et al. Plasma proteomic associations with genetics and health in the UK Biobank. <em>Nature</em> 2023;622:329–338.</li><li>Wishart DS. Metabolomics for investigating physiological and pathophysiological processes. <em>Physiol Rev</em> 2019;99:1819–1875.</li><li>Davey Smith G, Hemani G. Mendelian randomization: genetic anchors for causal inference in epidemiological studies. <em>Hum Mol Genet</em> 2014;23:R89–R98.</li><li>Minikel EV et al. Refining the impact of genetic evidence on clinical success. <em>Nature</em> 2024;629:624–629.</li></ul></section>
+<nav class="pn"><a class="pn__prev" href="l11.html"><small>이전</small>전사체학, 단일세포와 공간 오믹스</a><span></span></nav>
+    </article>
+  </div>
+</main>
+<footer class="foot">
+  <span>의학생화학 · 의학분자생물학 · 신경과학 강의록</span>
+  <a href="../index.html">전체 목록</a>
+</footer>
+<script src="../assets/lecture.js"></script>
+</body>
+</html>
