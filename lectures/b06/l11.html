@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>B06-L11 정신질환의 유전학: GWAS, 희귀 변이, 다유전자 점수</title>
+<meta name="description" content="Psychiatric Genetics: GWAS, Rare Variants and Polygenic Scores">
+<link rel="stylesheet" href="../assets/lecture.css">
+</head>
+<body>
+<header class="mast">
+  <div class="mast__in">
+    <a class="mast__home" href="../index.html">의생명 강의록 아카이브</a>
+    <a class="mast__site" href="../../index.html">KimjintaeHYU</a>
+  </div>
+</header>
+
+<main class="lec">
+  <div class="crumb"><a href="../index.html">전체</a> / <a href="index.html">B06 신경질환과 유전학</a> / 신경피부·정신 유전학</div>
+  <header class="hero">
+    <div class="hero__code">B06-L11</div>
+    <h1>정신질환의 유전학: GWAS, 희귀 변이, 다유전자 점수</h1>
+    <p class="hero__en">Psychiatric Genetics: GWAS, Rare Variants and Polygenic Scores</p>
+    <div class="hero__meta">
+      <span class="chip">신경피부·정신 유전학</span>
+      <span class="chip">본문 5개 절</span>
+      <span class="chip">자가평가 4문항</span>
+      <a class="btn" href="ppt/b06-l11.pptx" download>PPT 내려받기</a>
+      <button class="btn btn--ghost" type="button" onclick="window.print()">인쇄 / PDF</button>
+    </div>
+  </header>
+  <div class="lec__grid">
+    <aside class="toc"><div class="toc__in"><b>목차</b><ol><li><a href="#obj">학습 목표</a></li><li><a href="#s1">1. 유전율과 유전 구조</a></li><li><a href="#s2">2. 질환별 주요 발견</a></li><li><a href="#s3">3. 정신질환 간 공유 유전 구조</a></li><li><a href="#s4">4. 다유전자 위험 점수(PRS)</a></li><li><a href="#s5">5. 유전 신호에서 생물학으로</a></li><li><a href="#frontier">연구 최전선</a></li><li><a href="#summary">요약</a></li><li><a href="#quiz">자가 평가</a></li><li><a href="#ref">참고 문헌</a></li></ol></div></aside>
+    <article class="doc">
+<section id="obj" class="sec"><h2>학습 목표</h2><ol class="obj"><li>정신질환의 유전율과 유전 구조(흔한 변이, 희귀 CNV, 희귀 부호화 변이)를 설명한다.</li><li>조현병·양극성장애·주요우울장애·ADHD·자폐의 주요 GWAS·엑솜 발견을 정리한다.</li><li>정신질환 간 유전 상관과 진단 범주를 넘는 공유 유전 구조를 설명한다.</li><li>다유전자 위험 점수의 원리, 활용 가능성, 한계와 윤리를 평가한다.</li><li>유전 신호를 생물학(세포 유형, 경로)으로 번역하는 방법(미세 매핑, eQTL, 단일세포)을 이해한다.</li></ol></section>
+<section id="s1" class="sec"><h2><span class="sec__no">1</span>유전율과 유전 구조</h2><div class="tbl"><table><thead><tr><th>질환</th><th>쌍생아 유전율</th><th>SNP 유전율</th><th>특징</th></tr></thead><tbody><tr><td>조현병</td><td>~80%</td><td>~24%</td><td>희귀 CNV·LoF 기여 큼</td></tr><tr><td>양극성장애</td><td>~70%</td><td>~20%</td><td>I형 &gt; II형</td></tr><tr><td>자폐</td><td>~80%</td><td>~12%</td><td>신생 변이 기여 큼 (B06 L08)</td></tr><tr><td>ADHD</td><td>~75%</td><td>~22%</td><td></td></tr><tr><td>주요우울장애</td><td>~37%</td><td>~9%</td><td>환경 비중 큼, 이질성</td></tr><tr><td>신경성 식욕부진</td><td>~50–60%</td><td>~11%</td><td>대사 형질과 유전 상관</td></tr><tr><td>알코올 사용장애</td><td>~50%</td><td></td><td><em>ADH1B</em>, <em>ALDH2</em> 보호 변이</td></tr></tbody></table></div>
+<ul><li><strong>'결측 유전율'</strong>: 쌍생아 유전율과 SNP 유전율 간 격차 — 희귀 변이, 구조변이, 유전자–환경 상호작용, 쌍생아 가정 위반.</li><li>효과 크기 스펙트럼: 흔한 변이(OR 1.05–1.2, 수천 개), 희귀 CNV(OR 2–60), 극히 드문 LoF(<em>SETD1A</em> OR ~20).</li><li>정신질환은 극도로 다유전적 — 조현병 위험은 수천~수만 개 변이에 분산(전면적 다유전 모델 omnigenic model 논의).</li></ul></section>
+<section id="s2" class="sec"><h2><span class="sec__no">2</span>질환별 주요 발견</h2><ul><li><strong>조현병</strong>(PGC 2022 — 76,755 환자, 287 좌위; Trubetskoy et al., Nature 2022):<ul><li>흔한 변이 신호가 <strong>신경세포</strong>(흥분·억제), <strong>시냅스</strong>(시냅스 후 밀도, 전압개폐 통로), <em>DRD2</em>(항정신병약 표적과 일치), <em>GRIN2A</em>, <em>CACNA1C</em>, MHC 영역(<em>C4A</em> — 보체 매개 시냅스 가지치기 과다; Sekar 2016)에 집중.</li><li>희귀 부호화 변이(SCHEMA — Singh et al., Nature 2022): 10개 유전자 LoF 유의(<em>SETD1A</em>, <em>CUL1</em>, <em>XPO7</em>, <em>TRIO</em>, <em>CACNA1G</em>, <em>SP4</em>, <em>GRIA3</em>, <em>GRIN2A</em>, <em>HERC1</em>, <em>RB1CC1</em>) — <em>GRIN2A</em> 등은 흔한 변이와 수렴.</li><li>CNV: <strong>22q11.2 결실</strong>(OR ~20–60), 1q21.1, 3q29 결실(OR ~40), 15q13.3, 16p11.2 중복, <em>NRXN1</em> 결실.</li></ul></li><li><strong>양극성장애</strong>(Mullins 2021 — 64 좌위): 칼슘 통로(<em>CACNA1C</em>), <em>ANK3</em>, <em>ODZ4</em>, 리튬 반응 GWAS(<em>SESTD1</em> 근처 등).</li><li><strong>주요우울장애</strong>(약 100–700 좌위, 대규모 바이오뱅크·23andMe 포함): <em>NEGR1</em>, <em>DRD2</em>, <em>SORCS3</em>, 신경 발달·시냅스 경로; 표현형 정의(자가보고 '최소 표현형' vs 임상 진단)에 따라 유전 구조가 다름.</li><li><strong>ADHD</strong>(Demontis 2023 — 27 좌위): 도파민·신경 발달, 교육 성취와 음의 상관.</li><li><strong>자폐</strong>(Grove 2019; 엑솜 — Fu 2022): 흔한 변이와 신생 희귀 변이 이중 구조(B06 L08).</li><li><strong>알코올·물질</strong>: <em>ADH1B</em> rs1229984(빠른 에탄올 산화 → 아세트알데하이드↑ → 보호), <em>ALDH2*2</em>(동아시아 — 강한 보호), <em>CHRNA5</em>(니코틴 의존·폐암), <em>OPRM1</em> A118G(날트렉손 반응 논쟁).</li><li><strong>동아시아 GWAS</strong>: 조현병 동아시아 메타분석(Lam 2019) — 유럽과 대부분 공유되나 집단 특이 신호 존재; 포함하면 미세 매핑 해상도 향상.</li></ul></section>
+<section id="s3" class="sec"><h2><span class="sec__no">3</span>정신질환 간 공유 유전 구조</h2><ul><li><strong>유전 상관(rg)</strong>(LD 점수 회귀): 조현병–양극성 ~0.7, 조현병–우울 ~0.35, 양극성–우울 ~0.45, ADHD–우울 ~0.4, 자폐–ADHD ~0.35, 신경성 식욕부진–강박 ~0.5.</li><li><strong>교차 질환 GWAS</strong>(Cross-Disorder Group 2019 — 8개 질환): 다면발현 좌위 100여 개; 신경 발달 시기 발현 유전자에 집중.</li><li><strong>'p 인자'</strong>: 정신병리의 일반 요인(일반 지능 g처럼) — 유전체 구조 방정식 모형(Genomic SEM)에서 정신병적, 내재화, 강박, 신경발달 4–5개 상위 유전 요인 제시(Grotzinger 2022).</li><li>시사점: DSM 범주가 생물학적 경계와 일치하지 않으며, 공통 유전 위험 + 질환 특이 요인 + 환경이 표현형을 만든다 → RDoC(연구 영역 기준) 같은 차원적 접근.</li><li>신경질환과의 관계: 정신질환은 신경퇴행 질환(AD, PD)과 유전 상관이 낮고 뇌전증·편두통과 일부 공유 → 정신질환은 시냅스·발달 중심, 신경퇴행은 미세아교세포·리소좀 중심(Brainstorm Consortium 2018).</li></ul></section>
+<section id="s4" class="sec"><h2><span class="sec__no">4</span>다유전자 위험 점수(PRS)</h2><ul><li>원리: GWAS 효과 크기(β)로 개인의 위험 대립 수를 가중 합산 → 연속 점수.</li><li>성능(조현병): 유럽계에서 분산 설명 약 7–10%(liability scale), 상위 10% vs 하위 10% OR ~5–6 → <strong>개인 진단·선별에는 부족</strong>(대부분 고PRS인 사람은 발병하지 않음; 환자 대부분이 중간 PRS).</li><li>활용 가능성:<ul><li>연구: 질환 간 공유, 환경 상호작용, 아형 층화(조기 발병·치료 저항성 — 클로자핀 반응), 임상시험 강화.</li><li>임상(미래): 고위험군(임상적 고위험 정신증) 전환 예측에 임상 정보와 결합, 약물 반응 예측(리튬 PRS).</li></ul></li><li>한계:<ul><li><strong>집단 이전성</strong>: 유럽계 데이터 중심 → 아프리카계에서 정확도 수 배 저하 → 형평성 문제.</li><li>교란: 집단 계층화, 동류 혼인, 간접 유전 효과(부모 환경 경유 — '유전적 양육'; 형제 내 분석에서 효과 감소, 특히 교육·인지 형질).</li><li>시간·환경 변화에 따른 성능 변동.</li></ul></li><li><strong>윤리</strong>: 배아 PRS 선별(상업적 PGT-P) — 기대 이득 작고 다면발현(조현병 위험 대립이 창의성·교육과 연관), 우생학적 우려 → 주요 학회가 반대 성명.</li></ul></section>
+<section id="s5" class="sec"><h2><span class="sec__no">5</span>유전 신호에서 생물학으로</h2><ul><li><strong>미세 매핑</strong>: 연관 영역 내 원인 변이 후보 집합(credible set) — 다인종 데이터·기능 주석 결합(SuSiE, FINEMAP).</li><li><strong>eQTL/sQTL/pQTL 결합</strong>(PsychENCODE, GTEx, MetaBrain): 위험 변이가 어떤 유전자의 발현·스플라이싱을 바꾸는지 → 콜로칼리제이션·TWAS(전사체 연관 분석) → 예: <em>C4A</em> 발현↑, <em>FURIN</em>, <em>CACNA1C</em> 이소형.</li><li><strong>세포 유형 강화</strong>(단일세포 아틀라스): 조현병 — 피질 흥분성 신경세포·중형 가시 신경세포·개재뉴런, 우울 — 피질·해마 신경세포, AD — 미세아교세포(대비).</li><li><strong>발달 시기</strong>: 조현병·자폐 위험 유전자는 <strong>태아기 피질 발생</strong>에 발현 집중 → 신경발달 가설 지지.</li><li><strong>기능 검증</strong>: 대규모 병렬 리포터 분석(MPRA), CRISPRi/a 스크린을 iPSC 신경세포·오가노이드에서 수행 → 위험 변이·유전자의 세포 표현형(시냅스 수, 발화) 측정.</li><li><strong>약물 재창출</strong>: 유전 신호가 기존 약물 표적(DRD2, CACNA1C — 칼슘 통로 차단제, GRIN2A — NMDA 조절)과 일치 → 유전 근거 표적이 성공 확률이 높음(B02 L12).</li></ul></section>
+<section id="frontier" class="sec sec--frontier"><h2>연구 최전선</h2><ul><li>PGC의 다인종 확장(아프리카·라틴·동아시아)과 100만 명 규모 바이오뱅크가 정신질환 GWAS 해상도와 PRS 형평성을 개선하고 있다.</li><li>장판독 유전체로 정신질환의 구조변이·반복 변이·체세포 모자이크(뇌 특이) 기여가 재평가되고 있다.</li><li>유전적으로 정의된 위험 하위군(22q11.2, <em>SETD1A</em> LoF)을 대상으로 한 표적 기전 연구와 맞춤 임상시험(예: 22q11.2 조현병 예방)이 시작되고 있다.</li></ul></section>
+<section id="summary" class="sec sec--summary"><h2>요약</h2><ul><li>정신질환은 유전율이 높지만 극도로 다유전적이며, 흔한 변이·희귀 CNV·희귀 LoF가 효과 크기 스펙트럼을 이룬다.</li><li>조현병 GWAS는 시냅스·신경세포·<em>DRD2</em>·<em>C4A</em> 신호를, 엑솜은 <em>SETD1A</em> 등 고효과 LoF를, CNV는 22q11.2 등 고위험 영역을 밝혔다.</li><li>정신질환 간 높은 유전 상관은 DSM 범주를 넘는 공통 유전 요인(p 인자)을 시사한다.</li><li>PRS는 집단 수준 연구에는 유용하나 개인 예측력이 낮고 집단 이전성·교란·윤리 문제가 있다.</li><li>eQTL·단일세포·MPRA·CRISPR 스크린이 유전 신호를 세포 유형·발달 시기·기전으로 번역한다.</li></ul></section>
+<section id="quiz" class="sec"><h2>자가 평가</h2><ol class="quiz"><li><p class="q">조현병 PRS 상위 1%인 사람에게 '조현병에 걸릴 것'이라고 말할 수 없는 이유는?</p><details><summary>해설 보기</summary><p>조현병 유병률이 약 1%이고 PRS 상위군의 상대 위험이 수 배 증가하더라도 절대 위험은 대개 수 % 수준에 그친다. PRS가 설명하는 분산이 작고(약 7–10%), 희귀 변이·환경·발달 요인이 큰 몫을 차지하며, 대부분의 고PRS 개인은 발병하지 않고 대부분의 환자는 평균 근처 PRS를 가진다.</p></details></li><li><p class="q">22q11.2 결실과 조현병의 관계가 연구에서 특히 유용한 이유는?</p><details><summary>해설 보기</summary><p>22q11.2 결실 보유자의 약 25%가 조현병을 겪어 단일 유전 요인으로는 가장 강력한 위험 인자 중 하나이며, 출생 시(또는 영아기) 진단되므로 정신증 발병 전부터 전향적으로 추적할 수 있다. 이를 통해 발병 전 뇌 변화, 바이오마커, 예방 개입을 연구할 수 있다.</p></details></li><li><p class="q">조현병 위험 유전자의 발현이 태아기 피질 발생에 집중된다는 결과가 시사하는 바는?</p><details><summary>해설 보기</summary><p>조현병 증상은 청소년·초기 성인기에 나타나지만, 위험의 상당 부분이 태아기 신경 발생·이동·시냅스 형성 시기의 이상에서 비롯된다는 신경발달 가설을 지지한다. 따라서 발병 이후 치료뿐 아니라 발달 경로를 이해하고 조기 위험 신호를 포착하는 연구가 중요하다.</p></details></li><li><p class="q">배아 다유전자 점수 선별(PGT-P)에 대해 주요 학회가 신중하거나 반대하는 이유는?</p><details><summary>해설 보기</summary><p>한 부부의 배아 간 PRS 차이는 작아 실제 위험 감소 효과가 미미하고, PRS 정확도가 집단에 따라 다르며, 한 형질의 위험을 낮추면 다면발현으로 다른 형질(예: 교육·창의성)이 바뀔 수 있다. 또한 '질환 위험'을 넘어 형질 선택으로 이어질 수 있는 우생학적·사회적 불평등 문제가 있어 근거와 윤리 모두 부족하다.</p></details></li></ol></section>
+<section id="ref" class="sec sec--ref"><h2>참고 문헌</h2><ul><li>Trubetskoy V et al. Mapping genomic loci implicates genes and synaptic biology in schizophrenia. <em>Nature</em> 2022;604:502–508.</li><li>Singh T et al. Rare coding variants in ten genes confer substantial risk for schizophrenia. <em>Nature</em> 2022;604:509–516.</li><li>Cross-Disorder Group of the PGC. Genomic relationships, novel loci, and pleiotropic mechanisms across eight psychiatric disorders. <em>Cell</em> 2019;179:1469–1482.</li><li>Sekar A et al. Schizophrenia risk from complex variation of complement component 4. <em>Nature</em> 2016;530:177–183.</li><li>Martin AR et al. Clinical use of current polygenic risk scores may exacerbate health disparities. <em>Nat Genet</em> 2019;51:584–591.</li></ul></section>
+<nav class="pn"><a class="pn__prev" href="l10.html"><small>이전</small>신경피부증후군: NF1, NF2, 결절성 경화증</a><a class="pn__next" href="l12.html"><small>다음</small>신경유전 질환의 유전자 치료와 RNA 치료</a></nav>
+    </article>
+  </div>
+</main>
+<footer class="foot">
+  <span>의학생화학 · 의학분자생물학 · 신경과학 강의록</span>
+  <a href="../index.html">전체 목록</a>
+</footer>
+<script src="../assets/lecture.js"></script>
+</body>
+</html>
