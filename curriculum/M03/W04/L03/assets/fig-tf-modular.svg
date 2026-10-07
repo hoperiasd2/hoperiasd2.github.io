@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 380" width="860" height="380" role="img"
+     aria-label="Modular structure of a transcription factor: separate DNA-binding, activation, dimerization, ligand-binding and nuclear localization regions">
+  <style>
+    .ttl { font:700 14px sans-serif; fill:#003c71; }
+    .nm { font:700 12px sans-serif; fill:#003c71; }
+    .sub { font:11px sans-serif; fill:#4a5159; }
+    .d1 { fill:#003c71; stroke:#16191d; stroke-width:1.2; }
+    .d2 { fill:#f2b705; stroke:#16191d; stroke-width:1.2; }
+    .d3 { fill:#ffffff; stroke:#16191d; stroke-width:1.4; }
+    .wl { font:700 12px sans-serif; fill:#ffffff; }
+    .kl { font:700 12px sans-serif; fill:#16191d; }
+    .dna { stroke:#16191d; stroke-width:2.6; fill:none; }
+    .ln { stroke:#4a5159; stroke-width:1.2; stroke-dasharray:4 3; fill:none; }
+    .box { fill:#fff5d6; stroke:#c6d2dd; stroke-width:1; }
+  </style>
+  <text class="ttl" x="20" y="26">A transcription factor is built from separable modules</text>
+  <text class="sub" x="20" y="46">Each module can be swapped experimentally, which is how their functions were mapped.</text>
+
+  <rect class="d3" x="60" y="70" width="110" height="36" rx="4"/><text class="kl" x="74" y="93">NLS</text>
+  <rect class="d1" x="170" y="70" width="170" height="36" rx="4"/><text class="wl" x="190" y="93">DNA-binding</text>
+  <rect class="d2" x="340" y="70" width="140" height="36" rx="4"/><text class="kl" x="356" y="93">dimerization</text>
+  <rect class="d3" x="480" y="70" width="170" height="36" rx="4"/><text class="kl" x="498" y="93">activation domain</text>
+  <rect class="d2" x="650" y="70" width="150" height="36" rx="4"/><text class="kl" x="664" y="93">ligand binding</text>
+
+  <path class="ln" d="M115 110 L115 136"/>
+  <text class="sub" x="40" y="152">import into</text>
+  <text class="sub" x="52" y="168">the nucleus</text>
+  <path class="ln" d="M255 110 L255 136"/>
+  <text class="nm" x="180" y="152">recognises a specific</text>
+  <text class="sub" x="180" y="168">sequence 6-20 bp long</text>
+  <path class="ln" d="M410 110 L410 136"/>
+  <text class="sub" x="348" y="152">pairs with a partner;</text>
+  <text class="sub" x="348" y="168">combinations widen</text>
+  <text class="sub" x="348" y="184">the range of targets</text>
+  <path class="ln" d="M565 110 L565 136"/>
+  <text class="sub" x="500" y="152">recruits coactivators</text>
+  <text class="sub" x="500" y="168">and Mediator; does not</text>
+  <text class="sub" x="500" y="184">touch the DNA</text>
+  <path class="ln" d="M725 110 L725 136"/>
+  <text class="sub" x="668" y="152">present in nuclear</text>
+  <text class="sub" x="668" y="168">receptors only</text>
+
+  <text class="nm" x="20" y="228">Two separate questions, two separate modules</text>
+  <path class="dna" d="M60 282 L560 282"/>
+  <rect class="d1" x="200" y="268" width="90" height="28" rx="3"/>
+  <text class="wl" x="226" y="287">site</text>
+  <text class="sub" x="60" y="312">WHERE: set by the DNA-binding domain</text>
+  <rect class="box" x="600" y="244" width="240" height="96" rx="4"/>
+  <text class="nm" x="616" y="268">WHETHER AND HOW MUCH</text>
+  <text class="sub" x="616" y="288">set by the activation domain, by</text>
+  <text class="sub" x="616" y="306">modifications on the factor, and by</text>
+  <text class="sub" x="616" y="324">which partners are available.</text>
+  <text class="sub" x="60" y="338">A factor can therefore sit on its site and still be inactive: binding and activating are different events.</text>
+</svg>

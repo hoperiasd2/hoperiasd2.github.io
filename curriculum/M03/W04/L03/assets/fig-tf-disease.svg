@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 400" width="880" height="400" role="img"
+     aria-label="Diseases caused by transcription factor and coactivator defects, grouped by the class of DNA-binding domain">
+  <style>
+    .ttl { font:700 14px sans-serif; fill:#003c71; }
+    .hdc { fill:#003c71; }
+    .hdt { font:700 11px sans-serif; fill:#ffffff; }
+    .cell { fill:#ffffff; stroke:#c6d2dd; stroke-width:0.9; }
+    .alt { fill:#fff5d6; stroke:#c6d2dd; stroke-width:0.9; }
+    .t { font:11px sans-serif; fill:#16191d; }
+    .tb { font:700 11px sans-serif; fill:#003c71; }
+    .sub { font:11px sans-serif; fill:#4a5159; }
+  </style>
+  <text class="ttl" x="20" y="26">Transcription factor defects and the diseases they cause</text>
+  <rect class="hdc" x="20" y="40" width="170" height="28"/><text class="hdt" x="30" y="59">Domain class</text>
+  <rect class="hdc" x="190" y="40" width="130" height="28"/><text class="hdt" x="200" y="59">Gene</text>
+  <rect class="hdc" x="320" y="40" width="270" height="28"/><text class="hdt" x="330" y="59">Disease</text>
+  <rect class="hdc" x="590" y="40" width="270" height="28"/><text class="hdt" x="600" y="59">Mechanism</text>
+
+  <rect class="alt" x="20" y="68" width="170" height="28"/><text class="tb" x="30" y="87">Zinc finger</text>
+  <rect class="alt" x="190" y="68" width="130" height="28"/><text class="t" x="200" y="87">WT1</text>
+  <rect class="alt" x="320" y="68" width="270" height="28"/><text class="t" x="330" y="87">Wilms tumour, Denys-Drash syndrome</text>
+  <rect class="alt" x="590" y="68" width="270" height="28"/><text class="t" x="600" y="87">loss of a kidney and gonad programme</text>
+
+  <rect class="cell" x="20" y="96" width="170" height="28"/><text class="tb" x="30" y="115">Zinc finger</text>
+  <rect class="cell" x="190" y="96" width="130" height="28"/><text class="t" x="200" y="115">GATA1</text>
+  <rect class="cell" x="320" y="96" width="270" height="28"/><text class="t" x="330" y="115">X-linked thrombocytopenia with anaemia</text>
+  <rect class="cell" x="590" y="96" width="270" height="28"/><text class="t" x="600" y="115">blocked erythroid and platelet maturation</text>
+
+  <rect class="alt" x="20" y="124" width="170" height="28"/><text class="tb" x="30" y="143">Leucine zipper</text>
+  <rect class="alt" x="190" y="124" width="130" height="28"/><text class="t" x="200" y="143">CEBPA</text>
+  <rect class="alt" x="320" y="124" width="270" height="28"/><text class="t" x="330" y="143">acute myeloid leukaemia (somatic)</text>
+  <rect class="alt" x="590" y="124" width="270" height="28"/><text class="t" x="600" y="143">myeloid differentiation is arrested</text>
+
+  <rect class="cell" x="20" y="152" width="170" height="28"/><text class="tb" x="30" y="171">Homeodomain</text>
+  <rect class="cell" x="190" y="152" width="130" height="28"/><text class="t" x="200" y="171">PAX6</text>
+  <rect class="cell" x="320" y="152" width="270" height="28"/><text class="t" x="330" y="171">aniridia, Peters anomaly</text>
+  <rect class="cell" x="590" y="152" width="270" height="28"/><text class="t" x="600" y="171">haploinsufficiency: one copy is not enough</text>
+
+  <rect class="alt" x="20" y="180" width="170" height="28"/><text class="tb" x="30" y="199">Homeodomain, POU</text>
+  <rect class="alt" x="190" y="180" width="130" height="28"/><text class="t" x="200" y="199">POU1F1</text>
+  <rect class="alt" x="320" y="180" width="270" height="28"/><text class="t" x="330" y="199">combined pituitary hormone deficiency</text>
+  <rect class="alt" x="590" y="180" width="270" height="28"/><text class="t" x="600" y="199">one factor, several hormone genes lost</text>
+
+  <rect class="cell" x="20" y="208" width="170" height="28"/><text class="tb" x="30" y="227">Homeodomain, HOX</text>
+  <rect class="cell" x="190" y="208" width="130" height="28"/><text class="t" x="200" y="227">HOXD13</text>
+  <rect class="cell" x="320" y="208" width="270" height="28"/><text class="t" x="330" y="227">synpolydactyly</text>
+  <rect class="cell" x="590" y="208" width="270" height="28"/><text class="t" x="600" y="227">limb pattern is mis-specified</text>
+
+  <rect class="alt" x="20" y="236" width="170" height="28"/><text class="tb" x="30" y="255">bHLH</text>
+  <rect class="alt" x="190" y="236" width="130" height="28"/><text class="t" x="200" y="255">TWIST1</text>
+  <rect class="alt" x="320" y="236" width="270" height="28"/><text class="t" x="330" y="255">Saethre-Chotzen syndrome</text>
+  <rect class="alt" x="590" y="236" width="270" height="28"/><text class="t" x="600" y="255">premature suture fusion</text>
+
+  <rect class="cell" x="20" y="264" width="170" height="28"/><text class="tb" x="30" y="283">HMG box</text>
+  <rect class="cell" x="190" y="264" width="130" height="28"/><text class="t" x="200" y="283">SRY, SOX9</text>
+  <rect class="cell" x="320" y="264" width="270" height="28"/><text class="t" x="330" y="283">46,XY sex reversal; campomelic dysplasia</text>
+  <rect class="cell" x="590" y="264" width="270" height="28"/><text class="t" x="600" y="283">a single switch sets a whole pathway</text>
+
+  <rect class="alt" x="20" y="292" width="170" height="28"/><text class="tb" x="30" y="311">Nuclear receptor</text>
+  <rect class="alt" x="190" y="292" width="130" height="28"/><text class="t" x="200" y="311">AR, THRB, VDR</text>
+  <rect class="alt" x="320" y="292" width="270" height="28"/><text class="t" x="330" y="311">androgen insensitivity; thyroid hormone</text>
+  <text class="t" x="330" y="326">resistance; vitamin D-resistant rickets</text>
+  <rect class="alt" x="590" y="292" width="270" height="36"/>
+  <text class="t" x="600" y="311">hormone is present and high, yet the</text>
+  <text class="t" x="600" y="326">target tissue does not respond</text>
+  <rect class="alt" x="20" y="320" width="300" height="8"/>
+
+  <rect class="cell" x="20" y="328" width="170" height="28"/><text class="tb" x="30" y="347">Coactivator</text>
+  <rect class="cell" x="190" y="328" width="130" height="28"/><text class="t" x="200" y="347">CREBBP</text>
+  <rect class="cell" x="320" y="328" width="270" height="28"/><text class="t" x="330" y="347">Rubinstein-Taybi syndrome</text>
+  <rect class="cell" x="590" y="328" width="270" height="28"/><text class="t" x="600" y="347">lost histone acetyltransferase activity</text>
+
+  <text class="sub" x="20" y="378">Transcription factors are dosage sensitive, so many of these conditions are dominant through haploinsufficiency rather than through a changed protein.</text>
+  <text class="sub" x="20" y="396">A fusion factor can instead act as a fixed repressor: PML-RARA in acute promyelocytic leukaemia, reversed by pharmacologic all-trans retinoic acid.</text>
+</svg>

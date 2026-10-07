@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 400" width="860" height="400" role="img"
+     aria-label="Restriction enzyme recognition sites, sticky and blunt ends, and the joining of two DNA fragments cut with the same enzyme followed by ligation">
+  <style>
+    .ttl{font:700 15px sans-serif;fill:#003c71}
+    .hd{font:700 12.5px sans-serif;fill:#003c71}
+    .seq{font:700 14px monospace;fill:#16191d}
+    .lab{font:700 11.5px sans-serif;fill:#16191d}
+    .sub{font:11px sans-serif;fill:#4a5159}
+    .box{fill:#ffffff;stroke:#c6d2dd;stroke-width:1.3}
+    .hl{fill:#fff5d6;stroke:#f2b705;stroke-width:1.6}
+    .cut{stroke:#003c71;stroke-width:2.6;fill:none}
+    .ar{stroke:#16191d;stroke-width:2.2;fill:none;marker-end:url(#ax)}
+  </style>
+  <defs>
+    <marker id="ax" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#16191d"/></marker>
+  </defs>
+  <text class="ttl" x="26" y="24">Restriction enzymes and the making of recombinant DNA</text>
+
+  <rect class="hl" x="26" y="40" width="380" height="110" rx="6"/>
+  <text class="hd" x="38" y="62">EcoRI site is a palindrome</text>
+  <text class="seq" x="60" y="92">5'- G A A T T C -3'</text>
+  <text class="seq" x="60" y="118">3'- C T T A A G -5'</text>
+  <path class="cut" d="M78 76 L78 98 L196 98 L196 124"/>
+  <text class="sub" x="38" y="142">Read 5' to 3', both strands give the same sequence. Cuts are staggered.</text>
+
+  <rect class="box" x="424" y="40" width="410" height="110" rx="6"/>
+  <text class="hd" x="436" y="62">Cut styles</text>
+  <text class="lab" x="436" y="86">Sticky end (EcoRI, BamHI, HindIII, PstI)</text>
+  <text class="sub" x="436" y="102">staggered cut leaves a short single-stranded overhang</text>
+  <text class="lab" x="436" y="124">Blunt end (SmaI)</text>
+  <text class="sub" x="436" y="140">both strands cut at the same position, no overhang</text>
+
+  <text class="hd" x="26" y="182">Two different DNAs cut with the SAME enzyme have complementary overhangs</text>
+
+  <g>
+    <rect x="60" y="200" width="150" height="22" fill="#eff4f8" stroke="#16191d" stroke-width="1.6"/>
+    <rect x="60" y="222" width="122" height="22" fill="#eff4f8" stroke="#16191d" stroke-width="1.6"/>
+    <text class="sub" x="60" y="192">vector DNA</text>
+    <text class="seq" x="186" y="216">AATT</text>
+    <rect x="320" y="200" width="150" height="22" fill="#fff5d6" stroke="#16191d" stroke-width="1.6"/>
+    <rect x="348" y="222" width="122" height="22" fill="#fff5d6" stroke="#16191d" stroke-width="1.6"/>
+    <text class="sub" x="320" y="192">insert DNA</text>
+    <text class="seq" x="292" y="240">TTAA</text>
+  </g>
+  <path class="ar" d="M490 222 L540 222"/>
+  <text class="sub" x="492" y="212">anneal</text>
+
+  <g>
+    <rect x="560" y="200" width="130" height="22" fill="#eff4f8" stroke="#16191d" stroke-width="1.6"/>
+    <rect x="690" y="200" width="130" height="22" fill="#fff5d6" stroke="#16191d" stroke-width="1.6"/>
+    <rect x="560" y="222" width="130" height="22" fill="#eff4f8" stroke="#16191d" stroke-width="1.6"/>
+    <rect x="690" y="222" width="130" height="22" fill="#fff5d6" stroke="#16191d" stroke-width="1.6"/>
+    <path class="cut" d="M690 198 L690 246" stroke="#f2b705" stroke-width="3"/>
+    <text class="lab" x="636" y="266">DNA LIGASE seals both strands</text>
+    <text class="sub" x="624" y="282">new phosphodiester bonds</text>
+  </g>
+
+  <rect class="box" x="26" y="300" width="400" height="88" rx="6"/>
+  <text class="hd" x="38" y="322">Site length sets the cutting frequency</text>
+  <text class="sub" x="38" y="344">A 4 bp site occurs on average every 4^4 = 256 bp.</text>
+  <text class="sub" x="38" y="362">A 6 bp site every 4^6 = 4096 bp.</text>
+  <text class="sub" x="38" y="380">An 8 bp site every 4^8 = 65536 bp, used for large DNA.</text>
+
+  <rect class="box" x="440" y="300" width="394" height="88" rx="6"/>
+  <text class="hd" x="452" y="322">Why bacteria have these enzymes</text>
+  <text class="sub" x="452" y="344">They cut incoming phage DNA as a defence.</text>
+  <text class="sub" x="452" y="362">The host's own sites are methylated, so they are spared.</text>
+  <text class="sub" x="452" y="380">Research value: the same DNA is always cut at the same place.</text>
+</svg>

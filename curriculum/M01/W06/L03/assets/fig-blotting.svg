@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 420" width="860" height="420" role="img"
+     aria-label="Southern, Northern and Western blot compared by target molecule, separation method and detection, with fluorescence in situ hybridization shown alongside">
+  <style>
+    .ttl{font:700 15px sans-serif;fill:#003c71}
+    .hd{font:700 12.5px sans-serif;fill:#003c71}
+    .lab{font:700 11.5px sans-serif;fill:#16191d}
+    .sub{font:11px sans-serif;fill:#4a5159}
+    .box{fill:#ffffff;stroke:#c6d2dd;stroke-width:1.3}
+    .hl{fill:#fff5d6;stroke:#f2b705;stroke-width:1.6}
+    .gel{fill:#eff4f8;stroke:#16191d;stroke-width:1.8}
+    .band{fill:#16191d}
+    .ar{stroke:#16191d;stroke-width:2;fill:none;marker-end:url(#ab1)}
+  </style>
+  <defs>
+    <marker id="ab1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#16191d"/></marker>
+  </defs>
+  <text class="ttl" x="26" y="24">Blotting: separate, transfer, then detect</text>
+
+  <g transform="translate(30,42)">
+    <rect class="box" x="0" y="0" width="246" height="238" rx="6"/>
+    <text class="hd" x="12" y="24">SOUTHERN blot - DNA</text>
+    <text class="sub" x="12" y="46">1. cut genomic DNA with a restriction enzyme</text>
+    <text class="sub" x="12" y="62">2. agarose electrophoresis by size</text>
+    <rect class="gel" x="60" y="74" width="120" height="86"/>
+    <rect class="band" x="72" y="92" width="94" height="5"/>
+    <rect class="band" x="72" y="118" width="94" height="5"/>
+    <text class="sub" x="12" y="180">3. transfer to a nylon membrane</text>
+    <text class="sub" x="12" y="196">4. hybridise a labelled DNA probe</text>
+    <text class="lab" x="12" y="220">Shows: presence, rearrangement,</text>
+    <text class="lab" x="12" y="234">deletion, insertion of a gene</text>
+  </g>
+
+  <g transform="translate(306,42)">
+    <rect class="box" x="0" y="0" width="246" height="238" rx="6"/>
+    <text class="hd" x="12" y="24">NORTHERN blot - RNA</text>
+    <text class="sub" x="12" y="46">1. extract total RNA (no enzyme cut)</text>
+    <text class="sub" x="12" y="62">2. electrophoresis under denaturing conditions</text>
+    <rect class="gel" x="60" y="74" width="120" height="86"/>
+    <rect class="band" x="72" y="100" width="94" height="5"/>
+    <text class="sub" x="12" y="180">3. transfer to a membrane</text>
+    <text class="sub" x="12" y="196">4. hybridise a labelled probe</text>
+    <text class="lab" x="12" y="220">Shows: amount and SIZE of a given</text>
+    <text class="lab" x="12" y="234">mRNA, so splice differences show up</text>
+  </g>
+
+  <g transform="translate(582,42)">
+    <rect class="hl" x="0" y="0" width="246" height="238" rx="6"/>
+    <text class="hd" x="12" y="24">WESTERN blot - PROTEIN</text>
+    <text class="sub" x="12" y="46">1. lyse cells, denature in SDS</text>
+    <text class="sub" x="12" y="62">2. SDS-PAGE by molecular weight</text>
+    <rect class="gel" x="60" y="74" width="120" height="86"/>
+    <rect class="band" x="72" y="108" width="94" height="6"/>
+    <text class="sub" x="12" y="180">3. transfer to a membrane</text>
+    <text class="sub" x="12" y="196">4. detect with a specific ANTIBODY</text>
+    <text class="lab" x="12" y="220">Not hybridisation. Phospho-specific</text>
+    <text class="lab" x="12" y="234">antibodies also report modification.</text>
+  </g>
+
+  <rect class="box" x="26" y="294" width="400" height="116" rx="6"/>
+  <text class="hd" x="38" y="316">Stringency controls how exact the match must be</text>
+  <text class="sub" x="38" y="338">High stringency: higher temperature, lower salt. Only perfect</text>
+  <text class="sub" x="38" y="354">matches stay paired.</text>
+  <text class="sub" x="38" y="376">Low stringency: lower temperature, higher salt. A few mismatches</text>
+  <text class="sub" x="38" y="392">are tolerated, which is how homologues in other species are found.</text>
+
+  <rect class="box" x="440" y="294" width="394" height="116" rx="6"/>
+  <text class="hd" x="452" y="316">Hybridisation without a membrane</text>
+  <text class="lab" x="452" y="340">in situ hybridisation</text>
+  <text class="sub" x="452" y="356">locates a specific mRNA within a tissue section</text>
+  <text class="lab" x="452" y="380">FISH (fluorescence in situ hybridisation)</text>
+  <text class="sub" x="452" y="396">marks a sequence on the chromosome; detects deletion, duplication, translocation</text>
+</svg>

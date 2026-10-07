@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 420" width="860" height="420" role="img"
+     aria-label="Sanger dideoxy sequencing with chain termination and capillary separation compared with next generation sequencing by library preparation, cluster amplification and sequencing by synthesis">
+  <style>
+    .ttl{font:700 15px sans-serif;fill:#003c71}
+    .hd{font:700 12.5px sans-serif;fill:#003c71}
+    .lab{font:700 11.5px sans-serif;fill:#16191d}
+    .sub{font:11px sans-serif;fill:#4a5159}
+    .box{fill:#ffffff;stroke:#c6d2dd;stroke-width:1.3}
+    .hl{fill:#fff5d6;stroke:#f2b705;stroke-width:1.6}
+    .dna{stroke:#16191d;stroke-width:2.6;fill:none}
+    .ar{stroke:#16191d;stroke-width:2;fill:none;marker-end:url(#as)}
+  </style>
+  <defs>
+    <marker id="as" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#16191d"/></marker>
+  </defs>
+  <text class="ttl" x="26" y="24">Two ways to read a DNA sequence</text>
+
+  <rect class="box" x="26" y="38" width="400" height="236" rx="6"/>
+  <text class="hd" x="38" y="60">A. Sanger (dideoxy) sequencing</text>
+  <text class="sub" x="38" y="80">ddNTP lacks the 3' hydroxyl, so the chain stops where it is incorporated.</text>
+  <text class="sub" x="38" y="96">Added in small amounts, so each chain stops at a different position.</text>
+
+  <g class="dna">
+    <line x1="56" y1="120" x2="110" y2="120"/>
+    <line x1="56" y1="140" x2="140" y2="140"/>
+    <line x1="56" y1="160" x2="170" y2="160"/>
+    <line x1="56" y1="180" x2="200" y2="180"/>
+    <line x1="56" y1="200" x2="230" y2="200"/>
+  </g>
+  <circle cx="116" cy="120" r="6" fill="#f2b705" stroke="#16191d"/>
+  <circle cx="146" cy="140" r="6" fill="#003c71"/>
+  <circle cx="176" cy="160" r="6" fill="#4a5159"/>
+  <circle cx="206" cy="180" r="6" fill="#f2b705" stroke="#16191d"/>
+  <circle cx="236" cy="200" r="6" fill="#003c71"/>
+  <text class="sub" x="256" y="124">each ddNTP carries its own</text>
+  <text class="sub" x="256" y="140">fluorescent colour</text>
+  <text class="sub" x="256" y="172">fragments differ by one</text>
+  <text class="sub" x="256" y="188">nucleotide in length</text>
+  <path class="ar" d="M56 222 L380 222"/>
+  <text class="sub" x="38" y="244">capillary electrophoresis separates by length; reading the colours in order gives the sequence</text>
+  <text class="lab" x="38" y="266">700-1000 bp per read, very accurate, one region per reaction</text>
+
+  <rect class="hl" x="440" y="38" width="394" height="236" rx="6"/>
+  <text class="hd" x="452" y="60">B. Next-generation sequencing</text>
+  <text class="lab" x="452" y="84">1. Library preparation</text>
+  <text class="sub" x="452" y="100">fragment DNA to a few hundred bp, add adapters at both ends</text>
+  <text class="lab" x="452" y="124">2. Cluster amplification</text>
+  <text class="sub" x="452" y="140">fix each fragment to a spot on a surface and amplify it in place</text>
+  <g>
+    <circle cx="470" cy="164" r="8" fill="#003c71" opacity="0.5"/>
+    <circle cx="500" cy="170" r="8" fill="#f2b705"/>
+    <circle cx="530" cy="162" r="8" fill="#4a5159" opacity="0.6"/>
+    <circle cx="560" cy="172" r="8" fill="#003c71" opacity="0.5"/>
+    <circle cx="590" cy="164" r="8" fill="#f2b705"/>
+    <circle cx="620" cy="170" r="8" fill="#4a5159" opacity="0.6"/>
+    <circle cx="650" cy="162" r="8" fill="#003c71" opacity="0.5"/>
+    <circle cx="680" cy="172" r="8" fill="#f2b705"/>
+  </g>
+  <text class="lab" x="452" y="202">3. Sequencing by synthesis</text>
+  <text class="sub" x="452" y="218">add one labelled nucleotide at a time and image the whole surface;</text>
+  <text class="sub" x="452" y="234">hundreds of millions of spots are read in parallel</text>
+  <text class="lab" x="452" y="258">4. Align short reads to a reference, or assemble them by overlap</text>
+
+  <rect class="box" x="26" y="290" width="808" height="120" rx="6"/>
+  <text class="hd" x="38" y="312">Comparison and applications</text>
+  <text class="lab" x="38" y="336">Sanger: 700-1000 bp, kb per run, highest accuracy; confirming a single variant</text>
+  <text class="lab" x="38" y="358">Short-read NGS: 100-300 bp, hundreds of Gb per run; whole genome and transcriptome</text>
+  <text class="lab" x="38" y="380">Long-read NGS: 10-100 kb; repeat regions and structural variants</text>
+  <text class="sub" x="38" y="402">Built on NGS: whole genome sequencing, exome sequencing, RNA-seq, ChIP-seq, single-cell RNA-seq. The Human Genome Project needed 13 years with Sanger chemistry.</text>
+</svg>

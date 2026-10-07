@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 420" width="860" height="420" role="img"
+     aria-label="The three steps of a PCR cycle with temperatures, how primers define the product boundaries, and exponential amplification reaching a plateau">
+  <style>
+    .ttl{font:700 15px sans-serif;fill:#003c71}
+    .hd{font:700 12.5px sans-serif;fill:#003c71}
+    .lab{font:700 11.5px sans-serif;fill:#16191d}
+    .sub{font:11px sans-serif;fill:#4a5159}
+    .dna{stroke:#16191d;stroke-width:3;fill:none}
+    .new{stroke:#003c71;stroke-width:3;fill:none}
+    .pr{stroke:#f2b705;stroke-width:4;fill:none}
+    .box{fill:#ffffff;stroke:#c6d2dd;stroke-width:1.3}
+    .hl{fill:#fff5d6;stroke:#f2b705;stroke-width:1.6}
+    .ar{stroke:#16191d;stroke-width:2.2;fill:none;marker-end:url(#az)}
+    .ax{stroke:#16191d;stroke-width:2}
+  </style>
+  <defs>
+    <marker id="az" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#16191d"/></marker>
+  </defs>
+  <text class="ttl" x="26" y="24">PCR: three steps repeated 25 to 40 times</text>
+
+  <rect class="box" x="26" y="38" width="250" height="118" rx="6"/>
+  <text class="hd" x="38" y="60">1. DENATURATION, 94-96 C</text>
+  <path class="dna" d="M50 92 L250 92"/>
+  <path class="dna" d="M50 128 L250 128"/>
+  <text class="sub" x="38" y="150">15-30 s; the two strands separate</text>
+  <text class="sub" x="256" y="96">5'</text>
+  <text class="sub" x="256" y="132">3'</text>
+
+  <rect class="box" x="296" y="38" width="250" height="118" rx="6"/>
+  <text class="hd" x="308" y="60">2. ANNEALING, 50-65 C</text>
+  <path class="dna" d="M320 92 L520 92"/>
+  <path class="dna" d="M320 128 L520 128"/>
+  <path class="pr" d="M452 96 L492 96"/>
+  <path class="pr" d="M348 124 L388 124"/>
+  <text class="sub" x="308" y="150">primers bind; use Tm minus about 5 C</text>
+
+  <rect class="hl" x="566" y="38" width="268" height="118" rx="6"/>
+  <text class="hd" x="578" y="60">3. EXTENSION, 72 C</text>
+  <path class="dna" d="M590 92 L790 92"/>
+  <path class="dna" d="M590 128 L790 128"/>
+  <path class="pr" d="M722 96 L762 96"/>
+  <path class="new" d="M722 96 L600 96"/>
+  <path class="pr" d="M618 124 L658 124"/>
+  <path class="new" d="M658 124 L780 124"/>
+  <text class="sub" x="578" y="150">Taq polymerase extends from each 3' end</text>
+
+  <rect class="box" x="26" y="174" width="400" height="118" rx="6"/>
+  <text class="hd" x="38" y="196">Primers define the product</text>
+  <text class="sub" x="38" y="218">Cycle 1 copies run past the primer site, so their length varies.</text>
+  <text class="sub" x="38" y="236">From cycle 3 on, the template itself starts at a primer sequence,</text>
+  <text class="sub" x="38" y="254">so the product has a fixed length set by BOTH primers.</text>
+  <text class="sub" x="38" y="276">Only that product doubles each cycle, so it comes to dominate.</text>
+
+  <rect class="box" x="440" y="174" width="394" height="118" rx="6"/>
+  <text class="hd" x="452" y="196">Primer design rules</text>
+  <text class="sub" x="452" y="218">length 18-25 nucleotides; GC content 40-60 percent</text>
+  <text class="sub" x="452" y="236">melting temperatures of the pair within 5 C of each other</text>
+  <text class="sub" x="452" y="254">no complementarity at the 3' ends, so primers do not pair</text>
+  <text class="sub" x="452" y="272">no match elsewhere in the genome</text>
+
+  <rect class="box" x="26" y="306" width="400" height="106" rx="6"/>
+  <text class="hd" x="38" y="326">Exponential growth then plateau</text>
+  <line class="ax" x1="60" y1="396" x2="400" y2="396"/>
+  <line class="ax" x1="60" y1="396" x2="60" y2="336"/>
+  <path d="M60 396 q140 0 180 -30 q50 -28 150 -26" stroke="#003c71" stroke-width="2.6" fill="none"/>
+  <text class="sub" x="300" y="392">cycles</text>
+  <text class="sub" x="68" y="348">2^n, until dNTPs and enzyme run out</text>
+
+  <rect class="box" x="440" y="306" width="394" height="106" rx="6"/>
+  <text class="hd" x="452" y="326">Variants</text>
+  <text class="sub" x="452" y="348">RT-PCR: reverse transcriptase first, so RNA can be the target</text>
+  <text class="sub" x="452" y="366">qPCR: fluorescence read each cycle; a lower Ct means more template,</text>
+  <text class="sub" x="452" y="382">and a twofold difference shifts Ct by one cycle</text>
+  <text class="sub" x="452" y="400">digital PCR: split into many partitions and count positives</text>
+</svg>

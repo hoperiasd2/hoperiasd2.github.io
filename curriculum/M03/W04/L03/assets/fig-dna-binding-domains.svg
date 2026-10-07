@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 420" width="880" height="420" role="img"
+     aria-label="Four classes of DNA-binding domain: zinc finger, leucine zipper, helix-turn-helix homeodomain and basic helix-loop-helix, with representative human factors">
+  <style>
+    .ttl { font:700 14px sans-serif; fill:#003c71; }
+    .nm { font:700 12px sans-serif; fill:#003c71; }
+    .sub { font:11px sans-serif; fill:#4a5159; }
+    .dna { stroke:#16191d; stroke-width:2.4; fill:none; }
+    .hel { stroke:#003c71; stroke-width:7; fill:none; stroke-linecap:round; }
+    .hel2 { stroke:#f2b705; stroke-width:7; fill:none; stroke-linecap:round; }
+    .bb { stroke:#16191d; stroke-width:1.8; fill:none; }
+    .zn { fill:#f2b705; stroke:#16191d; stroke-width:1.2; }
+    .lb { font:700 10px sans-serif; fill:#16191d; }
+    .gene { font:700 11px sans-serif; fill:#8a6300; }
+  </style>
+  <text class="ttl" x="20" y="24">Four common DNA-binding folds. In each case an alpha-helix lies in the major groove.</text>
+
+  <g>
+    <text class="nm" x="24" y="62">1. Zinc finger (C2H2)</text>
+    <path class="dna" d="M24 170 C70 150 120 190 166 170 C212 150 262 190 308 170"/>
+    <path class="hel" d="M70 148 L96 126"/>
+    <path class="hel" d="M150 148 L176 126"/>
+    <path class="hel" d="M230 148 L256 126"/>
+    <circle class="zn" cx="104" cy="112" r="10"/><text class="lb" x="98" y="116">Zn</text>
+    <circle class="zn" cx="184" cy="112" r="10"/><text class="lb" x="178" y="116">Zn</text>
+    <circle class="zn" cx="264" cy="112" r="10"/><text class="lb" x="258" y="116">Zn</text>
+    <path class="bb" d="M104 102 C130 82 158 82 184 102 C210 82 238 82 264 102"/>
+    <text class="sub" x="24" y="196">About 30 residues per finger; one Zn is held by</text>
+    <text class="sub" x="24" y="212">two Cys and two His. Fingers repeat in tandem,</text>
+    <text class="sub" x="24" y="228">so each extra finger adds sequence specificity.</text>
+    <text class="gene" x="24" y="250">Sp1, EGR1, WT1, GLI3, GATA1</text>
+  </g>
+
+  <g>
+    <text class="nm" x="340" y="62">2. Leucine zipper (bZIP)</text>
+    <path class="dna" d="M340 170 C386 150 436 190 482 170 C528 150 578 190 624 170"/>
+    <path class="hel" d="M404 154 L440 128"/>
+    <path class="hel2" d="M560 154 L524 128"/>
+    <path class="hel" d="M440 128 L470 96"/>
+    <path class="hel2" d="M524 128 L494 96"/>
+    <text class="lb" x="454" y="90">L</text><text class="lb" x="500" y="90">L</text>
+    <text class="lb" x="462" y="112">L</text><text class="lb" x="494" y="112">L</text>
+    <text class="sub" x="340" y="196">A leucine every seventh residue lines up along one</text>
+    <text class="sub" x="340" y="212">face and zips two helices together. Only the dimer</text>
+    <text class="sub" x="340" y="228">binds DNA, through its basic region.</text>
+    <text class="gene" x="340" y="250">CREB, C/EBP, AP-1 (Jun and Fos), NRF2</text>
+  </g>
+
+  <g>
+    <text class="nm" x="24" y="294">3. Helix-turn-helix (homeodomain)</text>
+    <path class="dna" d="M24 390 C70 370 120 410 166 390 C212 370 262 410 308 390"/>
+    <path class="hel" d="M140 372 L196 350"/>
+    <text class="lb" x="200" y="348">helix 3 in the major groove</text>
+    <path class="hel2" d="M120 338 L176 320"/>
+    <path class="hel2" d="M96 312 L150 296"/>
+    <path class="bb" d="M176 320 C190 330 146 342 140 372"/>
+    <text class="sub" x="24" y="412">60 residues, three helices; helix 3 reads the sequence. Found in developmental regulators: HOX, PAX, PITX2, POU1F1</text>
+  </g>
+
+  <g>
+    <text class="nm" x="400" y="294">4. Basic helix-loop-helix</text>
+    <path class="dna" d="M400 390 C446 370 496 410 542 390 C588 370 638 410 684 390"/>
+    <path class="hel" d="M466 372 L500 344"/>
+    <path class="hel2" d="M620 372 L586 344"/>
+    <path class="bb" d="M500 344 C510 318 560 316 572 340 C578 352 584 346 586 344"/>
+    <text class="sub" x="700" y="330">Also an obligate dimer.</text>
+    <text class="sub" x="700" y="348">Partner choice decides</text>
+    <text class="sub" x="700" y="366">which genes respond.</text>
+    <text class="gene" x="400" y="412">MyoD, TWIST1, HIF-1 alpha, MYC with MAX</text>
+  </g>
+</svg>

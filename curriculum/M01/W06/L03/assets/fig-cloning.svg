@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 420" width="860" height="420" role="img"
+     aria-label="Plasmid cloning workflow: cutting, ligation, transformation, antibiotic selection and colony screening, with the three required elements of a vector">
+  <style>
+    .ttl{font:700 15px sans-serif;fill:#003c71}
+    .hd{font:700 12.5px sans-serif;fill:#003c71}
+    .lab{font:700 11.5px sans-serif;fill:#16191d}
+    .sub{font:11px sans-serif;fill:#4a5159}
+    .pl{fill:none;stroke:#003c71;stroke-width:3}
+    .ins{fill:#fff5d6;stroke:#16191d;stroke-width:1.8}
+    .box{fill:#ffffff;stroke:#c6d2dd;stroke-width:1.3}
+    .ar{stroke:#16191d;stroke-width:2.2;fill:none;marker-end:url(#ay)}
+    .dish{fill:#eff4f8;stroke:#16191d;stroke-width:2}
+  </style>
+  <defs>
+    <marker id="ay" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#16191d"/></marker>
+  </defs>
+  <text class="ttl" x="26" y="24">Cloning a gene in a plasmid vector</text>
+
+  <circle class="pl" cx="106" cy="120" r="54"/>
+  <rect class="ins" x="94" y="60" width="26" height="14" rx="2"/>
+  <text class="sub" x="124" y="62">cloning site</text>
+  <text class="lab" x="56" y="192">1. CUT</text>
+  <text class="sub" x="40" y="208">vector and insert with</text>
+  <text class="sub" x="40" y="222">the same enzyme</text>
+  <rect class="ins" x="60" y="236" width="90" height="16" rx="2"/>
+  <text class="sub" x="60" y="266">insert (gene of interest)</text>
+
+  <path class="ar" d="M178 130 L222 130"/>
+
+  <circle class="pl" cx="296" cy="120" r="54"/>
+  <path class="ins" d="M268 68 a54 54 0 0 1 56 0 l0 14 a54 54 0 0 0 -56 0 z"/>
+  <text class="lab" x="246" y="192">2. LIGATE</text>
+  <text class="sub" x="230" y="208">DNA ligase seals the</text>
+  <text class="sub" x="230" y="222">insert into the vector</text>
+  <text class="sub" x="230" y="244">efficiency is low: vectors</text>
+  <text class="sub" x="230" y="258">often reclose on themselves</text>
+
+  <path class="ar" d="M366 130 L410 130"/>
+
+  <ellipse cx="490" cy="120" rx="58" ry="34" fill="#ffffff" stroke="#16191d" stroke-width="2.4"/>
+  <circle class="pl" cx="490" cy="120" r="20" stroke-width="2"/>
+  <text class="lab" x="438" y="192">3. TRANSFORM</text>
+  <text class="sub" x="424" y="208">into E. coli by CaCl2 and</text>
+  <text class="sub" x="424" y="222">heat shock, or electroporation</text>
+
+  <path class="ar" d="M558 130 L602 130"/>
+
+  <circle class="dish" cx="700" cy="120" r="62"/>
+  <circle cx="676" cy="102" r="7" fill="#ffffff" stroke="#16191d"/>
+  <circle cx="712" cy="96" r="7" fill="#003c71"/>
+  <circle cx="692" cy="140" r="7" fill="#ffffff" stroke="#16191d"/>
+  <circle cx="726" cy="134" r="7" fill="#003c71"/>
+  <text class="lab" x="630" y="208">4. SELECT and 5. SCREEN</text>
+  <text class="sub" x="630" y="226">antibiotic plate: only cells carrying the vector grow</text>
+  <text class="sub" x="630" y="242">X-gal: white colony has an insert (lacZ disrupted),</text>
+  <text class="sub" x="630" y="258">blue colony has an empty vector</text>
+
+  <rect class="box" x="26" y="286" width="400" height="124" rx="6"/>
+  <text class="hd" x="38" y="308">A vector must carry three things</text>
+  <text class="lab" x="38" y="332">replication origin</text>
+  <text class="sub" x="38" y="348">so it copies itself in the host</text>
+  <text class="lab" x="38" y="368">selectable marker</text>
+  <text class="sub" x="38" y="384">usually antibiotic resistance</text>
+  <text class="lab" x="238" y="332">cloning site</text>
+  <text class="sub" x="238" y="348">a cluster of restriction sites</text>
+  <text class="sub" x="38" y="404">One colony grows from one cell, so all its plasmids are identical. That is cloning.</text>
+
+  <rect class="box" x="440" y="286" width="394" height="124" rx="6"/>
+  <text class="hd" x="452" y="308">Vector capacity, and two kinds of library</text>
+  <text class="sub" x="452" y="330">plasmid 15 kb / phage lambda 20 kb / cosmid 45 kb /</text>
+  <text class="sub" x="452" y="346">BAC 300 kb / YAC 1000 kb</text>
+  <text class="lab" x="452" y="368">genomic library: cut genomic DNA; has introns and</text>
+  <text class="sub" x="452" y="382">regulatory sequences</text>
+  <text class="lab" x="452" y="402">cDNA library: made from mRNA; no introns, only the genes expressed in that tissue</text>
+</svg>
