@@ -1,4 +1,77 @@
 {
   "lesson_id": "M03-W04-L03",
-  "figures": []
+  "figures": [
+    {
+      "figure_id": "fig-tf-modular",
+      "lesson_id": "M03-W04-L03",
+      "html_anchor": "#fig-tf-modular",
+      "caption": "전사인자의 모듈 구조. DNA 결합 도메인이 작용 위치를, 활성화 도메인과 수정 상태가 작용 강도를 정한다.",
+      "asset_path": "assets/fig-tf-modular.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-dna-binding-domains",
+      "lesson_id": "M03-W04-L03",
+      "html_anchor": "#fig-dna-binding-domains",
+      "caption": "네 가지 DNA 결합 도메인의 구조. zinc finger, leucine zipper, homeodomain, bHLH가 각각 다른 방식으로 α-helix를 major groove에 놓는다.",
+      "asset_path": "assets/fig-dna-binding-domains.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-enhancer-loop",
+      "lesson_id": "M03-W04-L03",
+      "html_anchor": "#fig-enhancer-loop",
+      "caption": "Enhancer의 작동. DNA 고리를 통한 promoter 접근, insulator에 의한 영역 구분, 그리고 염색체 재배열에 의한 enhancer 탈취를 보인다.",
+      "asset_path": "assets/fig-enhancer-loop.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-nuclear-receptor",
+      "lesson_id": "M03-W04-L03",
+      "html_anchor": "#fig-nuclear-receptor",
+      "caption": "Type I과 type II 핵수용체의 비교. steroid 수용체는 세포질에서 붙잡혀 있다가 리간드와 함께 핵으로 들어가고, thyroid hormone 수용체는 이미 DNA에 붙어 corepressor와 함께 억제하고 있다.",
+      "asset_path": "assets/fig-nuclear-receptor.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-network",
+      "lesson_id": "M03-W04-L03",
+      "html_anchor": "#fig-network",
+      "caption": "전사 조절 네트워크의 네 가지 구조. 계층적 연쇄, 양성 되먹임에 의한 상태 고정, 음성 되먹임에 의한 반응 제한을 보인다.",
+      "asset_path": "assets/fig-network.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-tf-disease",
+      "lesson_id": "M03-W04-L03",
+      "html_anchor": "#fig-tf-disease",
+      "caption": "전사인자와 coactivator 결함이 만드는 질환. 도메인 유형별로 대표 유전자와 기전을 정리한다.",
+      "asset_path": "assets/fig-tf-disease.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    }
+  ]
 }

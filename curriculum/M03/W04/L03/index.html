@@ -3,9 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>M03-W04-L03 전사인자·enhancer와 조절 네트워크 [33장]</title>
-<meta name="description" content="전사인자·enhancer와 조절 네트워크 [33장]">
+<title>전사인자·enhancer와 조절 네트워크 · M03-W04-L03</title>
+<meta name="description" content="전사인자·enhancer와 조절 네트워크">
 <link rel="stylesheet" href="../../../../assets/site.css">
+<link rel="stylesheet" href="../../../../assets/lesson.css">
 </head>
 <body>
 
@@ -15,49 +16,111 @@
     <nav>
       <a href="../../../../curriculum/index.html">전체 수업</a>
       <a href="../../../../curriculum/M07/index.html">실습</a>
-      <a href="../../../../archive/lectures/index.html">강의록 아카이브</a>
+      <a href="../../../../archive/index.html">아카이브</a>
     </nav>
   </div>
 </header>
 
-<main class="wrap">
-<nav class="crumb" aria-label="이동 경로"><a href="../../../../index.html">대문</a><span aria-hidden="true">›</span><a href="../../../index.html">전체 수업</a><span aria-hidden="true">›</span><a href="../../index.html">M03</a><span aria-hidden="true">›</span><a href="../index.html">4주차</a><span aria-hidden="true">›</span><span>M03-W04-L03</span></nav>
+<main class="wrap wrap--narrow lesson">
+<nav class="crumb" aria-label="이동 경로"><a href="../../../../index.html">대문</a><span aria-hidden="true">›</span><a href="../../../../curriculum/index.html">전체 수업</a><span aria-hidden="true">›</span><a href="../../index.html">M03</a><span aria-hidden="true">›</span><a href="../index.html">4주차</a><span aria-hidden="true">›</span><span>M03-W04-L03</span></nav>
 
   <section class="hero">
     <p class="eyebrow">M03-W04-L03 · 분자유전학과 계통별 의학생화학특론</p>
-    <h1>전사인자·enhancer와 조절 네트워크 [33장]</h1>
-    <p class="lede">강의 수업 · 상태 <span class="badge badge--design">설계</span></p>
+    <h1>전사인자·enhancer와 조절 네트워크</h1>
+    <p class="en">Transcription Factors, Enhancers and Regulatory Networks</p>
   </section>
-
-  
-  <div class="callout">이 수업은 아직 집필 전이다. 제작 기준은
-  <a href="../../../../PROJECT.md">PROJECT.md</a>의 집필 원칙과 산출물 규격을 따른다.</div>
-
+  <p class="dl"><a class="dlbtn" href="slides.pptx">슬라이드 내려받기 (PPTX)</a></p>
   <h2>학습목표</h2>
-  <p>작성 예정. 이 수업이 답하는 질문 6~9개를 먼저 확정한 뒤 측정 가능한 학습목표로 옮긴다.</p>
-
+  <ul><li>전사인자의 모듈 구조를 설명하고 DNA 결합과 활성화가 별개의 사건인 이유를 설명한다.</li><li>Zinc finger, leucine zipper, helix-turn-helix, helix-loop-helix 도메인의 구조와 대표 인자를 구분한다.</li><li>Enhancer, silencer, insulator의 작동 방식을 DNA 고리와 TAD의 개념으로 설명한다.</li><li>Coactivator, corepressor, mediator가 전사인자와 RNA polymerase II를 연결하는 방식을 설명한다.</li><li>Type I과 type II 핵수용체의 작용 기전을 비교하고 각각의 임상적 예를 든다.</li><li>조절 네트워크의 되먹임 구조가 세포 정체성과 발생에 쓰이는 방식을 설명한다.</li><li>전사인자 이상이 만드는 질환을 기전별로 분류하고 전사를 표적으로 하는 치료를 설명한다.</li></ul>
   <h2>선수지식</h2>
-  <p>작성 예정.</p>
-
-  <h2>본문</h2>
-  <p>작성 예정. 각 절은 하나의 질문에 답하는 단위로 쓰고
-  질문 → 답 → 근거 → 조건과 한계 → 귀결의 순서로 전개한다.</p>
-
+  <ul><li>M03-W04-L02 유전자 발현 조절의 원리와 조절 단위 — promoter 구성, 반응 요소, chromatin 수준의 조절</li><li>M03-W04-L01 번역 후 수정과 단백질 분해 — 인산화와 ubiquitination에 의한 조절</li><li>M02-W09-L02 Cholesterol과 steroid 대사 — steroid 호르몬의 합성과 SREBP 경로</li></ul>
+  <h2>강의 구성</h2>
+  <ol class="qlist"><li><a href="#s1">1. 전사인자의 정의와 모듈 구조</a></li><li><a href="#s2">2. DNA 결합 도메인의 유형</a></li><li><a href="#s3">3. Enhancer, silencer와 염색체 고리</a></li><li><a href="#s4">4. Coactivator, corepressor와 mediator</a></li><li><a href="#s5">5. 핵수용체 — steroid와 thyroid hormone</a></li><li><a href="#s6">6. 조절 네트워크의 구조</a></li><li><a href="#s7">7. 전사인자 이상이 만드는 질환</a></li><li><a href="#s8">8. 전사를 표적으로 하는 치료</a></li></ol>
+  <section id="s1">
+  <h2>1. 전사인자의 정의와 모듈 구조</h2>
+  <p><strong>전사인자(transcription factor)</strong>는 DNA의 특정 서열에 결합해 그 유전자의 전사량을 바꾸는 단백질이다. 사람 유전체에는 전사인자 유전자가 1,500개 이상 있어 단일 기능 분류 중 가장 큰 집단을 이룬다.</p>
+  <p>전사인자의 가장 중요한 구조적 특징은 <strong>기능이 서로 다른 영역에 나뉘어 있다</strong>는 점이다.</p>
+  <ul><li><strong>DNA 결합 도메인</strong>: 6~20 염기쌍의 특정 서열을 인식한다. <strong>어디에</strong> 작용할지를 정한다.</li><li><strong>활성화 도메인(또는 억제 도메인)</strong>: DNA에 직접 닿지 않고 다른 단백질을 불러들인다. <strong>얼마나</strong> 작용할지를 정한다.</li><li><strong>이합체화 도메인</strong>: 다른 전사인자와 짝을 이룬다. 짝의 조합이 표적 서열과 활성을 바꾼다.</li><li><strong>핵 이행 신호(NLS)</strong>: 핵으로 들어가는 데 필요하다.</li><li><strong>리간드 결합 도메인</strong>: 핵수용체에만 있다.</li></ul>
+  <figure class="fig" id="fig-tf-modular"><img src="assets/fig-tf-modular.svg" alt="전사인자의 모듈 구조. DNA 결합 도메인이 작용 위치를, 활성화 도메인과 수정 상태가 작용 강도를 정한다." loading="lazy"><figcaption><b>그림 1</b> 전사인자의 모듈 구조. DNA 결합 도메인이 작용 위치를, 활성화 도메인과 수정 상태가 작용 강도를 정한다.</figcaption></figure>
+  <p>이 구조에서 중요한 결론이 나온다. <strong>전사인자가 DNA에 결합해 있다는 것이 그 유전자가 켜져 있다는 뜻은 아니다.</strong> 결합한 상태에서 활성화 도메인이 인산화되어야 작동하는 인자가 있고, 리간드가 없으면 오히려 억제하는 인자도 있다. 즉 결합과 활성화는 별개의 사건이다.</p>
+  <p>조절되는 지점도 여러 곳이다. 전사인자 자체의 양(전사와 분해), 세포 내 위치(핵과 세포질 사이의 이동), 수정 상태(인산화, acetylation), 짝 단백질의 가용성, 억제 단백질과의 결합이 모두 전사인자의 활성을 바꾼다.</p>
+  <div class="box box--result"><b>핵심 정리</b> <strong>핵심 정리</strong> 전사인자의 조절은 유전자 발현 조절의 조절이다. 전사인자 자체가 전사·번역·수정·분해·이동의 대상이므로, 앞 세 수업에서 배운 모든 조절 수준이 전사인자에 적용된다.</div>
+  </section>
+  <section id="s2">
+  <h2>2. DNA 결합 도메인의 유형</h2>
+  <p>DNA 결합 도메인은 접힘 방식에 따라 몇 가지 유형으로 나뉜다. 유형이 다르지만 공통점이 있다. <strong>대부분 α-helix 하나를 DNA의 major groove에 끼워 넣어 염기와 직접 수소결합을 형성한다.</strong></p>
+  <p><strong>(1) Zinc finger</strong> Cysteine 2개와 histidine 2개가 Zn²⁺ 하나를 붙잡아 약 30개 아미노산의 작은 구조 단위를 만든다. <strong>이 단위가 여러 개 연달아 반복되고, finger 수가 늘면 인식하는 서열이 길어져 특이성이 높아진다.</strong> Sp1, EGR1, WT1, GLI3, GATA1이 이 유형이다. 핵수용체의 DNA 결합 도메인도 cysteine 4개가 Zn을 붙잡는 변형된 zinc finger다.</p>
+  <p><strong>(2) Leucine zipper(bZIP)</strong> 일곱 번째 잔기마다 leucine이 놓여 α-helix의 한쪽 면에 일렬로 늘어서고, 두 helix가 그 면을 맞대 꼬여 이합체를 만든다. 이합체가 되어야 그 옆의 염기성 영역이 DNA에 결합한다. <strong>즉 이합체화가 DNA 결합의 전제 조건이다.</strong> CREB, C/EBP, AP-1(Jun과 Fos의 이합체), NRF2가 이 유형이다.</p>
+  <p><strong>(3) Helix-turn-helix와 homeodomain</strong> 세 개의 helix로 이루어진 약 60개 아미노산의 도메인으로, 세 번째 helix가 major groove에 들어가 서열을 읽는다. <strong>발생 조절 인자에 압도적으로 많다.</strong> HOX 유전자군, PAX 계열, PITX2, POU1F1이 이 유형이다.</p>
+  <p><strong>(4) Basic helix-loop-helix(bHLH)</strong> 두 helix가 고리로 이어진 구조로, leucine zipper처럼 이합체를 이룬 뒤 DNA에 결합한다. MyoD, TWIST1, HIF-1α, MYC(MAX와 이합체)이 이 유형이다.</p>
+  <p><strong>(5) HMG box</strong> DNA의 minor groove에 끼어 들어 DNA를 크게 휘게 만든다. 다른 단백질이 모일 수 있게 DNA 구조를 바꾸는 역할도 한다. SRY, SOX9, TCF/LEF가 이 유형이다.</p>
+  <figure class="fig" id="fig-dna-binding-domains"><img src="assets/fig-dna-binding-domains.svg" alt="네 가지 DNA 결합 도메인의 구조. zinc finger, leucine zipper, homeodomain, bHLH가 각각 다른 방식으로 α-helix를 major groove에 놓는다." loading="lazy"><figcaption><b>그림 2</b> 네 가지 DNA 결합 도메인의 구조. zinc finger, leucine zipper, homeodomain, bHLH가 각각 다른 방식으로 α-helix를 major groove에 놓는다.</figcaption></figure>
+  <div class="tw"><table><thead><tr><th>도메인</th><th>이합체 필요</th><th>구조적 특징</th><th>대표 인자</th><th>관련 질환</th></tr></thead><tbody><tr><td>Zinc finger</td><td>아니오</td><td>Zn 배위, 반복 단위</td><td>Sp1, WT1, GATA1</td><td>Wilms tumor, X 연관 혈소판감소증</td></tr><tr><td>Leucine zipper</td><td>예</td><td>7잔기 주기의 leucine</td><td>CREB, C/EBP, AP-1</td><td>급성 골수백혈병(<em>CEBPA</em>)</td></tr><tr><td>Homeodomain</td><td>아니오(일부 예)</td><td>helix 3이 서열을 읽음</td><td>HOX, PAX6, POU1F1</td><td>무홍채증, 복합 뇌하수체 호르몬 결핍</td></tr><tr><td>bHLH</td><td>예</td><td>짝에 따라 표적이 달라짐</td><td>MyoD, TWIST1, HIF-1α</td><td>Saethre-Chotzen 증후군</td></tr><tr><td>HMG box</td><td>아니오</td><td>minor groove, DNA 굽힘</td><td>SRY, SOX9</td><td>46,XY 성발달 이상, campomelic dysplasia</td></tr></tbody></table></div>
+  <p><strong>이합체화가 필요한 유형에서는 짝의 조합이 조절의 또 다른 층이 된다.</strong> AP-1은 Jun과 Fos의 조합에 따라 결합 서열의 선호와 활성이 달라지고, MYC은 MAX와 짝을 이룰 때만 작동하므로 MAX의 양이 MYC의 작용을 제한한다.</p>
+  </section>
+  <section id="s3">
+  <h2>3. Enhancer, silencer와 염색체 고리</h2>
+  <p>앞 수업에서 enhancer가 위치와 방향에 비교적 자유롭다는 사실을 보았다. 이 절에서는 그것이 어떻게 가능한지를 본다.</p>
+  <p><strong>Enhancer는 전사인자 결합 부위가 여러 개 모여 있는 짧은 DNA 구간</strong>이다. 여기 모인 전사인자들이 하나의 복합체를 이루어 coactivator와 mediator를 끌어들이고, <strong>DNA가 고리를 이루어 enhancer와 promoter가 물리적으로 가까워진다.</strong> 수십 kb에서 1 Mb 떨어진 enhancer가 작동하는 이유가 이 고리에 있다. 고리의 형성은 cohesin과 <strong>CTCF</strong>가 조직한다.</p>
+  <figure class="fig" id="fig-enhancer-loop"><img src="assets/fig-enhancer-loop.svg" alt="Enhancer의 작동. DNA 고리를 통한 promoter 접근, insulator에 의한 영역 구분, 그리고 염색체 재배열에 의한 enhancer 탈취를 보인다." loading="lazy"><figcaption><b>그림 3</b> Enhancer의 작동. DNA 고리를 통한 promoter 접근, insulator에 의한 영역 구분, 그리고 염색체 재배열에 의한 enhancer 탈취를 보인다.</figcaption></figure>
+  <p>Enhancer의 작동 범위는 무제한이 아니다. <strong>Insulator</strong>(CTCF 결합 부위)가 경계를 만들어 enhancer의 영향이 이웃 영역으로 넘어가지 못하게 한다. Insulator로 둘러싸인 구역을 <strong>TAD</strong>(topologically associating domain)라 하고, enhancer는 원칙적으로 같은 TAD 안의 promoter에만 작용한다.</p>
+  <p>이 구조가 임상적으로 중요한 두 가지 결과를 만든다.</p>
+  <ul><li><strong>조절 서열의 변이가 암호 서열의 변이처럼 질환을 만든다.</strong> *SHH*의 사지 발달용 enhancer는 다른 유전자의 intron 안, *SHH*로부터 약 1 Mb 떨어진 곳에 있다. 이 enhancer의 단일염기 변이가 축전성 다지증(preaxial polydactyly)을 일으킨다. <strong>유전체 검사에서 암호 영역만 보면 원인을 찾을 수 없다.</strong></li><li><strong>염색체 재배열이 enhancer를 엉뚱한 유전자에 연결한다(enhancer hijacking).</strong> Burkitt lymphoma의 t(8;14)는 *MYC*을 immunoglobulin 중쇄 유전자좌의 강력한 enhancer 옆으로 옮긴다. T세포 급성 림프구성 백혈병에서 <em>TAL1</em> 상류에 생기는 변이는 새 enhancer를 만들어 *TAL1*을 비정상적으로 켠다. <strong>단백질은 정상인데 발현의 양과 시점이 틀려 종양이 된다.</strong></li></ul>
+  <p><strong>Silencer</strong>는 억제 인자가 결합하는 서열로, 같은 고리 구조를 통해 promoter에 억제 신호를 전달한다. 종양에서 흔히 보이는 <strong>super-enhancer</strong>는 enhancer가 여러 개 밀집해 특정 유전자를 매우 강하게 켜는 구간이다.</p>
+  </section>
+  <section id="s4">
+  <h2>4. Coactivator, corepressor와 mediator</h2>
+  <p>전사인자의 활성화 도메인은 DNA에 결합한 뒤 <strong>다른 단백질을 불러들여</strong> 작용한다. 불려오는 단백질이 세 부류다.</p>
+  <p><strong>(1) Coactivator</strong> 전사인자와 전사 기구 사이를 잇고, 많은 경우 chromatin을 바꾸는 효소 활성을 함께 가진다. 대표적인 것이 <strong>CBP/p300</strong>이다. CBP/p300은 <strong>histone acetyltransferase 활성</strong>을 가지므로, 전사인자가 이것을 불러오면 그 자리의 chromatin이 느슨해지고 전사가 쉬워진다. <strong>앞 수업의 chromatin 수준 조절과 전사인자가 여기서 만난다.</strong> SRC/p160 계열도 핵수용체의 coactivator로 작용한다.</p>
+  <p><strong>(2) Corepressor</strong> <strong>NCoR</strong>와 <strong>SMRT</strong>가 대표적이고, HDAC 복합체를 불러들여 chromatin을 조밀하게 만든다. 억제가 단순히 "활성화가 없는 상태"가 아니라 <strong>능동적인 과정</strong>이라는 점이 중요하다.</p>
+  <p><strong>(3) Mediator</strong> 26개 이상의 소단위로 이루어진 큰 복합체로, enhancer에 모인 전사인자와 promoter의 RNA polymerase II를 <strong>물리적으로 연결한다.</strong> Mediator가 없으면 아무리 많은 전사인자가 enhancer에 모여도 신호가 전사 기구에 전달되지 않는다.</p>
+  <div class="box box--limit"><b>임상 연계</b> <strong>임상 연계</strong> Coactivator의 결함도 질환이 된다. <strong>Rubinstein-Taybi syndrome</strong>은 <em>CREBBP</em>(CBP) 또는 *EP300*의 변이로 생기며, 발달 지연, 넓은 엄지와 엄지발가락, 특징적 얼굴을 보인다. CBP는 수많은 전사인자가 공유하는 coactivator이므로 한 유전자의 이형접합 변이만으로도 여러 기관의 발생이 함께 영향을 받는다. <strong>공유되는 부품의 결함은 넓은 표현형을 만든다.</strong> 반대 방향의 예가 급성 전골수세포성 백혈병이다. t(15;17)로 생기는 <strong>PML-RARA</strong> 융합 단백질은 리간드가 없는 상태에서 corepressor를 강하게 붙잡아 분화 유전자를 지속적으로 억제한다. <strong>All-trans retinoic acid</strong>를 생리적 농도보다 높은 약리 용량으로 투여하면 corepressor가 떨어지고 coactivator로 교체되어 분화가 재개된다. 세포를 죽이는 치료가 아니라 <strong>억제된 전사 프로그램을 되돌리는 치료</strong>다.</div>
+  </section>
+  <section id="s5">
+  <h2>5. 핵수용체 — steroid와 thyroid hormone</h2>
+  <p><strong>핵수용체</strong>는 지용성 리간드가 결합하면 전사인자로 작동하는 단백질군이다. 사람에게 약 48종이 있고, 구조는 N 말단의 활성화 영역, 중앙의 zinc finger형 DNA 결합 도메인, C 말단의 리간드 결합 도메인으로 공통된다. 작동 방식은 두 부류로 갈린다.</p>
+  <p><strong>Type I — steroid 수용체</strong> Glucocorticoid 수용체(GR), mineralocorticoid 수용체(MR), androgen 수용체(AR), progesterone 수용체(PR), estrogen 수용체(ER)가 해당한다.</p>
+  <p>1. 리간드가 없을 때는 세포질에서 HSP90 등과 복합체를 이루어 <strong>비활성 상태로 붙잡혀 있다.</strong> 2. 지용성 호르몬이 세포막을 통과해 결합하면 HSP90이 떨어지고 수용체가 <strong>동종이합체</strong>를 만든다. 3. 핵으로 들어가 <strong>hormone response element</strong>(역방향 반복 서열)에 결합하고 coactivator를 불러들인다.</p>
+  <p><strong>Type II — thyroid hormone, retinoid, vitamin D 수용체</strong> Thyroid hormone 수용체(TR), retinoic acid 수용체(RAR), vitamin D 수용체(VDR), PPAR이 해당한다.</p>
+  <p>1. 리간드가 없어도 <strong>이미 핵 안의 DNA에 결합해 있다.</strong> 보통 <strong>RXR과 이종이합체</strong>를 이룬다. 2. 리간드가 없는 상태에서는 <strong>corepressor를 붙잡아 표적 유전자를 능동적으로 억제한다.</strong> 3. 리간드가 결합하면 리간드 결합 도메인의 구조가 바뀌어 corepressor가 떨어지고 coactivator가 붙어 <strong>억제가 활성화로 전환된다.</strong></p>
+  <figure class="fig" id="fig-nuclear-receptor"><img src="assets/fig-nuclear-receptor.svg" alt="Type I과 type II 핵수용체의 비교. steroid 수용체는 세포질에서 붙잡혀 있다가 리간드와 함께 핵으로 들어가고, thyroid hormone 수용체는 이미 DNA에 붙어 corepressor와 함께 억제하고 있다." loading="lazy"><figcaption><b>그림 4</b> Type I과 type II 핵수용체의 비교. steroid 수용체는 세포질에서 붙잡혀 있다가 리간드와 함께 핵으로 들어가고, thyroid hormone 수용체는 이미 DNA에 붙어 corepressor와 함께 억제하고 있다.</figcaption></figure>
+  <div class="tw"><table><thead><tr><th>항목</th><th>Type I (steroid)</th><th>Type II (thyroid, retinoid, vitamin D)</th></tr></thead><tbody><tr><td>리간드 없을 때 위치</td><td>세포질, HSP90과 복합체</td><td>핵, DNA에 결합</td></tr><tr><td>이합체</td><td>동종이합체</td><td>RXR과 이종이합체</td></tr><tr><td>리간드 없을 때의 작용</td><td>없음</td><td>corepressor를 통한 능동적 억제</td></tr><tr><td>반응 요소</td><td>역방향 반복</td><td>직접 반복</td></tr><tr><td>대표 수용체</td><td>GR, MR, AR, PR, ER</td><td>TR, RAR, VDR, PPAR</td></tr></tbody></table></div>
+  <div class="box box--limit"><b>임상 연계</b> <strong>임상 연계</strong> 핵수용체의 변이는 <strong>호르몬은 충분한데 조직이 반응하지 않는</strong> 질환을 만든다. <em>AR</em> 변이에 의한 androgen 무감응 증후군에서는 46,XY인데도 testosterone이 정상 또는 높은 상태에서 여성형 외성기가 나타난다. <em>THRB</em> 변이에 의한 thyroid hormone 저항 증후군에서는 T4와 T3가 높은데 TSH가 억제되지 않는 특이한 검사 양상을 보인다. <em>VDR</em> 변이에 의한 유전성 vitamin D 저항성 구루병에서는 1,25-dihydroxyvitamin D가 높은데도 구루병이 생기므로, 일반 vitamin D나 활성형 보충만으로는 교정되지 않고 대량의 칼슘 공급이 필요하다. <strong>호르몬 농도가 높은데 증상이 결핍과 같다면 수용체 이후 단계를 의심한다</strong>는 원칙이 여기서 나온다. 반대로 같은 수용체가 약물의 표적이 된다. Tamoxifen과 fulvestrant는 ER에, enzalutamide는 AR에, thiazolidinedione은 PPARγ에 작용하고, glucocorticoid는 GR을 통해 항염증 유전자를 유도하고 염증 유전자를 억제한다.</div>
+  </section>
+  <section id="s6">
+  <h2>6. 조절 네트워크의 구조</h2>
+  <p>전사인자는 혼자 작동하지 않는다. 전사인자가 다른 전사인자의 유전자를 조절하므로, 전체는 <strong>네트워크</strong>를 이룬다. 네트워크에는 반복적으로 나타나는 구조가 있다.</p>
+  <figure class="fig" id="fig-network"><img src="assets/fig-network.svg" alt="전사 조절 네트워크의 네 가지 구조. 계층적 연쇄, 양성 되먹임에 의한 상태 고정, 음성 되먹임에 의한 반응 제한을 보인다." loading="lazy"><figcaption><b>그림 5</b> 전사 조절 네트워크의 네 가지 구조. 계층적 연쇄, 양성 되먹임에 의한 상태 고정, 음성 되먹임에 의한 반응 제한을 보인다.</figcaption></figure>
+  <p><strong>(1) 계층적 연쇄</strong> 하나의 신호가 상위 전사인자를 켜고, 그 인자가 하위 전사인자를 켜고, 하위 인자가 효과 유전자를 켠다. 발생 과정이 이 구조로 되어 있고, <strong>HOX 유전자군</strong>이 대표적이다. HOX 유전자는 염색체상의 배열 순서가 몸의 전후축 발현 순서와 대응하며(colinearity), 상위에서 받은 위치 정보를 하위 유전자군으로 전달한다.</p>
+  <p><strong>(2) 양성 되먹임</strong> 전사인자가 자기 자신의 유전자를 활성화하면, 신호가 사라진 뒤에도 상태가 유지된다. <strong>MyoD</strong>가 근육 유전자군과 자기 자신을 함께 켜는 것이 그 예다. 이 구조가 <strong>세포 정체성의 생화학적 근거</strong>다. 한 번 근육세포가 되면 계속 근육세포로 남는 것은 유전체가 바뀌어서가 아니라 이 회로가 켜진 상태로 고정되기 때문이다.</p>
+  <p><strong>(3) 음성 되먹임</strong> 표적 유전자의 산물이 전사인자를 억제한다. NF-κB가 자신의 억제자 IκB를 유도하는 회로가 대표적이다. 이 구조는 반응을 <strong>일시적이고 정도가 조절되는 것</strong>으로 만든다. 브레이크가 망가지면 염증이 지속된다.</p>
+  <p><strong>(4) 주조절자(master regulator)</strong> 네트워크의 상위에 있어 그것 하나로 세포의 프로그램 전체를 바꿀 수 있는 인자다. MyoD를 섬유아세포에 발현시키면 근육세포의 형질이 나타난다. 이 원리를 확장한 것이 <strong>역분화 줄기세포(iPSC)</strong>다. OCT4, SOX2, KLF4, MYC 네 전사인자를 체세포에 도입하면 다능성 상태로 되돌아간다. <strong>전사인자의 조합이 세포의 정체성을 정한다는 사실의 직접적 증명이다.</strong></p>
+  <p>성발달이 같은 논리의 임상적 예다. Y 염색체의 *SRY*가 발현되면 HMG box 전사인자가 *SOX9*을 켜고, 이것이 Sertoli 세포 분화와 정소 발생 프로그램을 작동시킨다. <strong>SRY는 작은 전사인자 하나지만 네트워크의 최상위에 있으므로 그 변이가 성 발달 전체를 바꾼다.</strong></p>
+  </section>
+  <section id="s7">
+  <h2>7. 전사인자 이상이 만드는 질환</h2>
+  <p>전사인자 유전자의 변이가 질환을 만드는 방식은 몇 가지로 분류된다. <strong>분류가 유전 양식과 표현형의 폭을 설명한다.</strong></p>
+  <figure class="fig" id="fig-tf-disease"><img src="assets/fig-tf-disease.svg" alt="전사인자와 coactivator 결함이 만드는 질환. 도메인 유형별로 대표 유전자와 기전을 정리한다." loading="lazy"><figcaption><b>그림 6</b> 전사인자와 coactivator 결함이 만드는 질환. 도메인 유형별로 대표 유전자와 기전을 정리한다.</figcaption></figure>
+  <ul><li><strong>Haploinsufficiency(용량 부족)</strong>: 전사인자는 작용에 일정 농도가 필요하므로 한 대립유전자만 망가져도 부족해진다. 그래서 <strong>전사인자 질환은 상염색체 우성이 많다.</strong> <em>PAX6</em> 이형접합 변이에 의한 무홍채증이 그 예다.</li><li><strong>우성 음성(dominant negative)</strong>: 변이 단백질이 정상 단백질과 이합체를 이루거나 결합 부위를 차지해 정상 기능을 방해한다. 이합체를 이루는 도메인 유형에서 특히 흔하다.</li><li><strong>융합 단백질에 의한 기능 전환</strong>: 염색체 전위로 만들어진 융합 전사인자가 본래와 다른 작용을 한다. PML-RARA, EWSR1-FLI1(Ewing sarcoma)이 그 예다.</li><li><strong>발현 조절 서열의 이상</strong>: 전사인자 유전자는 정상인데 조절 영역의 변이나 enhancer 탈취로 발현량과 발현 시점이 바뀐다.</li><li><strong>수용체 저항</strong>: 핵수용체의 리간드 결합이나 DNA 결합이 손상되어 호르몬에 반응하지 않는다.</li></ul>
+  <p>한 가지 패턴이 반복된다. <strong>네트워크의 상위에 있는 인자일수록 결함의 표현형이 넓고 여러 기관에 걸친다.</strong> POU1F1 하나의 결함으로 growth hormone, prolactin, TSH가 함께 부족해지는 복합 뇌하수체 호르몬 결핍이 그 예다. 반대로 하위의 효과 유전자 결함은 단일 기능의 상실로 나타난다. <strong>임상에서 여러 기관에 걸친 선천성 이상의 조합을 볼 때 상위 조절 인자의 결함을 의심하는 근거가 여기에 있다.</strong></p>
+  </section>
+  <section id="s8">
+  <h2>8. 전사를 표적으로 하는 치료</h2>
+  <p>전사 단계는 약물 표적으로서 오랫동안 접근하기 어려운 영역이었다. 전사인자에는 효소의 활성 부위 같은 작은 결합 주머니가 없는 경우가 많기 때문이다. 그러나 몇 가지 경로로 접근이 이루어지고 있다.</p>
+  <div class="tw"><table><thead><tr><th>접근</th><th>표적</th><th>예</th><th>작용 원리</th></tr></thead><tbody><tr><td>리간드 결합 부위 이용</td><td>핵수용체</td><td>Tamoxifen, enzalutamide, glucocorticoid, thiazolidinedione</td><td>리간드 주머니가 이미 존재한다</td></tr><tr><td>Corepressor 교체 유도</td><td>PML-RARA</td><td>All-trans retinoic acid, arsenic trioxide</td><td>억제를 활성화로 되돌린다</td></tr><tr><td>Chromatin 효소 억제</td><td>HDAC, DNMT, EZH2</td><td>Vorinostat, azacitidine, tazemetostat</td><td>전사인자 대신 그 환경을 바꾼다</td></tr><tr><td>Coactivator 결합 차단</td><td>BET 단백질</td><td>BET 억제제(개발 중)</td><td>전사인자와 chromatin의 연결을 끊는다</td></tr><tr><td>전사인자 분해 유도</td><td>전사인자 자체</td><td>Lenalidomide 계열, 분해 유도 약물</td><td>E3 ligase의 기질로 만든다</td></tr><tr><td>조절 서열 편집</td><td>Enhancer</td><td><em>BCL11A</em> 적혈구 enhancer 편집</td><td>발현 양상을 되돌린다</td></tr></tbody></table></div>
+  <p>마지막 항목이 이 수업 내용의 임상적 귀결이다. *BCL11A*는 태아형 hemoglobin 유전자 *HBG*를 억제하는 전사인자다. 이 유전자를 전신에서 없애면 다른 기능까지 손상되지만, <strong>적혈구 계열에서만 작동하는 enhancer를 끊으면 적혈구에서만 BCL11A가 줄어 태아형 hemoglobin이 늘어난다.</strong> 이 방식으로 sickle cell disease와 β-thalassemia를 치료하는 유전자 편집 요법이 승인되었다. <strong>표적이 단백질 암호 서열이 아니라 조절 서열이고, 조직 특이성을 enhancer의 조직 특이성에서 가져온다는 점이 이 치료의 설계 논리다.</strong></p>
+  <div class="box box--result"><b>핵심 정리</b> <strong>핵심 정리</strong> 전사인자는 DNA 결합 도메인으로 작용 위치를 정하고, 활성화 도메인과 자신의 수정 상태로 작용 강도를 정하며, 짝 단백질의 조합으로 작용 범위를 정한다. Enhancer는 그 작용을 먼 거리에서 조직 특이적으로 전달하고, 되먹임 회로는 그 결과를 세포의 정체성으로 고정한다. 질환은 이 네 층의 어디에서도 생기고, 치료는 서열을 고치지 않고 이 층의 설정을 되돌리는 방향으로 나아가고 있다.</div>
+  </section>
   <h2>확인 문항</h2>
-  <p>작성 예정. 5개 이상, 절반 이상은 판단을 묻는 문항으로 한다.</p>
-
+  <ol class="quiz"><li><p class="qq">어떤 전사인자가 표적 유전자의 promoter에 결합한 상태로 확인되었는데 그 유전자는 전사되지 않았다. 모순이 아닌 이유를 전사인자의 구조로 설명하라.</p><details><summary>해설</summary><p>전사인자는 기능이 분리된 모듈 구조를 가진다. DNA 결합 도메인은 어디에 붙을지를 정할 뿐이고, 전사가 실제로 늘어나려면 활성화 도메인이 coactivator와 mediator를 불러들여야 한다. 활성화 도메인이 인산화되지 않았거나, 필요한 coactivator가 없거나, 억제 단백질이 활성화 도메인을 가리고 있거나, 리간드가 없는 핵수용체처럼 corepressor를 붙잡고 있으면 결합한 채로 전사를 억제할 수도 있다. 따라서 결합과 활성화는 서로 다른 사건이고, 결합 자료만으로 발현 여부를 판단할 수 없다.</p></details></li><li><p class="qq">Leucine zipper와 bHLH 도메인을 가진 전사인자는 반드시 이합체를 이루어야 DNA에 결합한다. 이 성질이 조절에 주는 이점과, 질환에서 어떤 결과를 낳는지 설명하라.</p><details><summary>해설</summary><p>이점은 조합에 의한 다양성이다. 같은 단백질이 어떤 짝과 결합하는지에 따라 인식하는 서열과 활성이 달라지므로, 제한된 수의 전사인자로 많은 조합을 만들 수 있고 짝의 양을 조절하는 것만으로 활성을 바꿀 수 있다. MYC이 MAX와만 작동하므로 MAX의 양이 MYC의 작용을 제한하는 것이 그 예다. 질환에서의 결과는 우성 음성 효과다. 변이 단백질이 정상 단백질과 이합체를 이루면 기능하지 않는 이합체가 생겨 정상 대립유전자의 산물까지 무력화되므로, 이형접합 상태에서 기능이 절반보다 더 크게 떨어진다.</p></details></li><li><p class="qq">Thyroid hormone 수용체와 glucocorticoid 수용체는 작동 방식이 다르다. 리간드가 없는 상태에서 각 수용체가 무엇을 하고 있는지를 비교하고, 그 차이가 어떤 임상적 결과를 만드는지 적으라.</p><details><summary>해설</summary><p>Glucocorticoid 수용체는 type I으로, 리간드가 없으면 세포질에서 HSP90과 복합체를 이루어 붙잡혀 있고 표적 유전자에는 아무 작용도 하지 않는다. Thyroid hormone 수용체는 type II로, 리간드가 없어도 RXR과 이종이합체를 이루어 이미 DNA에 결합해 있으며 corepressor와 HDAC를 붙잡아 표적 유전자를 능동적으로 억제한다. 임상적 결과는 리간드가 없을 때의 기저 상태가 다르다는 점이다. Thyroid hormone이 부족하면 단순히 활성화가 없는 것이 아니라 억제가 유지되므로 표적 유전자의 발현이 기저 이하로 떨어진다. 또 리간드 결합이 손상된 변이 수용체는 DNA에 붙어 억제만 계속하므로 우성 음성으로 작용해, <em>THRB</em> 변이에 의한 thyroid hormone 저항 증후군이 우성으로 유전된다.</p></details></li><li><p class="qq">급성 전골수세포성 백혈병에서 all-trans retinoic acid가 세포독성 항암제와 다른 방식으로 작용하는 이유를 PML-RARA 융합 단백질의 성질로 설명하라.</p><details><summary>해설</summary><p>t(15;17)로 생긴 PML-RARA 융합 단백질은 정상 RARα보다 corepressor를 훨씬 강하게 붙잡아, 생리적 농도의 retinoic acid로는 corepressor가 떨어지지 않는다. 그 결과 과립세포 분화에 필요한 유전자군이 지속적으로 억제되어 전골수세포 단계에서 분화가 멈춘다. 약리 용량의 all-trans retinoic acid를 투여하면 리간드 결합 도메인의 구조 변화가 충분히 일어나 corepressor가 떨어지고 coactivator로 교체되며, 억제된 전사 프로그램이 재개되어 세포가 분화한다. 세포를 죽이는 것이 아니라 전사 상태를 되돌리는 치료이므로 분화 유도 치료라 부른다.</p></details></li><li><p class="qq">어떤 환자에서 다지증이 가족 내에 우성으로 유전되는데, 전체 exome 검사에서 원인 변이를 찾지 못했다. 다음에 무엇을 확인해야 하는가. 근거를 함께 적으라.</p><details><summary>해설</summary><p>암호 영역 밖의 조절 서열, 특히 enhancer를 확인해야 한다. *SHH*의 사지 발달용 enhancer는 <em>SHH</em> 자체에서 약 1 Mb 떨어진 다른 유전자의 intron 안에 있고, 이 enhancer의 단일염기 변이가 축전성 다지증을 일으킨다. Exome 검사는 암호 영역만 읽으므로 이런 변이를 볼 수 없다. 따라서 전장유전체 검사로 알려진 발달 enhancer 영역을 확인하고, 동시에 구조 변이와 TAD 경계의 파괴 여부도 평가해야 한다. CTCF 경계가 깨지면 이웃 영역의 enhancer가 엉뚱한 유전자에 작용할 수 있기 때문이다.</p></details></li><li><p class="qq">전사인자 유전자의 질환이 상염색체 우성으로 유전되는 경우가 많은 이유를 설명하라.</p><details><summary>해설</summary><p>전사인자는 작용에 일정한 농도가 필요한 용량 민감 단백질이다. 표적 서열에 결합해 coactivator와 mediator를 모으는 과정이 농도에 의존하므로, 두 대립유전자 중 하나만 기능을 잃어 산물이 절반으로 줄어도 발생 과정에서 요구되는 역치에 미치지 못할 수 있다(haploinsufficiency). 또 이합체를 이루는 전사인자에서는 변이 단백질이 정상 단백질과 결합해 기능하지 않는 이합체를 만들어 정상 산물까지 무력화하므로(우성 음성), 효과가 절반보다 더 커진다. 두 기전 모두 이형접합 상태에서 표현형을 만들기 때문에 우성 유전이 흔하다.</p></details></li><li><p class="qq">한 환자에서 growth hormone, prolactin, TSH가 모두 부족하고 다른 뇌하수체 호르몬은 정상이었다. 어느 수준의 결함을 의심하고, 그 추론의 일반 원칙을 적으라.</p><details><summary>해설</summary><p>세 호르몬 유전자를 함께 조절하는 상위 전사인자의 결함을 의심한다. POU1F1(PIT1)은 somatotroph, lactotroph, thyrotroph의 분화와 해당 호르몬 유전자의 발현에 필요한 homeodomain 전사인자이므로, 이 유전자의 변이는 세 호르몬의 복합 결핍을 만든다. 일반 원칙은 다음과 같다. 서로 다른 유전자의 산물이 함께 부족하면 각각의 유전자가 모두 망가졌다고 보기보다 그 유전자들을 함께 조절하는 상위 인자나 공유 조절 서열의 결함을 먼저 생각한다. 표현형의 폭은 결함이 네트워크의 어느 층에 있는지를 반영한다.</p></details></li><li><p class="qq">Sickle cell disease 치료에서 <em>BCL11A</em> 유전자 자체를 없애는 대신 적혈구 계열의 enhancer만 편집하는 이유를 설명하라.</p><details><summary>해설</summary><p>BCL11A는 태아형 hemoglobin 유전자 *HBG*를 억제하는 전사인자이므로 이것을 줄이면 태아형 hemoglobin이 늘어 HbS의 중합이 억제된다. 그러나 BCL11A는 적혈구 계열 외에 신경 발달과 림프구 발생에도 필요하므로 유전자 자체를 없애면 다른 기능이 손상된다. *BCL11A*의 적혈구 특이 enhancer를 끊으면 적혈구 계열에서만 발현이 줄고 다른 조직에서는 유지되므로, 치료 효과만 얻고 전신 영향을 피할 수 있다. 조직 특이성을 약물의 전달 방식이 아니라 enhancer 자체의 조직 특이성에서 가져오는 설계다.</p></details></li></ol>
   <h2>참고문헌</h2>
-  <p>작성 예정.</p>
-
-  <nav class="pager"><a href="../../../M03/W04/L02/index.html">← M03-W04-L02 유전자 발현 조절의 원리와 조절 단위</a><a href="../../../M03/W05/L01/index.html">M03-W05-L01 후성유전 조절 →</a></nav>
-
+  <ol class="ref"><li>Ferrier DR (ed). <em>Lippincott Illustrated Reviews: Biochemistry</em>. Chapter 33, Regulation of Gene Expression.</li><li>Lambert SA et al. The human transcription factors. <em>Cell</em> 2018;172:650–665.</li><li>Spitz F, Furlong EEM. Transcription factors: from enhancer binding to developmental control. <em>Nat Rev Genet</em> 2012;13:613–626.</li><li>Lee TI, Young RA. Transcriptional regulation and its misregulation in disease. <em>Cell</em> 2013;152:1237–1251.</li><li>Mangelsdorf DJ et al. The nuclear receptor superfamily: the second decade. <em>Cell</em> 1995;83:835–839.</li><li>de Thé H. Differentiation therapy revisited. <em>Nat Rev Cancer</em> 2018;18:117–127.</li><li>Lupiáñez DG et al. Disruptions of topological chromatin domains cause pathogenic rewiring of gene-enhancer interactions. <em>Cell</em> 2015;161:1012–1025.</li><li>Frangoul H et al. CRISPR-Cas9 gene editing for sickle cell disease and β-thalassemia. <em>N Engl J Med</em> 2021;384:252–260.</li></ol>
+  <nav class="pager"><a href="../../../M03/W04/L02/index.html">← M03-W04-L02</a><a href="../../../M03/W05/L01/index.html">M03-W05-L01 →</a></nav>
 </main>
 
 <footer class="foot wrap">
   <span>© 2026 Kim Jintae · Hanyang University</span>
   <a href="https://github.com/hoperiasd2/hoperiasd2.github.io">GitHub 저장소</a>
 </footer>
-
-<script src="../../../../assets/site.js"></script>
 </body>
 </html>
