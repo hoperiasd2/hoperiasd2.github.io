@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 420" width="860" height="420" role="img"
+     aria-label="Cholesterol 생합성의 네 단계. acetyl-CoA에서 HMG-CoA, mevalonate, isoprene 단위, squalene을 거쳐 cholesterol에 이른다">
+  <style>
+    .box { fill:#fff; stroke:#c6d2dd; stroke-width:1.6; rx:7; }
+    .boxk { fill:#fff5d6; stroke:#f2b705; stroke-width:2.4; rx:7; }
+    .mol { font:700 14px ui-monospace,monospace; fill:#16191d; }
+    .cn { font:600 12px ui-monospace,monospace; fill:#003c71; }
+    .enz { font:12px "Noto Sans KR",sans-serif; fill:#4a5159; }
+    .enzb { font:700 12px "Noto Sans KR",sans-serif; fill:#8a6300; }
+    .stage { font:700 13px "Noto Sans KR",sans-serif; fill:#fff; }
+    .sbox { fill:#003c71; rx:4; }
+    .arr { stroke:#003c71; stroke-width:2; fill:none; marker-end:url(#a); }
+    .cof { font:11px "Noto Sans KR",sans-serif; fill:#727a84; }
+  </style>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0 L10 5 L0 10 z" fill="#003c71"/>
+    </marker>
+  </defs>
+
+  <rect class="sbox" x="20" y="18" width="62" height="20"/><text class="stage" x="30" y="33">단계 1</text>
+  <rect class="box" x="20" y="48" width="150" height="56"/>
+  <text class="mol" x="36" y="72">Acetyl-CoA ×3</text><text class="cn" x="36" y="92">C2 ×3</text>
+  <path class="arr" d="M176 76 L232 76"/>
+  <text class="enz" x="178" y="66">thiolase,</text>
+  <text class="enz" x="178" y="100">HMG-CoA synthase</text>
+  <rect class="box" x="238" y="48" width="140" height="56"/>
+  <text class="mol" x="256" y="72">HMG-CoA</text><text class="cn" x="256" y="92">C6 · 세포질</text>
+
+  <rect class="sbox" x="420" y="18" width="62" height="20"/><text class="stage" x="430" y="33">단계 2</text>
+  <path class="arr" d="M384 76 L440 76"/>
+  <rect class="boxk" x="446" y="40" width="180" height="72"/>
+  <text class="mol" x="462" y="64">Mevalonate</text><text class="cn" x="462" y="83">C6</text>
+  <text class="enzb" x="462" y="103">rate-limiting step</text>
+  <text class="enzb" x="650" y="64">HMG-CoA</text>
+  <text class="enzb" x="650" y="80">reductase</text>
+  <text class="cof" x="650" y="98">NADPH ×2 · 비가역</text>
+
+  <rect class="sbox" x="20" y="166" width="62" height="20"/><text class="stage" x="30" y="181">단계 3</text>
+  <rect class="box" x="20" y="196" width="160" height="56"/>
+  <text class="mol" x="36" y="220">Isopentenyl-PP</text><text class="cn" x="36" y="240">C5 · isoprene 단위</text>
+  <path class="arr" d="M186 224 L242 224"/>
+  <text class="cof" x="186" y="214">×2</text>
+  <rect class="box" x="248" y="196" width="150" height="56"/>
+  <text class="mol" x="266" y="220">Geranyl-PP</text><text class="cn" x="266" y="240">C10</text>
+  <path class="arr" d="M404 224 L460 224"/>
+  <rect class="box" x="466" y="196" width="150" height="56"/>
+  <text class="mol" x="484" y="220">Farnesyl-PP</text><text class="cn" x="484" y="240">C15</text>
+  <text class="cof" x="20" y="272">mevalonate → ATP 3분자 소비 후 탈탄산 → C5</text>
+
+  <!-- branch -->
+  <path class="arr" d="M541 258 L541 300" stroke="#8a6300" marker-end="url(#a)"/>
+  <rect class="boxk" x="430" y="306" width="230" height="46"/>
+  <text class="enzb" x="446" y="326">여기서 갈라지는 가지</text>
+  <text class="cof" x="446" y="344">CoQ10 · dolichol · prenyl기</text>
+
+  <rect class="sbox" x="20" y="306" width="62" height="20"/><text class="stage" x="30" y="321">단계 4</text>
+  <rect class="box" x="20" y="336" width="130" height="56"/>
+  <text class="mol" x="36" y="360">Squalene</text><text class="cn" x="36" y="380">C30</text>
+  <path class="arr" d="M156 364 L212 364"/>
+  <text class="cof" x="150" y="354">O₂, NADPH</text>
+  <rect class="box" x="218" y="336" width="130" height="56"/>
+  <text class="mol" x="234" y="360">Lanosterol</text><text class="cn" x="234" y="380">C30 · 고리화</text>
+  <path class="arr" d="M354 364 L400 364"/>
+  <text class="cof" x="348" y="354">약 19단계</text>
+  <rect class="boxk" x="406" y="336" width="150" height="56"/>
+  <text class="mol" x="424" y="360">Cholesterol</text><text class="cn" x="424" y="380">C27</text>
+  <path class="arr" d="M616 224 L700 224 L700 300 L80 300 L80 330" stroke="#c6d2dd"/>
+  <text class="cof" x="620" y="214">farnesyl-PP ×2</text>
+</svg>

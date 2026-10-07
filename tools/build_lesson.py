@@ -76,6 +76,10 @@ def parse_blocks(lines):
                 flush()
                 mode = "ul"
             buf.append((lvl, s.lstrip()[2:].strip()))
+        elif s.startswith("@fig "):
+            flush()
+            parts = s[5:].split(None, 1)
+            blocks.append(("fig", [parts[0], parts[1] if len(parts) > 1 else ""]))
         elif s.startswith("|"):
             if mode != "table":
                 flush()
@@ -156,9 +160,20 @@ def esc(s):
     return html.escape(str(s), quote=True)
 
 
+FIGN = {"n": 0}
+
+
 def render_blocks(blocks):
     out = []
     for kind, buf in blocks:
+        if kind == "fig":
+            FIGN["n"] += 1
+            fid, cap = buf[0], buf[1]
+            out.append(
+                f'<figure class="fig" id="{esc(fid)}">'
+                f'<img src="assets/{esc(fid)}.svg" alt="{esc(plain(cap))}">'
+                f'<figcaption><b>그림 {FIGN["n"]}</b> {_inline(cap)}</figcaption></figure>')
+            continue
         if kind == "p":
             out.append("<p>" + _inline(" ".join(buf)) + "</p>")
         elif kind == "ul":
@@ -193,6 +208,7 @@ SECTION_LABEL = {
 
 
 def lesson_html(row, meta, named, lists, secs, quiz, prev_r, next_r):
+    FIGN["n"] = 0
     practicum = row["kind"] == "practicum"
     up = "../../../../"
 
@@ -317,6 +333,38 @@ from pptx.enum.shapes import MSO_SHAPE
 from pptx.enum.text import MSO_ANCHOR, PP_ALIGN
 from pptx.oxml.ns import qn
 from pptx.util import Emu, Inches, Pt
+
+CHROME_BIN = next((b for b in (
+    "/opt/pw-browsers/chromium-1194/chrome-linux/chrome",
+    "/usr/bin/chromium", "/usr/bin/chromium-browser", "/usr/bin/google-chrome",
+) if Path(b).exists()), None)
+
+
+def rasterize(svg_path, out_png, width=2000):
+    """Chromium으로 SVG를 PNG로 변환한다. 성공하면 True."""
+    import re as _re
+    import subprocess
+    import tempfile
+    if not CHROME_BIN:
+        return False
+    svg = Path(svg_path).read_text(encoding="utf-8")
+    m = _re.search(r'viewBox="\s*[\d.+-]+\s+[\d.+-]+\s+([\d.]+)\s+([\d.]+)', svg)
+    if not m:
+        return False
+    vw, vh = float(m.group(1)), float(m.group(2))
+    h = int(round(width * vh / vw))
+    with tempfile.TemporaryDirectory() as td:
+        page = Path(td) / "p.html"
+        page.write_text(
+            '<!doctype html><meta charset="utf-8">'
+            '<style>html,body{margin:0;background:#fff}img{display:block;width:%dpx}</style>'
+            '<img src="file://%s">' % (width, Path(svg_path).resolve()), encoding="utf-8")
+        r = subprocess.run(
+            [CHROME_BIN, "--headless", "--disable-gpu", "--no-sandbox", "--hide-scrollbars",
+             f"--window-size={width},{h}", f"--screenshot={out_png}", f"file://{page}"],
+            capture_output=True, timeout=120)
+    return Path(out_png).exists() and r.returncode == 0
+
 
 NAVY = RGBColor(0x00, 0x3C, 0x71)
 CHROME = RGBColor(0xF2, 0xB7, 0x05)
@@ -544,6 +592,30 @@ class Deck:
             add_rich(p, t, fs, color=INK)
             y += h + Inches(0.15)
 
+    def figure(self, title, svg_path, caption, kicker=""):
+        """SVG를 PNG로 변환해 한 장에 싣는다.
+
+        한글 글꼴이 fontconfig에 없으므로 Chromium으로 래스터화한다.
+        Chromium을 쓸 수 없으면 cairosvg로 되돌아간다(한글이 깨질 수 있다)."""
+        png = str(svg_path).replace(".svg", ".slide.png")
+        if not rasterize(svg_path, png, width=2200):
+            import cairosvg
+            cairosvg.svg2png(url=str(svg_path), write_to=png, scale=2.0, background_color="white")
+        s = self._base(title, kicker)
+        from PIL import Image
+        iw, ih = Image.open(png).size
+        maxw, maxh = Inches(11.6), Inches(4.75)
+        scale = min(maxw / iw, maxh / ih)
+        w, h = int(iw * scale), int(ih * scale)
+        s.shapes.add_picture(png, int((W - w) / 2), Inches(1.45), w, h)
+        if caption:
+            tf = textbox(s, Inches(0.7), Inches(6.35), Inches(11.9), Inches(0.6))
+            p = tf.paragraphs[0]
+            p.alignment = PP_ALIGN.CENTER
+            add_rich(p, caption, 12, color=MUTED)
+        self.note(s, plain(caption))
+        Path(png).unlink(missing_ok=True)
+
     def quiz(self, quiz):
         for i, (q, a) in enumerate(quiz, 1):
             s = self._base("확인 문항", f"Q{i}")
@@ -564,7 +636,7 @@ class Deck:
             self.note(s, plain(a))
 
 
-def build_deck(row, meta, lists, secs, quiz, out):
+def build_deck(row, meta, lists, secs, quiz, out, lesson_dir):
     d = Deck(row, meta)
     d.title_slide()
     if lists.get("obj"):
@@ -603,6 +675,11 @@ def build_deck(row, meta, lists, secs, quiz, out):
             elif kind == "table":
                 flush_text()
                 d.table(plain(sec.title), buf, kick)
+            elif kind == "fig":
+                flush_text()
+                svg = lesson_dir / "assets" / f"{buf[0]}.svg"
+                if svg.exists():
+                    d.figure(plain(sec.title), svg, buf[1], kick)
         flush_text()
         if pend:
             d.boxes(plain(sec.title), pend, kick)
@@ -668,8 +745,25 @@ def main():
 
         n = 0
         if not a.html_only and (meta.get("slides") or "").lower() != "none":
-            n = build_deck(row, meta, lists, secs, quiz, str(d / "slides.pptx"))
-        print(f"{lid}  절 {len(secs)}  문항 {len(quiz)}  슬라이드 {n}")
+            n = build_deck(row, meta, lists, secs, quiz, str(d / "slides.pptx"), d)
+        figs = []
+        k = 0
+        for sec in secs:
+            for kind, buf in sec.blocks:
+                if kind == "fig":
+                    k += 1
+                    figs.append({
+                        "figure_id": buf[0], "lesson_id": lid,
+                        "html_anchor": f"#{buf[0]}", "caption": buf[1],
+                        "asset_path": f"assets/{buf[0]}.svg",
+                        "source_id": "", "rights_status": "자체 제작",
+                        "status": "확정" if (d / "assets" / f"{buf[0]}.svg").exists() else "미제작",
+                        "replacement_requirements": "", "review_result": "",
+                    })
+        (d / "figures.json").write_text(
+            __import__("json").dumps({"lesson_id": lid, "figures": figs},
+                                     ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+        print(f"{lid}  절 {len(secs)}  그림 {len(figs)}  문항 {len(quiz)}  슬라이드 {n}")
 
 
 if __name__ == "__main__":
