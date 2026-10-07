@@ -393,7 +393,8 @@ def build_lesson(r, prev_r, next_r, force):
   <nav class="pager">{pager[0]}{pager[1]}</nav>
 """
     f = d / "index.html"
-    if not f.exists() or force or r["status"] == "설계":
+    # 집필이 시작된 수업은 build_lesson.py가 관리하므로 여기서 건드리지 않는다.
+    if r["status"] == "설계" and (not f.exists() or force or True):
         f.write_text(page(f'{r["lesson_id"]} {r["title"]}', body, 4, r["title"]), encoding="utf-8")
 
     # 설계 원본

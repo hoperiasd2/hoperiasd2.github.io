@@ -92,6 +92,22 @@ def main():
 
     rows.sort(key=lambda r: (r["module"], r["week"], r["session"]))
 
+    # 집필된 수업은 원본 front matter의 상태·버전을 따른다.
+    for r in rows:
+        src = ROOT / r["path"] / ("protocol.md" if r["kind"] == "practicum" else "lesson.md")
+        if not src.exists():
+            continue
+        head = src.read_text(encoding="utf-8")
+        if not head.startswith("---"):
+            continue
+        fm = head.split("---", 2)[1]
+        for ln in fm.strip().split("\n"):
+            if ":" not in ln:
+                continue
+            k, v = (x.strip() for x in ln.split(":", 1))
+            if k in ("status", "version", "title") and v:
+                r[k] = v
+
     # 3) 구성요소별 회차 수가 편성표와 맞는지 확인한다.
     for mod, meta in sorted(modules.items()):
         got = sum(1 for r in rows if r["module"] == mod)

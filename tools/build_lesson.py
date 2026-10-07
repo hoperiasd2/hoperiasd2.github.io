@@ -443,7 +443,7 @@ class Deck:
         pages, cur, load = [], [], 0
         for lvl, t in norm:
             c = len(plain(t))
-            if cur and (load + c > 520 or len(cur) >= 7):
+            if cur and (load + c > 640 or len(cur) >= 8):
                 pages.append(cur)
                 cur, load = [], 0
             cur.append((lvl, t))
@@ -455,7 +455,7 @@ class Deck:
             s = self._base(ttl, kicker)
             tf = textbox(s, Inches(0.7), Inches(1.4), Inches(11.9), Inches(5.5))
             dens = sum(len(plain(t)) for _, t in pg)
-            fs = 20 if dens < 230 else (18 if dens < 380 else 16)
+            fs = 20 if dens < 240 else (18 if dens < 420 else (16 if dens < 560 else 15))
             for j, (lvl, t) in enumerate(pg):
                 p = tf.paragraphs[0] if j == 0 else tf.add_paragraph()
                 p.space_after = Pt(9 if lvl == 0 else 5)
@@ -582,20 +582,29 @@ def build_deck(row, meta, lists, secs, quiz, out):
         if sec.question and sec.answer:
             d.qa(i, sec)
         kick = f"{i:02d}"
-        pend = []
+        pend, text = [], []
+
+        def flush_text():
+            if text:
+                d.bullets(plain(sec.title), list(text), kick)
+                text.clear()
+
         for kind, buf in sec.blocks:
             if kind in ("limit", "result"):
                 pend.append((kind, buf[0]))
                 continue
             if pend:
+                flush_text()
                 d.boxes(plain(sec.title), pend, kick)
                 pend = []
             if kind == "ul":
-                d.bullets(plain(sec.title), buf, kick)
-            elif kind == "table":
-                d.table(plain(sec.title), buf, kick)
+                text.extend(buf)
             elif kind == "p":
-                d.bullets(plain(sec.title), [" ".join(buf)], kick)
+                text.append((0, " ".join(buf)))
+            elif kind == "table":
+                flush_text()
+                d.table(plain(sec.title), buf, kick)
+        flush_text()
         if pend:
             d.boxes(plain(sec.title), pend, kick)
     if quiz:
