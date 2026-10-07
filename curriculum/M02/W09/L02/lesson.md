@@ -9,7 +9,7 @@ version: v0.2
 @obj
 - Cholesterol의 화학 구조와 세포막·전구체로서의 역할을 설명한다.
 - Acetyl-CoA에서 cholesterol에 이르는 생합성 경로를 네 단계로 나누어 설명한다.
-- HMG-CoA reductase가 율속 효소인 이유와 전사·분해·인산화에 의한 조절을 설명한다.
+- HMG-CoA reductase가 rate-limiting step인 이유와 전사·분해·인산화에 의한 조절을 설명한다.
 - LDL receptor를 통한 cholesterol 수송과 세포 내 되먹임 반응을 설명한다.
 - 담즙산의 합성·접합·장간 순환과 steroid 호르몬 및 vitamin D 생성 과정을 설명한다.
 - 고콜레스테롤혈증의 원인과 주요 약물의 작용 지점을 연결한다.
@@ -20,36 +20,61 @@ version: v0.2
 - M02-W06-L03 Pentose phosphate pathway — 환원적 생합성에 쓰이는 NADPH의 공급원
 
 @sec 1. Cholesterol의 구조와 생물학적 역할
-Cholesterol은 탄소 27개로 이루어진 **sterol**이다. 기본 골격은 고리 네 개가 붙어 있는 **steroid 핵**(cyclopentanoperhydrophenanthrene)으로, 여섯 탄소 고리 셋(A·B·C)과 다섯 탄소 고리 하나(D)로 구성된다. 여기에 세 가지가 더 붙는다. C3에 **hydroxyl기(-OH)**, C5와 C6 사이에 **이중결합**, C17에 탄소 여덟 개짜리 **곁사슬**이다.
+Cholesterol은 동물 조직에 들어 있는 대표적인 **steroid alcohol**이다. 식물과 세균에는 없고 동물에만 있으므로, 식사로 섭취하는 cholesterol은 모두 동물성 식품에서 온다.
 
-이 구조가 성질을 결정한다. 분자의 대부분은 탄화수소여서 소수성이지만 C3의 -OH 하나가 친수성이므로, cholesterol은 **양친매성(amphipathic)** 분자다. 그래서 인지질 이중층에 끼어들 때 -OH가 막 표면의 인지질 머리 쪽을 향하고 고리와 곁사슬이 지방산 꼬리 사이에 자리 잡는다.
+몸에서 하는 일이 많아 반드시 일정한 양이 공급되어야 한다. 모든 세포막의 구성 성분이고, 특정 조직에서는 담즙산(bile acid), steroid 호르몬, vitamin D를 만드는 재료가 된다. 그래서 몸은 cholesterol을 만들고, 나르고, 저장하고, 내보내는 여러 체계를 갖추고 있다. 이 장은 그 체계를 순서대로 다룬다.
 
-세포에서 cholesterol이 하는 일은 세 가지로 묶인다.
+**구조**부터 본다. Cholesterol은 탄소 27개로 이루어진 분자다. 중심에는 고리 네 개가 서로 붙어 있는 구조가 있는데, 이것을 **steroid nucleus**(또는 steroid 핵)라고 부른다. 고리에는 A, B, C, D라는 이름이 붙는다. A·B·C는 탄소 여섯 개짜리 고리이고 D는 탄소 다섯 개짜리 고리다.
 
-- **막 구성 성분**: 동물 세포막에서 인지질 사이에 끼어 막의 유동성을 조절한다. 상전이 온도보다 높은 온도에서는 지방산 사슬의 운동을 제한해 유동성을 낮추고, 낮은 온도에서는 사슬이 촘촘히 정렬되는 것을 방해해 유동성을 높인다. 즉 온도 변화에 대한 **완충자** 역할을 한다.
-- **전구체**: 담즙산, 다섯 계열의 steroid 호르몬, vitamin D가 모두 cholesterol에서 만들어진다. 이 수업의 뒷부분이 그 각각이다.
-- **지질 뗏목(lipid raft)의 구성**: sphingolipid와 함께 막의 특정 영역에 모여 신호 단백질이 자리 잡는 발판을 만든다.
+여기에 세 가지 특징이 더해진다. 이 세 가지를 기억하면 cholesterol의 성질이 거의 다 설명된다.
 
-저장과 운반에는 **cholesteryl ester** 형태를 쓴다. C3의 -OH에 지방산이 에스터 결합으로 붙은 형태로, -OH가 가려지므로 더 소수성이 되어 지질방울 안쪽이나 lipoprotein 중심부에 빽빽하게 담긴다. 에스터화를 담당하는 효소는 두 곳에서 다르다. 세포 안에서는 **ACAT**(acyl-CoA:cholesterol acyltransferase)이 acyl-CoA의 지방산을 옮기고, 혈장에서는 **LCAT**(lecithin:cholesterol acyltransferase)이 phosphatidylcholine의 지방산을 옮긴다.
+- **C3의 hydroxyl기(-OH)**: A 고리의 3번 탄소에 붙어 있다. 분자에서 유일하게 물과 친한 부분이다.
+- **C5와 C6 사이의 이중결합**: B 고리에 있다.
+- **C17의 곁사슬(side chain)**: D 고리의 17번 탄소에 탄소 여덟 개짜리 가지가 붙어 있다.
+
+**sterol**이라는 이름은 steroid 핵에 hydroxyl기가 붙은 화합물을 가리킨다. Cholesterol은 그중 하나다.
+
+이 구조에서 성질이 나온다. 분자의 대부분은 탄화수소(C와 H로만 이루어진 부분)여서 물과 섞이지 않는다. 그런데 C3의 -OH 하나만은 물과 친하다. 이렇게 한 분자 안에 물과 친한 부분과 친하지 않은 부분이 함께 있는 것을 **amphipathic**(양친매성)이라고 한다.
+
+그래서 cholesterol이 세포막에 끼어들 때 방향이 정해진다. -OH는 막 표면의 인지질 머리 쪽을 향하고, 고리와 곁사슬은 막 안쪽의 지방산 꼬리 사이에 자리 잡는다.
+
+**생물학적 역할**은 세 가지로 묶인다.
+
+- **세포막의 구성 성분**: 동물 세포막에서 인지질 사이사이에 끼어 막의 유동성을 조절한다. 온도가 높을 때는 지방산 사슬이 심하게 움직이는 것을 붙잡아 막을 덜 무르게 하고, 온도가 낮을 때는 사슬이 촘촘히 정렬되어 굳는 것을 막는다. 즉 온도가 변해도 막의 성질이 크게 달라지지 않도록 **완충** 역할을 한다.
+- **다른 분자의 전구체**: 담즙산, 다섯 계열의 steroid 호르몬, vitamin D가 모두 cholesterol에서 만들어진다. 이 장의 뒷부분이 그 각각이다.
+- **lipid raft의 구성**: sphingolipid와 함께 막의 특정 구역에 모여, 신호를 전달하는 단백질이 자리 잡는 발판을 만든다.
+
+**저장하거나 운반할 때는 모양을 바꾼다.** C3의 -OH에 지방산을 붙이면 **cholesteryl ester**가 된다. 에스터 결합이란 alcohol의 -OH와 carboxylic acid의 -COOH가 물 한 분자를 잃으면서 연결되는 결합이다. 이렇게 되면 유일하게 물과 친했던 -OH가 가려지므로 분자 전체가 거의 완전히 소수성이 된다. 그만큼 더 빽빽하게 쌓을 수 있어, 세포 안의 지질방울이나 lipoprotein 입자의 중심부에 저장 형태로 들어간다.
+
+에스터를 만드는 효소는 있는 장소에 따라 다르다.
+
+- 세포 안에서는 **ACAT**(acyl-CoA:cholesterol acyltransferase)이 acyl-CoA에서 지방산을 가져와 붙인다.
+- 혈장에서는 **LCAT**(lecithin:cholesterol acyltransferase)이 phosphatidylcholine에서 지방산을 가져와 붙인다.
 
 | 구분 | 유리 cholesterol | Cholesteryl ester |
 |---|---|---|
-| C3 위치 | -OH 노출 | 지방산이 에스터 결합 |
-| 성질 | 양친매성 | 거의 완전한 소수성 |
-| 존재 위치 | 세포막, lipoprotein 표면 | 세포질 지질방울, lipoprotein 중심 |
-| 생성 효소 | — | 세포 내 ACAT, 혈장 LCAT |
+| C3 위치 | -OH가 드러나 있다 | 지방산이 에스터 결합으로 붙어 있다 |
+| 성질 | amphipathic | 거의 완전한 소수성 |
+| 있는 곳 | 세포막, lipoprotein 표면 | 세포질 지질방울, lipoprotein 중심 |
+| 만드는 효소 | — | 세포 안 ACAT, 혈장 LCAT |
 
-성인 체내 cholesterol 총량은 약 140 g이며, 공급은 두 경로에서 온다. 식사로 하루 약 300~500 mg을 섭취하고, 체내에서 하루 약 700~900 mg을 새로 만든다. 즉 **대부분은 내인성 합성에서 온다.** 식물에는 cholesterol이 없고 대신 sitosterol 같은 식물 sterol이 있는데, 사람은 이를 거의 흡수하지 못한다.
+**양적 관계**도 알아둔다. 성인 몸 전체의 cholesterol은 약 140 g이다. 공급은 두 곳에서 온다. 식사로 하루 약 300~500 mg을 먹고, 몸에서 하루 약 700~900 mg을 새로 만든다. 즉 **먹는 것보다 만드는 것이 더 많다.** 식물성 식품에는 cholesterol이 없고 대신 sitosterol 같은 식물 sterol이 들어 있는데, 사람은 이것을 거의 흡수하지 않는다.
 
 @sec 2. Cholesterol의 생합성: 경로 개요
-Cholesterol의 탄소 27개는 **모두 acetyl-CoA에서 온다.** 합성은 간에서 가장 활발하지만 거의 모든 조직에서 일어나며, 효소들은 세포질과 **활면소포체(smooth ER)** 막에 있다. 환원력으로는 NADPH가 대량으로 필요한데, 주로 pentose phosphate pathway에서 공급된다.
+몸은 cholesterol을 어디서부터 만들까. 답은 간단하다. **탄소 27개가 모두 acetyl-CoA에서 온다.**
+
+Acetyl-CoA는 탄소 두 개짜리 acetyl기가 coenzyme A에 붙어 있는 화합물로, 포도당·지방산·일부 아미노산이 분해될 때 공통으로 생기는 중간체다. 즉 cholesterol은 우리가 먹은 거의 모든 영양소에서 만들어질 수 있다.
+
+합성이 일어나는 곳은 간에서 가장 활발하지만 장, 부신피질, 생식샘을 비롯해 거의 모든 조직에서 일어난다. 효소는 세포질과 **활면소포체(smooth endoplasmic reticulum)** 막에 있다.
+
+이 경로는 분자를 **만드는** 과정이므로 환원력이 많이 든다. 그 환원력은 **NADPH**가 공급하며, NADPH는 주로 pentose phosphate pathway에서 나온다. 에너지로는 ATP도 소비된다.
 
 긴 경로이지만 네 단계로 묶으면 구조가 보인다.
 
 | 단계 | 변화 | 주요 효소 | 비고 |
 |---|---|---|---|
 | 1 | Acetyl-CoA(C2) ×3 → **HMG-CoA**(C6) | Thiolase, HMG-CoA synthase | **세포질**에서 일어난다 |
-| 2 | HMG-CoA → **Mevalonate**(C6) | **HMG-CoA reductase** | NADPH 2분자 소비, **율속·비가역** |
+| 2 | HMG-CoA → **Mevalonate**(C6) | **HMG-CoA reductase** | NADPH 2분자 소비, **rate-limiting step · 비가역** |
 | 3 | Mevalonate → **Isoprene 단위**(C5) → farnesyl pyrophosphate(C15) | Kinase 3종, isomerase, prenyltransferase | ATP 3분자 소비, 탈탄산 |
 | 4 | Farnesyl-PP ×2 → **Squalene**(C30) → lanosterol(C30) → **Cholesterol**(C27) | Squalene synthase, squalene monooxygenase, cyclase 외 약 19단계 | 탄소 3개가 떨어져 나간다 |
 
@@ -130,7 +155,7 @@ LDL은 **간에서 말초로** cholesterol을 보내는 입자이고, HDL은 **�
 @sec 5. 담즙산의 합성, 접합과 장간 순환
 사람은 cholesterol의 고리 구조를 열어 CO₂와 물로 분해하는 효소를 가지고 있지 않다. 따라서 과잉 cholesterol은 **분해되는 것이 아니라 배출된다.** 정량적으로 가장 중요한 배출 경로가 담즙산으로의 전환이다.
 
-**합성** 담즙산은 간에서만 만들어진다. 첫 반응이자 율속 단계는 **CYP7A1**(cholesterol 7α-hydroxylase)이 cholesterol의 C7에 수산기를 붙이는 것이다. 이후 고리의 추가 수산화, 이중결합 환원, 곁사슬 단축을 거쳐 탄소 24개의 **1차 담즙산** 두 가지가 만들어진다.
+**합성** 담즙산은 간에서만 만들어진다. 첫 반응이자 rate-limiting step은 **CYP7A1**(cholesterol 7α-hydroxylase)이 cholesterol의 C7에 수산기를 붙이는 것이다. 이후 고리의 추가 수산화, 이중결합 환원, 곁사슬 단축을 거쳐 탄소 24개의 **1차 담즙산** 두 가지가 만들어진다.
 
 - **Cholic acid** — 수산기 3개(C3, C7, C12)
 - **Chenodeoxycholic acid** — 수산기 2개(C3, C7)
@@ -150,7 +175,7 @@ LDL은 **간에서 말초로** cholesterol을 보내는 입자이고, HDL은 **�
 @sec 6. Steroid 호르몬의 합성
 Cholesterol은 다섯 계열의 steroid 호르몬의 공통 전구체다. 합성은 부신피질, 난소, 정소, 태반에서 일어나며, 이들 조직은 필요한 양이 자체 합성 능력을 넘기 때문에 혈중 **LDL 흡수에 크게 의존한다.**
 
-**율속 단계는 효소 반응이 아니라 운반이다.** Cholesterol을 미토콘드리아 외막에서 내막으로 옮기는 **StAR**(steroidogenic acute regulatory protein)가 그 역할을 한다. ACTH나 LH 자극은 StAR 발현을 빠르게 올려 합성을 개시한다.
+**Rate-limiting step은 효소 반응이 아니라 운반이다.** Cholesterol을 미토콘드리아 외막에서 내막으로 옮기는 **StAR**(steroidogenic acute regulatory protein)가 그 역할을 한다. ACTH나 LH 자극은 StAR 발현을 빠르게 올려 합성을 개시한다.
 
 내막에 도달한 cholesterol은 **CYP11A1**(측쇄 절단 효소)에 의해 곁사슬이 잘려 탄소 21개의 **pregnenolone**이 된다. **모든 steroid 호르몬은 여기서 갈라진다.**
 
@@ -206,7 +231,7 @@ Calcitriol은 핵수용체에 결합해 작용한다. 소장에서 칼슘과 인
 => **핵심 정리** 이 장의 모든 내용은 하나의 축으로 이어진다. Cholesterol은 acetyl-CoA에서 만들어지고, HMG-CoA reductase가 그 속도를 정하며, 세포 내 cholesterol 농도가 SREBP-2를 통해 합성과 흡수를 함께 조절한다. 분해되지 않으므로 담즙산으로 바꾸어 내보내고, 남은 것은 담즙산·steroid 호르몬·vitamin D라는 필수 분자의 재료가 된다. 약물은 이 축의 어느 지점에 작용하든 결국 간의 LDL receptor를 늘리는 쪽으로 수렴한다.
 
 @quiz
-Q: Cholesterol 합성 경로에서 HMG-CoA reductase가 율속 효소로 작동하는 이유를 반응의 성질과 조절 방식 두 측면에서 설명하라.
+Q: Cholesterol 합성 경로에서 HMG-CoA reductase가 rate-limiting step으로 작동하는 이유를 반응의 성질과 조절 방식 두 측면에서 설명하라.
 A: 반응의 성질 측면에서, HMG-CoA를 mevalonate로 환원하는 반응은 NADPH 두 분자를 쓰며 생리적 조건에서 비가역적이다. 이 지점을 지나면 되돌아갈 수 없는 committed step이므로 경로 전체의 유입량을 결정한다. 조절 측면에서는 세 가지가 겹친다. 세포 내 sterol이 줄면 SREBP-2가 전사를 늘리고, sterol이 쌓이면 Insig이 효소에 결합해 ubiquitin 매개 분해를 유도하며, ATP가 부족하면 AMPK가 인산화해 활성을 낮춘다. 한 효소에 세 층위의 조절이 모이므로 여기가 경로의 제어점이 된다.
 
 Q: 케톤체 합성과 cholesterol 합성은 둘 다 HMG-CoA를 중간체로 쓴다. 두 경로가 섞이지 않는 이유는 무엇인가.
