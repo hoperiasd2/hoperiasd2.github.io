@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 330" width="800" height="330" role="img"
+     aria-label="Steroidogenesis: StAR transfers cholesterol into mitochondria, CYP11A1 forms pregnenolone, which branches into progestagens, mineralocorticoids, glucocorticoids, androgens and estrogens">
+  <style>
+    .o { fill:#fff; stroke:#c6d2dd; stroke-width:1.8; }
+    .ok { fill:#fff5d6; stroke:#f2b705; stroke-width:2.4; }
+    .tb { font:700 13px sans-serif; fill:#003c71; }
+    .t { font:12px sans-serif; fill:#16191d; }
+    .s { font:11px sans-serif; fill:#4a5159; }
+    .eb { font:700 11px sans-serif; fill:#8a6300; }
+    .ar { stroke:#003c71; stroke-width:2.2; fill:none; marker-end:url(#m4); }
+  </style>
+  <defs><marker id="m4" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker></defs>
+
+  <rect class="o" x="24" y="40" width="150" height="54" rx="8"/>
+  <text class="tb" x="40" y="64">Cholesterol</text><text class="s" x="40" y="82">from LDL / HDL / stores</text>
+
+  <path class="ar" d="M180 67 L250 67"/>
+  <text class="eb" x="182" y="56">StAR</text>
+  <text class="s" x="182" y="90">outer to inner</text>
+  <text class="s" x="182" y="104">mitochondrial membrane</text>
+
+  <rect class="ok" x="256" y="34" width="190" height="66" rx="8"/>
+  <text class="eb" x="272" y="56">RATE-LIMITING STEP</text>
+  <text class="t" x="272" y="76">transfer, not an enzymatic</text>
+  <text class="t" x="272" y="92">reaction</text>
+
+  <path class="ar" d="M452 67 L520 67"/>
+  <text class="eb" x="454" y="56">CYP11A1</text>
+  <rect class="o" x="526" y="40" width="160" height="54" rx="8"/>
+  <text class="tb" x="542" y="64">Pregnenolone</text><text class="s" x="542" y="82">C21</text>
+
+  <path class="ar" d="M606 100 L606 128"/>
+  <text class="s" x="614" y="120">all classes branch here</text>
+
+  <rect class="o" x="24" y="150" width="140" height="70" rx="8"/>
+  <text class="tb" x="38" y="174">Progestagens</text><text class="t" x="38" y="194">Progesterone</text><text class="s" x="38" y="211">C21 · ovary, placenta</text>
+
+  <rect class="o" x="176" y="150" width="140" height="70" rx="8"/>
+  <text class="tb" x="190" y="174">Mineralo-</text><text class="tb" x="190" y="190">corticoids</text>
+  <text class="t" x="190" y="208">Aldosterone · C21</text>
+
+  <rect class="o" x="328" y="150" width="140" height="70" rx="8"/>
+  <text class="tb" x="342" y="174">Gluco-</text><text class="tb" x="342" y="190">corticoids</text>
+  <text class="t" x="342" y="208">Cortisol · C21</text>
+
+  <rect class="o" x="480" y="150" width="140" height="70" rx="8"/>
+  <text class="tb" x="494" y="174">Androgens</text><text class="t" x="494" y="194">Testosterone</text><text class="s" x="494" y="211">C19 · testis, adrenal</text>
+
+  <rect class="o" x="632" y="150" width="140" height="70" rx="8"/>
+  <text class="tb" x="646" y="174">Estrogens</text><text class="t" x="646" y="194">Estradiol</text><text class="s" x="646" y="211">C18 · ovary</text>
+
+  <path class="ar" d="M606 128 L94 128 L94 146"/>
+  <path class="ar" d="M246 128 L246 146"/>
+  <path class="ar" d="M398 128 L398 146"/>
+  <path class="ar" d="M550 128 L550 146"/>
+  <path class="ar" d="M702 128 L702 146"/>
+
+  <rect class="ok" x="24" y="244" width="748" height="66" rx="8"/>
+  <text class="eb" x="40" y="266">21-hydroxylase (CYP21A2) deficiency — about 90-95% of congenital adrenal hyperplasia</text>
+  <text class="t" x="40" y="286">Cortisol and aldosterone fall. ACTH rises. 17-hydroxyprogesterone accumulates above the block</text>
+  <text class="t" x="40" y="302">and is shunted into the open androgen pathway, causing virilisation in 46,XX infants.</text>
+</svg>

@@ -161,6 +161,18 @@ def esc(s):
 
 
 FIGN = {"n": 0}
+FIG_SRC = {}
+FIG_CREDIT = {}
+FIG_EXT = (".svg", ".png", ".jpg", ".jpeg", ".webp", ".gif")
+
+
+def find_figure(lesson_dir, fid):
+    """assets/ 에서 그림 파일을 찾는다. SVG와 래스터 이미지를 모두 지원한다."""
+    for ext in FIG_EXT:
+        f = Path(lesson_dir) / "assets" / f"{fid}{ext}"
+        if f.exists():
+            return f
+    return None
 
 
 def render_blocks(blocks):
@@ -169,10 +181,13 @@ def render_blocks(blocks):
         if kind == "fig":
             FIGN["n"] += 1
             fid, cap = buf[0], buf[1]
+            src = FIG_SRC.get(fid, f"assets/{fid}.svg")
+            credit = FIG_CREDIT.get(fid, "")
+            cr = f' <span class="credit">{_inline(credit)}</span>' if credit else ""
             out.append(
                 f'<figure class="fig" id="{esc(fid)}">'
-                f'<img src="assets/{esc(fid)}.svg" alt="{esc(plain(cap))}">'
-                f'<figcaption><b>그림 {FIGN["n"]}</b> {_inline(cap)}</figcaption></figure>')
+                f'<img src="{esc(src)}" alt="{esc(plain(cap))}" loading="lazy">'
+                f'<figcaption><b>그림 {FIGN["n"]}</b> {_inline(cap)}{cr}</figcaption></figure>')
             continue
         if kind == "p":
             out.append("<p>" + _inline(" ".join(buf)) + "</p>")
@@ -207,8 +222,16 @@ SECTION_LABEL = {
 }
 
 
-def lesson_html(row, meta, named, lists, secs, quiz, prev_r, next_r):
+def lesson_html(row, meta, named, lists, secs, quiz, prev_r, next_r, lesson_dir=None):
     FIGN["n"] = 0
+    FIG_SRC.clear()
+    if lesson_dir:
+        for sec in secs:
+            for kind, buf in sec.blocks:
+                if kind == "fig":
+                    f = find_figure(lesson_dir, buf[0])
+                    if f:
+                        FIG_SRC[buf[0]] = f"assets/{f.name}"
     practicum = row["kind"] == "practicum"
     up = "../../../../"
 
@@ -597,10 +620,16 @@ class Deck:
 
         한글 글꼴이 fontconfig에 없으므로 Chromium으로 래스터화한다.
         Chromium을 쓸 수 없으면 cairosvg로 되돌아간다(한글이 깨질 수 있다)."""
-        png = str(svg_path).replace(".svg", ".slide.png")
-        if not rasterize(svg_path, png, width=2200):
-            import cairosvg
-            cairosvg.svg2png(url=str(svg_path), write_to=png, scale=2.0, background_color="white")
+        src = Path(svg_path)
+        tmp = None
+        if src.suffix.lower() == ".svg":
+            png = str(src).replace(".svg", ".slide.png")
+            tmp = png
+            if not rasterize(src, png, width=2200):
+                import cairosvg
+                cairosvg.svg2png(url=str(src), write_to=png, scale=2.0, background_color="white")
+        else:
+            png = str(src)
         s = self._base(title, kicker)
         from PIL import Image
         iw, ih = Image.open(png).size
@@ -614,7 +643,8 @@ class Deck:
             p.alignment = PP_ALIGN.CENTER
             add_rich(p, caption, 12, color=MUTED)
         self.note(s, plain(caption))
-        Path(png).unlink(missing_ok=True)
+        if tmp:
+            Path(tmp).unlink(missing_ok=True)
 
     def quiz(self, quiz):
         for i, (q, a) in enumerate(quiz, 1):
@@ -677,9 +707,9 @@ def build_deck(row, meta, lists, secs, quiz, out, lesson_dir):
                 d.table(plain(sec.title), buf, kick)
             elif kind == "fig":
                 flush_text()
-                svg = lesson_dir / "assets" / f"{buf[0]}.svg"
-                if svg.exists():
-                    d.figure(plain(sec.title), svg, buf[1], kick)
+                f = find_figure(lesson_dir, buf[0])
+                if f:
+                    d.figure(plain(sec.title), f, buf[1], kick)
         flush_text()
         if pend:
             d.boxes(plain(sec.title), pend, kick)
@@ -741,7 +771,7 @@ def main():
         next_r = rows[i + 1] if i + 1 < len(rows) and rows[i + 1]["module"] == row["module"] else None
 
         (d / "index.html").write_text(
-            lesson_html(row, meta, named, lists, secs, quiz, prev_r, next_r), encoding="utf-8")
+            lesson_html(row, meta, named, lists, secs, quiz, prev_r, next_r, d), encoding="utf-8")
 
         n = 0
         if not a.html_only and (meta.get("slides") or "").lower() != "none":
@@ -755,9 +785,9 @@ def main():
                     figs.append({
                         "figure_id": buf[0], "lesson_id": lid,
                         "html_anchor": f"#{buf[0]}", "caption": buf[1],
-                        "asset_path": f"assets/{buf[0]}.svg",
+                        "asset_path": (lambda f: f"assets/{f.name}" if f else "")(find_figure(d, buf[0])),
                         "source_id": "", "rights_status": "자체 제작",
-                        "status": "확정" if (d / "assets" / f"{buf[0]}.svg").exists() else "미제작",
+                        "status": "확정" if find_figure(d, buf[0]) else "미제작",
                         "replacement_requirements": "", "review_result": "",
                     })
         (d / "figures.json").write_text(

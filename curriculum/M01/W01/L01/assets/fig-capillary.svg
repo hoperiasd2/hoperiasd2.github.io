@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 380" width="820" height="380" role="img"
+     aria-label="Starling forces across a capillary: hydrostatic pressure falls from arteriolar to venular end while colloid osmotic pressure stays constant">
+  <defs>
+    <marker id="a3" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#16191d"/>
+    </marker>
+    <marker id="a4" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#8a6300"/>
+    </marker>
+  </defs>
+  <style>
+    .cap { fill:#ffffff; stroke:#16191d; stroke-width:2.2; }
+    .t  { font:600 13px sans-serif; fill:#16191d; }
+    .ts { font:11px sans-serif; fill:#4a5159; }
+    .hd { font:700 15px sans-serif; fill:#003c71; }
+    .out{ fill:none; stroke:#16191d; stroke-width:2; marker-end:url(#a3); }
+    .inw{ fill:none; stroke:#8a6300; stroke-width:2; marker-end:url(#a4); }
+    .ev { font:700 11px sans-serif; fill:#8a6300; }
+    .bx { fill:#fff5d6; stroke:#c6d2dd; stroke-width:1.6; }
+  </style>
+  <text class="hd" x="40" y="28">Fluid exchange across the capillary wall</text>
+
+  <rect class="cap" x="120" y="150" width="580" height="60" rx="8"/>
+  <text class="t" x="130" y="186">capillary lumen</text>
+  <text class="ts" x="60" y="186">arteriolar end</text>
+  <text class="ts" x="710" y="186">venular end</text>
+
+  <path class="out" d="M200 148 L200 92"/>
+  <path class="out" d="M300 148 L300 104"/>
+  <text class="ev" x="150" y="80">hydrostatic Pc 32 mmHg</text>
+  <text class="ts" x="150" y="62">pushes fluid out (filtration)</text>
+
+  <path class="inw" d="M520 92 L520 146"/>
+  <path class="inw" d="M620 92 L620 146"/>
+  <text class="ev" x="470" y="80">colloid osmotic 25 mmHg</text>
+  <text class="ts" x="470" y="62">pulls fluid in (reabsorption)</text>
+
+  <path class="inw" d="M620 268 L620 214"/>
+  <text class="ev" x="520" y="292">Pc falls to about 15 mmHg here</text>
+  <text class="ts" x="520" y="310">so net movement reverses inward</text>
+
+  <rect class="bx" x="120" y="246" width="330" height="86" rx="6"/>
+  <text class="t" x="136" y="268">Net filtration pressure</text>
+  <text class="ts" x="136" y="288">= (Pc - Pi) - (pi-c - pi-i)</text>
+  <text class="ts" x="136" y="306">Filtration exceeds reabsorption by 2-4 L/day;</text>
+  <text class="ts" x="136" y="322">the lymphatic system returns that excess.</text>
+
+  <text class="ts" x="120" y="364">Albumin (normal plasma 3.5-5.0 g/dL) supplies most of the colloid osmotic pressure.</text>
+</svg>

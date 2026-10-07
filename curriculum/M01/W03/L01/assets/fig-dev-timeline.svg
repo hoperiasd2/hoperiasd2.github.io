@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 360" width="900" height="360" role="img"
+     aria-label="Timeline of early human development from fertilization through organogenesis">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#16191d"/>
+    </marker>
+  </defs>
+  <style>
+    .ax { stroke:#16191d; stroke-width:2; fill:none; }
+    .bx { fill:#ffffff; stroke:#c6d2dd; stroke-width:1.6; }
+    .hx { fill:#fff5d6; stroke:#c6d2dd; stroke-width:1.6; }
+    .t  { font:600 13px sans-serif; fill:#16191d; }
+    .s  { font:11px sans-serif; fill:#4a5159; }
+    .d  { font:700 12px sans-serif; fill:#003c71; }
+    .ttl{ font:700 15px sans-serif; fill:#003c71; }
+    .cell { fill:none; stroke:#16191d; stroke-width:1.8; }
+    .mk { fill:#f2b705; }
+  </style>
+
+  <text class="ttl" x="20" y="28">Early human development: fertilization to organogenesis</text>
+
+  <!-- time axis -->
+  <path class="ax" d="M40 300 L870 300" marker-end="url(#ar)"/>
+  <text class="s" x="820" y="325">time</text>
+
+  <!-- ticks -->
+  <g class="d">
+    <text x="48" y="325">Day 0</text>
+    <text x="178" y="325">Day 1-3</text>
+    <text x="318" y="325">Day 5</text>
+    <text x="455" y="325">Day 6-7</text>
+    <text x="588" y="325">Week 3</text>
+    <text x="718" y="325">Week 4-8</text>
+  </g>
+  <g class="ax">
+    <path d="M62 294 L62 306"/><path d="M200 294 L200 306"/><path d="M335 294 L335 306"/>
+    <path d="M478 294 L478 306"/><path d="M608 294 L608 306"/><path d="M750 294 L750 306"/>
+  </g>
+
+  <!-- stage boxes -->
+  <rect class="bx" x="24" y="60" width="118" height="92" rx="6"/>
+  <text class="t" x="36" y="82">Fertilization</text>
+  <text class="s" x="36" y="100">sperm + oocyte</text>
+  <text class="s" x="36" y="116">zygote (2n)</text>
+  <text class="s" x="36" y="132">in ampulla</text>
+
+  <rect class="bx" x="156" y="60" width="118" height="92" rx="6"/>
+  <text class="t" x="168" y="82">Cleavage</text>
+  <text class="s" x="168" y="100">2 - 4 - 8 cell</text>
+  <text class="s" x="168" y="116">morula (day 3-4)</text>
+  <text class="s" x="168" y="132">no growth in size</text>
+
+  <rect class="bx" x="288" y="60" width="118" height="92" rx="6"/>
+  <text class="t" x="300" y="82">Blastocyst</text>
+  <text class="s" x="300" y="100">inner cell mass</text>
+  <text class="s" x="300" y="116">trophoblast</text>
+  <text class="s" x="300" y="132">blastocoel</text>
+
+  <rect class="bx" x="420" y="60" width="118" height="92" rx="6"/>
+  <text class="t" x="432" y="82">Implantation</text>
+  <text class="s" x="432" y="100">endometrium</text>
+  <text class="s" x="432" y="116">syncytiotrophoblast</text>
+  <text class="s" x="432" y="132">hCG secretion</text>
+
+  <rect class="hx" x="552" y="60" width="118" height="92" rx="6"/>
+  <text class="t" x="564" y="82">Gastrulation</text>
+  <text class="s" x="564" y="100">primitive streak</text>
+  <text class="s" x="564" y="116">3 germ layers</text>
+  <text class="s" x="564" y="132">body axes set</text>
+
+  <rect class="hx" x="684" y="60" width="140" height="92" rx="6"/>
+  <text class="t" x="696" y="82">Organogenesis</text>
+  <text class="s" x="696" y="100">neurulation</text>
+  <text class="s" x="696" y="116">somites, heart tube</text>
+  <text class="s" x="696" y="132">limb buds</text>
+
+  <!-- connectors down to axis -->
+  <g class="ax" stroke-dasharray="3 3">
+    <path d="M62 152 L62 294"/><path d="M200 152 L200 294"/><path d="M335 152 L335 294"/>
+    <path d="M478 152 L478 294"/><path d="M608 152 L608 294"/><path d="M750 152 L750 294"/>
+  </g>
+
+  <!-- arrows between boxes -->
+  <g class="ax">
+    <path d="M144 106 L152 106" marker-end="url(#ar)"/>
+    <path d="M276 106 L284 106" marker-end="url(#ar)"/>
+    <path d="M408 106 L416 106" marker-end="url(#ar)"/>
+    <path d="M540 106 L548 106" marker-end="url(#ar)"/>
+    <path d="M672 106 L680 106" marker-end="url(#ar)"/>
+  </g>
+
+  <!-- critical period bar -->
+  <rect class="mk" x="552" y="230" width="272" height="12" rx="6"/>
+  <text class="t" x="552" y="222">Critical period for major malformations</text>
+  <text class="s" x="552" y="262">teratogen exposure in week 3-8 causes structural defects;</text>
+  <text class="s" x="552" y="278">later exposure mainly affects growth and function</text>
+
+  <!-- cell sketches -->
+  <circle class="cell" cx="62" cy="195" r="20"/>
+  <circle cx="62" cy="195" r="6" fill="#003c71"/>
+  <g class="cell">
+    <circle cx="190" cy="195" r="12"/><circle cx="212" cy="195" r="12"/>
+  </g>
+  <circle class="cell" cx="335" cy="195" r="22"/>
+  <path class="cell" d="M335 173 a22 22 0 0 1 0 44" fill="#ffffff"/>
+  <circle cx="324" cy="183" r="7" fill="#003c71"/>
+  <text class="s" x="362" y="199">ICM</text>
+</svg>

@@ -1,70 +1,74 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 420" width="860" height="420" role="img"
-     aria-label="Cholesterol 생합성의 네 단계. acetyl-CoA에서 HMG-CoA, mevalonate, isoprene 단위, squalene을 거쳐 cholesterol에 이른다">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 470" width="900" height="470" role="img"
+     aria-label="Four stages of cholesterol biosynthesis from acetyl-CoA through HMG-CoA, mevalonate, isoprene units and squalene to cholesterol">
   <style>
-    .box { fill:#fff; stroke:#c6d2dd; stroke-width:1.6; rx:7; }
-    .boxk { fill:#fff5d6; stroke:#f2b705; stroke-width:2.4; rx:7; }
-    .mol { font:700 14px ui-monospace,monospace; fill:#16191d; }
-    .cn { font:600 12px ui-monospace,monospace; fill:#003c71; }
-    .enz { font:12px "Noto Sans KR",sans-serif; fill:#4a5159; }
-    .enzb { font:700 12px "Noto Sans KR",sans-serif; fill:#8a6300; }
-    .stage { font:700 13px "Noto Sans KR",sans-serif; fill:#fff; }
-    .sbox { fill:#003c71; rx:4; }
-    .arr { stroke:#003c71; stroke-width:2; fill:none; marker-end:url(#a); }
-    .cof { font:11px "Noto Sans KR",sans-serif; fill:#727a84; }
+    .bx { fill:#fff; stroke:#c6d2dd; stroke-width:1.6; }
+    .bk { fill:#fff5d6; stroke:#f2b705; stroke-width:2.4; }
+    .m { font:700 14px monospace; fill:#16191d; }
+    .c { font:600 11px monospace; fill:#003c71; }
+    .e { font:11px sans-serif; fill:#4a5159; }
+    .eb { font:700 11px sans-serif; fill:#8a6300; }
+    .st { font:700 12px sans-serif; fill:#fff; }
+    .sb { fill:#003c71; }
+    .ar { stroke:#003c71; stroke-width:2; fill:none; marker-end:url(#h); }
   </style>
-  <defs>
-    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
-      <path d="M0 0 L10 5 L0 10 z" fill="#003c71"/>
-    </marker>
-  </defs>
+  <defs><marker id="h" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+    <path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker></defs>
 
-  <rect class="sbox" x="20" y="18" width="62" height="20"/><text class="stage" x="30" y="33">단계 1</text>
-  <rect class="box" x="20" y="48" width="150" height="56"/>
-  <text class="mol" x="36" y="72">Acetyl-CoA ×3</text><text class="cn" x="36" y="92">C2 ×3</text>
-  <path class="arr" d="M176 76 L232 76"/>
-  <text class="enz" x="178" y="66">thiolase,</text>
-  <text class="enz" x="178" y="100">HMG-CoA synthase</text>
-  <rect class="box" x="238" y="48" width="140" height="56"/>
-  <text class="mol" x="256" y="72">HMG-CoA</text><text class="cn" x="256" y="92">C6 · 세포질</text>
+  <!-- Stage 1 -->
+  <rect class="sb" x="16" y="14" width="58" height="19" rx="3"/><text class="st" x="26" y="28">Stage 1</text>
+  <rect class="bx" x="16" y="44" width="150" height="54" rx="7"/>
+  <text class="m" x="30" y="68">Acetyl-CoA x3</text><text class="c" x="30" y="87">3 x C2</text>
+  <path class="ar" d="M174 71 L270 71"/>
+  <text class="e" x="178" y="61">thiolase</text>
+  <text class="e" x="178" y="90">HMG-CoA synthase</text>
+  <rect class="bx" x="278" y="44" width="140" height="54" rx="7"/>
+  <text class="m" x="292" y="68">HMG-CoA</text><text class="c" x="292" y="87">C6 · cytosol</text>
 
-  <rect class="sbox" x="420" y="18" width="62" height="20"/><text class="stage" x="430" y="33">단계 2</text>
-  <path class="arr" d="M384 76 L440 76"/>
-  <rect class="boxk" x="446" y="40" width="180" height="72"/>
-  <text class="mol" x="462" y="64">Mevalonate</text><text class="cn" x="462" y="83">C6</text>
-  <text class="enzb" x="462" y="103">rate-limiting step</text>
-  <text class="enzb" x="650" y="64">HMG-CoA</text>
-  <text class="enzb" x="650" y="80">reductase</text>
-  <text class="cof" x="650" y="98">NADPH ×2 · 비가역</text>
+  <!-- Stage 2 -->
+  <rect class="sb" x="458" y="14" width="58" height="19" rx="3"/><text class="st" x="468" y="28">Stage 2</text>
+  <path class="ar" d="M424 71 L472 71"/>
+  <rect class="bk" x="478" y="36" width="176" height="70" rx="7"/>
+  <text class="m" x="494" y="60">Mevalonate</text><text class="c" x="494" y="78">C6</text>
+  <text class="eb" x="494" y="97">RATE-LIMITING STEP</text>
+  <text class="eb" x="672" y="60">HMG-CoA reductase</text>
+  <text class="e" x="672" y="78">2 NADPH · irreversible</text>
+  <text class="e" x="672" y="94">target of statins</text>
 
-  <rect class="sbox" x="20" y="166" width="62" height="20"/><text class="stage" x="30" y="181">단계 3</text>
-  <rect class="box" x="20" y="196" width="160" height="56"/>
-  <text class="mol" x="36" y="220">Isopentenyl-PP</text><text class="cn" x="36" y="240">C5 · isoprene 단위</text>
-  <path class="arr" d="M186 224 L242 224"/>
-  <text class="cof" x="186" y="214">×2</text>
-  <rect class="box" x="248" y="196" width="150" height="56"/>
-  <text class="mol" x="266" y="220">Geranyl-PP</text><text class="cn" x="266" y="240">C10</text>
-  <path class="arr" d="M404 224 L460 224"/>
-  <rect class="box" x="466" y="196" width="150" height="56"/>
-  <text class="mol" x="484" y="220">Farnesyl-PP</text><text class="cn" x="484" y="240">C15</text>
-  <text class="cof" x="20" y="272">mevalonate → ATP 3분자 소비 후 탈탄산 → C5</text>
+  <!-- Stage 3 -->
+  <rect class="sb" x="16" y="156" width="58" height="19" rx="3"/><text class="st" x="26" y="170">Stage 3</text>
+  <rect class="bx" x="16" y="186" width="158" height="54" rx="7"/>
+  <text class="m" x="30" y="210">Isopentenyl-PP</text><text class="c" x="30" y="229">C5 · isoprene unit</text>
+  <path class="ar" d="M180 214 L236 214"/>
+  <rect class="bx" x="242" y="186" width="146" height="54" rx="7"/>
+  <text class="m" x="258" y="210">Geranyl-PP</text><text class="c" x="258" y="229">C10</text>
+  <path class="ar" d="M394 214 L450 214"/>
+  <rect class="bx" x="456" y="186" width="146" height="54" rx="7"/>
+  <text class="m" x="472" y="210">Farnesyl-PP</text><text class="c" x="472" y="229">C15</text>
+  <text class="e" x="16" y="259">3 ATP consumed, then decarboxylation</text>
 
-  <!-- branch -->
-  <path class="arr" d="M541 258 L541 300" stroke="#8a6300" marker-end="url(#a)"/>
-  <rect class="boxk" x="430" y="306" width="230" height="46"/>
-  <text class="enzb" x="446" y="326">여기서 갈라지는 가지</text>
-  <text class="cof" x="446" y="344">CoQ10 · dolichol · prenyl기</text>
+  <!-- branch to the right -->
+  <path class="ar" d="M608 213 L666 213" stroke="#8a6300"/>
+  <rect class="bk" x="672" y="178" width="212" height="70" rx="7"/>
+  <text class="eb" x="686" y="200">Branch point</text>
+  <text class="e" x="686" y="219">CoQ10 · dolichol</text>
+  <text class="e" x="686" y="236">prenyl groups for Ras, Rho</text>
 
-  <rect class="sbox" x="20" y="306" width="62" height="20"/><text class="stage" x="30" y="321">단계 4</text>
-  <rect class="box" x="20" y="336" width="130" height="56"/>
-  <text class="mol" x="36" y="360">Squalene</text><text class="cn" x="36" y="380">C30</text>
-  <path class="arr" d="M156 364 L212 364"/>
-  <text class="cof" x="150" y="354">O₂, NADPH</text>
-  <rect class="box" x="218" y="336" width="130" height="56"/>
-  <text class="mol" x="234" y="360">Lanosterol</text><text class="cn" x="234" y="380">C30 · 고리화</text>
-  <path class="arr" d="M354 364 L400 364"/>
-  <text class="cof" x="348" y="354">약 19단계</text>
-  <rect class="boxk" x="406" y="336" width="150" height="56"/>
-  <text class="mol" x="424" y="360">Cholesterol</text><text class="cn" x="424" y="380">C27</text>
-  <path class="arr" d="M616 224 L700 224 L700 300 L80 300 L80 330" stroke="#c6d2dd"/>
-  <text class="cof" x="620" y="214">farnesyl-PP ×2</text>
+  <!-- stage 3 to 4 -->
+  <path class="ar" d="M529 246 L529 286 L90 286 L90 332"/>
+  <text class="e" x="420" y="278">2 x farnesyl-PP</text>
+
+  <!-- Stage 4 -->
+  <rect class="sb" x="16" y="300" width="58" height="19" rx="3"/><text class="st" x="26" y="314">Stage 4</text>
+  <rect class="bx" x="16" y="338" width="134" height="54" rx="7"/>
+  <text class="m" x="30" y="362">Squalene</text><text class="c" x="30" y="381">C30</text>
+  <path class="ar" d="M156 366 L228 366"/>
+  <text class="e" x="156" y="356">O2, NADPH</text>
+  <rect class="bx" x="234" y="338" width="150" height="54" rx="7"/>
+  <text class="m" x="248" y="362">Lanosterol</text><text class="c" x="248" y="381">C30 · cyclization</text>
+  <path class="ar" d="M390 366 L462 366"/>
+  <text class="e" x="392" y="356">~19 steps</text>
+  <rect class="bk" x="468" y="338" width="150" height="54" rx="7"/>
+  <text class="m" x="484" y="362">Cholesterol</text><text class="c" x="484" y="381">C27</text>
+  <text class="e" x="16" y="420">Carbon count: 3 x C2 → C6 → C5 units → C15 → C30 → C27 (three carbons are lost from lanosterol)</text>
+  <text class="e" x="16" y="440">All 27 carbons of cholesterol originate from acetyl-CoA.</text>
 </svg>

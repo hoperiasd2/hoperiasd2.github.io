@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 350" width="780" height="350" role="img"
+     aria-label="Enterohepatic circulation of bile acids between liver, gallbladder, intestine and portal vein, with daily pool size, cycle number and faecal loss">
+  <style>
+    .o { fill:#fff; stroke:#c6d2dd; stroke-width:1.8; }
+    .ok { fill:#fff5d6; stroke:#f2b705; stroke-width:2.2; }
+    .tb { font:700 13px sans-serif; fill:#003c71; }
+    .t { font:12px sans-serif; fill:#16191d; }
+    .s { font:11px sans-serif; fill:#4a5159; }
+    .ar { stroke:#003c71; stroke-width:2.4; fill:none; marker-end:url(#m2); }
+    .arl { stroke:#9a6700; stroke-width:2.4; fill:none; marker-end:url(#m3); }
+  </style>
+  <defs>
+    <marker id="m2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker>
+    <marker id="m3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#9a6700"/></marker>
+  </defs>
+
+  <rect class="ok" x="40" y="40" width="190" height="96" rx="10"/>
+  <text class="tb" x="56" y="66">LIVER</text>
+  <text class="t" x="56" y="88">Cholesterol</text>
+  <text class="t" x="56" y="106">CYP7A1 (rate-limiting)</text>
+  <text class="t" x="56" y="124">Conjugation: glycine / taurine</text>
+
+  <rect class="o" x="286" y="52" width="140" height="62" rx="10"/>
+  <text class="tb" x="302" y="78">GALLBLADDER</text>
+  <text class="s" x="302" y="98">storage, release</text>
+  <path class="ar" d="M234 84 L280 84"/>
+
+  <rect class="o" x="286" y="192" width="300" height="94" rx="10"/>
+  <text class="tb" x="302" y="218">INTESTINE</text>
+  <text class="t" x="302" y="240">Emulsification of dietary lipid</text>
+  <text class="t" x="302" y="258">Terminal ileum: ASBT reabsorption</text>
+  <text class="s" x="302" y="276">Gut bacteria: deconjugation, 7a-dehydroxylation</text>
+  <path class="ar" d="M356 120 L356 186"/>
+  <text class="s" x="364" y="158">bile</text>
+
+  <path class="ar" d="M286 240 L150 240 L150 144"/>
+  <text class="s" x="150" y="262">portal vein</text>
+  <text class="s" x="150" y="278">return to liver</text>
+
+  <path class="arl" d="M590 240 L690 240"/>
+  <rect class="o" x="620" y="192" width="130" height="62" rx="10" fill="#fff"/>
+  <text class="tb" x="636" y="218">FAECES</text>
+  <text class="t" x="636" y="238">0.2-0.6 g / day</text>
+
+  <rect class="o" x="40" y="300" width="700" height="34" rx="7"/>
+  <text class="t" x="56" y="322">Pool about 3 g · recirculates 6-10 times per day · only the faecal loss is replaced by new synthesis</text>
+  <text class="s" x="440" y="84">Primary bile acids: cholic acid, chenodeoxycholic acid</text>
+  <text class="s" x="440" y="102">Secondary: deoxycholic acid, lithocholic acid</text>
+  <text class="s" x="440" y="130">Bile acid sequestrants interrupt this loop,</text>
+  <text class="s" x="440" y="146">so the liver consumes cholesterol to resynthesise.</text>
+</svg>

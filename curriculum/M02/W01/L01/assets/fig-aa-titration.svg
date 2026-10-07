@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420" width="760" height="420" role="img"
+     aria-label="Titration curve of glycine showing two buffering plateaus at pKa 2.3 and pKa 9.6 and the isoelectric point at pH 6.0">
+  <style>
+    .ax   { stroke:#16191d; stroke-width:1.8; fill:none; }
+    .grid { stroke:#c6d2dd; stroke-width:1; fill:none; }
+    .curve{ stroke:#003c71; stroke-width:3; fill:none; }
+    .flat { stroke:#f2b705; stroke-width:7; fill:none; opacity:0.55; }
+    .dash { stroke:#4a5159; stroke-width:1.3; fill:none; stroke-dasharray:5 4; }
+    .lbl  { font:600 12px sans-serif; fill:#16191d; }
+    .ttl  { font:700 14px sans-serif; fill:#003c71; }
+    .note { font:11px sans-serif; fill:#4a5159; }
+    .sp   { font:600 12px sans-serif; fill:#003c71; }
+  </style>
+  <text class="ttl" x="12" y="20">Titration curve of glycine</text>
+
+  <!-- axes: x = equivalents of OH- 0..2 (90..660), y = pH 0..14 (370..50) -->
+  <path class="ax" d="M90 370 L690 370"/>
+  <path class="ax" d="M90 370 L90 44"/>
+  <text class="lbl" x="300" y="398">Equivalents of OH added</text>
+  <text class="lbl" x="18" y="210">pH</text>
+  <text class="lbl" x="86" y="388">0</text>
+  <text class="lbl" x="386" y="388">1.0</text>
+  <text class="lbl" x="676" y="388">2.0</text>
+
+  <g class="grid">
+    <path d="M90 324 L690 324"/><path d="M90 278 L690 278"/><path d="M90 232 L690 232"/>
+    <path d="M90 186 L690 186"/><path d="M90 140 L690 140"/><path d="M90 94 L690 94"/>
+  </g>
+  <g class="lbl">
+    <text x="62" y="374">0</text><text x="62" y="328">2</text><text x="62" y="282">4</text>
+    <text x="62" y="236">6</text><text x="62" y="190">8</text><text x="62" y="144">10</text>
+    <text x="62" y="98">12</text>
+  </g>
+
+  <!-- buffering plateaus highlighted -->
+  <path class="flat" d="M150 319 L250 310"/>
+  <path class="flat" d="M480 148 L580 139"/>
+
+  <path class="curve" d="M90 352 C110 338 130 326 160 318
+     C200 310 230 306 260 300 C290 292 310 276 330 250
+     C345 230 352 220 360 206 C370 192 382 176 400 168
+     C430 158 460 150 500 144 C540 138 570 132 600 122
+     C630 110 655 90 690 62"/>
+
+  <!-- pKa1 -->
+  <path class="dash" d="M90 314 L200 314"/><path class="dash" d="M200 314 L200 370"/>
+  <circle cx="200" cy="314" r="4.5" fill="#f2b705" stroke="#16191d" stroke-width="1.4"/>
+  <text class="sp" x="206" y="306">pKa1 = 2.3</text>
+  <text class="note" x="206" y="322">alpha-COOH half ionized</text>
+
+  <!-- pI -->
+  <path class="dash" d="M90 232 L360 232"/><path class="dash" d="M360 232 L360 370"/>
+  <circle cx="360" cy="214" r="4.5" fill="#003c71"/>
+  <text class="sp" x="268" y="252">pI = 6.0</text>
+  <text class="note" x="250" y="266">net charge zero; steepest slope,</text>
+  <text class="note" x="250" y="280">lowest buffering power</text>
+
+  <!-- pKa2 -->
+  <path class="dash" d="M90 140 L530 140"/><path class="dash" d="M530 140 L530 370"/>
+  <circle cx="530" cy="140" r="4.5" fill="#f2b705" stroke="#16191d" stroke-width="1.4"/>
+  <text class="sp" x="430" y="120">pKa2 = 9.6</text>
+  <text class="note" x="430" y="106">alpha-NH3+ half ionized</text>
+
+  <text class="note" x="104" y="356">fully protonated</text>
+  <text class="note" x="104" y="342">net charge +1</text>
+  <text class="note" x="596" y="80">net charge -1</text>
+
+  <text class="note" x="150" y="216">Yellow segments: pH within</text>
+  <text class="note" x="150" y="230">1 unit of a pKa, where the</text>
+  <text class="note" x="150" y="194">curve is flat and buffering</text>
+  <text class="note" x="150" y="180">is effective.</text>
+</svg>

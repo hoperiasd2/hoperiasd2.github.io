@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 380" width="760" height="380" role="img"
+     aria-label="General structure of an alpha-amino acid, its zwitterion form, and the L and D enantiomers at the alpha carbon">
+  <style>
+    .bond { stroke:#16191d; stroke-width:2.2; fill:none; stroke-linecap:round; }
+    .thin { stroke:#4a5159; stroke-width:1.4; fill:none; }
+    .atom { font:600 15px sans-serif; fill:#16191d; }
+    .sub  { font:600 11px sans-serif; fill:#16191d; }
+    .ttl  { font:700 15px sans-serif; fill:#003c71; }
+    .note { font:12px sans-serif; fill:#4a5159; }
+    .mark { fill:none; stroke:#f2b705; stroke-width:3; }
+    .box  { fill:#ffffff; stroke:#c6d2dd; stroke-width:1.4; }
+    .hbox { fill:#fff5d6; stroke:#c6d2dd; stroke-width:1.4; }
+  </style>
+
+  <rect class="box" x="8" y="8" width="360" height="200" rx="6"/>
+  <text class="ttl" x="22" y="32">A. General alpha-amino acid</text>
+
+  <text class="atom" x="150" y="78">NH</text><text class="sub" x="179" y="83">2</text>
+  <path class="bond" d="M166 88 L166 112"/>
+  <text class="atom" x="156" y="130">C</text>
+  <text class="sub" x="170" y="135">alpha</text>
+  <path class="bond" d="M160 124 L118 124"/>
+  <text class="atom" x="92" y="130">H</text>
+  <path class="bond" d="M190 124 L232 124"/>
+  <text class="atom" x="238" y="130">COOH</text>
+  <path class="bond" d="M166 136 L166 160"/>
+  <text class="atom" x="156" y="180">R</text>
+  <text class="note" x="178" y="180">side chain</text>
+  <circle class="mark" cx="166" cy="124" r="17"/>
+  <text class="note" x="22" y="196">The alpha carbon carries four different groups except in glycine.</text>
+
+  <rect class="hbox" x="392" y="8" width="360" height="200" rx="6"/>
+  <text class="ttl" x="406" y="32">B. Zwitterion at pH 7.4</text>
+  <text class="atom" x="520" y="78">NH</text><text class="sub" x="549" y="83">3</text>
+  <text class="atom" x="556" y="72">+</text>
+  <path class="bond" d="M536 88 L536 112"/>
+  <text class="atom" x="526" y="130">C</text>
+  <path class="bond" d="M530 124 L492 124"/>
+  <text class="atom" x="470" y="130">H</text>
+  <path class="bond" d="M560 124 L600 124"/>
+  <text class="atom" x="606" y="130">COO</text>
+  <text class="atom" x="648" y="124">-</text>
+  <path class="bond" d="M536 136 L536 160"/>
+  <text class="atom" x="526" y="180">R</text>
+  <text class="note" x="406" y="196">Net charge zero, yet both groups are ionized. Highly water soluble.</text>
+
+  <rect class="box" x="8" y="222" width="744" height="148" rx="6"/>
+  <text class="ttl" x="22" y="246">C. Stereochemistry at the alpha carbon</text>
+
+  <text class="atom" x="150" y="276">COO</text><text class="atom" x="192" y="270">-</text>
+  <path class="bond" d="M166 282 L166 306"/>
+  <text class="atom" x="156" y="324">C</text>
+  <path class="bond" d="M160 318 L112 300"/>
+  <text class="atom" x="58" y="300">H</text><text class="sub" x="70" y="305">3</text>
+  <text class="atom" x="78" y="300">N</text><text class="atom" x="92" y="293">+</text>
+  <path class="bond" d="M190 318 L236 300"/>
+  <text class="atom" x="244" y="300">R</text>
+  <path class="bond" d="M166 330 L166 352"/>
+  <text class="atom" x="160" y="366">H</text>
+  <text class="ttl" x="120" y="246">L-isomer</text>
+
+  <path class="thin" d="M300 300 L330 300"/>
+  <text class="note" x="296" y="290">mirror</text>
+
+  <text class="atom" x="452" y="276">COO</text><text class="atom" x="494" y="270">-</text>
+  <path class="bond" d="M468 282 L468 306"/>
+  <text class="atom" x="458" y="324">C</text>
+  <path class="bond" d="M462 318 L416 300"/>
+  <text class="atom" x="400" y="300">R</text>
+  <path class="bond" d="M492 318 L540 300"/>
+  <text class="atom" x="548" y="300">N</text><text class="atom" x="562" y="300">H</text>
+  <text class="sub" x="574" y="305">3</text><text class="atom" x="582" y="293">+</text>
+  <path class="bond" d="M468 330 L468 352"/>
+  <text class="atom" x="462" y="366">H</text>
+  <text class="ttl" x="430" y="246">D-isomer</text>
+
+  <text class="note" x="620" y="330">All amino acids in</text>
+  <text class="note" x="620" y="346">human protein are L.</text>
+</svg>

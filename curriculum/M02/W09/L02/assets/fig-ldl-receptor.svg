@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 400" width="820" height="400" role="img"
+     aria-label="LDL receptor cycle: binding in a clathrin-coated pit, endocytosis, release in the endosome, receptor recycling, lysosomal degradation and the three feedback responses">
+  <style>
+    .mem { stroke:#003c71; stroke-width:3; fill:none; }
+    .org { fill:#fff; stroke:#c6d2dd; stroke-width:1.8; }
+    .ok { fill:#fff5d6; stroke:#f2b705; stroke-width:2.2; }
+    .t { font:12px sans-serif; fill:#16191d; }
+    .tb { font:700 12px sans-serif; fill:#003c71; }
+    .s { font:11px sans-serif; fill:#4a5159; }
+    .n { font:700 12px sans-serif; fill:#fff; }
+    .nb { fill:#003c71; }
+    .ar { stroke:#003c71; stroke-width:2; fill:none; marker-end:url(#m); }
+    .ard { stroke:#8a6300; stroke-width:1.8; fill:none; marker-end:url(#mg); stroke-dasharray:5 3; }
+  </style>
+  <defs>
+    <marker id="m" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker>
+    <marker id="mg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#8a6300"/></marker>
+  </defs>
+
+  <path class="mem" d="M20 70 L800 70"/>
+  <text class="s" x="20" y="60">Plasma membrane</text>
+  <text class="s" x="730" y="60">Hepatocyte</text>
+
+  <circle class="ok" cx="110" cy="34" r="22"/><text class="tb" x="92" y="39">LDL</text>
+  <text class="s" x="80" y="16">apoB-100</text>
+  <path class="mem" d="M96 70 L104 54 M116 54 L124 70" stroke-width="2.4"/>
+  <text class="s" x="140" y="90">clathrin-coated pit</text>
+
+  <circle class="nb" cx="40" cy="120" r="11"/><text class="n" x="36" y="125">1</text>
+  <text class="t" x="58" y="125">Binding of LDL to the LDL receptor</text>
+
+  <circle class="nb" cx="40" cy="152" r="11"/><text class="n" x="36" y="157">2</text>
+  <text class="t" x="58" y="157">Endocytosis; clathrin coat is shed</text>
+
+  <circle class="nb" cx="40" cy="184" r="11"/><text class="n" x="36" y="189">3</text>
+  <text class="t" x="58" y="189">Endosome acidifies; receptor and LDL separate</text>
+
+  <ellipse class="org" cx="440" cy="168" rx="78" ry="46"/>
+  <text class="tb" x="404" y="164">Endosome</text><text class="s" x="416" y="182">low pH</text>
+
+  <path class="ar" d="M190 96 L380 140"/>
+  <path class="ar" d="M400 128 L250 92 L250 76" stroke="#1a7f52" marker-end="url(#m)"/>
+  <text class="s" x="258" y="112" fill="#1a7f52">receptor recycles</text>
+  <text class="s" x="258" y="128" fill="#1a7f52">(hundreds of rounds)</text>
+
+  <circle class="nb" cx="40" cy="216" r="11"/><text class="n" x="36" y="221">4</text>
+  <text class="t" x="58" y="221">Lysosome: apoB-100 to amino acids,</text>
+  <text class="t" x="58" y="238">cholesteryl ester hydrolysed by acid lipase</text>
+
+  <ellipse class="org" cx="610" cy="236" rx="74" ry="44"/>
+  <text class="tb" x="578" y="232">Lysosome</text>
+  <path class="ar" d="M510 192 L548 216"/>
+
+  <rect class="ok" x="300" y="300" width="188" height="42" rx="7"/>
+  <text class="tb" x="316" y="327">Free cholesterol</text>
+  <path class="ar" d="M580 276 L430 298"/>
+
+  <path class="ard" d="M300 318 L196 318"/>
+  <rect class="org" x="20" y="286" width="172" height="34" rx="6"/>
+  <text class="t" x="32" y="308">HMG-CoA reductase down</text>
+  <path class="ard" d="M360 344 L360 366"/>
+  <rect class="org" x="252" y="366" width="204" height="30" rx="6"/>
+  <text class="t" x="264" y="386">LDL receptor synthesis down</text>
+  <path class="ard" d="M490 318 L560 318"/>
+  <rect class="org" x="566" y="300" width="186" height="34" rx="6"/>
+  <text class="t" x="578" y="322">ACAT activated: storage</text>
+
+  <text class="s" x="20" y="268">PCSK9 binds the receptor at the cell surface and diverts it to lysosomal degradation,</text>
+  <text class="s" x="20" y="284">reducing recycling and raising plasma LDL.</text>
+</svg>

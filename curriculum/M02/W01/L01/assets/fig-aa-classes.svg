@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 420" width="780" height="420" role="img"
+     aria-label="Classification of the twenty standard amino acids by side chain character, with nonpolar, polar uncharged, acidic and basic groups">
+  <style>
+    .ttl  { font:700 14px sans-serif; fill:#003c71; }
+    .hdr  { font:700 13px sans-serif; fill:#ffffff; }
+    .aa   { font:600 13px sans-serif; fill:#16191d; }
+    .note { font:11px sans-serif; fill:#4a5159; }
+    .box  { fill:#ffffff; stroke:#c6d2dd; stroke-width:1.4; }
+    .hbox { fill:#fff5d6; stroke:#c6d2dd; stroke-width:1.4; }
+    .bar  { fill:#003c71; }
+  </style>
+
+  <text class="ttl" x="10" y="20">Side chain character of the 20 standard amino acids</text>
+
+  <rect class="box" x="8" y="34" width="378" height="200" rx="6"/>
+  <rect class="bar" x="8" y="34" width="378" height="24" rx="6"/>
+  <text class="hdr" x="18" y="51">NONPOLAR (hydrophobic)</text>
+  <text class="aa" x="20" y="80">Gly  G</text><text class="note" x="92" y="80">no side chain</text>
+  <text class="aa" x="20" y="102">Ala  A    Val  V    Leu  L    Ile  I</text>
+  <text class="note" x="20" y="120">branched aliphatic; buried in protein cores</text>
+  <text class="aa" x="20" y="144">Pro  P</text><text class="note" x="92" y="144">imino, ring locks the backbone</text>
+  <text class="aa" x="20" y="166">Phe  F    Trp  W    Met  M</text>
+  <text class="note" x="20" y="184">aromatic (Phe, Trp) and thioether (Met)</text>
+  <text class="note" x="20" y="212">Cluster inside globular proteins; drive the hydrophobic effect.</text>
+
+  <rect class="box" x="396" y="34" width="378" height="200" rx="6"/>
+  <rect class="bar" x="396" y="34" width="378" height="24" rx="6"/>
+  <text class="hdr" x="406" y="51">POLAR, UNCHARGED</text>
+  <text class="aa" x="408" y="80">Ser  S    Thr  T    Tyr  Y</text>
+  <text class="note" x="408" y="98">hydroxyl group; targets of phosphorylation</text>
+  <text class="aa" x="408" y="124">Cys  C</text><text class="note" x="480" y="124">thiol, forms disulfide bonds</text>
+  <text class="aa" x="408" y="148">Asn  N    Gln  Q</text>
+  <text class="note" x="408" y="166">amide; sites of N-linked glycosylation (Asn)</text>
+  <text class="aa" x="408" y="192">Trp, Tyr</text><text class="note" x="480" y="192">absorb at 280 nm</text>
+  <text class="note" x="408" y="218">Face the solvent; form hydrogen bonds with water and ligands.</text>
+
+  <rect class="hbox" x="8" y="246" width="378" height="164" rx="6"/>
+  <rect class="bar" x="8" y="246" width="378" height="24" rx="6"/>
+  <text class="hdr" x="18" y="263">ACIDIC (negative at pH 7.4)</text>
+  <text class="aa" x="20" y="292">Asp  D</text><text class="note" x="92" y="292">side chain pKa about 3.9</text>
+  <text class="aa" x="20" y="316">Glu  E</text><text class="note" x="92" y="316">side chain pKa about 4.3</text>
+  <text class="note" x="20" y="344">Carboxylate is fully deprotonated at blood pH,</text>
+  <text class="note" x="20" y="362">so both carry a single negative charge.</text>
+  <text class="note" x="20" y="390">Bind metal ions and basic residues in salt bridges.</text>
+
+  <rect class="hbox" x="396" y="246" width="378" height="164" rx="6"/>
+  <rect class="bar" x="396" y="246" width="378" height="24" rx="6"/>
+  <text class="hdr" x="406" y="263">BASIC (positive at pH 7.4)</text>
+  <text class="aa" x="408" y="292">Lys  K</text><text class="note" x="480" y="292">pKa about 10.5, fully protonated</text>
+  <text class="aa" x="408" y="316">Arg  R</text><text class="note" x="480" y="316">pKa about 12.5, guanidinium</text>
+  <text class="aa" x="408" y="340">His  H</text><text class="note" x="480" y="340">pKa about 6.0, partly protonated</text>
+  <text class="note" x="408" y="368">His is the only side chain that titrates near</text>
+  <text class="note" x="408" y="386">physiological pH, which is why it buffers and catalyses.</text>
+</svg>

@@ -1,61 +1,50 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 330" width="760" height="330" role="img"
-     aria-label="Cholesterol의 구조. 고리 A부터 D까지의 steroid nucleus, C3의 hydroxyl기, C5와 C6 사이 이중결합, C17의 곁사슬">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 740 300" width="740" height="300" role="img"
+     aria-label="Structure of cholesterol showing the steroid nucleus rings A to D, the C3 hydroxyl group, the C5-C6 double bond and the eight-carbon side chain at C17">
   <style>
-    .bond { stroke:#16191d; stroke-width:2.2; fill:none; stroke-linecap:round; }
-    .ringlbl { font:700 19px "Noto Sans KR",sans-serif; fill:#003c71; }
-    .atom { font:600 13px ui-monospace,monospace; fill:#16191d; }
-    .note { font:13px "Noto Sans KR",sans-serif; fill:#4a5159; }
-    .hl { font:700 13px "Noto Sans KR",sans-serif; fill:#8a6300; }
-    .mark { fill:none; stroke:#f2b705; stroke-width:3; }
+    .b { stroke:#16191d; stroke-width:2.2; fill:none; stroke-linecap:round; }
+    .ring { font:700 19px sans-serif; fill:#003c71; }
+    .num { font:600 12px monospace; fill:#16191d; }
+    .lab { font:700 13px sans-serif; fill:#8a6300; }
+    .sub { font:12px sans-serif; fill:#4a5159; }
+    .ttl { font:700 14px sans-serif; fill:#003c71; }
+    .mk { fill:none; stroke:#f2b705; stroke-width:3; }
+    .lead { stroke:#8a6300; stroke-width:1.3; stroke-dasharray:4 3; fill:none; }
   </style>
+  <text class="ttl" x="30" y="28">Steroid nucleus: four fused rings (A, B, C = 6-carbon; D = 5-carbon)</text>
+  <text class="sub" x="30" y="48">27 carbons in total. Only the C3 hydroxyl is hydrophilic, making cholesterol amphipathic.</text>
 
-  <!-- A ring -->
-  <path class="bond" d="M60 210 L60 160 L103 135 L146 160 L146 210 L103 235 Z"/>
-  <!-- B ring -->
-  <path class="bond" d="M146 160 L189 135 L232 160 L232 210 L189 235 L146 210"/>
-  <!-- C ring -->
-  <path class="bond" d="M232 160 L275 135 L318 160 L318 210 L275 235 L232 210"/>
-  <!-- D ring (5-membered) -->
-  <path class="bond" d="M318 160 L366 142 L396 180 L366 218 L318 210"/>
+  <path class="b" d="M60 190 L60 140 L103 115 L146 140 L146 190 L103 215 Z"/>
+  <path class="b" d="M146 140 L189 115 L232 140 L232 190 L189 215 L146 190"/>
+  <path class="b" d="M232 140 L275 115 L318 140 L318 190 L275 215 L232 190"/>
+  <path class="b" d="M318 140 L366 122 L396 160 L366 198 L318 190"/>
+  <text class="ring" x="95" y="170">A</text>
+  <text class="ring" x="181" y="170">B</text>
+  <text class="ring" x="267" y="170">C</text>
+  <text class="ring" x="348" y="170">D</text>
 
-  <text class="ringlbl" x="95" y="190">A</text>
-  <text class="ringlbl" x="181" y="190">B</text>
-  <text class="ringlbl" x="267" y="190">C</text>
-  <text class="ringlbl" x="348" y="190">D</text>
+  <circle class="mk" cx="60" cy="190" r="13"/>
+  <path class="b" d="M60 190 L26 211"/>
+  <text class="num" x="4" y="230">HO</text>
+  <text class="num" x="46" y="134">3</text>
+  <path class="lead" d="M58 252 L58 206"/>
+  <text class="lab" x="16" y="268">C3 hydroxyl (-OH)</text>
+  <text class="sub" x="16" y="286">hydrophilic group</text>
 
-  <!-- C3 hydroxyl -->
-  <circle class="mark" cx="60" cy="210" r="13"/>
-  <path class="bond" d="M60 210 L24 231"/>
-  <text class="atom" x="2" y="250">HO</text>
-  <text class="hl" x="18" y="285">C3 hydroxyl기</text>
-  <text class="note" x="18" y="303">유일한 친수성 부분</text>
+  <circle class="mk" cx="189" cy="215" r="13"/>
+  <path class="b" d="M152 199 L186 218"/>
+  <text class="num" x="196" y="232">5</text>
+  <text class="num" x="150" y="210">6</text>
+  <path class="lead" d="M196 252 L191 230"/>
+  <text class="lab" x="152" y="268">C5=C6 double bond</text>
+  <text class="sub" x="176" y="286">ring B</text>
 
-  <!-- C5-C6 double bond -->
-  <circle class="mark" cx="189" cy="235" r="13"/>
-  <path class="bond" d="M152 218 L186 238"/>
-  <text class="hl" x="138" y="285">C5=C6 이중결합</text>
-  <text class="note" x="150" y="303">B 고리</text>
-
-  <!-- side chain at C17 -->
-  <circle class="mark" cx="366" cy="142" r="13"/>
-  <path class="bond" d="M366 142 L404 120 L442 142 L480 120 L518 142 L556 120"/>
-  <path class="bond" d="M480 120 L480 82"/>
-  <path class="bond" d="M556 120 L594 142"/>
-  <path class="bond" d="M556 120 L556 82"/>
-  <text class="hl" x="404" y="285">C17 곁사슬 (side chain)</text>
-  <text class="note" x="430" y="303">탄소 8개</text>
-  <path class="bond" stroke="#8a6300" stroke-width="1.4" stroke-dasharray="4 3" d="M470 272 L420 180"/>
-  <path class="bond" stroke="#8a6300" stroke-width="1.4" stroke-dasharray="4 3" d="M60 272 L60 226"/>
-  <path class="bond" stroke="#8a6300" stroke-width="1.4" stroke-dasharray="4 3" d="M190 272 L189 250"/>
-
-  <!-- labels -->
-  <text class="atom" x="48" y="152">3</text>
-  <text class="atom" x="196" y="252">5</text>
-  <text class="atom" x="152" y="228">6</text>
-  <text class="atom" x="356" y="134">17</text>
-
-  <text class="note" x="60" y="42" style="font:700 15px 'Noto Sans KR',sans-serif;fill:#003c71">
-    Steroid nucleus — 고리 네 개 (A·B·C는 탄소 6개, D는 탄소 5개)
-  </text>
-  <text class="note" x="60" y="64">탄소 총 27개. 대부분이 탄화수소여서 소수성이고, C3의 -OH 하나만 친수성이다 (amphipathic).</text>
+  <circle class="mk" cx="366" cy="122" r="13"/>
+  <path class="b" d="M366 122 L404 100 L442 122 L480 100 L518 122 L556 100"/>
+  <path class="b" d="M480 100 L480 62"/>
+  <path class="b" d="M556 100 L594 122"/>
+  <path class="b" d="M556 100 L556 62"/>
+  <text class="num" x="354" y="114">17</text>
+  <path class="lead" d="M470 252 L420 160"/>
+  <text class="lab" x="406" y="268">C17 side chain</text>
+  <text class="sub" x="434" y="286">8 carbons</text>
 </svg>

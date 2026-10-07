@@ -34,6 +34,8 @@ Cholesterol은 동물 조직에 들어 있는 대표적인 **steroid alcohol**�
 
 **sterol**이라는 이름은 steroid 핵에 hydroxyl기가 붙은 화합물을 가리킨다. Cholesterol은 그중 하나다.
 
+@fig fig-chol-structure Cholesterol의 구조. 고리 A~D가 steroid nucleus를 이루고, C3의 hydroxyl기, C5=C6 이중결합, C17의 side chain이 분자의 성질을 결정한다.
+
 이 구조에서 성질이 나온다. 분자의 대부분은 탄화수소(C와 H로만 이루어진 부분)여서 물과 섞이지 않는다. 그런데 C3의 -OH 하나만은 물과 친하다. 이렇게 한 분자 안에 물과 친한 부분과 친하지 않은 부분이 함께 있는 것을 **amphipathic**(양친매성)이라고 한다.
 
 그래서 cholesterol이 세포막에 끼어들 때 방향이 정해진다. -OH는 막 표면의 인지질 머리 쪽을 향하고, 고리와 곁사슬은 막 안쪽의 지방산 꼬리 사이에 자리 잡는다.
@@ -87,6 +89,8 @@ Acetyl-CoA는 탄소 두 개짜리 acetyl기가 coenzyme A에 붙어 있는 화�
 **4단계**에서 farnesyl-PP 두 분자가 꼬리-꼬리로 결합해 C30의 squalene이 되고, 산소와 NADPH를 써서 epoxide가 된 뒤 고리화되어 lanosterol이 된다. 여기서 약 19단계를 더 거치며 탄소 세 개가 떨어져 나가 C27의 cholesterol이 완성된다.
 
 핵심은 **3단계에서 갈라지는 가지**다. Farnesyl-PP는 cholesterol로만 가지 않는다. 여기서 **ubiquinone(CoQ10)**, **dolichol**(당단백질 합성에 필요), 그리고 Ras·Rho 같은 단백질을 막에 고정하는 **prenyl기**가 만들어진다. 이 사실은 뒤에 statin의 작용을 이해할 때 다시 쓰인다.
+
+@fig fig-chol-synthesis Cholesterol 생합성의 네 단계. 탄소 수가 C2에서 C6, C5 단위, C15, C30을 거쳐 C27로 바뀐다. 2단계의 HMG-CoA reductase가 rate-limiting step이고, 3단계의 farnesyl-PP에서 CoQ10·dolichol·prenyl기로 가지가 갈라진다.
 
 > **임상 연계** Mevalonate 경로의 효소 결손인 **mevalonate kinase deficiency**에서는 mevalonate가 축적되고 하류 isoprenoid 산물이 부족해진다. 환자는 주기적 발열과 염증 발작(hyper-IgD 증후군)을 보이는데, cholesterol 부족이 아니라 **isoprenoid 부족**이 염증 경로를 활성화하기 때문이다. 경로의 가지를 알아야 설명되는 질환이다.
 
@@ -148,6 +152,8 @@ LDL은 **간에서 말초로** cholesterol을 보내는 입자이고, HDL은 **�
 - LDL receptor의 전사를 낮춘다 → **더 들이지 않는다**
 - **ACAT**을 활성화한다 → 남는 것을 cholesteryl ester로 바꿔 **저장한다**
 
+@fig fig-ldl-receptor LDL receptor 경로. 결합에서 endocytosis, endosome에서의 분리, 수용체 재순환, lysosome 분해까지의 순환과 유리 cholesterol이 일으키는 세 가지 되먹임을 보인다. PCSK9는 수용체를 분해로 돌려 재순환을 막는다.
+
 여기에 한 가지 조절자가 더 있다. **PCSK9**는 간에서 분비되는 단백분해효소로, 세포 표면에서 LDL receptor에 결합한 뒤 함께 세포 안으로 들어가 수용체가 재순환하지 못하고 lysosome에서 분해되게 만든다. PCSK9가 많으면 수용체 수가 줄어 혈중 LDL이 올라간다.
 
 > **임상 연계** **가족성 고콜레스테롤혈증(familial hypercholesterolemia, FH)**은 LDL receptor 경로의 결함으로 생긴다. 원인 유전자는 *LDLR*(수용체 자체), *APOB*(수용체가 인식하는 리간드), *PCSK9*(기능 획득 변이로 수용체를 과도하게 분해)다. 이형접합은 약 250명 중 1명으로 드물지 않으며, 치료하지 않으면 LDL-C가 190~400 mg/dL에 이르고 30~50대에 관동맥질환이 나타난다. 동형접합은 약 30만 명 중 1명으로 소아기에 황색종과 관동맥질환이 생긴다. 세 유전자가 모두 **같은 경로의 서로 다른 지점**이라는 점이 이 질환이 LDL receptor 경로를 증명한 이유다.
@@ -168,6 +174,8 @@ LDL은 **간에서 말초로** cholesterol을 보내는 입자이고, HDL은 **�
 
 합성량 자체도 되먹임으로 조절된다. 담즙산이 간세포로 돌아오면 핵수용체 **FXR**을 활성화하고, FXR은 CYP7A1의 전사를 억제한다. 장에서는 FXR이 **FGF19**를 분비시켜 문맥을 통해 간에 도달한 뒤 역시 CYP7A1을 억제한다.
 
+@fig fig-enterohepatic 담즙산의 장간 순환. 간에서 합성·접합된 담즙산이 담즙으로 분비되어 지방 소화를 돕고 회장 말단에서 재흡수되어 돌아온다. 하루 손실분만 새로 합성된다.
+
 > **임상 연계** **담즙산 격리제**(cholestyramine 등)는 장에서 담즙산과 결합해 대변으로 내보낸다. 장간 순환이 끊기면 FXR 신호가 줄어 CYP7A1 억제가 풀리고, 간은 담즙산을 새로 만들기 위해 자신의 cholesterol을 소모한다. 간세포 cholesterol이 줄면 SREBP-2가 켜지고 LDL receptor가 늘어 혈중 LDL이 감소한다. **약은 흡수되지 않고 장에만 머무는데 효과는 간에서 나타난다.** 한편 회장을 절제하면 담즙산이 재흡수되지 않아 대장으로 넘어가 수분 분비를 자극하는 **담즙산 설사**가 생기며, 이때의 치료도 담즙산 격리제다.
 
 => **핵심 정리** Cholesterol은 분해되지 않으므로 담즙산 전환과 담즙 배출이 유일한 제거 경로다. 장간 순환이 이 배출을 최소화하도록 설계되어 있고, 그 순환을 끊는 것이 곧 혈중 LDL을 낮추는 수단이 된다.
@@ -177,7 +185,9 @@ Cholesterol은 다섯 계열의 steroid 호르몬의 공통 전구체다. 합성
 
 **Rate-limiting step은 효소 반응이 아니라 운반이다.** Cholesterol을 미토콘드리아 외막에서 내막으로 옮기는 **StAR**(steroidogenic acute regulatory protein)가 그 역할을 한다. ACTH나 LH 자극은 StAR 발현을 빠르게 올려 합성을 개시한다.
 
-내막에 도달한 cholesterol은 **CYP11A1**(측쇄 절단 효소)에 의해 곁사슬이 잘려 탄소 21개의 **pregnenolone**이 된다. **모든 steroid 호르몬은 여기서 갈라진다.**
+내막에 도달한 cholesterol은 **CYP11A1**(side-chain cleavage enzyme)에 의해 side chain이 잘려 탄소 21개의 **pregnenolone**이 된다. **모든 steroid 호르몬은 여기서 갈라진다.**
+
+@fig fig-steroidogenesis Steroid 호르몬의 합성. StAR에 의한 미토콘드리아 내막으로의 이동이 rate-limiting step이고, CYP11A1이 만든 pregnenolone에서 다섯 계열이 갈라진다.
 
 | 계열 | 탄소 수 | 대표 호르몬 | 생성 조직 |
 |---|---|---|---|

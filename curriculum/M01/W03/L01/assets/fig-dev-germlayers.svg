@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 430" width="900" height="430" role="img"
+     aria-label="Three germ layers and the organs derived from each">
+  <defs>
+    <marker id="ar2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#16191d"/>
+    </marker>
+  </defs>
+  <style>
+    .ln { stroke:#16191d; stroke-width:1.8; fill:none; }
+    .bx { fill:#ffffff; stroke:#c6d2dd; stroke-width:1.6; }
+    .hx { fill:#fff5d6; stroke:#c6d2dd; stroke-width:1.6; }
+    .t  { font:700 14px sans-serif; fill:#003c71; }
+    .s  { font:12px sans-serif; fill:#16191d; }
+    .m  { font:11px sans-serif; fill:#4a5159; }
+    .ttl{ font:700 15px sans-serif; fill:#003c71; }
+  </style>
+
+  <text class="ttl" x="20" y="28">Germ layer derivatives after gastrulation</text>
+
+  <!-- embryo disc cross-section -->
+  <text class="s" x="24" y="62">Trilaminar disc (cross-section)</text>
+  <rect x="24" y="74" width="210" height="22" fill="#cfe0f0" stroke="#16191d" stroke-width="1.6"/>
+  <text class="s" x="34" y="90">Ectoderm</text>
+  <rect x="24" y="96" width="210" height="22" fill="#ffe9a8" stroke="#16191d" stroke-width="1.6"/>
+  <text class="s" x="34" y="112">Mesoderm</text>
+  <rect x="24" y="118" width="210" height="22" fill="#d6ecd8" stroke="#16191d" stroke-width="1.6"/>
+  <text class="s" x="34" y="134">Endoderm</text>
+  <ellipse cx="129" cy="107" rx="14" ry="8" fill="#ffffff" stroke="#16191d" stroke-width="1.4"/>
+  <text class="m" x="104" y="162">notochord in the midline</text>
+
+  <!-- arrows -->
+  <path class="ln" d="M240 85 L300 85" marker-end="url(#ar2)"/>
+  <path class="ln" d="M240 107 L300 107" marker-end="url(#ar2)"/>
+  <path class="ln" d="M240 129 L300 129" marker-end="url(#ar2)"/>
+
+  <!-- Ectoderm box -->
+  <rect class="bx" x="306" y="56" width="570" height="104" rx="6"/>
+  <text class="t" x="320" y="78">Ectoderm</text>
+  <text class="s" x="320" y="98">Surface ectoderm: epidermis, hair, nail, lens, inner ear, mammary gland</text>
+  <text class="s" x="320" y="118">Neuroectoderm: brain, spinal cord, retina, posterior pituitary</text>
+  <text class="s" x="320" y="138">Neural crest: sensory ganglia, melanocyte, adrenal medulla, Schwann cell</text>
+  <text class="m" x="320" y="154">facial cartilage and aortic arch septum also arise from neural crest</text>
+
+  <!-- Mesoderm box -->
+  <rect class="hx" x="306" y="172" width="570" height="124" rx="6"/>
+  <text class="t" x="320" y="194">Mesoderm</text>
+  <text class="s" x="320" y="214">Paraxial (somite): sclerotome to vertebra, myotome to skeletal muscle, dermatome</text>
+  <text class="s" x="320" y="234">Intermediate: kidney, ureter, gonad, internal genital duct</text>
+  <text class="s" x="320" y="254">Lateral plate: serous membrane, body wall, limb skeleton, cardiovascular system</text>
+  <text class="s" x="320" y="274">Blood, bone, cartilage, connective tissue, spleen, adrenal cortex</text>
+  <text class="m" x="320" y="290">somites appear in cranial to caudal order, about one pair every 6 hours</text>
+
+  <!-- Endoderm box -->
+  <rect class="bx" x="306" y="308" width="570" height="96" rx="6"/>
+  <text class="t" x="320" y="330">Endoderm</text>
+  <text class="s" x="320" y="350">Gut epithelium from pharynx to upper anal canal</text>
+  <text class="s" x="320" y="370">Liver, pancreas, thyroid, parathyroid, thymus, lung epithelium</text>
+  <text class="s" x="320" y="390">Epithelial lining of urinary bladder and middle ear cavity</text>
+
+  <!-- side note -->
+  <text class="m" x="24" y="200">Germ layer tells which</text>
+  <text class="m" x="24" y="216">tissue type a cell will</text>
+  <text class="m" x="24" y="232">make, not which organ.</text>
+  <text class="m" x="24" y="256">Most organs combine</text>
+  <text class="m" x="24" y="272">two or three layers:</text>
+  <text class="m" x="24" y="294">gut = endoderm lining</text>
+  <text class="m" x="24" y="310">+ mesoderm wall</text>
+  <text class="m" x="24" y="334">skin = ectoderm epidermis</text>
+  <text class="m" x="24" y="350">+ mesoderm dermis</text>
+</svg>

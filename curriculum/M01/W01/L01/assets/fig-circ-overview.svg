@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 440" width="820" height="440" role="img"
+     aria-label="Double circulation: pulmonary circuit from right ventricle through lungs to left atrium, systemic circuit from left ventricle through tissues to right atrium">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#16191d"/>
+    </marker>
+  </defs>
+  <style>
+    .bx { fill:#ffffff; stroke:#c6d2dd; stroke-width:2; }
+    .hi { fill:#fff5d6; stroke:#c6d2dd; stroke-width:2; }
+    .ln { fill:none; stroke:#16191d; stroke-width:2.2; marker-end:url(#ar); }
+    .t  { font:600 14px sans-serif; fill:#16191d; }
+    .ts { font:12px sans-serif; fill:#4a5159; }
+    .hd { font:700 16px sans-serif; fill:#003c71; }
+    .num{ font:700 13px sans-serif; fill:#8a6300; }
+  </style>
+
+  <text class="hd" x="40" y="34">Pulmonary circuit (low pressure, 25/8 mmHg)</text>
+  <text class="hd" x="40" y="416">Systemic circuit (high pressure, 120/80 mmHg)</text>
+
+  <rect class="hi" x="300" y="55" width="220" height="56" rx="6"/>
+  <text class="t" x="330" y="80">LUNGS</text>
+  <text class="ts" x="330" y="99">gas exchange: O2 in, CO2 out</text>
+
+  <rect class="bx" x="300" y="330" width="220" height="56" rx="6"/>
+  <text class="t" x="330" y="355">SYSTEMIC TISSUES</text>
+  <text class="ts" x="330" y="374">O2 and nutrient delivery</text>
+
+  <rect class="bx" x="85" y="160" width="175" height="120" rx="6"/>
+  <text class="t" x="105" y="188">RIGHT HEART</text>
+  <text class="ts" x="105" y="210">right atrium</text>
+  <text class="ts" x="105" y="230">right ventricle</text>
+  <text class="ts" x="105" y="252">deoxygenated blood</text>
+  <text class="ts" x="105" y="270">wall 3-5 mm</text>
+
+  <rect class="bx" x="560" y="160" width="175" height="120" rx="6"/>
+  <text class="t" x="580" y="188">LEFT HEART</text>
+  <text class="ts" x="580" y="210">left atrium</text>
+  <text class="ts" x="580" y="230">left ventricle</text>
+  <text class="ts" x="580" y="252">oxygenated blood</text>
+  <text class="ts" x="580" y="270">wall 10-15 mm</text>
+
+  <path class="ln" d="M172 160 L172 95 L295 85"/>
+  <text class="num" x="180" y="120">1</text>
+  <text class="ts" x="196" y="138">pulmonary artery</text>
+
+  <path class="ln" d="M525 85 L648 95 L648 158"/>
+  <text class="num" x="630" y="120">2</text>
+  <text class="ts" x="540" y="138">pulmonary vein</text>
+
+  <path class="ln" d="M648 282 L648 352 L525 360"/>
+  <text class="num" x="630" y="320">3</text>
+  <text class="ts" x="540" y="305">aorta</text>
+
+  <path class="ln" d="M295 360 L172 352 L172 284"/>
+  <text class="num" x="180" y="320">4</text>
+  <text class="ts" x="196" y="305">vena cava</text>
+
+  <rect class="hi" x="330" y="180" width="160" height="80" rx="6"/>
+  <text class="t" x="348" y="205">IN SERIES</text>
+  <text class="ts" x="348" y="226">same cardiac output</text>
+  <text class="ts" x="348" y="244">through both circuits</text>
+</svg>

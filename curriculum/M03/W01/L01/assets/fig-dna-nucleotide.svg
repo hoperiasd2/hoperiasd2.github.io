@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 400" width="820" height="400" role="img"
+     aria-label="Structure of a deoxyribonucleotide: phosphate, 2-deoxyribose and nitrogenous base, with purine and pyrimidine ring skeletons">
+  <style>
+    .bond{stroke:#16191d;stroke-width:2;fill:none;stroke-linecap:round}
+    .thin{stroke:#4a5159;stroke-width:1.3;fill:none}
+    .box{fill:#ffffff;stroke:#c6d2dd;stroke-width:1.4}
+    .hbox{fill:#fff5d6;stroke:#c6d2dd;stroke-width:1.4}
+    .t{font:13px sans-serif;fill:#16191d}
+    .s{font:11px sans-serif;fill:#4a5159}
+    .h{font:700 14px sans-serif;fill:#003c71}
+    .k{font:700 12px sans-serif;fill:#8a6300}
+    .m{fill:none;stroke:#f2b705;stroke-width:2.5}
+  </style>
+  <text class="h" x="20" y="24">A. Deoxyribonucleotide: three components</text>
+
+  <rect class="hbox" x="20" y="38" width="150" height="110" rx="6"/>
+  <text class="k" x="34" y="58">PHOSPHATE</text>
+  <circle cx="95" cy="100" r="22" fill="#ffffff" stroke="#16191d" stroke-width="2"/>
+  <text class="t" x="86" y="105">P</text>
+  <text class="s" x="34" y="138">5' linkage, negative charge</text>
+
+  <rect class="box" x="190" y="38" width="190" height="110" rx="6"/>
+  <text class="k" x="204" y="58">2-DEOXYRIBOSE</text>
+  <path class="bond" d="M225 128 L250 92 L295 92 L320 128 Z"/>
+  <text class="s" x="216" y="142">C5'</text><text class="s" x="243" y="86">C4'</text>
+  <text class="s" x="292" y="86">O</text><text class="s" x="318" y="142">C1'</text>
+  <text class="s" x="268" y="136">C3'   C2' (no 2'-OH)</text>
+
+  <rect class="box" x="400" y="38" width="200" height="110" rx="6"/>
+  <text class="k" x="414" y="58">NITROGENOUS BASE</text>
+  <path class="bond" d="M440 128 L440 92 L470 74 L500 92 L500 128 L470 146 Z"/>
+  <text class="s" x="516" y="100">A, G, C, T</text>
+  <text class="s" x="516" y="118">N-glycosidic</text>
+  <text class="s" x="516" y="136">bond at C1'</text>
+
+  <path class="bond" d="M172 93 L188 93" marker-end="url(#ar)"/>
+  <path class="bond" d="M382 93 L398 93" marker-end="url(#ar)"/>
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#16191d"/>
+    </marker>
+  </defs>
+  <text class="s" x="620" y="80">nucleoside = sugar + base</text>
+  <text class="s" x="620" y="100">nucleotide = nucleoside + phosphate</text>
+  <text class="s" x="620" y="120">dAMP, dGMP, dCMP, dTMP</text>
+
+  <text class="h" x="20" y="196">B. Purine and pyrimidine ring skeletons</text>
+
+  <rect class="box" x="20" y="210" width="380" height="170" rx="6"/>
+  <text class="k" x="36" y="232">PURINE  —  two fused rings, 9 atoms</text>
+  <path class="bond" d="M70 300 L70 266 L100 248 L130 266 L130 300 L100 318 Z"/>
+  <path class="bond" d="M130 266 L166 258 L186 286 L166 314 L130 300"/>
+  <text class="s" x="92" y="290">6-ring</text><text class="s" x="140" y="290">5-ring</text>
+  <text class="t" x="220" y="270">Adenine (A)  —  6-amino</text>
+  <text class="t" x="220" y="294">Guanine (G)  —  2-amino, 6-oxo</text>
+  <text class="s" x="220" y="320">synthesized de novo on the ribose</text>
+  <text class="s" x="220" y="338">catabolized to uric acid</text>
+  <text class="s" x="36" y="364">N9 carries the glycosidic bond</text>
+
+  <rect class="box" x="420" y="210" width="380" height="170" rx="6"/>
+  <text class="k" x="436" y="232">PYRIMIDINE  —  single ring, 6 atoms</text>
+  <path class="bond" d="M470 300 L470 266 L500 248 L530 266 L530 300 L500 318 Z"/>
+  <text class="t" x="570" y="262">Cytosine (C)  —  4-amino, 2-oxo</text>
+  <text class="t" x="570" y="286">Thymine (T)  —  5-methyl, DNA only</text>
+  <text class="t" x="570" y="310">Uracil (U)  —  RNA only</text>
+  <text class="s" x="436" y="364">N1 carries the glycosidic bond</text>
+  <circle class="m" cx="500" cy="248" r="14"/>
+</svg>

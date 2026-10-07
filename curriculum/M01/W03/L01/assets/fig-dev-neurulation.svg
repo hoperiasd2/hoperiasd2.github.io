@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 340" width="900" height="340" role="img"
+     aria-label="Four cross-sections showing neural plate folding into the neural tube with neural crest separation">
+  <defs>
+    <marker id="ar3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#16191d"/>
+    </marker>
+  </defs>
+  <style>
+    .ln { stroke:#16191d; stroke-width:2; fill:none; }
+    .ect{ fill:#cfe0f0; stroke:#16191d; stroke-width:1.8; }
+    .neu{ fill:#9ec6e6; stroke:#16191d; stroke-width:1.8; }
+    .mes{ fill:#ffe9a8; stroke:#16191d; stroke-width:1.4; }
+    .end{ fill:#d6ecd8; stroke:#16191d; stroke-width:1.4; }
+    .crest{ fill:#f2b705; stroke:#16191d; stroke-width:1.2; }
+    .t  { font:700 13px sans-serif; fill:#003c71; }
+    .s  { font:11px sans-serif; fill:#16191d; }
+    .m  { font:11px sans-serif; fill:#4a5159; }
+    .ttl{ font:700 15px sans-serif; fill:#003c71; }
+  </style>
+  <text class="ttl" x="20" y="28">Neurulation: neural plate to neural tube (day 18 to day 28)</text>
+
+  <!-- Stage 1 -->
+  <g transform="translate(40,70)">
+    <text class="t" x="20" y="0">1. Neural plate</text>
+    <path class="neu" d="M20 30 L140 30 L140 44 L20 44 Z"/>
+    <path class="ect" d="M-10 30 L20 30 L20 44 L-10 44 Z"/>
+    <path class="ect" d="M140 30 L170 30 L170 44 L140 44 Z"/>
+    <ellipse class="mes" cx="80" cy="66" rx="60" ry="12"/>
+    <ellipse cx="80" cy="66" rx="12" ry="8" fill="#ffffff" stroke="#16191d" stroke-width="1.4"/>
+    <path class="end" d="M20 86 L140 86 L140 98 L20 98 Z"/>
+    <text class="s" x="-8" y="124">notochord signals</text>
+    <text class="s" x="6" y="140">(SHH) thicken</text>
+    <text class="s" x="14" y="156">the ectoderm</text>
+    <text class="m" x="46" y="70">nc</text>
+  </g>
+
+  <!-- Stage 2 -->
+  <g transform="translate(250,70)">
+    <text class="t" x="10" y="0">2. Neural groove</text>
+    <path class="neu" d="M20 30 Q50 30 70 56 Q90 30 120 30 L120 44 Q90 48 70 72 Q50 48 20 44 Z"/>
+    <path class="ect" d="M-10 30 L20 30 L20 44 L-10 44 Z"/>
+    <path class="ect" d="M120 30 L150 30 L150 44 L120 44 Z"/>
+    <ellipse class="mes" cx="70" cy="92" rx="56" ry="11"/>
+    <text class="s" x="6" y="124">neural folds rise;</text>
+    <text class="s" x="2" y="140">groove deepens in</text>
+    <text class="s" x="16" y="156">the midline</text>
+  </g>
+
+  <!-- Stage 3 -->
+  <g transform="translate(455,70)">
+    <text class="t" x="4" y="0">3. Fusion of folds</text>
+    <path class="neu" d="M30 56 Q30 24 62 24 Q94 24 94 56 L94 72 Q62 86 30 72 Z"/>
+    <path class="ect" d="M-6 40 Q10 34 30 44 L30 58 L-6 54 Z"/>
+    <path class="ect" d="M130 40 Q114 34 94 44 L94 58 L130 54 Z"/>
+    <circle class="crest" cx="32" cy="30" r="7"/>
+    <circle class="crest" cx="92" cy="30" r="7"/>
+    <ellipse class="mes" cx="62" cy="96" rx="56" ry="11"/>
+    <text class="s" x="-6" y="128">crest cells (yellow)</text>
+    <text class="s" x="-2" y="144">appear at the tips</text>
+    <text class="s" x="4" y="160">of the folds</text>
+  </g>
+
+  <!-- Stage 4 -->
+  <g transform="translate(680,70)">
+    <text class="t" x="4" y="0">4. Neural tube</text>
+    <circle class="neu" cx="70" cy="52" r="30"/>
+    <circle cx="70" cy="52" r="12" fill="#ffffff" stroke="#16191d" stroke-width="1.6"/>
+    <path class="ect" d="M10 24 L130 24 L130 36 L10 36 Z"/>
+    <circle class="crest" cx="34" cy="44" r="7"/>
+    <circle class="crest" cx="106" cy="44" r="7"/>
+    <ellipse class="mes" cx="70" cy="96" rx="56" ry="11"/>
+    <text class="s" x="84" y="56">lumen</text>
+    <text class="s" x="0" y="128">tube sinks below</text>
+    <text class="s" x="0" y="144">surface ectoderm;</text>
+    <text class="s" x="0" y="160">crest migrates away</text>
+  </g>
+
+  <path class="ln" d="M215 140 L245 140" marker-end="url(#ar3)"/>
+  <path class="ln" d="M420 140 L450 140" marker-end="url(#ar3)"/>
+  <path class="ln" d="M625 140 L655 140" marker-end="url(#ar3)"/>
+
+  <rect x="40" y="255" width="820" height="62" rx="6" fill="#fff5d6" stroke="#c6d2dd" stroke-width="1.6"/>
+  <text class="s" x="56" y="278">Closure runs from the middle toward both ends. Cranial neuropore closes about day 25, caudal neuropore about day 27.</text>
+  <text class="s" x="56" y="300">Failure at the cranial end gives anencephaly; failure at the caudal end gives spina bifida. Both raise amniotic AFP.</text>
+</svg>

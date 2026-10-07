@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 420" width="840" height="420" role="img"
+     aria-label="Cardiac cycle pressure curves of left ventricle, aorta and left atrium with valve events and heart sounds">
+  <style>
+    .ax { fill:none; stroke:#16191d; stroke-width:1.6; }
+    .gr { fill:none; stroke:#c6d2dd; stroke-width:1; stroke-dasharray:3 4; }
+    .lv { fill:none; stroke:#003c71; stroke-width:2.8; }
+    .ao { fill:none; stroke:#8a6300; stroke-width:2.4; }
+    .la { fill:none; stroke:#4a5159; stroke-width:1.8; }
+    .t  { font:600 13px sans-serif; fill:#16191d; }
+    .ts { font:11px sans-serif; fill:#4a5159; }
+    .hd { font:700 15px sans-serif; fill:#003c71; }
+    .ev { font:700 11px sans-serif; fill:#8a6300; }
+    .mk { stroke:#f2b705; stroke-width:2.5; }
+  </style>
+  <text class="hd" x="60" y="28">Left-sided pressures during one cardiac cycle (0.8 s at 75 beats/min)</text>
+
+  <path class="ax" d="M80 310 L800 310"/>
+  <path class="ax" d="M80 50 L80 310"/>
+  <text class="ts" x="30" y="314">0</text>
+  <text class="ts" x="20" y="250">40</text>
+  <text class="ts" x="20" y="186">80</text>
+  <text class="ts" x="20" y="122">120</text>
+  <text class="ts" x="14" y="68">mmHg</text>
+  <path class="gr" d="M80 250 L800 250"/>
+  <path class="gr" d="M80 186 L800 186"/>
+  <path class="gr" d="M80 122 L800 122"/>
+
+  <path class="lv" d="M80 300 L150 296 C210 292 230 240 250 160 C262 118 300 112 380 114 C450 116 480 124 500 180 C515 240 540 300 600 302 L720 300 L800 296"/>
+  <path class="ao" d="M80 150 C120 142 150 136 170 132 C200 128 230 140 250 160 C262 128 300 118 380 120 C450 122 480 128 500 180 C520 172 560 164 620 156 C690 148 760 142 800 138"/>
+  <path class="la" d="M80 302 C140 294 180 290 220 294 C250 298 262 304 290 304 L470 304 C520 300 560 292 620 288 C690 284 760 292 800 298"/>
+
+  <path class="mk" d="M250 320 L250 100"/>
+  <path class="mk" d="M500 320 L500 150"/>
+  <path class="mk" d="M600 342 L600 300"/>
+  <text class="ev" x="196" y="358">mitral closes</text>
+  <text class="ev" x="206" y="374">S1</text>
+  <text class="ev" x="470" y="358">aortic closes</text>
+  <text class="ev" x="492" y="374">S2</text>
+  <text class="ev" x="560" y="358">mitral opens</text>
+
+  <text class="t" x="258" y="86">isovolumetric</text>
+  <text class="t" x="258" y="102">contraction</text>
+  <text class="t" x="330" y="100">ejection</text>
+  <text class="t" x="520" y="140">isovolumetric</text>
+  <text class="t" x="520" y="156">relaxation</text>
+  <text class="t" x="660" y="266">filling</text>
+
+  <text class="t" x="620" y="92" fill="#003c71">left ventricle</text>
+  <text class="t" x="620" y="112" fill="#8a6300">aorta</text>
+  <text class="t" x="620" y="132" fill="#4a5159">left atrium</text>
+
+  <text class="ts" x="80" y="400">Systole lasts about 0.3 s and diastole about 0.5 s; at high heart rates diastole shortens first.</text>
+</svg>

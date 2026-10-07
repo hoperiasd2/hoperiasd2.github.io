@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 400" width="840" height="400" role="img"
+     aria-label="Cardiac conduction system with intrinsic rates and the ventricular action potential phases">
+  <defs>
+    <marker id="a2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#16191d"/>
+    </marker>
+  </defs>
+  <style>
+    .out { fill:#ffffff; stroke:#16191d; stroke-width:2; }
+    .ln { fill:none; stroke:#16191d; stroke-width:2; marker-end:url(#a2); }
+    .pw { fill:none; stroke:#003c71; stroke-width:2.8; }
+    .t  { font:600 13px sans-serif; fill:#16191d; }
+    .ts { font:11px sans-serif; fill:#4a5159; }
+    .hd { font:700 15px sans-serif; fill:#003c71; }
+    .nd { fill:#fff5d6; stroke:#8a6300; stroke-width:2; }
+    .ev { font:700 11px sans-serif; fill:#8a6300; }
+    .ax { fill:none; stroke:#16191d; stroke-width:1.5; }
+  </style>
+  <text class="hd" x="30" y="26">A. Conduction pathway and intrinsic pacemaker rates</text>
+
+  <path class="out" d="M120 70 C70 80 55 150 80 210 C105 270 150 300 185 320 C230 300 275 265 295 205 C318 140 290 78 240 70 C205 64 160 64 120 70 Z"/>
+  <ellipse class="nd" cx="128" cy="100" rx="22" ry="13"/>
+  <text class="t" x="155" y="96">SA node</text>
+  <text class="ts" x="155" y="112">60-100 /min</text>
+  <ellipse class="nd" cx="175" cy="170" rx="20" ry="12"/>
+  <text class="t" x="200" y="166">AV node</text>
+  <text class="ts" x="200" y="182">40-60 /min, delay 0.1 s</text>
+  <path class="ln" d="M145 108 L168 158"/>
+  <path class="ln" d="M175 182 L178 225"/>
+  <text class="t" x="188" y="214">His bundle</text>
+  <path class="ln" d="M178 230 L140 290"/>
+  <path class="ln" d="M178 230 L222 290"/>
+  <text class="ts" x="60" y="310">left and right bundle branches</text>
+  <text class="ts" x="150" y="340">Purkinje fibers 20-40 /min, 2-4 m/s</text>
+
+  <text class="hd" x="430" y="26">B. Ventricular action potential</text>
+  <path class="ax" d="M450 300 L810 300"/>
+  <path class="ax" d="M450 70 L450 300"/>
+  <text class="ts" x="400" y="300">-90</text>
+  <text class="ts" x="408" y="200">0</text>
+  <text class="ts" x="408" y="110">+20</text>
+  <text class="ts" x="400" y="60">mV</text>
+  <path class="pw" d="M450 300 L500 300 L512 112 C540 120 548 150 556 160 C600 162 660 164 690 168 C720 176 740 240 760 296 L810 300"/>
+  <text class="ev" x="492" y="100">phase 0 Na+ in</text>
+  <text class="ev" x="560" y="140">phase 1</text>
+  <text class="ev" x="600" y="150">phase 2 plateau: Ca2+ in through L-type channel</text>
+  <text class="ev" x="726" y="230">phase 3 K+ out</text>
+  <text class="ev" x="760" y="320">phase 4</text>
+  <text class="ts" x="450" y="350">Duration 200-300 ms. The long plateau keeps the cell refractory, so the ventricle cannot tetanize.</text>
+  <text class="ts" x="450" y="370">SA and AV node cells have no fast Na+ current; their upstroke is carried by Ca2+ and they depolarize spontaneously.</text>
+</svg>
