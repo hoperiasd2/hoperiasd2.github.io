@@ -33,7 +33,7 @@ STATUS_CLASS = {
 MODULE_EN = {
     "M01": "Human Biology and Cell Biology",
     "M02": "Metabolic Biochemistry",
-    "M03": "Medical Genomics, Omics and Translational Metabolism",
+    "M03": "Molecular Genetics and Systems-Based Medical Biochemistry",
     "M04": "Neuroscience, Neurogenetics and Translational Neuroscience",
     "M05": "Systems-Based Biomedical Science",
     "M06": "Current Issues in Biomedical and Brain Science",
@@ -43,7 +43,7 @@ MODULE_EN = {
 MODULE_LEDE = {
     "M01": "인체 계통의 구조와 기능을 먼저 훑고, 세포생물학의 실험적 근거와 세포소기관의 작동 원리로 들어간다. 이후 모든 구성요소가 기대는 공통 어휘를 만든다.",
     "M02": "에너지와 물질이 어떤 조건에서 어느 방향으로 흐르는지를 다룬다. 경로의 암기가 아니라 율속 단계와 조절 신호, 그리고 조절이 깨졌을 때 축적되는 것과 고갈되는 것을 추적한다. 경로를 모두 다룬 뒤 마지막 3주는 대사 조절과 중개대사 심화에 쓴다.",
-    "M03": "유전체·전사체·단백체·대사체 데이터가 어떻게 생성되고 어디서 왜곡되는지를 다루고, 그 데이터로 임상 질문에 답할 때 필요한 설계와 검증을 연결한다.",
+    "M03": "앞 6주는 유전정보의 저장·발현·조작을 질환과 진단의 맥락에서 다룬다. 이후 8주는 심혈관·소화기·신비뇨·면역·소아·노화·종양·신경의 여덟 계통을 각 3회씩 보며, 계통마다 기질 선택과 에너지 흐름, 대사 표지, 대사 표적을 공통 축으로 삼는다.",
     "M04": "막전위에서 회로와 행동까지 올라간 뒤 신경질환의 유전 기전과 중개연구로 내려온다. 측정 가능한 신호와 추론의 한계를 함께 다룬다.",
     "M05": "계통별로 항상성이 유지되는 방식과 그것이 무너지는 지점을 본다. 한 계통의 이상이 다른 계통으로 번지는 경로를 증례로 통합한다.",
     "M06": "최근 원저를 근거로 미해결 질문, 경쟁하는 가설, 결정적 실험을 다룬다. 기초 설명을 반복하지 않고 근거의 수준과 재현성을 평가한다.",
