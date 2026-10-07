@@ -14,7 +14,8 @@ SRC = ROOT / "PROJECT.md"
 OUT = ROOT / "curriculum.csv"
 
 LESSON_ID = re.compile(r"^M(\d{2})-W(\d{2})-L(\d{2})$")
-PHASE = re.compile(r"^####\s*(단계\s*\d+)\.\s*(.+?)\s*\(W\d+~W\d+\)\s*$")
+PHASE = re.compile(r"^####\s*[^.]+\.\s*(.+?)\s*\(W\d+~W\d+\)\s*$")
+MODHEAD = re.compile(r"^###\s")
 MODULE_ROW = re.compile(r"^\|\s*(M\d{2})\s*\|\s*([^|]+?)\s*\|\s*([^|]*?)\s*\|\s*(\d+)\s*\|")
 
 
@@ -43,9 +44,12 @@ def main():
     seen = set()
     group = ""
     for line in lines:
+        if MODHEAD.match(line):
+            group = ""
+            continue
         p = PHASE.match(line)
         if p:
-            group = p.group(2)
+            group = p.group(1)
             continue
         c = cells(line)
         if not c or len(c) < 3:
@@ -67,7 +71,6 @@ def main():
             title, assets = c[2], (c[3] if len(c) > 3 else "")
         else:
             title, assets = c[3], ""
-            group = ""
         assets = "" if assets.strip() in {"—", "-", ""} else assets.replace("`", "")
 
         rows.append({
