@@ -1,0 +1,99 @@
+#!/usr/bin/env python3
+"""대화창에 첨부된 참고 자료를 refs/decks/ 로 받아들이고 텍스트를 추출한다.
+
+사용자가 PPT나 PDF를 첨부하면 업로드 폴더에 들어온다. 이 스크립트는
+아직 받아들이지 않은 파일만 골라 복사하고, PPT는 슬라이드별 텍스트를
+마크다운으로 뽑아 둔다. 집필 작업자는 그 마크다운을 읽는다.
+
+    python3 tools/ingest_refs.py
+"""
+import hashlib
+import re
+import shutil
+import subprocess
+import sys
+from pathlib import Path
+
+UPLOADS = Path("/root/.claude/uploads")
+DEST = Path("/home/user/refs/decks")
+EXTS = {".pptx", ".pdf", ".docx"}
+
+
+def digest(p):
+    h = hashlib.sha256()
+    with p.open("rb") as f:
+        for chunk in iter(lambda: f.read(1 << 20), b""):
+            h.update(chunk)
+    return h.hexdigest()[:16]
+
+
+def slug(name):
+    """업로드 파일명에서 사람이 읽을 이름을 만든다. 한글이 깨져 들어오는 경우가 많다."""
+    stem = Path(name).stem
+    stem = re.sub(r"^[0-9a-f]{8}-", "", stem)      # 업로드 해시 접두사 제거
+    stem = re.sub(r"_{2,}", "-", stem).strip("-_ ")
+    stem = re.sub(r"[^0-9A-Za-z가-힣.\- ]", "", stem).strip()
+    return stem or "ref"
+
+
+def extract_pptx(src, out_md):
+    from pptx import Presentation
+    p = Presentation(str(src))
+    slides = list(p.slides)
+    lines = [f"# {out_md.stem}", "", f"- 원본: `refs/decks/{src.name}`",
+             f"- 슬라이드 {len(slides)}장", ""]
+    for i, s in enumerate(slides, 1):
+        txt = [sh.text_frame.text.strip() for sh in s.shapes
+               if sh.has_text_frame and sh.text_frame.text.strip()]
+        if not txt:
+            continue
+        lines.append(f"## {i}. {txt[0].splitlines()[0]}")
+        for t in txt[1:]:
+            lines.append(t.replace("\n", "  \n"))
+        lines.append("")
+    out_md.write_text("\n".join(lines), encoding="utf-8")
+    return len(slides)
+
+
+def extract_pdf(src, out_md):
+    r = subprocess.run(["pdftotext", "-layout", str(src), "-"],
+                       capture_output=True, text=True)
+    if r.returncode != 0:
+        return 0
+    out_md.write_text(f"# {out_md.stem}\n\n- 원본: `refs/decks/{src.name}`\n\n```\n"
+                      + r.stdout[:400000] + "\n```\n", encoding="utf-8")
+    return r.stdout.count("\f") + 1
+
+
+def main():
+    DEST.mkdir(parents=True, exist_ok=True)
+    known = {digest(p) for p in DEST.iterdir() if p.suffix.lower() in EXTS}
+    found = sorted(q for d in UPLOADS.iterdir() if d.is_dir()
+                   for q in d.iterdir() if q.suffix.lower() in EXTS)
+    new = 0
+    for src in found:
+        if digest(src) in known:
+            continue
+        name = slug(src.name)
+        dst = DEST / f"{name}{src.suffix.lower()}"
+        n = 1
+        while dst.exists():
+            n += 1
+            dst = DEST / f"{name}-{n}{src.suffix.lower()}"
+        shutil.copy2(src, dst)
+        md = dst.with_suffix(".md")
+        try:
+            pages = extract_pptx(dst, md) if dst.suffix == ".pptx" else extract_pdf(dst, md)
+        except Exception as e:
+            pages = 0
+            print(f"  텍스트 추출 실패 {dst.name}: {e}", file=sys.stderr)
+        print(f"새 자료: {dst.name}  {pages}쪽  → {md.name}")
+        new += 1
+    if not new:
+        print("새로 들어온 자료가 없습니다.")
+    else:
+        print(f"\n{new}건을 받아들였습니다. refs/decks/INDEX.md에 대응 수업을 적어 두세요.")
+
+
+if __name__ == "__main__":
+    main()
