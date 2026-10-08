@@ -128,26 +128,37 @@ def load():
 
 
 def progress(rows):
-    done = sum(1 for r in rows if r["status"] in ("승인", "완료"))
-    return done, len(rows), (0 if not rows else round(done * 100 / len(rows)))
+    """집필이 시작된 수업(설계 단계를 지난 수업)을 진행분으로 센다."""
+    written = sum(1 for r in rows if r["status"] != "설계")
+    approved = sum(1 for r in rows if r["status"] in ("승인", "완료"))
+    total = len(rows)
+    pct = 0 if not total else round(written * 100 / total)
+    return written, approved, total, pct
 
 
 # --------------------------------------------------------------------------- 대문
 def build_root(mods, force):
     cards = []
     for mod, rows in mods.items():
-        done, total, pct = progress(rows)
+        written, approved, total, pct = progress(rows)
         weeks = max(r["week"] for r in rows)
         per = "주 1회" if mod == "M07" else "주 3회"
+        state = f"집필 {written}/{total}" + (f" · 승인 {approved}" if approved else "")
         cards.append(f"""      <a class="card" href="curriculum/{mod}/index.html">
         <div class="card__no">{mod}</div>
         <div class="card__title">{esc(rows[0]['module_title'])}</div>
         <div class="card__en">{esc(MODULE_EN[mod])}</div>
-        <div class="card__meta">{weeks}주 · {per} · {total}회 &nbsp;·&nbsp; 제작 {done}/{total}</div>
+        <div class="card__meta">{weeks}주 · {per} · {total}회 &nbsp;·&nbsp; {state}</div>
         <div class="bar"><i style="width:{pct}%"></i></div>
       </a>""")
 
     total = sum(len(v) for v in mods.values())
+    all_rows = [r for v in mods.values() for r in v]
+    all_written = sum(1 for r in all_rows if r["status"] != "설계")
+    all_total = len(all_rows)
+    all_figs = len(list(ROOT.glob("curriculum/*/W*/L*/assets/*.svg"))) + \
+        len(list(ROOT.glob("curriculum/*/W*/L*/assets/*.png")))
+    all_slides = len(list(ROOT.glob("curriculum/*/W*/L*/slides.pptx")))
     body = f"""{crumb([("대문", None)])}
 
   <section class="hero">
@@ -157,6 +168,8 @@ def build_root(mods, force):
     최신 연구 쟁점까지 여섯 구성요소로 나누고, 이를 직접 측정하고 분석하는 실습 구성요소를 더해
     모두 {total}회로 편성했다. 각 수업은 독립적으로 읽을 수 있는 HTML 문서와 편집 가능한 슬라이드로 제공된다.</p>
   </section>
+
+  <p class="count" style="margin-bottom:14px">전체 {all_written} / {all_total}편 집필 · 그림 {all_figs}개 · 슬라이드 {all_slides}개</p>
 
   <h2>구성요소</h2>
   <div class="grid grid--modules">
@@ -248,7 +261,7 @@ def build_module(mod, rows):
         {label}<div class="card__meta">{titles}</div>
       </a>""")
 
-    done, total, pct = progress(rows)
+    written, approved, total, pct = progress(rows)
     nweeks = max(weeks)
     per = "주 1회" if mod == "M07" else "주 3회"
     note = f'<div class="callout">{esc(PHASE_NOTE[mod])}</div>' if mod in PHASE_NOTE else ""
@@ -263,7 +276,7 @@ def build_module(mod, rows):
   </section>
 
   {note}
-  <p class="count">{nweeks}주 · {per} · 전체 {total}회 · 제작 완료 {done}회</p>
+  <p class="count">{nweeks}주 · {per} · 전체 {total}회 · 집필 {written}회 · 승인 {approved}회</p>
   <div class="bar"><i style="width:{pct}%"></i></div>
 
   <h2>주차</h2>
