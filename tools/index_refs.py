@@ -22,6 +22,16 @@ CH2LESSON = {
     32: "M03-W05-L03 ~ M03-W06-L03", 33: "M03-W04-L02 · M03-W04-L03 · M03-W05-L01",
     34: "M03-W05-L03 ~ M03-W06-L03",
 }
+# Cooper The Cell 9e 장 → 수업 ID (PROJECT.md의 M01 편성 기준)
+COOPER2LESSON = {
+    1: "M01-W05-L01", 2: "M01-W05-L02", 3: "M01-W05-L03 · M01-W06-L01",
+    4: "M01-W06-L02 · M01-W06-L03", 5: "M01-W07-L01", 6: "M01-W07-L02",
+    7: "M01-W07-L03", 8: "M01-W08-L01 · M01-W08-L02", 9: "M01-W08-L03 · M01-W09-L01",
+    10: "M01-W09-L02", 11: "M01-W09-L03", 12: "M01-W10-L01", 13: "M01-W10-L02",
+    14: "M01-W10-L03", 15: "M01-W11-L01", 16: "M01-W11-L02", 17: "M01-W11-L03",
+    18: "M01-W12-L01", 19: "M01-W12-L02", 20: "M01-W12-L03",
+}
+
 MANUAL = {
     "ref-01": ("분자생물학의 기초 (Cooper 4장)", "M01-W06-L02"),
     "ref-03": ("대사의 기초 · 미토콘드리아", "M01-W10-L02 · M02-W03"),
@@ -44,7 +54,7 @@ def first_title(md):
 
 
 def main():
-    rows_lip, rows_other = [], []
+    rows_lip, rows_cooper, rows_other = [], [], []
     for md in sorted(DECKS.glob("*.md")):
         if md.name == "INDEX.md":
             continue
@@ -53,7 +63,13 @@ def main():
         n = m.group(1) if m else "—"
         stem = md.stem
         ch = re.search(r"[Cc]h(?:apter)?\.?(\d{1,2})", stem)
-        if ch and "Lippincott" in stem or (ch and stem.startswith("Chapter")):
+        if ch and "TheCell9e" in stem:
+            c = int(ch.group(1))
+            figs = Path(f"/home/user/refs/figures/cooper9e/ch{c:02d}")
+            nfig = len(list(figs.iterdir())) if figs.is_dir() else 0
+            rows_cooper.append((c, md.name, first_title(md), n, nfig,
+                                COOPER2LESSON.get(c, "미정")))
+        elif ch and "Lippincott" in stem or (ch and stem.startswith("Chapter")):
             c = int(ch.group(1))
             rows_lip.append((c, md.name, first_title(md), n, CH2LESSON.get(c, "미정")))
         elif stem in MANUAL:
@@ -72,6 +88,13 @@ def main():
            "| 장 | 파일 | 내용 | 장수 | 대응 수업 |", "|---:|---|---|---:|---|"]
     for c, f, t, n, lesson in sorted(rows_lip):
         out.append(f"| {c} | `{f}` | {t} | {n} | {lesson} |")
+
+    out += ["", "## Cooper, The Cell 9e 장별 슬라이드와 그림", "",
+            "그림은 `/home/user/refs/figures/cooper9e/chNN/` 에 있다(출판사 원본 JPEG).",
+            "**그대로 싣지 않는다.** 무엇을 어떻게 보여주는지 참고해 영문 라벨 SVG로 다시 그린다.", "",
+            "| 장 | 슬라이드 | 내용 | 장수 | 그림 | 대응 수업 |", "|---:|---|---|---:|---:|---|"]
+    for c, f, t, n, nfig, lesson in sorted(rows_cooper):
+        out.append(f"| {c} | `{f}` | {t} | {n} | {nfig or '—'} | {lesson} |")
 
     out += ["", "## 그 밖의 강의 자료", "",
             "| 파일 | 내용 | 장수 | 대응 수업 |", "|---|---|---:|---|"]

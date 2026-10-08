@@ -69,6 +69,27 @@ def extract_pptx(src, out_md):
     return len(slides)
 
 
+def extract_docx(src, out_md):
+    from docx import Document
+    d = Document(str(src))
+    lines = [f"# {out_md.stem}", "", f"- 원본: `refs/decks/{src.name}`", ""]
+    for para in d.paragraphs:
+        t = para.text.strip()
+        if not t:
+            continue
+        style = (para.style.name or "").lower()
+        if "heading" in style:
+            lvl = "".join(c for c in style if c.isdigit()) or "2"
+            lines.append("#" * min(int(lvl) + 1, 6) + " " + t)
+        else:
+            lines.append(t)
+    for tb in d.tables:
+        for row in tb.rows:
+            lines.append(" | ".join(c.text.strip().replace("\n", " ") for c in row.cells))
+    out_md.write_text("\n".join(lines) + "\n", encoding="utf-8")
+    return len(d.paragraphs)
+
+
 def extract_pdf(src, out_md):
     r = subprocess.run(["pdftotext", "-layout", str(src), "-"],
                        capture_output=True, text=True)
@@ -97,8 +118,12 @@ def main():
         shutil.copy2(src, dst)
         md = dst.with_suffix(".md")
         try:
-            pages = (extract_pptx(dst, md) if dst.suffix in (".pptx", ".ppt")
-                     else extract_pdf(dst, md))
+            if dst.suffix in (".pptx", ".ppt"):
+                pages = extract_pptx(dst, md)
+            elif dst.suffix == ".docx":
+                pages = extract_docx(dst, md)
+            else:
+                pages = extract_pdf(dst, md)
         except Exception as e:
             pages = 0
             print(f"  텍스트 추출 실패 {dst.name}: {e}", file=sys.stderr)
