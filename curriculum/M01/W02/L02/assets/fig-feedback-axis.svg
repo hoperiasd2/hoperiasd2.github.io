@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 450" width="880" height="450" role="img"
+ aria-label="The three elements of negative feedback and the hierarchy of the hypothalamic pituitary target axis, showing where the short and long feedback loops act, the hormone names of the three main axes, and two examples of positive feedback.">
+ <style>
+  .bx{fill:#fff;stroke:#c6d2dd;stroke-width:1.8}.k{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .t{font:12px sans-serif;fill:#16191d}.tb{font:700 13px sans-serif;fill:#003c71}
+  .th{font:700 15px sans-serif;fill:#003c71}.s{font:11px sans-serif;fill:#4a5159}
+  .m{font:11px monospace;fill:#16191d}
+  .ar{stroke:#003c71;stroke-width:2.4;fill:none;marker-end:url(#a)}
+  .inh{stroke:#b3261e;stroke-width:2.4;fill:none;marker-end:url(#bar)}
+  .pos{stroke:#2e7d32;stroke-width:2.4;fill:none;marker-end:url(#g)}
+ </style>
+ <defs>
+  <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker>
+  <marker id="g" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#2e7d32"/></marker>
+  <marker id="bar" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M6 0 L6 10" stroke="#b3261e" stroke-width="3"/></marker>
+ </defs>
+
+ <text class="th" x="20" y="28">A  The axis and its two feedback loops</text>
+ <line x1="20" y1="38" x2="430" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+
+ <rect class="bx" x="120" y="54" width="180" height="46" rx="8"/>
+ <text class="tb" x="156" y="82">Hypothalamus</text>
+ <path class="ar" d="M210 104 L210 142"/>
+ <text class="m" x="218" y="128">releasing hormone</text>
+ <text class="s" x="218" y="144">(portal vessels only)</text>
+
+ <rect class="bx" x="120" y="146" width="180" height="46" rx="8"/>
+ <text class="tb" x="140" y="174">Anterior pituitary</text>
+ <path class="ar" d="M210 196 L210 234"/>
+ <text class="m" x="218" y="220">tropic hormone</text>
+ <text class="s" x="218" y="236">(systemic blood)</text>
+
+ <rect class="bx" x="120" y="238" width="180" height="46" rx="8"/>
+ <text class="tb" x="148" y="266">Target gland</text>
+ <path class="ar" d="M210 288 L210 320"/>
+ <rect class="k" x="120" y="324" width="180" height="46" rx="8"/>
+ <text class="tb" x="138" y="352">Final hormone, acts</text>
+
+ <path class="inh" d="M114 340 q-74 -20 -74 -150"/>
+ <text class="s" x="22" y="196">long loop</text>
+ <path class="inh" d="M114 334 q-46 -14 -46 -156"/>
+ <text class="s" x="52" y="236">short loop</text>
+ <text class="s" x="22" y="396">Both loops brake at once, so control is stable.</text>
+ <text class="s" x="22" y="420">Three elements: a sensor, a comparator and an effector,</text>
+ <text class="s" x="22" y="438">with the effector's result returning to the sensor.</text>
+
+ <text class="th" x="460" y="28">B  The three main axes</text>
+ <line x1="460" y1="38" x2="860" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+ <rect class="bx" x="460" y="54" width="400" height="124" rx="8"/>
+ <text class="tb" x="474" y="78">Axis</text>
+ <text class="tb" x="572" y="78">Hypothal.</text>
+ <text class="tb" x="664" y="78">Pituitary</text>
+ <text class="tb" x="756" y="78">Final</text>
+ <line x1="474" y1="86" x2="846" y2="86" stroke="#c6d2dd" stroke-width="1.2"/>
+ <text class="t" x="474" y="110">Thyroid</text>
+ <text class="m" x="572" y="110">TRH</text>
+ <text class="m" x="664" y="110">TSH</text>
+ <text class="m" x="756" y="110">T3, T4</text>
+ <text class="t" x="474" y="138">Adrenal</text>
+ <text class="m" x="572" y="138">CRH</text>
+ <text class="m" x="664" y="138">ACTH</text>
+ <text class="m" x="756" y="138">cortisol</text>
+ <text class="t" x="474" y="166">Reproductive</text>
+ <text class="m" x="572" y="166">GnRH</text>
+ <text class="m" x="664" y="166">LH, FSH</text>
+ <text class="m" x="756" y="166">sex steroids</text>
+
+ <rect class="bx" x="460" y="190" width="400" height="76" rx="8"/>
+ <text class="tb" x="474" y="214">Growth hormone axis differs</text>
+ <text class="t" x="474" y="236">The hypothalamus sends BOTH a stimulator (GHRH) and an inhibitor</text>
+ <text class="t" x="474" y="256">(somatostatin); GH acts via IGF-1 made in the liver, which also feeds back.</text>
+
+ <text class="th" x="460" y="302">C  Positive feedback: rare, and always with a clear end</text>
+ <line x1="460" y1="312" x2="860" y2="312" stroke="#c6d2dd" stroke-width="1.5"/>
+ <rect class="k" x="460" y="326" width="400" height="56" rx="8"/>
+ <text class="t" x="474" y="350">Estrogen amplifies LH release before ovulation: the LH surge.</text>
+ <text class="s" x="474" y="372">Ends when ovulation occurs and the stimulus disappears.</text>
+ <rect class="k" x="460" y="392" width="400" height="56" rx="8"/>
+ <text class="t" x="474" y="416">Oxytocin strengthens uterine contraction, which releases more oxytocin.</text>
+ <text class="s" x="474" y="438">Ends at delivery.</text>
+</svg>

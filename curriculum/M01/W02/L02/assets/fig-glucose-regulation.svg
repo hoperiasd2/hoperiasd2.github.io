@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 450" width="880" height="450" role="img"
+ aria-label="Insulin and glucagon in glucose control: the secretion mechanism of the beta cell, glucose uptake through GLUT4 translocation, the difference in organ targets, the liver-only target of glucagon, and the asymmetry whereby several hormones raise glucose but only one lowers it.">
+ <style>
+  .bx{fill:#fff;stroke:#c6d2dd;stroke-width:1.8}.k{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .t{font:12px sans-serif;fill:#16191d}.tb{font:700 13px sans-serif;fill:#003c71}
+  .th{font:700 15px sans-serif;fill:#003c71}.s{font:11px sans-serif;fill:#4a5159}
+  .m{font:10px monospace;fill:#16191d}
+  .cell{fill:#e8eff6;stroke:#003c71;stroke-width:2.2}
+  .tr{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .ar{stroke:#003c71;stroke-width:2;fill:none;marker-end:url(#a)}
+  .inh{stroke:#b3261e;stroke-width:2.4;fill:none;marker-end:url(#bar)}
+ </style>
+ <defs>
+  <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker>
+  <marker id="bar" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M6 0 L6 10" stroke="#b3261e" stroke-width="3"/></marker>
+ </defs>
+
+ <text class="th" x="20" y="28">A  How the beta cell senses glucose</text>
+ <line x1="20" y1="38" x2="430" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+ <rect class="cell" x="30" y="54" width="400" height="150" rx="8"/>
+ <text class="m" x="44" y="78">glucose in through GLUT2</text>
+ <path class="ar" d="M60 84 L60 104"/>
+ <text class="m" x="44" y="120">metabolised, ATP rises</text>
+ <path class="ar" d="M60 126 L60 146"/>
+ <text class="m" x="44" y="162">ATP-sensitive K+ channel closes</text>
+ <path class="ar" d="M60 168 L60 188"/>
+ <text class="m" x="44" y="200">cell depolarises, Ca2+ enters, insulin vesicles release</text>
+ <text class="s" x="30" y="226">Incretins (GIP, GLP-1) amplify this, which is why oral glucose</text>
+ <text class="s" x="30" y="244">releases more insulin than the same dose given intravenously.</text>
+
+ <text class="th" x="460" y="28">B  Insulin: the hormone of storage</text>
+ <line x1="460" y1="38" x2="860" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+ <rect class="bx" x="460" y="54" width="400" height="56" rx="7"/>
+ <text class="tb" x="474" y="78">Muscle and adipose</text>
+ <text class="t" x="474" y="98">GLUT4 moved to the membrane: glucose uptake rises (the main effect)</text>
+ <rect class="bx" x="460" y="118" width="400" height="56" rx="7"/>
+ <text class="tb" x="474" y="142">Liver</text>
+ <text class="t" x="474" y="162">glycogen synthesis up, breakdown down, new glucose production down</text>
+ <rect class="bx" x="460" y="182" width="400" height="56" rx="7"/>
+ <text class="tb" x="474" y="206">Adipose and whole body</text>
+ <text class="t" x="474" y="226">lipid synthesis up, lipid breakdown down, protein synthesis up</text>
+
+ <text class="th" x="20" y="284">C  Glucagon: almost only the liver</text>
+ <line x1="20" y1="294" x2="430" y2="294" stroke="#c6d2dd" stroke-width="1.5"/>
+ <rect class="k" x="30" y="308" width="400" height="96" rx="8"/>
+ <text class="t" x="44" y="332">glycogen broken down to glucose (fast)</text>
+ <text class="t" x="44" y="354">new glucose made from amino acids and glycerol (sustained)</text>
+ <text class="t" x="44" y="376">fatty acids oxidised to ketone bodies (long fast)</text>
+ <text class="s" x="44" y="396">Only the liver has glucose-6-phosphatase, so only the liver can export free glucose.</text>
+
+ <text class="th" x="460" y="284">D  The asymmetry</text>
+ <line x1="460" y1="294" x2="860" y2="294" stroke="#c6d2dd" stroke-width="1.5"/>
+ <rect class="bx" x="460" y="308" width="400" height="56" rx="7"/>
+ <text class="tb" x="474" y="332">Raise glucose: four hormones</text>
+ <text class="t" x="474" y="352">glucagon, epinephrine, cortisol, growth hormone</text>
+ <rect class="k" x="460" y="372" width="400" height="34" rx="7"/>
+ <text class="tb" x="474" y="394">Lower glucose: insulin alone</text>
+ <text class="s" x="460" y="428">Hypoglycaemia stops the brain within minutes and needs several layers of defence;</text>
+ <text class="s" x="460" y="444">hyperglycaemia harms over years, so one hormone sufficed.</text>
+</svg>

@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 440" width="880" height="440" role="img"
+ aria-label="The different embryonic origin of the anterior and posterior pituitary and the resulting difference in how each works: the hypophyseal portal system of the anterior lobe, the axonal transport route of the posterior lobe, the hormones of each lobe, and the exception that prolactin is controlled by an inhibitory signal.">
+ <style>
+  .bx{fill:#fff;stroke:#c6d2dd;stroke-width:1.8}.k{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .t{font:12px sans-serif;fill:#16191d}.tb{font:700 13px sans-serif;fill:#003c71}
+  .th{font:700 15px sans-serif;fill:#003c71}.s{font:11px sans-serif;fill:#4a5159}
+  .m{font:11px monospace;fill:#16191d}
+  .hyp{fill:#eef3f8;stroke:#6b8ba8;stroke-width:2}
+  .ant{fill:#fff5d6;stroke:#f2b705;stroke-width:2.4}
+  .post{fill:#e8eff6;stroke:#003c71;stroke-width:2.4}
+  .vess{fill:#f7dedc;stroke:#b3261e;stroke-width:1.8}
+  .ax{stroke:#2e7d32;stroke-width:3;fill:none;marker-end:url(#g)}
+  .ar{stroke:#003c71;stroke-width:2;fill:none;marker-end:url(#a)}
+  .inh{stroke:#b3261e;stroke-width:2.4;fill:none;marker-end:url(#bar)}
+ </style>
+ <defs>
+  <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker>
+  <marker id="g" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#2e7d32"/></marker>
+  <marker id="bar" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M6 0 L6 10" stroke="#b3261e" stroke-width="3"/></marker>
+ </defs>
+
+ <text class="th" x="20" y="28">Two organs stuck together, with different embryonic origins</text>
+ <line x1="20" y1="38" x2="860" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+
+ <path class="hyp" d="M140 54 h300 v60 h-300 z"/>
+ <text class="tb" x="248" y="90">Hypothalamus</text>
+ <circle cx="200" cy="100" r="6" fill="#f2b705"/>
+ <circle cx="380" cy="100" r="6" fill="#2e7d32"/>
+
+ <rect class="vess" x="176" y="114" width="48" height="56" rx="10"/>
+ <text class="m" x="60" y="146">hypophyseal</text>
+ <text class="m" x="60" y="162">portal vessels</text>
+ <path class="ar" d="M200 118 L200 166"/>
+
+ <path class="ant" d="M120 172 h170 v92 h-170 z"/>
+ <text class="tb" x="140" y="196">ANTERIOR</text>
+ <text class="s" x="140" y="214">from palate epithelium:</text>
+ <text class="s" x="140" y="230">secretory tissue, MAKES</text>
+ <text class="s" x="140" y="246">its own hormones</text>
+
+ <path class="ax" d="M380 108 L380 178"/>
+ <path class="post" d="M330 180 h120 v84 h-120 z"/>
+ <text class="tb" x="346" y="204">POSTERIOR</text>
+ <text class="s" x="346" y="222">from brain tissue:</text>
+ <text class="s" x="346" y="238">STORES and releases</text>
+ <text class="s" x="346" y="254">what the hypothalamus made</text>
+ <circle cx="390" cy="248" r="5" fill="#2e7d32"/>
+
+ <rect class="k" x="40" y="286" width="420" height="138" rx="8"/>
+ <text class="tb" x="54" y="310">Anterior: six hormones</text>
+ <text class="t" x="54" y="334">TSH to thyroid        ACTH to adrenal cortex</text>
+ <text class="t" x="54" y="354">LH, FSH to gonads</text>
+ <text class="s" x="54" y="372">the four above are tropic: they drive other endocrine glands</text>
+ <text class="t" x="54" y="396">GH to liver (IGF-1) and whole body</text>
+ <text class="t" x="54" y="416">Prolactin to the mammary gland</text>
+
+ <rect class="bx" x="490" y="286" width="370" height="76" rx="8"/>
+ <text class="tb" x="504" y="310">Posterior: two hormones</text>
+ <text class="t" x="504" y="334">ADH (vasopressin): water reabsorption in the collecting duct</text>
+ <text class="t" x="504" y="354">Oxytocin: uterine contraction and milk ejection</text>
+
+ <rect class="bx" x="490" y="372" width="370" height="52" rx="8"/>
+ <text class="tb" x="504" y="394">The prolactin exception</text>
+ <text class="t" x="504" y="414">Its main hypothalamic signal is INHIBITION by dopamine.</text>
+ <path class="inh" d="M700 282 L700 270"/>
+ <text class="s" x="490" y="252">Cut the connection and every anterior hormone falls</text>
+ <text class="s" x="490" y="268">except prolactin, which RISES.</text>
+ <text class="s" x="490" y="226">Dopamine receptor blockers (some antipsychotics)</text>
+ <text class="s" x="490" y="210">therefore raise prolactin.</text>
+
+ <text class="s" x="490" y="140">A pituitary tumour presses on the optic chiasm</text>
+ <text class="s" x="490" y="158">just above it, so the outer visual fields are lost first.</text>
+</svg>

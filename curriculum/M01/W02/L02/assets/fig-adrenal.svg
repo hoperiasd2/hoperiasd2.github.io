@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 450" width="880" height="450" role="img"
+ aria-label="The three zones of the adrenal cortex and the medulla: the hormone and controlling stimulus of each zone, the synthetic pathway branching from cholesterol, the four metabolic actions of cortisol, and the diurnal rhythm curve.">
+ <style>
+  .bx{fill:#fff;stroke:#c6d2dd;stroke-width:1.8}.k{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .t{font:12px sans-serif;fill:#16191d}.tb{font:700 13px sans-serif;fill:#003c71}
+  .th{font:700 15px sans-serif;fill:#003c71}.s{font:11px sans-serif;fill:#4a5159}
+  .m{font:10px monospace;fill:#16191d}
+  .z1{fill:#fff5d6;stroke:#f2b705;stroke-width:2}
+  .z2{fill:#e8eff6;stroke:#003c71;stroke-width:2}
+  .z3{fill:#eef3f8;stroke:#6b8ba8;stroke-width:2}
+  .med{fill:#f7dedc;stroke:#b3261e;stroke-width:2}
+  .ar{stroke:#003c71;stroke-width:2;fill:none;marker-end:url(#a)}
+  .ax{stroke:#16191d;stroke-width:1.6;fill:none}
+  .cur{stroke:#b3261e;stroke-width:2.6;fill:none}
+ </style>
+ <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker></defs>
+
+ <text class="th" x="20" y="28">A  Four layers, four products</text>
+ <line x1="20" y1="38" x2="560" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+
+ <rect class="z1" x="30" y="56" width="150" height="34"/>
+ <text class="m" x="38" y="78">Zona glomerulosa</text>
+ <rect class="z2" x="30" y="90" width="150" height="56"/>
+ <text class="m" x="38" y="122">Zona fasciculata</text>
+ <rect class="z3" x="30" y="146" width="150" height="34"/>
+ <text class="m" x="38" y="168">Zona reticularis</text>
+ <rect class="med" x="30" y="180" width="150" height="40"/>
+ <text class="m" x="60" y="204">Medulla</text>
+
+ <text class="m" x="196" y="78">aldosterone</text>
+ <text class="s" x="196" y="94">angiotensin II, plasma K+</text>
+ <text class="m" x="196" y="118">cortisol</text>
+ <text class="s" x="196" y="134">ACTH</text>
+ <text class="m" x="196" y="166">androgens (DHEA)</text>
+ <text class="s" x="196" y="182">ACTH</text>
+ <text class="m" x="196" y="204">epinephrine 80%, norepinephrine 20%</text>
+ <text class="s" x="196" y="220">direct sympathetic nerve stimulation</text>
+
+ <text class="s" x="30" y="248">Cortex is mesodermal, steroid producing. Medulla is neural crest:</text>
+ <text class="s" x="30" y="266">an extension of the sympathetic system that broadcasts its signal.</text>
+ <text class="s" x="30" y="290">All three zones start from cholesterol; different enzymes split the path.</text>
+ <text class="s" x="30" y="308">Aldosterone synthase only in glomerulosa; 17-alpha-hydroxylase only in the other two.</text>
+
+ <text class="th" x="590" y="28">B  Cortisol: everything points at raising glucose</text>
+ <line x1="590" y1="38" x2="860" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+ <rect class="bx" x="590" y="54" width="270" height="140" rx="8"/>
+ <text class="tb" x="604" y="78">Liver</text>
+ <text class="t" x="604" y="96">more gluconeogenic enzymes</text>
+ <text class="tb" x="604" y="120">Muscle</text>
+ <text class="t" x="604" y="138">protein broken down for amino acids</text>
+ <text class="tb" x="604" y="162">Adipose</text>
+ <text class="t" x="604" y="180">lipid broken down for substrate</text>
+ <rect class="k" x="590" y="202" width="270" height="52" rx="8"/>
+ <text class="tb" x="604" y="226">Peripheral tissue</text>
+ <text class="t" x="604" y="246">insulin response blunted: less glucose used</text>
+ <rect class="bx" x="590" y="262" width="270" height="52" rx="8"/>
+ <text class="tb" x="604" y="286">Also: immune and inflammation suppression</text>
+ <text class="s" x="604" y="306">the basis of the most widely used drug class</text>
+
+ <text class="th" x="20" y="348">C  Diurnal rhythm: the time of sampling matters</text>
+ <line x1="20" y1="358" x2="860" y2="358" stroke="#c6d2dd" stroke-width="1.5"/>
+ <path class="ax" d="M80 428 L80 372 M80 428 L480 428"/>
+ <text class="s" x="34" y="400">cortisol</text>
+ <path class="cur" d="M86 420 L130 382 L200 398 L280 414 L360 424 L440 410"/>
+ <text class="m" x="104" y="376">06:00 peak</text>
+ <text class="m" x="320" y="444">24:00 trough</text>
+ <text class="t" x="510" y="396">A single value means nothing without the clock time.</text>
+ <text class="t" x="510" y="418">Long-term glucocorticoid therapy suppresses the axis and atrophies</text>
+ <text class="t" x="510" y="438">the cortex, so it must always be tapered, never stopped abruptly.</text>
+</svg>

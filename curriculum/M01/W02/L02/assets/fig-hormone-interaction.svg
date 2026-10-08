@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 420" width="880" height="420" role="img"
+ aria-label="Three modes of hormone interaction with examples: comparison of effect size for synergism, permissiveness and antagonism, the mechanism of the permissive action of thyroid hormone, and how 11 beta hydroxysteroid dehydrogenase type 2 in the collecting duct prevents cortisol from occupying the mineralocorticoid receptor.">
+ <style>
+  .bx{fill:#fff;stroke:#c6d2dd;stroke-width:1.8}.k{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .t{font:12px sans-serif;fill:#16191d}.tb{font:700 13px sans-serif;fill:#003c71}
+  .th{font:700 15px sans-serif;fill:#003c71}.s{font:11px sans-serif;fill:#4a5159}
+  .m{font:11px monospace;fill:#16191d}
+  .ar{stroke:#003c71;stroke-width:2;fill:none;marker-end:url(#a)}
+  .inh{stroke:#b3261e;stroke-width:2.4;fill:none;marker-end:url(#bar)}
+  .b1{fill:#6b8ba8}.b2{fill:#f2b705}.b3{fill:#b3261e}
+ </style>
+ <defs>
+  <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker>
+  <marker id="bar" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M6 0 L6 10" stroke="#b3261e" stroke-width="3"/></marker>
+ </defs>
+
+ <text class="th" x="20" y="28">A  Synergism: together they exceed the sum</text>
+ <line x1="20" y1="38" x2="430" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+ <rect class="b1" x="40" y="92" width="40" height="40"/>
+ <text class="m" x="36" y="148">A alone</text>
+ <rect class="b1" x="110" y="92" width="40" height="40"/>
+ <text class="m" x="106" y="148">B alone</text>
+ <rect class="b3" x="180" y="56" width="40" height="76"/>
+ <text class="m" x="170" y="148">A + B</text>
+ <text class="s" x="246" y="100">epinephrine, cortisol and glucagon</text>
+ <text class="s" x="246" y="118">raising glucose by different routes</text>
+
+ <text class="th" x="460" y="28">B  Permissiveness: A enables B</text>
+ <line x1="460" y1="38" x2="860" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+ <rect class="b1" x="480" y="124" width="40" height="8"/>
+ <text class="m" x="474" y="148">A alone</text>
+ <rect class="b2" x="550" y="110" width="40" height="22"/>
+ <text class="m" x="544" y="148">B alone</text>
+ <rect class="b3" x="620" y="66" width="40" height="66"/>
+ <text class="m" x="610" y="148">B with A</text>
+ <text class="s" x="690" y="100">thyroid hormone raises the</text>
+ <text class="s" x="690" y="118">number of beta receptors</text>
+ <text class="s" x="690" y="136">so catecholamines can act</text>
+
+ <text class="th" x="20" y="186">C  Antagonism: opposite directions</text>
+ <line x1="20" y1="196" x2="430" y2="196" stroke="#c6d2dd" stroke-width="1.5"/>
+ <rect class="bx" x="30" y="210" width="400" height="76" rx="8"/>
+ <text class="t" x="44" y="234">Insulin and glucagon; PTH and calcitonin</text>
+ <text class="t" x="44" y="256">Receptor-level antagonism: they compete for the same receptor</text>
+ <text class="t" x="44" y="276">Functional antagonism: different receptors, opposite results</text>
+ <text class="s" x="30" y="308">A hormone deficiency that produces unexpected symptoms is usually</text>
+ <text class="s" x="30" y="326">a lost permissive action, not a lost direct one.</text>
+
+ <text class="th" x="460" y="186">D  Keeping cortisol off the mineralocorticoid receptor</text>
+ <line x1="460" y1="196" x2="860" y2="196" stroke="#c6d2dd" stroke-width="1.5"/>
+ <rect class="bx" x="470" y="212" width="150" height="40" rx="7"/>
+ <text class="m" x="500" y="238">Cortisol</text>
+ <path class="ar" d="M626 232 L666 232"/>
+ <rect class="k" x="674" y="212" width="180" height="40" rx="7"/>
+ <text class="m" x="690" y="238">11beta-HSD2 in the duct</text>
+ <path class="ar" d="M764 256 L764 286"/>
+ <rect class="bx" x="674" y="292" width="180" height="40" rx="7"/>
+ <text class="m" x="690" y="318">Cortisone: cannot bind</text>
+ <path class="inh" d="M560 258 L560 296"/>
+ <rect class="bx" x="470" y="302" width="150" height="40" rx="7"/>
+ <text class="m" x="480" y="328">MR: aldosterone only</text>
+ <text class="s" x="460" y="366">Plasma cortisol is far higher than aldosterone, so without this enzyme it would</text>
+ <text class="s" x="460" y="384">occupy the receptor. Glycyrrhizin in liquorice inhibits it, causing hypertension</text>
+ <text class="s" x="460" y="402">and hypokalaemia.</text>
+</svg>

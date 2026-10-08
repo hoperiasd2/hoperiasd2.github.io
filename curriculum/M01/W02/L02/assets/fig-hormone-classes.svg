@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 440" width="880" height="440" role="img"
+ aria-label="The three classes of hormone and the chain of properties that follows from their structure, linking solubility to transport mode, half-life, receptor location, mode of action and response speed.">
+ <style>
+  .bx{fill:#fff;stroke:#c6d2dd;stroke-width:1.8}.k{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .t{font:12px sans-serif;fill:#16191d}.tb{font:700 13px sans-serif;fill:#003c71}
+  .th{font:700 15px sans-serif;fill:#003c71}.s{font:11px sans-serif;fill:#4a5159}
+  .m{font:11px monospace;fill:#16191d}
+  .ar{stroke:#003c71;stroke-width:2.2;fill:none;marker-end:url(#a)}
+ </style>
+ <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker></defs>
+
+ <text class="th" x="20" y="28">A  Three classes</text>
+ <line x1="20" y1="38" x2="860" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+
+ <rect class="bx" x="20" y="54" width="270" height="104" rx="8"/>
+ <text class="tb" x="34" y="78">Peptide / protein</text>
+ <text class="s" x="34" y="98">chain of amino acids; the largest group</text>
+ <text class="t" x="34" y="122">insulin, glucagon, GH, PTH,</text>
+ <text class="t" x="34" y="142">ADH, most pituitary hormones</text>
+
+ <rect class="bx" x="302" y="54" width="270" height="104" rx="8"/>
+ <text class="tb" x="316" y="78">Steroid</text>
+ <text class="s" x="316" y="98">built from cholesterol</text>
+ <text class="t" x="316" y="122">cortisol, aldosterone, testosterone,</text>
+ <text class="t" x="316" y="142">estrogen, progesterone, active vitamin D</text>
+
+ <rect class="bx" x="584" y="54" width="276" height="104" rx="8"/>
+ <text class="tb" x="598" y="78">Amine</text>
+ <text class="s" x="598" y="98">from a single amino acid; splits in two</text>
+ <text class="t" x="598" y="122">catecholamines behave like peptides;</text>
+ <text class="t" x="598" y="142">thyroid hormone behaves like a steroid</text>
+
+ <text class="th" x="20" y="198">B  One structural fact sets everything else: two chains of reasoning</text>
+ <line x1="20" y1="208" x2="860" y2="208" stroke="#c6d2dd" stroke-width="1.5"/>
+
+ <rect class="k" x="20" y="222" width="150" height="48" rx="7"/>
+ <text class="m" x="34" y="252">not water soluble</text>
+ <path class="ar" d="M176 246 L216 246"/>
+ <rect class="bx" x="224" y="222" width="160" height="48" rx="7"/>
+ <text class="m" x="236" y="244">needs a carrier</text>
+ <text class="m" x="236" y="262">protein in blood</text>
+ <path class="ar" d="M390 246 L430 246"/>
+ <rect class="bx" x="438" y="222" width="170" height="48" rx="7"/>
+ <text class="m" x="450" y="244">bound form is shielded</text>
+ <text class="m" x="450" y="262">from degradation</text>
+ <path class="ar" d="M614 246 L654 246"/>
+ <rect class="k" x="662" y="222" width="198" height="48" rx="7"/>
+ <text class="m" x="676" y="252">long half-life (T4: about 7 days)</text>
+
+ <rect class="k" x="20" y="288" width="150" height="48" rx="7"/>
+ <text class="m" x="30" y="318">crosses the membrane</text>
+ <path class="ar" d="M176 312 L216 312"/>
+ <rect class="bx" x="224" y="288" width="160" height="48" rx="7"/>
+ <text class="m" x="236" y="310">receptor is inside</text>
+ <text class="m" x="236" y="328">the cell or nucleus</text>
+ <path class="ar" d="M390 312 L430 312"/>
+ <rect class="bx" x="438" y="288" width="170" height="48" rx="7"/>
+ <text class="m" x="450" y="310">acts by changing</text>
+ <text class="m" x="450" y="328">gene transcription</text>
+ <path class="ar" d="M614 312 L654 312"/>
+ <rect class="k" x="662" y="288" width="198" height="48" rx="7"/>
+ <text class="m" x="676" y="310">slow to start, lasts for days</text>
+
+ <text class="th" x="20" y="376">C  The mirror image</text>
+ <line x1="20" y1="386" x2="860" y2="386" stroke="#c6d2dd" stroke-width="1.5"/>
+ <text class="t" x="20" y="408">Water soluble: dissolved in plasma, degraded quickly, short half-life; cannot cross the membrane, so the receptor sits on the</text>
+ <text class="t" x="20" y="428">surface, a second messenger carries the signal, existing proteins change activity, and the response is fast and brief.</text>
+</svg>

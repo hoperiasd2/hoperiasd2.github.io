@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 450" width="880" height="450" role="img"
+ aria-label="The five steps of thyroid hormone synthesis: follicle and colloid structure, iodide concentration by the sodium iodide symporter, organification and coupling by thyroid peroxidase, the stored form on thyroglobulin, and conversion of T4 to active T3 by deiodinase in target tissue.">
+ <style>
+  .bx{fill:#fff;stroke:#c6d2dd;stroke-width:1.8}.k{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .t{font:12px sans-serif;fill:#16191d}.tb{font:700 13px sans-serif;fill:#003c71}
+  .th{font:700 15px sans-serif;fill:#003c71}.s{font:11px sans-serif;fill:#4a5159}
+  .m{font:10px monospace;fill:#16191d}
+  .cell{fill:#e8eff6;stroke:#003c71;stroke-width:2.2}
+  .col{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .tr{fill:#f7dedc;stroke:#b3261e;stroke-width:2.2}
+  .ar{stroke:#003c71;stroke-width:2;fill:none;marker-end:url(#a)}
+ </style>
+ <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker></defs>
+
+ <text class="th" x="20" y="28">A  Follicle: the cell faces blood on one side and colloid on the other</text>
+ <line x1="20" y1="38" x2="860" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+
+ <text class="m" x="20" y="66">BLOOD</text>
+ <rect class="cell" x="20" y="100" width="560" height="120" rx="8"/>
+ <text class="m" x="250" y="166">Follicular cell</text>
+ <text class="m" x="20" y="248">COLLOID (lumen of the follicle)</text>
+ <rect class="col" x="20" y="256" width="560" height="60" rx="8"/>
+ <text class="m" x="36" y="292">thyroglobulin: a large protein rich in tyrosine</text>
+
+ <rect class="tr" x="52" y="90" width="48" height="20" rx="5"/>
+ <text class="m" x="58" y="105">NIS</text>
+ <path class="ar" d="M76 74 L76 94"/>
+ <text class="m" x="40" y="70">I- in</text>
+ <text class="s" x="110" y="90">1 Trapping: active uptake, concentrated more than 30-fold</text>
+
+ <path class="ar" d="M200 130 L200 250"/>
+ <text class="s" x="210" y="190">2 Thyroglobulin is made and secreted into the colloid</text>
+
+ <rect class="tr" x="330" y="246" width="56" height="20" rx="5"/>
+ <text class="m" x="336" y="261">TPO</text>
+ <text class="s" x="396" y="248">3 Organification: TPO oxidises I- and attaches it</text>
+ <text class="s" x="396" y="264">to tyrosine: MIT (one I) and DIT (two I)</text>
+ <text class="s" x="396" y="300">4 Coupling, also by TPO:</text>
+ <text class="m" x="396" y="320">DIT + DIT = T4        MIT + DIT = T3</text>
+ <text class="s" x="36" y="334">stored on thyroglobulin until needed</text>
+
+ <path class="ar" d="M120 254 L120 226"/>
+ <text class="s" x="130" y="238">5 TSH makes the cell take colloid back; lysosomes free T3 and T4</text>
+
+ <text class="th" x="20" y="366">B  T4 is the circulating form; T3 is the active one</text>
+ <line x1="20" y1="376" x2="860" y2="376" stroke="#c6d2dd" stroke-width="1.5"/>
+ <rect class="bx" x="20" y="390" width="150" height="44" rx="7"/>
+ <text class="m" x="42" y="418">T4 (about 90%)</text>
+ <path class="ar" d="M176 412 L226 412"/>
+ <text class="s" x="178" y="404">deiodinase</text>
+ <rect class="k" x="234" y="390" width="130" height="44" rx="7"/>
+ <text class="m" x="268" y="418">T3 (active)</text>
+ <text class="t" x="384" y="406">T3 binds the nuclear receptor about 10 times more tightly.</text>
+ <text class="t" x="384" y="426">Long T4 half-life keeps blood levels steady; each tissue sets its own deiodinase.</text>
+</svg>

@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 450" width="880" height="450" role="img"
+ aria-label="Membrane receptor and nuclear receptor pathways: the steps of the cAMP, IP3 calcium and receptor tyrosine kinase pathways, the amplification at each step, and the nuclear receptor route that regulates transcription, with the difference in response speed.">
+ <style>
+  .bx{fill:#fff;stroke:#c6d2dd;stroke-width:1.8}.k{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .t{font:12px sans-serif;fill:#16191d}.tb{font:700 13px sans-serif;fill:#003c71}
+  .th{font:700 15px sans-serif;fill:#003c71}.s{font:11px sans-serif;fill:#4a5159}
+  .m{font:10px monospace;fill:#16191d}
+  .mem{fill:#e8eff6;stroke:#003c71;stroke-width:2}
+  .rec{fill:#fff5d6;stroke:#f2b705;stroke-width:2.4}
+  .ar{stroke:#003c71;stroke-width:2;fill:none;marker-end:url(#a)}
+  .nuc{fill:#eef3f8;stroke:#6b8ba8;stroke-width:2}
+ </style>
+ <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker></defs>
+
+ <text class="th" x="20" y="28">A  Membrane receptors: three pathways, all with a second messenger</text>
+ <line x1="20" y1="38" x2="860" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+
+ <rect class="mem" x="20" y="74" width="840" height="16"/>
+ <text class="m" x="20" y="68">outside</text>
+ <text class="m" x="20" y="106">inside</text>
+
+ <rect class="rec" x="60" y="66" width="46" height="32" rx="6"/>
+ <circle cx="83" cy="54" r="7" fill="#b3261e"/>
+ <text class="m" x="30" y="48">hormone</text>
+ <path class="ar" d="M83 100 L83 122"/>
+ <text class="m" x="40" y="138">Gs protein</text>
+ <path class="ar" d="M83 144 L83 164"/>
+ <text class="m" x="30" y="180">adenylyl cyclase</text>
+ <path class="ar" d="M83 186 L83 206"/>
+ <text class="m" x="56" y="222">cAMP</text>
+ <path class="ar" d="M83 228 L83 248"/>
+ <text class="m" x="60" y="264">PKA</text>
+ <path class="ar" d="M83 270 L83 290"/>
+ <text class="m" x="26" y="306">phosphorylated proteins</text>
+ <text class="s" x="26" y="328">glucagon, PTH, ADH(V2), TSH, ACTH</text>
+
+ <rect class="rec" x="330" y="66" width="46" height="32" rx="6"/>
+ <circle cx="353" cy="54" r="7" fill="#b3261e"/>
+ <path class="ar" d="M353 100 L353 122"/>
+ <text class="m" x="312" y="138">Gq protein</text>
+ <path class="ar" d="M353 144 L353 164"/>
+ <text class="m" x="300" y="180">phospholipase C</text>
+ <path class="ar" d="M353 186 L353 206"/>
+ <text class="m" x="314" y="222">IP3  +  DAG</text>
+ <path class="ar" d="M340 228 L340 248"/>
+ <text class="m" x="300" y="264">Ca2+ from the ER</text>
+ <path class="ar" d="M353 270 L353 290"/>
+ <text class="m" x="304" y="306">Ca2+ dependent effects</text>
+ <text class="s" x="290" y="328">angiotensin II, oxytocin, ADH(V1), TRH</text>
+
+ <rect class="rec" x="620" y="66" width="60" height="32" rx="6"/>
+ <circle cx="650" cy="54" r="7" fill="#b3261e"/>
+ <path class="ar" d="M650 100 L650 136"/>
+ <text class="m" x="590" y="152">receptor autophosphorylates</text>
+ <path class="ar" d="M650 158 L650 194"/>
+ <text class="m" x="596" y="210">substrate proteins phosphorylated</text>
+ <path class="ar" d="M650 216 L650 252"/>
+ <text class="m" x="606" y="268">GLUT4 moves, enzymes switch</text>
+ <text class="s" x="596" y="300">insulin and the growth factors</text>
+ <text class="s" x="596" y="318">(the receptor is itself the kinase:</text>
+ <text class="s" x="596" y="336">no G protein needed)</text>
+
+ <rect class="k" x="130" y="348" width="300" height="58" rx="8"/>
+ <text class="tb" x="144" y="372">Amplification</text>
+ <text class="t" x="144" y="394">1 hormone to many G proteins to hundreds of cAMP to</text>
+ <text class="s" x="144" y="412">countless substrates: 10^-10 M is enough</text>
+
+ <text class="th" x="20" y="430">B  Nuclear receptor: hormone enters, binds, and the complex regulates transcription. Hours to start, days to fade.</text>
+</svg>

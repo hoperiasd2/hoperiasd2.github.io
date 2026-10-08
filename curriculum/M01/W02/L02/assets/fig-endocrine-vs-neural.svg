@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 420" width="880" height="420" role="img"
+ aria-label="Comparison of neural and endocrine signalling: the difference in how the target is specified, in speed and in range, and the principle that the presence of a receptor determines the target.">
+ <style>
+  .bx{fill:#fff;stroke:#c6d2dd;stroke-width:1.8}.k{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .t{font:12px sans-serif;fill:#16191d}.tb{font:700 13px sans-serif;fill:#003c71}
+  .th{font:700 15px sans-serif;fill:#003c71}.s{font:11px sans-serif;fill:#4a5159}
+  .m{font:11px monospace;fill:#16191d}
+  .ar{stroke:#003c71;stroke-width:2.2;fill:none;marker-end:url(#a)}
+  .axon{stroke:#2e7d32;stroke-width:3.4;fill:none;marker-end:url(#g)}
+  .cellY{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .cellN{fill:#fff;stroke:#c6d2dd;stroke-width:1.8;stroke-dasharray:4 3}
+  .vess{fill:#f7dedc;stroke:#b3261e;stroke-width:2}
+ </style>
+ <defs>
+  <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker>
+  <marker id="g" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#2e7d32"/></marker>
+ </defs>
+
+ <text class="th" x="20" y="28">A  Neural: the target is set by anatomy</text>
+ <line x1="20" y1="38" x2="430" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+ <circle cx="60" cy="110" r="20" fill="#e8eff6" stroke="#003c71" stroke-width="2.2"/>
+ <text class="m" x="46" y="146">neuron</text>
+ <path class="axon" d="M82 110 L250 110"/>
+ <circle class="cellY" cx="282" cy="110" r="22"/>
+ <text class="m" x="268" y="114">target</text>
+ <circle class="cellN" cx="282" cy="176" r="22"/>
+ <circle class="cellN" cx="340" cy="140" r="22"/>
+ <text class="s" x="30" y="206">Only the cell the axon reaches responds. Milliseconds, short lived, local.</text>
+
+ <text class="th" x="460" y="28">B  Endocrine: the target is set by the receptor</text>
+ <line x1="460" y1="38" x2="860" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+ <circle cx="500" cy="110" r="20" fill="#fff5d6" stroke="#f2b705" stroke-width="2.2"/>
+ <text class="m" x="474" y="146">gland</text>
+ <rect class="vess" x="522" y="98" width="300" height="24" rx="12"/>
+ <circle cx="560" cy="110" r="4" fill="#b3261e"/><circle cx="610" cy="110" r="4" fill="#b3261e"/>
+ <circle cx="660" cy="110" r="4" fill="#b3261e"/><circle cx="710" cy="110" r="4" fill="#b3261e"/>
+ <circle cx="760" cy="110" r="4" fill="#b3261e"/>
+ <text class="m" x="600" y="92">bloodstream: reaches every cell</text>
+ <circle class="cellY" cx="580" cy="176" r="22"/>
+ <text class="m" x="556" y="180">has R</text>
+ <circle class="cellN" cx="660" cy="176" r="22"/>
+ <text class="m" x="640" y="180">no R</text>
+ <circle class="cellY" cx="740" cy="176" r="22"/>
+ <text class="m" x="716" y="180">has R</text>
+ <path class="ar" d="M580 128 L580 150"/>
+ <path class="ar" d="M740 128 L740 150"/>
+ <text class="s" x="470" y="214">The hormone reaches all three; only those with the receptor respond.</text>
+ <text class="s" x="470" y="232">Seconds to hours, long lasting, whole body.</text>
+
+ <text class="th" x="20" y="272">C  Four criteria side by side</text>
+ <line x1="20" y1="282" x2="860" y2="282" stroke="#c6d2dd" stroke-width="1.5"/>
+ <rect class="bx" x="20" y="296" width="840" height="112" rx="8"/>
+ <text class="tb" x="34" y="320">Criterion</text>
+ <text class="tb" x="300" y="320">Neural</text>
+ <text class="tb" x="580" y="320">Endocrine</text>
+ <line x1="34" y1="328" x2="846" y2="328" stroke="#c6d2dd" stroke-width="1.2"/>
+ <text class="t" x="34" y="348">How the target is specified</text>
+ <text class="t" x="300" y="348">anatomical connection</text>
+ <text class="t" x="580" y="348">presence of a receptor</text>
+ <text class="t" x="34" y="368">Speed</text>
+ <text class="t" x="300" y="368">milliseconds</text>
+ <text class="t" x="580" y="368">seconds to hours</text>
+ <text class="t" x="34" y="388">Duration</text>
+ <text class="t" x="300" y="388">short</text>
+ <text class="t" x="580" y="388">long</text>
+ <text class="t" x="34" y="404">Suited to</text>
+ <text class="t" x="300" y="404">fast local response</text>
+ <text class="t" x="580" y="404">slow sustained whole-body control</text>
+</svg>
