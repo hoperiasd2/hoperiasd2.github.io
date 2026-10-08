@@ -1,4 +1,77 @@
 {
   "lesson_id": "M01-W09-L03",
-  "figures": []
+  "figures": [
+    {
+      "figure_id": "fig-glucose-overview",
+      "lesson_id": "M01-W09-L03",
+      "html_anchor": "#fig-glucose-overview",
+      "caption": "포도당 완전 산화의 네 단계와 세포 내 위치. 탄소는 CO₂로, 전자는 NADH·FADH₂를 거쳐 O₂로 흐르며, ATP 생산이 어느 단계에 몰려 있는지를 보인다.",
+      "asset_path": "assets/fig-glucose-overview.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-glycolysis",
+      "lesson_id": "M01-W09-L03",
+      "html_anchor": "#fig-glycolysis",
+      "caption": "Glycolysis의 열 단계. 투입기에서 ATP 2개를 쓰고 수확기에서 ATP 4개와 NADH 2개를 얻으며, hexokinase·PFK-1·pyruvate kinase 세 지점이 비가역이라는 것을 보인다.",
+      "asset_path": "assets/fig-glycolysis.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-tca",
+      "lesson_id": "M01-W09-L03",
+      "html_anchor": "#fig-tca",
+      "caption": "TCA cycle의 여덟 단계. 탄소 수의 변화(C4 → C6 → C5 → C4), 두 번의 decarboxylation 지점, NADH·FADH₂·GTP가 나오는 단계, 그리고 isocitrate dehydrogenase가 rate-limiting step이라는 것을 보인다.",
+      "asset_path": "assets/fig-tca.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-etc",
+      "lesson_id": "M01-W09-L03",
+      "html_anchor": "#fig-etc",
+      "caption": "Electron transport chain과 chemiosmosis. 복합체 I~IV의 전자 흐름, 복합체 I·III·IV의 양성자 펌프, ubiquinone과 cytochrome c의 이동, 그리고 ATP synthase의 F₀·F₁ 구조와 회전을 보인다.",
+      "asset_path": "assets/fig-etc.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-atp-yield",
+      "lesson_id": "M01-W09-L03",
+      "html_anchor": "#fig-atp-yield",
+      "caption": "포도당 한 분자의 ATP 수지. 각 단계의 산물과 ATP 환산, 두 shuttle에 따른 차이, 그리고 발효와 산소 호흡의 비교를 보인다.",
+      "asset_path": "assets/fig-atp-yield.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-photosynthesis",
+      "lesson_id": "M01-W09-L03",
+      "html_anchor": "#fig-photosynthesis",
+      "caption": "광합성의 명반응과 암반응. Thylakoid 막의 photosystem II와 I, 물 분해에서 나오는 O₂, 양성자 기울기와 ATP synthase, 그리고 stroma의 Calvin cycle에서 rubisco가 CO₂를 고정하는 과정을 보인다.",
+      "asset_path": "assets/fig-photosynthesis.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    }
+  ]
 }

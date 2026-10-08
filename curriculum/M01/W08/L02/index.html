@@ -3,9 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>M01-W08-L02 유전체·단백체와 시스템생물학 [9장]</title>
-<meta name="description" content="유전체·단백체와 시스템생물학 [9장]">
+<title>유전체·단백체와 시스템생물학 · M01-W08-L02</title>
+<meta name="description" content="유전체·단백체와 시스템생물학">
 <link rel="stylesheet" href="../../../../assets/site.css">
+<link rel="stylesheet" href="../../../../assets/lesson.css">
 </head>
 <body>
 
@@ -15,50 +16,116 @@
     <nav>
       <a href="../../../../curriculum/index.html">전체 수업</a>
       <a href="../../../../curriculum/materials.html">자료 내려받기</a>
-      <a href="../../../../curriculum/M07/index.html">실습</a>
       <a href="../../../../archive/index.html">아카이브</a>
     </nav>
   </div>
 </header>
 
-<main class="wrap">
-<nav class="crumb" aria-label="이동 경로"><a href="../../../../index.html">대문</a><span aria-hidden="true">›</span><a href="../../../index.html">전체 수업</a><span aria-hidden="true">›</span><a href="../../index.html">M01</a><span aria-hidden="true">›</span><a href="../index.html">8주차</a><span aria-hidden="true">›</span><span>M01-W08-L02</span></nav>
+<main class="wrap wrap--narrow lesson">
+<nav class="crumb" aria-label="이동 경로"><a href="../../../../index.html">대문</a><span aria-hidden="true">›</span><a href="../../../../curriculum/index.html">전체 수업</a><span aria-hidden="true">›</span><a href="../../index.html">M01</a><span aria-hidden="true">›</span><a href="../index.html">8주차</a><span aria-hidden="true">›</span><span>M01-W08-L02</span></nav>
 
   <section class="hero">
     <p class="eyebrow">M01-W08-L02 · 인체일반생물학과 기초세포생물학</p>
-    <h1>유전체·단백체와 시스템생물학 [9장]</h1>
-    <p class="lede">강의 수업 · 상태 <span class="badge badge--design">설계</span></p>
+    <h1>유전체·단백체와 시스템생물학</h1>
+    <p class="en">Genomes, Proteomics and Systems Biology</p>
   </section>
-
-  
-  <div class="callout">이 수업은 아직 집필 전이다. 제작 기준은
-  <a href="../../../../PROJECT.md">PROJECT.md</a>의 집필 원칙과 산출물 규격을 따른다.</div>
-
+  <p class="dl"><a class="dlbtn" href="slides.pptx">슬라이드 내려받기 (PPTX)</a></p>
   <h2>학습목표</h2>
-  <p>작성 예정. 이 수업이 답하는 질문 6~9개를 먼저 확정한 뒤 측정 가능한 학습목표로 옮긴다.</p>
-
+  <ul><li>Sanger 서열 분석과 대규모 병렬 서열 분석의 원리 차이를 설명하고 각각이 적합한 실험 설계를 고른다.</li><li>사람 유전체의 구성을 단백질 암호화 부위, 반복 서열, 조절 영역으로 나누어 수치와 함께 설명한다.</li><li>비교유전체학이 기능을 추정하는 논리를 설명하고 보존된 비암호 서열의 의미를 해석한다.</li><li>Microarray와 RNA-seq의 측정 원리를 비교하고 전사체 자료에서 결론을 끌어낼 때의 한계를 든다.</li><li>질량분석 기반 단백체 분석의 단계를 설명하고 전사체 자료와 단백체 자료가 어긋나는 이유를 든다.</li><li>단백질 상호작용 지도를 얻는 두 방법의 원리와 각각의 위양성·위음성 경향을 비교한다.</li><li>유전자 조절 네트워크를 node와 edge로 기술하고 scale-free 구조, hub, network motif의 의미를 설명한다.</li></ul>
   <h2>선수지식</h2>
-  <p>작성 예정.</p>
-
-  <h2>본문</h2>
-  <p>작성 예정. 각 절은 하나의 질문에 답하는 단위로 쓰고
-  질문 → 답 → 근거 → 조건과 한계 → 귀결의 순서로 전개한다.</p>
-
+  <ul><li>M01-W06-L02 유전정보의 흐름: 복제·전사·번역 — central dogma, mRNA 가공, codon</li><li>M01-W05-L01 세포의 기원·진화와 세포 연구 방법 — prokaryote와 eukaryote 유전체의 규모 차이, 모델 생물</li><li>M01-W05-L02 생체분자와 막의 구조 — nucleotide와 아미노산의 화학</li></ul>
+  <h2>강의 구성</h2>
+  <ol class="qlist"><li><a href="#s1">1. 유전체 수준의 접근이 등장한 배경</a></li><li><a href="#s2">2. DNA 서열 분석 기술의 발전</a></li><li><a href="#s3">3. 사람 유전체의 구성</a></li><li><a href="#s4">4. 비교유전체학과 서열 보존</a></li><li><a href="#s5">5. 전사체 분석: microarray에서 RNA-seq까지</a></li><li><a href="#s6">6. 단백체 분석: 질량분석과 정량</a></li><li><a href="#s7">7. 단백질 상호작용 지도와 기능 유전체학</a></li><li><a href="#s8">8. 시스템생물학과 네트워크 모델</a></li></ol>
+  <section id="s1">
+  <h2>1. 유전체 수준의 접근이 등장한 배경</h2>
+  <p>20세기 세포생물학의 표준 전략은 한 번에 한 유전자, 한 단백질을 다루는 것이었다. 돌연변이체를 얻고, 책임 유전자를 찾고, 그 산물을 정제해 활성을 재어 경로에 배치했다. 이 전략으로 복제, 전사, 번역의 기본 기구가 밝혀졌다. 그러나 한 유전자씩 보는 접근으로는 답할 수 없는 질문이 남는다. 어떤 세포가 가진 유전자 전체는 몇 개인가, 그중 몇 개가 지금 켜져 있는가, 한 단백질이 몇 개의 상대와 결합하는가, 자극 하나에 반응해 발현이 바뀌는 유전자는 몇 개인가.</p>
+  <p>이 질문들은 <strong>전수 조사(comprehensive inventory)</strong>를 요구한다. 세포가 가진 유전자 전체를 <strong>유전체(genome)</strong>, 그 유전체에서 만들어진 RNA 전체를 <strong>transcriptome</strong>, 단백질 전체를 <strong>proteome</strong>이라 부른다. 접미사 <code>-ome</code>은 "전체"를, <code>-omics</code>는 그 전체를 한꺼번에 측정하는 방법론을 가리킨다.</p>
+  <p>전수 조사가 가능해진 조건은 세 가지였다. 첫째, DNA 서열을 빠르고 싸게 읽는 기술이다. 둘째, 수억 개의 짧은 서열 조각을 원래 순서대로 맞추고 유전체에 대응시키는 계산 능력이다. 셋째, 단백질 혼합물을 분리하지 않고도 구성원을 동정하는 질량분석 기술이다.</p>
+  <p>전수 조사의 결과는 목록이다. 목록만으로는 기전이 나오지 않는다. 사람 유전체 서열이 완성된 뒤에도 "이 유전자가 무엇을 하는가"는 여전히 개별 실험으로 답해야 했다. 유전체 수준의 자료가 하는 일은 <strong>가설의 후보를 좁히는 것</strong>이다. 어떤 유전자가 특정 조건에서만 켜진다면 그 조건과 관련된 기능을 가질 가능성이 높고, 어떤 단백질이 알려진 복합체 구성원과 함께 정제된다면 그 복합체의 새 구성원일 가능성이 높다.</p>
+  <div class="box box--result"><b>핵심 정리</b> <strong>핵심 정리</strong> Omics는 세포 구성원의 전수 목록을 만드는 방법론이다. 목록은 기전을 대체하지 않고, 검증할 가설의 수를 유한하게 줄인다.</div>
+  </section>
+  <section id="s2">
+  <h2>2. DNA 서열 분석 기술의 발전</h2>
+  <p><strong>Sanger의 dideoxy 서열 분석(1977)</strong> 주형 DNA, primer, DNA polymerase, 네 가지 dNTP에 소량의 <strong>dideoxynucleotide(ddNTP)</strong>를 섞는다. ddNTP는 3′ 위치에 hydroxyl기가 없어 다음 nucleotide와 phosphodiester 결합을 만들 수 없으므로, 삽입되는 순간 합성이 멈춘다. 결과는 서로 다른 지점에서 끝난 사슬의 혼합물이고, 길이 순으로 전기영동하면 각 위치의 염기를 읽을 수 있다. 네 종의 ddNTP에 서로 다른 형광색소를 붙이고 모세관 전기영동으로 분리하는 자동화가 1980년대 후반에 이루어졌다. 한 번에 읽는 길이(read length)는 700~900 염기이고 정확도가 높지만, 반응 하나가 서열 하나를 준다는 점이 처리량의 한계였다.</p>
+  <figure class="fig" id="fig-sequencing"><img src="assets/fig-sequencing.svg" alt="Sanger dideoxy 서열 분석과 대규모 병렬 서열 분석의 비교. ddNTP에 의한 사슬 종결과 길이 분리, 그리고 고정된 수억 개 clone을 동시에 한 염기씩 읽는 방식의 차이를 보인다." loading="lazy"><figcaption><b>그림 1</b> Sanger dideoxy 서열 분석과 대규모 병렬 서열 분석의 비교. ddNTP에 의한 사슬 종결과 길이 분리, 그리고 고정된 수억 개 clone을 동시에 한 염기씩 읽는 방식의 차이를 보인다.</figcaption></figure>
+  <p><strong>대규모 병렬 서열 분석(massively parallel sequencing, next-generation sequencing)</strong> 1990년대 말부터 개발된 방식들은 공통된 전략을 쓴다. 유전체를 짧은 조각으로 자르고, 양 끝에 공통 adapter를 붙이고, 각 조각을 평면이나 beads 위에 <strong>고정한 뒤 국소적으로 증폭</strong>해 같은 서열의 집합(cluster)을 만들고, 수억 개의 집합을 <strong>동시에</strong> 한 염기씩 읽는다. 널리 쓰이는 방식은 가역적 종결자를 쓰는 형광 기반 합성 서열 분석으로, read length는 100~300 염기에 머물지만 한 번의 실행에서 수백 Gb의 서열을 생산한다.</p>
+  <p><strong>장쇄 서열 분석(long-read sequencing)</strong> 단일 DNA 분자를 nanopore를 통과시키며 전류 변화를 읽거나, 단일 polymerase의 nucleotide 삽입을 실시간으로 관찰하는 방식이다. Read length가 수십 kb에서 Mb에 이르므로 반복 서열 구간과 구조 변이를 건너뛰지 않고 읽을 수 있다. 사람 유전체에서 반복 서열 때문에 비어 있던 구간(centromere, 긴 분절 중복)이 2022년에 장쇄 서열로 메워져 말단에서 말단까지 이어진 서열이 보고되었다.</p>
+  <div class="tw"><table><thead><tr><th>항목</th><th>Sanger</th><th>대규모 병렬</th><th>장쇄</th></tr></thead><tbody><tr><td>Read length</td><td>700~900 bp</td><td>100~300 bp</td><td>10 kb~1 Mb 이상</td></tr><tr><td>한 실행의 산출량</td><td>수십 kb</td><td>수십~수백 Gb</td><td>수십~수백 Gb</td></tr><tr><td>염기당 오류율</td><td>매우 낮음</td><td>낮음</td><td>방식에 따라 다르며 반복 읽기로 보정</td></tr><tr><td>적합한 용도</td><td>단일 유전자 확인, clone 검증</td><td>재서열 분석, 전사체, 변이 검출</td><td>신규 조립, 구조 변이, 반복 영역</td></tr></tbody></table></div>
+  <p><strong>Human Genome Project</strong> 1990년에 시작해 2001년에 초안, 2003년에 본서열이 발표되었다. 두 전략이 경쟁했다. 공공 컨소시엄은 유전체를 큰 clone으로 나누어 지도를 먼저 만들고 각 clone을 서열 분석하는 <strong>hierarchical shotgun</strong> 방식을, 민간 측은 유전체 전체를 무작위로 잘라 한꺼번에 읽고 계산으로 조립하는 <strong>whole-genome shotgun</strong> 방식을 썼다. 두 자료가 합쳐져 초안이 되었다.</p>
+  <p>서열 조립의 어려움은 반복 서열에서 온다. 같은 서열이 유전체 여러 곳에 있으면 짧은 read가 어느 위치에서 왔는지 결정할 수 없다. 이 문제가 read length가 길수록 완화되는 이유이고, 유전체 조립의 품질을 평가할 때 read length와 반복 서열 분포를 함께 보는 이유다.</p>
+  </section>
+  <section id="s3">
+  <h2>3. 사람 유전체의 구성</h2>
+  <p>사람 반수체 유전체는 약 3.1 Gb다. 가장 먼저 놀라움을 준 결과는 <strong>단백질 암호화 유전자의 수</strong>였다. 서열 완성 이전의 추정은 5만~10만 개였으나, 현재의 추정은 약 19,000~20,000개다. 선충(<em>C. elegans</em>)이 약 20,000개, 초파리가 약 14,000개를 가지므로 유전자 개수만으로는 사람의 복잡성이 설명되지 않는다.</p>
+  <p>더 중요한 수치는 유전체에서 각 요소가 차지하는 비율이다.</p>
+  <div class="tw"><table><thead><tr><th>구성 요소</th><th>유전체 비율(대략)</th><th>설명</th></tr></thead><tbody><tr><td>단백질 암호화 exon</td><td>약 1.5%</td><td>실제로 아미노산 서열로 번역되는 부위</td></tr><tr><td>Intron</td><td>약 25%</td><td>유전자 안에 있으나 번역되지 않는다</td></tr><tr><td>Interspersed 반복 서열</td><td>약 45%</td><td>LINE, SINE, LTR retrotransposon, DNA transposon</td></tr><tr><td>단순 반복·위성 DNA</td><td>약 3%</td><td>microsatellite, centromere와 telomere의 반복</td></tr><tr><td>분절 중복(segmental duplication)</td><td>약 5%</td><td>1 kb 이상의 거의 동일한 중복 구간</td></tr><tr><td>나머지 유전자 간 영역</td><td>약 20~25%</td><td>조절 서열과 기능이 확정되지 않은 부위</td></tr></tbody></table></div>
+  <p>유전자 하나의 평균 길이는 약 27 kb이지만 암호화 서열은 평균 1.3 kb에 불과하다. 즉 사람 유전자는 대부분 intron이다. <em>DMD</em> 유전자는 약 2.2 Mb에 79개의 exon을 담고 있어 암호화 비율이 1% 미만이다.</p>
+  <figure class="fig" id="fig-genome-composition"><img src="assets/fig-genome-composition.svg" alt="사람 유전체의 구성. 전체 3.1 Gb를 암호화 exon, intron, 산재성 반복 서열, 단순 반복, 유전자 간 영역으로 나누고 유전자 하나의 내부 구조를 함께 보인다." loading="lazy"><figcaption><b>그림 2</b> 사람 유전체의 구성. 전체 3.1 Gb를 암호화 exon, intron, 산재성 반복 서열, 단순 반복, 유전자 간 영역으로 나누고 유전자 하나의 내부 구조를 함께 보인다.</figcaption></figure>
+  <p>사람의 복잡성이 유전자 개수에서 오지 않는다면 어디에서 오는가. 세 가지가 제시된다. 첫째, <strong>대체 splicing</strong>이다. 사람 유전자의 90% 이상이 둘 이상의 splicing 산물을 만들어 단백질 종 수는 유전자 수를 크게 넘는다. 둘째, <strong>번역 후 수식</strong>으로 한 단백질이 여러 상태를 갖는다. 셋째, <strong>조절의 복잡성</strong>이다. 사람 유전체의 비암호 영역에는 수십만 개의 enhancer 후보가 있고, 같은 유전자가 조직과 시기에 따라 다른 조합의 조절 서열로 제어된다.</p>
+  <p>ENCODE 사업은 세포주별로 전사 시작점, 전사인자 결합 위치, chromatin 접근성, histone 수식을 측정해 유전체 전체의 기능 표지 지도를 만들었다. 이 자료에서 유전체의 상당 부분이 어떤 세포에서든 전사되거나 단백질에 결합한다는 결과가 나왔는데, 생화학적 활성이 있다는 사실과 선택압을 받는 기능이 있다는 주장은 구별해야 한다. 전사되는 모든 서열이 기능을 갖는다고 결론하지 않는다.</p>
+  </section>
+  <section id="s4">
+  <h2>4. 비교유전체학과 서열 보존</h2>
+  <p>어떤 서열이 중요한지 알려주는 가장 단순한 지표는 <strong>진화적 보존</strong>이다. 기능이 없는 서열의 변이는 선택에 걸리지 않으므로 중립적 속도로 쌓인다. 기능이 있는 서열의 변이는 제거되므로 종 사이에 더 비슷하게 남는다. 따라서 여러 종의 유전체를 정렬해 <strong>기대보다 변이가 적은 구간</strong>을 찾으면 기능 후보가 된다. 이것이 비교유전체학의 기본 논리다.</p>
+  <div class="tw"><table><thead><tr><th>종</th><th>유전체 크기(대략)</th><th>단백질 암호화 유전자 수(대략)</th><th>사람과의 관계</th></tr></thead><tbody><tr><td><em>Escherichia coli</em></td><td>4.6 Mb</td><td>4,300</td><td>핵심 대사와 정보 기구의 보존</td></tr><tr><td><em>Saccharomyces cerevisiae</em></td><td>12 Mb</td><td>6,000</td><td>세포주기, 분비 경로의 상동 유전자</td></tr><tr><td><em>Caenorhabditis elegans</em></td><td>100 Mb</td><td>20,000</td><td>발생과 세포사멸 경로</td></tr><tr><td><em>Drosophila melanogaster</em></td><td>180 Mb</td><td>14,000</td><td>체축 형성, 신호전달</td></tr><tr><td><em>Mus musculus</em></td><td>2.7 Gb</td><td>22,000</td><td>암호화 유전자의 대부분이 1:1 대응</td></tr><tr><td><em>Homo sapiens</em></td><td>3.1 Gb</td><td>19,000~20,000</td><td>—</td></tr></tbody></table></div>
+  <p>표에서 유전체 크기와 유전자 수가 비례하지 않는다는 점을 읽어야 한다. 이 불일치를 <strong>C-value paradox</strong>라 불렀고, 해답은 비암호 영역과 반복 서열의 양이 계통에 따라 크게 다르다는 데 있었다.</p>
+  <p>보존 분석의 결과 중 중요한 것은 <strong>보존된 비암호 서열(conserved non-coding sequence)</strong>이다. 사람과 생쥐 유전체를 정렬하면 강하게 보존된 구간의 상당수가 단백질을 암호화하지 않는다. 이 구간들은 발생 조절 유전자 근처에 몰려 있고, 실험적으로 enhancer 활성을 보이는 경우가 많다. 즉 보존은 암호화 여부와 무관하게 기능의 지표가 된다.</p>
+  <p>사람과 chimpanzee의 암호화 서열은 약 99% 동일하다. 차이가 작다는 사실은 표현형 차이가 단백질 서열보다 <strong>발현 양상의 차이</strong>에서 올 가능성을 시사한다. 이 추론은 비교 전사체 분석과 enhancer 비교로 검증되고 있다.</p>
+  <p>사람 집단 내부의 변이도 비교의 대상이다. 두 사람의 유전체는 약 0.1% 다르고, 대부분은 단일 염기 다형성(single nucleotide polymorphism, SNP)이다. 전장유전체 연관분석(genome-wide association study, GWAS)은 질병군과 대조군에서 SNP 빈도를 비교해 연관 구간을 찾는다. 다만 GWAS가 지목하는 변이의 90% 이상은 비암호 영역에 있어, 어느 유전자의 발현을 어떻게 바꾸는지를 따로 밝혀야 한다.</p>
+  <div class="box box--limit"><b>임상 연계</b> <strong>임상 연계</strong> 임상 유전체 검사는 목적에 따라 범위가 다르다. 암호화 exon만 모아 읽는 <strong>exome sequencing</strong>은 유전체의 약 1.5%를 읽어 단백질 서열을 바꾸는 변이를 찾고, 전장유전체 분석은 조절 영역 변이와 구조 변이까지 본다. 두 방법 모두 검출한 변이의 임상적 의미를 판정하는 단계가 병목이다. 다수의 변이가 의미 불명 변이(variant of uncertain significance)로 분류되며, 판정에는 집단 빈도, 보존 정도, 기능 실험 결과가 함께 쓰인다.</div>
+  </section>
+  <section id="s5">
+  <h2>5. 전사체 분석: microarray에서 RNA-seq까지</h2>
+  <p>유전체는 세포마다 같지만 발현은 세포마다 다르다. 어떤 유전자가 어떤 조건에서 얼마나 전사되는지를 전수 측정하는 것이 전사체 분석이다.</p>
+  <p><strong>DNA microarray</strong> 유리 기판 위의 정해진 위치에 각 유전자에 상보적인 oligonucleotide를 고정한다. 세포에서 추출한 RNA를 형광 표지된 cDNA로 바꾸어 기판에 얹으면 상보적인 위치에 결합하고, 각 지점의 형광 강도가 그 유전자의 상대적 양을 준다. 두 조건의 시료를 다른 색으로 표지해 함께 얹으면 조건 사이의 비를 바로 읽을 수 있다. 한계는 분명하다. <strong>기판에 올려 둔 서열만 측정되므로 미리 알고 있는 유전자만 볼 수 있고</strong>, 교차 결합 때문에 비슷한 서열을 구별하기 어렵고, 신호가 포화되어 측정 범위가 좁다.</p>
+  <p><strong>RNA-seq</strong> RNA를 cDNA로 역전사한 뒤 대규모 병렬 서열 분석으로 읽고, read를 유전체나 transcriptome에 대응시켜 <strong>개수를 센다</strong>. 측정값이 결합 강도가 아니라 read 수이므로 측정 범위가 넓고, 미리 정의된 탐침이 없으므로 새 transcript, splicing 변이, 융합 transcript, 염기 수준의 변이까지 같은 자료에서 볼 수 있다. 현재 전사체 분석의 표준이다.</p>
+  <div class="tw"><table><thead><tr><th>항목</th><th>Microarray</th><th>RNA-seq</th></tr></thead><tbody><tr><td>측정 원리</td><td>hybridization 형광 강도</td><td>read 개수 계수</td></tr><tr><td>미리 알아야 하는 정보</td><td>탐침 서열 필요</td><td>불필요(참조 유전체는 대응에 사용)</td></tr><tr><td>새 transcript 검출</td><td>불가</td><td>가능</td></tr><tr><td>대체 splicing 분석</td><td>제한적</td><td>exon·junction 수준으로 가능</td></tr><tr><td>측정 범위</td><td>좁음(신호 포화)</td><td>넓음</td></tr></tbody></table></div>
+  <p><strong>단일세포 RNA-seq(single-cell RNA-seq)</strong> 조직을 갈아 측정하면 세포 종류별 발현이 평균값에 묻힌다. 세포를 하나씩 미세 물방울에 가두고 세포별 바코드를 붙여 함께 서열 분석하면, 세포 하나하나의 발현 양상을 얻어 조직 안의 세포 유형을 사후적으로 분류할 수 있다. 세포당 검출되는 유전자 수는 전체 발현 유전자보다 적고 발현량이 낮은 transcript가 누락되므로, 개별 세포의 정량보다 세포 집단의 구분과 비교에 쓰인다.</p>
+  <p>전사체 자료를 해석할 때 지켜야 할 제약이 있다. 첫째, mRNA 양은 단백질 양과 비례하지 않는다. 번역 효율과 단백질 반감기가 유전자마다 다르다. 둘째, 수만 개 유전자를 동시에 검정하면 우연한 유의 결과가 다수 나오므로 다중 검정 보정이 필요하다. 셋째, 발현이 함께 변한다는 것은 상관이고 인과가 아니다.</p>
+  <figure class="fig" id="fig-transcriptome"><img src="assets/fig-transcriptome.svg" alt="Microarray와 RNA-seq의 측정 원리 비교. 탐침 hybridization의 형광 강도와 read 대응 후의 개수 계수가 각각 어떤 자료를 주는지를 보인다." loading="lazy"><figcaption><b>그림 3</b> Microarray와 RNA-seq의 측정 원리 비교. 탐침 hybridization의 형광 강도와 read 대응 후의 개수 계수가 각각 어떤 자료를 주는지를 보인다.</figcaption></figure>
+  </section>
+  <section id="s6">
+  <h2>6. 단백체 분석: 질량분석과 정량</h2>
+  <p>단백체 분석의 중심 도구는 <strong>질량분석(mass spectrometry)</strong>이다. 이온화한 분자를 전기장·자기장에서 움직여 질량 대 전하비(m/z)를 재는 장치다. 단백질 혼합물을 다루는 표준 절차는 다음과 같다.</p>
+  <p>1. 단백질 혼합물을 trypsin으로 자른다. Trypsin은 lysine과 arginine의 carboxyl 쪽을 특이적으로 끊어 예측 가능한 peptide 집합을 만든다. 2. Peptide 혼합물을 액체 크로마토그래피로 분리해 질량분석기로 순차 주입한다. 3. 1차 질량분석으로 각 peptide의 m/z를 재고, 선택한 peptide를 충돌로 조각낸 뒤 2차 질량분석으로 조각들의 m/z를 잰다(tandem MS, MS/MS). 4. 조각 질량 양상을 유전체에서 예측한 peptide 목록과 맞추어 어느 단백질에서 온 peptide인지 동정한다.</p>
+  <p>이 절차가 성립하는 전제는 <strong>유전체 서열이 먼저 있다</strong>는 것이다. 유전체에서 예측한 모든 단백질을 trypsin으로 자른 가상 peptide 목록이 검색 대상이 되므로, 유전체 사업이 단백체 분석의 선행 조건이었다.</p>
+  <p>정량에는 표지를 쓴다. 안정 동위원소로 표지한 아미노산을 배지에 넣어 세포가 단백질에 넣게 하거나(SILAC), 소화 후 peptide에 화학 표지를 붙여 여러 시료를 한 번에 분석한다. 같은 peptide의 표지 쌍이 질량 차이로 구별되므로 신호 비가 양의 비를 준다.</p>
+  <p>질량분석은 <strong>번역 후 수식</strong>을 직접 본다는 점에서 전사체 분석이 줄 수 없는 정보를 준다. Phosphorylation은 peptide 질량을 80 Da 늘리므로 어느 잔기가 인산화되었는지를 서열 수준에서 지정할 수 있다. 신호전달 연구에서 자극 전후의 phosphoproteome을 비교하는 실험이 표준이 된 이유다.</p>
+  <figure class="fig" id="fig-proteomics"><img src="assets/fig-proteomics.svg" alt="질량분석 기반 단백체 분석의 흐름. Trypsin 소화, 액체 크로마토그래피 분리, MS1에서의 peptide 질량 측정, MS/MS 조각화와 데이터베이스 검색까지의 단계를 보인다." loading="lazy"><figcaption><b>그림 4</b> 질량분석 기반 단백체 분석의 흐름. Trypsin 소화, 액체 크로마토그래피 분리, MS1에서의 peptide 질량 측정, MS/MS 조각화와 데이터베이스 검색까지의 단계를 보인다.</figcaption></figure>
+  <p>전사체와 단백체는 자주 어긋난다. 같은 세포에서 mRNA 양과 단백질 양의 상관계수는 흔히 0.4~0.6 범위로 보고된다. 원인은 번역 조절, 단백질 분해 속도의 차이, 측정 편향이다. 즉 두 자료는 서로를 대체하지 않는다.</p>
+  <p>단백체 분석에는 전사체 분석에 없는 기술적 한계가 있다. 증폭 수단이 없으므로 양이 적은 단백질은 많은 단백질에 가려진다. 혈장에서는 albumin이 단백질 질량의 절반 이상을 차지해, 농도가 낮은 표지자를 보려면 분획이나 고갈 처리가 필요하다.</p>
+  </section>
+  <section id="s7">
+  <h2>7. 단백질 상호작용 지도와 기능 유전체학</h2>
+  <p>단백질은 대개 복합체로 일한다. 어느 단백질이 어느 단백질과 결합하는지를 전수 조사한 결과를 <strong>interactome</strong>이라 한다. 두 가지 방법이 대규모로 쓰였다.</p>
+  <p><strong>Yeast two-hybrid</strong> 전사인자를 DNA 결합 도메인과 활성화 도메인으로 나누어, 각각을 조사할 두 단백질에 융합한다. 두 단백질이 결합하면 두 도메인이 한 promoter 위에서 가까워져 reporter 유전자가 발현된다. 효모에서 두 유전자를 조합해 대량으로 시험할 수 있고, 약한 상호작용과 일시적 상호작용도 잡아낸다. 다만 융합 단백질이 핵 안에서 비정상적 농도로 만나므로 <strong>생리적으로 만나지 않는 쌍이 양성으로 나오는 위양성</strong>이 생기고, 막단백질처럼 핵으로 가지 못하는 단백질은 측정되지 않는다.</p>
+  <p><strong>친화 정제 질량분석(affinity purification–mass spectrometry)</strong> 관심 단백질에 tag를 붙여 세포에서 발현시키고, tag로 잡아당긴 뒤 함께 붙어 나온 단백질을 질량분석으로 동정한다. 세포 안에서 실제로 형성된 복합체를 그대로 본다는 장점이 있고, 복합체 구성원 전체를 한 번에 준다. 한계는 약하거나 짧게 유지되는 상호작용이 세척 과정에서 떨어진다는 점과, 직접 결합과 같은 복합체 안의 간접 연결을 구별하지 못한다는 점이다.</p>
+  <div class="tw"><table><thead><tr><th>항목</th><th>Yeast two-hybrid</th><th>친화 정제 질량분석</th></tr></thead><tbody><tr><td>측정 대상</td><td>두 단백질의 쌍</td><td>하나의 미끼에 붙은 복합체 전체</td></tr><tr><td>직접 결합 여부</td><td>직접 결합을 보는 경향</td><td>간접 연결 포함</td></tr><tr><td>약한 상호작용</td><td>검출 가능</td><td>세척에서 소실되기 쉽다</td></tr><tr><td>주된 오류</td><td>위양성(비생리적 만남)</td><td>위음성(약한 결합 소실), 비특이 결합</td></tr><tr><td>세포 환경</td><td>효모 핵 안</td><td>원래 세포의 조건</td></tr></tbody></table></div>
+  <p>두 방법의 오류 경향이 반대이므로, 양쪽에서 함께 나온 상호작용은 신뢰도가 높다. 대규모 상호작용 자료를 쓸 때는 <strong>어느 방법으로 얻었는지와 몇 번 독립적으로 관찰되었는지</strong>를 함께 본다.</p>
+  <p>기능을 묻는 전수 조사도 가능하다. 유전자를 하나씩 없애고 표현형을 보는 <strong>대규모 교란 실험</strong>이다. 효모에서는 약 6,000개 유전자의 결손 균주 집합이 만들어졌고, 동물 세포에서는 RNA 간섭에 이어 <strong>CRISPR–Cas9 기반 선별(screen)</strong>이 쓰인다. 유전체 전체를 겨냥하는 guide RNA 라이브러리를 세포 집단에 도입하고, 선택압을 준 뒤 살아남은 세포에서 guide RNA 서열을 세면 어느 유전자가 그 조건에서 필요한지가 나온다. 이 설계는 약물 내성 유전자, 필수 유전자, 특정 경로의 구성원을 체계적으로 찾는 데 쓰인다.</p>
+  </section>
+  <section id="s8">
+  <h2>8. 시스템생물학과 네트워크 모델</h2>
+  <p>구성원 목록과 상호작용 목록이 모이면 <strong>네트워크</strong>로 기술할 수 있다. 단백질이나 유전자를 node로, 상호작용이나 조절 관계를 edge로 둔다. 시스템생물학은 이렇게 기술한 네트워크의 성질에서 개별 구성원을 보아서는 나오지 않는 결론을 끌어내려는 접근이다.</p>
+  <p>관찰된 네트워크의 성질 중 세 가지가 반복적으로 보고되었다.</p>
+  <ul><li><strong>연결 수의 불균등 분포</strong> 대부분의 node는 적은 수의 edge를 갖고 소수의 node가 매우 많은 edge를 갖는다. 이런 분포를 보이는 그래프를 <strong>scale-free network</strong>라 하고, 많이 연결된 node를 <strong>hub</strong>라 한다. 효모에서 hub 유전자는 결손 시 치명적인 비율이 높다.</li><li><strong>견고성(robustness)</strong> 무작위로 node를 제거해도 네트워크의 연결성은 잘 유지되지만, hub를 겨냥해 제거하면 빠르게 붕괴한다. 유전자 하나를 없애도 표현형이 나타나지 않는 경우가 흔한 이유를 이 구조로 설명한다.</li><li><strong>Network motif</strong> 전체 네트워크 안에 무작위 기대보다 자주 나타나는 작은 연결 양상이 있다. 대표적인 것이 <strong>feed-forward loop</strong>로, A가 B와 C를 모두 조절하고 B도 C를 조절하는 세 node 구조다. 부호의 조합에 따라 잡음을 걸러내거나 자극의 지속 시간을 재는 기능을 한다.</li></ul>
+  <figure class="fig" id="fig-network"><img src="assets/fig-network.svg" alt="유전자 조절 네트워크의 구조. Scale-free 분포와 hub, 무작위 제거와 hub 제거에 대한 반응 차이, 그리고 feed-forward loop와 negative feedback의 두 motif를 보인다." loading="lazy"><figcaption><b>그림 5</b> 유전자 조절 네트워크의 구조. Scale-free 분포와 hub, 무작위 제거와 hub 제거에 대한 반응 차이, 그리고 feed-forward loop와 negative feedback의 두 motif를 보인다.</figcaption></figure>
+  <p>네트워크 구조의 의미는 <strong>동역학</strong>으로 넘어갈 때 분명해진다. 음성 feedback은 정상 상태를 안정화하고 반응을 빠르게 하며, 지연이 있는 음성 feedback은 진동을 만든다. 양성 feedback은 두 개의 안정 상태를 만들어 가역적 자극에 비가역적으로 반응하게 한다. 세포주기의 비가역적 전이와 세포 운명 결정에서 이 구조가 반복해 나타난다.</p>
+  <p>시스템생물학의 방법론은 측정–모형–예측–재측정의 순환이다. 전사체와 단백체 자료로 네트워크를 세우고, 미분방정식이나 논리 모형으로 동역학을 기술하고, 모형이 예측하는 교란 결과를 실험으로 확인해 모형을 고친다. 모형이 유용한지를 판정하는 기준은 자료를 잘 재현하는지가 아니라 <strong>측정하지 않은 조건의 결과를 맞히는지</strong>다.</p>
+  <p>한계도 분명하다. 대규모 자료는 측정 방법에 따른 편향을 담고 있고, 상호작용 목록은 세포 종류와 조건을 구별하지 않고 합친 것이며, 매개변수를 모르는 모형은 자유도가 커 어떤 결과든 맞출 수 있다. 네트워크 그림에서 바로 기전을 읽지 않고, 지목된 후보를 개별 실험으로 검증하는 단계가 남는다.</p>
+  <div class="box box--limit"><b>임상 연계</b> <strong>임상 연계</strong> 암 유전체 분석은 네트워크 관점이 자료 해석에 직접 쓰이는 예다. 같은 조직의 종양들을 비교하면 변이가 생긴 유전자 목록은 환자마다 크게 다르지만, 변이들을 경로 단위로 묶으면 소수의 경로로 수렴하는 경향이 보인다. 세포주기 관문, DNA 손상 반응, 성장인자 신호전달 경로가 반복해 나타난다. 치료 표적을 유전자 단위가 아니라 경로 단위로 고르는 전략, 그리고 한 경로가 막혔을 때 세포가 쓰는 대체 경로를 함께 막는 병합 요법의 근거가 여기에 있다.</div>
+  <div class="box box--result"><b>핵심 정리</b> <strong>핵심 정리</strong> 유전체는 부품 목록, 전사체와 단백체는 특정 조건의 가동 상태, 상호작용 지도는 배선도다. 네 자료는 어느 하나로 다른 것을 대체할 수 없으며, 각 측정의 원리에서 오는 편향을 알고 함께 읽어야 한다.</div>
+  </section>
   <h2>확인 문항</h2>
-  <p>작성 예정. 5개 이상, 절반 이상은 판단을 묻는 문항으로 한다.</p>
-
+  <ol class="quiz"><li><p class="qq">어떤 연구자가 이전에 보고되지 않은 세균의 유전체를 처음 조립하려 한다. 짧은 read를 주는 대규모 병렬 서열 분석만 쓰는 설계의 문제와 보완 방법을 설명하라.</p><details><summary>해설</summary><p>짧은 read는 반복 서열 구간에서 위치를 결정할 수 없다는 문제가 있다. 같은 서열이 유전체 여러 곳에 있을 때 read의 길이가 반복 단위보다 짧으면 어느 반복에서 온 것인지 구별할 수 없어 조립이 그 지점에서 끊기고, 반복 사이의 배열 순서와 copy 수가 확정되지 않는다. 보완 방법은 read length가 반복 단위를 넘어서는 장쇄 서열 분석을 함께 쓰는 것이다. 장쇄 read로 반복 구간을 가로질러 골격을 만들고 정확도가 높은 짧은 read로 염기 수준의 오류를 보정하는 혼합 전략이 표준으로 쓰인다.</p></details></li><li><p class="qq">사람의 단백질 암호화 유전자 수가 선충과 비슷한 약 20,000개라는 결과가 발표되었을 때 "사람의 복잡성을 설명할 수 없다"는 반응이 나왔다. 이 반응이 전제한 가정이 무엇이고 어떤 점에서 틀렸는지 설명하라.</p><details><summary>해설</summary><p>전제는 표현형의 복잡성이 유전자 개수에 비례한다는 가정, 즉 한 유전자가 한 단백질을 만들고 그 단백질 하나가 기능 하나를 담당한다는 가정이다. 이 가정은 세 지점에서 성립하지 않는다. 첫째, 사람 유전자의 90% 이상이 대체 splicing으로 둘 이상의 단백질 산물을 만들어 단백질 종 수가 유전자 수를 크게 넘는다. 둘째, phosphorylation을 비롯한 번역 후 수식이 같은 단백질에 서로 다른 활성 상태를 부여한다. 셋째, 복잡성의 상당 부분은 조절에 있다. 사람 유전체의 비암호 영역에는 다수의 enhancer가 있어 같은 유전자가 조직과 시기에 따라 다른 조합의 조절 입력으로 제어된다. 따라서 비교해야 하는 양은 유전자 개수가 아니라 가능한 발현 상태의 조합 수다.</p></details></li><li><p class="qq">어떤 자극을 준 뒤 RNA-seq에서 특정 유전자의 mRNA가 4배 늘었으나, 같은 시료의 단백체 분석에서 그 단백질 양은 변하지 않았다. 가능한 설명을 세 가지 들어라.</p><details><summary>해설</summary><p>첫째, 번역 수준의 조절이다. mRNA가 늘었어도 번역 개시가 억제되어 있으면 단백질 합성량은 늘지 않는다. microRNA나 RNA 결합 단백질이 해당 transcript의 번역을 막는 경우가 여기에 해당한다. 둘째, 단백질 분해 속도의 증가다. 합성과 분해가 함께 늘면 정상 상태의 양은 유지된다. 셋째, 시간 척도의 불일치다. 반감기가 긴 단백질은 이미 큰 양이 축적되어 있으므로 합성 속도가 늘어도 측정 시점까지 전체 양의 변화가 작다. 이와 별도로 질량분석의 측정 한계, 즉 해당 단백질의 peptide가 다른 다량 단백질에 가려 정량 오차가 큰 기술적 가능성도 함께 고려한다.</p></details></li><li><p class="qq">Yeast two-hybrid 선별에서 어떤 막 수송체와 핵 전사인자가 상호작용한다는 결과가 나왔다. 이 결과를 어떻게 평가하고 어떤 추가 실험을 설계할지 설명하라.</p><details><summary>해설</summary><p>위양성 가능성을 먼저 의심한다. Yeast two-hybrid는 두 단백질을 효모 핵 안에서 비정상적 농도로 만나게 하므로, 원래 세포에서는 서로 다른 구획에 있어 만날 수 없는 쌍도 양성으로 나올 수 있다. 막 수송체와 핵 전사인자는 정상 상태에서 같은 구획에 있지 않으므로 이 경우에 해당할 가능성이 높다. 또한 단백질을 융합 형태로 만들면서 구조가 바뀌어 노출되지 않던 면이 노출될 수 있다. 추가 실험은 원래 세포 환경에서 복합체를 확인하는 방향으로 설계한다. 내재 단백질을 대상으로 한 공동 침강과 질량분석으로 함께 정제되는지 확인하고, 형광 표지로 두 단백질이 같은 위치에 있는 조건이 존재하는지 본다. 두 단백질이 특정 자극에서만 같은 구획으로 이동한다면 상호작용이 조건 의존적으로 실재할 수 있다.</p></details></li><li><p class="qq">어떤 유전자를 없애도 표현형이 나타나지 않는 경우가 흔하다. 이 관찰을 네트워크 구조로 설명하고, 그래도 그 유전자의 기능을 밝히는 실험 설계를 제시하라.</p><details><summary>해설</summary><p>유전자 조절·상호작용 네트워크는 연결 수가 불균등한 구조여서 대부분의 node는 적은 수의 edge를 갖고 소수의 hub가 많은 edge를 갖는다. 이런 구조에서는 무작위로 선택한 node를 제거해도 전체 연결성이 유지되므로 표현형 변화가 작다. 또한 중복 유전자나 병렬 경로가 같은 기능을 분담하면 한쪽을 없애도 다른 쪽이 보상한다. 따라서 실험은 보상을 제거하거나 네트워크에 부하를 주는 방향으로 설계한다. 중복 유전자 가족의 구성원을 함께 없애는 다중 결손, 다른 유전자의 결손과 조합해 함께 없앨 때만 치명적인 쌍을 찾는 synthetic lethality 선별, 그리고 스트레스·영양 제한·약물 같은 선택압 아래에서 표현형을 보는 설계가 쓰인다. CRISPR 기반 유전체 전체 선별은 이런 조합 검사를 대규모로 수행하는 수단이다.</p></details></li><li><p class="qq">Microarray 자료로는 할 수 없고 RNA-seq 자료로는 할 수 있는 분석을 두 가지 들고 그 이유를 측정 원리로 설명하라.</p><details><summary>해설</summary><p>첫째, 보고되지 않은 새 transcript의 발견이다. Microarray는 기판에 고정한 탐침에 결합하는 양을 재므로 탐침이 없는 서열은 원리적으로 측정되지 않는다. RNA-seq은 시료의 RNA를 그대로 읽은 뒤 대응시키므로 기존 주석에 없는 영역에서 온 read도 나타나며, 융합 transcript나 새 exon도 검출된다. 둘째, 대체 splicing 양상의 정량이다. RNA-seq은 exon 내부뿐 아니라 두 exon을 걸치는 junction read를 세므로 어느 exon 조합이 얼마나 쓰였는지를 구별할 수 있다. Microarray는 탐침 위치에서의 결합 강도만 주고 비슷한 서열끼리 교차 결합하므로 splicing 변이의 분리가 어렵다. 더해서 RNA-seq은 측정값이 개수여서 신호 포화가 없고 측정 범위가 넓으므로 발현량 차이가 큰 유전자들을 같은 실험에서 정량할 수 있다.</p></details></li></ol>
   <h2>참고문헌</h2>
-  <p>작성 예정.</p>
-
-  <nav class="pager"><a href="../../../M01/W08/L01/index.html">← M01-W08-L01 번역 후 가공, 단백질 접힘과 분해 [8장]</a><a href="../../../M01/W08/L03/index.html">M01-W08-L03 핵과 핵-세포질 수송 [10장] →</a></nav>
-
+  <ol class="ref"><li>Cooper GM, Adams K. <em>The Cell: A Molecular Approach</em>. 9th ed. Oxford University Press; 2022. Chapter 5, Genomics, Proteomics, and Systems Biology.</li><li>Sanger F, Nicklen S, Coulson AR. DNA sequencing with chain-terminating inhibitors. <em>Proc Natl Acad Sci USA</em> 1977;74:5463–5467.</li><li>International Human Genome Sequencing Consortium. Initial sequencing and analysis of the human genome. <em>Nature</em> 2001;409:860–921.</li><li>Venter JC, Adams MD, Myers EW, et al. The sequence of the human genome. <em>Science</em> 2001;291:1304–1351.</li><li>Nurk S, Koren S, Rhie A, et al. The complete sequence of a human genome. <em>Science</em> 2022;376:44–53.</li><li>Wang Z, Gerstein M, Snyder M. RNA-Seq: a revolutionary tool for transcriptomics. <em>Nat Rev Genet</em> 2009;10:57–63.</li><li>Aebersold R, Mann M. Mass-spectrometric exploration of proteome structure and function. <em>Nature</em> 2016;537:347–355.</li><li>Barabási AL, Oltvai ZN. Network biology: understanding the cell's functional organization. <em>Nat Rev Genet</em> 2004;5:101–113.</li><li>Alon U. Network motifs: theory and experimental approaches. <em>Nat Rev Genet</em> 2007;8:450–461.</li></ol>
+  <nav class="pager"><a href="../../../M01/W08/L01/index.html">← M01-W08-L01</a><a href="../../../M01/W08/L03/index.html">M01-W08-L03 →</a></nav>
 </main>
 
 <footer class="foot wrap">
   <span>© 2026 Kim Jintae · Hanyang University</span>
   <a href="https://github.com/hoperiasd2/hoperiasd2.github.io">GitHub 저장소</a>
 </footer>
-
-<script src="../../../../assets/site.js"></script>
 </body>
 </html>

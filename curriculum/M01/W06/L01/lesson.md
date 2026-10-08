@@ -1,265 +1,238 @@
 ---
 lesson_id: M01-W06-L01
-title: Glycolysis·oxidative phosphorylation과 광합성 개요
-en: Glycolysis, Oxidative Phosphorylation and an Overview of Photosynthesis
+title: 재조합 DNA와 분자생물학 실험 기법
+en: Recombinant DNA and Techniques of Molecular Biology
 status: 초안
 version: v0.1
 ---
 
 @obj
-- 포도당의 완전 산화를 네 단계로 나누어 각 단계의 세포 내 위치와 산물을 설명한다.
-- Glycolysis 10단계를 에너지 투입기와 수확기로 나누어 설명하고 알짜 수지를 쓴다.
-- Phosphofructokinase-1이 rate-limiting step인 이유와 allosteric 조절을 설명한다.
-- Pyruvate dehydrogenase 복합체와 TCA cycle의 산물을 수지로 정리한다.
-- Electron transport chain의 네 복합체를 전위 순서로 배열하고 양성자 펌프 지점을 밝힌다.
-- Chemiosmotic 가설과 ATP synthase의 작동 원리를 실험적 근거와 함께 설명한다.
-- 포도당 한 분자의 ATP 수지를 계산하고 shuttle에 따른 차이를 설명한다.
-- 광합성의 명반응과 암반응을 oxidative phosphorylation과 비교해 공통 원리를 밝힌다.
+- 제한효소의 인식 서열과 절단 양식을 설명하고 재조합 DNA가 만들어지는 과정을 쓴다.
+- 벡터의 필수 요소를 들고 plasmid cloning의 전 과정을 순서대로 설명한다.
+- PCR의 세 단계와 온도 조건을 설명하고 primer 설계의 원칙을 적용한다.
+- Sanger 염기서열 분석과 차세대 염기서열 분석의 원리와 처리량 차이를 비교한다.
+- Southern, Northern, Western blot의 표적과 절차를 구분하고 결과를 해석한다.
+- RT-qPCR, RNA-seq, microarray로 유전자 발현을 측정하는 원리를 설명한다.
+- 유전자 도입 방법을 선택 기준과 함께 설명하고 transgenic과 knockout 생물의 차이를 구분한다.
+- CRISPR-Cas9의 작동 원리를 세 요소로 설명하고 knockout과 knock-in의 차이를 밝힌다.
 
 @prereq
-- M01-W05-L03 생체에너지: 자유에너지와 ATP — ΔG, 짝반응, 산화환원 전위, 효소 조절
-- M01-W05-L02 생체분자와 막의 구조 — 막의 투과성, 막단백질, 수송
-- M01-W05-L01 세포의 기원·진화와 세포 연구 방법 — 미토콘드리아의 이중막 구조
+- M01-W06-L02 유전정보의 흐름 — DNA 복제, 전사, 번역, 염기쌍 상보성, reverse transcriptase
+- M01-W05-L01 세포의 기원·진화와 세포 연구 방법 — 세포배양, 모델 생물, 원심분리
+- M01-W05-L02 생체분자와 막의 구조 — nucleic acid와 단백질의 구조
 
-@sec 1. 포도당 산화의 전체 구조
-포도당이 CO₂와 물로 완전히 산화될 때의 전체 반응과 자유에너지는 다음과 같다.
+@sec 1. 재조합 DNA 기술의 기본 개념과 제한효소
+세포 안에는 특정 유전자 한 copy가 수만 개의 다른 유전자에 섞여 있다. 그 하나를 분리해 분석하려면 **증폭**과 **선택적 조작**이 필요하다. 1970년대에 두 가지 도구가 갖추어지면서 이것이 가능해졌다. **제한효소**와 **벡터**다.
 
-C₆H₁₂O₆ + 6 O₂ → 6 CO₂ + 6 H₂O, ΔG°′ = **−2,840 kJ/mol**
+**제한효소(restriction enzyme, restriction endonuclease)**는 세균이 외부에서 들어온 파지 DNA를 끊어 방어하기 위해 갖는 효소다. 세균 자신의 DNA는 같은 서열이 methylation되어 있어 끊기지 않는다. 연구 도구로서의 가치는 **인식 서열이 정해져 있어 같은 DNA를 언제나 같은 자리에서 끊는다**는 점에 있다.
 
-이 에너지를 한 번에 열로 내보내면 세포에는 쓸모가 없다. 세포는 이 산화를 여러 단계로 나누어 에너지를 조금씩 꺼내고, 그 가운데 상당 부분을 ATP와 전자 운반체에 담는다. 네 단계로 나누어 본다.
+인식 서열은 대개 4~8 염기쌍이고 **palindrome**, 즉 두 사슬을 5′→3′로 읽으면 같은 서열이다.
 
-| 단계 | 위치 | 출발 → 도착 | 직접 산물 | 전자 운반체 |
-|---|---|---|---|---|
-| 1. Glycolysis | 세포질 | 포도당(C6) → pyruvate(C3) ×2 | ATP 2 | NADH 2 |
-| 2. Pyruvate oxidation | 미토콘드리아 기질 | pyruvate → acetyl-CoA + CO₂ | — | NADH 2 |
-| 3. TCA cycle | 미토콘드리아 기질 | acetyl-CoA → 2 CO₂ | GTP 2 | NADH 6, FADH₂ 2 |
-| 4. Oxidative phosphorylation | 미토콘드리아 내막 | NADH·FADH₂의 전자 → O₂ | ATP 약 26 | — |
-
-단계 1~3에서 만들어지는 ATP는 적다. 대부분의 에너지는 **NADH와 FADH₂의 전자**에 담기고, 그 전자가 4단계에서 O₂로 흐를 때 ATP가 만들어진다. 즉 포도당 산화는 **탄소를 CO₂로 보내고 전자를 O₂로 보내는 과정**이며, 두 흐름이 서로 다른 곳에서 끝난다.
-
-산소가 없으면 4단계가 멈추고, NADH가 NAD⁺로 재산화되지 않는다. NAD⁺가 없으면 glycolysis도 멈추므로, 혐기 조건에서 세포는 다른 방법으로 NAD⁺를 되돌려야 한다. 그것이 **발효**다.
-
-@fig fig-glucose-overview 포도당 완전 산화의 네 단계와 세포 내 위치. 탄소는 CO₂로, 전자는 NADH·FADH₂를 거쳐 O₂로 흐르며, ATP 생산이 어느 단계에 몰려 있는지를 보인다.
-
-@sec 2. Glycolysis: 열 단계와 알짜 수지
-Glycolysis는 포도당 한 분자를 pyruvate 두 분자로 쪼개는 세포질의 열 단계 경로다. 산소를 쓰지 않고, 모든 생물에 보존되어 있어 가장 오래된 대사 경로로 추정된다. 열 단계를 두 묶음으로 나누면 구조가 보인다.
-
-**에너지 투입기(1~5단계)** ATP를 두 개 쓴다. 목적은 포도당을 쪼갤 수 있는 형태로 바꾸는 것이다.
-
-1. Glucose → glucose-6-phosphate. **Hexokinase**(간은 glucokinase). ATP 소모. 인산기가 붙으면 음전하 때문에 막을 통과하지 못해 세포 안에 갇힌다.
-2. Glucose-6-phosphate ⇌ fructose-6-phosphate. Phosphoglucose isomerase. 6각 고리가 5각 고리로 바뀌어 C1에 인산을 받을 준비가 된다.
-3. Fructose-6-phosphate → **fructose-1,6-bisphosphate**. **Phosphofructokinase-1(PFK-1)**. ATP 소모. **비가역이며 이 경로의 rate-limiting step이다.**
-4. Fructose-1,6-bisphosphate → dihydroxyacetone phosphate + glyceraldehyde-3-phosphate. Aldolase. 분자가 둘로 쪼개진다.
-5. Dihydroxyacetone phosphate ⇌ glyceraldehyde-3-phosphate. Triose phosphate isomerase. 두 조각이 같은 분자가 되어 이후 단계가 하나로 통일된다.
-
-**에너지 수확기(6~10단계)** 조각 하나당 ATP 두 개와 NADH 하나를 얻는다. 조각이 둘이므로 전체로는 ATP 4개, NADH 2개다.
-
-6. Glyceraldehyde-3-phosphate → 1,3-bisphosphoglycerate. **Glyceraldehyde-3-phosphate dehydrogenase**. 산화와 인산화가 동시에 일어난다. NAD⁺가 NADH로 환원되고, 무기인산이 결합해 전이 능력이 큰 화합물(−49.4 kJ/mol)이 만들어진다.
-7. 1,3-Bisphosphoglycerate → 3-phosphoglycerate. Phosphoglycerate kinase. **ATP 생성.** 기질의 인산기를 ADP로 직접 넘기므로 substrate-level phosphorylation이다.
-8. 3-Phosphoglycerate ⇌ 2-phosphoglycerate. Phosphoglycerate mutase.
-9. 2-Phosphoglycerate → **phosphoenolpyruvate**. Enolase. 물이 떨어져 나가 전이 능력이 −61.9 kJ/mol로 매우 큰 화합물이 된다.
-10. Phosphoenolpyruvate → pyruvate. **Pyruvate kinase**. **ATP 생성.** 비가역이다.
-
-알짜 수지는 다음과 같다.
-
-Glucose + 2 NAD⁺ + 2 ADP + 2 Pᵢ → 2 pyruvate + 2 NADH + 2 H⁺ + 2 ATP + 2 H₂O
-
-ATP 네 개가 만들어지고 두 개가 소모되어 **알짜 2개**다. 반응 전체의 ΔG°′는 약 −74 kJ/mol로 포도당이 가진 에너지의 일부만 꺼낸다. 남은 에너지는 pyruvate의 결합에 그대로 남아 있다.
-
-@fig fig-glycolysis Glycolysis의 열 단계. 투입기에서 ATP 2개를 쓰고 수확기에서 ATP 4개와 NADH 2개를 얻으며, hexokinase·PFK-1·pyruvate kinase 세 지점이 비가역이라는 것을 보인다.
-
-**세 지점이 비가역**이다. Hexokinase, PFK-1, pyruvate kinase 반응이다. 나머지 일곱 단계는 평형에 가까워 양방향으로 작동하므로, gluconeogenesis는 이 세 지점만 다른 효소로 우회하면 된다.
-
-@sec 3. Glycolysis의 조절과 pyruvate의 운명
-**PFK-1이 조절의 중심**이다. 비가역이고, 경로에서 처음으로 glycolysis에만 쓰이는 단계이기 때문이다. 조절자는 포도당 농도가 아니라 **세포의 에너지 상태와 탄소 공급 상태**를 반영한다.
-
-| 조절자 | 방향 | 의미 |
-|---|---|---|
-| ATP | 억제 | 에너지가 충분하면 경로를 줄인다 |
-| AMP, ADP | 활성화 | 에너지가 부족하면 경로를 늘린다 |
-| Citrate | 억제 | TCA cycle 중간체가 쌓였으면 유입을 줄인다 |
-| H⁺(낮은 pH) | 억제 | lactate가 쌓여 산성화되면 경로를 멈춘다 |
-| **Fructose-2,6-bisphosphate** | **강력한 활성화** | 간에서 insulin 신호를 전달한다 |
-
-Fructose-2,6-bisphosphate는 경로의 중간체가 아니라 조절 전용 분자다. 한 효소의 두 활성 부위(phosphofructokinase-2와 fructose-2,6-bisphosphatase)가 이 분자를 만들고 없애며, 그 균형이 인산화로 조절된다. Insulin은 이 분자를 늘려 glycolysis를 켜고, glucagon은 줄여 glycolysis를 끄고 gluconeogenesis를 켠다.
-
-Hexokinase와 glucokinase의 차이도 조절의 한 부분이다.
-
-| 항목 | Hexokinase (대부분 조직) | Glucokinase (간, 췌장 β세포) |
-|---|---|---|
-| K_m | 약 0.1 mM | 약 10 mM |
-| 포도당 농도 민감도 | 낮은 농도에서도 포화 | 혈당이 올라갈 때 활성이 올라간다 |
-| Glucose-6-phosphate 억제 | 받는다 | 받지 않는다 |
-| 역할 | 조직 자체의 에너지 확보 | 혈당 완충, 혈당 감지 |
-
-혈당이 정상(약 5 mM)이면 glucokinase는 절반도 포화되지 않지만, 식후 문맥 혈당이 올라가면 활성이 비례해 올라가 간이 포도당을 흡수한다. 즉 **간은 혈당 조절 장치로서 설계되어 있다.**
-
-**Pyruvate의 운명은 세 가지**다. 어느 쪽으로 갈지는 산소 공급과 조직의 종류가 정한다.
-
-- **Acetyl-CoA**: 산소가 있을 때. Pyruvate dehydrogenase 복합체가 미토콘드리아에서 촉매한다.
-- **Lactate**: 산소가 부족할 때. Lactate dehydrogenase가 pyruvate를 환원하면서 NADH를 NAD⁺로 되돌린다. **ATP를 더 만들지는 않고, 다만 NAD⁺를 되돌려 glycolysis가 계속 돌게 한다.** 적혈구는 미토콘드리아가 없어 산소가 있어도 항상 이 경로를 쓴다.
-- **Ethanol과 CO₂**: 효모의 알코올 발효. 사람에게는 없다.
-
-> **임상 연계** 발효의 목적이 NAD⁺ 재생이라는 점이 임상 소견을 설명한다. 조직 저산소에서 lactate가 쌓여 혈중 lactate가 올라가면 **lactic acidosis**가 된다. 정상 혈중 lactate는 0.5~2.2 mmol/L이고 4 mmol/L를 넘으면 중증 패혈증이나 쇼크의 예후 지표로 쓰인다. 반면 종양 세포는 산소가 충분해도 glycolysis를 늘리고 lactate를 내보내는데(Warburg effect), 이것은 ATP 수확이 아니라 생합성용 탄소 골격과 NADPH 공급을 늘리기 위한 것으로 해석된다. ¹⁸F-fluorodeoxyglucose PET 검사는 이렇게 늘어난 포도당 섭취를 영상화한다.
-
-@sec 4. Pyruvate dehydrogenase와 TCA cycle
-Pyruvate는 수송체를 통해 미토콘드리아 기질로 들어가 **pyruvate dehydrogenase 복합체(PDH)**를 만난다. 이 복합체는 세 종류의 효소와 다섯 가지 보조인자(thiamine pyrophosphate, lipoamide, FAD, NAD⁺, coenzyme A)로 이루어진 거대 구조다. 반응은 하나지만 세 가지 변화가 함께 일어난다.
-
-Pyruvate + CoA + NAD⁺ → acetyl-CoA + CO₂ + NADH, ΔG°′ = −33.5 kJ/mol
-
-decarboxylation으로 CO₂가 떨어지고, 남은 두 탄소가 산화되어 NADH가 생기고, 그 acetyl기가 coenzyme A에 thioester로 붙는다. **비가역이다.** 그래서 지방산과 포도당은 acetyl-CoA로 바뀔 수 있지만 acetyl-CoA에서 포도당으로 돌아갈 수 없다.
-
-PDH는 인산화로 조절된다. PDH kinase가 인산화하면 비활성, PDH phosphatase가 탈인산화하면 활성이다. Acetyl-CoA와 NADH가 kinase를 활성화하므로 산물이 쌓이면 경로가 꺼지고, Ca²⁺와 insulin은 phosphatase를 활성화해 경로를 켠다.
-
-**TCA cycle**은 acetyl-CoA의 두 탄소를 CO₂ 두 개로 산화하는 여덟 단계의 순환이다. 핵심 구조는 다음과 같다.
-
-1. Acetyl-CoA(C2)가 oxaloacetate(C4)와 결합해 **citrate**(C6)가 된다. **Citrate synthase**. 비가역이며 유입량을 정한다.
-2. Citrate → isocitrate. Aconitase.
-3. Isocitrate → α-ketoglutarate(C5) + CO₂ + NADH. **Isocitrate dehydrogenase**. 첫 decarboxylation이며 **순환의 rate-limiting step**이다. ADP에 활성화되고 NADH·ATP에 억제된다.
-4. α-Ketoglutarate → succinyl-CoA(C4) + CO₂ + NADH. **α-Ketoglutarate dehydrogenase**. PDH와 같은 구조와 보조인자를 쓴다. 비가역.
-5. Succinyl-CoA → succinate + **GTP**. Succinyl-CoA synthetase. 순환에서 유일한 substrate-level phosphorylation.
-6. Succinate → fumarate + **FADH₂**. **Succinate dehydrogenase**. 이 효소만 내막에 박혀 있고 electron transport chain의 복합체 II와 동일하다.
-7. Fumarate → malate. Fumarase.
-8. Malate → oxaloacetate + NADH. Malate dehydrogenase. 순환이 닫힌다.
-
-Acetyl-CoA 한 분자당 산물은 **CO₂ 2개, NADH 3개, FADH₂ 1개, GTP 1개**다. 포도당 한 분자는 acetyl-CoA 두 개를 내므로 두 배가 된다.
-
-@fig fig-tca TCA cycle의 여덟 단계. 탄소 수의 변화(C4 → C6 → C5 → C4), 두 번의 decarboxylation 지점, NADH·FADH₂·GTP가 나오는 단계, 그리고 isocitrate dehydrogenase가 rate-limiting step이라는 것을 보인다.
-
-TCA cycle은 산화 경로이면서 동시에 **생합성의 출발점**이다. Citrate는 세포질로 나가 지방산과 cholesterol 합성에 쓰이고, α-ketoglutarate와 oxaloacetate는 아미노산으로 전환되며, succinyl-CoA는 heme 합성에 쓰인다. 중간체가 빠져나가면 순환이 멈추므로 보충이 필요하다. 이 보충 반응을 **anaplerotic 반응**이라 하며, pyruvate carboxylase가 pyruvate를 oxaloacetate로 바꾸는 반응이 가장 중요하다.
-
-@sec 5. Electron transport chain의 구성
-NADH와 FADH₂에 담긴 전자는 미토콘드리아 **내막**의 네 복합체를 거쳐 O₂로 전달된다. 배열 순서는 환원 전위가 낮은 쪽에서 높은 쪽이다.
-
-| 복합체 | 이름 | 전자 입력 | 전자 출력 | 양성자 펌프 |
-|---|---|---|---|---|
-| I | NADH dehydrogenase | NADH | ubiquinone | **예** |
-| II | Succinate dehydrogenase | FADH₂(succinate) | ubiquinone | 아니오 |
-| III | Cytochrome bc₁ complex | ubiquinol | cytochrome c | **예** |
-| IV | Cytochrome c oxidase | cytochrome c | O₂ → H₂O | **예** |
-
-두 가지 운반체가 복합체 사이를 잇는다. **Ubiquinone(CoQ)**은 지질에 녹아 내막 안을 움직이며 복합체 I·II에서 III로 전자를 옮긴다. **Cytochrome c**는 막 사이 공간에서 수용성 단백질로 움직이며 III에서 IV로 전자를 하나씩 옮긴다.
-
-복합체 I, III, IV는 전자 전달의 자유에너지로 **양성자를 기질에서 막 사이 공간으로 퍼낸다.** 복합체 II는 펌프 기능이 없다. 그래서 FADH₂의 전자는 복합체 I을 건너뛰어 ubiquinone으로 들어가며, 양성자 펌프 지점을 하나 덜 거친다. **이것이 NADH와 FADH₂의 ATP 수확이 다른 이유다.**
-
-복합체 IV는 전자 네 개와 O₂ 한 분자, H⁺ 네 개로 물 두 분자를 만든다. 산소가 네 전자를 모두 받기 전에 중간 단계에서 떨어져 나오면 superoxide(O₂⁻)가 생기는데, 복합체 IV는 중간 산물을 금속 중심에 붙잡아 이것을 최소화한다. 그래도 일부가 새어 나와 **반응성 산소종(reactive oxygen species, ROS)**이 되고, superoxide dismutase, catalase, glutathione peroxidase가 처리한다.
-
-억제제의 작용 지점을 알면 사슬의 구조를 확인할 수 있다. Rotenone은 복합체 I, antimycin A는 복합체 III, **cyanide와 CO는 복합체 IV**를 차단한다. 복합체 IV가 막히면 그 앞의 모든 운반체가 환원 상태로 쌓이고 전자 흐름이 완전히 멈춘다.
-
-> **임상 연계** Cyanide는 복합체 IV의 heme 철에 결합해 전자 전달을 차단한다. 조직은 혈액에 산소가 충분히 있어도 그 산소를 쓸 수 없으므로 정맥혈 산소포화도가 비정상적으로 높게 유지되고, 세포는 발효에 의존해 lactic acidosis가 빠르게 진행한다. 치료는 두 방향이다. Hydroxocobalamin이 cyanide와 직접 결합하거나, nitrite로 methemoglobin을 만들어 cyanide를 복합체 IV보다 먼저 붙잡는다. 한편 **2,4-dinitrophenol**은 다른 기전으로 독성을 낸다. 양성자를 내막을 통해 직접 통과시켜 기울기를 없애는 uncoupler이므로, 전자 전달은 최대로 돌지만 ATP가 만들어지지 않고 에너지가 모두 열로 나가 치명적 고열이 생긴다. 신생아의 갈색지방에서 UCP1(thermogenin)이 같은 일을 생리적으로 수행해 체온을 유지한다.
-
-@sec 6. Chemiosmosis와 ATP synthase
-전자 전달이 어떻게 ATP 합성과 연결되는가. 1961년 Peter Mitchell의 **chemiosmotic 가설**이 답을 주었다. 전자 전달의 에너지는 고에너지 화학 중간체로 저장되는 것이 아니라, **내막을 가로지르는 양성자의 전기화학적 기울기**로 저장된다.
-
-이 기울기는 두 성분으로 이루어진다. 양성자 농도 차이(pH 차이로 약 0.75 단위, 막 사이 공간이 더 산성)와 전위 차이(약 −160 mV, 기질 쪽이 음성)다. 둘을 합해 **양성자 구동력(proton-motive force)**이라 부르며, 양성자 1 mol당 약 20 kJ에 해당한다.
-
-가설의 핵심 주장은 두 가지다. 첫째, 내막은 양성자에 대해 불투과성이어야 한다. 둘째, 양성자가 되돌아 들어오는 유일한 길이 ATP synthase여야 한다. 실험적 근거가 이 주장을 뒷받침한다.
-
-- 전자 전달이 일어나면 미토콘드리아 외부 매질이 산성화된다.
-- 내막이 손상되어 양성자가 누출되면 전자 전달은 계속되지만 ATP가 만들어지지 않는다.
-- 전자 전달 없이 인공적으로 pH 기울기만 만들어 주어도 ATP가 합성된다.
-- Efraim Racker와 Walther Stoeckenius는 세균의 광구동 양성자 펌프 bacteriorhodopsin과 소의 ATP synthase를 같은 인공 소포에 넣고 빛을 비추어 ATP가 만들어지는 것을 보였다. **전자 전달 사슬이 전혀 없는 계에서 ATP가 만들어졌으므로, 둘을 잇는 것은 양성자 기울기뿐이다.**
-
-**ATP synthase**(복합체 V)는 두 부분으로 이루어진 회전 분자 기계다.
-
-- **F₀**: 내막에 박혀 있고 양성자 통로를 이룬다. 양성자가 통과하면서 c-ring이 회전한다.
-- **F₁**: 기질 쪽으로 돌출한 구형 부분이고 α₃β₃ 구조에 중심축 γ가 꽂혀 있다. c-ring의 회전이 γ를 돌리고, γ의 회전이 세 β 소단위를 차례로 세 가지 구조(ADP·Pᵢ 결합형, ATP 결합형, 빈 형태)로 바꾼다.
-
-구조 변화가 ATP를 만드는 방식을 **binding change mechanism**이라 한다. 주목할 점은 ADP와 Pᵢ를 결합해 ATP를 만드는 화학 반응 자체에 큰 에너지가 들지 않는다는 것이다. 활성 부위에서 물이 배제되어 있으므로 결합 형성은 쉽게 일어난다. **에너지가 실제로 드는 곳은 만들어진 ATP를 활성 부위에서 떼어내는 단계**이고, 그 일을 양성자 흐름에 의한 구조 변화가 한다.
-
-회전 한 바퀴에 양성자 약 10개가 통과하고 ATP 세 분자가 만들어지므로, **ATP 한 분자당 양성자 약 3~4개**가 필요하다. 이 비율이 정수가 아니라는 사실이 ATP 수지가 정수로 딱 떨어지지 않는 이유다.
-
-@fig fig-etc Electron transport chain과 chemiosmosis. 복합체 I~IV의 전자 흐름, 복합체 I·III·IV의 양성자 펌프, ubiquinone과 cytochrome c의 이동, 그리고 ATP synthase의 F₀·F₁ 구조와 회전을 보인다.
-
-@sec 7. 포도당 한 분자의 ATP 수지
-수지를 계산하려면 세 가지를 정해야 한다. NADH와 FADH₂에서 나오는 ATP 수, 세포질 NADH가 미토콘드리아로 들어가는 방식, 그리고 수송 비용이다.
-
-**현재 쓰이는 값**은 NADH 하나당 ATP 2.5개, FADH₂ 하나당 1.5개다. 예전 교재의 3과 2는 양성자/ATP 비를 정수로 가정한 값이고, 실측 비율(ATP 1개당 양성자 약 4개)을 쓰면 소수가 된다.
-
-세포질에서 만들어진 NADH는 내막을 통과하지 못하므로 전자만 shuttle로 옮긴다. 두 방식이 있고 수확이 다르다.
-
-| Shuttle | 작동 조직 | 전자를 넘기는 상대 | 수확 |
+| 효소 | 출처 | 인식 서열 | 절단 양식 |
 |---|---|---|---|
-| Malate-aspartate shuttle | 간, 심장, 신장 | 기질의 NAD⁺ → NADH | 2.5 ATP |
-| Glycerol-3-phosphate shuttle | 골격근, 뇌 | 내막의 FAD → FADH₂ | 1.5 ATP |
+| *Eco*RI | *E. coli* | G↓AATTC | 5′ 돌출(sticky end) |
+| *Bam*HI | *Bacillus amyloliquefaciens* | G↓GATCC | 5′ 돌출 |
+| *Hin*dIII | *Haemophilus influenzae* | A↓AGCTT | 5′ 돌출 |
+| *Pst*I | *Providencia stuartii* | CTGCA↓G | 3′ 돌출 |
+| *Sma*I | *Serratia marcescens* | CCC↓GGG | 돌출 없음(blunt end) |
 
-Malate-aspartate shuttle은 전자를 NADH 수준으로 보존하지만, glycerol-3-phosphate shuttle은 FADH₂ 수준으로 떨어뜨려 복합체 I을 건너뛰게 한다. 그래서 같은 포도당이라도 조직에 따라 ATP 수확이 다르다.
+절단 양식이 재조합의 열쇠다. 두 사슬을 어긋나게 끊으면 짧은 단일사슬 말단이 남는데, 이것을 **sticky end**라 한다. **같은 효소로 자른 서로 다른 두 DNA는 서로 상보적인 sticky end를 가지므로 염기쌍을 이루어 붙을 수 있다.** 붙은 자리를 DNA ligase가 phosphodiester 결합으로 봉하면 원래 자연에 없던 **재조합 DNA**가 완성된다.
 
-| 단계 | 산물 | ATP 환산 | 소계 |
+인식 서열의 길이가 절단 빈도를 정한다. 6 염기쌍 서열은 무작위 DNA에서 평균 4⁶ = 4,096 염기쌍마다 한 번 나타나고, 8 염기쌍 서열은 65,536 염기쌍마다 한 번 나타난다. 그래서 큰 DNA를 다룰 때는 인식 서열이 긴 효소를 쓴다.
+
+@fig fig-restriction 제한효소의 인식 서열과 재조합 DNA의 형성. Palindrome 서열, sticky end와 blunt end의 차이, 같은 효소로 자른 두 DNA가 붙어 ligase로 봉합되는 과정을 보인다.
+
+@sec 2. 벡터와 cloning
+끊어 붙인 DNA를 증폭하려면 숙주 세포 안에서 복제될 수 있어야 한다. 그 운반체가 **벡터(vector)**다. 벡터에는 세 가지가 반드시 있어야 한다.
+
+- **Replication origin**: 숙주 안에서 스스로 복제된다.
+- **Selectable marker**: 벡터가 들어간 세포만 골라낼 수 있게 한다. 보통 항생제 저항성 유전자다.
+- **Cloning site**: 제한효소 인식 서열이 모여 있는 구간(multiple cloning site)으로, 여기에 외래 DNA를 끼워 넣는다.
+
+벡터의 종류는 담을 수 있는 DNA 크기로 나뉜다.
+
+| 벡터 | 수용 크기 | 숙주 | 주된 용도 |
 |---|---|---|---|
-| Glycolysis | ATP 2 (알짜) | 2 | 2 |
-| Glycolysis | NADH 2 (세포질) | 2 × 2.5 또는 2 × 1.5 | 5 또는 3 |
-| Pyruvate → acetyl-CoA | NADH 2 | 2 × 2.5 | 5 |
-| TCA cycle | GTP 2 | 2 | 2 |
-| TCA cycle | NADH 6 | 6 × 2.5 | 15 |
-| TCA cycle | FADH₂ 2 | 2 × 1.5 | 3 |
-| **합계** | | | **32 또는 30** |
+| Plasmid | ~15 kb | *E. coli* | 유전자 하나의 cloning, 발현 |
+| Bacteriophage λ | ~20 kb | *E. coli* | 유전체 library |
+| Cosmid | ~45 kb | *E. coli* | 큰 조각 library |
+| Bacterial artificial chromosome(BAC) | ~300 kb | *E. coli* | 유전체 지도, 서열 분석 |
+| Yeast artificial chromosome(YAC) | ~1,000 kb | 효모 | 매우 큰 영역 |
 
-효율을 계산해 본다. ATP 30개를 만들면 30 × 30.5 = 약 915 kJ/mol이고, 포도당 산화의 ΔG°′가 2,840 kJ/mol이므로 약 32%다. 나머지는 열로 나간다. 세포 내 실제 농도를 반영하면 ATP 합성의 ΔG는 −50 kJ/mol 부근이어서 효율은 더 높게 계산된다.
+**Plasmid cloning**의 전 과정은 다섯 단계다.
 
-**발효와 비교**하면 차이가 분명하다. 발효는 ATP 2개로 끝나고 산소 호흡은 약 30개를 얻어 15배다. 다만 glycolysis는 단계가 적어 **속도가 빠르다.** 그래서 산소 공급이 수요를 못 따라가는 격렬한 운동에서는 근육이 glycolysis에 의존하고 lactate를 내보낸다.
+1. **절단**: 벡터와 삽입할 DNA를 같은 제한효소로 자른다.
+2. **연결(ligation)**: 두 조각을 섞고 DNA ligase를 넣어 봉합한다. 벡터가 자기끼리 다시 붙는 경우가 많아 효율은 낮다.
+3. **형질전환(transformation)**: 연결 산물을 *E. coli*에 넣는다. CaCl₂ 처리와 열충격, 또는 전기천공(electroporation)을 쓴다.
+4. **선택(selection)**: 항생제가 든 배지에 깔아 벡터가 들어간 세포만 자라게 한다.
+5. **확인(screening)**: 벡터는 들어갔지만 삽입물이 없는 것을 걸러낸다. 삽입 지점이 *lacZ* 유전자 안에 있으면 삽입물이 들어간 colony는 X-gal 배지에서 흰색으로, 없는 것은 파란색으로 나타난다.
 
-@fig fig-atp-yield 포도당 한 분자의 ATP 수지. 각 단계의 산물과 ATP 환산, 두 shuttle에 따른 차이, 그리고 발효와 산소 호흡의 비교를 보인다.
+한 colony는 하나의 세포에서 자란 집단이므로 그 안의 plasmid는 모두 같다. 이렇게 단일 분자에서 유래한 동일한 집단을 얻는 것이 **cloning**이고, 이것이 분자생물학의 출발점이 되었다.
 
-@sec 8. 광합성: 명반응과 암반응
-광합성은 빛 에너지를 화학결합 에너지로 바꾸는 과정이다. 전체 반응은 산소 호흡의 역방향으로 쓸 수 있다.
+**유전체 library와 cDNA library**를 구별해야 한다. 유전체 DNA를 잘라 벡터에 넣으면 **genomic library**이고 intron과 조절 서열을 포함한다. mRNA를 reverse transcriptase로 DNA로 바꾸어 넣으면 **cDNA library**이고 intron이 없으며 그 조직에서 발현되는 유전자만 들어 있다. 사람 단백질을 세균에서 발현시킬 때는 세균에 splicing 기구가 없으므로 반드시 cDNA를 써야 한다.
 
-6 CO₂ + 6 H₂O + 빛 에너지 → C₆H₁₂O₆ + 6 O₂
+@fig fig-cloning Plasmid를 이용한 cloning의 전 과정. 절단, 연결, 형질전환, 항생제 선택, colony 확인까지의 단계와 벡터의 세 가지 필수 요소를 보인다.
 
-Chloroplast는 미토콘드리아처럼 이중막을 갖고, 내부에 **thylakoid**라는 막 구조가 겹쳐 있다. Thylakoid 막이 미토콘드리아 내막에 해당하고, 그 바깥의 **stroma**가 기질에 해당한다.
+@sec 3. PCR: 시험관 안의 DNA 증폭
+Cloning은 살아 있는 세포를 거치므로 며칠이 걸린다. 1983년 Kary Mullis가 고안한 **PCR(polymerase chain reaction)**은 세포 없이 몇 시간 안에 특정 구간만 증폭한다.
 
-**명반응(light reaction)**은 thylakoid 막에서 일어난다.
+필요한 것은 다섯 가지다. 주형 DNA, 양쪽 끝을 지정하는 **primer 두 개**, dNTP 네 종, 열에 안정한 **DNA polymerase**(*Thermus aquaticus*의 Taq polymerase), 그리고 Mg²⁺이 든 완충액이다. 한 주기는 세 단계로 이루어진다.
 
-1. **Photosystem II**의 엽록소가 빛을 흡수해 전자가 들뜬다. 들뜬 전자가 떠나면서 생긴 빈자리를 메우기 위해 **물을 분해하고(water splitting) O₂를 내놓는다.** 우리가 숨 쉬는 산소가 모두 이 반응에서 나온다.
-2. 전자가 plastoquinone, cytochrome b₆f 복합체, plastocyanin을 거쳐 흐르면서 **양성자가 stroma에서 thylakoid 내부로 퍼내진다.**
-3. **Photosystem I**에서 다시 빛을 받아 더 높은 에너지로 들뜬 뒤, ferredoxin을 거쳐 NADP⁺를 환원해 **NADPH**를 만든다.
-4. Thylakoid 내부에 모인 양성자가 ATP synthase를 통해 stroma로 돌아가며 **ATP**를 만든다. 이것을 photophosphorylation이라 한다.
+1. **변성(denaturation)**, 94~96°C, 15~30초. 두 사슬이 분리된다.
+2. **결합(annealing)**, 50~65°C, 15~60초. primer가 주형의 상보적 부위에 결합한다. 온도는 primer의 melting temperature에서 약 5°C 낮게 잡는다.
+3. **신장(extension)**, 72°C, 30초~1분. Taq polymerase가 primer의 3′ 말단부터 사슬을 늘린다.
 
-**암반응(Calvin cycle)**은 stroma에서 일어나며 빛을 직접 쓰지 않는다. 명반응이 만든 ATP와 NADPH로 CO₂를 당으로 고정한다. 첫 반응은 **rubisco**(ribulose-1,5-bisphosphate carboxylase/oxygenase)가 CO₂를 ribulose-1,5-bisphosphate(C5)에 붙여 3-phosphoglycerate(C3) 두 분자를 만드는 것이다. 이후 ATP와 NADPH를 써서 환원하고 C5를 재생한다. CO₂ 한 분자를 고정하는 데 ATP 3개와 NADPH 2개가 든다.
+주기마다 DNA 양이 두 배가 되므로 n 주기 뒤에는 2ⁿ배가 된다. 30 주기면 약 10억 배다. 실제로는 후반에 기질과 효소가 고갈되어 증폭이 포화 곡선을 그린다.
 
-@fig fig-photosynthesis 광합성의 명반응과 암반응. Thylakoid 막의 photosystem II와 I, 물 분해에서 나오는 O₂, 양성자 기울기와 ATP synthase, 그리고 stroma의 Calvin cycle에서 rubisco가 CO₂를 고정하는 과정을 보인다.
+**증폭되는 것은 두 primer 사이의 구간뿐**이라는 점이 중요하다. 첫 두 주기에서는 primer 바깥쪽까지 합성되지만, 세 번째 주기부터 양쪽 primer로 경계가 정해진 산물이 기하급수적으로 늘어 전체를 지배한다.
 
-**Oxidative phosphorylation과의 비교**가 이 절의 목적이다. 두 과정은 방향이 반대이지만 원리가 같다.
+Primer 설계의 원칙은 다음과 같다. 길이 18~25 nucleotide, GC 함량 40~60%, 두 primer의 melting temperature 차이 5°C 이내, 3′ 말단에 상보적인 서열이 없어 primer끼리 붙지 않게 하고, 표적 외 서열과 일치하지 않게 한다.
 
-| 항목 | Oxidative phosphorylation | 광합성의 명반응 |
+PCR의 변형이 용도를 넓힌다.
+
+- **RT-PCR**: reverse transcriptase로 RNA를 cDNA로 바꾼 뒤 증폭한다. RNA를 표적으로 할 수 있다.
+- **Real-time PCR(qPCR)**: 주기마다 형광을 측정해 초기 주형 양을 정량한다. 형광이 역치를 넘는 주기 수(C_t)가 작을수록 주형이 많다. 주형 양이 두 배 차이 나면 C_t가 1 주기 차이 난다.
+- **Digital PCR**: 반응을 수만 개의 미세 구획으로 나누어 양성 구획 수를 세어 절대 정량한다.
+
+> **임상 연계** PCR은 진단에 직접 쓰인다. SARS-CoV-2 검사는 바이러스 RNA를 표적으로 하는 RT-qPCR이고, C_t 값이 검출 여부와 대략적인 바이러스 양을 알려준다. 종양의 표적 치료 결정에 쓰이는 *EGFR*, *KRAS*, *BRAF* 변이 검사도 PCR 기반이다. 혈액에 떠다니는 종양 유래 DNA를 digital PCR로 검출하는 liquid biopsy는 조직 생검 없이 변이를 추적한다. 다만 PCR은 극히 적은 오염도 증폭하므로, 음성 대조군과 공간 분리가 필수적이다.
+
+@fig fig-pcr PCR의 세 단계와 지수적 증폭. 변성·결합·신장의 온도 조건, primer가 산물의 경계를 정하는 방식, 주기 수에 따른 2ⁿ 증폭과 후반의 포화를 보인다.
+
+@sec 4. 염기서열 분석: Sanger와 차세대
+**Sanger sequencing(dideoxy 법)**은 사슬 신장을 특정 염기에서 멈추게 해 서열을 읽는다. 원리는 다음과 같다.
+
+반응에 보통의 dNTP와 함께 소량의 **dideoxyNTP(ddNTP)**를 넣는다. ddNTP는 3′ hydroxyl기가 없어 다음 nucleotide가 붙을 수 없으므로, 일단 끼어들면 그 자리에서 사슬이 끝난다. ddNTP가 소량이므로 각 사슬은 서로 다른 위치에서 무작위로 끝나고, 결과적으로 길이가 1 nucleotide씩 다른 조각 집단이 생긴다. 네 종의 ddNTP에 서로 다른 형광을 붙여 두면, 모세관 전기영동으로 길이순으로 흘려보내며 형광을 읽어 서열을 그대로 얻는다.
+
+한 번에 읽는 길이는 700~1,000 염기쌍이고 정확도가 높아 지금도 변이 확인의 표준으로 쓰인다. 그러나 반응 하나에 한 구간만 읽으므로 처리량이 낮다. 사람 유전체 초안 작성(Human Genome Project, 1990~2003)에 13년과 약 27억 달러가 든 이유가 여기에 있다.
+
+**차세대 염기서열 분석(next-generation sequencing, NGS)**은 수억 개의 반응을 동시에 진행해 처리량을 올렸다. 가장 널리 쓰이는 방식의 흐름은 다음과 같다.
+
+1. **Library 제작**: DNA를 수백 염기쌍으로 조각내고 양쪽에 adapter를 붙인다.
+2. **집락 증폭**: 각 조각을 고체 표면의 한 지점에 고정하고 그 자리에서 PCR로 증폭해 같은 서열의 집락을 만든다.
+3. **합성에 의한 서열 결정(sequencing by synthesis)**: 형광을 붙인 nucleotide를 한 번에 한 개씩 붙이고 영상을 찍어 어느 염기가 들어갔는지 읽는다. 수억 개 지점을 한 장의 영상으로 동시에 읽는다.
+4. **정렬과 조립**: 짧은 read를 참조 유전체에 정렬하거나 서로 겹치는 부분으로 이어 붙인다.
+
+| 항목 | Sanger | 단일 read 짧은 NGS | 장-read NGS |
+|---|---|---|---|
+| Read 길이 | 700~1,000 bp | 100~300 bp | 10~100 kb |
+| 한 번의 산출량 | ~kb | 수백 Gb~Tb | 수십 Gb |
+| 정확도 | 매우 높다 | 높다 | 중간, 반복 측정으로 보완 |
+| 강점 | 단일 구간 확인 | 유전체·전사체 전체 | 반복 서열, 구조 변이 |
+
+NGS가 열어 준 응용은 넓다. 전장유전체 분석(whole genome sequencing), 단백질 암호화 부위만 읽는 exome sequencing, 전사체를 읽는 RNA-seq, DNA-단백질 결합 부위를 찾는 ChIP-seq, 세포 하나씩 읽는 single-cell RNA-seq가 모두 같은 기반 기술 위에 있다.
+
+@fig fig-sequencing Sanger sequencing과 차세대 염기서열 분석. ddNTP에 의한 사슬 종결과 길이별 분리, 그리고 NGS의 library 제작·집락 증폭·합성에 의한 서열 결정 흐름을 비교해 보인다.
+
+@sec 5. Hybridization: Southern, Northern, Western blot
+**Hybridization**은 단일사슬 핵산이 상보적인 서열과 염기쌍을 이루는 성질을 이용해 특정 서열을 찾아내는 방법이다. 표지한 짧은 핵산(**probe**)을 섞어 결합 여부를 본다.
+
+결합의 엄격함은 온도와 염 농도로 조절한다. 온도를 높이고 염 농도를 낮추면(high stringency) 완전히 일치하는 서열만 결합이 유지되고, 반대 조건(low stringency)에서는 몇 개가 어긋나도 결합이 남는다. 그래서 종이 다른 생물의 상동 유전자를 찾을 때는 낮은 엄격도를 쓴다.
+
+세 blot을 구분한다. 이름은 Southern이 개발자의 성이고, 나머지는 거기에 맞춘 명칭이다.
+
+| 기법 | 표적 | 분리 | 탐지 |
+|---|---|---|---|
+| **Southern blot** | DNA | 제한효소로 자른 뒤 agarose 전기영동 | 표지된 DNA probe와 hybridization |
+| **Northern blot** | RNA | 변성 조건 전기영동 | 표지된 DNA/RNA probe |
+| **Western blot** | 단백질 | SDS-PAGE | 특이 항체(hybridization이 아니다) |
+
+절차의 공통 골격은 같다. 전기영동으로 크기에 따라 분리하고, 겔에서 막(nitrocellulose 또는 nylon)으로 옮기고(blotting), probe나 항체로 표적을 찾아 띠로 본다.
+
+**해석**이 목적을 정한다. Southern blot은 유전자의 존재와 재배열, 결실, 삽입을 본다. 띠의 크기가 예상과 다르면 그 구간에 구조 변화가 있다는 뜻이다. Northern blot은 특정 mRNA의 양과 크기를 보므로 발현 여부와 alternative splicing의 차이를 알 수 있다. Western blot은 단백질의 양과 크기를 보고, 인산화 특이 항체를 쓰면 변형 상태까지 본다.
+
+막에 옮기지 않고 조직이나 세포 안에서 직접 hybridization하는 방법도 있다. **In situ hybridization**은 조직 절편에서 특정 mRNA의 위치를 보여주고, **fluorescence in situ hybridization(FISH)**은 염색체 위의 특정 서열을 형광으로 표시해 결실, 중복, 전좌를 진단한다.
+
+@fig fig-blotting Southern, Northern, Western blot의 비교. 세 기법의 표적 분자, 전기영동과 전사, probe 또는 항체에 의한 탐지 단계를 나란히 보이고 FISH를 함께 제시한다.
+
+@sec 6. 유전자 발현의 측정
+유전자가 있다는 것과 발현된다는 것은 다르다. 발현 측정은 전사 수준과 단백질 수준으로 나뉘며, 각 수준에서 한 유전자를 보는 방법과 전체를 보는 방법이 있다.
+
+| 범위 | 전사 수준 | 단백질 수준 |
 |---|---|---|
-| 장소 | 미토콘드리아 내막 | chloroplast thylakoid 막 |
-| 에너지원 | 유기물의 환원된 전자 | 빛 |
-| 전자공여체 | NADH, FADH₂ | H₂O |
-| 최종 전자수용체 | O₂ (→ H₂O) | NADP⁺ (→ NADPH) |
-| 전자의 자유에너지 | 내려간다 | 빛으로 끌어올린다 |
-| 양성자가 모이는 곳 | 막 사이 공간 | thylakoid 내부 |
-| ATP synthase의 위치 | 내막, F₁이 기질 쪽 | thylakoid 막, 머리가 stroma 쪽 |
-| 공통 원리 | **chemiosmosis** | **chemiosmosis** |
+| 유전자 하나 | Northern blot, RT-qPCR, reporter assay | Western blot, ELISA, immunofluorescence |
+| 전체 | microarray, RNA-seq | 질량분석 기반 proteomics |
 
-두 체계는 모두 **막을 가로지르는 양성자 기울기를 매개로 에너지를 전달하고, 회전하는 ATP synthase로 ATP를 만든다.** 차이는 전자가 어디서 와서 어디로 가는가, 그리고 그 흐름이 자발적인가 빛으로 밀어 올려야 하는가에 있다. Chemiosmosis가 세균의 막, 미토콘드리아, chloroplast에 공통으로 쓰인다는 사실은 이 기전이 LUCA 단계에서 이미 성립했음을 시사한다.
+**RT-qPCR**이 단일 유전자 정량의 표준이다. RNA를 cDNA로 바꾼 뒤 qPCR로 측정하고, 발현량이 변하지 않는 기준 유전자(housekeeping gene)로 보정한다. 상대 정량에는 ΔΔC_t 법을 쓴다. 표적 유전자와 기준 유전자의 C_t 차이를 구하고, 처리군과 대조군 사이의 그 차이를 다시 비교해 2^(−ΔΔC_t)로 배수 변화를 계산한다.
 
-=> **핵심 정리** 포도당 산화의 네 단계는 탄소를 CO₂로, 전자를 O₂로 보내는 두 흐름으로 요약된다. ATP의 대부분은 기질 수준의 인산화가 아니라 양성자 기울기를 매개한 chemiosmosis로 만들어지고, 그 기울기를 만드는 것은 전자가 전위를 따라 내려가며 내놓는 에너지다. 광합성은 같은 chemiosmosis를 쓰면서 전자를 빛으로 끌어올려 방향만 거꾸로 돌린 체계다.
+**Microarray**는 수만 개의 probe를 붙인 칩에 형광 표지한 cDNA를 결합시켜 발현량을 한 번에 측정한다. 이미 알려진 서열만 측정할 수 있다는 한계가 있다.
+
+**RNA-seq**은 전사체를 직접 서열 분석한다. 각 전사체에 정렬된 read 수가 발현량에 비례하므로 정량이 되고, 동시에 알려지지 않은 전사체, splice variant, 융합 전사체, 변이까지 찾아낸다. **Single-cell RNA-seq**은 세포를 하나씩 나누어 측정하므로, 조직 전체를 평균한 값이 아니라 세포 종류별 발현 양상을 보여준다.
+
+**Reporter assay**는 조절 서열의 기능을 직접 검증한다. 관심 promoter나 enhancer 뒤에 luciferase나 GFP 유전자를 붙여 세포에 넣고 신호의 세기를 측정하면, 그 조절 서열이 어떤 조건에서 전사를 켜는지 알 수 있다. 서열의 일부를 바꾸어 넣으면 어느 부위가 필요한지도 가려낼 수 있다.
+
+**단백질 상호작용**을 보는 방법도 함께 알아둔다. **면역침강(immunoprecipitation)**은 항체로 한 단백질을 끌어내려 함께 붙어 나오는 단백질을 확인하고, **yeast two-hybrid**는 두 단백질의 결합이 전사인자를 재구성해 reporter를 켜는 방식으로 상호작용을 검출한다.
+
+@sec 7. 유전자 도입과 유전자 조작 생물
+세포나 생물에 외래 DNA를 넣어 기능을 확인하는 것이 분자생물학 실험의 핵심 전략이다. 방법은 숙주에 따라 다르다.
+
+**배양 세포로의 도입(transfection)**
+
+- **화학적 방법**: calcium phosphate 침전, 양전하 지질(lipofection)로 DNA를 세포막과 융합시킨다.
+- **물리적 방법**: electroporation으로 막에 일시적 구멍을 만들거나, 미세주입(microinjection)으로 직접 찔러 넣는다.
+- **바이러스 벡터**: retrovirus, lentivirus, adenovirus, adeno-associated virus(AAV)를 쓴다. 효율이 높고 나누어지지 않는 세포에도 들어간다. Lentivirus는 유전체에 삽입되어 영구적으로 발현되고, adenovirus와 AAV는 주로 삽입되지 않아 일시적이다.
+
+도입이 **일시적(transient)**인지 **안정적(stable)**인지를 구분한다. 일시적 도입은 수일 안에 사라지고, 안정적 도입은 DNA가 숙주 유전체에 끼어들어 계속 유지된다. 안정적 세포주를 만들 때는 선택 표지(neomycin 저항성 등)로 삽입된 세포만 골라 키운다.
+
+**유전자 조작 생물**은 두 방향으로 만든다.
+
+- **Transgenic 생물**: 외래 유전자를 넣어 **추가로** 발현시킨다. 쥐에서는 수정란의 핵에 DNA를 미세주입한다. 유전자를 과발현시켰을 때 무엇이 일어나는지를 본다.
+- **Knockout 생물**: 특정 유전자를 **망가뜨린다.** 전통적으로는 상동재조합으로 표적 유전자에 선택 표지를 끼워 넣은 배아줄기세포를 만들고, 이를 배아에 주입해 생식계열로 전달시킨다. 유전자가 없을 때 무엇이 일어나지 않는지를 본다.
+
+**조건부 조작(conditional)**이 필요한 경우가 많다. 유전자를 처음부터 없애면 발생 과정에서 죽어 성체의 기능을 볼 수 없기 때문이다. **Cre-loxP 체계**가 이 문제를 해결한다. 표적 유전자의 양쪽에 loxP 서열을 넣어 둔 생물과, 특정 조직이나 특정 시점에만 Cre recombinase를 발현하는 생물을 교배하면, Cre가 발현된 세포에서만 loxP 사이의 DNA가 잘려 나간다. 즉 **조직 특이적, 시기 특이적 knockout**이 된다.
+
+RNA 수준에서 일시적으로 발현을 줄이는 방법도 있다. **RNA interference(RNAi)**는 짧은 이중사슬 RNA(siRNA, shRNA)를 넣어 상보적인 mRNA를 분해하거나 번역을 막는다. 유전체를 바꾸지 않고 빠르게 효과를 보지만, 발현이 완전히 없어지지 않고(knockdown) 표적 외 효과가 생길 수 있다.
+
+@sec 8. CRISPR-Cas9: 유전체 편집의 원리
+CRISPR-Cas는 본래 세균과 archaea가 파지에 대항해 갖는 적응 면역 체계다. 세균은 침입한 파지 DNA의 조각을 자신의 유전체의 **CRISPR(clustered regularly interspaced short palindromic repeats)** 구간에 기록해 두고, 다음에 같은 파지가 들어오면 그 기록을 RNA로 전사해 침입 DNA를 찾아 끊는다.
+
+연구 도구로서의 체계는 세 요소로 단순화되었다.
+
+- **Cas9**: DNA 이중사슬을 끊는 nuclease.
+- **Guide RNA(gRNA)**: 20 nucleotide의 표적 인식 서열을 가진 RNA. 이 서열만 바꾸면 표적을 바꿀 수 있다.
+- **PAM 서열**: 표적 바로 옆에 있어야 하는 짧은 서열(가장 널리 쓰이는 *Streptococcus pyogenes* Cas9에서는 5′-NGG-3′). Cas9이 결합하기 위한 조건이며, 이 때문에 편집 가능한 위치가 제한된다.
+
+작동 순서는 다음과 같다. gRNA가 Cas9과 복합체를 이루고, 복합체가 유전체를 훑으며 PAM 서열을 찾는다. PAM 옆의 서열이 gRNA의 20 nucleotide와 상보적으로 짝지어지면 Cas9이 그 자리에서 **이중사슬 절단**을 만든다.
+
+이후 세포 자신의 수선 경로가 결과를 정한다. **같은 절단에서 두 가지 다른 결과가 나온다.**
+
+- **Non-homologous end joining(NHEJ)**: 끊긴 두 끝을 그냥 이어 붙인다. 이 과정에서 몇 염기의 삽입이나 결실이 생기기 쉽고, 코딩 영역이면 frameshift가 되어 유전자가 망가진다. **Knockout을 만드는 경로다.**
+- **Homology-directed repair(HDR)**: 절단 부위 양쪽과 같은 서열을 가진 주형 DNA를 함께 넣어 주면 그 주형을 본떠 수선한다. 원하는 서열을 정확히 끼워 넣을 수 있다. **Knock-in과 점 변이 교정의 경로다.** 효율은 NHEJ보다 훨씬 낮다.
+
+기존 방법과 비교하면 장점이 분명하다. 상동재조합 기반 knockout은 배아줄기세포에서 수개월이 걸리고 생물마다 체계를 새로 세워야 했다. CRISPR는 **gRNA의 20 nucleotide만 바꾸면 어느 유전자든, 거의 어느 생물에서든** 표적을 바꿀 수 있고, 여러 유전자를 동시에 편집할 수도 있다.
+
+@fig fig-crispr CRISPR-Cas9의 작동 원리. gRNA가 표적 서열을 인식하고 PAM 옆에서 Cas9이 이중사슬 절단을 만들며, NHEJ는 knockout으로 HDR은 knock-in으로 이어지는 두 갈래를 보인다.
+
+**한계와 주의점**도 함께 알아야 한다. gRNA와 몇 염기가 어긋나는 다른 부위도 절단되는 **표적 외 편집(off-target)**이 생길 수 있어, 서열을 설계할 때 유전체 전체에서 유사 부위를 미리 검색한다. 한 개체 안에서 일부 세포만 편집되어 **모자이크**가 되기도 한다. 이중사슬 절단 자체가 큰 결실이나 염색체 재배열을 유발할 수 있다. 이 때문에 nuclease 활성을 없앤 Cas9에 염기 변환 효소를 붙여 절단 없이 한 염기만 바꾸는 **base editing**, 역전사효소를 붙인 **prime editing** 같은 변형이 개발되었다.
+
+> **임상 연계** CRISPR 기반 치료가 임상에 들어왔다. Sickle cell disease와 β-thalassemia에서는 환자의 조혈모세포를 체외에서 꺼내 *BCL11A*의 적혈구 특이 enhancer를 편집한다. 이 enhancer가 망가지면 태아형 hemoglobin(HbF)을 억제하던 신호가 풀려 HbF가 다시 올라가고, 변이된 성인형 β-globin의 영향이 희석된다. **망가진 유전자를 고치는 것이 아니라 대체 유전자의 억제를 푸는 전략**이라는 점이 특징이다. 체내 직접 투여도 시도되는데, transthyretin amyloidosis에서는 지질 나노입자로 간에 Cas9과 gRNA를 보내 *TTR*을 knockout한다. 공통 과제는 표적 외 편집의 장기 안전성과 전달 방법이다.
+
+=> **핵심 정리** 분자생물학의 기법은 모두 몇 가지 분자적 성질 위에 서 있다. 염기쌍 상보성이 primer, probe, guide RNA를 가능하게 하고, 제한효소와 ligase의 서열 특이성이 재조합을 가능하게 하고, DNA polymerase의 방향성과 primer 요구가 PCR과 Sanger sequencing을 가능하게 한다. 새 기법이 나올 때 그 기법이 어떤 성질을 이용하는지를 묻는 것이 기법을 이해하는 가장 빠른 길이다.
 
 @quiz
-Q: 적혈구는 산소가 충분한 혈액 안에서도 pyruvate를 lactate로 바꾼다. 그 이유와, 이 경로로 얻는 것이 무엇인지 설명하라.
-A: 적혈구에는 미토콘드리아가 없어 pyruvate를 acetyl-CoA로 바꾸어 TCA cycle과 oxidative phosphorylation으로 보낼 수 없다. 따라서 ATP를 glycolysis만으로 얻는데, glycolysis의 6단계에서 NAD⁺가 NADH로 환원되므로 NAD⁺를 다시 산화형으로 되돌리지 않으면 경로가 곧 멈춘다. Lactate dehydrogenase가 pyruvate를 lactate로 환원하면서 NADH를 NAD⁺로 되돌리므로 glycolysis가 계속 돌 수 있다. 이 반응 자체는 ATP를 만들지 않으며, 얻는 것은 ATP가 아니라 재생된 NAD⁺다.
+Q: 사람의 insulin을 *E. coli*에서 생산하려 한다. 사람 유전체 DNA를 그대로 벡터에 넣으면 실패하는 이유와 올바른 방법을 설명하라.
+A: 사람의 *INS* 유전자에는 intron이 있고, *E. coli*에는 spliceosome이 없어 intron을 잘라내지 못한다. 유전체 DNA를 그대로 발현시키면 intron까지 번역되어 정상 insulin이 만들어지지 않는다. 올바른 방법은 insulin을 발현하는 조직의 mRNA를 분리해 reverse transcriptase로 cDNA를 만들고, 그 cDNA를 발현 벡터에 넣는 것이다. cDNA는 splicing이 끝난 mRNA를 주형으로 만들어졌으므로 intron이 없고 코딩 서열만 연속되어 있다. 추가로 세균이 인식하는 promoter와 ribosome 결합 서열을 벡터가 제공해야 한다.
 
-Q: 2,4-dinitrophenol을 세포에 가하면 산소 소모는 늘어나는데 ATP 생산은 줄어든다. 이 현상을 chemiosmotic 가설로 설명하라.
-A: 2,4-Dinitrophenol은 양성자를 운반하는 지용성 약산으로, 막 사이 공간에서 양성자를 받아 내막을 그냥 통과한 뒤 기질에서 양성자를 내놓는다. 그 결과 양성자 기울기가 사라진다. Chemiosmotic 가설에서 ATP 합성의 직접적인 구동력은 전자 전달 자체가 아니라 양성자가 ATP synthase를 통해 되돌아 들어오는 흐름이므로, 기울기가 없으면 ATP가 만들어지지 않는다. 동시에 기울기가 전자 전달에 걸던 역압이 사라져 복합체 I·III·IV가 최대 속도로 작동하고 산소 소모가 늘어난다. 전자 전달의 에너지는 모두 열로 나가므로 치명적 고열이 생긴다. 이 화합물이 전자 전달과 ATP 합성이 별개의 과정이며 양성자 기울기로만 연결된다는 증거가 된다.
+Q: PCR에서 첫 두 주기에는 primer 바깥쪽까지 합성되는데도 최종 산물은 두 primer 사이 구간으로 거의 균일하다. 이 결과가 나오는 이유를 설명하라.
+A: 주형이 무엇인지에 따라 산물의 길이가 달라지기 때문이다. 첫 주기에서는 원래의 긴 DNA가 주형이므로 polymerase가 primer에서 시작해 주형이 끝날 때까지 가변적인 길이로 합성한다. 그러나 두 번째 주기 이후에는 이 산물들이 주형이 되고, 이 산물의 한쪽 끝은 primer 서열에서 시작한다. 따라서 반대쪽 primer가 결합해 합성하면 그 끝에서 멈추므로 양쪽이 primer로 정해진 일정한 길이의 산물이 생긴다. 이 산물만이 주기마다 2배로 늘어 지수적으로 증가하고, 길이가 가변적인 초기 산물은 주기마다 산술적으로만 늘어나므로 30주기 뒤에는 전체에서 무시할 수 있는 비율이 된다.
 
-Q: Racker와 Stoeckenius가 bacteriorhodopsin과 소 미토콘드리아의 ATP synthase를 함께 넣은 인공 소포에 빛을 비추어 ATP를 얻은 실험이, chemiosmotic 가설의 결정적 근거가 되는 이유를 설명하라.
-A: 이 계에는 미토콘드리아의 electron transport chain 복합체가 전혀 없고, 서로 다른 생물에서 온 두 단백질만 들어 있다. Bacteriorhodopsin은 빛을 받아 양성자를 소포 안으로 퍼내는 일만 하고, ATP synthase는 양성자가 되돌아 들어오는 흐름으로 ATP를 만드는 일만 한다. 그런데도 빛을 비추면 ATP가 만들어졌다. 즉 두 단백질 사이에 직접적인 접촉이나 고에너지 화학 중간체가 없어도, 양성자 기울기만으로 에너지가 전달된다는 것이 증명되었다. 이는 전자 전달과 ATP 합성을 잇는 매개가 화학 중간체가 아니라 막을 가로지르는 양성자의 전기화학적 기울기라는 Mitchell의 주장을 직접 뒷받침한다.
+Q: Sanger sequencing에서 ddNTP가 사슬 신장을 멈추게 하는 화학적 이유와, ddNTP를 소량만 넣는 이유를 설명하라.
+A: ddNTP는 당의 3′ 위치에 hydroxyl기가 없다. 핵산 사슬이 늘어나려면 앞 nucleotide의 3′ hydroxyl기와 다음 nucleotide의 5′ 인산 사이에 phosphodiester 결합이 생겨야 하는데, 3′ hydroxyl기가 없으면 이 결합을 만들 수 없어 사슬이 그 자리에서 끝난다. ddNTP를 소량만 넣는 이유는 모든 사슬이 같은 위치에서 끝나지 않게 하기 위해서다. ddNTP가 많으면 대부분의 사슬이 시작 부근에서 바로 종결되어 짧은 조각만 생긴다. 소량이면 각 사슬이 서로 다른 지점에서 무작위로 ddNTP를 받아 종결되므로, 길이가 1 nucleotide씩 다른 조각 집단이 생기고 이를 길이순으로 분리해 서열을 읽을 수 있다.
 
-Q: Phosphofructokinase-1이 ATP에 의해 억제되는데 ATP는 이 효소의 기질이기도 하다. 모순이 아닌 이유와 이 조절의 생리적 의미를 설명하라.
-A: ATP가 두 곳에 결합하기 때문이다. 활성 부위에서는 기질로 작용하고, 활성 부위가 아닌 allosteric 부위에서는 억제자로 작용한다. Allosteric 부위의 ATP 친화도가 낮으므로 ATP가 충분히 높을 때만 억제가 나타난다. 생리적 의미는 glycolysis의 속도를 기질 공급이 아니라 세포의 에너지 상태로 결정하는 데 있다. ATP가 많으면 에너지가 충분하므로 경로를 줄이고, AMP와 ADP가 늘면 억제가 풀려 경로가 빨라진다. 같은 논리로 citrate가 억제자인 것은 TCA cycle 중간체가 이미 쌓여 있다는 신호이고, fructose-2,6-bisphosphate가 활성화자인 것은 insulin 신호를 경로로 전달하는 장치다.
+Q: 어떤 유전자의 mRNA 양은 대조군과 같은데 단백질 양은 절반으로 줄었다. 이 결과를 설명할 수 있는 기전과, 확인에 필요한 실험을 제시하라.
+A: mRNA 양이 같다는 것은 전사와 mRNA 안정성에는 변화가 없다는 뜻이므로, 차이는 번역 이후 단계에 있다. 가능한 기전은 번역 효율의 감소(5′ UTR 구조나 번역 개시인자의 변화), 단백질의 접힘 실패로 인한 소포체 품질관리 분해, ubiquitin-proteasome 또는 lysosome 경로에 의한 분해 증가, 그리고 단백질이 분비되거나 다른 구획으로 이동해 측정 분획에서 빠진 경우다. 확인 실험으로는 Western blot으로 단백질 양을 다시 확인하고, proteasome 억제제(MG132)나 lysosome 억제제를 처리해 단백질 양이 회복되는지 보아 분해 경로를 가린다. 단백질 합성 억제제(cycloheximide)를 처리한 뒤 시간에 따른 감소 속도를 비교하면 반감기 변화를 직접 측정할 수 있고, polysome profiling으로 번역 효율을 평가할 수 있다.
 
-Q: 어떤 환자가 cyanide에 노출되었다. 정맥혈 산소포화도가 비정상적으로 높고 혈중 lactate가 급격히 올라갔다. 두 소견을 하나의 기전으로 설명하라.
-A: Cyanide는 복합체 IV(cytochrome c oxidase)의 heme 철에 결합해 전자가 O₂로 전달되는 마지막 단계를 차단한다. 조직은 혈액으로 운반된 산소를 쓸 수 없으므로 산소가 거의 소모되지 않고 정맥으로 되돌아가며, 그 결과 정맥혈 산소포화도가 비정상적으로 높게 유지된다. 동시에 oxidative phosphorylation이 멈추면 NADH가 재산화되지 않아 TCA cycle이 멈추고, 세포는 ATP를 glycolysis와 lactate 발효에만 의존한다. Lactate dehydrogenase가 NAD⁺를 재생하면서 lactate를 대량으로 내놓으므로 혈중 lactate가 급격히 올라가 lactic acidosis가 된다. 두 소견 모두 조직이 산소를 쓸 수 없는 상태, 즉 조직 저산소가 아니라 세포 호흡 차단의 결과다.
+Q: 어떤 유전자를 쥐에서 전신 knockout하자 배아 단계에서 죽어 성체 심장에서의 기능을 볼 수 없었다. 가능한 해결 방법과 그 원리를 설명하라.
+A: 조건부 knockout을 쓴다. Cre-loxP 체계가 표준적인 방법이다. 먼저 표적 유전자의 필수 exon 양쪽에 loxP 서열을 넣은 쥐(floxed mouse)를 만든다. 이 쥐 자체는 유전자가 정상으로 작동하므로 배아 치사를 피한다. 다음으로 심근 특이 promoter(예: *Myh6*)로 Cre recombinase를 발현하는 쥐와 교배한다. Cre가 발현된 심근세포에서만 loxP 사이의 DNA가 재조합으로 제거되므로 심장에 국한된 knockout이 된다. Tamoxifen으로 활성화되는 Cre를 쓰면 성체가 된 뒤 원하는 시점에 유전자를 없앨 수도 있어 발생기의 영향을 배제할 수 있다. 대안으로는 성체에 siRNA나 AAV 벡터를 투여해 일시적으로 발현을 줄이는 방법이 있다.
 
-Q: 광합성의 명반응과 미토콘드리아의 oxidative phosphorylation을 전자의 출발점·도착점과 자유에너지 변화 방향으로 비교하라.
-A: Oxidative phosphorylation에서 전자는 NADH(E°′ −0.32 V)와 FADH₂에서 출발해 O₂(+0.82 V)로 흐른다. 전위가 낮은 쪽에서 높은 쪽으로 가므로 자발적이고 자유에너지가 내려가며, 그 에너지로 양성자를 퍼낸다. 광합성의 명반응에서 전자는 H₂O(+0.82 V)에서 출발해 NADP⁺(−0.32 V)로 간다. 전위가 높은 쪽에서 낮은 쪽으로 가는 비자발적 방향이므로, photosystem II와 I이 빛 에너지로 전자를 두 번 들뜨게 해 에너지를 끌어올린다. 즉 두 과정은 같은 전위 범위를 반대 방향으로 지나며, 전자의 자유에너지가 내려가는지 올라가는지가 결정적 차이다. 공통점은 둘 다 전자 흐름을 막을 가로지르는 양성자 기울기로 바꾸고, 그 기울기로 회전형 ATP synthase를 돌려 ATP를 만든다는 점, 즉 chemiosmosis다.
+Q: CRISPR-Cas9으로 knockout을 만들 때와 특정 점 변이를 정확히 교정할 때, 이후에 일어나는 세포의 수선 과정이 어떻게 다른지 설명하라.
+A: 두 경우 모두 Cas9이 같은 방식으로 이중사슬 절단을 만들지만, 그 뒤에 어떤 수선 경로가 쓰이는지가 다르다. Knockout은 non-homologous end joining을 이용한다. 이 경로는 끊긴 두 끝을 주형 없이 이어 붙이면서 몇 염기의 삽입이나 결실을 남기기 쉽고, 코딩 영역에서 3의 배수가 아닌 변화가 생기면 frameshift가 되어 단백질이 망가진다. 점 변이 교정은 homology-directed repair를 이용한다. 절단 부위 양쪽과 같은 서열을 가진 주형 DNA를 함께 넣어 주면 세포가 그 주형을 본떠 수선하므로 원하는 서열을 정확히 넣을 수 있다. 다만 HDR은 주로 세포주기의 S기와 G2기에만 작동하고 효율이 NHEJ보다 훨씬 낮아, 교정은 knockout보다 어렵다. 이 때문에 절단 없이 한 염기만 바꾸는 base editing이나 prime editing이 개발되었다.
 
 @ref
-- Cooper GM, Adams K. *The Cell: A Molecular Approach*. 9th ed. Oxford University Press; 2022. Chapter 3, Bioenergetics and Metabolism; Chapter 11, Mitochondria, Chloroplasts and Peroxisomes.
-- Alberts B, Heald R, Johnson A, et al. *Molecular Biology of the Cell*. 7th ed. W.W. Norton; 2022. Chapter 14, Energy Conversion: Mitochondria and Chloroplasts.
-- Mitchell P. Coupling of phosphorylation to electron and hydrogen transfer by a chemi-osmotic type of mechanism. *Nature* 1961;191:144–148.
-- Racker E, Stoeckenius W. Reconstitution of purple membrane vesicles catalyzing light-driven proton uptake and adenosine triphosphate formation. *J Biol Chem* 1974;249:662–663.
-- Boyer PD. The ATP synthase: a splendid molecular machine. *Annu Rev Biochem* 1997;66:717–749.
-- Hinkle PC. P/O ratios of mitochondrial oxidative phosphorylation. *Biochim Biophys Acta* 2005;1706:1–11.
-- Vander Heiden MG, Cantley LC, Thompson CB. Understanding the Warburg effect: the metabolic requirements of cell proliferation. *Science* 2009;324:1029–1033.
+- Cooper GM, Adams K. *The Cell: A Molecular Approach*. 9th ed. Oxford University Press; 2022. Chapter 4, Fundamentals of Molecular Biology; Chapter 5, Genomics, Proteomics and Systems Biology.
+- Alberts B, Heald R, Johnson A, et al. *Molecular Biology of the Cell*. 7th ed. W.W. Norton; 2022. Chapter 8, Analyzing Cells, Molecules and Systems.
+- Cohen SN, Chang ACY, Boyer HW, Helling RB. Construction of biologically functional bacterial plasmids in vitro. *Proc Natl Acad Sci USA* 1973;70:3240–3244.
+- Saiki RK, Gelfand DH, Stoffel S, et al. Primer-directed enzymatic amplification of DNA with a thermostable DNA polymerase. *Science* 1988;239:487–491.
+- Sanger F, Nicklen S, Coulson AR. DNA sequencing with chain-terminating inhibitors. *Proc Natl Acad Sci USA* 1977;74:5463–5467.
+- Southern EM. Detection of specific sequences among DNA fragments separated by gel electrophoresis. *J Mol Biol* 1975;98:503–517.
+- Jinek M, Chylinski K, Fonfara I, et al. A programmable dual-RNA-guided DNA endonuclease in adaptive bacterial immunity. *Science* 2012;337:816–821.
+- Frangoul H, Altshuler D, Cappellini MD, et al. CRISPR-Cas9 gene editing for sickle cell disease and β-thalassemia. *N Engl J Med* 2021;384:252–260.
