@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 440" width="880" height="440" role="img"
+ aria-label="The switch in estrogen feedback direction and the LH surge: the boundary between negative and positive feedback by concentration and duration, the LH surge curve produced by positive feedback, the three consequences of the surge, and how progesterone feedback terminates it.">
+ <style>
+  .bx{fill:#fff;stroke:#c6d2dd;stroke-width:1.8}.k{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .t{font:12px sans-serif;fill:#16191d}.tb{font:700 13px sans-serif;fill:#003c71}
+  .th{font:700 15px sans-serif;fill:#003c71}.s{font:11px sans-serif;fill:#4a5159}
+  .m{font:10px monospace;fill:#16191d}
+  .ar{stroke:#003c71;stroke-width:2.2;fill:none;marker-end:url(#a)}
+  .inh{stroke:#b3261e;stroke-width:2.4;fill:none;marker-end:url(#bar)}
+  .pos{stroke:#2e7d32;stroke-width:2.6;fill:none;marker-end:url(#g)}
+  .ax{stroke:#16191d;stroke-width:1.6;fill:none}
+ </style>
+ <defs>
+  <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker>
+  <marker id="g" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#2e7d32"/></marker>
+  <marker id="bar" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M6 0 L6 10" stroke="#b3261e" stroke-width="3"/></marker>
+ </defs>
+
+ <rect class="k" x="20" y="44" width="840" height="36" rx="8"/>
+ <text class="tb" x="34" y="68">The puzzle: estrogen inhibits LH, yet LH surges when estrogen is at its highest.</text>
+
+ <text class="th" x="20" y="116">A  Feedback direction depends on concentration AND duration</text>
+ <line x1="20" y1="126" x2="430" y2="126" stroke="#c6d2dd" stroke-width="1.5"/>
+ <rect class="bx" x="20" y="140" width="400" height="56" rx="7"/>
+ <text class="tb" x="34" y="162">Low or moderate estrogen</text>
+ <text class="t" x="34" y="184">NEGATIVE feedback: GnRH and LH suppressed</text>
+ <path class="inh" d="M220 200 L220 214"/>
+ <rect class="k" x="20" y="220" width="400" height="76" rx="7"/>
+ <text class="tb" x="34" y="242">Very high estrogen, sustained about 36 hours or more</text>
+ <text class="t" x="34" y="264">switches to POSITIVE feedback: more GnRH, and the pituitary</text>
+ <text class="t" x="34" y="282">becomes far more sensitive to it</text>
+ <text class="s" x="20" y="318">Proposed basis: more pituitary GnRH receptors, and a hypothalamic</text>
+ <text class="s" x="20" y="336">kisspeptin population that responds positively to estrogen.</text>
+ <rect class="bx" x="20" y="350" width="400" height="76" rx="8"/>
+ <text class="tb" x="34" y="374">What this is for</text>
+ <text class="t" x="34" y="396">Estrogen level reports how mature the follicle is. Only a fully grown</text>
+ <text class="t" x="34" y="416">follicle pushes it past the threshold, so ovulation waits for a ready egg.</text>
+
+ <text class="th" x="460" y="116">B  The surge and its three effects</text>
+ <line x1="460" y1="126" x2="860" y2="126" stroke="#c6d2dd" stroke-width="1.5"/>
+ <path class="ax" d="M500 240 L500 140 M500 240 L850 240"/>
+ <path d="M506 232 L600 228 L660 222 L690 150 L720 212 L790 232 L844 230" fill="none" stroke="#b3261e" stroke-width="2.6"/>
+ <text class="m" x="640" y="146">LH surge</text>
+ <text class="s" x="560" y="262">day 14</text>
+
+ <rect class="bx" x="460" y="276" width="400" height="90" rx="8"/>
+ <text class="t" x="474" y="300">1  Ovulation: enzymes break down the follicle wall</text>
+ <text class="t" x="474" y="322">2  Meiosis I completed, after decades of arrest</text>
+ <text class="t" x="474" y="344">3  Luteinization: remaining cells become the corpus luteum</text>
+ <path class="inh" d="M660 370 L660 386"/>
+ <rect class="k" x="460" y="392" width="400" height="38" rx="8"/>
+ <text class="t" x="474" y="416">Its progesterone strongly inhibits LH: the surge ends itself.</text>
+</svg>

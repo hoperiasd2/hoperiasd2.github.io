@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 440" width="880" height="440" role="img"
+ aria-label="Male and female reproductive organs matched by their three functional elements of gamete production, transport and exocrine glands, showing the seminiferous tubule and Leydig cells of the testis, the follicle with granulosa and theca cells of the ovary, and the fact that ovary and fallopian tube are not directly joined.">
+ <style>
+  .bx{fill:#fff;stroke:#c6d2dd;stroke-width:1.8}.k{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .t{font:12px sans-serif;fill:#16191d}.tb{font:700 13px sans-serif;fill:#003c71}
+  .th{font:700 15px sans-serif;fill:#003c71}.s{font:11px sans-serif;fill:#4a5159}
+  .m{font:10px monospace;fill:#16191d}
+  .ar{stroke:#003c71;stroke-width:2.2;fill:none;marker-end:url(#a)}
+  .org{fill:#e8eff6;stroke:#003c71;stroke-width:2}
+  .gl{fill:#fff5d6;stroke:#f2b705;stroke-width:2}
+ </style>
+ <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker></defs>
+
+ <text class="th" x="20" y="28">A  Male</text>
+ <line x1="20" y1="38" x2="860" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+
+ <text class="tb" x="20" y="62">Gamete production</text>
+ <ellipse class="org" cx="110" cy="112" rx="70" ry="38"/>
+ <path d="M70 100 q20 -10 40 0 q20 10 40 0 M70 124 q20 -10 40 0 q20 10 40 0" fill="none" stroke="#003c71" stroke-width="2"/>
+ <circle cx="92" cy="112" r="4" fill="#f2b705"/><circle cx="130" cy="112" r="4" fill="#f2b705"/>
+ <text class="m" x="60" y="166">Testis: seminiferous tubules</text>
+ <text class="m" x="60" y="182">(walls) + Leydig cells (dots)</text>
+ <text class="s" x="40" y="204">Kept outside the body: spermatogenesis needs 2 to 3 degrees below core temperature.</text>
+
+ <text class="tb" x="330" y="62">Transport</text>
+ <path class="ar" d="M186 112 L240 112"/>
+ <rect class="org" x="246" y="92" width="110" height="40" rx="10"/>
+ <text class="m" x="256" y="116">Epididymis</text>
+ <path class="ar" d="M362 112 L410 112"/>
+ <rect class="org" x="416" y="92" width="110" height="40" rx="10"/>
+ <text class="m" x="430" y="116">Vas deferens</text>
+ <path class="ar" d="M532 112 L580 112"/>
+ <rect class="org" x="586" y="92" width="90" height="40" rx="10"/>
+ <text class="m" x="604" y="116">Urethra</text>
+ <text class="s" x="246" y="152">sperm gain motility and fertilizing ability here</text>
+
+ <text class="tb" x="700" y="62">Exocrine</text>
+ <rect class="gl" x="700" y="76" width="160" height="30" rx="7"/>
+ <text class="m" x="710" y="96">Seminal vesicle 60%: fructose</text>
+ <rect class="gl" x="700" y="110" width="160" height="30" rx="7"/>
+ <text class="m" x="710" y="130">Prostate 30%: alkaline</text>
+ <rect class="gl" x="700" y="144" width="160" height="30" rx="7"/>
+ <text class="m" x="710" y="164">Bulbourethral: lubricant</text>
+
+ <text class="th" x="20" y="248">B  Female</text>
+ <line x1="20" y1="258" x2="860" y2="258" stroke="#c6d2dd" stroke-width="1.5"/>
+
+ <text class="tb" x="20" y="282">Gamete production</text>
+ <ellipse class="org" cx="100" cy="330" rx="62" ry="40"/>
+ <circle cx="82" cy="320" r="13" fill="#fff5d6" stroke="#f2b705" stroke-width="2"/>
+ <circle cx="82" cy="320" r="5" fill="#b3261e"/>
+ <circle cx="120" cy="344" r="10" fill="#fff5d6" stroke="#f2b705" stroke-width="2"/>
+ <text class="m" x="40" y="388">Ovary: follicles</text>
+ <text class="m" x="40" y="404">granulosa (inner) + theca (outer)</text>
+
+ <text class="tb" x="330" y="282">Transport</text>
+ <path d="M170 318 q30 -16 56 -4" fill="none" stroke="#4a5159" stroke-width="2" stroke-dasharray="4 3"/>
+ <path d="M226 314 q-14 -10 -24 -4 M226 314 q-10 -16 -2 -18" fill="none" stroke="#b3261e" stroke-width="2"/>
+ <text class="m" x="176" y="300">NOT joined</text>
+ <rect class="org" x="236" y="300" width="120" height="40" rx="10"/>
+ <text class="m" x="250" y="324">Fallopian tube</text>
+ <path class="ar" d="M362 320 L410 320"/>
+ <rect class="org" x="416" y="292" width="120" height="56" rx="10"/>
+ <text class="m" x="446" y="316">Uterus</text>
+ <text class="s" x="424" y="336">endometrium, myometrium</text>
+ <path class="ar" d="M542 320 L590 320"/>
+ <rect class="org" x="596" y="300" width="80" height="40" rx="10"/>
+ <text class="m" x="616" y="324">Vagina</text>
+ <text class="s" x="236" y="364">Fimbriae drape over the ovary and catch the released egg,</text>
+ <text class="s" x="236" y="382">but there is no continuous tube: an egg can be lost, and</text>
+ <text class="s" x="236" y="400">infection can spread into the peritoneal cavity.</text>
+
+ <rect class="k" x="700" y="286" width="160" height="78" rx="7"/>
+ <text class="tb" x="712" y="308">Extra functions</text>
+ <text class="t" x="712" y="330">the uterus also houses</text>
+ <text class="t" x="712" y="348">the fetus; the breast</text>
+ <text class="t" x="712" y="362">feeds it after birth</text>
+</svg>

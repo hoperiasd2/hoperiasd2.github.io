@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 440" width="880" height="440" role="img"
+ aria-label="Structure of the reproductive axis and why pulsatile GnRH release is essential: the difference in LH and FSH response between pulsatile and continuous delivery, the matching target cells of LH and FSH in both sexes, estrogen production by theca and granulosa cells working together, and selective feedback by inhibin.">
+ <style>
+  .bx{fill:#fff;stroke:#c6d2dd;stroke-width:1.8}.k{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .t{font:12px sans-serif;fill:#16191d}.tb{font:700 13px sans-serif;fill:#003c71}
+  .th{font:700 15px sans-serif;fill:#003c71}.s{font:11px sans-serif;fill:#4a5159}
+  .m{font:10px monospace;fill:#16191d}
+  .ar{stroke:#003c71;stroke-width:2.2;fill:none;marker-end:url(#a)}
+  .inh{stroke:#b3261e;stroke-width:2.4;fill:none;marker-end:url(#bar)}
+  .ax{stroke:#16191d;stroke-width:1.6;fill:none}
+  .p1{stroke:#2e7d32;stroke-width:2.6;fill:none}
+  .p2{stroke:#b3261e;stroke-width:2.6;fill:none}
+ </style>
+ <defs>
+  <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker>
+  <marker id="bar" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M6 0 L6 10" stroke="#b3261e" stroke-width="3"/></marker>
+ </defs>
+
+ <text class="th" x="20" y="28">A  The axis</text>
+ <line x1="20" y1="38" x2="300" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+ <rect class="bx" x="40" y="54" width="220" height="38" rx="7"/>
+ <text class="m" x="54" y="78">Hypothalamus: GnRH, pulsatile</text>
+ <path class="ar" d="M150 96 L150 124"/>
+ <rect class="bx" x="40" y="130" width="220" height="38" rx="7"/>
+ <text class="m" x="54" y="154">Pituitary: LH and FSH</text>
+ <path class="ar" d="M150 172 L150 200"/>
+ <rect class="k" x="40" y="206" width="220" height="38" rx="7"/>
+ <text class="m" x="54" y="230">Gonad: sex steroid + inhibin</text>
+ <path class="inh" d="M34 224 q-14 -20 -14 -150"/>
+ <text class="s" x="22" y="278">steroid inhibits GnRH and LH;</text>
+ <text class="s" x="22" y="296">inhibin inhibits FSH selectively</text>
+ <text class="s" x="22" y="320">The cell that supports the germ cells</text>
+ <text class="s" x="22" y="338">controls the hormone that supports it.</text>
+
+ <text class="th" x="330" y="28">B  Pulsatile versus continuous GnRH</text>
+ <line x1="330" y1="38" x2="610" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+ <path class="ax" d="M360 200 L360 60 M360 200 L600 200"/>
+ <text class="s" x="330" y="130" transform="rotate(-90 340 130)">LH, FSH</text>
+ <text class="s" x="440" y="226">time (days)</text>
+ <path class="p1" d="M366 120 L400 112 L440 118 L490 114 L540 118 L594 114"/>
+ <text class="m" x="440" y="104">pulsatile, every 1 to 3 h: response maintained</text>
+ <path class="p2" d="M366 120 L392 74 L420 100 L460 152 L510 188 L560 196 L594 198"/>
+ <text class="m" x="460" y="176">continuous: receptors down-regulate,</text>
+ <text class="m" x="460" y="192">response falls to almost nothing</text>
+ <text class="s" x="330" y="252">Giving the stimulating hormone without pause becomes inhibition,</text>
+ <text class="s" x="330" y="270">the most striking example of receptor down-regulation.</text>
+ <rect class="bx" x="330" y="286" width="280" height="80" rx="8"/>
+ <text class="tb" x="344" y="308">Two clinical uses</text>
+ <text class="t" x="344" y="330">pulsatile: restores a failed hypothalamus</text>
+ <text class="t" x="344" y="350">continuous agonist: switches the axis OFF for prostate</text>
+ <text class="t" x="344" y="364">cancer, endometriosis, precocious puberty, IVF protocols</text>
+
+ <text class="th" x="640" y="28">C  LH and FSH targets</text>
+ <line x1="640" y1="38" x2="860" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+ <rect class="bx" x="640" y="54" width="220" height="104" rx="8"/>
+ <text class="tb" x="652" y="76">LH</text>
+ <text class="t" x="652" y="98">male: Leydig, testosterone</text>
+ <text class="t" x="652" y="120">female: theca, androgen</text>
+ <text class="s" x="652" y="146">(the raw material for estrogen)</text>
+ <rect class="bx" x="640" y="168" width="220" height="104" rx="8"/>
+ <text class="tb" x="652" y="190">FSH</text>
+ <text class="t" x="652" y="212">male: Sertoli, sperm support</text>
+ <text class="t" x="652" y="234">female: granulosa, aromatase</text>
+ <text class="s" x="652" y="260">turns androgen into estrogen</text>
+ <rect class="k" x="640" y="286" width="220" height="80" rx="8"/>
+ <text class="tb" x="652" y="308">Two cells, one hormone</text>
+ <text class="t" x="652" y="330">Theca makes androgen under LH;</text>
+ <text class="t" x="652" y="348">granulosa aromatises it under FSH.</text>
+ <text class="s" x="652" y="362">Neither cell can do it alone.</text>
+</svg>

@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 420" width="880" height="420" role="img"
+ aria-label="Three mechanisms by which sexual reproduction generates genetic diversity and the structure of meiosis: the number of combinations from crossing over, independent assortment and random fertilization, and the two divisions after one S phase that give four haploid cells.">
+ <style>
+  .bx{fill:#fff;stroke:#c6d2dd;stroke-width:1.8}.k{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .t{font:12px sans-serif;fill:#16191d}.tb{font:700 13px sans-serif;fill:#003c71}
+  .th{font:700 15px sans-serif;fill:#003c71}.s{font:11px sans-serif;fill:#4a5159}
+  .m{font:11px monospace;fill:#16191d}
+  .ar{stroke:#003c71;stroke-width:2.2;fill:none;marker-end:url(#a)}
+  .cm{stroke:#b3261e;stroke-width:4.5;fill:none;stroke-linecap:round}
+  .cp{stroke:#1a4f8a;stroke-width:4.5;fill:none;stroke-linecap:round}
+  .cell{fill:#fff;stroke:#003c71;stroke-width:1.8}
+ </style>
+ <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker></defs>
+
+ <text class="th" x="20" y="28">A  Three sources of diversity</text>
+ <line x1="20" y1="38" x2="860" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+
+ <rect class="bx" x="20" y="54" width="266" height="130" rx="8"/>
+ <text class="tb" x="34" y="78">1 Crossing over</text>
+ <path class="cm" d="M60 100 v50 M70 100 v50"/>
+ <path class="cp" d="M96 100 v50 M106 100 v50"/>
+ <path d="M70 120 L96 128" stroke="#f2b705" stroke-width="3" fill="none"/>
+ <path d="M70 128 L96 120" stroke="#f2b705" stroke-width="3" fill="none"/>
+ <text class="s" x="130" y="118">homologues exchange</text>
+ <text class="s" x="130" y="136">segments in prophase I</text>
+ <text class="s" x="34" y="174">parental alleles mix within one chromosome</text>
+
+ <rect class="bx" x="298" y="54" width="266" height="130" rx="8"/>
+ <text class="tb" x="312" y="78">2 Independent assortment</text>
+ <path class="cm" d="M330 100 v40"/><path class="cp" d="M346 100 v40"/>
+ <path class="cp" d="M380 100 v40"/><path class="cm" d="M396 100 v40"/>
+ <path class="cm" d="M430 100 v40"/><path class="cp" d="M446 100 v40"/>
+ <text class="s" x="312" y="162">each of 23 pairs separates independently</text>
+ <text class="m" x="312" y="178">2^23 = about 8.4 million</text>
+
+ <rect class="bx" x="576" y="54" width="284" height="130" rx="8"/>
+ <text class="tb" x="590" y="78">3 Random fertilization</text>
+ <circle class="cell" cx="630" cy="124" r="20"/>
+ <text class="m" x="616" y="128">egg</text>
+ <circle cx="700" cy="124" r="6" fill="#b3261e"/>
+ <path d="M706 124 q16 -8 30 0" stroke="#b3261e" stroke-width="2" fill="none"/>
+ <text class="m" x="680" y="156">sperm</text>
+ <text class="s" x="590" y="178">which two meet is random: the combinations multiply again</text>
+ <rect class="k" x="576" y="192" width="284" height="34" rx="7"/>
+ <text class="tb" x="590" y="214">Total: about 70 trillion combinations</text>
+
+ <text class="th" x="20" y="256">B  Why diversity pays, and why haploid gametes are required</text>
+ <line x1="20" y1="266" x2="860" y2="266" stroke="#c6d2dd" stroke-width="1.5"/>
+ <rect class="bx" x="20" y="280" width="420" height="60" rx="8"/>
+ <text class="t" x="34" y="304">Environments change; pathogens change fastest of all. A population with many</text>
+ <text class="t" x="34" y="324">genotypes is likely to contain some that the new environment suits.</text>
+ <rect class="bx" x="452" y="280" width="408" height="60" rx="8"/>
+ <text class="t" x="466" y="304">Somatic cells are 2n (46). If two 2n cells fused, each generation would double</text>
+ <text class="t" x="466" y="324">the chromosome number. Gametes must be n (23), and meiosis makes them.</text>
+
+ <text class="th" x="20" y="376">C  Meiosis: one S phase, two divisions, four haploid cells</text>
+ <line x1="20" y1="386" x2="860" y2="386" stroke="#c6d2dd" stroke-width="1.5"/>
+ <text class="t" x="20" y="410">2n after S  to  meiosis I separates HOMOLOGUES (reduction)  to  two n cells  to  meiosis II separates SISTER CHROMATIDS  to  four n cells</text>
+</svg>

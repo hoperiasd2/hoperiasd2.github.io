@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 450" width="880" height="450" role="img"
+ aria-label="From fertilization to implantation and the hormonal handover that sustains pregnancy: fertilization in the ampulla, the acrosome reaction and the block to polyspermy, cleavage and blastocyst formation, implantation, and the curve showing hCG maintaining the corpus luteum until the placenta takes over progesterone production.">
+ <style>
+  .bx{fill:#fff;stroke:#c6d2dd;stroke-width:1.8}.k{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .t{font:12px sans-serif;fill:#16191d}.tb{font:700 13px sans-serif;fill:#003c71}
+  .th{font:700 15px sans-serif;fill:#003c71}.s{font:11px sans-serif;fill:#4a5159}
+  .m{font:10px monospace;fill:#16191d}
+  .ar{stroke:#003c71;stroke-width:2;fill:none;marker-end:url(#a)}
+  .egg{fill:#fff;stroke:#003c71;stroke-width:2.2}
+  .zp{fill:none;stroke:#f2b705;stroke-width:3}
+  .ax{stroke:#16191d;stroke-width:1.6;fill:none}
+  .hcg{stroke:#b3261e;stroke-width:2.6;fill:none}
+  .pr{stroke:#8a6300;stroke-width:2.6;fill:none}
+  .cl{stroke:#2e7d32;stroke-width:2.2;fill:none;stroke-dasharray:6 4}
+ </style>
+ <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker></defs>
+
+ <text class="th" x="20" y="28">A  Fertilization happens in the ampulla of the tube, not the uterus</text>
+ <line x1="20" y1="38" x2="860" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+
+ <circle class="egg" cx="90" cy="110" r="28"/>
+ <circle class="zp" cx="90" cy="110" r="36"/>
+ <circle cx="40" cy="96" r="5" fill="#b3261e"/>
+ <path d="M45 96 q14 -6 26 0" stroke="#b3261e" stroke-width="2" fill="none"/>
+ <text class="m" x="20" y="166">1 Capacitation: hours in the female tract</text>
+ <text class="m" x="20" y="182">give the sperm its fertilizing ability</text>
+
+ <path class="ar" d="M150 110 L198 110"/>
+ <circle class="egg" cx="260" cy="110" r="28"/>
+ <circle class="zp" cx="260" cy="110" r="36" stroke-dasharray="5 4"/>
+ <text class="m" x="208" y="166">2 Acrosome reaction digests</text>
+ <text class="m" x="208" y="182">the zona pellucida</text>
+
+ <path class="ar" d="M320 110 L368 110"/>
+ <circle class="egg" cx="430" cy="110" r="28"/>
+ <circle class="zp" cx="430" cy="110" r="36" stroke-width="5"/>
+ <circle cx="430" cy="110" r="7" fill="#b3261e"/>
+ <text class="m" x="378" y="166">3 Membranes fuse; Ca2+ surges;</text>
+ <text class="m" x="378" y="182">granules harden the zona:</text>
+ <text class="m" x="378" y="198">block to polyspermy (3n cannot live)</text>
+
+ <path class="ar" d="M490 110 L538 110"/>
+ <circle class="egg" cx="600" cy="110" r="28"/>
+ <circle cx="590" cy="104" r="8" fill="#1a4f8a"/>
+ <circle cx="612" cy="116" r="8" fill="#b3261e"/>
+ <circle cx="600" cy="76" r="6" fill="#f2b705" stroke="#8a6300" stroke-width="1.4"/>
+ <text class="m" x="548" y="166">4 Meiosis II finishes, second</text>
+ <text class="m" x="548" y="182">polar body out, nuclei fuse: zygote 2n</text>
+
+ <path class="ar" d="M660 110 L708 110"/>
+ <circle class="egg" cx="780" cy="110" r="30"/>
+ <circle cx="780" cy="110" r="16" fill="#e8eff6" stroke="#003c71" stroke-width="1.6"/>
+ <text class="m" x="716" y="166">5 Blastocyst: trophoblast outside</text>
+ <text class="m" x="716" y="182">(becomes placenta), inner cell mass</text>
+ <text class="m" x="716" y="198">inside (becomes embryo)</text>
+ <text class="s" x="20" y="222">Cleavage does not increase total size: there is no outside nutrition, so the egg's cytoplasm is simply divided. Implantation on day 6 to 7.</text>
+
+ <text class="th" x="20" y="264">B  Hormonal handover: corpus luteum, then placenta</text>
+ <line x1="20" y1="274" x2="860" y2="274" stroke="#c6d2dd" stroke-width="1.5"/>
+ <path class="ax" d="M90 400 L90 290 M90 400 L600 400"/>
+ <text class="s" x="300" y="426">weeks of gestation</text>
+ <path class="hcg" d="M96 396 L140 330 L190 300 L240 320 L320 366 L420 384 L560 392"/>
+ <text class="m" x="196" y="296">hCG: peaks at 8 to 10 weeks</text>
+ <path class="pr" d="M96 394 L160 380 L260 356 L380 318 L480 300 L580 292"/>
+ <text class="m" x="420" y="314">progesterone: keeps rising</text>
+ <path class="cl" d="M96 392 L180 372 L280 374 L380 392 L480 398"/>
+ <text class="m" x="200" y="366">corpus luteum output</text>
+
+ <rect class="k" x="628" y="290" width="232" height="110" rx="8"/>
+ <text class="tb" x="642" y="314">hCG</text>
+ <text class="t" x="642" y="336">Secreted by trophoblast; it</text>
+ <text class="t" x="642" y="356">resembles LH, binds the LH</text>
+ <text class="t" x="642" y="376">receptor and keeps the corpus</text>
+ <text class="t" x="642" y="394">luteum alive past day 14.</text>
+ <text class="s" x="628" y="426">It falls once the placenta makes enough progesterone itself.</text>
+</svg>

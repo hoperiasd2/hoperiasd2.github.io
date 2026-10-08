@@ -1,4 +1,113 @@
 {
   "lesson_id": "M01-W02-L03",
-  "figures": []
+  "figures": [
+    {
+      "figure_id": "fig-sexual-reproduction",
+      "lesson_id": "M01-W02-L03",
+      "html_anchor": "#fig-sexual-reproduction",
+      "caption": "유성 생식이 유전적 다양성을 만드는 세 기전과 meiosis의 구조. 교차·독립적 분리·무작위 수정이 만드는 조합의 수, 그리고 한 번의 S기 뒤 두 번 분열해 네 개의 반수체 세포를 만드는 과정.",
+      "asset_path": "assets/fig-sexual-reproduction.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-sex-determination",
+      "lesson_id": "M01-W02-L03",
+      "html_anchor": "#fig-sex-determination",
+      "caption": "성 결정의 세 단계와 각 단계의 결정 요인. SRY의 방아쇠 역할, Wolffian·Müllerian duct의 운명을 가르는 testosterone과 AMH의 작용, 그리고 DHT가 외부 생식기를 결정하는 경로를 함께 보인다.",
+      "asset_path": "assets/fig-sex-determination.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-reproductive-anatomy",
+      "lesson_id": "M01-W02-L03",
+      "html_anchor": "#fig-reproductive-anatomy",
+      "caption": "남성과 여성 생식기관의 구조를 생식세포 생산·수송·외분비 요소로 나누어 대응시킨 그림. 고환의 seminiferous tubule과 Leydig cell, 난소의 follicle과 granulosa·theca cell, 그리고 난소와 난관이 직접 연결되지 않은 구조를 함께 보인다.",
+      "asset_path": "assets/fig-reproductive-anatomy.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-spermatogenesis",
+      "lesson_id": "M01-W02-L03",
+      "html_anchor": "#fig-spermatogenesis",
+      "caption": "Spermatogenesis의 단계와 seminiferous tubule 안에서의 위치 변화. Sertoli cell의 혈액–고환 장벽과 FSH 표적 역할, Leydig cell의 LH 표적과 testosterone 생산, 그리고 inhibin에 의한 되먹임을 함께 보인다.",
+      "asset_path": "assets/fig-spermatogenesis.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-oogenesis",
+      "lesson_id": "M01-W02-L03",
+      "html_anchor": "#fig-oogenesis",
+      "caption": "Oogenesis의 시기별 진행과 두 번의 정지 지점. 태아기 mitosis 종료와 oocyte 수의 감소 곡선, prophase I과 metaphase II에서의 정지, 불균등 분열에 의한 극체 형성, 그리고 spermatogenesis와의 비교를 함께 보인다.",
+      "asset_path": "assets/fig-oogenesis.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-reproductive-axis",
+      "lesson_id": "M01-W02-L03",
+      "html_anchor": "#fig-reproductive-axis",
+      "caption": "생식 축의 구조와 GnRH 박동성 분비의 필수성. 박동성과 연속 투여에 따른 LH·FSH 반응의 차이, LH와 FSH의 남녀 표적 세포 대응, theca–granulosa 두 세포 협동에 의한 estrogen 생산, 그리고 inhibin의 선택적 되먹임을 함께 보인다.",
+      "asset_path": "assets/fig-reproductive-axis.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-menstrual-cycle",
+      "lesson_id": "M01-W02-L03",
+      "html_anchor": "#fig-menstrual-cycle",
+      "caption": "월경 주기의 난소 주기와 자궁 주기를 나란히 놓은 그림. 네 호르몬의 농도 곡선, follicle의 성장과 배란 및 황체 형성, 자궁내막의 두께 변화, 그리고 estrogen과 progesterone의 역할 분담을 함께 보인다.",
+      "asset_path": "assets/fig-menstrual-cycle.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-lh-surge",
+      "lesson_id": "M01-W02-L03",
+      "html_anchor": "#fig-lh-surge",
+      "caption": "Estrogen 되먹임 방향의 전환과 LH 급증. 농도와 지속 시간에 따른 음성·양성 되먹임의 경계, 양성 되먹임이 만드는 LH 급증 곡선, 급증이 일으키는 세 가지 결과, 그리고 progesterone의 되먹임이 급증을 종료시키는 과정을 함께 보인다.",
+      "asset_path": "assets/fig-lh-surge.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-fertilization",
+      "lesson_id": "M01-W02-L03",
+      "html_anchor": "#fig-fertilization",
+      "caption": "수정에서 착상까지의 과정과 임신 유지의 호르몬 교대. 난관 ampulla에서의 수정, acrosome 반응과 다수정 차단, cleavage와 blastocyst 형성, 착상, 그리고 hCG가 황체를 유지하다가 태반으로 progesterone 공급이 교대되는 곡선을 함께 보인다.",
+      "asset_path": "assets/fig-fertilization.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    }
+  ]
 }

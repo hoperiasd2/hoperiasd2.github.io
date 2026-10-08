@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 450" width="880" height="450" role="img"
+ aria-label="Timing of oogenesis and its two arrest points: completion of mitosis before birth with the falling oocyte count, arrest at prophase one and at metaphase two, formation of polar bodies by unequal division, and comparison with spermatogenesis.">
+ <style>
+  .bx{fill:#fff;stroke:#c6d2dd;stroke-width:1.8}.k{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .t{font:12px sans-serif;fill:#16191d}.tb{font:700 13px sans-serif;fill:#003c71}
+  .th{font:700 15px sans-serif;fill:#003c71}.s{font:11px sans-serif;fill:#4a5159}
+  .m{font:10px monospace;fill:#16191d}
+  .ar{stroke:#003c71;stroke-width:2;fill:none;marker-end:url(#a)}
+  .stop{stroke:#b3261e;stroke-width:4;fill:none}
+  .ax{stroke:#16191d;stroke-width:1.6;fill:none}
+  .cur{stroke:#b3261e;stroke-width:2.6;fill:none}
+ </style>
+ <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker></defs>
+
+ <text class="th" x="20" y="28">A  Two arrest points, decades apart</text>
+ <line x1="20" y1="38" x2="860" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+
+ <rect class="bx" x="20" y="54" width="160" height="46" rx="7"/>
+ <text class="m" x="34" y="76">Oogonium (2n)</text>
+ <text class="s" x="34" y="92">mitosis, FETAL LIFE ONLY</text>
+ <path class="ar" d="M186 76 L226 76"/>
+ <rect class="k" x="234" y="54" width="180" height="46" rx="7"/>
+ <text class="m" x="248" y="76">Primary oocyte</text>
+ <text class="s" x="248" y="92">enters meiosis I, then STOPS</text>
+ <line class="stop" x1="424" y1="54" x2="424" y2="100"/>
+ <text class="tb" x="432" y="70">ARREST 1: prophase I</text>
+ <text class="s" x="432" y="90">lasts 10 to 50 years, until just before ovulation</text>
+
+ <path class="ar" d="M324 106 L324 134"/>
+ <rect class="bx" x="234" y="140" width="180" height="46" rx="7"/>
+ <text class="m" x="248" y="162">Meiosis I completed</text>
+ <text class="s" x="248" y="178">triggered by the LH surge</text>
+ <circle cx="450" cy="150" r="7" fill="#f2b705" stroke="#8a6300" stroke-width="1.6"/>
+ <text class="m" x="462" y="154">first polar body, discarded</text>
+
+ <path class="ar" d="M324 192 L324 220"/>
+ <rect class="k" x="234" y="226" width="180" height="46" rx="7"/>
+ <text class="m" x="248" y="248">Secondary oocyte (n)</text>
+ <text class="s" x="248" y="264">enters meiosis II, then STOPS</text>
+ <line class="stop" x1="424" y1="226" x2="424" y2="272"/>
+ <text class="tb" x="432" y="242">ARREST 2: metaphase II</text>
+ <text class="s" x="432" y="262">completed only after a sperm enters</text>
+
+ <path class="ar" d="M324 278 L324 306"/>
+ <rect class="bx" x="234" y="312" width="180" height="46" rx="7"/>
+ <text class="m" x="248" y="340">Ovum (n) + second polar body</text>
+
+ <text class="th" x="20" y="222">B  Oocyte number</text>
+ <line x1="20" y1="232" x2="200" y2="232" stroke="#c6d2dd" stroke-width="1.5"/>
+ <path class="ax" d="M50 340 L50 248 M50 340 L200 340"/>
+ <path class="cur" d="M56 256 L80 262 L110 296 L150 322 L196 338"/>
+ <text class="m" x="58" y="250">7 million (fetal month 5)</text>
+ <text class="m" x="86" y="286">1 million at birth</text>
+ <text class="m" x="110" y="316">300 to 400k at puberty</text>
+ <text class="s" x="20" y="366">The rest are lost to atresia; the pool only shrinks.</text>
+
+ <text class="th" x="520" y="300">C  Why unequal division</text>
+ <line x1="520" y1="310" x2="860" y2="310" stroke="#c6d2dd" stroke-width="1.5"/>
+ <rect class="bx" x="520" y="324" width="340" height="76" rx="8"/>
+ <text class="t" x="534" y="348">The early embryo gets no outside nutrition and must divide on what</text>
+ <text class="t" x="534" y="368">the egg stored, so one cell keeps nearly all the cytoplasm. Chromosome</text>
+ <text class="t" x="534" y="388">number is halved without splitting the stores: that is the polar body.</text>
+ <text class="s" x="520" y="422">The sperm does the opposite: it discards almost all cytoplasm, since it only has to deliver DNA.</text>
+ <text class="s" x="20" y="422">Maternal age and trisomy: the chromosome-holding machinery must survive decades in arrest 1, and weakens with time.</text>
+</svg>

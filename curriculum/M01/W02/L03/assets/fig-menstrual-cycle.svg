@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 460" width="880" height="460" role="img"
+ aria-label="The ovarian cycle and the uterine cycle shown side by side: concentration curves of the four hormones, follicle growth, ovulation and corpus luteum formation, the change in endometrial thickness, and the division of roles between estrogen and progesterone.">
+ <style>
+  .bx{fill:#fff;stroke:#c6d2dd;stroke-width:1.8}.k{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .t{font:12px sans-serif;fill:#16191d}.tb{font:700 13px sans-serif;fill:#003c71}
+  .th{font:700 15px sans-serif;fill:#003c71}.s{font:11px sans-serif;fill:#4a5159}
+  .m{font:10px monospace;fill:#16191d}
+  .ax{stroke:#16191d;stroke-width:1.6;fill:none}
+  .lh{stroke:#b3261e;stroke-width:2.6;fill:none}
+  .fsh{stroke:#2e7d32;stroke-width:2.2;fill:none;stroke-dasharray:6 4}
+  .es{stroke:#003c71;stroke-width:2.6;fill:none}
+  .pg{stroke:#8a6300;stroke-width:2.6;fill:none}
+  .gl{stroke:#c6d2dd;stroke-width:1.2;stroke-dasharray:4 4}
+  .fol{fill:#fff5d6;stroke:#f2b705;stroke-width:2}
+  .cl{fill:#f7dedc;stroke:#b3261e;stroke-width:2}
+ </style>
+
+ <text class="th" x="20" y="28">Four hormones, the ovary and the endometrium on one time axis</text>
+ <line x1="20" y1="38" x2="860" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+
+ <path class="ax" d="M90 170 L90 54 M90 170 L840 170"/>
+ <text class="s" x="34" y="120" transform="rotate(-90 44 120)">Gonadotropins</text>
+ <line class="gl" x1="440" y1="54" x2="440" y2="430"/>
+ <path class="lh" d="M96 160 L200 158 L320 150 L410 140 L436 62 L462 130 L560 156 L680 160 L836 150"/>
+ <text class="m" x="446" y="60">LH surge</text>
+ <path class="fsh" d="M96 136 L160 142 L260 154 L380 158 L436 128 L470 150 L600 160 L720 158 L836 136"/>
+ <text class="m" x="112" y="128">FSH</text>
+
+ <path class="ax" d="M90 300 L90 192 M90 300 L840 300"/>
+ <text class="s" x="34" y="252" transform="rotate(-90 44 252)">Steroids</text>
+ <path class="es" d="M96 292 L200 286 L300 262 L390 210 L424 198 L470 244 L560 226 L660 230 L760 250 L836 290"/>
+ <text class="m" x="330" y="248">estrogen</text>
+ <path class="pg" d="M96 296 L300 294 L440 290 L520 240 L620 206 L700 212 L780 262 L836 294"/>
+ <text class="m" x="620" y="198">progesterone</text>
+
+ <text class="th" x="20" y="334">Ovarian cycle</text>
+ <circle class="fol" cx="150" cy="372" r="9"/>
+ <circle class="fol" cx="230" cy="372" r="14"/>
+ <circle class="fol" cx="330" cy="372" r="20"/>
+ <circle class="fol" cx="420" cy="372" r="24"/>
+ <path d="M440 356 l16 -8 M444 372 l18 0 M440 388 l16 8" stroke="#b3261e" stroke-width="2" fill="none"/>
+ <circle class="cl" cx="540" cy="372" r="20"/>
+ <circle class="cl" cx="660" cy="372" r="16"/>
+ <circle class="cl" cx="770" cy="372" r="9"/>
+ <text class="m" x="130" y="402">follicular phase (1 to 13)</text>
+ <text class="m" x="400" y="340">ovulation (14)</text>
+ <text class="m" x="560" y="402">luteal phase (15 to 28): about 14 days, nearly constant</text>
+
+ <text class="th" x="20" y="426">Uterine cycle</text>
+ <rect x="96" y="432" width="90" height="8" fill="#b3261e" opacity="0.5"/>
+ <path d="M186 440 L440 416 L840 420" fill="none" stroke="#8a6300" stroke-width="2.6"/>
+ <text class="m" x="96" y="454">menses (1 to 5)</text>
+ <text class="m" x="230" y="454">proliferative: estrogen BUILDS the lining</text>
+ <text class="m" x="540" y="454">secretory: progesterone makes it USABLE for implantation</text>
+</svg>

@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 440" width="880" height="440" role="img"
+ aria-label="The stages of spermatogenesis and the change in position within the seminiferous tubule, the blood testis barrier and FSH target role of the Sertoli cell, the LH target and testosterone production of the Leydig cell, and feedback by inhibin.">
+ <style>
+  .bx{fill:#fff;stroke:#c6d2dd;stroke-width:1.8}.k{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .t{font:12px sans-serif;fill:#16191d}.tb{font:700 13px sans-serif;fill:#003c71}
+  .th{font:700 15px sans-serif;fill:#003c71}.s{font:11px sans-serif;fill:#4a5159}
+  .m{font:10px monospace;fill:#16191d}
+  .ser{fill:#e8eff6;stroke:#003c71;stroke-width:2.2}
+  .lum{fill:#fff;stroke:#c6d2dd;stroke-width:1.8}
+  .ar{stroke:#003c71;stroke-width:2;fill:none;marker-end:url(#a)}
+  .inh{stroke:#b3261e;stroke-width:2.4;fill:none;marker-end:url(#bar)}
+ </style>
+ <defs>
+  <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker>
+  <marker id="bar" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M6 0 L6 10" stroke="#b3261e" stroke-width="3"/></marker>
+ </defs>
+
+ <text class="th" x="20" y="28">A  Stages, moving from the basement membrane toward the lumen</text>
+ <line x1="20" y1="38" x2="640" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+
+ <text class="m" x="20" y="62">BASEMENT MEMBRANE (blood side)</text>
+ <rect class="ser" x="20" y="70" width="600" height="230" rx="6"/>
+ <text class="m" x="20" y="322">LUMEN</text>
+
+ <circle cx="70" cy="96" r="13" fill="#fff" stroke="#003c71" stroke-width="2"/>
+ <text class="m" x="100" y="94">1 Spermatogonium (2n), stem cell</text>
+ <text class="s" x="100" y="110">mitosis: one stays a stem cell, one goes on</text>
+ <path class="ar" d="M70 112 L70 136"/>
+
+ <circle cx="70" cy="152" r="15" fill="#fff5d6" stroke="#f2b705" stroke-width="2"/>
+ <text class="m" x="100" y="150">2 Primary spermatocyte: enters meiosis I</text>
+ <path class="ar" d="M70 170 L70 192"/>
+
+ <circle cx="58" cy="206" r="10" fill="#fff5d6" stroke="#f2b705" stroke-width="2"/>
+ <circle cx="84" cy="206" r="10" fill="#fff5d6" stroke="#f2b705" stroke-width="2"/>
+ <text class="m" x="110" y="206">3 Secondary spermatocytes (n), enter meiosis II</text>
+ <path class="ar" d="M70 222 L70 242"/>
+
+ <circle cx="46" cy="254" r="8" fill="#fff" stroke="#b3261e" stroke-width="2"/>
+ <circle cx="68" cy="254" r="8" fill="#fff" stroke="#b3261e" stroke-width="2"/>
+ <circle cx="90" cy="254" r="8" fill="#fff" stroke="#b3261e" stroke-width="2"/>
+ <circle cx="112" cy="254" r="8" fill="#fff" stroke="#b3261e" stroke-width="2"/>
+ <text class="m" x="134" y="254">4 Four spermatids (n)</text>
+ <path class="ar" d="M70 268 L70 286"/>
+ <g>
+  <circle cx="52" cy="292" r="6" fill="#b3261e"/>
+  <path d="M58 292 q20 -8 36 0" stroke="#b3261e" stroke-width="2" fill="none"/>
+ </g>
+ <text class="m" x="110" y="294">5 Spermatozoa: cytoplasm shed, tail and acrosome formed</text>
+ <text class="s" x="20" y="344">Takes 64 to 72 days; about 100 million sperm per day, from puberty for life.</text>
+
+ <text class="th" x="660" y="28">B  Two supporting cells</text>
+ <line x1="660" y1="38" x2="860" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+ <rect class="bx" x="660" y="54" width="200" height="168" rx="8"/>
+ <text class="tb" x="672" y="78">Sertoli cell</text>
+ <text class="s" x="672" y="96">target of FSH</text>
+ <text class="t" x="672" y="120">blood-testis barrier</text>
+ <text class="t" x="672" y="140">nutrition and signals</text>
+ <text class="t" x="672" y="160">secretes inhibin</text>
+ <text class="t" x="672" y="180">secretes AMH in the</text>
+ <text class="t" x="672" y="196">embryo</text>
+ <rect class="k" x="660" y="232" width="200" height="110" rx="8"/>
+ <text class="tb" x="672" y="256">Leydig cell</text>
+ <text class="s" x="672" y="274">target of LH</text>
+ <text class="t" x="672" y="298">makes testosterone from</text>
+ <text class="t" x="672" y="316">cholesterol: some to blood,</text>
+ <text class="t" x="672" y="332">some to the tubule beside it</text>
+
+ <text class="th" x="20" y="382">C  Feedback, and a memory aid</text>
+ <line x1="20" y1="392" x2="860" y2="392" stroke="#c6d2dd" stroke-width="1.5"/>
+ <text class="t" x="20" y="414">FSH to Sertoli (support), LH to Leydig (hormone): S with S, L with L. Testosterone inhibits GnRH and LH; inhibin selectively inhibits FSH.</text>
+ <text class="s" x="20" y="434">Excess androgen from outside shuts down LH, so the local tubular concentration falls and sperm production stops although blood levels are high.</text>
+</svg>
