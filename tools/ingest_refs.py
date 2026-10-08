@@ -16,7 +16,7 @@ from pathlib import Path
 
 UPLOADS = Path("/root/.claude/uploads")
 DEST = Path("/home/user/refs/decks")
-EXTS = {".pptx", ".pdf", ".docx"}
+EXTS = {".pptx", ".ppt", ".pdf", ".docx"}
 
 
 def digest(p):
@@ -36,8 +36,22 @@ def slug(name):
     return stem or "ref"
 
 
+def to_pptx(src):
+    """레거시 .ppt는 python-pptx가 읽지 못하므로 LibreOffice로 변환한다."""
+    if src.suffix.lower() != ".ppt":
+        return src
+    out = src.with_suffix(".pptx")
+    if out.exists():
+        return out
+    subprocess.run(["soffice", "--headless", "--convert-to", "pptx",
+                    "--outdir", str(src.parent), str(src)],
+                   capture_output=True, timeout=300)
+    return out if out.exists() else src
+
+
 def extract_pptx(src, out_md):
     from pptx import Presentation
+    src = to_pptx(src)
     p = Presentation(str(src))
     slides = list(p.slides)
     lines = [f"# {out_md.stem}", "", f"- 원본: `refs/decks/{src.name}`",
@@ -83,7 +97,8 @@ def main():
         shutil.copy2(src, dst)
         md = dst.with_suffix(".md")
         try:
-            pages = extract_pptx(dst, md) if dst.suffix == ".pptx" else extract_pdf(dst, md)
+            pages = (extract_pptx(dst, md) if dst.suffix in (".pptx", ".ppt")
+                     else extract_pdf(dst, md))
         except Exception as e:
             pages = 0
             print(f"  텍스트 추출 실패 {dst.name}: {e}", file=sys.stderr)
