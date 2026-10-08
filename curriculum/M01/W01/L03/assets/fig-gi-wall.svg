@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 430" width="880" height="430" role="img"
+ aria-label="The four layers of the gut wall and the position of the two nerve plexuses, and how the arrangement of circular and longitudinal muscle produces peristalsis and segmentation.">
+ <style>
+  .bx{fill:#fff;stroke:#c6d2dd;stroke-width:1.8}.k{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .t{font:12px sans-serif;fill:#16191d}.tb{font:700 13px sans-serif;fill:#003c71}
+  .th{font:700 15px sans-serif;fill:#003c71}.s{font:11px sans-serif;fill:#4a5159}
+  .m{font:11px monospace;fill:#16191d}
+  .muc{fill:#fff5d6;stroke:#f2b705;stroke-width:1.8}
+  .sub{fill:#eef3f8;stroke:#6b8ba8;stroke-width:1.8}
+  .mus{fill:#f7dedc;stroke:#b3261e;stroke-width:1.8}
+  .ser{fill:#e8eff6;stroke:#003c71;stroke-width:1.8}
+  .nv{fill:#2e7d32}
+  .ar{stroke:#003c71;stroke-width:2.4;fill:none;marker-end:url(#a)}
+  .lum{fill:#fff;stroke:#4a5159;stroke-width:2}
+ </style>
+ <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker></defs>
+
+ <text class="th" x="20" y="28">A  Four layers, from the lumen outward</text>
+ <line x1="20" y1="38" x2="440" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+
+ <text class="m" x="30" y="62">Lumen</text>
+ <rect class="muc" x="30" y="70" width="330" height="44"/>
+ <text class="m" x="40" y="88">1 Mucosa</text>
+ <text class="s" x="40" y="106">epithelium, lamina propria, muscularis mucosae</text>
+ <rect class="sub" x="30" y="114" width="330" height="38"/>
+ <text class="m" x="40" y="132">2 Submucosa</text>
+ <circle class="nv" cx="250" cy="133" r="6"/>
+ <text class="s" x="262" y="137">submucosal plexus: secretion, local flow</text>
+ <rect class="mus" x="30" y="152" width="330" height="26"/>
+ <text class="m" x="40" y="170">3a Circular muscle</text>
+ <rect class="mus" x="30" y="178" width="330" height="20" fill="#fff"/>
+ <circle class="nv" cx="250" cy="188" r="6"/>
+ <text class="s" x="40" y="193">myenteric plexus: motility</text>
+ <rect class="mus" x="30" y="198" width="330" height="26"/>
+ <text class="m" x="40" y="216">3b Longitudinal muscle</text>
+ <rect class="ser" x="30" y="224" width="330" height="26"/>
+ <text class="m" x="40" y="242">4 Serosa</text>
+
+ <text class="s" x="30" y="272">The enteric nervous system is the two plexuses together: about 100 million</text>
+ <text class="s" x="30" y="290">neurons, with its own sensory, interneuron and motor circuit, so it keeps</text>
+ <text class="s" x="30" y="308">working when cut off from the central nervous system.</text>
+ <text class="s" x="30" y="332">Parasympathetic (vagus) promotes motility and secretion; sympathetic inhibits.</text>
+
+ <text class="th" x="470" y="28">B  Two movement patterns</text>
+ <line x1="470" y1="38" x2="860" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+
+ <text class="tb" x="480" y="64">Peristalsis: propulsion</text>
+ <path class="lum" d="M480 84 h340 v48 h-340 z"/>
+ <path d="M540 84 q18 24 0 48" fill="none" stroke="#b3261e" stroke-width="5"/>
+ <ellipse cx="640" cy="108" rx="48" ry="18" fill="#fff5d6" stroke="#f2b705" stroke-width="2"/>
+ <path class="ar" d="M700 108 L780 108"/>
+ <text class="s" x="486" y="152">circular muscle contracts above the bolus and relaxes below it</text>
+
+ <text class="tb" x="480" y="200">Segmentation: mixing</text>
+ <path class="lum" d="M480 220 h340 v48 h-340 z"/>
+ <path d="M540 220 q16 24 0 48 M640 220 q16 24 0 48 M740 220 q16 24 0 48" fill="none" stroke="#b3261e" stroke-width="5"/>
+ <path class="ar" d="M580 288 L540 288"/>
+ <path class="ar" d="M600 288 L640 288"/>
+ <path class="ar" d="M700 288 L660 288"/>
+ <path class="ar" d="M720 288 L760 288"/>
+ <text class="s" x="486" y="312">several points contract in turn; contents move back and forth</text>
+ <text class="s" x="486" y="330">with little net propulsion. This is the main pattern in the small intestine.</text>
+
+ <rect class="k" x="470" y="350" width="390" height="70" rx="8"/>
+ <text class="tb" x="484" y="374">Hirschsprung disease</text>
+ <text class="t" x="484" y="396">Neural crest cells fail to reach the distal colon, so that segment has no</text>
+ <text class="t" x="484" y="414">enteric neurons, stays contracted, and the bowel above it dilates.</text>
+</svg>

@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 430" width="880" height="430" role="img"
+ aria-label="The four gastrointestinal hormones: location of the secreting cells, the stimulus for secretion, and the target organ and action, showing how stimulus and action form a feedback loop, together with the time order of the cephalic, gastric and intestinal phases.">
+ <style>
+  .bx{fill:#fff;stroke:#c6d2dd;stroke-width:1.8}.k{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .t{font:12px sans-serif;fill:#16191d}.tb{font:700 13px sans-serif;fill:#003c71}
+  .th{font:700 15px sans-serif;fill:#003c71}.s{font:11px sans-serif;fill:#4a5159}
+  .m{font:11px monospace;fill:#16191d}
+  .ar{stroke:#003c71;stroke-width:2.2;fill:none;marker-end:url(#a)}
+  .inh{stroke:#b3261e;stroke-width:2.4;fill:none;marker-end:url(#bar)}
+ </style>
+ <defs>
+  <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker>
+  <marker id="bar" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M6 0 L6 10" stroke="#b3261e" stroke-width="3"/></marker>
+ </defs>
+
+ <text class="th" x="20" y="28">A  Each hormone's stimulus points at the problem it solves</text>
+ <line x1="20" y1="38" x2="860" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+
+ <rect class="bx" x="20" y="54" width="200" height="88" rx="8"/>
+ <text class="tb" x="34" y="78">Gastrin</text>
+ <text class="s" x="34" y="98">G cell, stomach</text>
+ <text class="t" x="34" y="120">stimulus: distension,</text>
+ <text class="t" x="34" y="136">peptides, vagus</text>
+ <path class="ar" d="M226 98 L270 98"/>
+ <rect class="k" x="278" y="54" width="180" height="88" rx="8"/>
+ <text class="t" x="292" y="80">more HCl secretion,</text>
+ <text class="t" x="292" y="100">more gastric motility</text>
+ <text class="s" x="292" y="128">(digest the protein that arrived)</text>
+
+ <rect class="bx" x="20" y="158" width="200" height="88" rx="8"/>
+ <text class="tb" x="34" y="182">Secretin</text>
+ <text class="s" x="34" y="202">S cell, duodenum</text>
+ <text class="t" x="34" y="224">stimulus: acid in the</text>
+ <text class="t" x="34" y="240">lumen</text>
+ <path class="ar" d="M226 202 L270 202"/>
+ <rect class="k" x="278" y="158" width="180" height="88" rx="8"/>
+ <text class="t" x="292" y="184">bicarbonate from the</text>
+ <text class="t" x="292" y="204">pancreas and ducts;</text>
+ <text class="t" x="292" y="224">less HCl; slower emptying</text>
+ <text class="s" x="292" y="240">(neutralise the acid)</text>
+
+ <rect class="bx" x="20" y="262" width="200" height="88" rx="8"/>
+ <text class="tb" x="34" y="286">Cholecystokinin</text>
+ <text class="s" x="34" y="306">I cell, duodenum</text>
+ <text class="t" x="34" y="328">stimulus: fatty acids,</text>
+ <text class="t" x="34" y="344">amino acids</text>
+ <path class="ar" d="M226 306 L270 306"/>
+ <rect class="k" x="278" y="262" width="180" height="88" rx="8"/>
+ <text class="t" x="292" y="288">pancreatic enzymes,</text>
+ <text class="t" x="292" y="308">gallbladder contraction,</text>
+ <text class="t" x="292" y="328">slower emptying, satiety</text>
+ <text class="s" x="292" y="344">(bring enzymes and bile)</text>
+
+ <rect class="bx" x="20" y="366" width="200" height="56" rx="8"/>
+ <text class="tb" x="34" y="390">GIP</text>
+ <text class="s" x="34" y="408">K cell, duodenum; stimulus: glucose, lipid</text>
+ <path class="ar" d="M226 394 L270 394"/>
+ <rect class="k" x="278" y="366" width="180" height="56" rx="8"/>
+ <text class="t" x="292" y="390">insulin released early;</text>
+ <text class="t" x="292" y="410">gastric secretion reduced</text>
+
+ <text class="th" x="490" y="178">B  Two readings of the table</text>
+ <line x1="490" y1="188" x2="860" y2="188" stroke="#c6d2dd" stroke-width="1.5"/>
+ <rect class="bx" x="490" y="202" width="370" height="94" rx="8"/>
+ <text class="t" x="504" y="226">1  Stimulus and action form a feedback loop: the lumen</text>
+ <text class="t" x="504" y="244">state is sensed and the needed secretion is called in.</text>
+ <text class="t" x="504" y="270">2  Both secretin and CCK slow gastric emptying, so the</text>
+ <text class="t" x="504" y="288">stomach sends on only what the gut can handle.</text>
+
+ <text class="th" x="490" y="330">C  Three phases in time</text>
+ <line x1="490" y1="340" x2="860" y2="340" stroke="#c6d2dd" stroke-width="1.5"/>
+ <rect class="bx" x="490" y="354" width="112" height="60" rx="7"/>
+ <text class="tb" x="504" y="376">Cephalic</text>
+ <text class="s" x="504" y="396">sight and smell,</text>
+ <text class="s" x="504" y="410">vagus: about 30 percent</text>
+ <rect class="bx" x="612" y="354" width="112" height="60" rx="7"/>
+ <text class="tb" x="626" y="376">Gastric</text>
+ <text class="s" x="626" y="396">distension and</text>
+ <text class="s" x="626" y="410">peptides: about 60 percent</text>
+ <rect class="bx" x="734" y="354" width="126" height="60" rx="7"/>
+ <text class="tb" x="748" y="376">Intestinal</text>
+ <text class="s" x="748" y="396">mainly inhibitory,</text>
+ <text class="s" x="748" y="410">via secretin and CCK</text>
+
+ <text class="th" x="490" y="68">Incretin effect</text>
+ <line x1="490" y1="78" x2="860" y2="78" stroke="#c6d2dd" stroke-width="1.5"/>
+ <rect class="k" x="490" y="92" width="370" height="64" rx="8"/>
+ <text class="t" x="504" y="116">Oral glucose releases far more insulin than the same dose given</text>
+ <text class="t" x="504" y="136">intravenously, because GIP and GLP-1 prime the pancreas. GLP-1</text>
+ <text class="t" x="504" y="152">agonists and DPP-4 inhibitors exploit this pathway.</text>
+</svg>

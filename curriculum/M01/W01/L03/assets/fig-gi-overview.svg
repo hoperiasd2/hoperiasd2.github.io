@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 440" width="880" height="440" role="img"
+ aria-label="Overall structure of the digestive tract and the role of each segment, where the secretions of the accessory organs enter, and the view that the lumen is anatomically outside the body.">
+ <style>
+  .bx{fill:#fff;stroke:#c6d2dd;stroke-width:1.8}.k{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .t{font:12px sans-serif;fill:#16191d}.tb{font:700 13px sans-serif;fill:#003c71}
+  .th{font:700 15px sans-serif;fill:#003c71}.s{font:11px sans-serif;fill:#4a5159}
+  .m{font:11px monospace;fill:#16191d}
+  .seg{fill:#e8eff6;stroke:#003c71;stroke-width:2}
+  .acc{fill:#fff5d6;stroke:#f2b705;stroke-width:2}
+  .ar{stroke:#003c71;stroke-width:2.2;fill:none;marker-end:url(#a)}
+ </style>
+ <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker></defs>
+
+ <text class="th" x="20" y="28">A  One continuous tube from mouth to anus</text>
+ <line x1="20" y1="38" x2="860" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+
+ <rect class="seg" x="30" y="58" width="92" height="44" rx="8"/>
+ <text class="m" x="58" y="78">Mouth</text>
+ <text class="s" x="34" y="96">chew, amylase</text>
+ <path class="ar" d="M126 80 L152 80"/>
+ <rect class="seg" x="158" y="58" width="92" height="44" rx="8"/>
+ <text class="m" x="184" y="78">Oesophagus</text>
+ <text class="s" x="180" y="96">peristalsis only</text>
+ <path class="ar" d="M254 80 L280 80"/>
+ <rect class="seg" x="286" y="58" width="110" height="44" rx="8"/>
+ <text class="m" x="326" y="78">Stomach</text>
+ <text class="s" x="292" y="96">HCl, pepsin, mixing</text>
+ <path class="ar" d="M400 80 L426 80"/>
+ <rect class="k" x="432" y="58" width="190" height="44" rx="8"/>
+ <text class="m" x="498" y="78">Small intestine</text>
+ <text class="s" x="438" y="96">duodenum, jejunum, ileum: most digestion and absorption</text>
+ <path class="ar" d="M626 80 L652 80"/>
+ <rect class="seg" x="658" y="58" width="110" height="44" rx="8"/>
+ <text class="m" x="690" y="78">Colon</text>
+ <text class="s" x="662" y="96">water, electrolytes</text>
+ <path class="ar" d="M772 80 L798 80"/>
+ <rect class="seg" x="804" y="58" width="56" height="44" rx="8"/>
+ <text class="m" x="814" y="82">Anus</text>
+
+ <text class="th" x="20" y="162">B  Accessory organs and where their secretions enter</text>
+ <line x1="20" y1="172" x2="440" y2="172" stroke="#c6d2dd" stroke-width="1.5"/>
+ <rect class="acc" x="30" y="188" width="110" height="40" rx="7"/>
+ <text class="m" x="46" y="212">Salivary gland</text>
+ <path class="ar" d="M76 184 L76 108"/>
+ <text class="s" x="30" y="246">amylase, lipase, mucus</text>
+
+ <rect class="acc" x="160" y="188" width="90" height="40" rx="7"/>
+ <text class="m" x="190" y="212">Liver</text>
+ <path class="ar" d="M250 208 L286 208"/>
+ <rect class="acc" x="294" y="188" width="90" height="40" rx="7"/>
+ <text class="m" x="314" y="212">Gallbladder</text>
+ <path class="ar" d="M340 184 L470 110"/>
+ <text class="s" x="160" y="246">makes bile; the gallbladder stores and concentrates it</text>
+
+ <rect class="acc" x="160" y="262" width="110" height="40" rx="7"/>
+ <text class="m" x="182" y="286">Pancreas</text>
+ <path class="ar" d="M270 274 L470 112"/>
+ <text class="s" x="160" y="320">enzymes for all three nutrients, plus bicarbonate</text>
+ <text class="s" x="160" y="338">Both bile and pancreatic juice enter the duodenum.</text>
+
+ <text class="th" x="470" y="162">C  Four basic functions</text>
+ <line x1="470" y1="172" x2="860" y2="172" stroke="#c6d2dd" stroke-width="1.5"/>
+ <rect class="bx" x="470" y="188" width="390" height="114" rx="8"/>
+ <text class="tb" x="484" y="212">Motility</text>
+ <text class="t" x="570" y="212">mix and propel the contents</text>
+ <text class="tb" x="484" y="236">Secretion</text>
+ <text class="t" x="570" y="236">about 7 L per day into the lumen</text>
+ <text class="tb" x="484" y="260">Digestion</text>
+ <text class="t" x="570" y="260">hydrolyse macromolecules to monomers</text>
+ <text class="tb" x="484" y="284">Absorption</text>
+ <text class="t" x="570" y="284">move monomers into blood or lymph</text>
+
+ <text class="th" x="20" y="378">D  The lumen is anatomically outside the body</text>
+ <line x1="20" y1="388" x2="860" y2="388" stroke="#c6d2dd" stroke-width="1.5"/>
+ <ellipse cx="140" cy="416" rx="100" ry="18" fill="none" stroke="#4a5159" stroke-width="2.4"/>
+ <ellipse cx="140" cy="416" rx="46" ry="7" fill="#fff5d6" stroke="#f2b705" stroke-width="2"/>
+ <text class="m" x="112" y="420">lumen</text>
+ <text class="t" x="262" y="408">The body is the doughnut around the tube. Food is not inside the body until it crosses the epithelium,</text>
+ <text class="t" x="262" y="428">so the epithelium is a barrier facing the outside world, and digestion happens outside the cells.</text>
+</svg>

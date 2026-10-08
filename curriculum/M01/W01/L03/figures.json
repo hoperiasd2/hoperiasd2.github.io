@@ -1,4 +1,113 @@
 {
   "lesson_id": "M01-W01-L03",
-  "figures": []
+  "figures": [
+    {
+      "figure_id": "fig-gi-overview",
+      "lesson_id": "M01-W01-L03",
+      "html_anchor": "#fig-gi-overview",
+      "caption": "소화관의 전체 구조와 각 구간의 역할, 부속 기관의 분비물이 들어오는 위치, 그리고 소화관 lumen이 해부학적으로 몸 바깥이라는 관점을 함께 보인다.",
+      "asset_path": "assets/fig-gi-overview.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-gi-wall",
+      "lesson_id": "M01-W01-L03",
+      "html_anchor": "#fig-gi-wall",
+      "caption": "소화관 벽의 네 층 구조와 두 신경얼기의 위치, 그리고 circular·longitudinal 근육의 배치가 만드는 연동 운동과 분절 운동의 차이.",
+      "asset_path": "assets/fig-gi-wall.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-stomach-acid",
+      "lesson_id": "M01-W01-L03",
+      "html_anchor": "#fig-stomach-acid",
+      "caption": "Parietal cell의 염산 분비 기전과 위 점막 방어 장치. H+/K+-ATPase에 의한 능동수송, chloride shift, pepsinogen의 자가촉매 활성화, 그리고 점액·중탄산 층이 만드는 pH 기울기를 함께 보인다.",
+      "asset_path": "assets/fig-stomach-acid.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-nutrient-digestion",
+      "lesson_id": "M01-W01-L03",
+      "html_anchor": "#fig-nutrient-digestion",
+      "caption": "세 영양소의 소화 단계와 각 단계를 담당하는 효소. lumen 소화와 막 소화의 구분, zymogen 활성화 연쇄에서 trypsin의 위치, 그리고 각 영양소의 최종 흡수 단위를 함께 보인다.",
+      "asset_path": "assets/fig-nutrient-digestion.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-lipid-digestion",
+      "lesson_id": "M01-W01-L03",
+      "html_anchor": "#fig-lipid-digestion",
+      "caption": "지질 소화의 네 단계. 담즙산에 의한 emulsification, lipase와 colipase의 작용, micelle이 수층을 통과해 운반하는 과정, 그리고 세포 안에서 chylomicron으로 재조립되어 림프관으로 들어가는 경로.",
+      "asset_path": "assets/fig-lipid-digestion.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-absorption",
+      "lesson_id": "M01-W01-L03",
+      "html_anchor": "#fig-absorption",
+      "caption": "소장의 표면적 확대 세 층위와 융모의 구조, 그리고 각 영양소의 흡수 수송체. SGLT1·GLUT2·GLUT5·PepT1의 배치와 Na+/K+-ATPase가 만드는 기울기, 그리고 물이 삼투압을 따라 이동하는 경로를 함께 보인다.",
+      "asset_path": "assets/fig-absorption.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-liver-function",
+      "lesson_id": "M01-W01-L03",
+      "html_anchor": "#fig-liver-function",
+      "caption": "간의 이중 혈액 공급과 lobule 구조, 그리고 대사·합성·해독·배설 네 기능 범주. first-pass 효과의 경로와 간 기능 저하에서 각 범주가 어떤 증상으로 나타나는지를 함께 보인다.",
+      "asset_path": "assets/fig-liver-function.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-bile",
+      "lesson_id": "M01-W01-L03",
+      "html_anchor": "#fig-bile",
+      "caption": "담즙의 구성과 enterohepatic circulation, 그리고 bilirubin의 생성에서 배설까지의 경로. 황달 세 종류가 이 경로의 어느 단계에 대응하는지를 함께 보인다.",
+      "asset_path": "assets/fig-bile.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-gi-hormones",
+      "lesson_id": "M01-W01-L03",
+      "html_anchor": "#fig-gi-hormones",
+      "caption": "소화계 네 호르몬의 분비 세포 위치, 분비 자극, 표적 기관과 작용. 분비 자극과 작용이 되먹임 구조를 이루는 방식, 그리고 머리·위·장 세 단계의 시간 순서를 함께 보인다.",
+      "asset_path": "assets/fig-gi-hormones.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    }
+  ]
 }

@@ -724,7 +724,8 @@ def _compose(row, meta, lists, secs, quiz, lesson_dir, pack):
 
 
 # 한 장에 담는 분량을 조절해 슬라이드 수를 기준 범위(38~52장) 안으로 맞춘다.
-PACKS = [(760, 9), (820, 10), (900, 11), (1000, 12), (700, 8), (640, 7)]
+PACKS = [(760, 9), (820, 10), (900, 11), (1000, 12), (1120, 13),
+         (1260, 14), (1420, 16), (700, 8), (640, 7)]
 
 
 def build_deck(row, meta, lists, secs, quiz, out, lesson_dir):

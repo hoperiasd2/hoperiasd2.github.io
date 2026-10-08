@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 450" width="880" height="450" role="img"
+ aria-label="Stages of digestion for the three nutrients and the enzyme responsible for each, the distinction between luminal and membrane digestion, the position of trypsin in the zymogen activation cascade, and the final absorbed unit for each nutrient.">
+ <style>
+  .bx{fill:#fff;stroke:#c6d2dd;stroke-width:1.8}.k{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .t{font:12px sans-serif;fill:#16191d}.tb{font:700 13px sans-serif;fill:#003c71}
+  .th{font:700 15px sans-serif;fill:#003c71}.s{font:11px sans-serif;fill:#4a5159}
+  .m{font:11px monospace;fill:#16191d}
+  .ar{stroke:#003c71;stroke-width:2.2;fill:none;marker-end:url(#a)}
+  .mb{fill:#e8eff6;stroke:#003c71;stroke-width:2}
+ </style>
+ <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker></defs>
+
+ <text class="th" x="20" y="28">A  Carbohydrate: luminal digestion, then membrane digestion</text>
+ <line x1="20" y1="38" x2="860" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+ <rect class="bx" x="20" y="54" width="110" height="40" rx="7"/>
+ <text class="m" x="46" y="78">Starch</text>
+ <path class="ar" d="M136 74 L180 74"/>
+ <text class="s" x="132" y="66">alpha-amylase</text>
+ <text class="s" x="132" y="92">(saliva, pancreas)</text>
+ <rect class="bx" x="248" y="54" width="210" height="40" rx="7"/>
+ <text class="m" x="258" y="78">Maltose, limit dextrin</text>
+ <path class="ar" d="M464 74 L508 74"/>
+ <text class="s" x="460" y="66">maltase, sucrase,</text>
+ <text class="s" x="460" y="92">lactase, isomaltase</text>
+ <rect class="k" x="596" y="54" width="264" height="40" rx="7"/>
+ <text class="m" x="606" y="78">Glucose, galactose, fructose</text>
+ <text class="s" x="596" y="112">Cellulose has beta-1,4 bonds; humans lack the enzyme, so it passes to the colon as fibre.</text>
+
+ <text class="th" x="20" y="152">B  Protein: the zymogen cascade, with trypsin as the trigger</text>
+ <line x1="20" y1="162" x2="860" y2="162" stroke="#c6d2dd" stroke-width="1.5"/>
+ <rect class="bx" x="20" y="178" width="120" height="40" rx="7"/>
+ <text class="m" x="42" y="202">Protein</text>
+ <path class="ar" d="M146 198 L190 198"/>
+ <text class="s" x="144" y="190">pepsin (HCl)</text>
+ <rect class="bx" x="246" y="178" width="130" height="40" rx="7"/>
+ <text class="m" x="268" y="202">Polypeptide</text>
+ <path class="ar" d="M382 198 L426 198"/>
+ <rect class="bx" x="434" y="178" width="150" height="40" rx="7"/>
+ <text class="m" x="444" y="202">Oligopeptide</text>
+ <path class="ar" d="M590 198 L634 198"/>
+ <rect class="k" x="642" y="178" width="218" height="40" rx="7"/>
+ <text class="m" x="652" y="202">Amino acid, di- and tripeptide</text>
+
+ <rect class="bx" x="20" y="232" width="840" height="76" rx="8"/>
+ <text class="tb" x="34" y="254">Activation cascade</text>
+ <text class="m" x="34" y="280">Enteropeptidase (intestinal brush border)</text>
+ <path class="ar" d="M280 276 L318 276"/>
+ <text class="m" x="326" y="280">Trypsinogen to TRYPSIN</text>
+ <path class="ar" d="M500 276 L538 276"/>
+ <text class="m" x="546" y="280">activates chymotrypsinogen, proelastase, procarboxypeptidase</text>
+ <text class="s" x="34" y="300">The pancreas stays safe because enzymes leave as zymogens, the activator sits in the gut, and trypsin inhibitor is secreted too.</text>
+
+ <text class="th" x="20" y="348">C  Luminal versus membrane digestion</text>
+ <line x1="20" y1="358" x2="440" y2="358" stroke="#c6d2dd" stroke-width="1.5"/>
+ <rect class="mb" x="30" y="396" width="380" height="20"/>
+ <text class="m" x="36" y="412">brush border membrane</text>
+ <rect class="k" x="120" y="374" width="24" height="22" rx="4"/>
+ <rect class="k" x="200" y="374" width="24" height="22" rx="4"/>
+ <rect class="k" x="280" y="374" width="24" height="22" rx="4"/>
+ <text class="s" x="30" y="370">disaccharidases and peptidases fixed in the membrane</text>
+ <text class="s" x="30" y="438">the product passes straight into the transporter beside it</text>
+
+ <rect class="bx" x="460" y="366" width="400" height="76" rx="8"/>
+ <text class="tb" x="474" y="390">Acute pancreatitis</text>
+ <text class="t" x="474" y="412">Zymogens are activated inside the pancreas, which then digests itself.</text>
+ <text class="t" x="474" y="432">Gallstones blocking the duct, or alcohol, are the usual causes.</text>
+</svg>

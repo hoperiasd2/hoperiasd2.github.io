@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 440" width="880" height="440" role="img"
+ aria-label="Composition of bile and the enterohepatic circulation, with the route of bilirubin from production to excretion and how the three kinds of jaundice correspond to steps along it.">
+ <style>
+  .bx{fill:#fff;stroke:#c6d2dd;stroke-width:1.8}.k{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .t{font:12px sans-serif;fill:#16191d}.tb{font:700 13px sans-serif;fill:#003c71}
+  .th{font:700 15px sans-serif;fill:#003c71}.s{font:11px sans-serif;fill:#4a5159}
+  .m{font:11px monospace;fill:#16191d}
+  .ar{stroke:#003c71;stroke-width:2.2;fill:none;marker-end:url(#a)}
+  .arg{stroke:#2e7d32;stroke-width:3;fill:none;marker-end:url(#g)}
+  .blk{stroke:#b3261e;stroke-width:3;fill:none}
+ </style>
+ <defs>
+  <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker>
+  <marker id="g" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#2e7d32"/></marker>
+ </defs>
+
+ <text class="th" x="20" y="28">A  What is in bile</text>
+ <line x1="20" y1="38" x2="300" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+ <rect class="k" x="20" y="54" width="280" height="128" rx="8"/>
+ <text class="t" x="34" y="78">Bile acids: from cholesterol; cholic and</text>
+ <text class="t" x="34" y="96">chenodeoxycholic acid, conjugated to</text>
+ <text class="t" x="34" y="114">glycine or taurine</text>
+ <text class="t" x="34" y="138">Phospholipid (phosphatidylcholine)</text>
+ <text class="t" x="34" y="156">Cholesterol, bilirubin</text>
+ <text class="t" x="34" y="174">Bicarbonate, electrolytes, water</text>
+ <text class="s" x="20" y="204">Cholesterol is only just held in solution by bile acid and</text>
+ <text class="s" x="20" y="222">phospholipid; upset that balance and crystals form: gallstones.</text>
+
+ <text class="th" x="330" y="28">B  Enterohepatic circulation</text>
+ <line x1="330" y1="38" x2="860" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+
+ <rect class="bx" x="340" y="54" width="110" height="44" rx="7"/>
+ <text class="m" x="372" y="82">LIVER</text>
+ <path class="arg" d="M456 76 L510 76"/>
+ <rect class="bx" x="518" y="54" width="120" height="44" rx="7"/>
+ <text class="m" x="534" y="82">Gallbladder</text>
+ <path class="arg" d="M644 76 L700 76"/>
+ <rect class="bx" x="708" y="54" width="150" height="44" rx="7"/>
+ <text class="m" x="718" y="82">Duodenum: micelles</text>
+ <path class="arg" d="M782 104 L782 140"/>
+ <rect class="bx" x="708" y="148" width="150" height="40" rx="7"/>
+ <text class="m" x="730" y="172">Ileum: reuptake</text>
+ <path class="arg" d="M704 168 L460 168"/>
+ <text class="s" x="500" y="162">hepatic portal vein back to the liver</text>
+ <path class="arg" d="M394 160 L394 106"/>
+
+ <rect class="bx" x="340" y="200" width="518" height="60" rx="8"/>
+ <text class="tb" x="354" y="224">Why a 3 g pool does the work of 20 to 30 g per day</text>
+ <text class="t" x="354" y="248">The cycle turns 2 to 3 times per meal and 6 to 10 times per day; only about 5 percent is lost and replaced from cholesterol.</text>
+
+ <text class="th" x="20" y="300">C  Bilirubin from production to excretion, and the three kinds of jaundice</text>
+ <line x1="20" y1="310" x2="860" y2="310" stroke="#c6d2dd" stroke-width="1.5"/>
+
+ <rect class="bx" x="20" y="324" width="130" height="44" rx="7"/>
+ <text class="m" x="30" y="344">Old red cells,</text>
+ <text class="m" x="30" y="360">heme breakdown</text>
+ <path class="ar" d="M156 346 L196 346"/>
+ <rect class="bx" x="204" y="324" width="150" height="44" rx="7"/>
+ <text class="m" x="214" y="344">Unconjugated bilirubin</text>
+ <text class="m" x="214" y="360">bound to albumin</text>
+ <path class="ar" d="M360 346 L400 346"/>
+ <rect class="bx" x="408" y="324" width="150" height="44" rx="7"/>
+ <text class="m" x="418" y="344">Liver: glucuronidation</text>
+ <text class="m" x="418" y="360">to conjugated form</text>
+ <path class="ar" d="M564 346 L604 346"/>
+ <rect class="bx" x="612" y="324" width="120" height="44" rx="7"/>
+ <text class="m" x="622" y="352">Bile to gut</text>
+ <path class="ar" d="M738 346 L778 346"/>
+ <text class="m" x="786" y="342">stercobilin</text>
+ <text class="m" x="786" y="360">(brown stool)</text>
+
+ <line class="blk" x1="178" y1="382" x2="178" y2="400"/>
+ <text class="s" x="20" y="418">Prehepatic: overproduction,</text>
+ <text class="s" x="20" y="434">unconjugated rises (haemolysis)</text>
+ <line class="blk" x1="482" y1="382" x2="482" y2="400"/>
+ <text class="s" x="330" y="418">Hepatic: uptake, conjugation or</text>
+ <text class="s" x="330" y="434">excretion fails; both forms rise</text>
+ <line class="blk" x1="672" y1="382" x2="672" y2="400"/>
+ <text class="s" x="620" y="418">Posthepatic: duct obstruction,</text>
+ <text class="s" x="620" y="434">conjugated rises (stone, tumour)</text>
+</svg>

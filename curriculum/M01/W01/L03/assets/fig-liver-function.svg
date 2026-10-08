@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 440" width="880" height="440" role="img"
+ aria-label="Dual blood supply and lobule structure of the liver, and its four functional categories of metabolism, synthesis, detoxification and excretion, with the first pass route and the symptoms each category produces when liver function fails.">
+ <style>
+  .bx{fill:#fff;stroke:#c6d2dd;stroke-width:1.8}.k{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .t{font:12px sans-serif;fill:#16191d}.tb{font:700 13px sans-serif;fill:#003c71}
+  .th{font:700 15px sans-serif;fill:#003c71}.s{font:11px sans-serif;fill:#4a5159}
+  .m{font:11px monospace;fill:#16191d}
+  .pv{stroke:#1a4f8a;stroke-width:5;fill:none;marker-end:url(#b)}
+  .ha{stroke:#b3261e;stroke-width:4;fill:none;marker-end:url(#r)}
+  .cv{stroke:#4a5159;stroke-width:4;fill:none;marker-end:url(#k)}
+  .lob{fill:#e8eff6;stroke:#003c71;stroke-width:2}
+ </style>
+ <defs>
+  <marker id="b" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#1a4f8a"/></marker>
+  <marker id="r" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#b3261e"/></marker>
+  <marker id="k" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#4a5159"/></marker>
+ </defs>
+
+ <text class="th" x="20" y="28">A  Dual blood supply and the first-pass route</text>
+ <line x1="20" y1="38" x2="440" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+
+ <rect class="bx" x="20" y="54" width="120" height="40" rx="7"/>
+ <text class="m" x="40" y="78">Gut</text>
+ <path class="pv" d="M146 74 L210 74"/>
+ <text class="s" x="146" y="66">hepatic portal vein, 75 percent</text>
+ <text class="s" x="146" y="110">nutrients and absorbed toxins, low oxygen</text>
+
+ <path class="lob" d="M220 60 h190 v120 h-190 z"/>
+ <text class="tb" x="282" y="84">LIVER lobule</text>
+ <polygon points="252,100 288,100 306,130 288,160 252,160 234,130" fill="#fff" stroke="#003c71" stroke-width="1.8"/>
+ <circle cx="270" cy="130" r="6" fill="#4a5159"/>
+ <text class="m" x="284" y="134">central vein</text>
+ <circle cx="236" cy="104" r="4" fill="#1a4f8a"/>
+ <circle cx="304" cy="104" r="4" fill="#b3261e"/>
+ <text class="s" x="230" y="178">portal triad at each corner; blood mixes toward the centre</text>
+
+ <path class="ha" d="M146 150 L214 128"/>
+ <text class="s" x="22" y="150">hepatic artery,</text>
+ <text class="s" x="22" y="166">25 percent, oxygen rich</text>
+
+ <path class="cv" d="M416 120 L480 120"/>
+ <rect class="bx" x="488" y="100" width="130" height="40" rx="7"/>
+ <text class="m" x="500" y="124">To the heart</text>
+
+ <rect class="k" x="20" y="200" width="598" height="46" rx="8"/>
+ <text class="tb" x="34" y="222">First-pass effect</text>
+ <text class="t" x="160" y="222">Everything absorbed from the gut passes the liver before reaching the rest of the body.</text>
+ <text class="s" x="34" y="240">That is why much of an oral drug is metabolised before it ever reaches the systemic circulation.</text>
+
+ <text class="th" x="20" y="286">B  Four functional categories, and what fails with each</text>
+ <line x1="20" y1="296" x2="860" y2="296" stroke="#c6d2dd" stroke-width="1.5"/>
+
+ <rect class="bx" x="20" y="310" width="200" height="120" rx="8"/>
+ <text class="tb" x="34" y="334">Metabolism</text>
+ <text class="t" x="34" y="356">glycogen store and release,</text>
+ <text class="t" x="34" y="374">gluconeogenesis, fatty acid</text>
+ <text class="t" x="34" y="392">oxidation, ketone bodies</text>
+ <text class="s" x="34" y="418">fails: hypoglycaemia</text>
+
+ <rect class="bx" x="232" y="310" width="200" height="120" rx="8"/>
+ <text class="tb" x="246" y="334">Synthesis</text>
+ <text class="t" x="246" y="356">albumin, most clotting</text>
+ <text class="t" x="246" y="374">factors, transferrin,</text>
+ <text class="t" x="246" y="392">complement proteins</text>
+ <text class="s" x="246" y="418">fails: oedema, bleeding</text>
+
+ <rect class="bx" x="444" y="310" width="200" height="120" rx="8"/>
+ <text class="tb" x="458" y="334">Detoxification</text>
+ <text class="t" x="458" y="356">phase I: cytochrome P450</text>
+ <text class="t" x="458" y="374">phase II: conjugation</text>
+ <text class="t" x="458" y="392">urea cycle for ammonia</text>
+ <text class="s" x="458" y="418">fails: hepatic encephalopathy</text>
+
+ <rect class="bx" x="656" y="310" width="204" height="120" rx="8"/>
+ <text class="tb" x="670" y="334">Excretion</text>
+ <text class="t" x="670" y="356">lipid-soluble substances</text>
+ <text class="t" x="670" y="374">leave in bile: bilirubin</text>
+ <text class="t" x="670" y="392">and excess cholesterol</text>
+ <text class="s" x="670" y="418">fails: jaundice</text>
+
+ <text class="s" x="640" y="200">The symptom list of cirrhosis mirrors</text>
+ <text class="s" x="640" y="218">the function list of the liver.</text>
+ <text class="s" x="640" y="240">Portal hypertension adds varices,</text>
+ <text class="s" x="640" y="258">splenomegaly and ascites.</text>
+</svg>

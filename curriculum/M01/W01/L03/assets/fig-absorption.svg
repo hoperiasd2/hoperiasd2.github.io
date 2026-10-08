@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 450" width="880" height="450" role="img"
+ aria-label="Three levels of surface amplification in the small intestine and the structure of a villus, with the transporters for each nutrient: the arrangement of SGLT1, GLUT2, GLUT5 and PepT1, the gradient maintained by the sodium potassium ATPase, and the osmotic route taken by water.">
+ <style>
+  .bx{fill:#fff;stroke:#c6d2dd;stroke-width:1.8}.k{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .t{font:12px sans-serif;fill:#16191d}.tb{font:700 13px sans-serif;fill:#003c71}
+  .th{font:700 15px sans-serif;fill:#003c71}.s{font:11px sans-serif;fill:#4a5159}
+  .m{font:10px monospace;fill:#16191d}
+  .muc{fill:#fff5d6;stroke:#f2b705;stroke-width:2}
+  .cell{fill:#e8eff6;stroke:#003c71;stroke-width:2}
+  .tr{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .pmp{fill:#f7dedc;stroke:#b3261e;stroke-width:2.2}
+  .ar{stroke:#003c71;stroke-width:2;fill:none;marker-end:url(#a)}
+  .cap{fill:#f7dedc;stroke:#b3261e;stroke-width:1.8}
+  .ly{fill:#fff;stroke:#2e7d32;stroke-width:2}
+ </style>
+ <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker></defs>
+
+ <text class="th" x="20" y="28">A  Three levels of surface amplification: about 600x in all, around 200 m2</text>
+ <line x1="20" y1="38" x2="860" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+
+ <path class="muc" d="M30 120 q30 -40 60 0 q30 40 60 0 q30 -40 60 0" fill="none" stroke-width="4"/>
+ <text class="m" x="36" y="144">1 Plica circularis: about 3x</text>
+ <g>
+  <path class="muc" d="M280 120 v-44 q10 -12 20 0 v44 z"/>
+  <path class="muc" d="M308 120 v-44 q10 -12 20 0 v44 z"/>
+  <path class="muc" d="M336 120 v-44 q10 -12 20 0 v44 z"/>
+ </g>
+ <text class="m" x="276" y="144">2 Villus: about 10x</text>
+ <g stroke="#f2b705" stroke-width="2.4" fill="none">
+  <path d="M480 120 v-26 M488 120 v-26 M496 120 v-26 M504 120 v-26 M512 120 v-26 M520 120 v-26 M528 120 v-26"/>
+ </g>
+ <text class="m" x="476" y="144">3 Microvillus (brush border): about 20x</text>
+
+ <text class="th" x="20" y="186">B  Inside a villus</text>
+ <line x1="20" y1="196" x2="300" y2="196" stroke="#c6d2dd" stroke-width="1.5"/>
+ <path class="muc" d="M90 400 v-150 q30 -34 60 0 v150 z"/>
+ <ellipse class="cap" cx="110" cy="320" rx="9" ry="52"/>
+ <ellipse class="ly" cx="134" cy="320" rx="8" ry="46"/>
+ <text class="m" x="166" y="284">capillary: sugars,</text>
+ <text class="m" x="166" y="300">amino acids</text>
+ <text class="m" x="166" y="330">lacteal: chylomicrons</text>
+ <circle cx="120" cy="394" r="7" fill="#2e7d32"/>
+ <text class="m" x="134" y="398">crypt stem cells</text>
+ <text class="s" x="30" y="430">Epithelium is renewed every 3 to 5 days: one of the fastest dividing tissues.</text>
+
+ <text class="th" x="340" y="186">C  Transporters, apical and basolateral</text>
+ <line x1="340" y1="196" x2="860" y2="196" stroke="#c6d2dd" stroke-width="1.5"/>
+
+ <rect class="cell" x="420" y="236" width="340" height="120" rx="8"/>
+ <text class="m" x="340" y="230">LUMEN (apical side)</text>
+ <text class="m" x="340" y="378">BLOOD (basolateral side)</text>
+
+ <rect class="tr" x="440" y="226" width="54" height="20" rx="5"/>
+ <text class="m" x="444" y="241">SGLT1</text>
+ <path class="ar" d="M467 212 L467 230"/>
+ <text class="m" x="414" y="208">Na+ + glucose</text>
+
+ <rect class="tr" x="520" y="226" width="50" height="20" rx="5"/>
+ <text class="m" x="524" y="241">GLUT5</text>
+ <path class="ar" d="M545 212 L545 230"/>
+ <text class="m" x="520" y="208">fructose</text>
+
+ <rect class="tr" x="600" y="226" width="50" height="20" rx="5"/>
+ <text class="m" x="604" y="241">PepT1</text>
+ <path class="ar" d="M625 212 L625 230"/>
+ <text class="m" x="586" y="208">H+ + peptide</text>
+
+ <rect class="tr" x="680" y="226" width="60" height="20" rx="5"/>
+ <text class="m" x="684" y="241">AA carriers</text>
+ <path class="ar" d="M710 212 L710 230"/>
+ <text class="m" x="680" y="208">Na+ + AA</text>
+
+ <rect class="pmp" x="440" y="346" width="76" height="22" rx="5"/>
+ <text class="m" x="444" y="362">Na/K-ATPase</text>
+ <path class="ar" d="M478 372 L478 390"/>
+ <text class="s" x="420" y="406">keeps the Na+ gradient that</text>
+ <text class="s" x="420" y="422">powers SGLT1 and the AA carriers</text>
+
+ <rect class="tr" x="600" y="346" width="50" height="22" rx="5"/>
+ <text class="m" x="604" y="362">GLUT2</text>
+ <path class="ar" d="M625 372 L625 390"/>
+ <text class="m" x="600" y="406">sugars leave by diffusion</text>
+
+ <text class="m" x="680" y="300">water follows the osmotic gradient</text>
+ <path class="ar" d="M740 310 L740 344"/>
+ <text class="s" x="420" y="440">Oral rehydration works because Na+ and glucose must be given together: the cotransport pulls water with it.</text>
+</svg>

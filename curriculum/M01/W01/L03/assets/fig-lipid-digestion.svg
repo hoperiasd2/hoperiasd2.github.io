@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 450" width="880" height="450" role="img"
+ aria-label="The four stages of lipid digestion: emulsification by bile acids, action of lipase with colipase, transport by micelles across the unstirred water layer, and reassembly into chylomicrons inside the cell for entry into the lymphatic vessel.">
+ <style>
+  .bx{fill:#fff;stroke:#c6d2dd;stroke-width:1.8}.k{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .t{font:12px sans-serif;fill:#16191d}.tb{font:700 13px sans-serif;fill:#003c71}
+  .th{font:700 15px sans-serif;fill:#003c71}.s{font:11px sans-serif;fill:#4a5159}
+  .m{font:11px monospace;fill:#16191d}
+  .drop{fill:#fff5d6;stroke:#f2b705;stroke-width:2}
+  .ba{stroke:#2e7d32;stroke-width:3;fill:none}
+  .cell{fill:#e8eff6;stroke:#003c71;stroke-width:2.2}
+  .ar{stroke:#003c71;stroke-width:2.2;fill:none;marker-end:url(#a)}
+  .ly{fill:#fff;stroke:#2e7d32;stroke-width:2.4}
+ </style>
+ <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker></defs>
+
+ <rect class="k" x="20" y="44" width="840" height="34" rx="8"/>
+ <text class="tb" x="34" y="66">The one constraint: lipid does not dissolve in water. Every stage below follows from it.</text>
+
+ <text class="th" x="20" y="110">1  Emulsification: make surface area</text>
+ <line x1="20" y1="120" x2="430" y2="120" stroke="#c6d2dd" stroke-width="1.5"/>
+ <circle class="drop" cx="80" cy="182" r="40"/>
+ <text class="m" x="46" y="240">one large droplet</text>
+ <path class="ar" d="M134 182 L186 182"/>
+ <text class="s" x="130" y="170">bile acid</text>
+ <circle class="drop" cx="220" cy="160" r="13"/><circle class="drop" cx="256" cy="180" r="13"/>
+ <circle class="drop" cx="222" cy="200" r="13"/><circle class="drop" cx="258" cy="146" r="11"/>
+ <circle class="drop" cx="290" cy="166" r="11"/><circle class="drop" cx="288" cy="200" r="11"/>
+ <text class="m" x="212" y="240">many small droplets:</text>
+ <text class="m" x="212" y="256">same mass, far more surface</text>
+ <text class="s" x="30" y="276">Bile acid has a water-liking face and a lipid-liking face, so it sits at the</text>
+ <text class="s" x="30" y="294">droplet surface, splits it and keeps the pieces from merging again.</text>
+
+ <text class="th" x="460" y="110">2  Hydrolysis: lipase with colipase</text>
+ <line x1="460" y1="120" x2="860" y2="120" stroke="#c6d2dd" stroke-width="1.5"/>
+ <circle class="drop" cx="540" cy="180" r="34"/>
+ <path class="ba" d="M520 150 l0 -14 M540 146 l0 -14 M560 150 l0 -14"/>
+ <rect class="bx" x="596" y="150" width="70" height="30" rx="6"/>
+ <text class="m" x="606" y="170">lipase</text>
+ <rect class="k" x="596" y="186" width="70" height="28" rx="6"/>
+ <text class="m" x="602" y="205">colipase</text>
+ <path class="ar" d="M592 196 L578 190"/>
+ <text class="s" x="460" y="240">Bile acid covering the surface would block lipase; colipase anchors</text>
+ <text class="s" x="460" y="258">lipase to the substrate. Lipase cuts positions 1 and 3.</text>
+ <text class="m" x="460" y="286">Triacylglycerol  to  2 fatty acids + 2-monoacylglycerol</text>
+
+ <text class="th" x="20" y="326">3  Micelle: carry the products through the water layer</text>
+ <line x1="20" y1="336" x2="430" y2="336" stroke="#c6d2dd" stroke-width="1.5"/>
+ <circle cx="110" cy="394" r="32" fill="#fff" stroke="#2e7d32" stroke-width="2.4"/>
+ <circle cx="110" cy="394" r="17" fill="#fff5d6" stroke="#f2b705" stroke-width="1.8"/>
+ <path class="ba" d="M110 362 l0 -10 M82 380 l-9 -5 M82 408 l-9 5 M110 426 l0 10 M138 380 l9 -5 M138 408 l9 5"/>
+ <text class="m" x="156" y="382">water-liking faces out,</text>
+ <text class="m" x="156" y="398">lipid-liking faces in</text>
+ <text class="m" x="156" y="420">cargo: fatty acid, MAG,</text>
+ <text class="m" x="156" y="436">cholesterol, vitamins A D E K</text>
+ <text class="s" x="30" y="440">Bile acid itself is not absorbed here; it stays and is reused.</text>
+
+ <text class="th" x="460" y="326">4  Reassembly and lymphatic exit</text>
+ <line x1="460" y1="336" x2="860" y2="336" stroke="#c6d2dd" stroke-width="1.5"/>
+ <rect class="cell" x="470" y="350" width="200" height="86" rx="10"/>
+ <text class="m" x="480" y="372">fatty acid + MAG enter</text>
+ <path class="ar" d="M480 380 L480 396"/>
+ <text class="m" x="480" y="412">rebuilt to triacylglycerol,</text>
+ <text class="m" x="480" y="428">packed with apoB-48</text>
+ <path class="ar" d="M676 394 L714 394"/>
+ <ellipse class="ly" cx="784" cy="394" rx="64" ry="30"/>
+ <text class="m" x="748" y="390">Lacteal</text>
+ <text class="s" x="730" y="412">(lymphatic)</text>
+ <text class="s" x="460" y="310">Chylomicrons are too large for a capillary, so lipid bypasses the liver and reaches the circulation through the thoracic duct.</text>
+</svg>
