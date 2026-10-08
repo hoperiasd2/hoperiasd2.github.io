@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 450" width="880" height="450" role="img" aria-label="Mitochondrial compartments: outer membrane with porins, intermembrane space, inner membrane folded into cristae, and matrix">
+<defs>
+<marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#16191d"/></marker>
+</defs>
+<rect width="880" height="450" fill="#ffffff"/>
+<text x="20" y="30" font-size="18" font-weight="bold" fill="#003c71">Mitochondrial compartments</text>
+
+<rect x="40" y="80" width="470" height="290" rx="140" ry="140" fill="#eef4f8" stroke="#16191d" stroke-width="3"/>
+<rect x="58" y="98" width="434" height="254" rx="118" ry="118" fill="#ffffff" stroke="#003c71" stroke-width="3"/>
+
+<rect x="125" y="94" width="28" height="170" rx="14" fill="#ffffff" stroke="#003c71" stroke-width="2.5"/>
+<rect x="212" y="94" width="28" height="200" rx="14" fill="#ffffff" stroke="#003c71" stroke-width="2.5"/>
+<rect x="299" y="94" width="28" height="170" rx="14" fill="#ffffff" stroke="#003c71" stroke-width="2.5"/>
+<rect x="386" y="94" width="28" height="140" rx="14" fill="#ffffff" stroke="#003c71" stroke-width="2.5"/>
+
+<circle cx="86" cy="140" r="5" fill="#f2b705" stroke="#16191d" stroke-width="1.5"/>
+<circle cx="66" cy="200" r="5" fill="#f2b705" stroke="#16191d" stroke-width="1.5"/>
+<circle cx="90" cy="300" r="5" fill="#f2b705" stroke="#16191d" stroke-width="1.5"/>
+
+<text x="250" y="330" font-size="15" font-weight="bold" fill="#16191d" text-anchor="middle">Matrix</text>
+<text x="250" y="350" font-size="11.5" fill="#4a5159" text-anchor="middle">mtDNA, TCA-cycle enzymes, mitoribosomes</text>
+<text x="169" y="286" font-size="11.5" fill="#4a5159">Crista lumen</text>
+<text x="169" y="300" font-size="11.5" fill="#4a5159">(continuous with IMS)</text>
+
+<line x1="150" y1="60" x2="150" y2="92" stroke="#16191d" stroke-width="1.5" marker-end="url(#ar)"/>
+<text x="150" y="54" font-size="12" fill="#16191d" text-anchor="middle">Crista</text>
+<line x1="470" y1="62" x2="440" y2="96" stroke="#16191d" stroke-width="1.5" marker-end="url(#ar)"/>
+<text x="478" y="56" font-size="12" fill="#16191d">Intermembrane space (IMS)</text>
+<line x1="104" y1="400" x2="78" y2="356" stroke="#16191d" stroke-width="1.5" marker-end="url(#ar)"/>
+<text x="110" y="408" font-size="12" fill="#16191d">Outer membrane (porin, yellow)</text>
+<line x1="330" y1="400" x2="300" y2="358" stroke="#003c71" stroke-width="1.5" marker-end="url(#ar)"/>
+<text x="336" y="408" font-size="12" fill="#003c71">Inner membrane</text>
+
+<rect x="548" y="78" width="312" height="150" rx="6" fill="#ffffff" stroke="#c6d2dd" stroke-width="1.5"/>
+<text x="564" y="100" font-size="13.5" font-weight="bold" fill="#003c71">Outer membrane</text>
+<text x="564" y="122" font-size="12" fill="#16191d">· Porins: freely permeable to &lt; ~5 kDa</text>
+<text x="564" y="142" font-size="12" fill="#16191d">· No electrochemical gradient across it</text>
+<text x="564" y="162" font-size="12" fill="#16191d">· Tom complex (import), SAM (beta-barrels)</text>
+<text x="564" y="182" font-size="12" fill="#16191d">· Mfn1 / Mfn2 (fusion), Drp1 site (fission)</text>
+<text x="564" y="206" font-size="11.5" fill="#4a5159">Protein : lipid mass ratio ~ 1 : 1</text>
+
+<rect x="548" y="244" width="312" height="186" rx="6" fill="#fff5d6" stroke="#c6d2dd" stroke-width="1.5"/>
+<text x="564" y="266" font-size="13.5" font-weight="bold" fill="#003c71">Inner membrane</text>
+<text x="564" y="288" font-size="12" fill="#16191d">· Impermeable; specific carriers only</text>
+<text x="564" y="308" font-size="12" fill="#16191d">· Cardiolipin ~ 20% of phospholipid</text>
+<text x="564" y="328" font-size="12" fill="#16191d">· Respiratory complexes I–IV, ATP synthase</text>
+<text x="564" y="348" font-size="12" fill="#16191d">· Tim23 / Tim22 translocases</text>
+<text x="564" y="368" font-size="12" fill="#16191d">· Cristae enlarge the area up to ~5-fold</text>
+<text x="564" y="394" font-size="11.5" fill="#4a5159">Protein : lipid mass ratio ~ 3 : 1</text>
+<text x="564" y="414" font-size="11.5" fill="#4a5159">Holds the proton-motive force</text>
+</svg>

@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 400" width="880" height="400" role="img" aria-label="Mitochondrial fusion by mitofusins and Opa1, fission by Drp1, and removal of damaged mitochondria by PINK1-Parkin mitophagy">
+<defs>
+<marker id="a2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#16191d"/></marker>
+</defs>
+<rect width="880" height="400" fill="#ffffff"/>
+<text x="20" y="30" font-size="18" font-weight="bold" fill="#003c71">Fusion, fission and mitophagy</text>
+
+<text x="20" y="62" font-size="13.5" font-weight="bold" fill="#16191d">FUSION</text>
+<rect x="24" y="76" width="92" height="46" rx="23" fill="#eef4f8" stroke="#16191d" stroke-width="2.5"/>
+<rect x="24" y="134" width="92" height="46" rx="23" fill="#eef4f8" stroke="#16191d" stroke-width="2.5"/>
+<line x1="132" y1="128" x2="196" y2="128" stroke="#16191d" stroke-width="2" marker-end="url(#a2)"/>
+<rect x="206" y="104" width="168" height="48" rx="24" fill="#eef4f8" stroke="#16191d" stroke-width="2.5"/>
+<text x="138" y="100" font-size="11.5" fill="#003c71">Mfn1 / Mfn2 (outer)</text>
+<text x="138" y="116" font-size="11.5" fill="#003c71">Opa1 (inner)</text>
+<text x="290" y="172" font-size="11.5" fill="#4a5159" text-anchor="middle">content mixing, mtDNA complementation</text>
+
+<text x="20" y="214" font-size="13.5" font-weight="bold" fill="#16191d">FISSION</text>
+<rect x="24" y="228" width="168" height="48" rx="24" fill="#eef4f8" stroke="#16191d" stroke-width="2.5"/>
+<rect x="100" y="222" width="14" height="60" rx="6" fill="#f2b705" stroke="#16191d" stroke-width="1.5"/>
+<text x="24" y="302" font-size="11.5" fill="#003c71">Drp1 ring (recruited by Mff / Fis1,</text>
+<text x="24" y="318" font-size="11.5" fill="#003c71">at ER contact sites) constricts and cuts</text>
+<line x1="206" y1="252" x2="266" y2="252" stroke="#16191d" stroke-width="2" marker-end="url(#a2)"/>
+<rect x="278" y="228" width="80" height="46" rx="23" fill="#eef4f8" stroke="#16191d" stroke-width="2.5"/>
+<rect x="278" y="286" width="80" height="46" rx="23" fill="#eef4f8" stroke="#c0392b" stroke-width="2.5" stroke-dasharray="6 4"/>
+<text x="366" y="254" font-size="11.5" fill="#4a5159">healthy daughter</text>
+<text x="366" y="313" font-size="11.5" fill="#c0392b">damaged daughter</text>
+
+<line x1="470" y1="309" x2="536" y2="309" stroke="#16191d" stroke-width="2" marker-end="url(#a2)"/>
+<text x="560" y="214" font-size="13.5" font-weight="bold" fill="#16191d">MITOPHAGY</text>
+<rect x="548" y="236" width="312" height="140" rx="6" fill="#fff5d6" stroke="#c6d2dd" stroke-width="1.5"/>
+<text x="564" y="260" font-size="12" fill="#16191d">1. Loss of inner-membrane potential</text>
+<text x="564" y="282" font-size="12" fill="#16191d">2. PINK1 is no longer imported, accumulates</text>
+<text x="564" y="304" font-size="12" fill="#16191d">3. PINK1 recruits and activates Parkin</text>
+<text x="564" y="326" font-size="12" fill="#16191d">4. Ubiquitination of outer-membrane proteins</text>
+<text x="564" y="348" font-size="12" fill="#16191d">5. Autophagosome engulfs the organelle</text>
+<text x="564" y="368" font-size="11.5" fill="#4a5159">PINK1 and PRKN mutations: Parkinson disease</text>
+
+<rect x="548" y="60" width="312" height="150" rx="6" fill="#ffffff" stroke="#c6d2dd" stroke-width="1.5"/>
+<text x="564" y="84" font-size="13.5" font-weight="bold" fill="#003c71">Why the network matters</text>
+<text x="564" y="106" font-size="12" fill="#16191d">· Fusion dilutes mutant mtDNA and damage</text>
+<text x="564" y="126" font-size="12" fill="#16191d">· Fission allows transport on microtubules</text>
+<text x="564" y="146" font-size="12" fill="#16191d">· Fission segregates damage for mitophagy</text>
+<text x="564" y="166" font-size="12" fill="#16191d">· Balance sets network shape in each cell type</text>
+<text x="564" y="190" font-size="11.5" fill="#4a5159">MFN2: Charcot-Marie-Tooth 2A; OPA1: optic atrophy</text>
+</svg>
