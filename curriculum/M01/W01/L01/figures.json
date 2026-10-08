@@ -1,4 +1,113 @@
 {
   "lesson_id": "M01-W01-L01",
-  "figures": []
+  "figures": [
+    {
+      "figure_id": "fig-diffusion-limit",
+      "lesson_id": "M01-W01-L01",
+      "html_anchor": "#fig-diffusion-limit",
+      "caption": "확산 거리와 소요 시간의 관계, 그리고 대류와 확산이 역할을 나누는 구조. 확산 시간이 거리의 제곱에 비례하므로 몸집이 커지면 대류 수송이 필요해지고, 모세혈관은 마지막 확산 구간을 20 μm 이내로 줄이는 장치가 된다.",
+      "asset_path": "assets/fig-diffusion-limit.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-circulation-overview",
+      "lesson_id": "M01-W01-L01",
+      "html_anchor": "#fig-circulation-overview",
+      "caption": "폐순환과 전신순환의 직렬 배치, 그리고 전신 기관들의 병렬 배치. 각 구간의 산소 포화도와 대표 압력, 그리고 간과 신장에서 나타나는 직렬 모세혈관 배치를 함께 보인다.",
+      "asset_path": "assets/fig-circulation-overview.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-heart-anatomy",
+      "lesson_id": "M01-W01-L01",
+      "html_anchor": "#fig-heart-anatomy",
+      "caption": "심장의 네 개 방과 네 개 판막, 혈액의 흐름 방향, coronary artery의 분지, 그리고 좌·우 심실 벽 두께의 차이.",
+      "asset_path": "assets/fig-heart-anatomy.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-conduction-ecg",
+      "lesson_id": "M01-W01-L01",
+      "html_anchor": "#fig-conduction-ecg",
+      "caption": "심장 전도계의 경로와 각 지점의 활동전위 모양, 그리고 이들이 합쳐져 만들어지는 심전도 파형의 대응 관계. SA node의 pacemaker potential을 만드는 이온 전류를 함께 보인다.",
+      "asset_path": "assets/fig-conduction-ecg.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-cardiac-cycle",
+      "lesson_id": "M01-W01-L01",
+      "html_anchor": "#fig-cardiac-cycle",
+      "caption": "심주기 네 단계의 압력·용적 변화. 좌심실압, 좌심방압, aorta압의 곡선과 심실 용적 곡선, 판막 개폐 시점, 심음, 그리고 이를 압력–용적 고리로 다시 나타낸 그림.",
+      "asset_path": "assets/fig-cardiac-cycle.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-cardiac-output",
+      "lesson_id": "M01-W01-L01",
+      "html_anchor": "#fig-cardiac-output",
+      "caption": "심박출량을 결정하는 변수의 구조와 Frank–Starling 곡선. 전부하·수축력·후부하가 각각 곡선의 어느 방향으로 작용하는지, 그리고 심부전에서 곡선이 어떻게 이동하는지를 보인다.",
+      "asset_path": "assets/fig-cardiac-output.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-vessel-profile",
+      "lesson_id": "M01-W01-L01",
+      "html_anchor": "#fig-vessel-profile",
+      "caption": "혈관 구간별 벽 구조와 압력·혈류 속도·총단면적의 변화. 세동맥에서 압력이 급격히 떨어지는 이유와 모세혈관에서 혈류 속도가 가장 느려지는 이유를 함께 보인다.",
+      "asset_path": "assets/fig-vessel-profile.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-capillary-exchange",
+      "lesson_id": "M01-W01-L01",
+      "html_anchor": "#fig-capillary-exchange",
+      "caption": "모세혈관의 Starling 힘과 액체의 여과·재흡수. 시작부와 끝부분의 압력 수치, 순 여과압의 변화, 림프계의 회수 경로, 그리고 부종이 생기는 네 가지 경로를 함께 보인다.",
+      "asset_path": "assets/fig-capillary-exchange.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-bp-regulation",
+      "lesson_id": "M01-W01-L01",
+      "html_anchor": "#fig-bp-regulation",
+      "caption": "혈압 조절의 두 축. 압력수용체 반사의 구심·원심 경로와 RAAS의 단계, 그리고 각 축이 평균 동맥압 식의 어느 항을 바꾸는지를 함께 보인다.",
+      "asset_path": "assets/fig-bp-regulation.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    }
+  ]
 }

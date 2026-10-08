@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 430" width="880" height="430" role="img"
+ aria-label="The four chambers and four valves of the heart, the direction of blood flow, branching of the coronary arteries, and the difference in wall thickness between left and right ventricle.">
+ <style>
+  .bx{fill:#fff;stroke:#c6d2dd;stroke-width:1.8}.k{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .t{font:12px sans-serif;fill:#16191d}.tb{font:700 13px sans-serif;fill:#003c71}
+  .th{font:700 15px sans-serif;fill:#003c71}.s{font:11px sans-serif;fill:#4a5159}
+  .m{font:11px monospace;fill:#16191d}
+  .de{fill:#dce6f2;stroke:#1a4f8a;stroke-width:2}
+  .ox{fill:#f7dedc;stroke:#b3261e;stroke-width:2}
+  .wallR{fill:none;stroke:#1a4f8a;stroke-width:5}
+  .wallL{fill:none;stroke:#b3261e;stroke-width:14}
+  .vb{stroke:#003c71;stroke-width:2.6;fill:#fff}
+  .fd{stroke:#1a4f8a;stroke-width:3;fill:none;marker-end:url(#b)}
+  .fo{stroke:#b3261e;stroke-width:3;fill:none;marker-end:url(#r)}
+  .cor{stroke:#f2b705;stroke-width:3.4;fill:none}
+ </style>
+ <defs>
+  <marker id="r" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#b3261e"/></marker>
+  <marker id="b" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#1a4f8a"/></marker>
+ </defs>
+
+ <text class="th" x="20" y="28">A  Chambers, valves and the path of blood</text>
+ <line x1="20" y1="38" x2="560" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+
+ <path class="de" d="M120 110 h150 v70 h-150 z"/>
+ <text class="m" x="150" y="150">Right atrium</text>
+ <path class="ox" d="M290 110 h150 v70 h-150 z"/>
+ <text class="m" x="320" y="150">Left atrium</text>
+
+ <path class="de" d="M120 206 h150 v150 h-150 z"/>
+ <path class="wallR" d="M120 206 v150 h150 v-150"/>
+ <text class="m" x="146" y="286">Right ventricle</text>
+ <path class="ox" d="M290 206 h150 v150 h-150 z"/>
+ <path class="wallL" d="M297 213 v136 h136 v-136"/>
+ <text class="m" x="318" y="286">Left ventricle</text>
+
+ <path class="vb" d="M172 198 l12 14 h-24 z"/>
+ <path class="vb" d="M218 198 l12 14 h-24 z"/>
+ <text class="s" x="140" y="196">Tricuspid valve</text>
+ <path class="vb" d="M342 198 l12 14 h-24 z"/>
+ <path class="vb" d="M388 198 l12 14 h-24 z"/>
+ <text class="s" x="330" y="196">Mitral valve</text>
+
+ <path class="vb" d="M196 104 l10 -14 h-20 z"/>
+ <text class="s" x="140" y="86">Pulmonary valve</text>
+ <path class="vb" d="M366 104 l10 -14 h-20 z"/>
+ <text class="s" x="346" y="86">Aortic valve</text>
+
+ <path class="fd" d="M60 130 L114 130"/>
+ <text class="m" x="20" y="124">Vena cava</text>
+ <path class="fd" d="M196 206 L196 190 L196 110"/>
+ <path class="fd" d="M196 86 L196 60"/>
+ <text class="m" x="130" y="54">to pulmonary artery</text>
+ <path class="fo" d="M500 130 L446 130"/>
+ <text class="m" x="462" y="118">Pulmonary vein</text>
+ <path class="fo" d="M366 206 L366 110"/>
+ <path class="fo" d="M366 86 L366 60"/>
+ <text class="m" x="384" y="54">to aorta</text>
+
+ <path class="cor" d="M366 70 q40 10 44 60 q4 56 -24 90"/>
+ <path class="cor" d="M366 70 q-60 16 -72 70"/>
+ <text class="s" x="416" y="212">Coronary artery</text>
+ <text class="s" x="416" y="228">leaves just above</text>
+ <text class="s" x="416" y="244">the aortic valve</text>
+
+ <text class="s" x="120" y="384">Chordae tendineae and papillary muscle hold the AV valve</text>
+ <text class="s" x="120" y="402">so it cannot invert when the ventricle contracts</text>
+ <path class="vb" d="M186 356 l10 -10 l10 10 z"/>
+ <path d="M196 346 L196 212" stroke="#4a5159" stroke-width="1.2" stroke-dasharray="3 3"/>
+
+ <text class="th" x="590" y="28">B  Why the walls differ</text>
+ <line x1="590" y1="38" x2="860" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+ <rect class="bx" x="590" y="54" width="270" height="130" rx="8"/>
+ <text class="t" x="604" y="80">Right ventricle pumps into the</text>
+ <text class="t" x="604" y="100">low-resistance pulmonary circuit:</text>
+ <text class="t" x="604" y="118">about 25/8 mmHg, thin wall</text>
+ <text class="t" x="604" y="144">Left ventricle pumps into the</text>
+ <text class="t" x="604" y="162">high-resistance systemic circuit:</text>
+ <text class="t" x="604" y="178">about 120/8 mmHg, wall 3x thicker</text>
+
+ <text class="th" x="590" y="226">C  Three layers of the wall</text>
+ <line x1="590" y1="236" x2="860" y2="236" stroke="#c6d2dd" stroke-width="1.5"/>
+ <rect x="604" y="252" width="240" height="12" fill="#eef3f8" stroke="#6b8ba8" stroke-width="1.6"/>
+ <text class="m" x="604" y="278">Endocardium (inner lining)</text>
+ <rect x="604" y="288" width="240" height="30" fill="#f7dedc" stroke="#b3261e" stroke-width="1.6"/>
+ <text class="m" x="604" y="334">Myocardium (contractile muscle)</text>
+ <rect x="604" y="344" width="240" height="12" fill="#eef3f8" stroke="#6b8ba8" stroke-width="1.6"/>
+ <text class="m" x="604" y="370">Epicardium, then pericardium</text>
+ <text class="s" x="604" y="392">Fluid in the pericardial space reduces friction;</text>
+ <text class="s" x="604" y="408">rapid accumulation causes cardiac tamponade</text>
+</svg>

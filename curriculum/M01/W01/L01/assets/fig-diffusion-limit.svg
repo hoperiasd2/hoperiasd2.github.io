@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 400" width="880" height="400" role="img"
+ aria-label="Relationship between diffusion distance and the time required, and the division of labour between convection and diffusion. Diffusion time scales with the square of distance, so large bodies need convective transport, and the capillary keeps the final diffusion step within 20 micrometres.">
+ <style>
+  .bx{fill:#fff;stroke:#c6d2dd;stroke-width:1.8}.k{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .t{font:12px sans-serif;fill:#16191d}.tb{font:700 13px sans-serif;fill:#003c71}
+  .th{font:700 15px sans-serif;fill:#003c71}.s{font:11px sans-serif;fill:#4a5159}
+  .m{font:11px monospace;fill:#16191d}
+  .ar{stroke:#003c71;stroke-width:2.2;fill:none;marker-end:url(#a)}
+  .ax{stroke:#16191d;stroke-width:1.8;fill:none}
+  .cur{stroke:#b3261e;stroke-width:2.6;fill:none}
+ </style>
+ <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker></defs>
+
+ <text class="th" x="20" y="28">A  Diffusion time grows with the square of distance</text>
+ <line x1="20" y1="38" x2="430" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+
+ <path class="ax" d="M80 300 L80 70"/>
+ <path class="ax" d="M80 300 L400 300"/>
+ <text class="s" x="34" y="200" transform="rotate(-90 44 200)">Time (log scale)</text>
+ <text class="s" x="190" y="328">Distance (log scale)</text>
+ <path class="cur" d="M96 290 L160 248 L240 180 L330 96"/>
+ <circle cx="96" cy="290" r="4" fill="#b3261e"/>
+ <circle cx="160" cy="248" r="4" fill="#b3261e"/>
+ <circle cx="240" cy="180" r="4" fill="#b3261e"/>
+ <circle cx="330" cy="96" r="4" fill="#b3261e"/>
+ <text class="m" x="100" y="282">10 um : 0.05 s</text>
+ <text class="m" x="164" y="240">100 um : 5 s</text>
+ <text class="m" x="200" y="172">1 mm : 8 min</text>
+ <text class="m" x="250" y="88">1 cm : about 14 h</text>
+ <text class="s" x="86" y="352">Slope of 2 on log axes: t is proportional to the square of x</text>
+
+ <text class="th" x="460" y="28">B  Convection delivers, diffusion finishes</text>
+ <line x1="460" y1="38" x2="860" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+
+ <rect class="bx" x="460" y="54" width="400" height="92" rx="8"/>
+ <text class="tb" x="474" y="78">Three parts of a circulatory system</text>
+ <text class="t" x="474" y="102">Pump: the heart gives the fluid energy</text>
+ <text class="t" x="474" y="122">Tubes: vessels deliver it to the destination</text>
+ <text class="t" x="474" y="140">Medium: blood carries the dissolved load</text>
+
+ <rect x="470" y="186" width="300" height="26" rx="13" fill="#b3261e" opacity="0.18" stroke="#b3261e" stroke-width="1.6"/>
+ <text class="m" x="486" y="204">Convection: bulk flow, metres in seconds</text>
+ <path class="ar" d="M476 240 L760 240"/>
+ <text class="s" x="476" y="258">artery to arteriole to capillary</text>
+
+ <g>
+  <rect x="470" y="290" width="300" height="20" fill="#f3dcda" stroke="#b3261e" stroke-width="1.6"/>
+  <text class="m" x="486" y="305">capillary lumen</text>
+  <circle cx="800" cy="300" r="22" fill="#e8eff6" stroke="#003c71" stroke-width="2"/>
+  <text class="m" x="788" y="304">cell</text>
+  <path class="ar" d="M774 300 L774 300"/>
+  <line x1="770" y1="300" x2="776" y2="300" stroke="#003c71" stroke-width="2"/>
+  <path d="M772 300 L778 300" stroke="#003c71" stroke-width="2"/>
+ </g>
+ <text class="s" x="470" y="336">Final step is diffusion again, but only about 20 um:</text>
+ <text class="s" x="470" y="352">fast enough. Keeping that distance short is the design rule.</text>
+ <text class="m" x="700" y="282">20 um</text>
+ <line x1="770" y1="276" x2="800" y2="276" stroke="#8a6300" stroke-width="2"/>
+</svg>

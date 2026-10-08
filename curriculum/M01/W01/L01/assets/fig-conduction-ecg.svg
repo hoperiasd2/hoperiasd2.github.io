@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 450" width="880" height="450" role="img"
+ aria-label="Path of the cardiac conduction system, the action potential shape at each site, and how these combine into the electrocardiogram waveform, together with the ion currents that generate the pacemaker potential of the SA node.">
+ <style>
+  .bx{fill:#fff;stroke:#c6d2dd;stroke-width:1.8}.k{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .t{font:12px sans-serif;fill:#16191d}.tb{font:700 13px sans-serif;fill:#003c71}
+  .th{font:700 15px sans-serif;fill:#003c71}.s{font:11px sans-serif;fill:#4a5159}
+  .m{font:11px monospace;fill:#16191d}
+  .heart{fill:#f7f9fb;stroke:#4a5159;stroke-width:1.8}
+  .cond{stroke:#f2b705;stroke-width:3.4;fill:none}
+  .ap{stroke:#b3261e;stroke-width:2.4;fill:none}
+  .ax{stroke:#16191d;stroke-width:1.6;fill:none}
+  .ecg{stroke:#003c71;stroke-width:2.4;fill:none}
+ </style>
+
+ <text class="th" x="20" y="28">A  Conduction path</text>
+ <line x1="20" y1="38" x2="300" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+
+ <path class="heart" d="M60 70 h200 v70 h-200 z"/>
+ <path class="heart" d="M60 150 h200 v180 h-200 z"/>
+ <circle cx="96" cy="86" r="8" fill="#f2b705" stroke="#8a6300" stroke-width="2"/>
+ <text class="m" x="110" y="90">1  SA node</text>
+ <path class="cond" d="M96 94 q40 30 64 46"/>
+ <circle cx="162" cy="144" r="7" fill="#f2b705" stroke="#8a6300" stroke-width="2"/>
+ <text class="m" x="176" y="140">3  AV node</text>
+ <text class="m" x="68" y="124">2  atrial muscle</text>
+ <path class="cond" d="M162 150 L162 226"/>
+ <text class="m" x="172" y="196">4  His bundle</text>
+ <path class="cond" d="M162 226 L110 290 M162 226 L214 290"/>
+ <path class="cond" d="M110 290 q-16 24 6 32 M214 290 q16 24 -6 32"/>
+ <text class="m" x="64" y="320">5  Purkinje fibres</text>
+ <text class="s" x="60" y="352">AV node delays about 0.1 s, so the</text>
+ <text class="s" x="60" y="368">atria finish before the ventricles start</text>
+
+ <text class="th" x="330" y="28">B  Action potential at each site</text>
+ <line x1="330" y1="38" x2="610" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+
+ <path class="ax" d="M350 130 L350 56 M350 130 L590 130"/>
+ <text class="s" x="356" y="52">SA node: no resting potential</text>
+ <path class="ap" d="M356 124 q24 -16 34 -34 q8 -24 18 -4 q6 24 20 38 q20 -14 30 -32 q8 -24 18 -4 q6 24 20 38 q20 -14 30 -32"/>
+ <text class="m" x="356" y="148">pacemaker potential, I_f current</text>
+
+ <path class="ax" d="M350 280 L350 180 M350 280 L590 280"/>
+ <text class="s" x="356" y="176">Ventricular myocyte: long plateau</text>
+ <path class="ap" d="M356 272 L396 272 L400 194 L412 206 L500 212 L520 268 L580 270"/>
+ <text class="m" x="404" y="188">0</text><text class="m" x="416" y="200">1</text>
+ <text class="m" x="450" y="206">2 plateau</text><text class="m" x="516" y="262">3</text>
+ <text class="m" x="356" y="298">200 to 300 ms: long refractory period,</text>
+ <text class="m" x="356" y="314">so contractions cannot summate</text>
+
+ <text class="th" x="630" y="28">C  Electrocardiogram</text>
+ <line x1="630" y1="38" x2="860" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+ <path class="ax" d="M646 200 L860 200"/>
+ <path class="ecg" d="M650 200 q12 -16 24 0 L700 200 L710 210 L720 140 L732 230 L742 200 L780 200 q16 -22 32 0 L856 200"/>
+ <text class="m" x="654" y="178">P</text>
+ <text class="m" x="714" y="132">R</text>
+ <text class="m" x="704" y="226">Q</text>
+ <text class="m" x="732" y="246">S</text>
+ <text class="m" x="786" y="176">T</text>
+ <text class="s" x="646" y="266">P: atrial depolarisation</text>
+ <text class="s" x="646" y="284">QRS: ventricular depolarisation</text>
+ <text class="s" x="646" y="302">T: ventricular repolarisation</text>
+ <text class="s" x="646" y="326">PR interval: AV node delay</text>
+
+ <text class="th" x="330" y="358">D  Autonomic control of the SA node</text>
+ <line x1="330" y1="368" x2="860" y2="368" stroke="#c6d2dd" stroke-width="1.5"/>
+ <rect class="bx" x="330" y="382" width="256" height="58" rx="8"/>
+ <text class="t" x="344" y="404">Sympathetic: noradrenaline, beta-1,</text>
+ <text class="t" x="344" y="424">cAMP binds I_f channel, rate rises</text>
+ <rect class="bx" x="604" y="382" width="256" height="58" rx="8"/>
+ <text class="t" x="618" y="404">Parasympathetic: acetylcholine, M2,</text>
+ <text class="t" x="618" y="424">more K+ current and less I_f, rate falls</text>
+</svg>

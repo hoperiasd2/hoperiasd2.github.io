@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 420" width="880" height="420" role="img"
+ aria-label="Structure of the variables that determine cardiac output and the Frank-Starling curve, showing which direction preload, contractility and afterload act in, and how the curve shifts in heart failure.">
+ <style>
+  .bx{fill:#fff;stroke:#c6d2dd;stroke-width:1.8}.k{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .t{font:12px sans-serif;fill:#16191d}.tb{font:700 13px sans-serif;fill:#003c71}
+  .th{font:700 15px sans-serif;fill:#003c71}.s{font:11px sans-serif;fill:#4a5159}
+  .m{font:11px monospace;fill:#16191d}
+  .ar{stroke:#003c71;stroke-width:2.2;fill:none;marker-end:url(#a)}
+  .ax{stroke:#16191d;stroke-width:1.8;fill:none}
+  .cn{stroke:#003c71;stroke-width:2.6;fill:none}
+  .cu{stroke:#2e7d32;stroke-width:2.6;fill:none}
+  .cd{stroke:#b3261e;stroke-width:2.6;fill:none;stroke-dasharray:7 4}
+ </style>
+ <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker></defs>
+
+ <text class="th" x="20" y="28">A  What cardiac output is made of</text>
+ <line x1="20" y1="38" x2="420" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+
+ <rect class="k" x="20" y="54" width="400" height="48" rx="8"/>
+ <text class="tb" x="34" y="84">Cardiac output = heart rate x stroke volume    (about 5 L/min at rest)</text>
+
+ <rect class="bx" x="20" y="124" width="180" height="60" rx="8"/>
+ <text class="tb" x="34" y="148">Heart rate</text>
+ <text class="s" x="34" y="170">set at the SA node by the autonomic nerves</text>
+ <rect class="bx" x="240" y="124" width="180" height="60" rx="8"/>
+ <text class="tb" x="254" y="148">Stroke volume</text>
+ <text class="s" x="254" y="170">set by three factors below</text>
+
+ <path class="ar" d="M330 186 L330 206"/>
+ <rect class="bx" x="20" y="212" width="400" height="140" rx="8"/>
+ <text class="tb" x="34" y="236">Preload</text>
+ <text class="t" x="110" y="236">end-diastolic volume; set by venous return</text>
+ <text class="tb" x="34" y="276">Contractility</text>
+ <text class="t" x="130" y="276">force at a given preload; raised by</text>
+ <text class="t" x="130" y="294">sympathetic beta-1, cAMP, PKA</text>
+ <text class="tb" x="34" y="332">Afterload</text>
+ <text class="t" x="118" y="332">arterial pressure the ventricle must overcome</text>
+
+ <text class="s" x="20" y="382">Blood volume is about 5 L, so the whole volume circulates once per minute.</text>
+ <text class="s" x="20" y="400">Exercise raises output to 20 to 25 L/min, and to 35 L/min in trained athletes.</text>
+
+ <text class="th" x="450" y="28">B  Frank-Starling curve</text>
+ <line x1="450" y1="38" x2="860" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+
+ <path class="ax" d="M500 320 L500 60 M500 320 L850 320"/>
+ <text class="s" x="452" y="200" transform="rotate(-90 462 200)">Stroke volume</text>
+ <text class="s" x="620" y="346">Preload (end-diastolic volume)</text>
+
+ <path class="cu" d="M506 300 Q580 180 700 118 Q780 90 844 82"/>
+ <path class="cn" d="M506 310 Q600 232 700 192 Q780 170 844 162"/>
+ <path class="cd" d="M506 316 Q620 290 720 272 Q790 262 844 258"/>
+ <text class="m" x="690" y="106">increased contractility</text>
+ <text class="m" x="690" y="186">normal</text>
+ <text class="m" x="640" y="290">heart failure</text>
+
+ <circle cx="640" cy="212" r="5" fill="#003c71"/>
+ <text class="m" x="552" y="208">normal operating point</text>
+ <circle cx="800" cy="260" r="5" fill="#b3261e"/>
+ <path class="ar" d="M652 216 L788 256"/>
+ <text class="s" x="560" y="376">In heart failure the same stroke volume needs a much higher preload,</text>
+ <text class="s" x="560" y="394">so filling pressure rises and venous congestion appears.</text>
+</svg>

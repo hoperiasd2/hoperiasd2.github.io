@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 440" width="880" height="440" role="img"
+ aria-label="Two axes of blood pressure control: the afferent and efferent paths of the baroreceptor reflex and the steps of the renin angiotensin aldosterone system, and which term of the mean arterial pressure equation each axis changes.">
+ <style>
+  .bx{fill:#fff;stroke:#c6d2dd;stroke-width:1.8}.k{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .t{font:12px sans-serif;fill:#16191d}.tb{font:700 13px sans-serif;fill:#003c71}
+  .th{font:700 15px sans-serif;fill:#003c71}.s{font:11px sans-serif;fill:#4a5159}
+  .m{font:11px monospace;fill:#16191d}
+  .ar{stroke:#003c71;stroke-width:2.2;fill:none;marker-end:url(#a)}
+  .arg{stroke:#2e7d32;stroke-width:2.2;fill:none;marker-end:url(#g)}
+ </style>
+ <defs>
+  <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker>
+  <marker id="g" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#2e7d32"/></marker>
+ </defs>
+
+ <rect class="k" x="20" y="48" width="840" height="36" rx="8"/>
+ <text class="tb" x="34" y="72">Mean arterial pressure = cardiac output x systemic vascular resistance        MAP = diastolic + (systolic - diastolic) / 3</text>
+
+ <text class="th" x="20" y="118">A  Baroreceptor reflex: seconds to minutes</text>
+ <line x1="20" y1="128" x2="430" y2="128" stroke="#c6d2dd" stroke-width="1.5"/>
+
+ <rect class="bx" x="20" y="142" width="200" height="50" rx="8"/>
+ <text class="tb" x="34" y="164">Blood pressure falls</text>
+ <text class="s" x="34" y="182">vessel wall stretches less</text>
+ <path class="ar" d="M226 166 L270 166"/>
+ <rect class="bx" x="278" y="142" width="150" height="50" rx="8"/>
+ <text class="tb" x="292" y="164">Baroreceptors</text>
+ <text class="s" x="292" y="182">carotid sinus, aortic arch</text>
+
+ <path class="ar" d="M224 198 L224 222"/>
+ <rect class="bx" x="20" y="228" width="408" height="46" rx="8"/>
+ <text class="tb" x="34" y="252">Afferent signal decreases to the brainstem cardiovascular centre</text>
+ <path class="ar" d="M224 280 L224 302"/>
+
+ <rect class="bx" x="20" y="308" width="198" height="104" rx="8"/>
+ <text class="tb" x="34" y="332">Sympathetic up</text>
+ <text class="t" x="34" y="354">heart rate and contractility up</text>
+ <text class="t" x="34" y="374">arterioles constrict: resistance up</text>
+ <text class="t" x="34" y="394">veins constrict: venous return up</text>
+ <rect class="bx" x="230" y="308" width="198" height="104" rx="8"/>
+ <text class="tb" x="244" y="332">Parasympathetic down</text>
+ <text class="t" x="244" y="354">less vagal brake on the</text>
+ <text class="t" x="244" y="374">SA node, so rate rises</text>
+ <text class="s" x="244" y="398">changes CO and SVR together</text>
+
+ <text class="th" x="460" y="118">B  Renin-angiotensin-aldosterone: hours to days</text>
+ <line x1="460" y1="128" x2="860" y2="128" stroke="#c6d2dd" stroke-width="1.5"/>
+
+ <rect class="bx" x="460" y="142" width="400" height="34" rx="7"/>
+ <text class="t" x="474" y="164">Renal perfusion falls, so the kidney releases renin</text>
+ <path class="arg" d="M660 180 L660 198"/>
+ <rect class="bx" x="460" y="202" width="400" height="34" rx="7"/>
+ <text class="t" x="474" y="224">Renin cleaves angiotensinogen to angiotensin I</text>
+ <path class="arg" d="M660 240 L660 258"/>
+ <rect class="bx" x="460" y="262" width="400" height="34" rx="7"/>
+ <text class="t" x="474" y="284">ACE converts angiotensin I to angiotensin II</text>
+ <path class="arg" d="M560 300 L560 320"/>
+ <path class="arg" d="M660 300 L660 320"/>
+ <path class="arg" d="M770 300 L770 320"/>
+
+ <rect class="k" x="460" y="324" width="126" height="88" rx="7"/>
+ <text class="tb" x="472" y="346">Arterioles</text>
+ <text class="t" x="472" y="368">constrict at once:</text>
+ <text class="t" x="472" y="388">resistance up</text>
+ <rect class="k" x="596" y="324" width="126" height="88" rx="7"/>
+ <text class="tb" x="608" y="346">Adrenal cortex</text>
+ <text class="t" x="608" y="368">aldosterone: renal</text>
+ <text class="t" x="608" y="388">Na+ reabsorption up</text>
+ <rect class="k" x="732" y="324" width="128" height="88" rx="7"/>
+ <text class="tb" x="744" y="346">Hypothalamus</text>
+ <text class="t" x="744" y="368">thirst and ADH:</text>
+ <text class="t" x="744" y="388">blood volume up</text>
+
+ <text class="s" x="460" y="432">Baroreceptors reset within days, so they do not correct chronic hypertension. Long-term pressure is set by the kidney through blood volume.</text>
+</svg>

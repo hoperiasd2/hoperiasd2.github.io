@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 440" width="880" height="440" role="img"
+ aria-label="Starling forces at the capillary and the filtration and reabsorption of fluid. Pressure values at the arteriolar and venular ends, the change in net filtration pressure, the lymphatic return route, and the four routes by which oedema develops.">
+ <style>
+  .bx{fill:#fff;stroke:#c6d2dd;stroke-width:1.8}.k{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .t{font:12px sans-serif;fill:#16191d}.tb{font:700 13px sans-serif;fill:#003c71}
+  .th{font:700 15px sans-serif;fill:#003c71}.s{font:11px sans-serif;fill:#4a5159}
+  .m{font:11px monospace;fill:#16191d}
+  .cap{fill:#f7dedc;stroke:#b3261e;stroke-width:2}
+  .out{stroke:#b3261e;stroke-width:2.4;fill:none;marker-end:url(#r)}
+  .inn{stroke:#003c71;stroke-width:2.4;fill:none;marker-end:url(#a)}
+  .ly{stroke:#2e7d32;stroke-width:2.6;fill:none;marker-end:url(#g)}
+ </style>
+ <defs>
+  <marker id="r" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#b3261e"/></marker>
+  <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker>
+  <marker id="g" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#2e7d32"/></marker>
+ </defs>
+
+ <text class="th" x="20" y="28">A  Four Starling forces across the capillary wall</text>
+ <line x1="20" y1="38" x2="860" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+
+ <rect class="k" x="20" y="52" width="840" height="36" rx="8"/>
+ <text class="tb" x="34" y="76">Net filtration pressure = (P_c - P_i) - (pi_c - pi_i)      outward if positive, inward if negative</text>
+
+ <rect class="cap" x="120" y="180" width="580" height="46" rx="10"/>
+ <text class="m" x="360" y="208">Capillary lumen</text>
+ <text class="m" x="60" y="206">Arteriolar end</text>
+ <text class="m" x="712" y="206">Venular end</text>
+
+ <path class="out" d="M190 180 L190 132"/>
+ <text class="m" x="150" y="124">P_c 35</text>
+ <path class="inn" d="M230 126 L230 174"/>
+ <text class="m" x="212" y="118">pi_c 25</text>
+ <path class="inn" d="M190 274 L190 232"/>
+ <text class="m" x="156" y="292">P_i about 0</text>
+ <path class="out" d="M250 232 L250 274"/>
+ <text class="m" x="232" y="292">pi_i 3</text>
+ <text class="tb" x="140" y="158">net +13: filtration</text>
+
+ <path class="inn" d="M600 132 L600 174"/>
+ <text class="m" x="572" y="124">P_c 15</text>
+ <path class="inn" d="M640 126 L640 174"/>
+ <text class="m" x="622" y="118">pi_c 25</text>
+ <text class="tb" x="556" y="158">net -7: reabsorption</text>
+
+ <path class="ly" d="M320 282 Q420 306 520 282"/>
+ <rect class="bx" x="360" y="296" width="140" height="34" rx="6" stroke="#2e7d32"/>
+ <text class="m" x="372" y="318">Lymphatic vessel</text>
+ <text class="s" x="330" y="352">Filtration exceeds reabsorption by about 2 to 4 L per day;</text>
+ <text class="s" x="330" y="368">the lymphatic system collects this and returns it to the veins.</text>
+
+ <text class="th" x="20" y="400">B  Four routes to oedema</text>
+ <line x1="20" y1="408" x2="860" y2="408" stroke="#c6d2dd" stroke-width="1.5"/>
+ <text class="t" x="20" y="430">1 P_c up: heart failure, venous obstruction   2 pi_c down: cirrhosis, nephrotic syndrome   3 permeability up: inflammation, burns   4 lymphatic blockage</text>
+</svg>

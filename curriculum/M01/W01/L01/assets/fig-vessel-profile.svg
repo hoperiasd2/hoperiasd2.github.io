@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 450" width="880" height="450" role="img"
+ aria-label="Wall structure of each vascular segment and the change in pressure, flow velocity and total cross-sectional area along the circuit, showing why pressure falls steeply across the arterioles and why flow velocity is lowest in the capillaries.">
+ <style>
+  .bx{fill:#fff;stroke:#c6d2dd;stroke-width:1.8}.k{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .t{font:12px sans-serif;fill:#16191d}.tb{font:700 13px sans-serif;fill:#003c71}
+  .th{font:700 15px sans-serif;fill:#003c71}.s{font:11px sans-serif;fill:#4a5159}
+  .m{font:10px monospace;fill:#16191d}
+  .ax{stroke:#16191d;stroke-width:1.6;fill:none}
+  .pp{stroke:#b3261e;stroke-width:2.6;fill:none}
+  .vv{stroke:#003c71;stroke-width:2.6;fill:none}
+  .aa{stroke:#2e7d32;stroke-width:2.6;fill:none}
+  .endo{fill:#eef3f8;stroke:#6b8ba8;stroke-width:1.6}
+  .sm{fill:#f7dedc;stroke:#b3261e;stroke-width:1.6}
+  .el{fill:#fff5d6;stroke:#f2b705;stroke-width:1.6}
+ </style>
+
+ <text class="th" x="20" y="28">A  Wall structure of each segment</text>
+ <line x1="20" y1="38" x2="860" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+
+ <g>
+  <rect class="el" x="40" y="60" width="130" height="18"/>
+  <rect class="sm" x="40" y="78" width="130" height="14"/>
+  <rect class="endo" x="40" y="92" width="130" height="8"/>
+  <rect class="endo" x="40" y="100" width="130" height="8"/>
+  <rect class="sm" x="40" y="108" width="130" height="14"/>
+  <rect class="el" x="40" y="122" width="130" height="18"/>
+  <text class="tb" x="40" y="160">Artery</text>
+  <text class="s" x="40" y="178">elastin rich: stores volume in</text>
+  <text class="s" x="40" y="194">systole, releases it in diastole</text>
+  <text class="s" x="40" y="212">(Windkessel effect)</text>
+ </g>
+
+ <g>
+  <rect class="sm" x="236" y="68" width="120" height="26"/>
+  <rect class="endo" x="236" y="94" width="120" height="6"/>
+  <rect class="endo" x="236" y="100" width="120" height="6"/>
+  <rect class="sm" x="236" y="106" width="120" height="26"/>
+  <text class="tb" x="236" y="160">Arteriole</text>
+  <text class="s" x="236" y="178">thick smooth muscle: changes</text>
+  <text class="s" x="236" y="194">radius, so it sets resistance</text>
+  <text class="s" x="236" y="212">(resistance vessel)</text>
+ </g>
+
+ <g>
+  <rect class="endo" x="432" y="92" width="120" height="8"/>
+  <rect class="endo" x="432" y="100" width="120" height="8"/>
+  <text class="tb" x="432" y="160">Capillary</text>
+  <text class="s" x="432" y="178">one endothelial layer plus</text>
+  <text class="s" x="432" y="194">basement membrane: the only</text>
+  <text class="s" x="432" y="212">site of exchange</text>
+ </g>
+
+ <g>
+  <rect class="sm" x="628" y="78" width="130" height="12"/>
+  <rect class="endo" x="628" y="90" width="130" height="8"/>
+  <rect class="endo" x="628" y="102" width="130" height="8"/>
+  <rect class="sm" x="628" y="110" width="130" height="12"/>
+  <path d="M676 90 l14 10 l-14 10" fill="none" stroke="#003c71" stroke-width="2"/>
+  <path d="M712 110 l-14 -10 l14 -10" fill="none" stroke="#003c71" stroke-width="2"/>
+  <text class="tb" x="628" y="160">Vein</text>
+  <text class="s" x="628" y="178">thin and compliant, with valves:</text>
+  <text class="s" x="628" y="194">holds 60 to 70 percent of blood</text>
+  <text class="s" x="628" y="212">(capacitance vessel)</text>
+ </g>
+
+ <text class="th" x="20" y="256">B  Pressure, velocity and total cross-sectional area along the circuit</text>
+ <line x1="20" y1="266" x2="860" y2="266" stroke="#c6d2dd" stroke-width="1.5"/>
+
+ <path class="ax" d="M100 400 L100 282 M100 400 L820 400"/>
+ <text class="m" x="112" y="424">Aorta</text>
+ <text class="m" x="236" y="424">Arteries</text>
+ <text class="m" x="356" y="424">Arterioles</text>
+ <text class="m" x="492" y="424">Capillaries</text>
+ <text class="m" x="632" y="424">Veins</text>
+ <text class="m" x="748" y="424">Vena cava</text>
+
+ <path class="pp" d="M108 300 Q200 306 320 316 Q400 340 480 364 Q560 378 700 390 Q760 396 812 398"/>
+ <text class="m" x="130" y="294">Pressure: 100 mmHg, steep fall across arterioles</text>
+
+ <path class="vv" d="M108 312 Q220 338 340 362 Q440 388 520 392 Q620 380 720 346 Q780 326 812 316"/>
+ <text class="m" x="520" y="384">Velocity: lowest in capillaries</text>
+
+ <path class="aa" d="M108 396 Q240 392 340 376 Q440 300 520 290 Q620 316 720 358 Q780 378 812 388"/>
+ <text class="m" x="430" y="286">Total cross-sectional area: highest in capillaries</text>
+
+ <text class="s" x="100" y="444">Velocity is inversely proportional to total area, so blood spends about 1 s in a capillary: enough time to exchange.</text>
+</svg>
