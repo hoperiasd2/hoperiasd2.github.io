@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 430" width="880" height="430" role="img"
+ aria-label="Comparison of mitosis and meiosis: number of divisions after a single S phase, pairing of homologous chromosomes and crossing over, and the difference in what separates at the first division.">
+ <style>
+  .bx{fill:#fff;stroke:#c6d2dd;stroke-width:1.8}.k{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .t{font:12px sans-serif;fill:#16191d}.tb{font:700 13px sans-serif;fill:#003c71}
+  .th{font:700 15px sans-serif;fill:#003c71}.s{font:11px sans-serif;fill:#4a5159}
+  .ar{stroke:#003c71;stroke-width:2.2;fill:none;marker-end:url(#a)}
+  .cell{fill:#fff;stroke:#003c71;stroke-width:1.8}
+  .cm{stroke:#b3261e;stroke-width:4.5;fill:none;stroke-linecap:round}
+  .cp{stroke:#1a4f8a;stroke-width:4.5;fill:none;stroke-linecap:round}
+ </style>
+ <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker></defs>
+
+ <text class="th" x="20" y="28">A  Mitosis: one division, two identical diploid cells</text>
+ <line x1="20" y1="38" x2="860" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+
+ <ellipse class="cell" cx="80" cy="104" rx="52" ry="42"/>
+ <path class="cm" d="M64 86 v36"/><path class="cp" d="M96 86 v36"/>
+ <text class="s" x="34" y="162">2n, before S</text>
+ <path class="ar" d="M140 104 L186 104"/>
+ <text class="s" x="140" y="92">S phase</text>
+
+ <ellipse class="cell" cx="246" cy="104" rx="52" ry="42"/>
+ <path class="cm" d="M224 86 v36 M236 86 v36"/><path class="cp" d="M256 86 v36 M268 86 v36"/>
+ <text class="s" x="198" y="162">each chromosome duplicated</text>
+ <path class="ar" d="M306 104 L352 104"/>
+ <text class="s" x="300" y="92">one division</text>
+
+ <ellipse class="cell" cx="418" cy="72" rx="44" ry="32"/>
+ <path class="cm" d="M404 60 v26"/><path class="cp" d="M432 60 v26"/>
+ <ellipse class="cell" cx="418" cy="146" rx="44" ry="32"/>
+ <path class="cm" d="M404 134 v26"/><path class="cp" d="M432 134 v26"/>
+ <text class="s" x="372" y="192">2 cells, 2n each, genetically identical</text>
+
+ <rect class="bx" x="600" y="54" width="260" height="110" rx="8"/>
+ <text class="tb" x="614" y="78">What separates</text>
+ <text class="t" x="614" y="102">Sister chromatids separate.</text>
+ <text class="t" x="614" y="124">Homologues never pair, so there is</text>
+ <text class="t" x="614" y="142">no crossing over and the daughter</text>
+ <text class="t" x="614" y="160">cells keep the parental genotype.</text>
+
+ <text class="th" x="20" y="240">B  Meiosis: two divisions after one S phase, four haploid cells</text>
+ <line x1="20" y1="250" x2="860" y2="250" stroke="#c6d2dd" stroke-width="1.5"/>
+
+ <ellipse class="cell" cx="70" cy="320" rx="46" ry="38"/>
+ <path class="cm" d="M52 304 v32 M62 304 v32"/><path class="cp" d="M78 304 v32 M88 304 v32"/>
+ <text class="s" x="26" y="374">2n, after S</text>
+ <path class="ar" d="M124 320 L164 320"/>
+ <text class="s" x="112" y="308">pairing</text>
+
+ <ellipse class="cell" cx="224" cy="320" rx="50" ry="38"/>
+ <path class="cm" d="M206 302 v36 M214 302 v36"/>
+ <path class="cp" d="M234 302 v36 M242 302 v36"/>
+ <path d="M214 316 L234 324" stroke="#f2b705" stroke-width="3" fill="none"/>
+ <path d="M214 324 L234 316" stroke="#f2b705" stroke-width="3" fill="none"/>
+ <text class="s" x="178" y="374">bivalent with a crossover</text>
+ <text class="s" x="178" y="390">(prophase I)</text>
+ <path class="ar" d="M282 320 L322 320"/>
+ <text class="s" x="268" y="308">meiosis I</text>
+
+ <ellipse class="cell" cx="382" cy="286" rx="40" ry="30"/>
+ <path class="cm" d="M370 274 v24"/><path class="cp" d="M392 274 v24" stroke-dasharray="6 3"/>
+ <ellipse class="cell" cx="382" cy="356" rx="40" ry="30"/>
+ <path class="cp" d="M370 344 v24"/><path class="cm" d="M392 344 v24" stroke-dasharray="6 3"/>
+ <text class="s" x="336" y="404">homologues separated: n, still duplicated</text>
+ <path class="ar" d="M430 320 L470 320"/>
+ <text class="s" x="420" y="308">meiosis II</text>
+
+ <g>
+  <ellipse class="cell" cx="516" cy="274" rx="30" ry="24"/><path class="cm" d="M516 262 v24"/>
+  <ellipse class="cell" cx="516" cy="330" rx="30" ry="24"/><path class="cp" d="M516 318 v24" stroke-dasharray="6 3"/>
+  <ellipse class="cell" cx="586" cy="274" rx="30" ry="24"/><path class="cp" d="M586 262 v24"/>
+  <ellipse class="cell" cx="586" cy="330" rx="30" ry="24"/><path class="cm" d="M586 318 v24" stroke-dasharray="6 3"/>
+ </g>
+ <text class="s" x="490" y="374">4 cells, n each, all genetically different</text>
+
+ <rect class="k" x="646" y="258" width="214" height="124" rx="8"/>
+ <text class="tb" x="660" y="282">What separates</text>
+ <text class="t" x="660" y="306">Meiosis I: homologues separate</text>
+ <text class="t" x="660" y="326">(reduction division)</text>
+ <text class="t" x="660" y="348">Meiosis II: sister chromatids</text>
+ <text class="t" x="660" y="366">separate, as in mitosis</text>
+</svg>

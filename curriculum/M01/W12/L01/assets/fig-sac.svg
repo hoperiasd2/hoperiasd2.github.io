@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 420" width="880" height="420" role="img"
+ aria-label="Spindle assembly checkpoint and onset of anaphase. How the mitotic checkpoint complex at an unattached kinetochore inhibits the APC slash C, and how the APC slash C degrades securin and cyclin B to trigger cohesin cleavage and exit from M phase together.">
+ <style>
+  .bx{fill:#fff;stroke:#c6d2dd;stroke-width:1.8}.k{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .t{font:12px sans-serif;fill:#16191d}.tb{font:700 13px sans-serif;fill:#003c71}
+  .th{font:700 15px sans-serif;fill:#003c71}.s{font:11px sans-serif;fill:#4a5159}
+  .m{font:11px monospace;fill:#16191d}
+  .ar{stroke:#003c71;stroke-width:2.2;fill:none;marker-end:url(#a)}
+  .inh{stroke:#b3261e;stroke-width:2.4;fill:none;marker-end:url(#bar)}
+  .chr{stroke:#b3261e;stroke-width:5;fill:none;stroke-linecap:round}
+  .mt{stroke:#4a5159;stroke-width:1.8;fill:none}
+  .kt{fill:#003c71}
+ </style>
+ <defs>
+  <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker>
+  <marker id="bar" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M6 0 L6 10" stroke="#b3261e" stroke-width="3"/></marker>
+ </defs>
+
+ <text class="th" x="20" y="28">A  Unattached kinetochore keeps the APC/C off</text>
+ <line x1="20" y1="38" x2="860" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+
+ <path class="chr" d="M54 80 v70 M86 80 v70"/>
+ <rect class="kt" x="46" y="108" width="16" height="14" rx="3"/>
+ <rect x="78" y="108" width="16" height="14" rx="3" fill="#fff" stroke="#b3261e" stroke-width="2"/>
+ <path class="mt" d="M46 115 L10 100"/>
+ <text class="s" x="20" y="174">one kinetochore</text>
+ <text class="s" x="20" y="190">still unattached</text>
+
+ <path class="ar" d="M116 115 L172 115"/>
+ <rect class="k" x="182" y="86" width="176" height="60" rx="8"/>
+ <text class="tb" x="196" y="110">MCC assembles</text>
+ <text class="s" x="196" y="132">Mad2, BubR1, Bub3, Cdc20</text>
+
+ <path class="inh" d="M366 116 L424 116"/>
+ <rect class="bx" x="434" y="86" width="150" height="60" rx="8"/>
+ <text class="tb" x="448" y="110">APC/C</text>
+ <text class="s" x="448" y="132">needs Cdc20 to work</text>
+
+ <rect class="bx" x="612" y="72" width="248" height="90" rx="8"/>
+ <text class="tb" x="626" y="96">Sensitivity of the signal</text>
+ <text class="t" x="626" y="120">A single unattached kinetochore is</text>
+ <text class="t" x="626" y="140">enough to hold the whole cell in</text>
+ <text class="t" x="626" y="158">metaphase: all or nothing</text>
+
+ <text class="th" x="20" y="226">B  All attached: APC/C is released and anaphase begins</text>
+ <line x1="20" y1="236" x2="860" y2="236" stroke="#c6d2dd" stroke-width="1.5"/>
+
+ <rect class="bx" x="20" y="252" width="150" height="56" rx="8"/>
+ <text class="tb" x="34" y="276">APC/C - Cdc20</text>
+ <text class="s" x="34" y="296">active ubiquitin ligase</text>
+
+ <path class="ar" d="M176 268 L232 254"/>
+ <path class="ar" d="M176 292 L232 306"/>
+
+ <rect class="bx" x="240" y="228" width="200" height="54" rx="8"/>
+ <text class="tb" x="254" y="250">Securin degraded</text>
+ <text class="s" x="254" y="270">separase is freed</text>
+ <path class="ar" d="M446 254 L502 254"/>
+ <rect class="k" x="510" y="228" width="200" height="54" rx="8"/>
+ <text class="tb" x="524" y="250">Cohesin cleaved</text>
+ <text class="s" x="524" y="270">sister chromatids separate</text>
+
+ <rect class="bx" x="240" y="288" width="200" height="54" rx="8"/>
+ <text class="tb" x="254" y="310">Cyclin B degraded</text>
+ <text class="s" x="254" y="330">CDK1 activity falls</text>
+ <path class="ar" d="M446 314 L502 314"/>
+ <rect class="k" x="510" y="288" width="200" height="54" rx="8"/>
+ <text class="tb" x="524" y="310">Exit from M phase</text>
+ <text class="s" x="524" y="330">envelope reforms, cytokinesis</text>
+
+ <rect class="bx" x="724" y="228" width="136" height="114" rx="8"/>
+ <text class="tb" x="738" y="252">Why coupled</text>
+ <text class="t" x="738" y="276">One ligase triggers</text>
+ <text class="t" x="738" y="294">separation and exit</text>
+ <text class="t" x="738" y="312">together, so a cell</text>
+ <text class="t" x="738" y="330">cannot divide halfway</text>
+
+ <rect class="k" x="20" y="358" width="840" height="46" rx="8"/>
+ <text class="t" x="34" y="382">Clinical point: taxanes and vinca alkaloids disturb microtubule dynamics, so the checkpoint never clears; cells arrest in mitosis and then die. Cells with a weak checkpoint escape, divide with the wrong chromosome number, and become drug resistant.</text>
+</svg>

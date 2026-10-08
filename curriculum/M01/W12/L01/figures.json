@@ -1,4 +1,89 @@
 {
   "lesson_id": "M01-W12-L01",
-  "figures": []
+  "figures": [
+    {
+      "figure_id": "fig-cycle-phases",
+      "lesson_id": "M01-W12-L01",
+      "html_anchor": "#fig-cycle-phases",
+      "caption": "세포주기의 네 시기와 flow cytometry. G1·S·G2·M의 배치와 전형적인 소요 시간, G0로 빠져나가는 경로, 그리고 DNA 함량 분포에서 각 시기를 읽는 방법.",
+      "asset_path": "assets/fig-cycle-phases.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-cdk-regulation",
+      "lesson_id": "M01-W12-L01",
+      "html_anchor": "#fig-cdk-regulation",
+      "caption": "CDK 활성의 네 층위 조절. Cyclin 결합, CAK에 의한 Thr161 활성화 인산화, Wee1과 Cdc25가 다루는 Tyr15·Thr14 억제 인산화, CKI 결합, 그리고 APC/C에 의한 cyclin 분해.",
+      "asset_path": "assets/fig-cdk-regulation.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-rb-e2f",
+      "lesson_id": "M01-W12-L01",
+      "html_anchor": "#fig-rb-e2f",
+      "caption": "성장인자에서 S기 진입까지. Cyclin D 유도, Rb의 단계적 인산화, E2F의 해제, cyclin E에 의한 양성 되먹임과 restriction point.",
+      "asset_path": "assets/fig-rb-e2f.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-checkpoints",
+      "lesson_id": "M01-W12-L01",
+      "html_anchor": "#fig-checkpoints",
+      "caption": "세포주기의 세 체크포인트. G1/S와 G2/M의 DNA 손상 체크포인트가 ATM·ATR–Chk–Cdc25 축과 p53–p21 축으로 CDK를 끄는 방식, 그리고 spindle assembly checkpoint의 위치.",
+      "asset_path": "assets/fig-checkpoints.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-mitosis",
+      "lesson_id": "M01-W12-L01",
+      "html_anchor": "#fig-mitosis",
+      "caption": "유사분열의 다섯 단계와 방추사의 구성. 염색체 응축에서 핵막 재조립까지의 변화와 kinetochore·polar·astral microtubule의 배치.",
+      "asset_path": "assets/fig-mitosis.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-sac",
+      "lesson_id": "M01-W12-L01",
+      "html_anchor": "#fig-sac",
+      "caption": "Spindle assembly checkpoint와 anaphase의 개시. 미부착 kinetochore의 MCC가 APC/C를 억제하는 구조, 그리고 APC/C가 securin과 cyclin B를 분해해 cohesin 절단과 M기 종료를 함께 일으키는 경로.",
+      "asset_path": "assets/fig-sac.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-mitosis-meiosis",
+      "lesson_id": "M01-W12-L01",
+      "html_anchor": "#fig-mitosis-meiosis",
+      "caption": "Mitosis와 meiosis의 비교. 한 번의 S기 뒤 분열 횟수, 상동염색체의 짝짓기와 교차, 그리고 첫 분열에서 갈라지는 단위의 차이.",
+      "asset_path": "assets/fig-mitosis-meiosis.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    }
+  ]
 }

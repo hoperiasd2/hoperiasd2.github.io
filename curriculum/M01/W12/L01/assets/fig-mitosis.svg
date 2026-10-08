@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 400" width="880" height="400" role="img"
+ aria-label="The five stages of mitosis and the composition of the spindle: changes from chromosome condensation to reassembly of the nuclear envelope, and the arrangement of kinetochore, polar and astral microtubules.">
+ <style>
+  .bx{fill:#fff;stroke:#c6d2dd;stroke-width:1.8}.k{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .t{font:12px sans-serif;fill:#16191d}.tb{font:700 13px sans-serif;fill:#003c71}
+  .th{font:700 15px sans-serif;fill:#003c71}.s{font:11px sans-serif;fill:#4a5159}
+  .cell{fill:#fff;stroke:#003c71;stroke-width:2}
+  .nuc{fill:#eef3f8;stroke:#6b8ba8;stroke-width:1.6;stroke-dasharray:4 3}
+  .chr{stroke:#b3261e;stroke-width:4;fill:none;stroke-linecap:round}
+  .mt{stroke:#4a5159;stroke-width:1.4;fill:none}
+  .cen{fill:#003c71}
+  .ar{stroke:#003c71;stroke-width:2;fill:none;marker-end:url(#a)}
+ </style>
+ <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker></defs>
+
+ <text class="th" x="20" y="28">A  Five stages of mitosis</text>
+ <line x1="20" y1="38" x2="860" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+
+ <g>
+  <ellipse class="cell" cx="98" cy="120" rx="72" ry="58"/>
+  <ellipse class="nuc" cx="98" cy="120" rx="48" ry="38"/>
+  <path class="chr" d="M74 104 q12 -10 22 0"/>
+  <path class="chr" d="M104 134 q12 -10 22 0"/>
+  <circle class="cen" cx="42" cy="120" r="4"/><circle class="cen" cx="154" cy="120" r="4"/>
+  <text class="tb" x="60" y="196">Prophase</text>
+  <text class="s" x="26" y="214">chromosomes condense,</text>
+  <text class="s" x="26" y="230">centrosomes separate</text>
+ </g>
+ <path class="ar" d="M178 120 L204 120"/>
+
+ <g>
+  <ellipse class="cell" cx="286" cy="120" rx="72" ry="58"/>
+  <circle class="cen" cx="224" cy="120" r="5"/><circle class="cen" cx="348" cy="120" r="5"/>
+  <path class="mt" d="M224 120 L276 96 M224 120 L276 144 M348 120 L296 96 M348 120 L296 144"/>
+  <path class="chr" d="M272 92 q14 -10 26 0"/>
+  <path class="chr" d="M268 146 q14 -10 26 0"/>
+  <text class="tb" x="232" y="196">Prometaphase</text>
+  <text class="s" x="214" y="214">nuclear envelope breaks</text>
+  <text class="s" x="214" y="230">down, kinetochores attach</text>
+ </g>
+ <path class="ar" d="M366 120 L392 120"/>
+
+ <g>
+  <ellipse class="cell" cx="474" cy="120" rx="72" ry="58"/>
+  <circle class="cen" cx="412" cy="120" r="5"/><circle class="cen" cx="536" cy="120" r="5"/>
+  <line x1="474" y1="72" x2="474" y2="168" stroke="#f2b705" stroke-width="2" stroke-dasharray="5 4"/>
+  <path class="chr" d="M460 94 h28 M460 120 h28 M460 146 h28"/>
+  <path class="mt" d="M412 120 L458 94 M412 120 L458 120 M412 120 L458 146 M536 120 L490 94 M536 120 L490 120 M536 120 L490 146"/>
+  <text class="tb" x="440" y="196">Metaphase</text>
+  <text class="s" x="402" y="214">all chromosomes aligned</text>
+  <text class="s" x="402" y="230">on the metaphase plate</text>
+ </g>
+ <path class="ar" d="M554 120 L580 120"/>
+
+ <g>
+  <ellipse class="cell" cx="662" cy="120" rx="72" ry="58"/>
+  <circle class="cen" cx="600" cy="120" r="5"/><circle class="cen" cx="724" cy="120" r="5"/>
+  <path class="chr" d="M622 100 h22 M622 140 h22 M680 100 h22 M680 140 h22"/>
+  <path class="mt" d="M600 120 L620 100 M600 120 L620 140 M724 120 L704 100 M724 120 L704 140"/>
+  <text class="tb" x="636" y="196">Anaphase</text>
+  <text class="s" x="596" y="214">sister chromatids split</text>
+  <text class="s" x="596" y="230">and move to the poles</text>
+ </g>
+ <path class="ar" d="M742 120 L768 120"/>
+
+ <g>
+  <ellipse class="cell" cx="818" cy="96" rx="40" ry="32"/>
+  <ellipse class="nuc" cx="818" cy="96" rx="24" ry="18"/>
+  <ellipse class="cell" cx="818" cy="162" rx="40" ry="32"/>
+  <ellipse class="nuc" cx="818" cy="162" rx="24" ry="18"/>
+  <text class="tb" x="776" y="214">Telophase</text>
+  <text class="s" x="762" y="230">envelope reforms,</text>
+  <text class="s" x="762" y="246">cytokinesis follows</text>
+ </g>
+
+ <text class="th" x="20" y="286">B  Three classes of spindle microtubule</text>
+ <line x1="20" y1="296" x2="860" y2="296" stroke="#c6d2dd" stroke-width="1.5"/>
+
+ <g>
+  <circle class="cen" cx="140" cy="352" r="6"/><circle class="cen" cx="420" cy="352" r="6"/>
+  <path class="mt" d="M140 352 L270 328 M140 352 L270 376 M420 352 L290 328 M420 352 L290 376" stroke="#b3261e" stroke-width="1.8"/>
+  <path class="chr" d="M264 322 h32 M264 376 h32"/>
+  <path class="mt" d="M140 352 q140 -40 280 0 M140 352 q140 40 280 0" stroke="#2e7d32" stroke-width="1.8"/>
+  <path class="mt" d="M140 352 L108 322 M140 352 L108 382 M420 352 L452 322 M420 352 L452 382" stroke="#003c71" stroke-width="1.8"/>
+ </g>
+ <rect class="bx" x="488" y="306" width="372" height="92" rx="8"/>
+ <text class="t" x="502" y="330">Kinetochore microtubule: pole to kinetochore, pulls the chromatid</text>
+ <text class="t" x="502" y="354">Polar (interpolar) microtubule: overlaps at the midzone, pushes poles apart</text>
+ <text class="t" x="502" y="378">Astral microtubule: pole to cortex, positions the spindle in the cell</text>
+</svg>

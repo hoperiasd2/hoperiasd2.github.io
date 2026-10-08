@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 400" width="880" height="400" role="img"
+ aria-label="The four phases of the cell cycle and their appearance in flow cytometry. Arrangement and typical duration of G1, S, G2 and M, the exit route into G0, and how each phase is read from the DNA content histogram.">
+ <style>
+  .bx{fill:#fff;stroke:#c6d2dd;stroke-width:1.8}.k{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .t{font:12px sans-serif;fill:#16191d}.tb{font:700 13px sans-serif;fill:#003c71}
+  .th{font:700 15px sans-serif;fill:#003c71}.s{font:11px sans-serif;fill:#4a5159}
+  .ar{stroke:#003c71;stroke-width:2.2;fill:none;marker-end:url(#a)}
+  .ard{stroke:#8a6300;stroke-width:2;fill:none;stroke-dasharray:5 4;marker-end:url(#b)}
+  .ax{stroke:#16191d;stroke-width:1.8;fill:none}
+ </style>
+ <defs>
+  <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker>
+  <marker id="b" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#8a6300"/></marker>
+ </defs>
+
+ <text class="th" x="20" y="28">A  Phases of the cell cycle (typical 24 h somatic cell)</text>
+ <line x1="20" y1="38" x2="860" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+
+ <g transform="translate(200,215)">
+  <path d="M0 -120 A120 120 0 0 1 103.9 -60" fill="none" stroke="#003c71" stroke-width="16"/>
+  <path d="M103.9 -60 A120 120 0 0 1 103.9 60" fill="none" stroke="#f2b705" stroke-width="16"/>
+  <path d="M103.9 60 A120 120 0 0 1 0 120" fill="none" stroke="#6b8ba8" stroke-width="16"/>
+  <path d="M0 120 A120 120 0 0 1 -103.9 60" fill="none" stroke="#b3261e" stroke-width="16"/>
+  <path d="M-103.9 60 A120 120 0 0 1 0 -120" fill="none" stroke="#003c71" stroke-width="16"/>
+ </g>
+ <text class="tb" x="246" y="118">G1  (about 11 h)</text>
+ <text class="s" x="246" y="136">growth, decision to divide</text>
+ <text class="tb" x="330" y="222">S  (about 8 h)</text>
+ <text class="s" x="330" y="240">DNA replication</text>
+ <text class="tb" x="238" y="330">G2  (about 4 h)</text>
+ <text class="s" x="238" y="348">check and prepare</text>
+ <text class="tb" x="84" y="356">M  (about 1 h)</text>
+ <text class="s" x="40" y="374">mitosis and cytokinesis</text>
+
+ <path class="ard" d="M90 180 L36 150"/>
+ <circle class="k" cx="40" cy="116" r="30"/>
+ <text class="tb" x="28" y="121">G0</text>
+ <text class="s" x="14" y="76">quiescent: exits</text>
+ <text class="s" x="14" y="92">from G1, can re-enter</text>
+
+ <text class="th" x="500" y="70">B  Reading DNA content by flow cytometry</text>
+ <line x1="500" y1="80" x2="860" y2="80" stroke="#c6d2dd" stroke-width="1.5"/>
+
+ <path class="ax" d="M540 300 L540 110"/>
+ <path class="ax" d="M540 300 L850 300"/>
+ <text class="s" x="492" y="200" transform="rotate(-90 500 200)">Cell number</text>
+ <text class="s" x="640" y="326">DNA content per cell</text>
+ <text class="s" x="594" y="318">2n</text>
+ <text class="s" x="774" y="318">4n</text>
+ <line class="ax" x1="604" y1="300" x2="604" y2="306"/>
+ <line class="ax" x1="784" y1="300" x2="784" y2="306"/>
+
+ <path d="M560 300 q20 0 26 -30 q12 -140 20 0 q6 30 24 30 z" fill="#003c71" opacity="0.75"/>
+ <path d="M612 300 q60 -8 70 -26 q10 -18 90 -16 q14 2 18 42 z" fill="#f2b705" opacity="0.6"/>
+ <path d="M760 300 q16 0 22 -40 q10 -90 16 0 q6 40 20 40 z" fill="#6b8ba8" opacity="0.8"/>
+
+ <text class="tb" x="548" y="126">G0/G1</text>
+ <text class="s" x="548" y="142">single 2n peak</text>
+ <text class="tb" x="648" y="250">S phase</text>
+ <text class="s" x="640" y="266">broad plateau</text>
+ <text class="tb" x="760" y="164">G2/M</text>
+ <text class="s" x="744" y="180">4n peak</text>
+
+ <rect class="bx" x="500" y="340" width="360" height="50" rx="8"/>
+ <text class="t" x="514" y="364">G2 and M cannot be told apart by DNA content alone;</text>
+ <text class="t" x="514" y="382">a mitotic marker such as phospho-histone H3 is needed.</text>
+</svg>

@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 430" width="880" height="430" role="img"
+ aria-label="Four layers of CDK regulation: cyclin binding, activating phosphorylation of Thr161 by CAK, inhibitory phosphorylation of Tyr15 and Thr14 handled by Wee1 and Cdc25, binding of CDK inhibitors, and cyclin destruction by the APC slash C.">
+ <style>
+  .bx{fill:#fff;stroke:#c6d2dd;stroke-width:1.8}.k{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .t{font:12px sans-serif;fill:#16191d}.tb{font:700 13px sans-serif;fill:#003c71}
+  .th{font:700 15px sans-serif;fill:#003c71}.s{font:11px sans-serif;fill:#4a5159}
+  .m{font:11px monospace;fill:#16191d}
+  .ar{stroke:#003c71;stroke-width:2.2;fill:none;marker-end:url(#a)}
+  .inh{stroke:#b3261e;stroke-width:2.4;fill:none;marker-end:url(#bar)}
+  .act{stroke:#2e7d32;stroke-width:2.4;fill:none;marker-end:url(#g)}
+  .cdk{fill:#e8eff6;stroke:#003c71;stroke-width:2.2}
+  .cyc{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .p{fill:#b3261e}.pg{fill:#2e7d32}
+ </style>
+ <defs>
+  <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker>
+  <marker id="g" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#2e7d32"/></marker>
+  <marker id="bar" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M6 0 L6 10" stroke="#b3261e" stroke-width="3"/></marker>
+ </defs>
+
+ <text class="th" x="20" y="28">Four layers that set CDK activity</text>
+ <line x1="20" y1="38" x2="860" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+
+ <text class="tb" x="30" y="70">1  Monomeric CDK: inactive</text>
+ <circle class="cdk" cx="86" cy="130" r="36"/>
+ <text class="m" x="68" y="134">CDK</text>
+ <text class="s" x="34" y="188">no partner, no activity</text>
+
+ <path class="ar" d="M136 130 L192 130"/>
+ <text class="s" x="134" y="118">cyclin synthesis</text>
+
+ <text class="tb" x="206" y="70">2  Cyclin binding: partly active</text>
+ <circle class="cdk" cx="256" cy="130" r="36"/>
+ <text class="m" x="238" y="134">CDK</text>
+ <path class="cyc" d="M288 104 a40 40 0 0 1 0 52 z"/>
+ <text class="m" x="298" y="134">Cyc</text>
+ <text class="s" x="206" y="188">active site opens;</text>
+ <text class="s" x="206" y="204">cyclin also sets the substrates</text>
+
+ <path class="ar" d="M346 130 L402 130"/>
+ <text class="s" x="344" y="118">CAK</text>
+
+ <text class="tb" x="416" y="70">3  Phosphorylation: two opposite kinds</text>
+ <circle class="cdk" cx="470" cy="130" r="36"/>
+ <text class="m" x="452" y="134">CDK</text>
+ <path class="cyc" d="M502 104 a40 40 0 0 1 0 52 z"/>
+ <circle class="pg" cx="470" cy="92" r="9"/>
+ <text class="m" x="484" y="86">P Thr161</text>
+ <circle class="p" cx="440" cy="158" r="9"/>
+ <circle class="p" cx="462" cy="166" r="9"/>
+ <text class="m" x="400" y="190">P Tyr15 / Thr14</text>
+
+ <path class="act" d="M470 44 L470 78"/>
+ <text class="tb" x="484" y="56">CAK: activating</text>
+ <path class="inh" d="M366 198 L424 176"/>
+ <text class="tb" x="300" y="216">Wee1: inhibiting</text>
+ <path class="ar" d="M520 190 L480 176"/>
+ <text class="tb" x="526" y="196">Cdc25: removes them</text>
+
+ <path class="ar" d="M560 130 L616 130"/>
+ <text class="tb" x="630" y="70">4  Fully active CDK</text>
+ <circle class="cdk" cx="680" cy="130" r="36"/>
+ <text class="m" x="662" y="134">CDK</text>
+ <path class="cyc" d="M712 104 a40 40 0 0 1 0 52 z"/>
+ <circle class="pg" cx="680" cy="92" r="9"/>
+ <path class="ar" d="M724 130 L790 130"/>
+ <text class="s" x="736" y="118">substrate</text>
+ <text class="s" x="736" y="160">phosphorylation</text>
+ <text class="s" x="800" y="134">S or M</text>
+
+ <text class="th" x="20" y="270">Two brakes on top</text>
+ <line x1="20" y1="280" x2="860" y2="280" stroke="#c6d2dd" stroke-width="1.5"/>
+
+ <rect class="bx" x="20" y="296" width="400" height="118" rx="8"/>
+ <text class="tb" x="34" y="320">CDK inhibitors (CKI)</text>
+ <text class="t" x="34" y="344">CIP/KIP family: p21, p27, p57 bind the cyclin-CDK</text>
+ <text class="t" x="34" y="364">complex itself and block it broadly</text>
+ <text class="t" x="34" y="388">INK4 family: p16, p15 bind CDK4 and CDK6 alone</text>
+ <text class="t" x="34" y="406">and keep cyclin D out</text>
+
+ <rect class="bx" x="440" y="296" width="420" height="118" rx="8"/>
+ <text class="tb" x="454" y="320">Cyclin destruction (APC/C and SCF)</text>
+ <text class="t" x="454" y="344">Ubiquitin ligases degrade the cyclin, so the activity</text>
+ <text class="t" x="454" y="364">falls and cannot return without new synthesis</text>
+ <text class="t" x="454" y="388">This one-way step is what makes the cycle run in</text>
+ <text class="t" x="454" y="406">one direction rather than oscillate back</text>
+</svg>

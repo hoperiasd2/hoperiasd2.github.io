@@ -450,8 +450,9 @@ def textbox(slide, x, y, w, h, anchor=MSO_ANCHOR.TOP):
 
 
 class Deck:
-    def __init__(self, row, meta):
+    def __init__(self, row, meta, pack=(760, 9)):
         self.row, self.meta = row, meta
+        self.pack_chars, self.pack_items = pack
         self.prs = Presentation()
         self.prs.slide_width, self.prs.slide_height = W, H
         self.blank = self.prs.slide_layouts[6]
@@ -516,7 +517,7 @@ class Deck:
         pages, cur, load = [], [], 0
         for lvl, t in norm:
             c = len(plain(t))
-            if cur and (load + c > 760 or len(cur) >= 9):
+            if cur and (load + c > self.pack_chars or len(cur) >= self.pack_items):
                 pages.append(cur)
                 cur, load = [], 0
             cur.append((lvl, t))
@@ -668,8 +669,8 @@ class Deck:
             self.note(s, plain(a))
 
 
-def build_deck(row, meta, lists, secs, quiz, out, lesson_dir):
-    d = Deck(row, meta)
+def _compose(row, meta, lists, secs, quiz, lesson_dir, pack):
+    d = Deck(row, meta, pack)
     d.title_slide()
     if lists.get("obj"):
         d.bullets("학습목표", lists["obj"], kicker="GOALS", numbered=True)
@@ -719,8 +720,27 @@ def build_deck(row, meta, lists, secs, quiz, out, lesson_dir):
         d.quiz(quiz)
     if lists.get("ref"):
         d.bullets("참고문헌", lists["ref"], kicker="REFERENCES")
-    d.prs.save(out)
-    return d.n
+    return d
+
+
+# 한 장에 담는 분량을 조절해 슬라이드 수를 기준 범위(38~52장) 안으로 맞춘다.
+PACKS = [(760, 9), (820, 10), (900, 11), (1000, 12), (700, 8), (640, 7)]
+
+
+def build_deck(row, meta, lists, secs, quiz, out, lesson_dir):
+    lo, hi = 38, 52
+    best = None
+    for pack in PACKS:
+        d = _compose(row, meta, lists, secs, quiz, lesson_dir, pack)
+        if lo <= d.n <= hi:
+            d.prs.save(out)
+            return d.n
+        # 범위를 벗어나면 기준에서 가장 덜 벗어난 결과를 남겨 둔다.
+        miss = lo - d.n if d.n < lo else d.n - hi
+        if best is None or miss < best[0]:
+            best = (miss, d)
+    best[1].prs.save(out)
+    return best[1].n
 
 
 # --------------------------------------------------------------------------- 실행

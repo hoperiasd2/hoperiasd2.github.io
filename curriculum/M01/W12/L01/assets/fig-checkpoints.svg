@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 430" width="880" height="430" role="img"
+ aria-label="Three checkpoints of the cell cycle. How the G1 slash S and G2 slash M DNA damage checkpoints switch CDK off through the ATM-ATR-Chk-Cdc25 axis and the p53-p21 axis, and where the spindle assembly checkpoint acts.">
+ <style>
+  .bx{fill:#fff;stroke:#c6d2dd;stroke-width:1.8}.k{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .t{font:12px sans-serif;fill:#16191d}.tb{font:700 13px sans-serif;fill:#003c71}
+  .th{font:700 15px sans-serif;fill:#003c71}.s{font:11px sans-serif;fill:#4a5159}
+  .ar{stroke:#003c71;stroke-width:2.2;fill:none;marker-end:url(#a)}
+  .inh{stroke:#b3261e;stroke-width:2.4;fill:none;marker-end:url(#bar)}
+  .ax{stroke:#16191d;stroke-width:2.4;fill:none}
+ </style>
+ <defs>
+  <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker>
+  <marker id="bar" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M6 0 L6 10" stroke="#b3261e" stroke-width="3"/></marker>
+ </defs>
+
+ <text class="th" x="20" y="28">Where the three checkpoints sit, and what stops the cycle</text>
+ <line x1="20" y1="38" x2="860" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+
+ <path class="ax" d="M40 92 L820 92"/>
+ <g font="11px sans-serif">
+  <rect x="40" y="76" width="200" height="32" fill="#e8eff6" stroke="#003c71" stroke-width="1.6"/>
+  <text class="tb" x="124" y="98">G1</text>
+  <rect x="240" y="76" width="200" height="32" fill="#fff5d6" stroke="#f2b705" stroke-width="1.6"/>
+  <text class="tb" x="330" y="98">S</text>
+  <rect x="440" y="76" width="200" height="32" fill="#e8eff6" stroke="#003c71" stroke-width="1.6"/>
+  <text class="tb" x="528" y="98">G2</text>
+  <rect x="640" y="76" width="180" height="32" fill="#f3dcda" stroke="#b3261e" stroke-width="1.6"/>
+  <text class="tb" x="722" y="98">M</text>
+ </g>
+ <line class="inh" x1="240" y1="128" x2="240" y2="112"/>
+ <text class="tb" x="186" y="148">G1/S checkpoint</text>
+ <line class="inh" x1="640" y1="128" x2="640" y2="112"/>
+ <text class="tb" x="586" y="148">G2/M checkpoint</text>
+ <line class="inh" x1="740" y1="128" x2="740" y2="112"/>
+ <text class="tb" x="700" y="166">Spindle assembly</text>
+ <text class="tb" x="700" y="182">checkpoint</text>
+
+ <rect class="bx" x="20" y="194" width="270" height="222" rx="8"/>
+ <text class="tb" x="34" y="218">G1/S  DNA damage</text>
+ <text class="s" x="34" y="240">question: is the genome intact?</text>
+ <text class="t" x="34" y="268">Double-strand break</text>
+ <path class="ar" d="M44 276 L44 296"/>
+ <text class="t" x="34" y="312">ATM activated</text>
+ <path class="ar" d="M44 320 L44 340"/>
+ <text class="t" x="34" y="356">p53 stabilised, p21 transcribed</text>
+ <path class="inh" d="M44 364 L44 384"/>
+ <text class="t" x="34" y="400">Cyclin E-CDK2 off: arrest in G1</text>
+
+ <rect class="bx" x="304" y="194" width="270" height="222" rx="8"/>
+ <text class="tb" x="318" y="218">G2/M  DNA damage</text>
+ <text class="s" x="318" y="240">question: is replication finished</text>
+ <text class="s" x="318" y="256">and the DNA undamaged?</text>
+ <text class="t" x="318" y="284">Damage or stalled fork</text>
+ <path class="ar" d="M328 292 L328 312"/>
+ <text class="t" x="318" y="328">ATM / ATR, then Chk1 / Chk2</text>
+ <path class="inh" d="M328 336 L328 356"/>
+ <text class="t" x="318" y="372">Cdc25 inhibited and exported</text>
+ <path class="inh" d="M328 380 L328 398"/>
+ <text class="t" x="318" y="412">Cyclin B-CDK1 stays inhibited</text>
+
+ <rect class="k" x="588" y="194" width="272" height="222" rx="8"/>
+ <text class="tb" x="602" y="218">Spindle assembly checkpoint</text>
+ <text class="s" x="602" y="240">question: is every chromosome</text>
+ <text class="s" x="602" y="256">attached to both poles?</text>
+ <text class="t" x="602" y="284">One unattached kinetochore</text>
+ <path class="ar" d="M612 292 L612 312"/>
+ <text class="t" x="602" y="328">MCC assembles (Mad2, BubR1)</text>
+ <path class="inh" d="M612 336 L612 356"/>
+ <text class="t" x="602" y="372">APC/C inhibited</text>
+ <path class="inh" d="M612 380 L612 398"/>
+ <text class="t" x="602" y="412">Anaphase cannot start</text>
+
+ <rect class="bx" x="304" y="150" width="270" height="34" rx="6"/>
+ <text class="s" x="316" y="172">Two outcomes of a damage checkpoint: repair then resume, or apoptosis</text>
+</svg>
