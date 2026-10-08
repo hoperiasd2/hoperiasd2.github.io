@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 340" width="860" height="340" role="img"
+ aria-label="V(D)J recombination at the immunoglobulin heavy chain locus: germline V, D and J segments, RAG1-RAG2 cutting at recombination signal sequences, joining of D to J then V to DJ, and the sources of junctional diversity">
+ <style>
+  .t{font:12px sans-serif;fill:#16191d}.tb{font:700 12px sans-serif;fill:#003c71}
+  .s{font:11px sans-serif;fill:#4a5159}.lv{font:700 11px sans-serif;fill:#8a6300}
+  .bx{fill:#fff;stroke:#c6d2dd;stroke-width:1.8}.k{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .ar{stroke:#003c71;stroke-width:2.2;fill:none;marker-end:url(#v)}
+  .line{stroke:#16191d;stroke-width:2}
+ </style>
+ <defs><marker id="v" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker></defs>
+
+ <text class="lv" x="24" y="28">GERMLINE CONFIGURATION</text>
+ <line class="line" x1="24" y1="68" x2="836" y2="68"/>
+ <g fill="#003c71">
+  <rect x="34" y="58" width="22" height="20"/><rect x="64" y="58" width="22" height="20"/>
+  <rect x="94" y="58" width="22" height="20"/><rect x="124" y="58" width="22" height="20"/>
+ </g>
+ <text class="s" x="58" y="96">V segments (about 40)</text>
+ <g fill="#9a6700">
+  <rect x="330" y="58" width="16" height="20"/><rect x="352" y="58" width="16" height="20"/>
+  <rect x="374" y="58" width="16" height="20"/>
+ </g>
+ <text class="s" x="320" y="96">D (about 25)</text>
+ <g fill="#1a7f52">
+  <rect x="520" y="58" width="18" height="20"/><rect x="544" y="58" width="18" height="20"/>
+  <rect x="568" y="58" width="18" height="20"/>
+ </g>
+ <text class="s" x="512" y="96">J (6)</text>
+ <rect fill="#727a84" x="740" y="58" width="60" height="20"/>
+ <text class="s" x="744" y="96">C region</text>
+
+ <path class="ar" d="M430 112 L430 140"/>
+ <text class="s" x="442" y="132">RAG1-RAG2 cut at recombination signal sequences; D joins to J</text>
+
+ <text class="lv" x="24" y="176">AFTER D-J JOINING</text>
+ <line class="line" x1="24" y1="208" x2="836" y2="208"/>
+ <g fill="#003c71"><rect x="34" y="198" width="22" height="20"/><rect x="64" y="198" width="22" height="20"/></g>
+ <rect fill="#9a6700" x="330" y="198" width="16" height="20"/>
+ <rect fill="#1a7f52" x="348" y="198" width="18" height="20"/>
+ <rect fill="#727a84" x="740" y="198" width="60" height="20"/>
+
+ <path class="ar" d="M430 230 L430 254"/>
+ <text class="s" x="442" y="248">then V joins to DJ</text>
+
+ <text class="lv" x="24" y="286">REARRANGED LOCUS</text>
+ <line class="line" x1="24" y1="310" x2="440" y2="310"/>
+ <rect fill="#003c71" x="34" y="300" width="22" height="20"/>
+ <rect fill="#9a6700" x="56" y="300" width="16" height="20"/>
+ <rect fill="#1a7f52" x="72" y="300" width="18" height="20"/>
+ <rect fill="#727a84" x="360" y="300" width="60" height="20"/>
+
+ <rect class="k" x="470" y="268" width="366" height="60" rx="8"/>
+ <text class="tb" x="486" y="292">Junctional diversity</text>
+ <text class="s" x="486" y="312">nucleotides lost by trimming and added by TdT at each join</text>
+</svg>

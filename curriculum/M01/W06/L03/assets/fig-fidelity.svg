@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 300" width="860" height="300" role="img"
+ aria-label="Three stages that build replication fidelity: base selection by the polymerase, 3 prime to 5 prime exonuclease proofreading, and post-replicative mismatch repair, with the error rate after each stage">
+ <style>
+  .bx{fill:#fff;stroke:#c6d2dd;stroke-width:1.8}.k{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .t{font:12px sans-serif;fill:#16191d}.tb{font:700 13px sans-serif;fill:#003c71}
+  .s{font:11px sans-serif;fill:#4a5159}.n{font:700 14px monospace;fill:#8a6300}
+  .ar{stroke:#003c71;stroke-width:2.2;fill:none;marker-end:url(#f)}
+ </style>
+ <defs><marker id="f" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker></defs>
+
+ <rect class="bx" x="20" y="60" width="200" height="110" rx="8"/>
+ <text class="tb" x="38" y="88">1. Base selection</text>
+ <text class="t" x="38" y="112">Correct geometry of the</text>
+ <text class="t" x="38" y="130">Watson-Crick pair is read</text>
+ <text class="t" x="38" y="148">by the polymerase site</text>
+ <text class="n" x="38" y="196">1 in 10^5</text>
+
+ <path class="ar" d="M226 115 L288 115"/>
+ <rect class="bx" x="294" y="60" width="210" height="110" rx="8"/>
+ <text class="tb" x="312" y="88">2. Proofreading</text>
+ <text class="t" x="312" y="112">3' to 5' exonuclease removes</text>
+ <text class="t" x="312" y="130">the mispaired nucleotide</text>
+ <text class="t" x="312" y="148">before synthesis continues</text>
+ <text class="n" x="312" y="196">1 in 10^7</text>
+
+ <path class="ar" d="M510 115 L572 115"/>
+ <rect class="k" x="578" y="60" width="256" height="110" rx="8"/>
+ <text class="tb" x="596" y="88">3. Mismatch repair</text>
+ <text class="t" x="596" y="112">Scans the new duplex, excises</text>
+ <text class="t" x="596" y="130">the daughter strand around the</text>
+ <text class="t" x="596" y="148">mismatch and resynthesises</text>
+ <text class="n" x="596" y="196">1 in 10^9 to 10^10</text>
+
+ <text class="s" x="20" y="232">Each stage multiplies the accuracy of the one before it. Removing any single stage raises the</text>
+ <text class="s" x="20" y="250">mutation rate by orders of magnitude, which is why defects in proofreading or mismatch repair</text>
+ <text class="s" x="20" y="268">produce a mutator phenotype.</text>
+</svg>

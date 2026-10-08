@@ -25,6 +25,11 @@ BANNED = {
     "상전이 온도": "phase transition temperature", "지질방울": "lipid droplet",
     "담즙정체": "cholestasis",
 }
+
+# 금지어가 부분 문자열로 들어가지만 그 자체로는 올바른 용어
+EXEMPT = (
+    "섬유화", "섬유증", "섬유소", "섬유아세포",   # 유화
+)
 # 금지 비유
 METAPHOR = ["공장", "열쇠와 자물쇠", "택배", "도로처럼", "자물쇠와 열쇠"]
 # 내용 없는 강조
@@ -60,9 +65,12 @@ def check(row):
         if notes[k] < lo:
             problems.append(f"{k} {notes[k]} < {lo}")
 
-    # 금지 용어
+    # 금지 용어 (정상 용어에 부분 문자열로 포함되는 경우는 제외한다)
+    scrub = body
+    for w in EXEMPT:
+        scrub = scrub.replace(w, "")
     for w, alt in BANNED.items():
-        if w in body:
+        if w in scrub:
             problems.append(f"금지어 '{w}' → {alt}")
     for w in METAPHOR:
         if w in body:

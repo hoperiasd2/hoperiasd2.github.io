@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 400" width="860" height="400" role="img"
+ aria-label="Structure of the replication fork showing helicase, single-strand binding protein, primase, leading strand continuous synthesis and lagging strand Okazaki fragments">
+ <style>
+  .p{fill:none;stroke:#16191d;stroke-width:2.4}.n{fill:none;stroke:#003c71;stroke-width:3}
+  .t{font:12px sans-serif;fill:#16191d}.tb{font:700 12px sans-serif;fill:#003c71}
+  .s{font:11px sans-serif;fill:#4a5159}.lv{font:700 11px sans-serif;fill:#8a6300}
+  .bx{fill:#fff;stroke:#c6d2dd;stroke-width:1.6}.k{fill:#fff5d6;stroke:#f2b705;stroke-width:2}
+  .ar{stroke:#003c71;stroke-width:2;fill:none;marker-end:url(#a)}
+ </style>
+ <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker></defs>
+
+ <path class="p" d="M30 200 L250 200"/>
+ <path class="p" d="M30 212 L250 212"/>
+ <text class="s" x="34" y="190">parental duplex</text>
+
+ <ellipse class="k" cx="276" cy="206" rx="30" ry="24"/>
+ <text class="tb" x="252" y="210" font-size="10">helicase</text>
+ <text class="s" x="246" y="248">unwinds the duplex</text>
+
+ <path class="p" d="M304 196 C360 150 440 120 820 118"/>
+ <path class="p" d="M304 216 C360 262 440 292 820 294"/>
+
+ <g fill="#9fc0dc"><circle cx="372" cy="268" r="9"/><circle cx="404" cy="278" r="9"/><circle cx="436" cy="284" r="9"/></g>
+ <text class="s" x="360" y="312">single-strand binding protein</text>
+
+ <path class="n" d="M340 136 L812 126"/>
+ <text class="tb" x="520" y="104">LEADING STRAND</text>
+ <text class="s" x="520" y="156">continuous synthesis, 5' to 3'</text>
+ <path class="ar" d="M700 142 L790 136"/>
+
+ <path class="n" d="M700 290 L560 286"/>
+ <path class="n" d="M540 285 L420 280"/>
+ <path class="n" d="M400 279 L330 272"/>
+ <text class="tb" x="520" y="340">LAGGING STRAND</text>
+ <text class="s" x="440" y="358">discontinuous: Okazaki fragments</text>
+ <path class="ar" d="M690 304 L600 300" stroke="#8a6300" marker-end="url(#a)"/>
+ <g fill="#f2b705"><rect x="686" y="280" width="26" height="8" rx="2"/><rect x="546" y="276" width="26" height="8" rx="2"/><rect x="406" y="270" width="26" height="8" rx="2"/></g>
+ <text class="s" x="730" y="276">RNA primer</text>
+
+ <rect class="bx" x="30" y="40" width="800" height="48" rx="7"/>
+ <text class="t" x="46" y="62">Both strands are copied 5' to 3', but the two template strands run in opposite directions.</text>
+ <text class="t" x="46" y="80">That asymmetry forces one strand to be made in short pieces that are later joined by DNA ligase.</text>
+
+ <text class="lv" x="30" y="378">Key enzymes: helicase · primase · DNA polymerase · RNase H · DNA ligase</text>
+</svg>

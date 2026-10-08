@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 340" width="860" height="340" role="img"
+ aria-label="Telomerase action: the TERC RNA pairs with the telomere 3 prime overhang, TERT extends the repeat using that RNA as template, the enzyme translocates, and the complementary strand is filled in by primase and polymerase">
+ <style>
+  .bx{fill:#fff;stroke:#c6d2dd;stroke-width:1.8}.k{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .t{font:12px sans-serif;fill:#16191d}.tb{font:700 12px sans-serif;fill:#003c71}
+  .s{font:11px sans-serif;fill:#4a5159}.lv{font:700 11px sans-serif;fill:#8a6300}
+  .d{font:11px monospace;fill:#16191d}
+  .ar{stroke:#003c71;stroke-width:2.2;fill:none;marker-end:url(#t)}
+ </style>
+ <defs><marker id="t" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker></defs>
+
+ <text class="lv" x="24" y="28">1. The end-replication problem leaves a 3' overhang</text>
+ <line x1="24" y1="60" x2="400" y2="60" stroke="#16191d" stroke-width="2.4"/>
+ <line x1="24" y1="78" x2="320" y2="78" stroke="#16191d" stroke-width="2.4"/>
+ <text class="d" x="330" y="54">TTAGGG TTAGGG 3'</text>
+ <text class="s" x="330" y="96">no primer can be placed here</text>
+
+ <text class="lv" x="24" y="146">2. TERC RNA pairs with the overhang; TERT extends it</text>
+ <line x1="24" y1="178" x2="400" y2="178" stroke="#16191d" stroke-width="2.4"/>
+ <ellipse class="k" cx="470" cy="178" rx="72" ry="34"/>
+ <text class="tb" x="440" y="174">TERT</text>
+ <text class="s" x="426" y="194">reverse transcriptase</text>
+ <path d="M404 170 L540 170" stroke="#9a6700" stroke-width="2.4" fill="none"/>
+ <text class="d" x="406" y="162">AAUCCC</text>
+ <text class="s" x="406" y="220">TERC RNA template</text>
+
+ <path class="ar" d="M560 178 L620 178"/>
+ <text class="s" x="556" y="166">translocate</text>
+ <line x1="632" y1="178" x2="836" y2="178" stroke="#16191d" stroke-width="2.4"/>
+ <text class="d" x="700" y="166">TTAGGG added</text>
+ <text class="s" x="632" y="212">cycle repeats</text>
+
+ <rect class="bx" x="24" y="248" width="812" height="78" rx="8"/>
+ <text class="tb" x="42" y="274">3. The complementary strand is filled in</text>
+ <text class="t" x="42" y="298">Primase and DNA polymerase copy the extended overhang, so the chromosome end is restored.</text>
+ <text class="t" x="42" y="316">Most somatic cells repress TERT, so telomeres shorten with division; stem cells and most cancers keep it active.</text>
+</svg>

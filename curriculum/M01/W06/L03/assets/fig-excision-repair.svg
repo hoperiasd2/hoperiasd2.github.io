@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 380" width="860" height="380" role="img"
+ aria-label="Comparison of base-excision repair and nucleotide-excision repair: BER removes a single damaged base through a glycosylase and AP endonuclease, NER removes an oligonucleotide containing a helix-distorting lesion">
+ <style>
+  .bx{fill:#fff;stroke:#c6d2dd;stroke-width:1.8}.k{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .t{font:12px sans-serif;fill:#16191d}.tb{font:700 13px sans-serif;fill:#003c71}
+  .s{font:11px sans-serif;fill:#4a5159}.lv{font:700 11px sans-serif;fill:#8a6300}
+  .d{stroke:#16191d;stroke-width:2.4;fill:none}
+  .ar{stroke:#003c71;stroke-width:2;fill:none;marker-end:url(#e)}
+ </style>
+ <defs><marker id="e" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker></defs>
+
+ <text class="lv" x="24" y="28">BASE-EXCISION REPAIR (BER)</text>
+ <text class="s" x="24" y="46">small, non-distorting damage: oxidised, deaminated or alkylated bases</text>
+ <path class="d" d="M24 86 L390 86"/><path class="d" d="M24 104 L390 104"/>
+ <rect fill="#c0392b" x="180" y="78" width="12" height="16"/>
+ <text class="s" x="162" y="70">damaged base</text>
+ <path class="ar" d="M200 120 L200 142"/><text class="s" x="212" y="136">glycosylase removes the base</text>
+ <path class="d" d="M24 160 L390 160"/><path class="d" d="M24 178 L390 178"/>
+ <rect fill="#fff" stroke="#c0392b" x="180" y="152" width="12" height="16"/>
+ <text class="s" x="200" y="150">AP site</text>
+ <path class="ar" d="M200 194 L200 216"/><text class="s" x="212" y="210">AP endonuclease nicks the backbone</text>
+ <path class="d" d="M24 234 L176 234"/><path class="d" d="M196 234 L390 234"/>
+ <path class="d" d="M24 252 L390 252"/>
+ <path class="ar" d="M200 268 L200 290"/><text class="s" x="212" y="284">polymerase fills, ligase seals</text>
+ <path class="d" d="M24 308 L390 308"/><path class="d" d="M24 326 L390 326"/>
+ <rect fill="#1a7f52" x="180" y="300" width="12" height="16"/>
+ <text class="s" x="24" y="356">one nucleotide replaced</text>
+
+ <line x1="424" y1="20" x2="424" y2="356" stroke="#dde2e8" stroke-width="2"/>
+
+ <text class="lv" x="454" y="28">NUCLEOTIDE-EXCISION REPAIR (NER)</text>
+ <text class="s" x="454" y="46">bulky, helix-distorting lesions: pyrimidine dimers, chemical adducts</text>
+ <path class="d" d="M454 86 C520 86 530 74 560 74 C590 74 600 86 836 86"/>
+ <path class="d" d="M454 104 L836 104"/>
+ <rect fill="#c0392b" x="552" y="62" width="22" height="12"/>
+ <text class="s" x="536" y="56">bulky lesion distorts the helix</text>
+ <path class="ar" d="M630 120 L630 142"/><text class="s" x="642" y="136">lesion recognised, helix opened</text>
+ <path class="d" d="M454 160 L836 160"/><path class="d" d="M454 178 L836 178"/>
+ <path d="M520 152 L520 186 M616 152 L616 186" stroke="#9a6700" stroke-width="2.4"/>
+ <text class="s" x="494" y="202">two incisions flank the lesion</text>
+ <path class="ar" d="M630 216 L630 238"/><text class="s" x="642" y="232">oligonucleotide of 24-32 nt removed</text>
+ <path class="d" d="M454 256 L518 256"/><path class="d" d="M618 256 L836 256"/>
+ <path class="d" d="M454 274 L836 274"/>
+ <path class="ar" d="M630 290 L630 312"/><text class="s" x="642" y="306">polymerase fills, ligase seals</text>
+ <path class="d" d="M454 330 L836 330"/>
+ <text class="s" x="454" y="356">a stretch of about 30 nucleotides replaced</text>
+</svg>

@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 400" width="860" height="400" role="img"
+ aria-label="Two pathways for double-strand break repair: non-homologous end joining ligates the ends directly and can lose nucleotides, homologous recombination resects the ends and uses the sister chromatid as template">
+ <style>
+  .bx{fill:#fff;stroke:#c6d2dd;stroke-width:1.8}.k{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .t{font:12px sans-serif;fill:#16191d}.tb{font:700 13px sans-serif;fill:#003c71}
+  .s{font:11px sans-serif;fill:#4a5159}.lv{font:700 11px sans-serif;fill:#8a6300}
+  .d{stroke:#16191d;stroke-width:2.6;fill:none}.g{stroke:#1a7f52;stroke-width:2.6;fill:none}
+  .ar{stroke:#003c71;stroke-width:2;fill:none;marker-end:url(#b)}
+ </style>
+ <defs><marker id="b" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker></defs>
+
+ <text class="tb" x="24" y="28">Double-strand break</text>
+ <path class="d" d="M24 56 L380 56"/><path class="d" d="M460 56 L836 56"/>
+ <path d="M392 40 L392 72 M448 40 L448 72" stroke="#c0392b" stroke-width="3"/>
+ <path class="ar" d="M250 76 L170 108"/><path class="ar" d="M610 76 L690 108"/>
+
+ <text class="lv" x="24" y="132">NON-HOMOLOGOUS END JOINING</text>
+ <text class="s" x="24" y="150">active throughout the cell cycle</text>
+ <path class="d" d="M24 186 L180 186"/><path class="d" d="M214 186 L390 186"/>
+ <ellipse class="k" cx="197" cy="186" rx="26" ry="18"/>
+ <text class="s" x="182" y="190" font-size="9">Ku70/80</text>
+ <path class="ar" d="M200 212 L200 240"/>
+ <text class="s" x="212" y="234">ends trimmed, then ligated</text>
+ <path class="d" d="M24 266 L390 266"/>
+ <rect fill="#c0392b" x="188" y="258" width="18" height="8"/>
+ <text class="s" x="24" y="296">fast, but a few nucleotides are often lost</text>
+ <text class="s" x="24" y="314">at the junction, so the repair is error-prone</text>
+
+ <line x1="424" y1="120" x2="424" y2="376" stroke="#dde2e8" stroke-width="2"/>
+
+ <text class="lv" x="454" y="132">HOMOLOGOUS RECOMBINATION</text>
+ <text class="s" x="454" y="150">S and G2 only, when a sister chromatid exists</text>
+ <path class="d" d="M454 186 L600 186"/><path class="d" d="M700 186 L836 186"/>
+ <path class="d" d="M600 186 L660 178" stroke-dasharray="4 3"/>
+ <text class="s" x="454" y="212">5' ends resected to leave 3' single strands</text>
+ <path class="ar" d="M640 224 L640 250"/>
+ <g fill="#1a7f52"><circle cx="622" cy="238" r="5"/><circle cx="640" cy="238" r="5"/><circle cx="658" cy="238" r="5"/></g>
+ <text class="s" x="672" y="242">RAD51 filament</text>
+ <path class="g" d="M454 276 L836 276"/>
+ <path class="g" d="M454 294 L836 294"/>
+ <text class="s" x="454" y="318">sister chromatid used as template</text>
+ <path class="d" d="M454 342 L836 342"/>
+ <text class="s" x="454" y="370">sequence restored exactly: accurate repair</text>
+</svg>
