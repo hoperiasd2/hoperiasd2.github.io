@@ -1,4 +1,77 @@
 {
   "lesson_id": "M01-W10-L01",
-  "figures": []
+  "figures": [
+    {
+      "figure_id": "fig-mito-structure",
+      "lesson_id": "M01-W10-L01",
+      "html_anchor": "#fig-mito-structure",
+      "caption": "미토콘드리아의 구획. 바깥막은 porin 때문에 작은 분자에 자유롭게 열려 있고, 안쪽막은 cardiolipin이 많으며 특정 수송체 없이는 통과할 수 없다. Cristae가 안쪽막의 면적을 늘린다.",
+      "asset_path": "assets/fig-mito-structure.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-mito-dynamics",
+      "lesson_id": "M01-W10-L01",
+      "html_anchor": "#fig-mito-dynamics",
+      "caption": "미토콘드리아 네트워크의 균형. Mfn1/Mfn2와 Opa1이 융합을, Drp1이 분열을 담당하고, 막전위를 잃은 소기관은 PINK1-Parkin 경로로 표지되어 mitophagy로 제거된다.",
+      "asset_path": "assets/fig-mito-dynamics.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-mtdna",
+      "lesson_id": "M01-W10-L01",
+      "html_anchor": "#fig-mtdna",
+      "caption": "사람 mtDNA의 구성과 heteroplasmy. 16,569 bp 원형 유전체가 13개 단백질, 2개 rRNA, 22개 tRNA를 암호화하며, 변이형 비율이 역치를 넘을 때 표현형이 나타난다.",
+      "asset_path": "assets/fig-mtdna.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-mito-import",
+      "lesson_id": "M01-W10-L01",
+      "html_anchor": "#fig-mito-import",
+      "caption": "미토콘드리아 단백질 수입. Tom40이 공통 입구이고, 목적지에 따라 Tim23(matrix), Tim22(내막 carrier), SAM(바깥막 β-barrel)으로 갈라지며, mtDNA 산물은 Oxa1로 matrix에서 내막으로 삽입된다.",
+      "asset_path": "assets/fig-mito-import.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-chloroplast",
+      "lesson_id": "M01-W10-L01",
+      "html_anchor": "#fig-chloroplast",
+      "caption": "엽록체의 구획과 수입 경로. Envelope 두 막 안에 thylakoid 막계가 따로 있고, transit peptide를 가진 전구체가 Toc·Tic를 거쳐 stroma로 들어가며 SPP가 신호를 절단한다.",
+      "asset_path": "assets/fig-chloroplast.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-peroxisome",
+      "lesson_id": "M01-W10-L01",
+      "html_anchor": "#fig-peroxisome",
+      "caption": "퍼옥시좀의 기능과 PTS1 수입 순환. Pex5가 SKL 신호를 가진 접힌 단백질을 운반해 Pex13·Pex14에 도킹하고 화물을 내려놓은 뒤 재사용된다.",
+      "asset_path": "assets/fig-peroxisome.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    }
+  ]
 }
