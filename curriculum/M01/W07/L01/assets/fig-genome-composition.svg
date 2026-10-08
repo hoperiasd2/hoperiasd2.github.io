@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 400" width="860" height="400" role="img"
+     aria-label="Composition of the human haploid genome of 3.1 gigabases broken into coding exons, introns, interspersed repeats, simple repeats and intergenic DNA, with the internal structure of a single gene">
+  <style>
+    .ttl{font:700 15px sans-serif;fill:#003c71}
+    .sub{font:12px sans-serif;fill:#4a5159}
+    .lab{font:700 12px sans-serif;fill:#16191d}
+    .box{fill:#ffffff;stroke:#c6d2dd;stroke-width:1.4}
+    .hl{fill:#fff5d6;stroke:#f2b705;stroke-width:1.8}
+    .ar{stroke:#16191d;stroke-width:1.8;fill:none;marker-end:url(#a1)}
+  </style>
+  <defs>
+    <marker id="a1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#16191d"/>
+    </marker>
+  </defs>
+  <text class="ttl" x="24" y="24">Human haploid genome: 3.1 Gb, about 19,000-20,000 protein-coding genes</text>
+
+  <!-- stacked bar, total width 800 -->
+  <g>
+    <rect x="30" y="44" width="12" height="44" fill="#f2b705" stroke="#16191d" stroke-width="1.2"/>
+    <rect x="42" y="44" width="200" height="44" fill="#dbe6f0" stroke="#16191d" stroke-width="1.2"/>
+    <rect x="242" y="44" width="360" height="44" fill="#9fb8cd" stroke="#16191d" stroke-width="1.2"/>
+    <rect x="602" y="44" width="24" height="44" fill="#6b7f91" stroke="#16191d" stroke-width="1.2"/>
+    <rect x="626" y="44" width="40" height="44" fill="#c6d2dd" stroke="#16191d" stroke-width="1.2"/>
+    <rect x="666" y="44" width="164" height="44" fill="#ffffff" stroke="#16191d" stroke-width="1.2"/>
+  </g>
+  <line x1="36" y1="92" x2="36" y2="116" stroke="#16191d" stroke-width="1"/>
+  <text class="lab" x="30" y="132">1.5%</text>
+  <text class="sub" x="30" y="148">coding exons</text>
+  <line x1="142" y1="92" x2="142" y2="116" stroke="#16191d" stroke-width="1"/>
+  <text class="lab" x="128" y="132">25%</text>
+  <text class="sub" x="106" y="148">introns</text>
+  <line x1="420" y1="92" x2="420" y2="116" stroke="#16191d" stroke-width="1"/>
+  <text class="lab" x="356" y="132">45%  interspersed repeats</text>
+  <text class="sub" x="356" y="148">LINE, SINE, LTR element, DNA transposon</text>
+  <line x1="614" y1="92" x2="614" y2="170" stroke="#16191d" stroke-width="1"/>
+  <text class="sub" x="598" y="186">3% simple</text>
+  <text class="sub" x="598" y="200">and satellite</text>
+  <line x1="646" y1="92" x2="646" y2="214" stroke="#16191d" stroke-width="1"/>
+  <text class="sub" x="630" y="230">5% segmental</text>
+  <text class="sub" x="630" y="244">duplication</text>
+  <line x1="748" y1="92" x2="748" y2="116" stroke="#16191d" stroke-width="1"/>
+  <text class="lab" x="700" y="132">20-25% intergenic</text>
+  <text class="sub" x="700" y="148">regulatory and unassigned</text>
+
+  <text class="ttl" x="24" y="200">Inside one average gene: 27 kb of DNA for 1.3 kb of coding sequence</text>
+  <g>
+    <rect class="box" x="30" y="214" width="800" height="36" rx="4"/>
+    <g fill="#f2b705" stroke="#16191d" stroke-width="1.2">
+      <rect x="70" y="214" width="26" height="36"/>
+      <rect x="200" y="214" width="18" height="36"/>
+      <rect x="330" y="214" width="22" height="36"/>
+      <rect x="520" y="214" width="16" height="36"/>
+      <rect x="690" y="214" width="30" height="36"/>
+    </g>
+  </g>
+  <text class="lab" x="62" y="268">exon</text>
+  <text class="lab" x="250" y="268">intron</text>
+  <text class="sub" x="30" y="206">promoter</text>
+  <path class="ar" d="M40 232 L64 232"/>
+
+  <rect class="hl" x="30" y="286" width="392" height="96" rx="8"/>
+  <text class="lab" x="46" y="308">Gene number does not track complexity</text>
+  <text class="sub" x="46" y="330">C. elegans about 20,000; Drosophila about 14,000;</text>
+  <text class="sub" x="46" y="348">human 19,000-20,000 protein-coding genes</text>
+  <text class="sub" x="46" y="370">Over 90% of human genes give more than one spliced product</text>
+
+  <rect class="box" x="438" y="286" width="392" height="96" rx="8"/>
+  <text class="lab" x="454" y="308">Extreme case: DMD</text>
+  <text class="sub" x="454" y="330">About 2.2 Mb of genomic DNA, 79 exons,</text>
+  <text class="sub" x="454" y="348">coding sequence under 1% of the locus</text>
+  <text class="sub" x="454" y="370">Transcription of one copy takes many hours</text>
+</svg>

@@ -1,4 +1,65 @@
 {
   "lesson_id": "M01-W07-L01",
-  "figures": []
+  "figures": [
+    {
+      "figure_id": "fig-sequencing",
+      "lesson_id": "M01-W07-L01",
+      "html_anchor": "#fig-sequencing",
+      "caption": "Sanger dideoxy 서열 분석과 대규모 병렬 서열 분석의 비교. ddNTP에 의한 사슬 종결과 길이 분리, 그리고 고정된 수억 개 clone을 동시에 한 염기씩 읽는 방식의 차이를 보인다.",
+      "asset_path": "assets/fig-sequencing.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-genome-composition",
+      "lesson_id": "M01-W07-L01",
+      "html_anchor": "#fig-genome-composition",
+      "caption": "사람 유전체의 구성. 전체 3.1 Gb를 암호화 exon, intron, 산재성 반복 서열, 단순 반복, 유전자 간 영역으로 나누고 유전자 하나의 내부 구조를 함께 보인다.",
+      "asset_path": "assets/fig-genome-composition.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-transcriptome",
+      "lesson_id": "M01-W07-L01",
+      "html_anchor": "#fig-transcriptome",
+      "caption": "Microarray와 RNA-seq의 측정 원리 비교. 탐침 hybridization의 형광 강도와 read 대응 후의 개수 계수가 각각 어떤 자료를 주는지를 보인다.",
+      "asset_path": "assets/fig-transcriptome.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-proteomics",
+      "lesson_id": "M01-W07-L01",
+      "html_anchor": "#fig-proteomics",
+      "caption": "질량분석 기반 단백체 분석의 흐름. Trypsin 소화, 액체 크로마토그래피 분리, MS1에서의 peptide 질량 측정, MS/MS 조각화와 데이터베이스 검색까지의 단계를 보인다.",
+      "asset_path": "assets/fig-proteomics.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-network",
+      "lesson_id": "M01-W07-L01",
+      "html_anchor": "#fig-network",
+      "caption": "유전자 조절 네트워크의 구조. Scale-free 분포와 hub, 무작위 제거와 hub 제거에 대한 반응 차이, 그리고 feed-forward loop와 negative feedback의 두 motif를 보인다.",
+      "asset_path": "assets/fig-network.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    }
+  ]
 }

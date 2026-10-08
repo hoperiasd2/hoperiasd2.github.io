@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 420" width="820" height="420" role="img"
+     aria-label="Accumulated carbamoyl phosphate leaves the mitochondrion when OTC is blocked and enters cytosolic pyrimidine synthesis, raising urinary orotic acid">
+  <style>
+    .o { fill:#fff; stroke:#c6d2dd; stroke-width:1.8; }
+    .ok { fill:#fff5d6; stroke:#f2b705; stroke-width:2.2; }
+    .mito { fill:#eff4f8; stroke:#003c71; stroke-width:2; stroke-dasharray:7 5; }
+    .tb { font:700 13px sans-serif; fill:#003c71; }
+    .t { font:12px sans-serif; fill:#16191d; }
+    .s { font:11px sans-serif; fill:#4a5159; }
+    .ar { stroke:#003c71; stroke-width:2.4; fill:none; marker-end:url(#m2); }
+    .blk { stroke:#b00020; stroke-width:3.4; fill:none; }
+    .bt { font:700 12px sans-serif; fill:#b00020; }
+  </style>
+  <defs>
+    <marker id="m2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker>
+  </defs>
+
+  <rect class="mito" x="20" y="34" width="340" height="352" rx="14"/>
+  <text class="tb" x="38" y="58">MITOCHONDRION</text>
+  <rect class="o" x="400" y="34" width="400" height="352" rx="14"/>
+  <text class="tb" x="418" y="58">CYTOSOL</text>
+
+  <rect class="o" x="40" y="76" width="300" height="42" rx="7"/>
+  <text class="t" x="56" y="102">NH3 + HCO3- + 2 ATP</text>
+  <path class="ar" d="M190 122 L190 150"/>
+  <text class="s" x="200" y="142">CPS I (needs NAG)</text>
+
+  <rect class="ok" x="40" y="154" width="300" height="56" rx="8"/>
+  <text class="tb" x="56" y="178">CARBAMOYL PHOSPHATE</text>
+  <text class="s" x="56" y="198">accumulates when OTC fails</text>
+
+  <path class="ar" d="M190 214 L190 250"/>
+  <path class="blk" d="M166 226 L214 246"/>
+  <path class="blk" d="M166 246 L214 226"/>
+  <text class="bt" x="222" y="240">OTC blocked</text>
+
+  <rect class="o" x="40" y="254" width="300" height="42" rx="7"/>
+  <text class="t" x="56" y="280">citrulline (LOW in plasma)</text>
+
+  <rect class="o" x="40" y="320" width="300" height="52" rx="7"/>
+  <text class="t" x="56" y="342">Urea synthesis falls:</text>
+  <text class="t" x="56" y="362">ammonia and glutamine rise</text>
+
+  <path class="ar" d="M344 180 L418 180"/>
+  <text class="s" x="346" y="168">leaks out</text>
+
+  <rect class="o" x="420" y="158" width="360" height="42" rx="7"/>
+  <text class="t" x="436" y="184">carbamoyl phosphate joins the pyrimidine pathway</text>
+  <path class="ar" d="M600 204 L600 230"/>
+  <text class="s" x="610" y="222">ASPARTATE transcarbamylase (CAD)</text>
+
+  <rect class="o" x="420" y="234" width="360" height="42" rx="7"/>
+  <text class="t" x="436" y="260">carbamoyl aspartate to dihydroorotate</text>
+  <path class="ar" d="M600 280 L600 306"/>
+
+  <rect class="ok" x="420" y="310" width="360" height="62" rx="8"/>
+  <text class="tb" x="436" y="334">OROTIC ACID, excreted in urine</text>
+  <text class="s" x="436" y="356">marker of a block at or after OTC</text>
+
+  <text class="s" x="420" y="108">Normally CPS II supplies this pathway from glutamine;</text>
+  <text class="s" x="420" y="126">here the overflow from CPS I substitutes for it.</text>
+</svg>

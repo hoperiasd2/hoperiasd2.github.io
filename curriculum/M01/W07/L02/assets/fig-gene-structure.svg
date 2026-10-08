@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 320" width="880" height="320" role="img"
+ aria-label="Structure of a eukaryotic protein-coding transcription unit showing promoter, 5-prime UTR, exons, introns, coding sequence, 3-prime UTR and polyadenylation signal, with the corresponding pre-mRNA, mature mRNA and protein">
+ <style>
+  .ex{fill:#003c71}.ut{fill:#9fc0dc}.in{fill:none;stroke:#c6d2dd;stroke-width:2}
+  .pr{fill:#f2b705}.t{font:11px sans-serif;fill:#16191d}.tb{font:700 12px sans-serif;fill:#003c71}
+  .s{font:10px sans-serif;fill:#4a5159}.ar{stroke:#003c71;stroke-width:1.8;fill:none;marker-end:url(#a)}
+  .lv{font:700 11px sans-serif;fill:#8a6300}
+ </style>
+ <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker></defs>
+
+ <text class="lv" x="16" y="26">GENOMIC DNA</text>
+ <rect class="pr" x="40" y="40" width="70" height="20" rx="3"/><text class="t" x="46" y="54">Promoter</text>
+ <rect class="ut" x="118" y="40" width="48" height="20"/><text class="s" x="122" y="76">5' UTR</text>
+ <rect class="ex" x="166" y="40" width="78" height="20"/><text class="s" x="188" y="34" fill="#003c71">Exon 1</text>
+ <path class="in" d="M244 50 L318 50"/><text class="s" x="258" y="44">Intron 1</text>
+ <rect class="ex" x="318" y="40" width="96" height="20"/><text class="s" x="344" y="34" fill="#003c71">Exon 2</text>
+ <path class="in" d="M414 50 L492 50"/><text class="s" x="428" y="44">Intron 2</text>
+ <rect class="ex" x="492" y="40" width="84" height="20"/><text class="s" x="514" y="34" fill="#003c71">Exon 3</text>
+ <rect class="ut" x="576" y="40" width="70" height="20"/><text class="s" x="580" y="76">3' UTR</text>
+ <text class="s" x="652" y="54">AATAAA</text><text class="s" x="652" y="68">poly(A) signal</text>
+ <path d="M30 50 L40 50" stroke="#16191d" stroke-width="2"/>
+ <text class="s" x="166" y="90">ATG (start)</text><text class="s" x="520" y="90">stop codon</text>
+
+ <path class="ar" d="M120 100 L120 128"/><text class="t" x="132" y="120">Transcription</text>
+ <text class="lv" x="16" y="150">PRE-mRNA</text>
+ <rect class="ut" x="118" y="162" width="48" height="18"/>
+ <rect class="ex" x="166" y="162" width="78" height="18"/>
+ <rect x="244" y="162" width="74" height="18" fill="#e6edf4" stroke="#c6d2dd"/>
+ <rect class="ex" x="318" y="162" width="96" height="18"/>
+ <rect x="414" y="162" width="78" height="18" fill="#e6edf4" stroke="#c6d2dd"/>
+ <rect class="ex" x="492" y="162" width="84" height="18"/>
+ <rect class="ut" x="576" y="162" width="70" height="18"/>
+ <text class="s" x="652" y="176">AAAA...</text>
+
+ <path class="ar" d="M120 192 L120 220"/><text class="t" x="132" y="212">Splicing: introns removed</text>
+ <text class="lv" x="16" y="242">MATURE mRNA</text>
+ <rect class="ut" x="118" y="254" width="48" height="18"/>
+ <rect class="ex" x="166" y="254" width="78" height="18"/>
+ <rect class="ex" x="244" y="254" width="96" height="18"/>
+ <rect class="ex" x="340" y="254" width="84" height="18"/>
+ <rect class="ut" x="424" y="254" width="70" height="18"/>
+ <text class="s" x="500" y="268">AAAA...  poly(A) tail</text>
+ <text class="s" x="118" y="292">Only the coding sequence (dark blue) is translated; UTRs are transcribed but not translated.</text>
+ <text class="s" x="118" y="308">Transcription unit = promoter to poly(A) signal. The gene is longer than its coding sequence.</text>
+</svg>

@@ -1,4 +1,77 @@
 {
   "lesson_id": "M02-W10-L01",
-  "figures": []
+  "figures": [
+    {
+      "figure_id": "fig-aa-pool",
+      "lesson_id": "M02-W10-L01",
+      "html_anchor": "#fig-aa-pool",
+      "caption": "아미노산 pool의 유입과 유출. 저장 형태가 없으므로 모든 경로가 같은 pool을 공유한다. 분해되는 아미노산의 질소는 urea가 되어 소변 질소의 80~90%를 차지한다.",
+      "asset_path": "assets/fig-aa-pool.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-transamination",
+      "lesson_id": "M02-W10-L01",
+      "html_anchor": "#fig-transamination",
+      "caption": "Transamination은 여러 아미노산의 질소를 glutamate 하나로 모은다. ALT와 AST는 그중 임상에서 측정하는 두 효소이고, PLP가 아미노기를 중간에서 받아 넘긴다.",
+      "asset_path": "assets/fig-transamination.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-ammonia-transport",
+      "lesson_id": "M02-W10-L01",
+      "html_anchor": "#fig-ammonia-transport",
+      "caption": "질소의 조직 간 운반. 말초에서는 glutamine과 alanine이 질소를 싣고, 간에서 암모니아로 풀려 urea cycle에 들어간다. 신장의 glutaminase는 산-염기 조절에 쓰인다.",
+      "asset_path": "assets/fig-ammonia-transport.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-urea-cycle",
+      "lesson_id": "M02-W10-L01",
+      "html_anchor": "#fig-urea-cycle",
+      "caption": "Urea cycle의 다섯 반응. 1·2번은 미토콘드리아 기질, 3·4·5번은 세포질에서 일어나고 ORNT1이 두 구획을 잇는다. 두 번째 질소는 반응 3에서 aspartate로 들어오고, 그 탄소 골격은 반응 4에서 fumarate로 빠진다.",
+      "asset_path": "assets/fig-urea-cycle.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-nag-regulation",
+      "lesson_id": "M02-W10-L01",
+      "html_anchor": "#fig-nag-regulation",
+      "caption": "CPS I의 조절. Glutamate는 NAG의 기질이고 arginine은 NAGS의 활성자이므로, 아미노산 부하 자체가 회로를 켜는 신호가 된다. 장기 조절은 다섯 효소의 전사 유도로 이루어진다.",
+      "asset_path": "assets/fig-nag-regulation.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-urea-nitrogen",
+      "lesson_id": "M02-W10-L01",
+      "html_anchor": "#fig-urea-nitrogen",
+      "caption": "Urea의 두 질소와 한 탄소의 출처, 그리고 한 바퀴의 ATP 수지. 질소 하나는 CPS I로 들어온 유리 암모니아, 다른 하나는 aspartate의 아미노기, 탄소는 HCO₃⁻에서 온다.",
+      "asset_path": "assets/fig-urea-nitrogen.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    }
+  ]
 }

@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 520" width="880" height="520" role="img"
+     aria-label="Biochemical fingerprint of each urea cycle enzyme defect showing plasma citrulline, urine orotic acid, plasma argininosuccinate and arginine for CPS I, NAGS, OTC, ASS1, ASL and arginase deficiency">
+  <style>
+    .o { fill:#fff; stroke:#c6d2dd; stroke-width:1.8; }
+    .ok { fill:#fff5d6; stroke:#f2b705; stroke-width:2.2; }
+    .tb { font:700 13px sans-serif; fill:#003c71; }
+    .th { font:700 12px sans-serif; fill:#fff; }
+    .t { font:12px sans-serif; fill:#16191d; }
+    .s { font:11px sans-serif; fill:#4a5159; }
+    .ar { stroke:#003c71; stroke-width:2.2; fill:none; marker-end:url(#m2); }
+    .blk { stroke:#b00020; stroke-width:3.2; fill:none; }
+  </style>
+  <defs>
+    <marker id="m2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker>
+  </defs>
+
+  <text class="tb" x="24" y="28">PATHWAY WITH THE SIX BLOCK POINTS</text>
+  <rect class="o" x="24" y="42" width="120" height="44" rx="7"/><text class="t" x="38" y="70">NH3 + HCO3-</text>
+  <rect class="o" x="186" y="42" width="140" height="44" rx="7"/><text class="t" x="200" y="70">carbamoyl-P</text>
+  <rect class="o" x="368" y="42" width="120" height="44" rx="7"/><text class="t" x="382" y="70">citrulline</text>
+  <rect class="o" x="530" y="42" width="150" height="44" rx="7"/><text class="t" x="544" y="70">argininosuccinate</text>
+  <rect class="o" x="722" y="42" width="130" height="44" rx="7"/><text class="t" x="736" y="70">arginine to urea</text>
+
+  <path class="ar" d="M148 64 L182 64"/><text class="s" x="146" y="36">CPS I / NAGS</text>
+  <path class="ar" d="M330 64 L364 64"/><text class="s" x="332" y="36">OTC</text>
+  <path class="ar" d="M492 64 L526 64"/><text class="s" x="486" y="36">ASS1</text>
+  <path class="ar" d="M684 64 L718 64"/><text class="s" x="680" y="36">ASL / arginase</text>
+
+  <rect fill="#003c71" x="24" y="118" width="828" height="34" rx="6"/>
+  <text class="th" x="38" y="140">Enzyme defect</text>
+  <text class="th" x="246" y="140">Plasma citrulline</text>
+  <text class="th" x="420" y="140">Urine orotic acid</text>
+  <text class="th" x="600" y="140">Other marker</text>
+  <text class="th" x="748" y="140">Inheritance</text>
+
+  <g>
+    <rect class="o" x="24" y="152" width="828" height="40"/>
+    <text class="t" x="38" y="178">NAGS deficiency</text>
+    <text class="t" x="246" y="178">low</text>
+    <text class="t" x="420" y="178">low / normal</text>
+    <text class="t" x="600" y="178">responds to carglumic acid</text>
+    <text class="t" x="748" y="178">autosomal rec.</text>
+  </g>
+  <g>
+    <rect class="o" x="24" y="192" width="828" height="40" fill="#eff4f8"/>
+    <text class="t" x="38" y="218">CPS I deficiency</text>
+    <text class="t" x="246" y="218">low</text>
+    <text class="t" x="420" y="218">low / normal</text>
+    <text class="t" x="600" y="218">glutamine high, arginine low</text>
+    <text class="t" x="748" y="218">autosomal rec.</text>
+  </g>
+  <g>
+    <rect class="ok" x="24" y="232" width="828" height="40"/>
+    <text class="t" x="38" y="258">OTC deficiency (most common)</text>
+    <text class="t" x="246" y="258">low</text>
+    <text class="t" x="420" y="258">HIGH</text>
+    <text class="t" x="600" y="258">carbamoyl-P overflows</text>
+    <text class="t" x="748" y="258">X-linked</text>
+  </g>
+  <g>
+    <rect class="o" x="24" y="272" width="828" height="40"/>
+    <text class="t" x="38" y="298">ASS1 deficiency (citrullinemia I)</text>
+    <text class="t" x="246" y="298">VERY HIGH (over 10x)</text>
+    <text class="t" x="420" y="298">high</text>
+    <text class="t" x="600" y="298">argininosuccinate absent</text>
+    <text class="t" x="748" y="298">autosomal rec.</text>
+  </g>
+  <g>
+    <rect class="o" x="24" y="312" width="828" height="40" fill="#eff4f8"/>
+    <text class="t" x="38" y="338">ASL deficiency</text>
+    <text class="t" x="246" y="338">moderately high</text>
+    <text class="t" x="420" y="338">high</text>
+    <text class="t" x="600" y="338">ARGININOSUCCINATE present</text>
+    <text class="t" x="748" y="338">autosomal rec.</text>
+  </g>
+  <g>
+    <rect class="o" x="24" y="352" width="828" height="40"/>
+    <text class="t" x="38" y="378">Arginase 1 deficiency</text>
+    <text class="t" x="246" y="378">normal / slightly high</text>
+    <text class="t" x="420" y="378">high</text>
+    <text class="t" x="600" y="378">ARGININE markedly high</text>
+    <text class="t" x="748" y="378">autosomal rec.</text>
+  </g>
+  <g>
+    <rect class="o" x="24" y="392" width="828" height="40" fill="#eff4f8"/>
+    <text class="t" x="38" y="418">ORNT1 defect (HHH syndrome)</text>
+    <text class="t" x="246" y="418">low / normal</text>
+    <text class="t" x="420" y="418">high</text>
+    <text class="t" x="600" y="418">ornithine high, homocitrulline in urine</text>
+    <text class="t" x="748" y="418">autosomal rec.</text>
+  </g>
+
+  <rect class="ok" x="24" y="452" width="828" height="56" rx="8"/>
+  <text class="t" x="40" y="476">Rule: plasma citrulline separates the proximal defects (low) from ASS1 (very high) and ASL (moderate),</text>
+  <text class="t" x="40" y="496">and urine orotic acid separates a block AT or AFTER OTC (high) from a block BEFORE it (low).</text>
+</svg>

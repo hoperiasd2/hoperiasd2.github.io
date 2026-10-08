@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 340" width="860" height="340" role="img"
+ aria-label="The globin gene family: duplication and divergence of an ancestral gene into alpha and beta clusters, the arrangement of the beta-globin cluster on chromosome 11, and the developmental switch of globin expression">
+ <style>
+  .b{fill:#fff;stroke:#c6d2dd;stroke-width:1.6}.g{fill:#003c71}.p{fill:#d9dee4}
+  .t{font:11px sans-serif;fill:#16191d}.tb{font:700 12px sans-serif;fill:#003c71}
+  .s{font:10px sans-serif;fill:#4a5159}.lv{font:700 11px sans-serif;fill:#8a6300}
+  .ar{stroke:#003c71;stroke-width:1.6;fill:none;marker-end:url(#b)}
+ </style>
+ <defs><marker id="b" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker></defs>
+
+ <text class="lv" x="16" y="24">DUPLICATION AND DIVERGENCE</text>
+ <rect class="b" x="30" y="36" width="150" height="26" rx="4"/><text class="t" x="42" y="54">Ancestral globin gene</text>
+ <path class="ar" d="M106 66 L106 86"/>
+ <path class="ar" d="M106 86 L60 86 L60 104"/><path class="ar" d="M106 86 L170 86 L170 104"/>
+ <rect class="b" x="14" y="106" width="96" height="24" rx="4"/><text class="t" x="34" y="123">alpha group</text>
+ <rect class="b" x="124" y="106" width="96" height="24" rx="4"/><text class="t" x="146" y="123">beta group</text>
+ <text class="s" x="14" y="150">chromosome 16</text><text class="s" x="124" y="150">chromosome 11</text>
+
+ <text class="lv" x="300" y="24">BETA-GLOBIN CLUSTER (chromosome 11)</text>
+ <line x1="300" y1="60" x2="830" y2="60" stroke="#16191d" stroke-width="2"/>
+ <rect class="g" x="306" y="50" width="26" height="20"/><text class="s" x="300" y="86">LCR</text>
+ <rect class="g" x="372" y="50" width="22" height="20"/><text class="s" x="372" y="86">epsilon</text>
+ <rect class="g" x="440" y="50" width="22" height="20"/><text class="s" x="438" y="86">G-gamma</text>
+ <rect class="g" x="500" y="50" width="22" height="20"/><text class="s" x="498" y="86">A-gamma</text>
+ <rect class="p" x="566" y="50" width="22" height="20"/><text class="s" x="560" y="86">pseudo</text>
+ <rect class="g" x="636" y="50" width="22" height="20"/><text class="s" x="640" y="86">delta</text>
+ <rect class="g" x="706" y="50" width="22" height="20"/><text class="s" x="710" y="86">beta</text>
+ <text class="s" x="300" y="104">Gene order on the chromosome matches the order of expression during development.</text>
+
+ <text class="lv" x="300" y="150">DEVELOPMENTAL SWITCH</text>
+ <rect class="b" x="300" y="162" width="530" height="130" rx="6"/>
+ <line x1="330" y1="272" x2="810" y2="272" stroke="#16191d" stroke-width="1.4"/>
+ <line x1="330" y1="272" x2="330" y2="176" stroke="#16191d" stroke-width="1.4"/>
+ <text class="s" x="296" y="180">%</text>
+ <text class="s" x="330" y="288">Embryo</text><text class="s" x="470" y="288">Fetus</text>
+ <text class="s" x="610" y="288">Birth</text><text class="s" x="740" y="288">Adult</text>
+ <path d="M330 200 C370 200 400 250 430 268" stroke="#9a6700" stroke-width="2.4" fill="none"/>
+ <text class="s" x="336" y="196" fill="#9a6700">epsilon, zeta</text>
+ <path d="M340 262 C420 200 480 188 560 196 C600 206 630 250 700 266" stroke="#003c71" stroke-width="2.4" fill="none"/>
+ <text class="s" x="470" y="186" fill="#003c71">gamma (HbF)</text>
+ <path d="M560 266 C620 250 650 210 700 196 L810 190" stroke="#1a7f52" stroke-width="2.4" fill="none"/>
+ <text class="s" x="716" y="186" fill="#1a7f52">beta (HbA)</text>
+ <text class="s" x="300" y="316">Duplication creates spare copies; divergence gives them new timing and oxygen affinity. Non-functional copies remain as pseudogenes.</text>
+</svg>

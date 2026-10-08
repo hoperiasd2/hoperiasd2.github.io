@@ -1,4 +1,77 @@
 {
   "lesson_id": "M03-W05-L01",
-  "figures": []
+  "figures": [
+    {
+      "figure_id": "fig-cpg-methylation",
+      "lesson_id": "M03-W05-L01",
+      "html_anchor": "#fig-cpg-methylation",
+      "caption": "DNA methylation의 화학과 전사 억제 기전. CpG의 대칭성, DNMT의 두 가지 역할, methyl-CpG 결합 단백질을 통한 억제를 보인다.",
+      "asset_path": "assets/fig-cpg-methylation.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-histone-marks",
+      "lesson_id": "M03-W05-L01",
+      "html_anchor": "#fig-histone-marks",
+      "caption": "Histone 꼬리의 네 가지 수식과 전사에 대한 효과. acetylation은 전하로 작용하고 methylation은 불러들이는 reader로 작용한다.",
+      "asset_path": "assets/fig-histone-marks.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-writer-reader-eraser",
+      "lesson_id": "M03-W05-L01",
+      "html_anchor": "#fig-writer-reader-eraser",
+      "caption": "Writer·reader·eraser의 분업과, reader가 불러들인 ATP 의존성 재구성 복합체가 nucleosome을 옮기는 과정.",
+      "asset_path": "assets/fig-writer-reader-eraser.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-imprinting",
+      "lesson_id": "M03-W05-L01",
+      "html_anchor": "#fig-imprinting",
+      "caption": "15q11-q13의 imprinting과 Prader-Willi·Angelman 증후군. 같은 결실이 부모 유래에 따라 다른 질환을 만든다.",
+      "asset_path": "assets/fig-imprinting.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-x-inactivation",
+      "lesson_id": "M03-W05-L01",
+      "html_anchor": "#fig-x-inactivation",
+      "caption": "X 염색체 불활성화의 단계와 결과. XIST RNA의 cis 작용, 억제 표지의 확산, Barr body 형성, 그리고 mosaicism.",
+      "asset_path": "assets/fig-x-inactivation.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-epigenetic-cancer",
+      "lesson_id": "M03-W05-L01",
+      "html_anchor": "#fig-epigenetic-cancer",
+      "caption": "암에서의 methylation 이상과 후성유전 표적 약물. 과메틸화와 저메틸화의 표적이 다르고, 약물은 writer와 eraser에 작용한다.",
+      "asset_path": "assets/fig-epigenetic-cancer.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    }
+  ]
 }

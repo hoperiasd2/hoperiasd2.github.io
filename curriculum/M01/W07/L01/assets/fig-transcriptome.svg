@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 400" width="860" height="400" role="img"
+     aria-label="Comparison of DNA microarray and RNA-seq, contrasting fluorescence intensity of probe hybridisation with counting of mapped sequencing reads">
+  <style>
+    .ttl{font:700 15px sans-serif;fill:#003c71}
+    .sub{font:12px sans-serif;fill:#4a5159}
+    .lab{font:700 12px sans-serif;fill:#16191d}
+    .box{fill:#ffffff;stroke:#c6d2dd;stroke-width:1.4}
+    .hl{fill:#fff5d6;stroke:#f2b705;stroke-width:1.8}
+    .ar{stroke:#16191d;stroke-width:1.8;fill:none;marker-end:url(#a1)}
+  </style>
+  <defs>
+    <marker id="a1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#16191d"/>
+    </marker>
+  </defs>
+
+  <rect class="box" x="24" y="34" width="810" height="52" rx="8"/>
+  <text class="ttl" x="24" y="24">Both methods start from the same RNA sample</text>
+  <text class="lab" x="40" y="58">Total RNA from cells under condition A and condition B</text>
+  <text class="sub" x="40" y="76">Reverse transcription to cDNA; the two routes diverge here</text>
+  <path class="ar" d="M220 90 L220 112"/>
+  <path class="ar" d="M640 90 L640 112"/>
+
+  <text class="ttl" x="24" y="134">A. DNA microarray: measure hybridisation</text>
+  <rect class="box" x="24" y="144" width="392" height="156" rx="8"/>
+  <g>
+    <rect x="44" y="160" width="150" height="120" fill="#ffffff" stroke="#16191d" stroke-width="1.4"/>
+    <g stroke="#16191d" stroke-width="0.8">
+      <circle cx="64" cy="180" r="7" fill="#f2b705"/><circle cx="94" cy="180" r="7" fill="#dbe6f0"/>
+      <circle cx="124" cy="180" r="7" fill="#9fb8cd"/><circle cx="154" cy="180" r="7" fill="#ffffff"/>
+      <circle cx="64" cy="210" r="7" fill="#dbe6f0"/><circle cx="94" cy="210" r="7" fill="#f2b705"/>
+      <circle cx="124" cy="210" r="7" fill="#ffffff"/><circle cx="154" cy="210" r="7" fill="#9fb8cd"/>
+      <circle cx="64" cy="240" r="7" fill="#9fb8cd"/><circle cx="94" cy="240" r="7" fill="#ffffff"/>
+      <circle cx="124" cy="240" r="7" fill="#f2b705"/><circle cx="154" cy="240" r="7" fill="#dbe6f0"/>
+      <circle cx="64" cy="268" r="7" fill="#ffffff"/><circle cx="94" cy="268" r="7" fill="#9fb8cd"/>
+      <circle cx="124" cy="268" r="7" fill="#dbe6f0"/><circle cx="154" cy="268" r="7" fill="#f2b705"/>
+    </g>
+  </g>
+  <text class="sub" x="206" y="176">One fixed position per</text>
+  <text class="sub" x="206" y="192">known gene, carrying a</text>
+  <text class="sub" x="206" y="208">complementary probe</text>
+  <text class="lab" x="206" y="234">Signal = fluorescence</text>
+  <text class="lab" x="206" y="250">intensity at each spot</text>
+  <text class="sub" x="206" y="274">Only probed genes</text>
+  <text class="sub" x="206" y="290">are measured</text>
+
+  <text class="ttl" x="444" y="134">B. RNA-seq: count reads</text>
+  <rect class="box" x="444" y="144" width="390" height="156" rx="8"/>
+  <text class="sub" x="460" y="164">Sequence the cDNA, then map each read to the genome</text>
+  <line x1="460" y1="200" x2="818" y2="200" stroke="#16191d" stroke-width="2"/>
+  <g fill="#f2b705" stroke="#16191d" stroke-width="1">
+    <rect x="474" y="190" width="40" height="20"/><rect x="560" y="190" width="30" height="20"/>
+    <rect x="664" y="190" width="36" height="20"/><rect x="760" y="190" width="30" height="20"/>
+  </g>
+  <text class="sub" x="460" y="184">exon</text>
+  <g stroke="#003c71" stroke-width="3">
+    <line x1="476" y1="222" x2="506" y2="222"/><line x1="486" y1="232" x2="516" y2="232"/>
+    <line x1="562" y1="222" x2="588" y2="222"/>
+    <line x1="666" y1="222" x2="696" y2="222"/><line x1="672" y1="232" x2="700" y2="232"/>
+    <line x1="762" y1="222" x2="788" y2="222"/>
+  </g>
+  <path d="M506 246 L560 246" stroke="#003c71" stroke-width="3" stroke-dasharray="5 4"/>
+  <text class="sub" x="460" y="266">junction reads span two exons and reveal which</text>
+  <text class="sub" x="460" y="282">exon combination was used</text>
+
+  <rect class="hl" x="24" y="318" width="810" height="70" rx="8"/>
+  <text class="lab" x="40" y="340">Limits that apply to any transcriptome dataset</text>
+  <text class="sub" x="40" y="360">mRNA level does not predict protein level; translation efficiency and protein half-life differ per gene</text>
+  <text class="sub" x="40" y="378">Tens of thousands of simultaneous tests require multiple-testing correction; co-expression is correlation, not causation</text>
+</svg>

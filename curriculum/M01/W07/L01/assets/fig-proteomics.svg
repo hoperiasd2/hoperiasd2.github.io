@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 400" width="860" height="400" role="img"
+     aria-label="Workflow of mass spectrometry based proteomics: trypsin digestion, liquid chromatography, MS1 mass measurement, MS2 fragmentation and database search against predicted peptides">
+  <style>
+    .ttl{font:700 15px sans-serif;fill:#003c71}
+    .sub{font:12px sans-serif;fill:#4a5159}
+    .lab{font:700 12px sans-serif;fill:#16191d}
+    .box{fill:#ffffff;stroke:#c6d2dd;stroke-width:1.4}
+    .hl{fill:#fff5d6;stroke:#f2b705;stroke-width:1.8}
+    .ar{stroke:#16191d;stroke-width:2;fill:none;marker-end:url(#a1)}
+  </style>
+  <defs>
+    <marker id="a1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#16191d"/>
+    </marker>
+  </defs>
+  <text class="ttl" x="24" y="24">Mass spectrometry based protein identification</text>
+
+  <rect class="box" x="24" y="38" width="148" height="92" rx="8"/>
+  <text class="lab" x="38" y="60">1. Protein mixture</text>
+  <path d="M40 78 C60 66, 80 94, 100 78 S140 66, 158 80" stroke="#16191d" stroke-width="2" fill="none"/>
+  <path d="M40 104 C62 92, 82 118, 104 104 S142 94, 158 106" stroke="#4a5159" stroke-width="2" fill="none"/>
+  <text class="sub" x="38" y="124">cell or tissue lysate</text>
+  <path class="ar" d="M176 84 L204 84"/>
+
+  <rect class="box" x="208" y="38" width="160" height="92" rx="8"/>
+  <text class="lab" x="222" y="60">2. Trypsin digestion</text>
+  <g stroke="#16191d" stroke-width="2">
+    <line x1="224" y1="82" x2="256" y2="82"/><line x1="266" y1="82" x2="292" y2="82"/>
+    <line x1="302" y1="82" x2="330" y2="82"/><line x1="340" y1="82" x2="360" y2="82"/>
+  </g>
+  <text class="sub" x="222" y="106">cuts after Lys and Arg,</text>
+  <text class="sub" x="222" y="122">giving predictable peptides</text>
+  <path class="ar" d="M372 84 L400 84"/>
+
+  <rect class="box" x="404" y="38" width="160" height="92" rx="8"/>
+  <text class="lab" x="418" y="60">3. LC separation</text>
+  <rect x="418" y="72" width="132" height="14" fill="#dbe6f0" stroke="#16191d" stroke-width="1"/>
+  <circle cx="440" cy="79" r="4" fill="#f2b705"/><circle cx="476" cy="79" r="4" fill="#003c71"/>
+  <circle cx="512" cy="79" r="4" fill="#9fb8cd"/>
+  <text class="sub" x="418" y="106">peptides enter the</text>
+  <text class="sub" x="418" y="122">spectrometer in sequence</text>
+  <path class="ar" d="M568 84 L596 84"/>
+
+  <rect class="hl" x="600" y="38" width="234" height="92" rx="8"/>
+  <text class="lab" x="614" y="60">4. MS1: measure m/z</text>
+  <g stroke="#16191d" stroke-width="2.4">
+    <line x1="618" y1="118" x2="618" y2="86"/><line x1="642" y1="118" x2="642" y2="98"/>
+    <line x1="666" y1="118" x2="666" y2="78"/><line x1="690" y1="118" x2="690" y2="104"/>
+    <line x1="714" y1="118" x2="714" y2="90"/><line x1="738" y1="118" x2="738" y2="110"/>
+    <line x1="762" y1="118" x2="762" y2="96"/><line x1="786" y1="118" x2="786" y2="112"/>
+  </g>
+  <line x1="612" y1="118" x2="820" y2="118" stroke="#16191d" stroke-width="1.2"/>
+  <text class="sub" x="786" y="76">m/z</text>
+
+  <path class="ar" d="M716 136 L716 164"/>
+  <rect class="hl" x="600" y="170" width="234" height="96" rx="8"/>
+  <text class="lab" x="614" y="192">5. MS2: fragment one peptide</text>
+  <g stroke="#003c71" stroke-width="2.4">
+    <line x1="620" y1="252" x2="620" y2="218"/><line x1="646" y1="252" x2="646" y2="230"/>
+    <line x1="672" y1="252" x2="672" y2="208"/><line x1="698" y1="252" x2="698" y2="240"/>
+    <line x1="724" y1="252" x2="724" y2="222"/><line x1="750" y1="252" x2="750" y2="236"/>
+    <line x1="776" y1="252" x2="776" y2="214"/>
+  </g>
+  <line x1="612" y1="252" x2="820" y2="252" stroke="#16191d" stroke-width="1.2"/>
+  <text class="sub" x="614" y="208">fragment ladder encodes the sequence</text>
+
+  <path class="ar" d="M596 218 L568 218"/>
+  <rect class="box" x="340" y="170" width="224" height="96" rx="8"/>
+  <text class="lab" x="354" y="192">6. Database search</text>
+  <text class="sub" x="354" y="214">Every protein predicted from the</text>
+  <text class="sub" x="354" y="230">genome is digested in silico; the</text>
+  <text class="sub" x="354" y="246">observed ladder is matched to the</text>
+  <text class="sub" x="354" y="262">best-fitting predicted peptide</text>
+
+  <rect class="box" x="24" y="170" width="300" height="96" rx="8"/>
+  <text class="lab" x="38" y="192">Quantification requires labels</text>
+  <text class="sub" x="38" y="214">SILAC: cells build stable-isotope amino</text>
+  <text class="sub" x="38" y="230">acids into their proteins</text>
+  <text class="sub" x="38" y="248">Chemical peptide labels let several</text>
+  <text class="sub" x="38" y="264">samples run together; signal ratio</text>
+  <text class="sub" x="38" y="280">of a label pair gives the amount ratio</text>
+
+  <rect class="hl" x="24" y="300" width="810" height="88" rx="8"/>
+  <text class="lab" x="40" y="322">What this method adds, and what limits it</text>
+  <text class="sub" x="40" y="344">Post-translational modifications are read directly: phosphorylation adds 80 Da and localises to one residue</text>
+  <text class="sub" x="40" y="362">No amplification step exists, so low-abundance proteins hide behind abundant ones</text>
+  <text class="sub" x="40" y="380">mRNA and protein amounts correlate only moderately, commonly around 0.4-0.6 in the same cells</text>
+</svg>

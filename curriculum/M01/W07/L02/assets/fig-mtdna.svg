@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 380" width="860" height="380" role="img"
+ aria-label="Map of the human mitochondrial genome: a circular 16,569 base pair DNA carrying 13 protein genes, 2 ribosomal RNAs and 22 transfer RNAs with almost no non-coding sequence, and the concept of heteroplasmy">
+ <style>
+  .b{fill:#fff;stroke:#c6d2dd;stroke-width:1.6}.t{font:11px sans-serif;fill:#16191d}
+  .tb{font:700 12px sans-serif;fill:#003c71}.s{font:10px sans-serif;fill:#4a5159}
+  .lv{font:700 11px sans-serif;fill:#8a6300}
+  .lg{font:10px sans-serif;fill:#16191d}
+ </style>
+
+ <circle cx="210" cy="190" r="118" fill="none" stroke="#e6edf4" stroke-width="30"/>
+ <g stroke-width="30" fill="none">
+  <path d="M210 72 A118 118 0 0 1 311 131" stroke="#003c71"/>
+  <path d="M316 142 A118 118 0 0 1 300 268" stroke="#1a7f52"/>
+  <path d="M292 277 A118 118 0 0 1 150 300" stroke="#003c71"/>
+  <path d="M140 296 A118 118 0 0 1 95 128" stroke="#9a6700"/>
+  <path d="M101 119 A118 118 0 0 1 198 72" stroke="#003c71"/>
+ </g>
+ <circle cx="210" cy="190" r="118" fill="none" stroke="#16191d" stroke-width="1"/>
+ <text class="tb" x="166" y="186">mtDNA</text>
+ <text class="s" x="162" y="204">16,569 bp</text>
+ <text class="s" x="170" y="220">circular</text>
+ <text class="s" x="192" y="48">D-loop</text>
+ <text class="s" x="330" y="128">protein genes</text>
+ <text class="s" x="330" y="212">rRNA (12S, 16S)</text>
+ <text class="s" x="330" y="286">tRNA x 22</text>
+
+ <rect class="b" x="430" y="40" width="412" height="136" rx="6"/>
+ <text class="tb" x="446" y="64">What it encodes</text>
+ <text class="t" x="446" y="88">13 proteins — all subunits of the respiratory chain complexes</text>
+ <text class="t" x="446" y="108">2 ribosomal RNAs and 22 transfer RNAs for mitochondrial translation</text>
+ <text class="t" x="446" y="128">No introns; genes sit end to end with almost no spacer</text>
+ <text class="t" x="446" y="148">All other mitochondrial proteins are encoded in the nucleus</text>
+ <text class="s" x="446" y="166">and imported after translation in the cytosol.</text>
+
+ <rect class="b" x="430" y="194" width="412" height="152" rx="6"/>
+ <text class="tb" x="446" y="218">Heteroplasmy</text>
+ <text class="t" x="446" y="240">One cell holds hundreds to thousands of mtDNA copies.</text>
+ <text class="t" x="446" y="258">Mutant and normal copies can coexist in one cell.</text>
+ <g>
+  <circle cx="470" cy="292" r="26" fill="#eef3f8" stroke="#c6d2dd"/>
+  <circle cx="462" cy="286" r="4" fill="#003c71"/><circle cx="476" cy="288" r="4" fill="#003c71"/>
+  <circle cx="468" cy="300" r="4" fill="#003c71"/><circle cx="480" cy="300" r="4" fill="#003c71"/>
+  <text class="s" x="446" y="334">0% mutant</text>
+
+  <circle cx="560" cy="292" r="26" fill="#eef3f8" stroke="#c6d2dd"/>
+  <circle cx="552" cy="286" r="4" fill="#003c71"/><circle cx="566" cy="288" r="4" fill="#c0392b"/>
+  <circle cx="558" cy="300" r="4" fill="#c0392b"/><circle cx="570" cy="300" r="4" fill="#003c71"/>
+  <text class="s" x="536" y="334">50% mutant</text>
+
+  <circle cx="650" cy="292" r="26" fill="#eef3f8" stroke="#c6d2dd"/>
+  <circle cx="642" cy="286" r="4" fill="#c0392b"/><circle cx="656" cy="288" r="4" fill="#c0392b"/>
+  <circle cx="648" cy="300" r="4" fill="#c0392b"/><circle cx="660" cy="300" r="4" fill="#c0392b"/>
+  <text class="s" x="626" y="334">90% mutant</text>
+ </g>
+ <text class="s" x="700" y="288">Disease appears only above</text>
+ <text class="s" x="700" y="304">a threshold proportion, which</text>
+ <text class="s" x="700" y="320">differs between tissues.</text>
+ <text class="s" x="16" y="340">Inheritance is maternal: sperm mitochondria are eliminated after fertilisation.</text>
+ <text class="s" x="16" y="360">Tissues with high energy demand — brain, heart, skeletal muscle — are affected first.</text>
+</svg>

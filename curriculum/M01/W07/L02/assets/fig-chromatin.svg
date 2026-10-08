@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 330" width="880" height="330" role="img"
+ aria-label="Levels of DNA compaction from the double helix through nucleosomes, the 30 nm fibre, loop domains and the metaphase chromosome, with diameters and compaction ratios">
+ <style>
+  .b{fill:#fff;stroke:#c6d2dd;stroke-width:1.6}.t{font:11px sans-serif;fill:#16191d}
+  .tb{font:700 12px sans-serif;fill:#003c71}.s{font:10px sans-serif;fill:#4a5159}
+  .lv{font:700 11px sans-serif;fill:#8a6300}
+  .ar{stroke:#003c71;stroke-width:1.8;fill:none;marker-end:url(#d)}
+  .core{fill:#003c71}.dna{fill:none;stroke:#16191d;stroke-width:1.8}
+ </style>
+ <defs><marker id="d" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker></defs>
+
+ <text class="tb" x="16" y="24">1. DNA double helix</text>
+ <path class="dna" d="M16 60 C40 40 64 80 88 60 C112 40 136 80 160 60"/>
+ <path class="dna" d="M16 60 C40 80 64 40 88 60 C112 80 136 40 160 60"/>
+ <text class="s" x="16" y="92">2 nm</text><text class="s" x="16" y="108">1x</text>
+
+ <path class="ar" d="M172 60 L204 60"/>
+ <text class="tb" x="214" y="24">2. Nucleosome</text>
+ <circle class="core" cx="250" cy="60" r="16"/><circle class="core" cx="310" cy="60" r="16"/>
+ <path class="dna" d="M214 60 C230 44 236 44 250 44 A16 16 0 1 1 250 76 C236 76 290 44 310 44 A16 16 0 1 1 310 76 C326 76 340 60 356 60"/>
+ <text class="s" x="214" y="100">147 bp around a histone octamer</text>
+ <text class="s" x="214" y="116">11 nm · about 6x</text>
+
+ <path class="ar" d="M368 60 L400 60"/>
+ <text class="tb" x="410" y="24">3. 30 nm fibre</text>
+ <g fill="#003c71">
+  <circle cx="420" cy="48" r="11"/><circle cx="444" cy="68" r="11"/><circle cx="468" cy="48" r="11"/>
+  <circle cx="492" cy="68" r="11"/><circle cx="516" cy="48" r="11"/><circle cx="540" cy="68" r="11"/>
+ </g>
+ <path class="dna" d="M410 58 C430 40 438 78 456 58 C476 40 484 78 502 58 C522 40 530 78 550 58"/>
+ <text class="s" x="410" y="100">histone H1 packs nucleosomes together</text>
+ <text class="s" x="410" y="116">30 nm · about 40x</text>
+
+ <path class="ar" d="M562 60 L594 60"/>
+ <text class="tb" x="604" y="24">4. Loop domains</text>
+ <line x1="612" y1="30" x2="612" y2="92" stroke="#9a6700" stroke-width="3"/>
+ <path class="dna" d="M612 38 C660 20 660 56 612 44"/>
+ <path class="dna" d="M612 52 C668 34 668 76 612 60"/>
+ <path class="dna" d="M612 68 C656 54 656 92 612 82"/>
+ <text class="s" x="604" y="108">loops anchored to a protein scaffold</text>
+ <text class="s" x="604" y="124">300 nm · about 1,000x</text>
+
+ <path class="ar" d="M700 60 L732 60"/>
+ <text class="tb" x="742" y="24">5. Metaphase</text>
+ <path d="M760 28 C748 44 748 56 760 70 C772 56 772 44 760 28" fill="#003c71"/>
+ <path d="M786 28 C774 44 774 56 786 70 C798 56 798 44 786 28" fill="#003c71"/>
+ <path d="M760 70 C748 86 748 98 760 112 C772 98 772 86 760 70" fill="#003c71"/>
+ <path d="M786 70 C774 86 774 98 786 112 C798 98 798 86 786 70" fill="#003c71"/>
+ <circle cx="773" cy="70" r="6" fill="#f2b705"/>
+ <text class="s" x="742" y="132">1,400 nm · about 10,000x</text>
+
+ <rect class="b" x="16" y="160" width="848" height="70" rx="6"/>
+ <text class="t" x="32" y="184">A single human chromosome holds DNA tens of millimetres long inside a nucleus about 6 micrometres across.</text>
+ <text class="t" x="32" y="204">Compaction must be reversible: transcription and replication need local access to the sequence.</text>
+ <text class="t" x="32" y="222">Euchromatin stays loosely packed and transcriptionally active; heterochromatin stays condensed and largely silent.</text>
+ <text class="s" x="16" y="256">Compaction ratio = length of naked DNA divided by the length of the packed structure.</text>
+</svg>
