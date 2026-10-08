@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 440" width="880" height="440" role="img"
+ aria-label="The sigmoid oxygen dissociation curve and its shifts: the shape produced by cooperative binding, the physiological meaning of the flat and the steep segments, the four factors that shift it to the right, and the position of fetal haemoglobin and carboxyhaemoglobin.">
+ <style>
+  .bx{fill:#fff;stroke:#c6d2dd;stroke-width:1.8}.k{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .t{font:12px sans-serif;fill:#16191d}.tb{font:700 13px sans-serif;fill:#003c71}
+  .th{font:700 15px sans-serif;fill:#003c71}.s{font:11px sans-serif;fill:#4a5159}
+  .m{font:10px monospace;fill:#16191d}
+  .ax{stroke:#16191d;stroke-width:1.8;fill:none}
+  .cn{stroke:#003c71;stroke-width:3;fill:none}
+  .cr{stroke:#b3261e;stroke-width:2.4;fill:none;stroke-dasharray:7 4}
+  .cl{stroke:#2e7d32;stroke-width:2.4;fill:none;stroke-dasharray:7 4}
+  .gl{stroke:#c6d2dd;stroke-width:1.2;stroke-dasharray:4 4}
+ </style>
+
+ <text class="th" x="20" y="28">A  The curve and its shifts</text>
+ <line x1="20" y1="38" x2="520" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+
+ <path class="ax" d="M90 360 L90 60 M90 360 L500 360"/>
+ <text class="s" x="34" y="230" transform="rotate(-90 44 230)">Hb saturation (percent)</text>
+ <text class="s" x="240" y="392">Oxygen partial pressure (mmHg)</text>
+ <text class="m" x="60" y="76">100</text><text class="m" x="66" y="216">50</text><text class="m" x="78" y="358">0</text>
+ <text class="m" x="156" y="378">20</text><text class="m" x="222" y="378">40</text>
+ <text class="m" x="290" y="378">60</text><text class="m" x="424" y="378">100</text>
+
+ <line class="gl" x1="222" y1="60" x2="222" y2="360"/>
+ <line class="gl" x1="424" y1="60" x2="424" y2="360"/>
+ <line class="gl" x1="90" y1="78" x2="500" y2="78"/>
+
+ <path class="cn" d="M96 354 Q140 344 170 310 Q200 260 222 190 Q260 110 300 92 Q360 80 490 74"/>
+ <path class="cr" d="M96 358 Q150 352 186 330 Q226 290 258 224 Q300 134 350 104 Q410 88 490 80"/>
+ <path class="cl" d="M96 346 Q130 330 152 286 Q178 222 200 152 Q232 92 282 82 Q360 74 490 70"/>
+
+ <text class="m" x="314" y="88">normal (P50 about 27)</text>
+ <text class="m" x="356" y="118">shift right: releases O2 more readily</text>
+ <text class="m" x="188" y="144">shift left: holds O2 more tightly</text>
+
+ <circle cx="424" cy="76" r="5" fill="#003c71"/>
+ <text class="m" x="398" y="66">arterial 97.5 percent</text>
+ <circle cx="222" cy="190" r="5" fill="#003c71"/>
+ <text class="m" x="128" y="188">venous 75 percent</text>
+
+ <path d="M300 92 L490 74" stroke="#2e7d32" stroke-width="7" opacity="0.2" fill="none"/>
+ <text class="m" x="300" y="300">Steep segment (20 to 40):</text>
+ <text class="m" x="300" y="316">small fall in tissue PO2</text>
+ <text class="m" x="300" y="332">unloads a lot of oxygen</text>
+ <path d="M170 310 L222 190" stroke="#b3261e" stroke-width="7" opacity="0.2" fill="none"/>
+ <text class="m" x="320" y="200">Flat segment (60 to 100):</text>
+ <text class="m" x="320" y="216">loading is protected against</text>
+ <text class="m" x="320" y="232">a fall in alveolar PO2</text>
+
+ <text class="th" x="550" y="28">B  Cooperative binding</text>
+ <line x1="550" y1="38" x2="860" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+ <rect class="bx" x="550" y="54" width="310" height="120" rx="8"/>
+ <text class="t" x="564" y="78">Haemoglobin has four subunits, each with a heme</text>
+ <text class="t" x="564" y="98">whose Fe(2+) binds one oxygen molecule.</text>
+ <text class="t" x="564" y="124">Binding the first oxygen shifts the protein from the</text>
+ <text class="t" x="564" y="144">T state to the R state, so the next one binds more</text>
+ <text class="t" x="564" y="164">easily. That is what makes the curve sigmoid.</text>
+
+ <text class="th" x="550" y="208">C  Four factors that shift it right</text>
+ <line x1="550" y1="218" x2="860" y2="218" stroke="#c6d2dd" stroke-width="1.5"/>
+ <rect class="k" x="550" y="232" width="310" height="110" rx="8"/>
+ <text class="t" x="564" y="256">Lower pH (Bohr effect)</text>
+ <text class="t" x="564" y="276">Higher PCO2</text>
+ <text class="t" x="564" y="296">Higher temperature</text>
+ <text class="t" x="564" y="316">More 2,3-bisphosphoglycerate</text>
+ <text class="s" x="564" y="336">All four mark a metabolically active tissue.</text>
+
+ <rect class="bx" x="550" y="356" width="310" height="76" rx="8"/>
+ <text class="tb" x="564" y="378">Two shifted curves to remember</text>
+ <text class="t" x="564" y="400">Fetal Hb: left shifted, low 2,3-BPG affinity, so it</text>
+ <text class="t" x="564" y="420">takes oxygen from maternal Hb across the placenta</text>
+</svg>

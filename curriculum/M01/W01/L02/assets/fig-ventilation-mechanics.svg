@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 430" width="880" height="430" role="img"
+ aria-label="Changes in thoracic volume, intrapleural pressure, alveolar pressure and airflow during inspiration and expiration, with pressure values at end expiration and mid inspiration, the definition of transpulmonary pressure, and how the pressure relationship breaks down in pneumothorax.">
+ <style>
+  .bx{fill:#fff;stroke:#c6d2dd;stroke-width:1.8}.k{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .t{font:12px sans-serif;fill:#16191d}.tb{font:700 13px sans-serif;fill:#003c71}
+  .th{font:700 15px sans-serif;fill:#003c71}.s{font:11px sans-serif;fill:#4a5159}
+  .m{font:11px monospace;fill:#16191d}
+  .chest{fill:none;stroke:#4a5159;stroke-width:3}
+  .lung{fill:#f7dedc;stroke:#b3261e;stroke-width:2}
+  .pl{fill:#e8eff6;stroke:#003c71;stroke-width:1.6}
+  .dia{stroke:#2e7d32;stroke-width:4;fill:none}
+  .ar{stroke:#003c71;stroke-width:2.4;fill:none;marker-end:url(#a)}
+ </style>
+ <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker></defs>
+
+ <text class="th" x="20" y="28">A  End expiration (no airflow)</text>
+ <line x1="20" y1="38" x2="280" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+ <path class="chest" d="M50 60 h190 v180 h-190 z"/>
+ <path class="pl" d="M60 70 h170 v150 h-170 z"/>
+ <path class="lung" d="M80 86 h130 v110 h-130 z"/>
+ <path class="dia" d="M60 232 q85 10 170 0"/>
+ <line x1="145" y1="60" x2="145" y2="86" stroke="#003c71" stroke-width="4"/>
+ <text class="m" x="86" y="130">Alveolar P = 0</text>
+ <text class="m" x="86" y="150">(equals atmosphere)</text>
+ <text class="m" x="66" y="212">Intrapleural P = -5</text>
+ <text class="m" x="86" y="256">Transpulmonary P = 0 - (-5) = +5</text>
+
+ <text class="th" x="310" y="28">B  Inspiration (active)</text>
+ <line x1="310" y1="38" x2="570" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+ <path class="chest" d="M330 52 h200 v200 h-200 z"/>
+ <path class="pl" d="M340 62 h180 v176 h-180 z"/>
+ <path class="lung" d="M356 78 h148 v136 h-148 z"/>
+ <path class="dia" d="M340 246 q90 -14 180 0"/>
+ <line x1="430" y1="52" x2="430" y2="78" stroke="#003c71" stroke-width="4"/>
+ <path class="ar" d="M430 30 L430 48"/>
+ <text class="m" x="362" y="124">Alveolar P = -1</text>
+ <text class="m" x="362" y="144">so air flows in</text>
+ <text class="m" x="346" y="226">Intrapleural P = -8</text>
+ <text class="s" x="330" y="276">Diaphragm contracts and moves down; external</text>
+ <text class="s" x="330" y="294">intercostals raise the rib cage, so volume rises.</text>
+ <text class="s" x="330" y="312">Boyle law: larger volume means lower pressure.</text>
+
+ <text class="th" x="600" y="28">C  Pneumothorax</text>
+ <line x1="600" y1="38" x2="860" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+ <path class="chest" d="M620 60 h190 v180 h-190 z"/>
+ <path class="pl" d="M630 70 h170 v150 h-170 z"/>
+ <path class="lung" d="M690 140 h50 v46 h-50 z"/>
+ <path class="ar" d="M860 110 L806 110"/>
+ <text class="m" x="784" y="100">air enters</text>
+ <text class="m" x="636" y="94">Intrapleural P = 0</text>
+ <text class="m" x="636" y="118">Transpulmonary P = 0</text>
+ <text class="m" x="656" y="214">lung collapses</text>
+ <text class="s" x="600" y="266">If air enters but cannot leave, the space goes</text>
+ <text class="s" x="600" y="284">positive and pushes the heart and the other lung:</text>
+ <text class="s" x="600" y="302">tension pneumothorax, needs immediate drainage.</text>
+
+ <text class="th" x="20" y="340">D  Why the intrapleural pressure is always negative</text>
+ <line x1="20" y1="350" x2="860" y2="350" stroke="#c6d2dd" stroke-width="1.5"/>
+ <rect class="k" x="20" y="364" width="840" height="56" rx="8"/>
+ <text class="t" x="34" y="388">The lung recoils inward and the chest wall springs outward. Two opposing elastic forces pull on the thin pleural fluid layer</text>
+ <text class="t" x="34" y="410">between them, so the pressure in that space falls below atmospheric. Expiration at rest needs no muscle: the stretched tissue returns.</text>
+</svg>

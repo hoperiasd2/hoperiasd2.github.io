@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 400" width="880" height="400" role="img"
+ aria-label="The four steps of external respiration and the transport mode of each: convection for ventilation and blood transport, diffusion for exchange in the lung and in the tissue, with the oxygen partial pressure of each compartment.">
+ <style>
+  .bx{fill:#fff;stroke:#c6d2dd;stroke-width:1.8}.k{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .t{font:12px sans-serif;fill:#16191d}.tb{font:700 13px sans-serif;fill:#003c71}
+  .th{font:700 15px sans-serif;fill:#003c71}.s{font:11px sans-serif;fill:#4a5159}
+  .m{font:11px monospace;fill:#16191d}
+  .conv{stroke:#b3261e;stroke-width:5;fill:none;marker-end:url(#r)}
+  .diff{stroke:#2e7d32;stroke-width:3;fill:none;stroke-dasharray:6 4;marker-end:url(#g)}
+ </style>
+ <defs>
+  <marker id="r" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#b3261e"/></marker>
+  <marker id="g" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#2e7d32"/></marker>
+ </defs>
+
+ <text class="th" x="20" y="28">Four steps in series: convection, diffusion, convection, diffusion</text>
+ <line x1="20" y1="38" x2="860" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+
+ <rect class="bx" x="20" y="70" width="130" height="64" rx="8"/>
+ <text class="tb" x="34" y="94">Atmosphere</text>
+ <text class="m" x="34" y="118">PO2 160 mmHg</text>
+
+ <path class="conv" d="M158 102 L236 102"/>
+ <text class="tb" x="162" y="88">1 Ventilation</text>
+ <text class="s" x="168" y="128">convection</text>
+
+ <rect class="k" x="246" y="70" width="130" height="64" rx="8"/>
+ <text class="tb" x="260" y="94">Alveolus</text>
+ <text class="m" x="260" y="118">PO2 100 mmHg</text>
+
+ <path class="diff" d="M386 102 L452 102"/>
+ <text class="tb" x="384" y="88">2 Lung exchange</text>
+ <text class="s" x="396" y="128">diffusion</text>
+
+ <rect class="bx" x="462" y="70" width="150" height="64" rx="8"/>
+ <text class="tb" x="476" y="94">Arterial blood</text>
+ <text class="m" x="476" y="118">PO2 100 mmHg</text>
+
+ <path class="conv" d="M620 102 L690 102"/>
+ <text class="tb" x="618" y="88">3 Transport</text>
+ <text class="s" x="626" y="128">convection</text>
+
+ <rect class="bx" x="700" y="70" width="160" height="64" rx="8"/>
+ <text class="tb" x="714" y="94">Tissue capillary</text>
+ <text class="m" x="714" y="118">PO2 falls to 40</text>
+
+ <path class="diff" d="M780 142 L780 200"/>
+ <text class="tb" x="640" y="176">4 Tissue exchange</text>
+ <text class="s" x="692" y="194">diffusion</text>
+
+ <rect class="k" x="700" y="208" width="160" height="64" rx="8"/>
+ <text class="tb" x="714" y="232">Cell, mitochondrion</text>
+ <text class="m" x="714" y="256">PO2 below 40</text>
+
+ <rect class="bx" x="20" y="208" width="640" height="64" rx="8"/>
+ <text class="tb" x="34" y="232">Internal respiration</text>
+ <text class="t" x="34" y="256">Oxygen is consumed to make ATP in the mitochondrion; that is cellular metabolism, not the respiratory system.</text>
+
+ <text class="th" x="20" y="312">Four kinds of hypoxia correspond to the four steps</text>
+ <line x1="20" y1="322" x2="860" y2="322" stroke="#c6d2dd" stroke-width="1.5"/>
+ <text class="t" x="20" y="346">Step 1-2 fails: hypoxic hypoxia (low ventilation, diffusion block, shunt)</text>
+ <text class="t" x="20" y="366">Step 3 fails: anemic hypoxia (too little haemoglobin) or circulatory hypoxia (too little flow)</text>
+ <text class="t" x="20" y="386">Step 4 fails: histotoxic hypoxia (the cell cannot use oxygen, as in cyanide poisoning)</text>
+</svg>

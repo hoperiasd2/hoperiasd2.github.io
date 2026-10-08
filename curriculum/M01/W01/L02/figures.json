@@ -1,4 +1,113 @@
 {
   "lesson_id": "M01-W01-L02",
-  "figures": []
+  "figures": [
+    {
+      "figure_id": "fig-respiration-steps",
+      "lesson_id": "M01-W01-L02",
+      "html_anchor": "#fig-respiration-steps",
+      "caption": "외호흡의 네 단계와 각 단계의 수송 방식. 대류가 담당하는 환기·혈액 운반 구간과 확산이 담당하는 폐·조직 교환 구간, 그리고 각 구간의 산소 분압을 함께 보인다.",
+      "asset_path": "assets/fig-respiration-steps.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-airway-zones",
+      "lesson_id": "M01-W01-L02",
+      "html_anchor": "#fig-airway-zones",
+      "caption": "기도의 분지 구조와 전도 영역·호흡 영역의 구분. 분지 차수에 따른 총단면적과 공기 속도의 변화, 폐포 벽의 세포 구성, 그리고 해부학적 사강과 폐포 사강의 차이를 함께 보인다.",
+      "asset_path": "assets/fig-airway-zones.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-ventilation-mechanics",
+      "lesson_id": "M01-W01-L02",
+      "html_anchor": "#fig-ventilation-mechanics",
+      "caption": "흡기와 호기에서 흉곽 용적, 흉막내압, 폐포 내압, 공기 흐름의 변화. 안정 호기말과 흡기 중간의 압력 수치, 경폐압의 정의, 그리고 pneumothorax에서 압력 관계가 깨지는 방식을 함께 보인다.",
+      "asset_path": "assets/fig-ventilation-mechanics.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-surfactant",
+      "lesson_id": "M01-W01-L02",
+      "html_anchor": "#fig-surfactant",
+      "caption": "Laplace 관계와 surfactant의 작용. 반지름이 다른 두 폐포에서 표면장력이 같을 때 생기는 붕괴 문제, surfactant가 면적당 밀도에 따라 표면장력을 바꿔 이를 해결하는 방식, 그리고 순응도 곡선의 변화를 함께 보인다.",
+      "asset_path": "assets/fig-surfactant.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-lung-volumes",
+      "lesson_id": "M01-W01-L02",
+      "html_anchor": "#fig-lung-volumes",
+      "caption": "폐용적과 폐용량의 관계를 spirometry 곡선 위에 표시한 그림. 잔류량이 spirometry로 측정되지 않는 범위, 그리고 호흡 양식에 따른 폐포 환기량의 차이를 함께 보인다.",
+      "asset_path": "assets/fig-lung-volumes.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-gas-exchange",
+      "lesson_id": "M01-W01-L02",
+      "html_anchor": "#fig-gas-exchange",
+      "caption": "폐포–모세혈관 사이의 가스 교환과 환기–관류 관계. 각 위치의 산소·이산화탄소 분압, 확산량을 정하는 변수, 그리고 사강과 단락 두 극단의 V/Q 상태를 함께 보인다.",
+      "asset_path": "assets/fig-gas-exchange.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-oxygen-curve",
+      "lesson_id": "M01-W01-L02",
+      "html_anchor": "#fig-oxygen-curve",
+      "caption": "산소해리곡선의 S자 모양과 좌우 이동. 협동 결합이 만드는 곡선의 형태, 평탄 구간과 급한 구간의 생리적 의미, 우측 이동을 일으키는 네 요인, 그리고 태아 헤모글로빈과 일산화탄소 결합 헤모글로빈의 곡선 위치를 함께 보인다.",
+      "asset_path": "assets/fig-oxygen-curve.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-co2-transport",
+      "lesson_id": "M01-W01-L02",
+      "html_anchor": "#fig-co2-transport",
+      "caption": "이산화탄소 운반의 세 형태와 적혈구 안에서의 반응. Carbonic anhydrase에 의한 중탄산 생성, chloride shift, 헤모글로빈의 H+ 완충, 그리고 Bohr 효과와 Haldane 효과가 조직과 폐에서 짝지어 작동하는 방식을 함께 보인다.",
+      "asset_path": "assets/fig-co2-transport.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-respiratory-control",
+      "lesson_id": "M01-W01-L02",
+      "html_anchor": "#fig-respiratory-control",
+      "caption": "호흡 조절의 중추와 수용체. 뇌줄기 호흡 중추의 위치와 역할, 중추·말초 화학수용체가 감지하는 대상의 차이, 각 자극이 환기량을 바꾸는 관계 곡선, 그리고 Hering–Breuer 반사의 경로를 함께 보인다.",
+      "asset_path": "assets/fig-respiratory-control.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    }
+  ]
 }

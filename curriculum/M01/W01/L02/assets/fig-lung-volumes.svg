@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 450" width="880" height="450" role="img"
+ aria-label="Lung volumes and capacities marked on a spirometry trace, showing the range that spirometry cannot measure because it contains the residual volume, and the difference in alveolar ventilation produced by different breathing patterns.">
+ <style>
+  .bx{fill:#fff;stroke:#c6d2dd;stroke-width:1.8}.k{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .t{font:12px sans-serif;fill:#16191d}.tb{font:700 13px sans-serif;fill:#003c71}
+  .th{font:700 15px sans-serif;fill:#003c71}.s{font:11px sans-serif;fill:#4a5159}
+  .m{font:10px monospace;fill:#16191d}
+  .ax{stroke:#16191d;stroke-width:1.6;fill:none}
+  .tr{stroke:#b3261e;stroke-width:2.4;fill:none}
+  .gl{stroke:#c6d2dd;stroke-width:1.2;stroke-dasharray:4 4}
+  .br{stroke:#003c71;stroke-width:2.4;fill:none}
+ </style>
+
+ <text class="th" x="20" y="28">A  Volumes and capacities on a spirometry trace</text>
+ <line x1="20" y1="38" x2="860" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+
+ <path class="ax" d="M100 360 L100 56 M100 360 L660 360"/>
+ <text class="s" x="40" y="220" transform="rotate(-90 50 220)">Volume (mL)</text>
+ <text class="s" x="340" y="384">Time</text>
+ <text class="m" x="66" y="60">6000</text>
+ <text class="m" x="66" y="150">4000</text>
+ <text class="m" x="66" y="240">2000</text>
+ <text class="m" x="78" y="358">0</text>
+
+ <line class="gl" x1="100" y1="92" x2="660" y2="92"/>
+ <line class="gl" x1="100" y1="200" x2="660" y2="200"/>
+ <line class="gl" x1="100" y1="222" x2="660" y2="222"/>
+ <line class="gl" x1="100" y1="272" x2="660" y2="272"/>
+ <line class="gl" x1="100" y1="306" x2="660" y2="306"/>
+
+ <path class="tr" d="M106 222 L130 200 L154 222 L178 200 L202 222 L226 200 L250 222
+   L290 92 L330 222 L370 306 L410 222 L440 200 L464 222 L488 200 L512 222"/>
+
+ <text class="m" x="110" y="196">TV 500</text>
+ <line x1="668" y1="92" x2="668" y2="200" stroke="#003c71" stroke-width="2.4"/>
+ <text class="m" x="676" y="150">IRV 3000</text>
+ <line x1="668" y1="222" x2="668" y2="306" stroke="#003c71" stroke-width="2.4"/>
+ <text class="m" x="676" y="268">ERV 1100</text>
+ <line x1="668" y1="306" x2="668" y2="360" stroke="#8a6300" stroke-width="2.4"/>
+ <text class="m" x="676" y="338">RV 1200</text>
+
+ <line x1="760" y1="92" x2="760" y2="200" stroke="#2e7d32" stroke-width="3"/>
+ <line x1="760" y1="200" x2="760" y2="222" stroke="#2e7d32" stroke-width="3"/>
+ <text class="m" x="770" y="146">IC = TV + IRV</text>
+ <line x1="800" y1="222" x2="800" y2="360" stroke="#2e7d32" stroke-width="3"/>
+ <text class="m" x="700" y="382">FRC = ERV + RV</text>
+ <line x1="840" y1="92" x2="840" y2="306" stroke="#b3261e" stroke-width="3"/>
+ <text class="m" x="770" y="218">VC = IRV + TV + ERV</text>
+ <line x1="866" y1="92" x2="866" y2="360" stroke="#16191d" stroke-width="3"/>
+ <text class="m" x="770" y="294">TLC = VC + RV</text>
+
+ <rect x="100" y="306" width="560" height="54" fill="#8a6300" opacity="0.1"/>
+ <text class="m" x="200" y="340">Residual volume: never leaves the lung, so spirometry cannot measure it</text>
+ <text class="s" x="100" y="408">RV, and therefore FRC and TLC, must be measured by helium dilution or body plethysmography.</text>
+
+ <text class="th" x="20" y="436">B  Same minute ventilation, different alveolar ventilation (dead space 150 mL)</text>
+ <line x1="20" y1="444" x2="860" y2="444" stroke="#c6d2dd" stroke-width="1.5"/>
+</svg>

@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 450" width="880" height="450" role="img"
+ aria-label="Three forms of carbon dioxide transport and the reactions inside the red cell: bicarbonate formation by carbonic anhydrase, the chloride shift, buffering of hydrogen ions by haemoglobin, and how the Bohr and Haldane effects pair up in tissue and lung.">
+ <style>
+  .bx{fill:#fff;stroke:#c6d2dd;stroke-width:1.8}.k{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .t{font:12px sans-serif;fill:#16191d}.tb{font:700 13px sans-serif;fill:#003c71}
+  .th{font:700 15px sans-serif;fill:#003c71}.s{font:11px sans-serif;fill:#4a5159}
+  .m{font:11px monospace;fill:#16191d}
+  .rbc{fill:#f7dedc;stroke:#b3261e;stroke-width:2.4}
+  .ar{stroke:#003c71;stroke-width:2.2;fill:none;marker-end:url(#a)}
+  .arr{stroke:#003c71;stroke-width:2.2;fill:none;marker-end:url(#a);marker-start:url(#c)}
+ </style>
+ <defs>
+  <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker>
+  <marker id="c" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10 0 L0 5 L10 10 z" fill="#003c71"/></marker>
+ </defs>
+
+ <text class="th" x="20" y="28">A  Three forms, with their share of total CO2 carriage</text>
+ <line x1="20" y1="38" x2="860" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+ <rect class="k" x="20" y="52" width="270" height="44" rx="8"/>
+ <text class="tb" x="34" y="80">Bicarbonate HCO3-   about 70 percent</text>
+ <rect class="bx" x="302" y="52" width="270" height="44" rx="8"/>
+ <text class="tb" x="316" y="80">Carbamino on Hb   about 23 percent</text>
+ <rect class="bx" x="584" y="52" width="276" height="44" rx="8"/>
+ <text class="tb" x="598" y="80">Dissolved in plasma   about 7 percent</text>
+
+ <text class="th" x="20" y="140">B  Inside the red cell, in the tissue capillary</text>
+ <line x1="20" y1="150" x2="520" y2="150" stroke="#c6d2dd" stroke-width="1.5"/>
+
+ <rect class="rbc" x="120" y="176" width="340" height="160" rx="70"/>
+ <text class="tb" x="250" y="200">Red cell</text>
+
+ <text class="m" x="30" y="236">CO2 from</text>
+ <text class="m" x="30" y="252">the tissue</text>
+ <path class="ar" d="M96 244 L150 244"/>
+ <text class="m" x="156" y="240">CO2 + H2O</text>
+ <path class="ar" d="M232 244 L286 244"/>
+ <text class="tb" x="226" y="230">carbonic</text>
+ <text class="tb" x="226" y="268">anhydrase</text>
+ <text class="m" x="296" y="240">H2CO3</text>
+ <path class="ar" d="M296 254 L296 282"/>
+ <text class="m" x="258" y="300">H+  +  HCO3-</text>
+
+ <path class="arr" d="M420 300 L498 300"/>
+ <text class="m" x="430" y="292">HCO3- out</text>
+ <text class="m" x="430" y="324">Cl- in</text>
+ <text class="s" x="412" y="346">chloride shift</text>
+
+ <text class="m" x="166" y="320">H+ bound by Hb</text>
+ <text class="s" x="132" y="358">H+ on Hb lowers its oxygen affinity, so oxygen is released: Bohr effect</text>
+
+ <text class="th" x="550" y="140">C  Bohr and Haldane pair up</text>
+ <line x1="550" y1="150" x2="860" y2="150" stroke="#c6d2dd" stroke-width="1.5"/>
+ <rect class="bx" x="550" y="164" width="310" height="92" rx="8"/>
+ <text class="tb" x="564" y="188">In the tissue</text>
+ <text class="t" x="564" y="212">High CO2 and H+ make Hb release oxygen</text>
+ <text class="t" x="564" y="232">(Bohr), and deoxygenated Hb then takes up</text>
+ <text class="t" x="564" y="250">CO2 and H+ more readily (Haldane).</text>
+ <rect class="bx" x="550" y="268" width="310" height="92" rx="8"/>
+ <text class="tb" x="564" y="292">In the lung</text>
+ <text class="t" x="564" y="316">Oxygen loading makes Hb give up CO2 and</text>
+ <text class="t" x="564" y="336">H+, and losing CO2 raises oxygen affinity.</text>
+ <text class="s" x="564" y="354">The two gases help each other in both directions.</text>
+
+ <text class="th" x="20" y="392">D  The same reaction links breathing to acid-base balance</text>
+ <line x1="20" y1="400" x2="860" y2="400" stroke="#c6d2dd" stroke-width="1.5"/>
+ <text class="m" x="20" y="424">pH = 6.1 + log ( [HCO3-] / (0.03 x PCO2) )</text>
+ <text class="t" x="330" y="424">numerator set by the kidney, denominator set by the lung</text>
+ <text class="s" x="20" y="444">Respiratory acidosis: PCO2 up. Respiratory alkalosis: PCO2 down. Metabolic acidosis: HCO3- down. Metabolic alkalosis: HCO3- up.</text>
+</svg>

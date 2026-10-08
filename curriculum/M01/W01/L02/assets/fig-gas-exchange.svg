@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 440" width="880" height="440" role="img"
+ aria-label="Gas exchange between alveolus and capillary and the ventilation perfusion relationship: partial pressures of oxygen and carbon dioxide at each site, the variables that set the diffusion rate, and the two extremes of dead space and shunt.">
+ <style>
+  .bx{fill:#fff;stroke:#c6d2dd;stroke-width:1.8}.k{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .t{font:12px sans-serif;fill:#16191d}.tb{font:700 13px sans-serif;fill:#003c71}
+  .th{font:700 15px sans-serif;fill:#003c71}.s{font:11px sans-serif;fill:#4a5159}
+  .m{font:11px monospace;fill:#16191d}
+  .alv{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .cap{fill:#f7dedc;stroke:#b3261e;stroke-width:2}
+  .de{fill:#dce6f2;stroke:#1a4f8a;stroke-width:2}
+  .o2{stroke:#b3261e;stroke-width:2.6;fill:none;marker-end:url(#r)}
+  .co2{stroke:#1a4f8a;stroke-width:2.6;fill:none;marker-end:url(#b)}
+ </style>
+ <defs>
+  <marker id="r" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#b3261e"/></marker>
+  <marker id="b" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#1a4f8a"/></marker>
+ </defs>
+
+ <text class="th" x="20" y="28">A  Partial pressures drive the exchange</text>
+ <line x1="20" y1="38" x2="520" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+
+ <rect class="alv" x="60" y="60" width="400" height="76" rx="12"/>
+ <text class="tb" x="200" y="88">Alveolar gas</text>
+ <text class="m" x="120" y="114">PO2 100 mmHg</text>
+ <text class="m" x="290" y="114">PCO2 40 mmHg</text>
+
+ <rect class="de" x="60" y="200" width="180" height="48" rx="10"/>
+ <text class="m" x="74" y="222">Incoming blood</text>
+ <text class="m" x="74" y="240">PO2 40  PCO2 46</text>
+ <rect class="cap" x="280" y="200" width="180" height="48" rx="10"/>
+ <text class="m" x="294" y="222">Outgoing blood</text>
+ <text class="m" x="294" y="240">PO2 100  PCO2 40</text>
+ <path d="M240 224 L280 224" stroke="#4a5159" stroke-width="3"/>
+
+ <path class="o2" d="M140 142 L140 194"/>
+ <text class="m" x="148" y="172">O2 in: difference 60</text>
+ <path class="co2" d="M200 194 L200 142"/>
+ <text class="m" x="208" y="186">CO2 out: difference 6</text>
+
+ <rect class="bx" x="60" y="268" width="400" height="88" rx="8"/>
+ <text class="tb" x="74" y="292">Why 6 mmHg moves as much CO2 as 60 mmHg moves O2</text>
+ <text class="t" x="74" y="316">Diffusion rate is proportional to partial pressure difference x solubility.</text>
+ <text class="t" x="74" y="336">CO2 is about 20 times more soluble in plasma than O2.</text>
+
+ <rect class="k" x="60" y="372" width="400" height="56" rx="8"/>
+ <text class="tb" x="74" y="394">Fick: rate is proportional to area x difference, divided by thickness</text>
+ <text class="t" x="74" y="416">Area about 70 m2, barrier about 0.5 um: both favour fast exchange.</text>
+
+ <text class="th" x="550" y="28">B  Ventilation-perfusion extremes</text>
+ <line x1="550" y1="38" x2="860" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+
+ <rect class="bx" x="550" y="54" width="310" height="34" rx="7"/>
+ <text class="tb" x="564" y="76">Normal whole-lung V/Q is about 0.8</text>
+
+ <rect class="bx" x="550" y="102" width="310" height="136" rx="8"/>
+ <text class="tb" x="564" y="126">Dead space:  V/Q approaches infinity</text>
+ <rect class="alv" x="564" y="138" width="80" height="40" rx="10"/>
+ <text class="m" x="582" y="162">air in</text>
+ <rect x="660" y="138" width="80" height="40" rx="10" fill="#fff" stroke="#4a5159" stroke-width="2" stroke-dasharray="5 4"/>
+ <text class="m" x="668" y="162">no flow</text>
+ <text class="t" x="564" y="200">Ventilated but not perfused: pulmonary embolism.</text>
+ <text class="t" x="564" y="220">Air goes in and out without being exchanged.</text>
+
+ <rect class="bx" x="550" y="252" width="310" height="140" rx="8"/>
+ <text class="tb" x="564" y="276">Shunt:  V/Q approaches zero</text>
+ <rect x="564" y="288" width="80" height="40" rx="10" fill="#dce6f2" stroke="#4a5159" stroke-width="2" stroke-dasharray="5 4"/>
+ <text class="m" x="574" y="312">filled</text>
+ <rect class="cap" x="660" y="288" width="80" height="40" rx="10"/>
+ <text class="m" x="674" y="312">flow on</text>
+ <text class="t" x="564" y="350">Perfused but not ventilated: pneumonia, atelectasis.</text>
+ <text class="t" x="564" y="370">Blood leaves without picking up oxygen, so giving</text>
+ <text class="t" x="564" y="388">more oxygen does not correct it.</text>
+
+ <text class="s" x="550" y="416">Hypoxic pulmonary vasoconstriction narrows vessels where alveolar</text>
+ <text class="s" x="550" y="432">PO2 is low, diverting flow to better ventilated regions.</text>
+</svg>
