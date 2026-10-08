@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 400" width="880" height="400" role="img"
+ aria-label="Reactions catalysed by protein disulfide isomerase and peptidyl prolyl isomerase. PDI exchanges incorrectly paired disulfide bonds to give the correct combination, and PPI accelerates cis to trans conversion of the peptide bond preceding proline.">
+ <style>
+  .bx{fill:#fff;stroke:#c6d2dd;stroke-width:1.8}.k{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .t{font:12px sans-serif;fill:#16191d}.tb{font:700 13px sans-serif;fill:#003c71}
+  .th{font:700 15px sans-serif;fill:#003c71}.s{font:11px sans-serif;fill:#4a5159}
+  .m{font:11px monospace;fill:#16191d}
+  .ar{stroke:#003c71;stroke-width:2.2;fill:none;marker-end:url(#a)}
+  .arr{stroke:#003c71;stroke-width:2.2;fill:none;marker-end:url(#a);marker-start:url(#c)}
+  .chain{stroke:#16191d;stroke-width:2.4;fill:none}
+  .ss{stroke:#f2b705;stroke-width:3;fill:none}
+  .bond{stroke:#16191d;stroke-width:2.2;fill:none}
+ </style>
+ <defs>
+  <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker>
+  <marker id="c" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10 0 L0 5 L10 10 z" fill="#003c71"/></marker>
+ </defs>
+
+ <text class="th" x="20" y="28">A  Protein disulfide isomerase (PDI)</text>
+ <line x1="20" y1="38" x2="860" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+
+ <rect class="bx" x="20" y="54" width="230" height="126" rx="8"/>
+ <text class="tb" x="34" y="78">Incorrect pairing</text>
+ <path class="chain" d="M40 120 h190"/>
+ <circle cx="66" cy="120" r="5" fill="#003c71"/><circle cx="110" cy="120" r="5" fill="#003c71"/>
+ <circle cx="162" cy="120" r="5" fill="#003c71"/><circle cx="206" cy="120" r="5" fill="#003c71"/>
+ <path class="ss" d="M66 120 q22 34 44 0"/>
+ <path class="ss" d="M162 120 q22 34 44 0"/>
+ <text class="m" x="58" y="110">Cys</text><text class="m" x="102" y="110">Cys</text>
+ <text class="m" x="154" y="110">Cys</text><text class="m" x="198" y="110">Cys</text>
+ <text class="s" x="34" y="170">1-2 and 3-4 bonded</text>
+
+ <path class="arr" d="M262 118 L336 118"/>
+ <text class="tb" x="266" y="104">PDI</text>
+ <text class="s" x="258" y="142">thiol-disulfide</text>
+ <text class="s" x="258" y="158">exchange</text>
+
+ <rect class="k" x="348" y="54" width="230" height="126" rx="8"/>
+ <text class="tb" x="362" y="78">Correct pairing</text>
+ <path class="chain" d="M368 120 h190"/>
+ <circle cx="394" cy="120" r="5" fill="#003c71"/><circle cx="438" cy="120" r="5" fill="#003c71"/>
+ <circle cx="490" cy="120" r="5" fill="#003c71"/><circle cx="534" cy="120" r="5" fill="#003c71"/>
+ <path class="ss" d="M394 120 q48 -40 96 0"/>
+ <path class="ss" d="M438 120 q48 48 96 0"/>
+ <text class="m" x="386" y="110">Cys</text><text class="m" x="430" y="110">Cys</text>
+ <text class="m" x="482" y="110">Cys</text><text class="m" x="526" y="110">Cys</text>
+ <text class="s" x="362" y="170">1-3 and 2-4 bonded: native state</text>
+
+ <rect class="bx" x="604" y="54" width="256" height="126" rx="8"/>
+ <text class="tb" x="618" y="78">Where it happens</text>
+ <text class="t" x="618" y="102">Lumen of the rough ER;</text>
+ <text class="t" x="618" y="122">oxidising environment lets</text>
+ <text class="t" x="618" y="142">disulfide bonds form in</text>
+ <text class="t" x="618" y="162">secreted and membrane proteins</text>
+
+ <text class="th" x="20" y="226">B  Peptidyl prolyl isomerase (PPI)</text>
+ <line x1="20" y1="236" x2="860" y2="236" stroke="#c6d2dd" stroke-width="1.5"/>
+
+ <rect class="bx" x="20" y="252" width="250" height="130" rx="8"/>
+ <text class="tb" x="34" y="276">cis peptide bond</text>
+ <path class="bond" d="M50 330 L104 306"/>
+ <path class="bond" d="M104 306 L158 330"/>
+ <path class="bond" d="M158 330 L158 366"/>
+ <circle cx="104" cy="306" r="6" fill="#003c71"/>
+ <text class="m" x="36" y="348">C(alpha) i</text>
+ <text class="m" x="134" y="300">N</text>
+ <text class="m" x="168" y="334">Pro</text>
+ <text class="s" x="34" y="372">Both C(alpha) on the same side</text>
+
+ <path class="arr" d="M284 316 L358 316"/>
+ <text class="tb" x="288" y="302">PPI</text>
+ <text class="s" x="282" y="342">rotation about</text>
+ <text class="s" x="282" y="358">the C-N bond</text>
+
+ <rect class="k" x="370" y="252" width="250" height="130" rx="8"/>
+ <text class="tb" x="384" y="276">trans peptide bond</text>
+ <path class="bond" d="M400 306 L454 330"/>
+ <path class="bond" d="M454 330 L508 306"/>
+ <path class="bond" d="M508 306 L562 330"/>
+ <circle cx="454" cy="330" r="6" fill="#003c71"/>
+ <text class="m" x="386" y="300">C(alpha) i</text>
+ <text class="m" x="486" y="300">N</text>
+ <text class="m" x="556" y="352">Pro</text>
+ <text class="s" x="384" y="372">Opposite sides: favoured in most folds</text>
+
+ <rect class="bx" x="646" y="252" width="214" height="130" rx="8"/>
+ <text class="tb" x="660" y="276">Why a catalyst is needed</text>
+ <text class="t" x="660" y="300">Spontaneous rotation has a</text>
+ <text class="t" x="660" y="320">high barrier and takes</text>
+ <text class="t" x="660" y="340">seconds to minutes, slower</text>
+ <text class="t" x="660" y="360">than the rest of folding</text>
+</svg>

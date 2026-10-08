@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 400" width="880" height="400" role="img"
+ aria-label="Proteolytic processing of proinsulin. Preproinsulin loses its signal sequence, forms disulfide bonds and has the C-peptide excised, giving mature insulin made of an A chain and a B chain.">
+ <style>
+  .bx{fill:#fff;stroke:#c6d2dd;stroke-width:1.8}.k{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .t{font:12px sans-serif;fill:#16191d}.tb{font:700 13px sans-serif;fill:#003c71}
+  .th{font:700 15px sans-serif;fill:#003c71}.s{font:11px sans-serif;fill:#4a5159}
+  .m{font:11px monospace;fill:#16191d}
+  .ar{stroke:#003c71;stroke-width:2.4;fill:none;marker-end:url(#a)}
+  .ss{stroke:#f2b705;stroke-width:3;fill:none}
+  .sig{fill:#d9e2ea;stroke:#4a5159;stroke-width:1.8}
+  .ch{fill:#e8eff6;stroke:#003c71;stroke-width:2}
+  .cp{fill:#fff;stroke:#8a6300;stroke-width:2;stroke-dasharray:4 3}
+  .cut{stroke:#b3261e;stroke-width:2.4}
+ </style>
+ <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker></defs>
+
+ <text class="th" x="20" y="28">Proteolytic processing of preproinsulin to mature insulin</text>
+ <line x1="20" y1="38" x2="860" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+
+ <text class="tb" x="20" y="70">1. Preproinsulin</text>
+ <text class="s" x="20" y="88">on the rough ER membrane</text>
+ <rect class="sig" x="20" y="100" width="76" height="30" rx="4"/>
+ <text class="m" x="26" y="120">Signal</text>
+ <rect class="ch" x="96" y="100" width="90" height="30"/>
+ <text class="m" x="120" y="120">B chain</text>
+ <rect class="cp" x="186" y="100" width="100" height="30"/>
+ <text class="m" x="216" y="120">C-peptide</text>
+ <rect class="ch" x="286" y="100" width="90" height="30"/>
+ <text class="m" x="310" y="120">A chain</text>
+ <text class="m" x="20" y="150">N-terminus</text>
+ <text class="m" x="330" y="150">C-terminus</text>
+
+ <path class="ar" d="M420 115 L492 115"/>
+ <text class="s" x="412" y="102">signal peptidase</text>
+ <text class="s" x="412" y="132">in the ER lumen</text>
+
+ <rect class="bx" x="520" y="60" width="340" height="110" rx="8"/>
+ <text class="tb" x="534" y="84">Why the signal sequence exists</text>
+ <text class="t" x="534" y="108">A hydrophobic N-terminal stretch directs the</text>
+ <text class="t" x="534" y="128">ribosome to the rough ER, then is cut off as</text>
+ <text class="t" x="534" y="148">soon as it has done its job</text>
+
+ <text class="tb" x="20" y="206">2. Proinsulin</text>
+ <text class="s" x="20" y="224">single chain, now folded with disulfide bonds</text>
+ <rect class="ch" x="20" y="238" width="90" height="30"/>
+ <text class="m" x="44" y="258">B chain</text>
+ <rect class="cp" x="110" y="238" width="100" height="30"/>
+ <text class="m" x="140" y="258">C-peptide</text>
+ <rect class="ch" x="210" y="238" width="90" height="30"/>
+ <text class="m" x="234" y="258">A chain</text>
+ <path class="ss" d="M60 238 q78 -44 180 0"/>
+ <path class="ss" d="M92 238 q66 -30 170 0"/>
+ <path class="ss" d="M240 268 q18 26 40 0"/>
+ <text class="s" x="104" y="196">interchain disulfide bonds</text>
+ <text class="s" x="242" y="294">intrachain bond in A</text>
+
+ <line class="cut" x1="110" y1="230" x2="110" y2="276"/>
+ <line class="cut" x1="210" y1="230" x2="210" y2="276"/>
+ <text class="s" x="316" y="246">two cuts by prohormone</text>
+ <text class="s" x="316" y="262">convertase 1 and 2,</text>
+ <text class="s" x="316" y="278">trimmed by carboxypeptidase E</text>
+
+ <path class="ar" d="M510 252 L582 252"/>
+ <text class="s" x="498" y="238">secretory granule</text>
+
+ <text class="tb" x="616" y="206">3. Mature insulin + C-peptide</text>
+ <rect class="ch" x="616" y="238" width="90" height="30"/>
+ <text class="m" x="640" y="258">B chain</text>
+ <rect class="ch" x="616" y="286" width="90" height="30"/>
+ <text class="m" x="640" y="306">A chain</text>
+ <path class="ss" d="M630 268 L630 286"/>
+ <path class="ss" d="M676 268 L676 286"/>
+ <rect class="cp" x="730" y="262" width="100" height="30"/>
+ <text class="m" x="754" y="282">C-peptide</text>
+ <text class="s" x="616" y="340">Two chains held only by disulfide bonds</text>
+
+ <rect class="k" x="20" y="348" width="840" height="40" rx="8"/>
+ <text class="t" x="34" y="374">Clinical use: C-peptide is secreted with insulin in equal amounts, so measuring it reports endogenous insulin secretion even in a patient receiving injected insulin.</text>
+</svg>

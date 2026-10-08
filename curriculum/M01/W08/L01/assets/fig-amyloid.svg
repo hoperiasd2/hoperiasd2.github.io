@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 430" width="880" height="430" role="img"
+ aria-label="Aggregation of misfolded protein into amyloid and self-propagation of prions. Nucleation is followed by fibril growth and acceleration by fragmentation, and a misfolded conformer converts the normal conformer into the same structure.">
+ <style>
+  .bx{fill:#fff;stroke:#c6d2dd;stroke-width:1.8}.k{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .t{font:12px sans-serif;fill:#16191d}.tb{font:700 13px sans-serif;fill:#003c71}
+  .th{font:700 15px sans-serif;fill:#003c71}.s{font:11px sans-serif;fill:#4a5159}
+  .ar{stroke:#003c71;stroke-width:2.2;fill:none;marker-end:url(#a)}
+  .ard{stroke:#8a6300;stroke-width:2;fill:none;stroke-dasharray:5 4;marker-end:url(#b)}
+  .chain{stroke:#16191d;stroke-width:2.4;fill:none}
+  .sheet{fill:none;stroke:#003c71;stroke-width:2.6}
+ </style>
+ <defs>
+  <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker>
+  <marker id="b" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#8a6300"/></marker>
+ </defs>
+
+ <text class="th" x="20" y="28">A  From misfolded monomer to amyloid fibril</text>
+ <line x1="20" y1="38" x2="860" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+
+ <circle cx="62" cy="106" r="24" fill="#fff" stroke="#003c71" stroke-width="2.2"/>
+ <text class="s" x="30" y="152">Native monomer</text>
+ <path class="ar" d="M96 106 L152 106"/>
+ <text class="s" x="98" y="94">stress, mutation</text>
+
+ <path class="chain" d="M166 92 q16 -16 32 0 q16 16 32 0"/>
+ <text class="s" x="162" y="152">Misfolded monomer</text>
+ <path class="ar" d="M244 106 L300 106"/>
+
+ <g stroke="#003c71" stroke-width="2.4" fill="none">
+  <path d="M316 90 l12 16 l12 -16 l12 16 l12 -16"/>
+  <path d="M316 118 l12 16 l12 -16 l12 16 l12 -16"/>
+ </g>
+ <text class="s" x="306" y="152">Oligomer (nucleus)</text>
+ <text class="s" x="306" y="168">slow, rate-limiting step</text>
+ <path class="ar" d="M394 106 L450 106"/>
+ <text class="s" x="396" y="94">monomer addition</text>
+
+ <g class="sheet">
+  <path d="M466 84 l10 14 l10 -14 l10 14 l10 -14 l10 14 l10 -14 l10 14 l10 -14"/>
+  <path d="M466 106 l10 14 l10 -14 l10 14 l10 -14 l10 14 l10 -14 l10 14 l10 -14"/>
+  <path d="M466 128 l10 14 l10 -14 l10 14 l10 -14 l10 14 l10 -14 l10 14 l10 -14"/>
+ </g>
+ <text class="s" x="460" y="176">Fibril: stacked cross-beta sheets</text>
+ <text class="s" x="460" y="192">perpendicular to the fibril axis</text>
+
+ <path class="ard" d="M560 140 q-20 70 -220 32"/>
+ <text class="s" x="440" y="212">Fragmentation creates new ends and accelerates growth</text>
+
+ <rect class="bx" x="630" y="60" width="230" height="130" rx="8"/>
+ <text class="tb" x="644" y="84">Which species is toxic</text>
+ <text class="t" x="644" y="108">Soluble oligomers damage</text>
+ <text class="t" x="644" y="128">membranes and synapses;</text>
+ <text class="t" x="644" y="148">mature fibrils are relatively</text>
+ <text class="t" x="644" y="168">inert deposits</text>
+
+ <text class="th" x="20" y="262">B  Prion: a conformer that converts the normal protein</text>
+ <line x1="20" y1="272" x2="860" y2="272" stroke="#c6d2dd" stroke-width="1.5"/>
+
+ <circle cx="70" cy="330" r="26" fill="#fff" stroke="#003c71" stroke-width="2.2"/>
+ <text class="tb" x="40" y="336">PrP(C)</text>
+ <text class="s" x="34" y="382">alpha-helix rich,</text>
+ <text class="s" x="34" y="398">protease sensitive</text>
+
+ <path class="ar" d="M108 330 L170 330"/>
+ <text class="s" x="106" y="318">template-driven</text>
+ <text class="s" x="106" y="356">conversion</text>
+
+ <rect class="k" x="184" y="302" width="96" height="58" rx="6"/>
+ <text class="tb" x="200" y="336">PrP(Sc)</text>
+ <text class="s" x="184" y="382">beta-sheet rich,</text>
+ <text class="s" x="184" y="398">protease resistant</text>
+
+ <path class="ar" d="M292 330 L354 330"/>
+ <rect class="k" x="368" y="302" width="60" height="58" rx="6"/>
+ <rect class="k" x="432" y="302" width="60" height="58" rx="6"/>
+ <text class="s" x="368" y="382">Each converted molecule becomes</text>
+ <text class="s" x="368" y="398">a template: exponential increase</text>
+
+ <path class="ard" d="M462 296 q-30 -34 -340 10"/>
+ <text class="s" x="214" y="284">PrP(C) pool is continuously drawn in</text>
+
+ <rect class="bx" x="630" y="292" width="230" height="110" rx="8"/>
+ <text class="tb" x="644" y="316">Consequence</text>
+ <text class="t" x="644" y="340">No nucleic acid is needed;</text>
+ <text class="t" x="644" y="360">the conformation itself is</text>
+ <text class="t" x="644" y="380">the infectious information</text>
+</svg>

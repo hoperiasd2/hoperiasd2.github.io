@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 430" width="880" height="430" role="img"
+ aria-label="Addition of sugars and lipids to proteins. Attachment sites of N-linked and O-linked glycosylation, anchoring outside the cell by a GPI anchor, and membrane binding on the cytosolic face by myristoylation, palmitoylation and prenylation.">
+ <style>
+  .bx{fill:#fff;stroke:#c6d2dd;stroke-width:1.8}.k{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .t{font:12px sans-serif;fill:#16191d}.tb{font:700 13px sans-serif;fill:#003c71}
+  .th{font:700 15px sans-serif;fill:#003c71}.s{font:11px sans-serif;fill:#4a5159}
+  .m{font:11px monospace;fill:#16191d}
+  .ar{stroke:#003c71;stroke-width:2.2;fill:none;marker-end:url(#a)}
+  .mem{fill:#e8eff6;stroke:#003c71;stroke-width:1.8}
+  .prot{fill:#fff;stroke:#003c71;stroke-width:2.2}
+  .lip{stroke:#8a6300;stroke-width:2.6;fill:none}
+  .sug{fill:#f2b705;stroke:#8a6300;stroke-width:1.4}
+ </style>
+ <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker></defs>
+
+ <text class="th" x="20" y="28">A  Glycosylation: where the sugar is attached</text>
+ <line x1="20" y1="38" x2="860" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+
+ <rect class="bx" x="20" y="54" width="410" height="140" rx="8"/>
+ <text class="tb" x="34" y="78">N-linked</text>
+ <path d="M44 150 h150" stroke="#16191d" stroke-width="2.4" fill="none"/>
+ <circle cx="104" cy="150" r="5" fill="#003c71"/>
+ <text class="m" x="86" y="172">Asn</text>
+ <path class="lip" d="M104 150 L104 126"/>
+ <rect class="sug" x="96" y="110" width="16" height="16" rx="3"/>
+ <rect class="sug" x="78" y="90" width="16" height="16" rx="3"/>
+ <rect class="sug" x="114" y="90" width="16" height="16" rx="3"/>
+ <path class="lip" d="M104 110 L86 106 M104 110 L122 106"/>
+ <text class="s" x="34" y="190">Sequon Asn-X-Ser/Thr; added in the ER lumen as a block, then trimmed in the Golgi</text>
+
+ <text class="tb" x="250" y="78">O-linked</text>
+ <path d="M258 150 h150" stroke="#16191d" stroke-width="2.4" fill="none"/>
+ <circle cx="318" cy="150" r="5" fill="#003c71"/>
+ <text class="m" x="296" y="172">Ser/Thr</text>
+ <path class="lip" d="M318 150 L318 126"/>
+ <rect class="sug" x="310" y="110" width="16" height="16" rx="3"/>
+ <rect class="sug" x="310" y="90" width="16" height="16" rx="3"/>
+ <path class="lip" d="M318 110 L318 106"/>
+
+ <rect class="bx" x="446" y="54" width="414" height="140" rx="8"/>
+ <text class="tb" x="460" y="78">What glycosylation does</text>
+ <text class="t" x="460" y="104">Increases solubility and resistance to proteases</text>
+ <text class="t" x="460" y="126">Serves as a sorting tag: mannose-6-phosphate sends</text>
+ <text class="t" x="460" y="146">hydrolases to the lysosome</text>
+ <text class="t" x="460" y="168">Carries recognition information on the cell surface,</text>
+ <text class="t" x="460" y="186">including the ABO blood group determinants</text>
+
+ <text class="th" x="20" y="240">B  Lipid modification: which side of the membrane</text>
+ <line x1="20" y1="250" x2="860" y2="250" stroke="#c6d2dd" stroke-width="1.5"/>
+
+ <rect class="mem" x="20" y="320" width="620" height="34"/>
+ <text class="s" x="648" y="334">Plasma membrane</text>
+ <text class="s" x="648" y="352">(bilayer)</text>
+ <text class="s" x="20" y="296">Outside the cell</text>
+ <text class="s" x="20" y="392">Cytosol</text>
+
+ <g>
+  <rect class="prot" x="80" y="266" width="76" height="26" rx="6"/>
+  <text class="m" x="92" y="284">Protein</text>
+  <path class="lip" d="M118 292 L118 312"/>
+  <rect class="sug" x="110" y="312" width="16" height="12" rx="3"/>
+  <path class="lip" d="M112 324 L112 352 M124 324 L124 352"/>
+  <text class="tb" x="68" y="258">GPI anchor</text>
+  <text class="s" x="58" y="372">glycan links the protein</text>
+  <text class="s" x="58" y="388">to phosphatidylinositol</text>
+ </g>
+
+ <g>
+  <rect class="prot" x="250" y="382" width="86" height="26" rx="6"/>
+  <text class="m" x="258" y="400">Protein</text>
+  <path class="lip" d="M278 382 L278 356"/>
+  <path class="lip" d="M278 356 q-6 -6 0 -12 q6 -6 0 -12"/>
+  <text class="tb" x="240" y="428">Myristoylation (Gly, N-terminus)</text>
+ </g>
+
+ <g>
+  <rect class="prot" x="400" y="382" width="86" height="26" rx="6"/>
+  <text class="m" x="408" y="400">Protein</text>
+  <path class="lip" d="M428 382 L428 356"/>
+  <path class="lip" d="M428 356 q-6 -8 0 -16 q6 -8 0 -14"/>
+  <text class="m" x="440" y="372">S</text>
+  <text class="tb" x="392" y="428">Palmitoylation (Cys, reversible)</text>
+ </g>
+
+ <g>
+  <rect class="prot" x="546" y="382" width="86" height="26" rx="6"/>
+  <text class="m" x="554" y="400">Protein</text>
+  <path class="lip" d="M574 382 L574 356"/>
+  <path class="lip" d="M574 356 l10 -10 l-10 -10 l10 -10"/>
+  <text class="tb" x="538" y="428">Prenylation (C-terminal Cys)</text>
+ </g>
+
+ <rect class="k" x="668" y="262" width="192" height="92" rx="8"/>
+ <text class="tb" x="682" y="286">Clinical point</text>
+ <text class="t" x="682" y="308">Ras must be prenylated</text>
+ <text class="t" x="682" y="328">to reach the membrane,</text>
+ <text class="t" x="682" y="348">so the step is a drug target</text>
+</svg>

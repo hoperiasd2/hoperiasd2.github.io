@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 430" width="880" height="430" role="img"
+ aria-label="The ubiquitin-proteasome pathway. Formation of a polyubiquitin chain by E1, E2 and E3 enzymes, the structure of the 26S proteasome, recognition, unfolding and ubiquitin recycling at the 19S particle, and cleavage inside the 20S core.">
+ <style>
+  .bx{fill:#fff;stroke:#c6d2dd;stroke-width:1.8}.k{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .t{font:12px sans-serif;fill:#16191d}.tb{font:700 13px sans-serif;fill:#003c71}
+  .th{font:700 15px sans-serif;fill:#003c71}.s{font:11px sans-serif;fill:#4a5159}
+  .m{font:11px monospace;fill:#16191d}
+  .ar{stroke:#003c71;stroke-width:2.2;fill:none;marker-end:url(#a)}
+  .ard{stroke:#8a6300;stroke-width:2;fill:none;stroke-dasharray:5 4;marker-end:url(#b)}
+  .ub{fill:#f2b705;stroke:#8a6300;stroke-width:1.6}
+  .cap{fill:#d9e2ea;stroke:#003c71;stroke-width:2.2}
+  .core{fill:#e8eff6;stroke:#003c71;stroke-width:2.2}
+  .chain{stroke:#16191d;stroke-width:2.4;fill:none}
+ </style>
+ <defs>
+  <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker>
+  <marker id="b" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#8a6300"/></marker>
+ </defs>
+
+ <text class="th" x="20" y="28">A  Tagging: E1 activation, E2 transfer, E3 substrate selection</text>
+ <line x1="20" y1="38" x2="860" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+
+ <circle class="ub" cx="46" cy="104" r="16"/>
+ <text class="m" x="36" y="108">Ub</text>
+ <text class="s" x="22" y="140">free ubiquitin</text>
+
+ <path class="ar" d="M70 104 L130 104"/>
+ <text class="s" x="72" y="92">E1 + ATP</text>
+
+ <rect class="bx" x="140" y="76" width="130" height="58" rx="8"/>
+ <text class="tb" x="154" y="100">E1 ~ Ub</text>
+ <text class="s" x="154" y="122">thioester, activated</text>
+
+ <path class="ar" d="M278 104 L336 104"/>
+ <text class="s" x="280" y="92">transfer</text>
+
+ <rect class="bx" x="346" y="76" width="130" height="58" rx="8"/>
+ <text class="tb" x="360" y="100">E2 ~ Ub</text>
+ <text class="s" x="360" y="122">carrier enzyme</text>
+
+ <path class="ar" d="M484 104 L542 104"/>
+ <text class="s" x="486" y="92">E3 ligase</text>
+ <text class="s" x="478" y="130">selects the substrate</text>
+
+ <rect class="k" x="552" y="62" width="150" height="86" rx="8"/>
+ <text class="tb" x="566" y="86">Substrate</text>
+ <path class="chain" d="M566 112 q16 -14 32 0 q16 14 32 0"/>
+ <circle class="ub" cx="662" cy="84" r="12"/>
+ <circle class="ub" cx="662" cy="108" r="12"/>
+ <circle class="ub" cx="662" cy="132" r="12"/>
+ <path class="ard" d="M662 96 L662 96"/>
+ <text class="s" x="566" y="142">Lys side chain</text>
+
+ <rect class="bx" x="718" y="62" width="142" height="86" rx="8"/>
+ <text class="tb" x="732" y="86">Specificity</text>
+ <text class="t" x="732" y="108">Two E1 genes, tens of</text>
+ <text class="t" x="732" y="126">E2, hundreds of E3:</text>
+ <text class="t" x="732" y="144">E3 decides what dies</text>
+
+ <text class="th" x="20" y="200">B  Chain linkage determines the outcome</text>
+ <line x1="20" y1="210" x2="420" y2="210" stroke="#c6d2dd" stroke-width="1.5"/>
+ <rect class="bx" x="20" y="224" width="400" height="92" rx="8"/>
+ <text class="t" x="34" y="248">Lys48-linked chain of four or more: degradation signal</text>
+ <text class="t" x="34" y="272">Lys63-linked chain: DNA repair and signalling, not degradation</text>
+ <text class="t" x="34" y="296">Single ubiquitin: endocytosis and membrane trafficking</text>
+
+ <text class="th" x="440" y="200">C  26S proteasome</text>
+ <line x1="440" y1="210" x2="860" y2="210" stroke="#c6d2dd" stroke-width="1.5"/>
+
+ <path class="cap" d="M560 226 h120 v34 h-120 z"/>
+ <text class="m" x="586" y="248">19S cap</text>
+ <path class="core" d="M560 262 h120 v30 h-120 z"/>
+ <text class="m" x="572" y="282">20S alpha ring</text>
+ <path class="core" d="M560 294 h120 v44 h-120 z"/>
+ <text class="m" x="572" y="320">20S beta ring (active sites)</text>
+ <path class="core" d="M560 340 h120 v30 h-120 z"/>
+ <text class="m" x="572" y="360">20S alpha ring</text>
+ <path class="cap" d="M560 372 h120 v30 h-120 z"/>
+ <text class="m" x="586" y="392">19S cap</text>
+ <line x1="620" y1="262" x2="620" y2="370" stroke="#8a6300" stroke-width="2" stroke-dasharray="4 3"/>
+
+ <path class="chain" d="M470 236 q16 -14 32 0 q16 14 32 0"/>
+ <circle class="ub" cx="484" cy="214" r="9"/><circle class="ub" cx="506" cy="208" r="9"/>
+ <circle class="ub" cx="528" cy="214" r="9"/>
+ <path class="ar" d="M540 240 L554 240"/>
+ <text class="s" x="440" y="262">1. recognition by 19S</text>
+ <text class="s" x="440" y="286">2. ATP-driven unfolding</text>
+ <text class="s" x="440" y="310">3. threading into the core</text>
+ <text class="s" x="440" y="334">4. cleavage to short peptides</text>
+ <text class="s" x="440" y="358">5. ubiquitin released and reused</text>
+
+ <path class="ard" d="M696 240 q58 -10 58 -30"/>
+ <circle class="ub" cx="754" cy="196" r="12"/>
+ <text class="s" x="700" y="216">Ub recycled</text>
+
+ <rect class="k" x="700" y="258" width="160" height="112" rx="8"/>
+ <text class="tb" x="714" y="282">Clinical point</text>
+ <text class="t" x="714" y="304">Bortezomib inhibits the</text>
+ <text class="t" x="714" y="324">20S active site; myeloma</text>
+ <text class="t" x="714" y="344">cells with a heavy</text>
+ <text class="t" x="714" y="364">secretory load die first</text>
+</svg>

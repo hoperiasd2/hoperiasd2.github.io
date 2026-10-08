@@ -1,4 +1,77 @@
 {
   "lesson_id": "M01-W08-L01",
-  "figures": []
+  "figures": [
+    {
+      "figure_id": "fig-chaperone",
+      "lesson_id": "M01-W08-L01",
+      "html_anchor": "#fig-chaperone",
+      "caption": "Hsp70 계열과 chaperonin의 작용 비교. Hsp70은 노출된 소수성 구간에 ATP 주기에 따라 결합과 해리를 반복하고, chaperonin은 기질을 격리된 통 안에 가두어 접게 한다.",
+      "asset_path": "assets/fig-chaperone.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-folding-enzymes",
+      "lesson_id": "M01-W08-L01",
+      "html_anchor": "#fig-folding-enzymes",
+      "caption": "Protein disulfide isomerase와 peptidyl prolyl isomerase가 촉매하는 반응. PDI는 잘못 짝지어진 disulfide를 교환해 올바른 조합으로 바꾸고, PPI는 proline 앞 peptide 결합의 cis–trans 전환을 촉진한다.",
+      "asset_path": "assets/fig-folding-enzymes.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-amyloid",
+      "lesson_id": "M01-W08-L01",
+      "html_anchor": "#fig-amyloid",
+      "caption": "잘못 접힌 단백질의 응집과 amyloid 형성, 그리고 prion의 자기 증식. 핵형성 후 섬유 성장과 조각화에 의한 가속, 그리고 잘못 접힌 형태가 정상 형태를 같은 구조로 전환시키는 과정을 보인다.",
+      "asset_path": "assets/fig-amyloid.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-proteolysis",
+      "lesson_id": "M01-W08-L01",
+      "html_anchor": "#fig-proteolysis",
+      "caption": "Proinsulin의 proteolytic processing. Preproinsulin에서 signal sequence 제거, disulfide 결합 형성, C-peptide 절단을 거쳐 A 사슬과 B 사슬로 이루어진 성숙 insulin이 되는 과정을 보인다.",
+      "asset_path": "assets/fig-proteolysis.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-glyco-lipid",
+      "lesson_id": "M01-W08-L01",
+      "html_anchor": "#fig-glyco-lipid",
+      "caption": "당과 지질의 부가. N-linked와 O-linked glycosylation의 부가 위치, GPI anchor에 의한 세포 외부 고정, 그리고 myristoylation·palmitoylation·prenylation에 의한 세포질 쪽 막 결합을 보인다.",
+      "asset_path": "assets/fig-glyco-lipid.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-ubiquitin",
+      "lesson_id": "M01-W08-L01",
+      "html_anchor": "#fig-ubiquitin",
+      "caption": "Ubiquitin-proteasome 경로. E1–E2–E3에 의한 polyubiquitin 사슬 형성과 26S proteasome의 구조, 19S 입자에서의 인식·풀기·ubiquitin 회수, 20S 내부에서의 절단을 보인다.",
+      "asset_path": "assets/fig-ubiquitin.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    }
+  ]
 }
