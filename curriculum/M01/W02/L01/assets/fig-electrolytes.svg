@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 450" width="880" height="450" role="img"
+ aria-label="How the kidney regulates potassium, calcium and phosphate: the factors that control potassium secretion in the collecting duct, the three directions in which parathyroid hormone and active vitamin D act on bone, intestine and kidney, and the pathway by which these controls fail together in chronic kidney disease.">
+ <style>
+  .bx{fill:#fff;stroke:#c6d2dd;stroke-width:1.8}.k{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .t{font:12px sans-serif;fill:#16191d}.tb{font:700 13px sans-serif;fill:#003c71}
+  .th{font:700 15px sans-serif;fill:#003c71}.s{font:11px sans-serif;fill:#4a5159}
+  .m{font:11px monospace;fill:#16191d}
+  .ar{stroke:#003c71;stroke-width:2.2;fill:none;marker-end:url(#a)}
+  .inh{stroke:#b3261e;stroke-width:2.4;fill:none;marker-end:url(#bar)}
+ </style>
+ <defs>
+  <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker>
+  <marker id="bar" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M6 0 L6 10" stroke="#b3261e" stroke-width="3"/></marker>
+ </defs>
+
+ <text class="th" x="20" y="28">A  Potassium: the control point is secretion, not reabsorption</text>
+ <line x1="20" y1="38" x2="430" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+ <rect class="bx" x="20" y="54" width="400" height="50" rx="7"/>
+ <text class="t" x="34" y="76">98 percent of K+ is inside cells; the ratio across the membrane</text>
+ <text class="t" x="34" y="94">sets the resting potential, so small changes matter a lot.</text>
+ <rect class="k" x="20" y="114" width="400" height="124" rx="8"/>
+ <text class="tb" x="34" y="138">What increases collecting duct K+ secretion</text>
+ <text class="t" x="34" y="162">aldosterone</text>
+ <text class="t" x="34" y="182">a rise in plasma K+</text>
+ <text class="t" x="34" y="202">more Na+ and more flow arriving at the collecting duct</text>
+ <text class="t" x="34" y="222">alkalosis</text>
+ <rect class="bx" x="20" y="250" width="400" height="76" rx="8"/>
+ <text class="tb" x="34" y="274">Why loop diuretics and thiazides cause hypokalaemia</text>
+ <text class="t" x="34" y="296">They block Na+ reabsorption upstream, so more Na+ and more flow</text>
+ <text class="t" x="34" y="314">reach the collecting duct and K+ secretion rises with them.</text>
+
+ <text class="th" x="460" y="28">B  Calcium and phosphate: PTH acts in three directions</text>
+ <line x1="460" y1="38" x2="860" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+ <rect class="k" x="460" y="54" width="180" height="40" rx="7"/>
+ <text class="m" x="474" y="80">Plasma Ca2+ falls</text>
+ <path class="ar" d="M646 74 L690 74"/>
+ <rect class="bx" x="698" y="54" width="162" height="40" rx="7"/>
+ <text class="m" x="730" y="80">PTH released</text>
+ <path class="ar" d="M740 98 L600 128"/>
+ <path class="ar" d="M778 98 L778 128"/>
+ <path class="ar" d="M816 98 L856 128"/>
+
+ <rect class="bx" x="460" y="134" width="150" height="76" rx="7"/>
+ <text class="tb" x="474" y="158">Bone</text>
+ <text class="t" x="474" y="180">releases Ca2+</text>
+ <text class="t" x="474" y="200">(and phosphate)</text>
+ <rect class="bx" x="622" y="134" width="150" height="76" rx="7"/>
+ <text class="tb" x="636" y="158">Kidney</text>
+ <text class="t" x="636" y="180">more Ca2+ kept,</text>
+ <text class="t" x="636" y="200">LESS phosphate kept</text>
+ <rect class="bx" x="784" y="134" width="76" height="76" rx="7"/>
+ <text class="tb" x="792" y="158">1-alpha</text>
+ <text class="t" x="792" y="180">hydroxylase</text>
+ <text class="t" x="792" y="200">activated</text>
+ <path class="ar" d="M822 214 L822 240"/>
+ <rect class="k" x="700" y="246" width="160" height="40" rx="7"/>
+ <text class="m" x="714" y="272">Active vitamin D</text>
+ <path class="ar" d="M698 266 L650 266"/>
+ <rect class="bx" x="470" y="246" width="176" height="40" rx="7"/>
+ <text class="m" x="484" y="272">Gut: more Ca2+ absorbed</text>
+ <text class="s" x="460" y="312">Opposite handling of Ca2+ and phosphate is deliberate: if both rose, their product</text>
+ <text class="s" x="460" y="330">would exceed solubility and they would precipitate in tissue.</text>
+
+ <text class="th" x="20" y="366">C  Chronic kidney disease: all three fail together</text>
+ <line x1="20" y1="376" x2="860" y2="376" stroke="#c6d2dd" stroke-width="1.5"/>
+ <text class="t" x="20" y="400">GFR falls  to  phosphate retained AND 1-alpha hydroxylation falls  to  less active vitamin D  to  less gut Ca2+ absorption</text>
+ <text class="t" x="20" y="422">to  plasma Ca2+ falls  to  PTH stays high (secondary hyperparathyroidism)  to  bone is stripped of calcium and weakens</text>
+ <text class="s" x="20" y="442">Add hyperkalaemia from reduced K+ excretion and metabolic acidosis from reduced acid excretion.</text>
+</svg>

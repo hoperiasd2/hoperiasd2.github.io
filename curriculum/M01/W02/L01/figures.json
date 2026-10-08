@@ -1,4 +1,113 @@
 {
   "lesson_id": "M01-W02-L01",
-  "figures": []
+  "figures": [
+    {
+      "figure_id": "fig-kidney-functions",
+      "lesson_id": "M01-W02-L01",
+      "html_anchor": "#fig-kidney-functions",
+      "caption": "신장의 다섯 가지 기능 범주와 각 범주의 대표 사례, 그리고 신부전에서 각 범주가 어떤 증상으로 나타나는지의 대응 관계. 비뇨계 전체 구조와 신장 단면의 겉질·속질 구분을 함께 보인다.",
+      "asset_path": "assets/fig-kidney-functions.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-nephron",
+      "lesson_id": "M01-W02-L01",
+      "html_anchor": "#fig-nephron",
+      "caption": "Nephron의 혈관 요소와 세뇨관 요소를 나란히 놓은 구조도. 두 번 나오는 모세혈관의 직렬 배치, 각 세뇨관 구간의 이름과 순서, 여과 장벽의 세 층, 그리고 juxtaglomerular apparatus의 위치.",
+      "asset_path": "assets/fig-nephron.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-urine-formation",
+      "lesson_id": "M01-W02-L01",
+      "html_anchor": "#fig-urine-formation",
+      "caption": "소변 생성의 네 과정과 그 관계식. 각 과정이 nephron의 어느 구간에서 일어나는지, 하루 180 L 여과와 1.5 L 배설의 규모 대비, 그리고 대표 물질별 처리 양상의 차이를 함께 보인다.",
+      "asset_path": "assets/fig-urine-formation.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-gfr",
+      "lesson_id": "M01-W02-L01",
+      "html_anchor": "#fig-gfr",
+      "caption": "사구체 여과를 일으키는 세 압력과 순 여과압의 계산, 일반 모세혈관과의 차이, 그리고 GFR 자가조절과 세뇨관사구체 되먹임의 두 기전. 혈압 변화에 대한 GFR과 신혈류량의 반응 곡선을 함께 보인다.",
+      "asset_path": "assets/fig-gfr.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-proximal-tubule",
+      "lesson_id": "M01-W02-L01",
+      "html_anchor": "#fig-proximal-tubule",
+      "caption": "근위세뇨관 상피세포의 수송체 배치. Na+/K+-ATPase가 만드는 기울기, SGLT2·SGLT1·아미노산 공동수송체·NHE3의 위치, 등삼투압 재흡수에 의한 용적 감소와 삼투압 유지, 그리고 포도당 재흡수의 Tm과 신장 역치를 함께 보인다.",
+      "asset_path": "assets/fig-proximal-tubule.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-loop-henle",
+      "lesson_id": "M01-W02-L01",
+      "html_anchor": "#fig-loop-henle",
+      "caption": "Loop of Henle의 역류 증폭 기전. 하행지와 상행지의 투과성 차이, NKCC2에 의한 능동 수송, 기울기가 단계적으로 증폭되는 과정, 겉질과 속질의 삼투압 수치, 요소 재순환, 그리고 vasa recta의 역류 교환을 함께 보인다.",
+      "asset_path": "assets/fig-loop-henle.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-distal-regulation",
+      "lesson_id": "M01-W02-L01",
+      "html_anchor": "#fig-distal-regulation",
+      "caption": "원위세뇨관과 집합관에서 aldosterone과 ADH가 작용하는 지점. ENaC와 Na+/K+-ATPase를 통한 Na+ 재흡수와 K+ 분비, V2 수용체–cAMP–aquaporin-2 경로를 통한 물 재흡수, 그리고 ANP가 반대 방향으로 작용하는 지점을 함께 보인다.",
+      "asset_path": "assets/fig-distal-regulation.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-acid-base-kidney",
+      "lesson_id": "M01-W02-L01",
+      "html_anchor": "#fig-acid-base-kidney",
+      "caption": "신장의 산–염기 조절 두 방식. 근위세뇨관에서 carbonic anhydrase를 거친 HCO3- 재흡수의 간접 경로, 그리고 인산과 암모니아 완충제를 이용해 H+을 배출하면서 새 HCO3-를 만드는 경로를 함께 보인다.",
+      "asset_path": "assets/fig-acid-base-kidney.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-electrolytes",
+      "lesson_id": "M01-W02-L01",
+      "html_anchor": "#fig-electrolytes",
+      "caption": "칼륨·칼슘·인 조절에 신장이 관여하는 방식. 집합관에서의 K+ 분비 조절 요인, PTH와 활성형 vitamin D가 뼈·소장·신장에 작용하는 세 방향, 그리고 만성 신질환에서 이 조절들이 함께 깨지는 경로.",
+      "asset_path": "assets/fig-electrolytes.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    }
+  ]
 }

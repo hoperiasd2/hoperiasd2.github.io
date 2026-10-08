@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 440" width="880" height="440" role="img"
+ aria-label="Where aldosterone and ADH act in the distal tubule and collecting duct: sodium reabsorption and potassium secretion through ENaC and the sodium potassium ATPase, water reabsorption through the V2 receptor cAMP aquaporin 2 pathway, and the point where atrial natriuretic peptide acts in the opposite direction.">
+ <style>
+  .bx{fill:#fff;stroke:#c6d2dd;stroke-width:1.8}.k{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .t{font:12px sans-serif;fill:#16191d}.tb{font:700 13px sans-serif;fill:#003c71}
+  .th{font:700 15px sans-serif;fill:#003c71}.s{font:11px sans-serif;fill:#4a5159}
+  .m{font:10px monospace;fill:#16191d}
+  .cell{fill:#e8eff6;stroke:#003c71;stroke-width:2.2}
+  .tr{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .pmp{fill:#f7dedc;stroke:#b3261e;stroke-width:2.2}
+  .ar{stroke:#003c71;stroke-width:2;fill:none;marker-end:url(#a)}
+  .inh{stroke:#b3261e;stroke-width:2.4;fill:none;marker-end:url(#bar)}
+ </style>
+ <defs>
+  <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker>
+  <marker id="bar" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M6 0 L6 10" stroke="#b3261e" stroke-width="3"/></marker>
+ </defs>
+
+ <text class="th" x="20" y="28">A  Aldosterone: sodium in, potassium out</text>
+ <line x1="20" y1="38" x2="430" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+
+ <text class="m" x="20" y="62">LUMEN</text>
+ <rect class="cell" x="20" y="100" width="400" height="124" rx="8"/>
+ <text class="m" x="196" y="166">Principal cell</text>
+ <text class="m" x="20" y="252">BLOOD</text>
+
+ <rect class="tr" x="60" y="90" width="52" height="20" rx="5"/>
+ <text class="m" x="68" y="105">ENaC</text>
+ <path class="ar" d="M86 74 L86 94"/>
+ <text class="m" x="68" y="70">Na+ in</text>
+
+ <rect class="tr" x="300" y="90" width="52" height="20" rx="5"/>
+ <text class="m" x="306" y="105">ROMK</text>
+ <path class="ar" d="M326 94 L326 74"/>
+ <text class="m" x="306" y="70">K+ out</text>
+ <text class="s" x="140" y="76">lumen turns negative as Na+ leaves, which drives K+ out</text>
+
+ <rect class="pmp" x="60" y="214" width="104" height="22" rx="5"/>
+ <text class="m" x="66" y="230">Na+/K+-ATPase</text>
+ <path class="ar" d="M112 240 L112 262"/>
+
+ <rect class="k" x="196" y="188" width="140" height="34" rx="6"/>
+ <text class="m" x="206" y="210">Aldosterone</text>
+ <path class="ar" d="M196 200 L170 200"/>
+ <path class="ar" d="M258 186 L140 112"/>
+ <text class="s" x="20" y="286">Raises expression of both ENaC and the pump.</text>
+ <text class="s" x="20" y="304">Stimuli: angiotensin II, and a rise in plasma K+.</text>
+
+ <text class="th" x="460" y="28">B  ADH: water only</text>
+ <line x1="460" y1="38" x2="860" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+ <rect class="bx" x="460" y="54" width="400" height="34" rx="7"/>
+ <text class="m" x="474" y="76">ADH  to  V2 receptor  to  cAMP  to  aquaporin-2 moved to apical membrane</text>
+ <text class="m" x="460" y="112">LUMEN</text>
+ <rect class="cell" x="460" y="140" width="400" height="90" rx="8"/>
+ <rect class="tr" x="520" y="130" width="78" height="20" rx="5"/>
+ <text class="m" x="526" y="145">aquaporin-2</text>
+ <path class="ar" d="M559 128 L559 108"/>
+ <text class="m" x="536" y="104">water out</text>
+ <rect class="tr" x="700" y="220" width="78" height="20" rx="5"/>
+ <text class="m" x="706" y="235">aquaporin-3</text>
+ <text class="m" x="460" y="256">INTERSTITIUM (high osmolality, built by the loop)</text>
+ <text class="s" x="460" y="282">No ADH means no apical aquaporin-2: water cannot leave, so a large volume</text>
+ <text class="s" x="460" y="300">of dilute urine is produced, up to 20 L per day.</text>
+
+ <text class="th" x="20" y="344">C  Do not confuse the two, and the opposing axis</text>
+ <line x1="20" y1="354" x2="860" y2="354" stroke="#c6d2dd" stroke-width="1.5"/>
+ <rect class="bx" x="20" y="368" width="270" height="62" rx="8"/>
+ <text class="tb" x="34" y="392">Aldosterone</text>
+ <text class="t" x="34" y="412">controls Na+ total (and K+)</text>
+ <rect class="bx" x="302" y="368" width="270" height="62" rx="8"/>
+ <text class="tb" x="316" y="392">ADH</text>
+ <text class="t" x="316" y="412">controls water, hence osmolality</text>
+ <rect class="k" x="584" y="368" width="276" height="62" rx="8"/>
+ <text class="tb" x="598" y="392">ANP: the opposite direction</text>
+ <text class="t" x="598" y="412">atrial stretch, more Na+ out, less renin</text>
+</svg>

@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 460" width="880" height="460" role="img"
+ aria-label="Structure of a nephron with its vascular and tubular elements side by side: the series arrangement of two capillary beds, the name and order of each tubular segment, the three layers of the filtration barrier, and the position of the juxtaglomerular apparatus.">
+ <style>
+  .bx{fill:#fff;stroke:#c6d2dd;stroke-width:1.8}.k{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .t{font:12px sans-serif;fill:#16191d}.tb{font:700 13px sans-serif;fill:#003c71}
+  .th{font:700 15px sans-serif;fill:#003c71}.s{font:11px sans-serif;fill:#4a5159}
+  .m{font:10px monospace;fill:#16191d}
+  .tub{fill:none;stroke:#003c71;stroke-width:7}
+  .ves{fill:none;stroke:#b3261e;stroke-width:4}
+  .cap{fill:#f7dedc;stroke:#b3261e;stroke-width:2}
+  .bw{fill:#fff5d6;stroke:#f2b705;stroke-width:2.4}
+ </style>
+
+ <text class="th" x="20" y="28">A  Vascular and tubular elements of one nephron</text>
+ <line x1="20" y1="38" x2="560" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+
+ <path class="ves" d="M30 92 L96 92"/>
+ <text class="m" x="24" y="82">afferent arteriole</text>
+ <circle class="cap" cx="128" cy="92" r="26"/>
+ <text class="m" x="104" y="60">Glomerulus</text>
+ <path class="bw" d="M100 68 a34 34 0 1 0 0 48" />
+ <text class="m" x="60" y="126">Bowman capsule</text>
+ <path class="ves" d="M156 92 L212 92"/>
+ <text class="m" x="158" y="82">efferent arteriole</text>
+ <path class="ves" d="M212 92 q40 30 10 70 q-30 36 14 70 q34 26 10 70"/>
+ <text class="m" x="250" y="200">peritubular capillary</text>
+ <text class="m" x="250" y="216">(second bed, in series)</text>
+
+ <path class="tub" d="M128 126 L128 160 q40 14 0 42 q-40 22 0 44"/>
+ <text class="m" x="150" y="166">2 Proximal tubule</text>
+ <path class="tub" d="M128 272 L128 360 q24 26 48 0 L176 272"/>
+ <text class="m" x="42" y="320">3 Loop of Henle</text>
+ <text class="m" x="42" y="336">descending</text>
+ <text class="m" x="190" y="320">ascending</text>
+ <path class="tub" d="M176 272 q40 -20 0 -40 q-30 -16 10 -34"/>
+ <text class="m" x="208" y="212">4 Distal tubule</text>
+ <path class="tub" d="M186 198 L240 198 L240 400"/>
+ <text class="m" x="252" y="300">5 Collecting duct</text>
+ <text class="m" x="252" y="316">to renal pelvis, ureter</text>
+
+ <circle cx="164" cy="112" r="7" fill="#2e7d32"/>
+ <text class="m" x="176" y="116">macula densa</text>
+ <circle cx="112" cy="112" r="6" fill="#8a6300"/>
+ <text class="m" x="24" y="146">juxtaglomerular cell: renin</text>
+ <text class="s" x="24" y="420">Juxtaglomerular apparatus: macula densa senses tubular NaCl,</text>
+ <text class="s" x="24" y="438">juxtaglomerular cells release renin.</text>
+
+ <text class="th" x="590" y="28">B  The filtration barrier, three layers</text>
+ <line x1="590" y1="38" x2="860" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+ <text class="m" x="600" y="62">Capillary lumen (blood)</text>
+ <rect x="600" y="70" width="248" height="16" fill="#f7dedc" stroke="#b3261e" stroke-width="1.6"/>
+ <text class="m" x="606" y="104">1 Fenestrated endothelium</text>
+ <rect x="600" y="110" width="248" height="12" fill="#eef3f8" stroke="#6b8ba8" stroke-width="1.6"/>
+ <text class="m" x="606" y="140">2 Basement membrane (negatively charged)</text>
+ <rect x="600" y="146" width="248" height="14" fill="#e8eff6" stroke="#003c71" stroke-width="1.6"/>
+ <text class="m" x="606" y="178">3 Podocyte with foot processes</text>
+ <text class="m" x="600" y="200">Bowman space (filtrate)</text>
+
+ <rect class="k" x="590" y="216" width="270" height="92" rx="8"/>
+ <text class="tb" x="604" y="240">What passes and what does not</text>
+ <text class="t" x="604" y="264">Freely: water, electrolytes, glucose,</text>
+ <text class="t" x="604" y="282">amino acids, urea</text>
+ <text class="t" x="604" y="302">Not: blood cells, most proteins</text>
+
+ <rect class="bx" x="590" y="322" width="270" height="116" rx="8"/>
+ <text class="tb" x="604" y="346">Nephrotic syndrome</text>
+ <text class="t" x="604" y="370">The barrier, especially the podocyte,</text>
+ <text class="t" x="604" y="388">is damaged and protein escapes.</text>
+ <text class="t" x="604" y="410">Low albumin lowers plasma colloid</text>
+ <text class="t" x="604" y="428">osmotic pressure, so oedema follows.</text>
+</svg>

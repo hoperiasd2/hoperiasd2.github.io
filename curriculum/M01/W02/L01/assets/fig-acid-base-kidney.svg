@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 440" width="880" height="440" role="img"
+ aria-label="Two ways the kidney controls acid base balance: the indirect route by which bicarbonate is reclaimed in the proximal tubule through carbonic anhydrase, and the route that excretes hydrogen ions on phosphate and ammonia buffers while generating new bicarbonate.">
+ <style>
+  .bx{fill:#fff;stroke:#c6d2dd;stroke-width:1.8}.k{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .t{font:12px sans-serif;fill:#16191d}.tb{font:700 13px sans-serif;fill:#003c71}
+  .th{font:700 15px sans-serif;fill:#003c71}.s{font:11px sans-serif;fill:#4a5159}
+  .m{font:10px monospace;fill:#16191d}
+  .cell{fill:#e8eff6;stroke:#003c71;stroke-width:2.2}
+  .tr{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .ar{stroke:#003c71;stroke-width:2;fill:none;marker-end:url(#a)}
+ </style>
+ <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker></defs>
+
+ <text class="th" x="20" y="28">A  Reclaiming filtered bicarbonate: an indirect route (proximal tubule, about 85 percent)</text>
+ <line x1="20" y1="38" x2="860" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+
+ <text class="m" x="20" y="62">LUMEN: filtered HCO3-, about 4300 mmol per day</text>
+ <rect class="cell" x="20" y="140" width="520" height="110" rx="8"/>
+ <text class="m" x="20" y="276">BLOOD</text>
+
+ <rect class="tr" x="60" y="130" width="52" height="20" rx="5"/>
+ <text class="m" x="68" y="145">NHE3</text>
+ <path class="ar" d="M86 128 L86 106"/>
+ <text class="m" x="74" y="100">H+</text>
+ <text class="m" x="110" y="100">+  HCO3-   to   H2CO3</text>
+ <path class="ar" d="M250 96 L290 96"/>
+ <text class="s" x="214" y="84">membrane carbonic anhydrase</text>
+ <text class="m" x="298" y="100">CO2 + H2O</text>
+ <path class="ar" d="M330 108 L330 136"/>
+
+ <text class="m" x="60" y="178">CO2 + H2O</text>
+ <path class="ar" d="M150 174 L190 174"/>
+ <text class="s" x="140" y="162">cytosolic CA</text>
+ <text class="m" x="198" y="178">H2CO3</text>
+ <path class="ar" d="M258 174 L298 174"/>
+ <text class="m" x="306" y="178">H+   +   HCO3-</text>
+ <path class="ar" d="M312 190 L140 148"/>
+ <text class="s" x="150" y="212">H+ returns to the lumen and repeats</text>
+ <path class="ar" d="M420 190 L470 240"/>
+ <text class="m" x="440" y="268">HCO3- to blood</text>
+ <text class="s" x="20" y="300">Net effect: HCO3- disappears from the lumen and appears in the blood. It is reclaimed, not transported directly.</text>
+
+ <rect class="bx" x="560" y="54" width="300" height="196" rx="8"/>
+ <text class="tb" x="574" y="78">Why this is not enough</text>
+ <text class="t" x="574" y="102">Reclaiming filtered HCO3- only avoids</text>
+ <text class="t" x="574" y="122">losing what was already there.</text>
+ <text class="t" x="574" y="148">Metabolism, mainly of protein, makes</text>
+ <text class="t" x="574" y="168">50 to 100 mmol of acid each day, and</text>
+ <text class="t" x="574" y="188">that acid must leave the body.</text>
+ <text class="t" x="574" y="214">Urine pH cannot go below 4.5, so free</text>
+ <text class="t" x="574" y="234">H+ carries almost none of it: a buffer is needed.</text>
+
+ <text class="th" x="20" y="340">B  Excreting H+ on a buffer, and making NEW bicarbonate</text>
+ <line x1="20" y1="350" x2="860" y2="350" stroke="#c6d2dd" stroke-width="1.5"/>
+
+ <rect class="bx" x="20" y="364" width="400" height="66" rx="8"/>
+ <text class="tb" x="34" y="388">Phosphate (titratable acid)</text>
+ <text class="t" x="34" y="412">Filtered HPO4(2-) takes up H+ and leaves as H2PO4(-).</text>
+
+ <rect class="k" x="440" y="364" width="420" height="66" rx="8"/>
+ <text class="tb" x="454" y="388">Ammonia: the main source of new bicarbonate</text>
+ <text class="t" x="454" y="410">Proximal cells break down glutamine to NH3 + HCO3-. NH3 goes to the lumen,</text>
+ <text class="t" x="454" y="426">picks up H+ as NH4+ and leaves; the HCO3- enters the blood. Rises sharply in acidosis.</text>
+</svg>

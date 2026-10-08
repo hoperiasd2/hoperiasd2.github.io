@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 440" width="880" height="440" role="img"
+ aria-label="The three pressures that drive glomerular filtration and the calculation of net filtration pressure, the difference from an ordinary capillary, and the two mechanisms of autoregulation and tubuloglomerular feedback with the response curves of GFR and renal blood flow to changing arterial pressure.">
+ <style>
+  .bx{fill:#fff;stroke:#c6d2dd;stroke-width:1.8}.k{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .t{font:12px sans-serif;fill:#16191d}.tb{font:700 13px sans-serif;fill:#003c71}
+  .th{font:700 15px sans-serif;fill:#003c71}.s{font:11px sans-serif;fill:#4a5159}
+  .m{font:11px monospace;fill:#16191d}
+  .cap{fill:#f7dedc;stroke:#b3261e;stroke-width:2.2}
+  .out{stroke:#b3261e;stroke-width:2.4;fill:none;marker-end:url(#r)}
+  .inn{stroke:#003c71;stroke-width:2.4;fill:none;marker-end:url(#a)}
+  .ar{stroke:#003c71;stroke-width:2.2;fill:none;marker-end:url(#a)}
+  .ax{stroke:#16191d;stroke-width:1.6;fill:none}
+  .g1{stroke:#003c71;stroke-width:2.6;fill:none}
+  .g2{stroke:#2e7d32;stroke-width:2.6;fill:none;stroke-dasharray:6 4}
+ </style>
+ <defs>
+  <marker id="r" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#b3261e"/></marker>
+  <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker>
+ </defs>
+
+ <text class="th" x="20" y="28">A  Three pressures, and the net</text>
+ <line x1="20" y1="38" x2="430" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+
+ <rect class="cap" x="90" y="130" width="280" height="44" rx="12"/>
+ <text class="m" x="190" y="158">Glomerular capillary</text>
+ <path class="out" d="M150 130 L150 86"/>
+ <text class="m" x="112" y="78">P_GC = 55 (out)</text>
+ <path class="inn" d="M250 80 L250 126"/>
+ <text class="m" x="228" y="72">pi_GC = 30 (in)</text>
+ <path class="inn" d="M150 230 L150 180"/>
+ <text class="m" x="112" y="248">P_BS = 15 (in)</text>
+ <text class="m" x="250" y="248">pi_BS = 0</text>
+ <text class="s" x="250" y="266">no protein is filtered,</text>
+ <text class="s" x="250" y="282">so there is nothing to make it</text>
+
+ <rect class="k" x="20" y="300" width="410" height="40" rx="8"/>
+ <text class="tb" x="34" y="326">Net filtration pressure = 55 - 15 - 30 = +10 mmHg, all along the capillary</text>
+
+ <rect class="bx" x="20" y="352" width="410" height="76" rx="8"/>
+ <text class="tb" x="34" y="376">Two differences from an ordinary capillary</text>
+ <text class="t" x="34" y="398">Always positive: filtration only, never reabsorption along the way.</text>
+ <text class="t" x="34" y="418">55 instead of 35 mmHg: arterioles narrow the outflow as well as the inflow.</text>
+
+ <text class="th" x="460" y="28">B  Keeping GFR constant: two mechanisms</text>
+ <line x1="460" y1="38" x2="860" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+
+ <rect class="bx" x="460" y="54" width="400" height="74" rx="8"/>
+ <text class="tb" x="474" y="78">Myogenic autoregulation (immediate)</text>
+ <text class="t" x="474" y="100">Stretched afferent arteriole muscle contracts, so a rise in</text>
+ <text class="t" x="474" y="120">pressure raises resistance and glomerular pressure holds.</text>
+
+ <rect class="bx" x="460" y="140" width="400" height="96" rx="8"/>
+ <text class="tb" x="474" y="164">Tubuloglomerular feedback (tens of seconds)</text>
+ <text class="t" x="474" y="186">GFR up, filtrate moves fast, more NaCl reaches macula densa,</text>
+ <text class="t" x="474" y="206">which releases adenosine and constricts the afferent arteriole.</text>
+ <text class="s" x="474" y="228">Low NaCl instead relaxes it and triggers renin release.</text>
+
+ <path class="ax" d="M520 380 L520 254 M520 380 L850 380"/>
+ <text class="s" x="610" y="406">Mean arterial pressure (mmHg)</text>
+ <text class="s" x="474" y="320" transform="rotate(-90 484 320)">GFR / flow</text>
+ <path class="g1" d="M528 372 L580 300 L640 292 L740 290 L790 294 L844 330"/>
+ <path class="g2" d="M528 376 L580 312 L640 304 L740 302 L790 308 L844 344"/>
+ <text class="m" x="648" y="284">GFR</text>
+ <text class="m" x="648" y="324">renal blood flow</text>
+ <line x1="580" y1="254" x2="580" y2="380" stroke="#c6d2dd" stroke-width="1.2" stroke-dasharray="4 4"/>
+ <line x1="790" y1="254" x2="790" y2="380" stroke="#c6d2dd" stroke-width="1.2" stroke-dasharray="4 4"/>
+ <text class="m" x="566" y="396">80</text>
+ <text class="m" x="776" y="396">180</text>
+ <text class="s" x="530" y="430">Both stay nearly flat across this range; outside it, autoregulation fails.</text>
+</svg>

@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 440" width="880" height="440" role="img"
+ aria-label="Five functional categories of the kidney with a representative example of each, and how each category appears as a symptom in renal failure, together with the structure of the urinary system and the cortex medulla division of a kidney section.">
+ <style>
+  .bx{fill:#fff;stroke:#c6d2dd;stroke-width:1.8}.k{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .t{font:12px sans-serif;fill:#16191d}.tb{font:700 13px sans-serif;fill:#003c71}
+  .th{font:700 15px sans-serif;fill:#003c71}.s{font:11px sans-serif;fill:#4a5159}
+  .m{font:11px monospace;fill:#16191d}
+  .ar{stroke:#003c71;stroke-width:2.2;fill:none;marker-end:url(#a)}
+  .cx{fill:#e8eff6;stroke:#003c71;stroke-width:2}
+  .md{fill:#f7dedc;stroke:#b3261e;stroke-width:2}
+ </style>
+ <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker></defs>
+
+ <text class="th" x="20" y="28">A  Five functions, and the matching symptom when they fail</text>
+ <line x1="20" y1="38" x2="640" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+
+ <rect class="bx" x="20" y="54" width="300" height="56" rx="7"/>
+ <text class="tb" x="34" y="76">1 Excretion</text>
+ <text class="s" x="34" y="98">urea, creatinine, uric acid, drugs</text>
+ <path class="ar" d="M326 82 L368 82"/>
+ <rect class="k" x="376" y="54" width="264" height="56" rx="7"/>
+ <text class="t" x="390" y="86">urea and creatinine accumulate (uraemia)</text>
+
+ <rect class="bx" x="20" y="118" width="300" height="56" rx="7"/>
+ <text class="tb" x="34" y="140">2 Fluid volume and osmolality</text>
+ <text class="s" x="34" y="162">water and Na+ output; long-term blood pressure</text>
+ <path class="ar" d="M326 146 L368 146"/>
+ <rect class="k" x="376" y="118" width="264" height="56" rx="7"/>
+ <text class="t" x="390" y="150">oedema and hypertension</text>
+
+ <rect class="bx" x="20" y="182" width="300" height="56" rx="7"/>
+ <text class="tb" x="34" y="204">3 Electrolytes</text>
+ <text class="s" x="34" y="226">Na+, K+, Ca2+, phosphate, Mg2+ each separately</text>
+ <path class="ar" d="M326 210 L368 210"/>
+ <rect class="k" x="376" y="182" width="264" height="56" rx="7"/>
+ <text class="t" x="390" y="214">hyperkalaemia</text>
+
+ <rect class="bx" x="20" y="246" width="300" height="56" rx="7"/>
+ <text class="tb" x="34" y="268">4 Acid-base balance</text>
+ <text class="s" x="34" y="290">reabsorb HCO3-, excrete H+</text>
+ <path class="ar" d="M326 274 L368 274"/>
+ <rect class="k" x="376" y="246" width="264" height="56" rx="7"/>
+ <text class="t" x="390" y="278">metabolic acidosis</text>
+
+ <rect class="bx" x="20" y="310" width="300" height="64" rx="7"/>
+ <text class="tb" x="34" y="332">5 Endocrine</text>
+ <text class="s" x="34" y="352">renin, erythropoietin, and the final</text>
+ <text class="s" x="34" y="368">hydroxylation that activates vitamin D</text>
+ <path class="ar" d="M326 342 L368 342"/>
+ <rect class="k" x="376" y="310" width="264" height="64" rx="7"/>
+ <text class="t" x="390" y="336">anaemia (no erythropoietin)</text>
+ <text class="t" x="390" y="358">bone disease (no active vitamin D)</text>
+
+ <text class="s" x="20" y="402">Renal blood flow is 20 to 25 percent of cardiac output, about 1.1 L/min, although the kidneys are only 0.5 percent of body weight.</text>
+ <text class="s" x="20" y="422">That is not an oxygen requirement: it is the cost of checking and adjusting the blood over and over.</text>
+
+ <text class="th" x="668" y="28">B  Urinary system</text>
+ <line x1="668" y1="38" x2="860" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+ <path class="cx" d="M690 58 q70 -14 70 60 q0 74 -70 60 z"/>
+ <path class="md" d="M712 90 q36 -8 36 28 q0 36 -36 28 z"/>
+ <text class="m" x="690" y="54">Cortex</text>
+ <text class="m" x="716" y="124">Medulla</text>
+ <path class="ar" d="M760 178 L760 212"/>
+ <text class="m" x="770" y="196">Ureter</text>
+ <rect class="bx" x="700" y="218" width="120" height="48" rx="18"/>
+ <text class="m" x="730" y="246">Bladder</text>
+ <path class="ar" d="M760 270 L760 300"/>
+ <text class="m" x="770" y="290">Urethra</text>
+ <text class="s" x="668" y="334">The kidney sets the composition</text>
+ <text class="s" x="668" y="352">of the urine; nothing downstream</text>
+ <text class="s" x="668" y="370">changes it, only stores and moves it.</text>
+</svg>

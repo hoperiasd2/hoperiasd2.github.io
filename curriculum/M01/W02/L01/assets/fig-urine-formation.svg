@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 430" width="880" height="430" role="img"
+ aria-label="The four processes of urine formation and the equation relating them, where each occurs along the nephron, the scale of 180 litres filtered against 1.5 litres excreted per day, and how the handling pattern differs between substances.">
+ <style>
+  .bx{fill:#fff;stroke:#c6d2dd;stroke-width:1.8}.k{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .t{font:12px sans-serif;fill:#16191d}.tb{font:700 13px sans-serif;fill:#003c71}
+  .th{font:700 15px sans-serif;fill:#003c71}.s{font:11px sans-serif;fill:#4a5159}
+  .m{font:11px monospace;fill:#16191d}
+  .tub{fill:none;stroke:#003c71;stroke-width:8}
+  .fi{stroke:#b3261e;stroke-width:3;fill:none;marker-end:url(#r)}
+  .re{stroke:#2e7d32;stroke-width:3;fill:none;marker-end:url(#g)}
+  .se{stroke:#8a6300;stroke-width:3;fill:none;marker-end:url(#y)}
+ </style>
+ <defs>
+  <marker id="r" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#b3261e"/></marker>
+  <marker id="g" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#2e7d32"/></marker>
+  <marker id="y" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#8a6300"/></marker>
+ </defs>
+
+ <rect class="k" x="20" y="44" width="840" height="36" rx="8"/>
+ <text class="tb" x="34" y="68">Excretion  =  Filtration  -  Reabsorption  +  Secretion</text>
+
+ <text class="th" x="20" y="116">A  Where each process happens</text>
+ <line x1="20" y1="126" x2="860" y2="126" stroke="#c6d2dd" stroke-width="1.5"/>
+
+ <circle cx="110" cy="190" r="22" fill="#f7dedc" stroke="#b3261e" stroke-width="2"/>
+ <text class="m" x="78" y="160">Glomerulus</text>
+ <path class="tub" d="M110 212 L110 240 L420 240 L420 300 L700 300"/>
+ <path class="fi" d="M110 216 L110 234"/>
+ <text class="tb" x="128" y="230">1 Filtration</text>
+ <text class="s" x="128" y="216">not selective: size decides</text>
+
+ <path class="re" d="M240 232 L240 196"/>
+ <text class="tb" x="196" y="188">2 Reabsorption</text>
+ <text class="s" x="188" y="172">selective, mostly active</text>
+ <path class="se" d="M330 196 L330 230"/>
+ <text class="tb" x="298" y="188">3 Secretion</text>
+ <text class="s" x="282" y="172">adds more to the lumen</text>
+
+ <path class="re" d="M520 292 L520 256"/>
+ <text class="s" x="490" y="248">fine adjustment</text>
+ <path class="fi" d="M706 300 L756 300"/>
+ <text class="tb" x="762" y="296">4 Excretion</text>
+ <text class="s" x="762" y="314">about 1.5 L per day</text>
+
+ <text class="th" x="20" y="350">B  Scale, and why the design works this way</text>
+ <line x1="20" y1="360" x2="430" y2="360" stroke="#c6d2dd" stroke-width="1.5"/>
+ <rect x="30" y="374" width="330" height="20" fill="#f7dedc" stroke="#b3261e" stroke-width="1.6"/>
+ <text class="m" x="36" y="389">Filtered: about 180 L per day</text>
+ <rect x="30" y="400" width="12" height="18" fill="#003c71"/>
+ <text class="m" x="50" y="414">Excreted: 1.5 L. Over 99 percent is reabsorbed.</text>
+
+ <rect class="bx" x="450" y="340" width="410" height="80" rx="8"/>
+ <text class="t" x="464" y="364">No need to know the target in advance: a new drug with no dedicated</text>
+ <text class="t" x="464" y="382">transporter is filtered out and simply not taken back.</text>
+ <text class="t" x="464" y="406">Wide control range: changing reabsorption by 1 percent changes output by 1.8 L.</text>
+</svg>

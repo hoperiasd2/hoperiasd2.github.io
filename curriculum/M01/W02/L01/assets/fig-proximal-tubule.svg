@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 440" width="880" height="440" role="img"
+ aria-label="Transporter arrangement in the proximal tubule epithelial cell: the gradient set by the sodium potassium ATPase, the positions of SGLT2, SGLT1, amino acid cotransporters and NHE3, isosmotic reabsorption that shrinks volume while holding osmolality, and the transport maximum and renal threshold for glucose.">
+ <style>
+  .bx{fill:#fff;stroke:#c6d2dd;stroke-width:1.8}.k{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .t{font:12px sans-serif;fill:#16191d}.tb{font:700 13px sans-serif;fill:#003c71}
+  .th{font:700 15px sans-serif;fill:#003c71}.s{font:11px sans-serif;fill:#4a5159}
+  .m{font:10px monospace;fill:#16191d}
+  .cell{fill:#e8eff6;stroke:#003c71;stroke-width:2.2}
+  .tr{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .pmp{fill:#f7dedc;stroke:#b3261e;stroke-width:2.2}
+  .ar{stroke:#003c71;stroke-width:2;fill:none;marker-end:url(#a)}
+  .ax{stroke:#16191d;stroke-width:1.6;fill:none}
+  .cf{stroke:#b3261e;stroke-width:2.6;fill:none}
+  .cr{stroke:#2e7d32;stroke-width:2.6;fill:none}
+  .ce{stroke:#8a6300;stroke-width:2.6;fill:none}
+ </style>
+ <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker></defs>
+
+ <text class="th" x="20" y="28">A  Transporters: everything is powered by the Na+ gradient</text>
+ <line x1="20" y1="38" x2="520" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+
+ <text class="m" x="20" y="62">LUMEN (brush border side)</text>
+ <rect class="cell" x="20" y="100" width="480" height="140" rx="8"/>
+ <text class="m" x="20" y="268">BLOOD (basolateral side)</text>
+
+ <rect class="tr" x="44" y="90" width="58" height="20" rx="5"/>
+ <text class="m" x="48" y="105">SGLT2</text>
+ <path class="ar" d="M73 74 L73 94"/>
+ <text class="m" x="30" y="70">Na+ + glucose (90%)</text>
+
+ <rect class="tr" x="140" y="90" width="54" height="20" rx="5"/>
+ <text class="m" x="144" y="105">SGLT1</text>
+ <path class="ar" d="M167 74 L167 94"/>
+ <text class="m" x="146" y="70">(the rest)</text>
+
+ <rect class="tr" x="236" y="90" width="78" height="20" rx="5"/>
+ <text class="m" x="240" y="105">AA carriers</text>
+ <path class="ar" d="M275 74 L275 94"/>
+ <text class="m" x="244" y="70">Na+ + amino acid</text>
+
+ <rect class="tr" x="356" y="90" width="58" height="20" rx="5"/>
+ <text class="m" x="362" y="105">NHE3</text>
+ <path class="ar" d="M372 94 L372 74"/>
+ <text class="m" x="340" y="70">H+ out, Na+ in</text>
+ <text class="s" x="430" y="94">this H+ drives</text>
+ <text class="s" x="430" y="110">HCO3- recovery</text>
+
+ <rect class="pmp" x="44" y="230" width="94" height="22" rx="5"/>
+ <text class="m" x="48" y="246">Na+/K+-ATPase</text>
+ <path class="ar" d="M90 256 L90 276"/>
+ <text class="s" x="40" y="296">pumps Na+ out using ATP,</text>
+ <text class="s" x="40" y="312">so cell Na+ stays low:</text>
+ <text class="s" x="40" y="328">this is the gradient every</text>
+ <text class="s" x="40" y="344">apical cotransporter uses</text>
+
+ <rect class="tr" x="300" y="230" width="60" height="22" rx="5"/>
+ <text class="m" x="306" y="246">GLUT2</text>
+ <path class="ar" d="M330 256 L330 276"/>
+ <text class="s" x="300" y="296">sugars leave by diffusion</text>
+
+ <rect class="k" x="20" y="360" width="480" height="68" rx="8"/>
+ <text class="tb" x="34" y="384">Isosmotic reabsorption</text>
+ <text class="t" x="34" y="406">Water follows the solutes through aquaporin-1, so 65 to 70 percent of the</text>
+ <text class="t" x="34" y="424">filtrate volume is reclaimed while the osmolality barely changes.</text>
+
+ <text class="th" x="550" y="28">B  Glucose: transport maximum</text>
+ <line x1="550" y1="38" x2="860" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+ <path class="ax" d="M590 260 L590 60 M590 260 L850 260"/>
+ <text class="s" x="660" y="286">Plasma glucose (mg/dL)</text>
+ <text class="s" x="552" y="180" transform="rotate(-90 562 180)">mg per minute</text>
+ <path class="cf" d="M596 254 L840 82"/>
+ <text class="m" x="770" y="78">filtered</text>
+ <path class="cr" d="M596 254 L700 182 L740 146 L790 134 L840 130"/>
+ <text class="m" x="748" y="128">reabsorbed (Tm 375)</text>
+ <path class="ce" d="M596 258 L700 256 L740 234 L790 184 L840 136"/>
+ <text class="m" x="796" y="168">excreted</text>
+ <line x1="716" y1="60" x2="716" y2="260" stroke="#c6d2dd" stroke-width="1.2" stroke-dasharray="4 4"/>
+ <text class="m" x="690" y="276">180 to 200</text>
+ <text class="s" x="590" y="312">Beyond the renal threshold the excess spills into the urine,</text>
+ <text class="s" x="590" y="330">raises tubular osmolality and drags water out: osmotic diuresis.</text>
+ <rect class="bx" x="550" y="348" width="310" height="80" rx="8"/>
+ <text class="tb" x="564" y="372">SGLT2 inhibitors</text>
+ <text class="t" x="564" y="394">Block this reabsorption to dump glucose. They also cut Na+ uptake,</text>
+ <text class="t" x="564" y="414">so volume falls and tubuloglomerular feedback lowers glomerular pressure.</text>
+</svg>
