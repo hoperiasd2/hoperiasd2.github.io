@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 430" width="880" height="430" role="img"
+ aria-label="The accuracy splicing demands and how it is achieved: the frameshift and premature stop codon that follow if an exon boundary slips by one base, the scale problem of finding two points among tens of thousands of bases, and the use of several weak signals in combination rather than one strong sequence, which leaves room for regulation.">
+ <style>
+  .bx{fill:#fff;stroke:#c6d2dd;stroke-width:1.8}.k{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .t{font:12px sans-serif;fill:#16191d}.tb{font:700 13px sans-serif;fill:#003c71}
+  .th{font:700 15px sans-serif;fill:#003c71}.s{font:11px sans-serif;fill:#4a5159}
+  .m{font:11px monospace;fill:#16191d}
+  .mb{font:700 13px monospace;fill:#16191d}
+  .ex{fill:#dce6f2;stroke:#1a4f8a;stroke-width:2}
+  .inr{fill:#f7f9fb;stroke:#c6d2dd;stroke-width:1.8}
+  .stop{fill:#b3261e}
+  .sig{fill:#f2b705;stroke:#8a6300;stroke-width:1.6}
+ </style>
+
+ <text class="th" x="20" y="28">A  One base off, and everything after it changes</text>
+ <line x1="20" y1="38" x2="860" y2="28" stroke="#c6d2dd" stroke-width="1.5"/>
+ <line x1="20" y1="38" x2="860" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+
+ <text class="tb" x="34" y="66">correct join</text>
+ <text class="mb" x="34" y="92">...A U G   G C A   U U C   A A G   C C U...</text>
+ <text class="s" x="34" y="110">Met - Ala - Phe - Lys - Pro</text>
+
+ <text class="tb" x="34" y="146">joined one base late</text>
+ <text class="mb" x="34" y="172">...A U G   G C A   U U C   C A A   G C C   U...</text>
+ <text class="s" x="34" y="190">Met - Ala - Phe - Gln - Ala - ... every codon after the join differs</text>
+ <circle class="stop" cx="520" cy="166" r="7"/>
+ <text class="m" x="534" y="170">a stop codon soon appears</text>
+ <text class="s" x="34" y="212">result: a short useless protein, or the transcript is cleared by nonsense-mediated decay</text>
+
+ <text class="th" x="20" y="252">B  The scale of the search</text>
+ <line x1="20" y1="262" x2="430" y2="262" stroke="#c6d2dd" stroke-width="1.5"/>
+ <rect class="ex" x="34" y="282" width="14" height="18"/>
+ <rect class="inr" x="48" y="282" width="150" height="18"/>
+ <rect class="ex" x="198" y="282" width="14" height="18"/>
+ <rect class="inr" x="212" y="282" width="180" height="18"/>
+ <rect class="ex" x="392" y="282" width="14" height="18"/>
+ <text class="s" x="34" y="320">About 8 introns per human gene, and most of the length is intron.</text>
+ <text class="tb" x="34" y="342">Two exact points must be found among tens of thousands of bases,</text>
+ <text class="tb" x="34" y="360">with no margin of even one base.</text>
+
+ <text class="th" x="460" y="252">C  How, and what it leaves open</text>
+ <line x1="460" y1="262" x2="860" y2="262" stroke="#c6d2dd" stroke-width="1.5"/>
+ <rect class="bx" x="460" y="276" width="400" height="66" rx="8"/>
+ <text class="t" x="474" y="298">Not one long specific sequence, but several SHORT weak</text>
+ <text class="t" x="474" y="318">signals plus the RNA and protein interactions that read them.</text>
+ <circle class="sig" cx="486" cy="332" r="5"/>
+ <circle class="sig" cx="506" cy="332" r="5"/>
+ <circle class="sig" cx="526" cy="332" r="5"/>
+ <text class="s" x="540" y="336">combined, they locate the site</text>
+
+ <rect class="k" x="460" y="352" width="400" height="66" rx="8"/>
+ <text class="tb" x="474" y="374">A weak signal is not a flaw — it is the room for control.</text>
+ <text class="t" x="474" y="396">If the signal were absolute, the cut would always be the same.</text>
+ <text class="t" x="474" y="412">Because it is weak, regulators can change the choice: alternative splicing.</text>
+</svg>

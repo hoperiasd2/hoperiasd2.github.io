@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 430" width="880" height="430" role="img"
+ aria-label="Splice site signals and assembly of the spliceosome: the GU-AG rule, the branch point adenine and the polypyrimidine tract, U1 recognising the five prime site and U2 the branch point by base pairing, arrival of U4, U5 and U6 with U6 replacing U1 in a rearrangement, and the fact that the catalytic centre is snRNA.">
+ <style>
+  .bx{fill:#fff;stroke:#c6d2dd;stroke-width:1.8}.k{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .t{font:12px sans-serif;fill:#16191d}.tb{font:700 13px sans-serif;fill:#003c71}
+  .th{font:700 15px sans-serif;fill:#003c71}.s{font:11px sans-serif;fill:#4a5159}
+  .m{font:11px monospace;fill:#16191d}
+  .ex{fill:#dce6f2;stroke:#1a4f8a;stroke-width:2}
+  .inr{fill:#f7f9fb;stroke:#c6d2dd;stroke-width:1.8}
+  .u1{fill:#e3f0e4;stroke:#2e7d32;stroke-width:2.2}
+  .u2{fill:#f7dedc;stroke:#b3261e;stroke-width:2.2}
+  .u6{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .br{fill:#f2b705;stroke:#8a6300;stroke-width:1.8}
+  .ar{stroke:#003c71;stroke-width:2.2;fill:none;marker-end:url(#a)}
+ </style>
+ <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker></defs>
+
+ <text class="th" x="20" y="28">A  The signals that mark an intron</text>
+ <line x1="20" y1="38" x2="860" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+ <rect class="ex" x="40" y="86" width="110" height="24"/>
+ <text class="m" x="78" y="103">exon 1</text>
+ <rect class="inr" x="150" y="86" width="500" height="24"/>
+ <rect class="ex" x="650" y="86" width="110" height="24"/>
+ <text class="m" x="688" y="103">exon 2</text>
+ <text class="m" x="154" y="78">GU</text>
+ <text class="m" x="628" y="78">AG</text>
+ <circle class="br" cx="520" cy="98" r="8"/>
+ <text class="m" x="494" y="134">branch point A</text>
+ <text class="m" x="560" y="134">polypyrimidine tract</text>
+ <path d="M548 112 h78" stroke="#8a6300" stroke-width="3" fill="none"/>
+ <text class="s" x="40" y="156">5' splice site (donor)</text>
+ <text class="s" x="580" y="156">3' splice site (acceptor)</text>
+ <text class="s" x="40" y="180">18 to 40 nt upstream of the 3' site lies the branch point adenine, the centre of the reaction.</text>
+ <rect class="k" x="20" y="196" width="840" height="34" rx="8"/>
+ <text class="tb" x="34" y="219">GU-AG alone cannot locate the site: two-base combinations occur by chance everywhere in the transcript.</text>
+
+ <text class="th" x="20" y="266">B  Assembly: snRNA recognises by BASE PAIRING</text>
+ <line x1="20" y1="276" x2="860" y2="276" stroke="#c6d2dd" stroke-width="1.5"/>
+ <rect class="u1" x="40" y="292" width="170" height="54" rx="8"/>
+ <text class="tb" x="54" y="314">1  U1 snRNP</text>
+ <text class="s" x="54" y="334">pairs with the 5' site GU region</text>
+ <path class="ar" d="M216 318 L248 318"/>
+ <rect class="u2" x="256" y="292" width="200" height="54" rx="8"/>
+ <text class="tb" x="270" y="314">2  U2 snRNP</text>
+ <text class="s" x="270" y="334">pairs at the branch point; the A is pushed out</text>
+ <path class="ar" d="M462 318 L494 318"/>
+ <rect class="u6" x="502" y="292" width="200" height="54" rx="8"/>
+ <text class="tb" x="516" y="314">3  U4, U5, U6 arrive</text>
+ <text class="s" x="516" y="334">U6 replaces U1 at the 5' site; U4 leaves</text>
+ <path class="ar" d="M708 318 L740 318"/>
+ <rect class="k" x="748" y="292" width="112" height="54" rx="8"/>
+ <text class="tb" x="760" y="314">4  catalytic</text>
+ <text class="s" x="760" y="334">state reached</text>
+
+ <rect class="bx" x="20" y="358" width="840" height="60" rx="8"/>
+ <text class="tb" x="34" y="380">The catalytic centre is U6 and U2 snRNA, not protein: the spliceosome is a ribozyme.</text>
+ <text class="t" x="34" y="402">The 2' hydroxyl that makes RNA catalysis possible is being used here — as it is in the ribosome's peptide bond. The central reactions of information processing rest on RNA catalysis.</text>
+</svg>

@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 420" width="880" height="420" role="img"
+ aria-label="Structure and three functions of the 5-prime cap: the steps from removing a phosphate to adding GMP and methylating nitrogen seven, how the unusual 5-prime to 5-prime triphosphate bond removes the site an exonuclease would attack, and the three functions of anti-decay, export tagging and translation initiation through eIF4E.">
+ <style>
+  .bx{fill:#fff;stroke:#c6d2dd;stroke-width:1.8}.k{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .t{font:12px sans-serif;fill:#16191d}.tb{font:700 13px sans-serif;fill:#003c71}
+  .th{font:700 15px sans-serif;fill:#003c71}.s{font:11px sans-serif;fill:#4a5159}
+  .m{font:11px monospace;fill:#16191d}
+  .rna{stroke:#b3261e;stroke-width:3;fill:none}
+  .g{fill:#e3f0e4;stroke:#2e7d32;stroke-width:2.2}
+  .me{fill:#f2b705;stroke:#8a6300;stroke-width:1.6}
+  .ar{stroke:#003c71;stroke-width:2;fill:none;marker-end:url(#a)}
+  .ex{fill:#f7dedc;stroke:#b3261e;stroke-width:2.2}
+  .no{stroke:#b3261e;stroke-width:3;fill:none}
+  .eif{fill:#dce6f2;stroke:#1a4f8a;stroke-width:2.2}
+ </style>
+ <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker></defs>
+
+ <text class="th" x="20" y="28">A  Three steps, added when the RNA is only 25 to 30 nt long</text>
+ <line x1="20" y1="38" x2="860" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+ <text class="m" x="40" y="72">5'-ppp-N...   first nucleotide carries a triphosphate</text>
+ <path class="ar" d="M40 80 L40 98"/>
+ <text class="m" x="40" y="114">1  one phosphate removed  to  5'-pp-N...</text>
+ <path class="ar" d="M40 122 L40 140"/>
+ <text class="m" x="40" y="156">2  guanylyltransferase adds GMP</text>
+ <path class="ar" d="M40 164 L40 182"/>
+ <text class="m" x="40" y="198">3  methyl on N7 of that guanine  to  7-methylguanosine (cap 0)</text>
+ <text class="s" x="40" y="218">methyl on the 2' ribose of the next one or two nucleotides gives cap 1 and cap 2</text>
+
+ <text class="th" x="460" y="68">B  The bond runs backwards</text>
+ <line x1="460" y1="78" x2="860" y2="78" stroke="#c6d2dd" stroke-width="1.5"/>
+ <circle class="g" cx="500" cy="118" r="20"/>
+ <text class="m" x="492" y="122">G</text>
+ <circle class="me" cx="500" cy="92" r="7"/>
+ <text class="m" x="512" y="90">N7-methyl</text>
+ <text class="m" x="474" y="152">5'</text>
+ <path class="rna" d="M520 128 h40"/>
+ <text class="m" x="528" y="148">ppp</text>
+ <text class="m" x="566" y="132">5'</text>
+ <path class="rna" d="M580 128 h200"/>
+ <text class="m" x="640" y="150">normal 5'-to-3' chain</text>
+ <text class="tb" x="460" y="182">a 5'-to-5' triphosphate bond: no free 5' end is left</text>
+ <rect class="ex" x="470" y="196" width="130" height="24" rx="5"/>
+ <text class="m" x="478" y="213">5'-3' exonuclease</text>
+ <path class="no" d="M608 208 L650 208"/>
+ <path class="no" d="M620 196 L638 220"/>
+ <text class="s" x="660" y="212">nothing to grip</text>
+
+ <text class="th" x="20" y="262">C  Three functions</text>
+ <line x1="20" y1="272" x2="860" y2="272" stroke="#c6d2dd" stroke-width="1.5"/>
+ <rect class="bx" x="20" y="286" width="270" height="86" rx="8"/>
+ <text class="tb" x="34" y="308">1  blocks decay</text>
+ <text class="t" x="34" y="330">no free 5' end for the</text>
+ <text class="t" x="34" y="348">exonuclease to start on</text>
+ <rect class="bx" x="302" y="286" width="270" height="86" rx="8"/>
+ <text class="tb" x="316" y="308">2  tags for export</text>
+ <text class="t" x="316" y="330">the cap-binding complex binds</text>
+ <text class="t" x="316" y="348">it, and the export machinery reads that</text>
+ <rect class="k" x="584" y="286" width="276" height="86" rx="8"/>
+ <text class="tb" x="598" y="308">3  starts translation</text>
+ <rect class="eif" x="598" y="318" width="60" height="22" rx="5"/>
+ <text class="m" x="606" y="334">eIF4E</text>
+ <text class="t" x="668" y="334">binds the cap, and the</text>
+ <text class="t" x="598" y="358">small ribosomal subunit loads from there</text>
+ <text class="s" x="20" y="396">Bacteria have no cap: the ribosome reads an internal Shine-Dalgarno sequence, which is why one bacterial mRNA can yield several proteins.</text>
+</svg>

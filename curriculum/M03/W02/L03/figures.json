@@ -1,4 +1,125 @@
 {
   "lesson_id": "M03-W02-L03",
-  "figures": []
+  "figures": [
+    {
+      "figure_id": "fig-processing-overview",
+      "lesson_id": "M03-W02-L03",
+      "html_anchor": "#fig-processing-overview",
+      "caption": "진핵 전사체가 거치는 세 가공과 그 필요성. Exon과 intron의 길이 비율, 가공 완료가 핵 밖 수송의 판정 기준이 되는 관문 구조, 그리고 cap과 poly(A) 꼬리의 기능 목록이 겹치면서 전사체의 양 끝을 함께 보호하는 배치를 보인다.",
+      "asset_path": "assets/fig-processing-overview.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-cap",
+      "lesson_id": "M03-W02-L03",
+      "html_anchor": "#fig-cap",
+      "caption": "5′ cap의 구조와 세 가지 기능. 삼인산 제거에서 GMP 부가와 7번 질소 methyl화에 이르는 단계, 일반 결합과 다른 5′-5′ 삼인산 결합이 exonuclease의 공격 자리를 없애는 구조, 그리고 분해 방지·수송 표시·eIF4E를 통한 번역 개시의 세 기능을 함께 보인다.",
+      "asset_path": "assets/fig-cap.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-splicing-accuracy",
+      "lesson_id": "M03-W02-L03",
+      "html_anchor": "#fig-splicing-accuracy",
+      "caption": "Splicing이 요구하는 정확도와 그 달성 방식. Exon 경계가 한 염기 밀릴 때 생기는 frameshift와 종결 codon의 출현, 수만 염기 가운데 두 지점을 찾는 규모의 문제, 그리고 하나의 강한 서열이 아니라 여러 약한 신호의 조합으로 위치를 정하는 구조와 그것이 남기는 조절의 여지를 함께 보인다.",
+      "asset_path": "assets/fig-splicing-accuracy.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-spliceosome",
+      "lesson_id": "M03-W02-L03",
+      "html_anchor": "#fig-spliceosome",
+      "caption": "Splice 부위의 신호와 spliceosome의 조립. GU-AG 규칙과 분기점 adenine, polypyrimidine 구간의 위치, U1이 5′ 부위를 U2가 분기점을 염기쌍으로 인식하는 과정, U4·U5·U6의 합류와 U6가 U1을 대체하는 재배열, 그리고 촉매 중심이 snRNA라는 점을 함께 보인다.",
+      "asset_path": "assets/fig-spliceosome.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-splicing-reaction",
+      "lesson_id": "M03-W02-L03",
+      "html_anchor": "#fig-splicing-reaction",
+      "caption": "Splicing의 두 단계 ester 교환. 분기점 adenine의 2′ hydroxyl기가 5′ splice 부위를 공격해 exon 1을 유리하고 lariat을 만드는 1단계, 유리된 exon 1의 3′ hydroxyl기가 3′ splice 부위를 공격해 두 exon을 잇고 lariat을 내보내는 2단계, 결합 총수가 변하지 않아 ATP가 필요하지 않다는 점, 그리고 U5가 두 exon 말단을 붙잡는 역할을 함께 보인다.",
+      "asset_path": "assets/fig-splicing-reaction.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-alternative-splicing",
+      "lesson_id": "M03-W02-L03",
+      "html_anchor": "#fig-alternative-splicing",
+      "caption": "대체 splicing의 다섯 가지 양식과 선택의 결정. Exon 건너뛰기·대체 5′ 부위·대체 3′ 부위·상호 배타적 exon·intron 유지의 배치, SR 단백질과 hnRNP의 반대 방향 작용과 그 균형이 세포 종류에 따라 다르다는 점, 그리고 하나의 유전자에서 조직별 isoform이 만들어지는 사례를 함께 보인다.",
+      "asset_path": "assets/fig-alternative-splicing.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-polyadenylation",
+      "lesson_id": "M03-W02-L03",
+      "html_anchor": "#fig-polyadenylation",
+      "caption": "3′ 말단 가공과 양 말단의 협력. AAUAAA와 하류 GU 구간이 절단 지점을 끼워 정하는 방식, CPSF·CstF의 인식과 절단, 주형 없이 A를 붙이는 poly(A) polymerase, PABP가 cap의 eIF4 복합체와 상호작용해 만드는 closed loop 구조, 그리고 꼬리 길이의 조절이 안정성과 번역에 미치는 영향을 함께 보인다.",
+      "asset_path": "assets/fig-polyadenylation.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-cotranscriptional",
+      "lesson_id": "M03-W02-L03",
+      "html_anchor": "#fig-cotranscriptional",
+      "caption": "가공과 전사의 동시성. RNA가 25~30 염기일 때 붙는 cap, 전사 중에 이미 진행되는 splicing, polymerase가 전사 중일 때 일어나는 3′ 절단, Pol II의 C 말단 꼬리 인산화 양상이 단계별로 가공 인자를 모으는 플랫폼 구조, 그리고 전사 속도가 splice 부위 선택을 바꾸는 관계를 함께 보인다.",
+      "asset_path": "assets/fig-cotranscriptional.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-splicing-disease",
+      "lesson_id": "M03-W02-L03",
+      "html_anchor": "#fig-splicing-disease",
+      "caption": "Splice 부위 변이가 질환을 만드는 네 가지 방식. 기존 부위의 파괴에 의한 exon 건너뛰기와 intron 유지, cryptic 부위의 활성화, 조절 서열의 변화(침묵 변이가 질환을 일으킬 수 있는 경로), spliceosome 자체의 결함, 그리고 척수근육위축에서 SMN2 exon 7의 약한 신호가 만드는 상황을 함께 보인다.",
+      "asset_path": "assets/fig-splicing-disease.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-splicing-therapy",
+      "lesson_id": "M03-W02-L03",
+      "html_anchor": "#fig-splicing-therapy",
+      "caption": "가공을 표적으로 하는 치료의 세 전략. Exon 포함을 늘리는 방향과 건너뛰게 하는 방향의 차이, 정상 산물을 늘리는 것과 덜 나쁜 산물로 바꾸는 것의 구분, spliceosome 억제와 종결 codon readthrough의 작용 지점, 그리고 유전자를 고치지 않고 처리 방식을 바꾸는 전략이 성립하는 조건을 함께 보인다.",
+      "asset_path": "assets/fig-splicing-therapy.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    }
+  ]
 }

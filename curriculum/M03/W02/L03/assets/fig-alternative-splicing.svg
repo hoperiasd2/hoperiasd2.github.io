@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 440" width="880" height="440" role="img"
+ aria-label="Five modes of alternative splicing and how the choice is made: the arrangement of exon skipping, alternative five prime site, alternative three prime site, mutually exclusive exons and intron retention; the opposing actions of SR proteins and hnRNP and the fact that their balance differs by cell type; and examples of tissue-specific isoforms from one gene.">
+ <style>
+  .bx{fill:#fff;stroke:#c6d2dd;stroke-width:1.8}.k{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .t{font:12px sans-serif;fill:#16191d}.tb{font:700 13px sans-serif;fill:#003c71}
+  .th{font:700 15px sans-serif;fill:#003c71}.s{font:11px sans-serif;fill:#4a5159}
+  .m{font:10px monospace;fill:#16191d}
+  .ex{fill:#dce6f2;stroke:#1a4f8a;stroke-width:1.8}
+  .alt{fill:#fff5d6;stroke:#f2b705;stroke-width:1.8}
+  .inr{stroke:#c6d2dd;stroke-width:2;fill:none}
+  .jn{stroke:#003c71;stroke-width:1.6;fill:none}
+  .sr{fill:#e3f0e4;stroke:#2e7d32;stroke-width:2.2}
+  .hn{fill:#f7dedc;stroke:#b3261e;stroke-width:2.2}
+ </style>
+
+ <text class="th" x="20" y="28">A  Five modes</text>
+ <line x1="20" y1="38" x2="520" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+
+ <text class="m" x="30" y="62">1  exon skipping (most common)</text>
+ <rect class="ex" x="30" y="68" width="50" height="16"/>
+ <rect class="alt" x="120" y="68" width="40" height="16"/>
+ <rect class="ex" x="200" y="68" width="50" height="16"/>
+ <path class="inr" d="M80 76 h40 M160 76 h40"/>
+ <path class="jn" d="M80 68 q60 -18 120 0"/>
+
+ <text class="m" x="30" y="114">2  alternative 5' splice site</text>
+ <rect class="ex" x="30" y="120" width="50" height="16"/>
+ <rect class="alt" x="80" y="120" width="26" height="16"/>
+ <rect class="ex" x="200" y="120" width="50" height="16"/>
+ <path class="inr" d="M106 128 h94"/>
+ <path class="jn" d="M80 120 q60 -16 120 0"/>
+
+ <text class="m" x="30" y="166">3  alternative 3' splice site</text>
+ <rect class="ex" x="30" y="172" width="50" height="16"/>
+ <rect class="alt" x="174" y="172" width="26" height="16"/>
+ <rect class="ex" x="200" y="172" width="50" height="16"/>
+ <path class="inr" d="M80 180 h94"/>
+ <path class="jn" d="M80 172 q60 -16 120 0"/>
+
+ <text class="m" x="30" y="218">4  mutually exclusive exons</text>
+ <rect class="ex" x="30" y="224" width="44" height="16"/>
+ <rect class="alt" x="104" y="224" width="34" height="16"/>
+ <rect class="alt" x="162" y="224" width="34" height="16"/>
+ <rect class="ex" x="226" y="224" width="44" height="16"/>
+ <path class="jn" d="M74 224 q30 -16 30 0"/>
+ <path class="jn" d="M138 240 q40 18 88 0"/>
+
+ <text class="m" x="30" y="270">5  intron retention</text>
+ <rect class="ex" x="30" y="276" width="50" height="16"/>
+ <rect class="alt" x="80" y="276" width="110" height="16" opacity="0.5"/>
+ <rect class="ex" x="190" y="276" width="50" height="16"/>
+ <text class="m" x="252" y="289">intron kept</text>
+
+ <text class="s" x="30" y="316">Add alternative promoters and alternative poly(A) sites and the combinations multiply further.</text>
+ <text class="tb" x="30" y="340">Over 90 percent of human genes are alternatively spliced: this is what bridges 20,000 genes and far more proteins.</text>
+
+ <text class="th" x="550" y="28">B  What decides the choice</text>
+ <line x1="550" y1="38" x2="860" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+ <rect class="sr" x="560" y="54" width="290" height="56" rx="8"/>
+ <text class="tb" x="574" y="76">SR proteins</text>
+ <text class="t" x="574" y="98">bind enhancer sequences, PROMOTE inclusion</text>
+ <rect class="hn" x="560" y="120" width="290" height="56" rx="8"/>
+ <text class="tb" x="574" y="142">hnRNP family</text>
+ <text class="t" x="574" y="164">bind silencer sequences, BLOCK inclusion</text>
+ <rect class="k" x="560" y="186" width="290" height="60" rx="8"/>
+ <text class="tb" x="574" y="208">Their quantitative BALANCE decides,</text>
+ <text class="t" x="574" y="230">and the balance differs by cell type and stage.</text>
+
+ <text class="th" x="550" y="286">C  Examples</text>
+ <line x1="550" y1="296" x2="860" y2="296" stroke="#c6d2dd" stroke-width="1.5"/>
+ <text class="t" x="560" y="318">tropomyosin: skeletal, cardiac, smooth, non-muscle forms</text>
+ <text class="t" x="560" y="340">fibronectin: plasma form vs extracellular matrix form</text>
+ <text class="t" x="560" y="362">immunoglobulin heavy chain: membrane vs secreted</text>
+ <text class="t" x="560" y="384">Dscam (fly): tens of thousands of forms for neuronal self-recognition</text>
+ <text class="tb" x="550" y="416">Give up "one gene, one protein": name the ISOFORM. Gene-level counts hide isoform switching.</text>
+</svg>

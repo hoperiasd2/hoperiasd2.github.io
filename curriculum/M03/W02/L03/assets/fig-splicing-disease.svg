@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 440" width="880" height="440" role="img"
+ aria-label="Four ways splice site variants cause disease: destruction of an existing site leading to exon skipping or intron retention, activation of a cryptic site, change in a regulatory sequence by which a silent variant can cause disease, a defect in the spliceosome itself, and the situation in spinal muscular atrophy where the weak signal of SMN2 exon seven leaves most protein non-functional.">
+ <style>
+  .bx{fill:#fff;stroke:#c6d2dd;stroke-width:1.8}.k{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .t{font:12px sans-serif;fill:#16191d}.tb{font:700 13px sans-serif;fill:#003c71}
+  .th{font:700 15px sans-serif;fill:#003c71}.s{font:11px sans-serif;fill:#4a5159}
+  .m{font:10px monospace;fill:#16191d}
+  .ex{fill:#dce6f2;stroke:#1a4f8a;stroke-width:1.8}
+  .inr{stroke:#c6d2dd;stroke-width:2;fill:none}
+  .bad{fill:#f7dedc;stroke:#b3261e;stroke-width:2}
+  .jn{stroke:#003c71;stroke-width:1.6;fill:none}
+  .x{stroke:#b3261e;stroke-width:3;fill:none}
+  .sr{fill:#e3f0e4;stroke:#2e7d32;stroke-width:2}
+  .hn{fill:#f7dedc;stroke:#b3261e;stroke-width:2}
+ </style>
+
+ <text class="th" x="20" y="28">Four ways, and the share they take</text>
+ <line x1="20" y1="38" x2="860" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+ <text class="s" x="20" y="58">Estimates vary, but 15 to 50 percent of disease-causing variants affect splicing.</text>
+
+ <text class="tb" x="30" y="86">1  an existing site is destroyed</text>
+ <rect class="ex" x="30" y="94" width="50" height="16"/>
+ <rect class="ex" x="130" y="94" width="40" height="16"/>
+ <rect class="ex" x="220" y="94" width="50" height="16"/>
+ <path class="inr" d="M80 102 h50 M170 102 h50"/>
+ <path class="x" d="M122 88 L138 116"/>
+ <path class="jn" d="M80 94 q60 -18 140 0"/>
+ <text class="m" x="286" y="100">exon skipped, or</text>
+ <text class="m" x="286" y="116">the intron is retained</text>
+
+ <text class="tb" x="30" y="156">2  a cryptic site is created</text>
+ <rect class="ex" x="30" y="164" width="90" height="16"/>
+ <rect class="bad" x="90" y="164" width="30" height="16"/>
+ <rect class="ex" x="220" y="164" width="50" height="16"/>
+ <path class="inr" d="M120 172 h100"/>
+ <path class="jn" d="M90 164 q65 -16 130 0"/>
+ <text class="m" x="286" y="170">part of the exon is lost, or</text>
+ <text class="m" x="286" y="186">part of the intron stays</text>
+
+ <text class="tb" x="30" y="226">3  a regulatory sequence changes</text>
+ <rect class="ex" x="30" y="234" width="50" height="16"/>
+ <rect class="ex" x="130" y="234" width="60" height="16"/>
+ <rect class="ex" x="240" y="234" width="50" height="16"/>
+ <path class="inr" d="M80 242 h50 M190 242 h50"/>
+ <rect class="sr" x="138" y="212" width="20" height="16"/>
+ <rect class="hn" x="162" y="212" width="20" height="16"/>
+ <path class="x" d="M150 206 L170 230"/>
+ <text class="m" x="306" y="240">the site itself is normal;</text>
+ <text class="m" x="306" y="256">the FREQUENCY of choice shifts</text>
+ <rect class="k" x="30" y="266" width="400" height="34" rx="7"/>
+ <text class="tb" x="44" y="288">A silent variant can therefore cause disease. Do not call it harmless.</text>
+
+ <text class="tb" x="470" y="86">4  the spliceosome itself is defective</text>
+ <rect class="bad" x="470" y="96" width="120" height="26" rx="5"/>
+ <text class="m" x="480" y="113">SF3B1 variant</text>
+ <text class="t" x="470" y="146">not one gene but a WIDESPREAD change in splicing</text>
+ <text class="s" x="470" y="166">a subtype of myelodysplastic syndrome</text>
+
+ <rect class="bx" x="470" y="184" width="390" height="116" rx="8"/>
+ <text class="tb" x="484" y="206">Examples by mechanism</text>
+ <text class="t" x="484" y="228">HBB (beta-thalassaemia)</text>
+ <text class="m" x="700" y="228">ways 1, 2 and 3</text>
+ <text class="t" x="484" y="248">DMD (Duchenne)</text>
+ <text class="m" x="700" y="248">way 1, frameshift</text>
+ <text class="t" x="484" y="268">ELP1 (familial dysautonomia)</text>
+ <text class="m" x="700" y="268">way 1, tissue-specific</text>
+ <text class="t" x="484" y="288">SF3B1 (MDS subtype)</text>
+ <text class="m" x="700" y="288">way 4</text>
+
+ <text class="th" x="20" y="332">Spinal muscular atrophy: the gene is there, the processing choice is not</text>
+ <line x1="20" y1="342" x2="860" y2="342" stroke="#c6d2dd" stroke-width="1.5"/>
+ <text class="m" x="30" y="366">SMN1  deleted or broken</text>
+ <path class="x" d="M190 356 L210 378"/>
+ <text class="m" x="30" y="396">SMN2  present, nearly identical</text>
+ <rect class="ex" x="250" y="384" width="40" height="16"/>
+ <rect class="bad" x="300" y="384" width="36" height="16"/>
+ <text class="m" x="298" y="378">ex 7</text>
+ <rect class="ex" x="346" y="384" width="40" height="16"/>
+ <path class="jn" d="M290 384 q28 -16 56 0"/>
+ <text class="m" x="400" y="390">weak signal: exon 7 is often skipped,</text>
+ <text class="m" x="400" y="406">so most of the protein made is non-functional</text>
+ <text class="tb" x="30" y="428">The gene exists and is transcribed — the shortfall comes from the processing CHOICE. That is what made a treatment possible.</text>
+</svg>

@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 440" width="880" height="440" role="img"
+ aria-label="The two transesterification steps of splicing: step one in which the branch point adenine 2-prime hydroxyl attacks the five prime splice site, freeing exon one and forming the lariat; step two in which the freed exon one 3-prime hydroxyl attacks the three prime site, joining the exons and releasing the lariat; the fact that the number of bonds is unchanged so no ATP is needed; and the role of U5 in holding the two exon ends.">
+ <style>
+  .bx{fill:#fff;stroke:#c6d2dd;stroke-width:1.8}.k{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .t{font:12px sans-serif;fill:#16191d}.tb{font:700 13px sans-serif;fill:#003c71}
+  .th{font:700 15px sans-serif;fill:#003c71}.s{font:11px sans-serif;fill:#4a5159}
+  .m{font:11px monospace;fill:#16191d}
+  .ex{fill:#dce6f2;stroke:#1a4f8a;stroke-width:2.2}
+  .inr{fill:none;stroke:#8a6300;stroke-width:2.8}
+  .br{fill:#f2b705;stroke:#8a6300;stroke-width:1.8}
+  .atk{stroke:#b3261e;stroke-width:2.4;fill:none;marker-end:url(#r)}
+  .ar{stroke:#003c71;stroke-width:2.2;fill:none;marker-end:url(#a)}
+  .u5{fill:#e3f0e4;stroke:#2e7d32;stroke-width:2.2}
+ </style>
+ <defs>
+  <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker>
+  <marker id="r" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#b3261e"/></marker>
+ </defs>
+
+ <text class="th" x="20" y="28">Step 1  the branch point attacks the 5' splice site</text>
+ <line x1="20" y1="38" x2="860" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+ <rect class="ex" x="40" y="96" width="110" height="24"/>
+ <text class="m" x="78" y="113">exon 1</text>
+ <path class="inr" d="M150 108 h390"/>
+ <rect class="ex" x="540" y="96" width="110" height="24"/>
+ <text class="m" x="578" y="113">exon 2</text>
+ <circle class="br" cx="400" cy="108" r="9"/>
+ <text class="m" x="372" y="140">A  2'-OH</text>
+ <path class="atk" d="M392 98 q-100 -42 -238 2"/>
+ <text class="m" x="230" y="70">attacks the phosphate at the 5' site</text>
+
+ <path class="ar" d="M440 158 L440 184"/>
+
+ <rect class="ex" x="40" y="206" width="110" height="24"/>
+ <text class="m" x="60" y="223">exon 1 free</text>
+ <text class="m" x="156" y="222">3'-OH</text>
+ <path class="inr" d="M300 218 q-60 -36 0 -36 q60 0 0 36 h240"/>
+ <circle class="br" cx="300" cy="218" r="9"/>
+ <rect class="ex" x="540" y="206" width="110" height="24"/>
+ <text class="m" x="330" y="174">LARIAT: the A 2' position now bonded to the intron 5' end</text>
+ <rect class="u5" x="156" y="240" width="130" height="24" rx="6"/>
+ <text class="m" x="166" y="257">U5 holds both ends</text>
+ <text class="s" x="40" y="282">If exon 1 drifted away there would be no way to find it again.</text>
+
+ <text class="th" x="20" y="316">Step 2  the freed exon 1 attacks the 3' splice site</text>
+ <line x1="20" y1="326" x2="860" y2="326" stroke="#c6d2dd" stroke-width="1.5"/>
+ <rect class="ex" x="40" y="366" width="110" height="24"/>
+ <rect class="ex" x="150" y="366" width="110" height="24"/>
+ <text class="m" x="98" y="383">exon 1</text>
+ <text class="m" x="190" y="383">exon 2</text>
+ <text class="m" x="40" y="356">joined mRNA</text>
+ <path class="inr" d="M400 384 q-50 -34 0 -34 q50 0 0 34 h60"/>
+ <circle class="br" cx="400" cy="384" r="8"/>
+ <text class="m" x="330" y="412">lariat intron released, unwound and degraded;</text>
+ <text class="m" x="330" y="428">snRNPs are recycled</text>
+
+ <rect class="k" x="560" y="340" width="300" height="86" rx="8"/>
+ <text class="tb" x="574" y="362">Why no ATP for the reaction</text>
+ <text class="t" x="574" y="384">Both steps are TRANSESTERIFICATIONS: as many</text>
+ <text class="t" x="574" y="402">phosphodiester bonds are made as are broken.</text>
+ <text class="s" x="574" y="420">ATP is spent on assembly and rearrangement instead.</text>
+</svg>

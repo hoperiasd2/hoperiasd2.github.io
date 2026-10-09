@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 430" width="880" height="430" role="img"
+ aria-label="Processing happening at the same time as transcription: the cap added when the RNA is 25 to 30 nucleotides, splicing already under way during transcription, the three prime cut made while the polymerase is still transcribing, the phosphorylation pattern of the Pol II C-terminal tail acting as a platform that gathers processing factors stage by stage, and how transcription speed changes splice site choice.">
+ <style>
+  .bx{fill:#fff;stroke:#c6d2dd;stroke-width:1.8}.k{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .t{font:12px sans-serif;fill:#16191d}.tb{font:700 13px sans-serif;fill:#003c71}
+  .th{font:700 15px sans-serif;fill:#003c71}.s{font:11px sans-serif;fill:#4a5159}
+  .m{font:10px monospace;fill:#16191d}
+  .dna{fill:none;stroke:#16191d;stroke-width:2.4}
+  .pol{fill:#dce6f2;stroke:#1a4f8a;stroke-width:2.4}
+  .ctd{stroke:#1a4f8a;stroke-width:2.4;fill:none}
+  .rna{stroke:#b3261e;stroke-width:3;fill:none}
+  .capf{fill:#e3f0e4;stroke:#2e7d32;stroke-width:2.2}
+  .spl{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .pa{fill:#f7dedc;stroke:#b3261e;stroke-width:2.2}
+  .ar{stroke:#003c71;stroke-width:2;fill:none;marker-end:url(#a)}
+ </style>
+ <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker></defs>
+
+ <text class="th" x="20" y="28">A  The C-terminal tail is the platform that links the two</text>
+ <line x1="20" y1="38" x2="860" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+
+ <path class="dna" d="M40 150 h780"/>
+ <path class="pol" d="M100 108 h70 v34 h-70 z"/>
+ <text class="m" x="112" y="130">Pol II</text>
+ <path class="ctd" d="M170 124 q20 -14 40 0 q20 14 40 0"/>
+ <circle cx="190" cy="118" r="5" fill="#2e7d32"/>
+ <rect class="capf" x="194" y="76" width="96" height="24" rx="5"/>
+ <text class="m" x="200" y="93">capping enzyme</text>
+ <path class="rna" d="M106 102 h26"/>
+ <text class="m" x="60" y="178">1  cap at 25 to 30 nt</text>
+
+ <path class="pol" d="M380 108 h70 v34 h-70 z"/>
+ <path class="ctd" d="M450 124 q20 -14 40 0 q20 14 40 0"/>
+ <circle cx="470" cy="118" r="5" fill="#f2b705"/>
+ <rect class="spl" x="474" y="76" width="96" height="24" rx="5"/>
+ <text class="m" x="484" y="93">splicing factors</text>
+ <path class="rna" d="M386 102 q-40 -24 -80 -6"/>
+ <text class="m" x="330" y="178">2  splicing already under way</text>
+
+ <path class="pol" d="M660 108 h70 v34 h-70 z"/>
+ <path class="ctd" d="M730 124 q20 -14 40 0"/>
+ <circle cx="750" cy="118" r="5" fill="#b3261e"/>
+ <rect class="pa" x="700" y="76" width="130" height="24" rx="5"/>
+ <text class="m" x="708" y="93">3' processing factors</text>
+ <path class="rna" d="M666 102 q-60 -22 -110 -4"/>
+ <text class="m" x="620" y="178">3  3' cut while still transcribing</text>
+
+ <rect class="k" x="20" y="196" width="840" height="36" rx="8"/>
+ <text class="tb" x="34" y="220">The phosphorylation pattern of the tail changes with the stage, and factors bind a particular pattern — so the STAGE sets WHEN each factor is recruited.</text>
+
+ <text class="th" x="20" y="266">B  Consequence 1: speed changes the splice choice</text>
+ <line x1="20" y1="276" x2="430" y2="276" stroke="#c6d2dd" stroke-width="1.5"/>
+ <rect class="bx" x="20" y="290" width="410" height="90" rx="8"/>
+ <text class="t" x="34" y="312">SLOW passage: a weak splice site has time to be recognised,</text>
+ <text class="t" x="34" y="330">so that exon is more likely included.</text>
+ <text class="t" x="34" y="354">FAST passage: only strong sites are used, so the exon may be skipped.</text>
+ <text class="tb" x="20" y="402">So anything that changes chromatin state or elongation speed can change splicing: transcription and processing are not separate layers.</text>
+
+ <text class="th" x="460" y="266">C  Consequence 2: order follows position</text>
+ <line x1="460" y1="276" x2="860" y2="276" stroke="#c6d2dd" stroke-width="1.5"/>
+ <rect class="bx" x="460" y="290" width="400" height="90" rx="8"/>
+ <text class="t" x="474" y="312">Processing opportunity arrives in the order of transcription,</text>
+ <text class="t" x="474" y="330">so upstream introns tend to be removed first.</text>
+ <text class="s" x="474" y="356">Not a strict order: some introns are removed later.</text>
+</svg>

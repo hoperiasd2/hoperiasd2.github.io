@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 430" width="880" height="430" role="img"
+ aria-label="Three strategies that target processing: changing splice site choice in the direction of including an exon or of skipping one, the difference between increasing the normal product and switching to a less bad one, spliceosome inhibition and stop codon readthrough, and the condition under which changing processing rather than the gene can work.">
+ <style>
+  .bx{fill:#fff;stroke:#c6d2dd;stroke-width:1.8}.k{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .t{font:12px sans-serif;fill:#16191d}.tb{font:700 13px sans-serif;fill:#003c71}
+  .th{font:700 15px sans-serif;fill:#003c71}.s{font:11px sans-serif;fill:#4a5159}
+  .m{font:10px monospace;fill:#16191d}
+  .ex{fill:#dce6f2;stroke:#1a4f8a;stroke-width:1.8}
+  .bad{fill:#f7dedc;stroke:#b3261e;stroke-width:2}
+  .inr{stroke:#c6d2dd;stroke-width:2;fill:none}
+  .aso{stroke:#b3261e;stroke-width:3.4;fill:none}
+  .hn{fill:#f7dedc;stroke:#b3261e;stroke-width:2}
+  .jn{stroke:#003c71;stroke-width:1.6;fill:none}
+  .no{stroke:#b3261e;stroke-width:3;fill:none}
+ </style>
+
+ <text class="th" x="20" y="28">Strategy 1  change the splice site choice — the most successful category</text>
+ <line x1="20" y1="38" x2="860" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+
+ <text class="tb" x="30" y="66">direction A: INCLUDE the exon</text>
+ <rect class="ex" x="30" y="78" width="50" height="18"/>
+ <rect class="ex" x="130" y="78" width="46" height="18"/>
+ <text class="m" x="134" y="72">ex 7</text>
+ <rect class="ex" x="226" y="78" width="50" height="18"/>
+ <path class="inr" d="M80 87 h50 M176 87 h50"/>
+ <rect class="hn" x="186" y="104" width="40" height="18"/>
+ <text class="m" x="190" y="118">hnRNP</text>
+ <path class="aso" d="M182 100 h48"/>
+ <path class="no" d="M200 96 L216 120"/>
+ <text class="t" x="300" y="86">an ASO covers the silencer, hnRNP cannot bind,</text>
+ <text class="t" x="300" y="104">and exon 7 is included more often</text>
+ <text class="s" x="300" y="124">nusinersen, risdiplam in spinal muscular atrophy</text>
+ <text class="tb" x="30" y="146">goal: MORE of the normal product</text>
+
+ <text class="tb" x="30" y="186">direction B: SKIP the exon</text>
+ <rect class="ex" x="30" y="198" width="50" height="18"/>
+ <rect class="bad" x="130" y="198" width="46" height="18"/>
+ <text class="m" x="132" y="192">mutated</text>
+ <rect class="ex" x="226" y="198" width="50" height="18"/>
+ <path class="inr" d="M80 207 h50 M176 207 h50"/>
+ <path class="aso" d="M126 192 h54"/>
+ <path class="jn" d="M80 198 q70 -22 146 0"/>
+ <text class="t" x="300" y="206">the exon with the mutation is skipped; the product is</text>
+ <text class="t" x="300" y="224">shorter but in frame, so SOME function remains</text>
+ <text class="s" x="300" y="244">eteplirsen class in Duchenne muscular dystrophy</text>
+ <text class="tb" x="30" y="246">goal: a LESS BAD product</text>
+
+ <rect class="k" x="20" y="262" width="840" height="36" rx="8"/>
+ <text class="tb" x="34" y="285">Direction B works only if removing that exon still leaves the rest functional. It lowers severity; it does not restore.</text>
+
+ <text class="th" x="20" y="326">Strategies 2 and 3</text>
+ <line x1="20" y1="336" x2="430" y2="336" stroke="#c6d2dd" stroke-width="1.5"/>
+ <rect class="bx" x="20" y="350" width="410" height="34" rx="6"/>
+ <text class="t" x="34" y="372">2  inhibit the spliceosome — selectivity is the challenge; SF3B1-mutant cells may be more vulnerable</text>
+ <rect class="bx" x="20" y="390" width="410" height="34" rx="6"/>
+ <text class="t" x="34" y="412">3  stop codon readthrough — strictly translation, same logic; tried in CF and Duchenne</text>
+
+ <rect class="k" x="450" y="326" width="410" height="98" rx="8"/>
+ <text class="tb" x="464" y="350">The shared principle</text>
+ <text class="t" x="464" y="372">Fixing the gene is not the only route. Leave the gene alone and</text>
+ <text class="t" x="464" y="390">change HOW IT IS PROCESSED to get a better product.</text>
+ <text class="tb" x="464" y="414">The condition: usable material must still be present in the cell.</text>
+</svg>

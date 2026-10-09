@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 430" width="880" height="430" role="img"
+ aria-label="Three prime end processing and the cooperation of the two ends: how AAUAAA and the downstream GU-rich region bracket the cleavage point, recognition by CPSF and CstF and the cut, poly-A polymerase adding adenosines without a template, the closed loop formed when PABP interacts with the eIF4 complex at the cap, and how tail length control affects stability and translation.">
+ <style>
+  .bx{fill:#fff;stroke:#c6d2dd;stroke-width:1.8}.k{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .t{font:12px sans-serif;fill:#16191d}.tb{font:700 13px sans-serif;fill:#003c71}
+  .th{font:700 15px sans-serif;fill:#003c71}.s{font:11px sans-serif;fill:#4a5159}
+  .m{font:11px monospace;fill:#16191d}
+  .rna{stroke:#b3261e;stroke-width:3;fill:none}
+  .sig{fill:#fff5d6;stroke:#f2b705;stroke-width:2}
+  .gu{fill:#e3f0e4;stroke:#2e7d32;stroke-width:2}
+  .cp{fill:#dce6f2;stroke:#1a4f8a;stroke-width:2.2}
+  .cut{stroke:#b3261e;stroke-width:3;fill:none}
+  .ar{stroke:#003c71;stroke-width:2.2;fill:none;marker-end:url(#a)}
+  .pab{fill:#f7dedc;stroke:#b3261e;stroke-width:2.2}
+  .eif{fill:#dce6f2;stroke:#1a4f8a;stroke-width:2.2}
+ </style>
+ <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker></defs>
+
+ <text class="th" x="20" y="28">A  Two signals bracket the cut</text>
+ <line x1="20" y1="38" x2="860" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+ <path class="rna" d="M40 110 h700"/>
+ <rect class="sig" x="300" y="100" width="90" height="20"/>
+ <text class="m" x="308" y="115">AAUAAA</text>
+ <rect class="gu" x="470" y="100" width="90" height="20"/>
+ <text class="m" x="486" y="115">GU-rich</text>
+ <path class="cut" d="M430 90 L430 130"/>
+ <text class="m" x="398" y="150">cut here</text>
+ <rect class="cp" x="300" y="68" width="60" height="24" rx="5"/>
+ <text class="m" x="310" y="85">CPSF</text>
+ <rect class="cp" x="476" y="68" width="60" height="24" rx="5"/>
+ <text class="m" x="486" y="85">CstF</text>
+ <text class="s" x="40" y="176">One signal upstream, one downstream: the point is fixed by being bracketed between them.</text>
+
+ <path class="ar" d="M430 190 L430 212"/>
+ <text class="th" x="20" y="238">B  Cut, then add A without a template</text>
+ <line x1="20" y1="248" x2="430" y2="248" stroke="#c6d2dd" stroke-width="1.5"/>
+ <path class="rna" d="M40 282 h260"/>
+ <rect class="cp" x="306" y="268" width="104" height="26" rx="5"/>
+ <text class="m" x="312" y="286">poly(A) pol</text>
+ <path class="rna" d="M300 282 h6" stroke-dasharray="3 3"/>
+ <text class="m" x="40" y="310">future mRNA</text>
+ <text class="m" x="200" y="310">AAAA... about 200 to 250 nt</text>
+ <text class="tb" x="40" y="336">The tail is NOT encoded in the genome.</text>
+ <text class="s" x="40" y="356">So oligo(dT) can select mRNA, or prime reverse transcription.</text>
+
+ <text class="th" x="460" y="238">C  The two ends meet: closed loop</text>
+ <line x1="460" y1="248" x2="860" y2="248" stroke="#c6d2dd" stroke-width="1.5"/>
+ <path class="rna" d="M520 300 q130 -46 260 0 q-20 50 -130 50 q-110 0 -130 -50"/>
+ <circle cx="520" cy="300" r="8" fill="#2e7d32"/>
+ <text class="m" x="486" y="294">cap</text>
+ <rect class="eif" x="536" y="266" width="56" height="22" rx="5"/>
+ <text class="m" x="544" y="282">eIF4</text>
+ <rect class="pab" x="710" y="266" width="56" height="22" rx="5"/>
+ <text class="m" x="718" y="282">PABP</text>
+ <text class="m" x="786" y="302">poly(A)</text>
+ <text class="s" x="460" y="372">Raises initiation efficiency, and lets a ribosome that finished return to the 5' end.</text>
+ <text class="tb" x="460" y="394">Because both ends meet, both are checked at once: damage at either end stops the loop forming.</text>
+ <text class="s" x="460" y="414">Tail length is itself regulated: shortening destabilises and lowers translation (miRNA uses this); oocytes lengthen stored mRNA tails to switch translation on.</text>
+</svg>
