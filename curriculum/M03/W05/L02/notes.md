@@ -1,3 +1,10 @@
-@img https://upload.wikimedia.org/wikipedia/commons/8/8c/MiRNA.svg | miRNA 성숙 경로의 개요
-Xist 쪽은 X 염색체 불활성화 수업과 중복되지 않게 조절 기전만 다룬다.
-@use 그림요구
+<!-- 반영 완료 기록. 새 입력은 inbox/INBOX.md 에 적는다.
+
+2026-10-09 반영
+- @img miRNA 성숙 경로 외부 참고 자료 → 본문 2절에 유지, 같은 절에
+  영문 라벨 자체 작도(fig-mirna-biogenesis)를 함께 둠
+- "Xist는 X 불활성화 수업과 중복되지 않게 조절 기전만" → 7절을 Xist의
+  cis 작용과 단백질 결합 순서로 한정. 현상과 유지 기전은 M03-W05-L01에 둠
+- @use 그림요구 → 그림 10종 전부 영문 라벨, 기전을 단계로 분할, 비교는
+  같은 축에 배치
+-->

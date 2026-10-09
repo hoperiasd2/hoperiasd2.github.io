@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 440" width="880" height="440" role="img"
+ aria-label="The mechanism of RNA interference and a comparison of siRNA with miRNA: long double-stranded RNA cut by Dicer and loaded onto Argonaute to cleave a fully complementary mRNA, a four-criterion comparison of origin, precursor, complementarity, outcome and target number, and why pre-cut siRNA is introduced directly in mammals to avoid innate immune activation.">
+ <style>
+  .bx{fill:#fff;stroke:#c6d2dd;stroke-width:1.8}.k{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .t{font:12px sans-serif;fill:#16191d}.tb{font:700 13px sans-serif;fill:#003c71}
+  .th{font:700 15px sans-serif;fill:#003c71}.s{font:11px sans-serif;fill:#4a5159}
+  .m{font:10px monospace;fill:#16191d}
+  .rna{stroke:#b3261e;stroke-width:3;fill:none}
+  .en{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .ago{fill:#e3f0e4;stroke:#2e7d32;stroke-width:2.2}
+  .mrna{fill:#dce6f2;stroke:#1a4f8a;stroke-width:2}
+  .ar{stroke:#003c71;stroke-width:2.2;fill:none;marker-end:url(#a)}
+  .cut{stroke:#b3261e;stroke-width:3;fill:none}
+ </style>
+ <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker></defs>
+
+ <text class="th" x="20" y="28">A  The pathway</text>
+ <line x1="20" y1="38" x2="860" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+ <path class="rna" d="M40 78 h150 M40 94 h150"/>
+ <text class="m" x="40" y="118">long double-stranded RNA</text>
+ <path class="ar" d="M200 86 L240 86"/>
+ <rect class="en" x="248" y="74" width="62" height="24" rx="5"/>
+ <text class="m" x="260" y="91">Dicer</text>
+ <path class="ar" d="M320 86 L360 86"/>
+ <path class="rna" d="M370 78 h60 M370 94 h60"/>
+ <text class="m" x="366" y="118">21 to 23 nt</text>
+ <path class="ar" d="M444 86 L484 86"/>
+ <rect class="ago" x="492" y="70" width="120" height="32" rx="6"/>
+ <text class="m" x="504" y="90">Argonaute</text>
+ <path class="rna" d="M506 98 h94" stroke-width="3.4"/>
+ <path class="ar" d="M622 86 L662 86"/>
+ <rect class="mrna" x="672" y="76" width="180" height="20"/>
+ <text class="m" x="700" y="91">fully complementary mRNA</text>
+ <path class="cut" d="M760 68 L760 104"/>
+ <text class="m" x="700" y="124">cleaved, then rapidly degraded</text>
+
+ <text class="th" x="20" y="166">B  siRNA versus miRNA</text>
+ <line x1="20" y1="176" x2="860" y2="176" stroke="#c6d2dd" stroke-width="1.5"/>
+ <rect class="bx" x="20" y="190" width="840" height="136" rx="8"/>
+ <text class="tb" x="34" y="212">Criterion</text>
+ <text class="tb" x="300" y="212">miRNA</text>
+ <text class="tb" x="590" y="212">siRNA</text>
+ <line x1="34" y1="220" x2="846" y2="220" stroke="#c6d2dd" stroke-width="1.2"/>
+ <text class="t" x="34" y="240">origin</text>
+ <text class="t" x="300" y="240">own genome, an encoded gene</text>
+ <text class="t" x="590" y="240">foreign dsRNA, virus, transposon, or introduced</text>
+ <text class="t" x="34" y="260">precursor</text>
+ <text class="t" x="300" y="260">its own hairpin (pri-, pre-miRNA)</text>
+ <text class="t" x="590" y="260">long double-stranded RNA</text>
+ <text class="t" x="34" y="280">Drosha step</text>
+ <text class="t" x="300" y="280">required</text>
+ <text class="tb" x="590" y="280">none: already double-stranded</text>
+ <text class="t" x="34" y="300">complementarity</text>
+ <text class="tb" x="300" y="300">partial, seed decides</text>
+ <text class="tb" x="590" y="300">complete</text>
+ <text class="t" x="34" y="320">outcome / targets</text>
+ <text class="t" x="300" y="320">repression and decay / hundreds</text>
+ <text class="t" x="590" y="320">cleavage / usually one</text>
+ <rect class="k" x="20" y="334" width="400" height="34" rx="8"/>
+ <text class="tb" x="34" y="356">The decisive difference is the degree of complementarity.</text>
+
+ <text class="th" x="20" y="396">C  What RNAi is FOR, and the mammalian wrinkle</text>
+ <line x1="20" y1="404" x2="860" y2="404" stroke="#c6d2dd" stroke-width="1.5"/>
+ <text class="t" x="20" y="426">It responds to foreign dsRNA, which viruses and transposons make — a defence against foreign or mobile nucleic acid, clearest in plants and invertebrates.</text>
+ <text class="t" x="440" y="356">In mammals long dsRNA strongly triggers interferon and other</text>
+ <text class="t" x="440" y="374">innate pathways, so experiments and drugs introduce ALREADY CUT</text>
+ <text class="t" x="440" y="392">siRNA: this skips Dicer and avoids the innate response.</text>
+</svg>

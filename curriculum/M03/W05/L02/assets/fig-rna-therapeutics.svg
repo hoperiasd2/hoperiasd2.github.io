@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 450" width="880" height="450" role="img"
+ aria-label="Classification of therapies that use RNA as a target or as a means: cleavage by siRNA, the three outcomes of an antisense oligonucleotide of induced degradation, altered splicing and blocked translation, the points of action of nusinersen and exon skipping, and the three delivery strategies of chemical modification, targeting ligand and lipid nanoparticle.">
+ <style>
+  .bx{fill:#fff;stroke:#c6d2dd;stroke-width:1.8}.k{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .t{font:12px sans-serif;fill:#16191d}.tb{font:700 13px sans-serif;fill:#003c71}
+  .th{font:700 15px sans-serif;fill:#003c71}.s{font:11px sans-serif;fill:#4a5159}
+  .m{font:10px monospace;fill:#16191d}
+  .mrna{fill:#dce6f2;stroke:#1a4f8a;stroke-width:2}
+  .ex{fill:#fff5d6;stroke:#f2b705;stroke-width:2}
+  .aso{stroke:#b3261e;stroke-width:3.4;fill:none}
+  .cut{stroke:#b3261e;stroke-width:3;fill:none}
+  .rib{fill:#dce6f2;stroke:#1a4f8a;stroke-width:2}
+  .ar{stroke:#003c71;stroke-width:2;fill:none;marker-end:url(#a)}
+  .no{stroke:#b3261e;stroke-width:3;fill:none}
+ </style>
+ <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker></defs>
+
+ <text class="th" x="20" y="28">A  RNA as the TARGET</text>
+ <line x1="20" y1="38" x2="860" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+
+ <text class="tb" x="30" y="62">siRNA: complete complementarity, cleavage</text>
+ <rect class="mrna" x="40" y="74" width="300" height="20"/>
+ <path class="aso" d="M150 68 h80"/>
+ <path class="cut" d="M190 66 L190 102"/>
+ <text class="s" x="356" y="90">patisiran, vutrisiran (TTR) · inclisiran (PCSK9)</text>
+
+ <text class="tb" x="30" y="132">ASO: one of three outcomes, set by the design</text>
+ <rect class="mrna" x="40" y="146" width="240" height="20"/>
+ <path class="aso" d="M120 140 h70"/>
+ <text class="m" x="296" y="160">1  RNase H recruited  to  degradation</text>
+
+ <rect class="ex" x="40" y="186" width="60" height="20"/>
+ <text class="m" x="52" y="201">ex 6</text>
+ <rect class="mrna" x="100" y="186" width="60" height="20"/>
+ <rect class="ex" x="160" y="186" width="60" height="20"/>
+ <text class="m" x="172" y="201">ex 7</text>
+ <rect class="mrna" x="220" y="186" width="60" height="20"/>
+ <path class="aso" d="M110 180 h44"/>
+ <text class="m" x="296" y="200">2  splicing changed</text>
+ <text class="s" x="296" y="216">nusinersen: SMN2 splicing shifted so more functional protein is made</text>
+ <text class="s" x="296" y="232">eteplirsen class: skip the exon carrying the mutation, keep partial function</text>
+
+ <rect class="mrna" x="40" y="256" width="240" height="20"/>
+ <path class="aso" d="M60 250 h60"/>
+ <rect class="rib" x="150" y="244" width="40" height="22" rx="10"/>
+ <line class="no" x1="124" y1="255" x2="146" y2="255"/>
+ <text class="m" x="296" y="270">3  translation blocked</text>
+
+ <rect class="bx" x="30" y="290" width="400" height="56" rx="8"/>
+ <text class="tb" x="44" y="312">miRNA-directed approaches</text>
+ <text class="t" x="44" y="334">antagomir to inhibit, mimic to replace. Hundreds of targets per miRNA makes off-target effect the main constraint.</text>
+
+ <rect class="k" x="450" y="290" width="410" height="56" rx="8"/>
+ <text class="tb" x="464" y="312">B  RNA as the MEANS</text>
+ <text class="t" x="464" y="334">mRNA vaccines and mRNA therapeutics. Here the RNA is CODING, so it sits outside this lesson's category.</text>
+
+ <text class="th" x="20" y="382">C  The shared constraint is DELIVERY</text>
+ <line x1="20" y1="392" x2="860" y2="392" stroke="#c6d2dd" stroke-width="1.5"/>
+ <text class="t" x="20" y="414">Nucleic acids are large, negatively charged and degraded by serum nucleases. Three solutions:</text>
+ <text class="t" x="20" y="436">1 chemical modification of sugar and backbone (2'-O-methyl, phosphorothioate)  ·  2 a targeting ligand (GalNAc for the hepatocyte asialoglycoprotein receptor)  ·  3 lipid nanoparticle packaging</text>
+</svg>

@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 440" width="880" height="440" role="img"
+ aria-label="Comparison of the stage at which transcriptional and post-transcriptional control act: which mechanisms act on the production versus the use of mRNA, what transcript-level measurement can and cannot tell, and the feedback circuit formed by a transcription factor and a miRNA.">
+ <style>
+  .bx{fill:#fff;stroke:#c6d2dd;stroke-width:1.8}.k{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .t{font:12px sans-serif;fill:#16191d}.tb{font:700 13px sans-serif;fill:#003c71}
+  .th{font:700 15px sans-serif;fill:#003c71}.s{font:11px sans-serif;fill:#4a5159}
+  .m{font:10px monospace;fill:#16191d}
+  .prod{fill:#dce6f2;stroke:#1a4f8a;stroke-width:2}
+  .use{fill:#f7dedc;stroke:#b3261e;stroke-width:2}
+  .ar{stroke:#003c71;stroke-width:2.2;fill:none;marker-end:url(#a)}
+  .inh{stroke:#b3261e;stroke-width:2.4;fill:none;marker-end:url(#bar)}
+  .meas{stroke:#2e7d32;stroke-width:3;fill:none}
+ </style>
+ <defs>
+  <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker>
+  <marker id="bar" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M6 0 L6 10" stroke="#b3261e" stroke-width="3"/></marker>
+ </defs>
+
+ <text class="th" x="20" y="28">A  Production of mRNA versus use of mRNA</text>
+ <line x1="20" y1="38" x2="860" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+
+ <rect class="prod" x="30" y="60" width="400" height="24" rx="6"/>
+ <text class="tb" x="140" y="78">acts on PRODUCTION</text>
+ <rect class="use" x="450" y="60" width="400" height="24" rx="6"/>
+ <text class="tb" x="560" y="78">acts on USE and MAINTENANCE</text>
+
+ <rect class="bx" x="20" y="96" width="840" height="152" rx="8"/>
+ <text class="tb" x="34" y="118">Mechanism</text>
+ <text class="tb" x="330" y="118">Stage</text>
+ <text class="tb" x="560" y="118">What it changes</text>
+ <line x1="34" y1="126" x2="846" y2="126" stroke="#c6d2dd" stroke-width="1.2"/>
+ <text class="t" x="34" y="146">transcription factor, enhancer</text>
+ <text class="t" x="330" y="146">initiation</text>
+ <text class="t" x="560" y="146">how much mRNA is made</text>
+ <text class="t" x="34" y="166">chromatin marks, DNA methylation</text>
+ <text class="t" x="330" y="166">initiation (accessibility)</text>
+ <text class="t" x="560" y="166">whether mRNA CAN be made</text>
+ <text class="t" x="34" y="186">Pol II pausing</text>
+ <text class="t" x="330" y="186">elongation</text>
+ <text class="t" x="560" y="186">whether a start is completed</text>
+ <text class="t" x="34" y="206">alternative splicing</text>
+ <text class="t" x="330" y="206">RNA processing</text>
+ <text class="t" x="560" y="206">which form of mRNA results</text>
+ <text class="tb" x="34" y="226">miRNA, siRNA</text>
+ <text class="tb" x="330" y="226">post-transcriptional</text>
+ <text class="tb" x="560" y="226">whether the mRNA is used and kept</text>
+ <text class="t" x="34" y="244">piRNA / lncRNA</text>
+ <text class="t" x="330" y="244">both levels / case by case</text>
+ <text class="t" x="560" y="244">depends on the mechanism</text>
+
+ <text class="th" x="20" y="286">B  What a transcript measurement covers</text>
+ <line x1="20" y1="296" x2="430" y2="296" stroke="#c6d2dd" stroke-width="1.5"/>
+ <path class="meas" d="M40 324 h210"/>
+ <text class="m" x="40" y="318">RNA sequencing reaches this far</text>
+ <path class="meas" d="M250 324 h160" stroke-dasharray="5 5" opacity="0.4"/>
+ <text class="m" x="256" y="318">beyond: unknown</text>
+ <text class="t" x="40" y="348">mRNA up does not mean it is translated.</text>
+ <text class="t" x="40" y="368">mRNA unchanged but protein down points to</text>
+ <text class="t" x="40" y="388">miRNA control or protein degradation.</text>
+ <text class="s" x="40" y="412">This is the interpretive limit of transcriptome data in the practicum.</text>
+
+ <text class="th" x="460" y="286">C  The two levels regulate each other</text>
+ <line x1="460" y1="296" x2="860" y2="296" stroke="#c6d2dd" stroke-width="1.5"/>
+ <rect class="prod" x="480" y="314" width="110" height="28" rx="5"/>
+ <text class="m" x="494" y="332">factor TF</text>
+ <path class="ar" d="M596 328 L646 328"/>
+ <rect class="use" x="654" y="314" width="110" height="28" rx="5"/>
+ <text class="m" x="674" y="332">miRNA</text>
+ <path class="inh" d="M700 348 q-20 32 -140 10"/>
+ <text class="s" x="560" y="380">TF transcribes the miRNA; the miRNA lowers the TF: negative feedback.</text>
+ <text class="s" x="480" y="400">miRNA genes are transcribed by Pol II, so they are themselves under transcriptional</text>
+ <text class="s" x="480" y="418">control. The two levels form a circuit, not separate systems.</text>
+</svg>

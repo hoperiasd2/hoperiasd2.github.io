@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 450" width="880" height="450" role="img"
+ aria-label="Classification of non-coding RNA and two misconceptions: the definition as RNA not used as a protein template, why that must be distinguished from having no function, the classes arranged by size and function, and the division between the basic machinery group and the expression-regulating group.">
+ <style>
+  .bx{fill:#fff;stroke:#c6d2dd;stroke-width:1.8}.k{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .t{font:12px sans-serif;fill:#16191d}.tb{font:700 13px sans-serif;fill:#003c71}
+  .th{font:700 15px sans-serif;fill:#003c71}.s{font:11px sans-serif;fill:#4a5159}
+  .m{font:10px monospace;fill:#16191d}
+  .mach{fill:#dce6f2;stroke:#1a4f8a;stroke-width:2}
+  .reg{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .no{stroke:#b3261e;stroke-width:3;fill:none}
+ </style>
+
+ <rect class="k" x="20" y="44" width="840" height="36" rx="8"/>
+ <text class="tb" x="34" y="68">Definition: RNA that is NOT used as a template to make protein. That is the whole definition — not a class by function, size or mechanism.</text>
+
+ <text class="th" x="20" y="116">Two misconceptions, in opposite directions</text>
+ <line x1="20" y1="126" x2="860" y2="126" stroke="#c6d2dd" stroke-width="1.5"/>
+ <rect class="bx" x="20" y="140" width="410" height="90" rx="8"/>
+ <text class="tb" x="34" y="164">1  "non-coding" is not "non-functional"</text>
+ <text class="t" x="34" y="188">rRNA and tRNA are non-coding, and without them there is</text>
+ <text class="t" x="34" y="208">no translation at all. Not being translated means the work</text>
+ <text class="t" x="34" y="224">is done without going through a protein: the RNA is the product.</text>
+
+ <rect class="bx" x="450" y="140" width="410" height="90" rx="8"/>
+ <text class="tb" x="464" y="164">2  being transcribed is not having a function</text>
+ <text class="t" x="464" y="188">Much of the genome is transcribed to some degree. Some of</text>
+ <text class="t" x="464" y="208">that is a by-product of transcription itself. Function has</text>
+ <text class="t" x="464" y="224">to be shown separately — see section 10.</text>
+
+ <text class="th" x="20" y="268">The classes</text>
+ <line x1="20" y1="278" x2="860" y2="278" stroke="#c6d2dd" stroke-width="1.5"/>
+
+ <rect class="mach" x="20" y="292" width="410" height="134" rx="8"/>
+ <text class="tb" x="34" y="314">Part of the basic machinery (structural)</text>
+ <text class="m" x="34" y="338">rRNA      1.5 to 5 kb     ribosome structure and catalysis</text>
+ <text class="m" x="34" y="358">tRNA      76 to 90 nt     amino acid delivery, codon reading</text>
+ <text class="m" x="34" y="378">snRNA     100 to 300 nt   spliceosome components (U1, U2, U4-6)</text>
+ <text class="m" x="34" y="398">snoRNA    60 to 300 nt    guides rRNA modification</text>
+ <text class="s" x="34" y="418">rRNA alone is about 80 percent of cellular RNA.</text>
+
+ <rect class="reg" x="450" y="292" width="410" height="134" rx="8"/>
+ <text class="tb" x="464" y="314">Regulators of expression — this lesson</text>
+ <text class="m" x="464" y="338">miRNA     about 22 nt     represses translation, promotes decay</text>
+ <text class="m" x="464" y="358">siRNA     21 to 23 nt     cleaves a fully complementary mRNA</text>
+ <text class="m" x="464" y="378">piRNA     24 to 31 nt     silences transposons, germ cells</text>
+ <text class="m" x="464" y="398">lncRNA    over 200 nt     very diverse</text>
+ <text class="s" x="464" y="418">lncRNA is defined by SIZE: a leftover category, not a function.</text>
+</svg>

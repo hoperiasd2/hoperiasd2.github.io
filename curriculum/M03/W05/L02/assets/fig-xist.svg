@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 430" width="880" height="430" role="img"
+ aria-label="How Xist works as a regulatory molecule: selective transcription only from the X to be inactivated, cis action spreading along the chromosome it was transcribed from, proteins bound at particular segments producing histone deacetylation then Polycomb marks then DNA methylation, and the advantage that an RNA starts from the place where it was made.">
+ <style>
+  .bx{fill:#fff;stroke:#c6d2dd;stroke-width:1.8}.k{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .t{font:12px sans-serif;fill:#16191d}.tb{font:700 13px sans-serif;fill:#003c71}
+  .th{font:700 15px sans-serif;fill:#003c71}.s{font:11px sans-serif;fill:#4a5159}
+  .m{font:10px monospace;fill:#16191d}
+  .xa{fill:#fff;stroke:#1a4f8a;stroke-width:2.4}
+  .xi{fill:#f7dedc;stroke:#b3261e;stroke-width:2.4}
+  .rna{stroke:#b3261e;stroke-width:3;fill:none}
+  .pr{fill:#e3f0e4;stroke:#2e7d32;stroke-width:2.2}
+  .ar{stroke:#003c71;stroke-width:2.2;fill:none;marker-end:url(#a)}
+  .no{stroke:#b3261e;stroke-width:3;fill:none}
+ </style>
+ <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker></defs>
+
+ <text class="th" x="20" y="28">A  Xist acts only on the chromosome that made it</text>
+ <line x1="20" y1="38" x2="520" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+
+ <rect class="xa" x="60" y="60" width="54" height="200" rx="10"/>
+ <text class="m" x="76" y="282">X (active)</text>
+ <text class="m" x="56" y="298">no Xist</text>
+ <rect class="xi" x="220" y="60" width="54" height="200" rx="10"/>
+ <text class="m" x="226" y="282">X (inactivated)</text>
+ <text class="m" x="230" y="298">Xist ON</text>
+ <path class="rna" d="M247 100 q26 16 0 32 q-26 16 0 32 q26 16 0 32 q-26 16 0 32"/>
+ <text class="m" x="288" y="150">about 17 kb RNA,</text>
+ <text class="m" x="288" y="166">spreads ALONG this</text>
+ <text class="m" x="288" y="182">chromosome only</text>
+ <path class="no" d="M160 160 L206 160"/>
+ <path class="no" d="M176 148 L190 172"/>
+ <text class="s" x="130" y="196">does not cross over</text>
+
+ <rect class="k" x="20" y="316" width="500" height="56" rx="8"/>
+ <text class="tb" x="34" y="340">Xist is RNA, yet its range of action is tied to the DNA it came from:</text>
+ <text class="tb" x="34" y="360">it is a CIS-acting molecule.</text>
+
+ <text class="th" x="550" y="28">B  The order of events</text>
+ <line x1="550" y1="38" x2="860" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+ <rect class="bx" x="550" y="54" width="310" height="30" rx="6"/>
+ <text class="t" x="562" y="74">1  Xist is transcribed and spreads</text>
+ <path class="ar" d="M700 86 L700 94"/>
+ <rect class="bx" x="550" y="98" width="310" height="46" rx="6"/>
+ <text class="t" x="562" y="118">2  proteins bind particular SEGMENTS</text>
+ <text class="s" x="562" y="136">scaffold and guide modes together</text>
+ <path class="ar" d="M700 146 L700 154"/>
+ <rect class="pr" x="550" y="158" width="310" height="66" rx="6"/>
+ <text class="t" x="562" y="178">3  at that region they produce, in order:</text>
+ <text class="m" x="562" y="198">histone deacetylation (HDAC)</text>
+ <text class="m" x="562" y="214">H3K27me3 (Polycomb), then DNA methylation</text>
+ <path class="ar" d="M700 226 L700 234"/>
+ <rect class="k" x="550" y="238" width="310" height="46" rx="6"/>
+ <text class="t" x="562" y="258">4  the marks overlap and stabilise repression,</text>
+ <text class="t" x="562" y="276">kept through division by the maintenance mechanisms</text>
+
+ <text class="th" x="550" y="320">C  Why RNA suits this job</text>
+ <line x1="550" y1="330" x2="860" y2="330" stroke="#c6d2dd" stroke-width="1.5"/>
+ <text class="t" x="550" y="352">An RNA has its place of transcription as a starting point.</text>
+ <text class="t" x="550" y="372">A protein must be translated and then find its target by</text>
+ <text class="t" x="550" y="392">sequence; an RNA can act where it was made. It carries</text>
+ <text class="t" x="550" y="412">positional information by default.</text>
+
+ <rect class="bx" x="20" y="384" width="500" height="40" rx="8"/>
+ <text class="tb" x="34" y="410">The central point: RNA can take part in chromatin control without ever being a template for protein.</text>
+</svg>

@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 440" width="880" height="440" role="img"
+ aria-label="Levels of evidence for the function of a non-coding RNA: from confirmed transcription through correlation, conservation, a deletion experiment, rescue by supplying the RNA from another location, to identification of the binding partner; the distinction between the locus being required and the RNA molecule being functional; and why a cis-acting RNA does not pass the rescue test.">
+ <style>
+  .bx{fill:#fff;stroke:#c6d2dd;stroke-width:1.8}.k{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .t{font:12px sans-serif;fill:#16191d}.tb{font:700 13px sans-serif;fill:#003c71}
+  .th{font:700 15px sans-serif;fill:#003c71}.s{font:11px sans-serif;fill:#4a5159}
+  .m{font:10px monospace;fill:#16191d}
+  .l1{fill:#f7f9fb;stroke:#c6d2dd;stroke-width:1.8}
+  .l2{fill:#eef3f8;stroke:#6b8ba8;stroke-width:1.8}
+  .l3{fill:#dce6f2;stroke:#1a4f8a;stroke-width:2}
+  .l4{fill:#e3f0e4;stroke:#2e7d32;stroke-width:2.2}
+  .dna{fill:none;stroke:#16191d;stroke-width:2.4}
+  .enh{fill:#e3f0e4;stroke:#2e7d32;stroke-width:2}
+  .lnc{fill:#f7dedc;stroke:#b3261e;stroke-width:2}
+  .ar{stroke:#003c71;stroke-width:2;fill:none;marker-end:url(#a)}
+ </style>
+ <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker></defs>
+
+ <text class="th" x="20" y="28">A  Six levels, from weakest to strongest</text>
+ <line x1="20" y1="38" x2="520" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+
+ <rect class="l1" x="30" y="54" width="480" height="30" rx="5"/>
+ <text class="m" x="42" y="74">1  it is transcribed</text>
+ <text class="s" x="300" y="74">transcription happens; function unknown</text>
+ <rect class="l1" x="30" y="90" width="480" height="30" rx="5"/>
+ <text class="m" x="42" y="110">2  expression correlates with a condition</text>
+ <text class="s" x="300" y="110">correlation; cause unknown</text>
+ <rect class="l2" x="30" y="126" width="480" height="30" rx="5"/>
+ <text class="m" x="42" y="146">3  the sequence is conserved</text>
+ <text class="s" x="300" y="146">possibly under selection</text>
+ <rect class="l3" x="30" y="162" width="480" height="30" rx="5"/>
+ <text class="m" x="42" y="182">4  deleting it changes the phenotype</text>
+ <text class="s" x="300" y="182">the LOCUS is required</text>
+ <rect class="l4" x="30" y="198" width="480" height="30" rx="5"/>
+ <text class="m" x="42" y="218">5  supplying the RNA elsewhere rescues it</text>
+ <text class="s" x="300" y="218">the RNA MOLECULE functions (trans)</text>
+ <rect class="l4" x="30" y="234" width="480" height="30" rx="5"/>
+ <text class="m" x="42" y="254">6  binding partner and segment identified</text>
+ <text class="s" x="300" y="254">the molecular mechanism is established</text>
+
+ <text class="th" x="20" y="300">B  Why levels 4 and 5 must be separated</text>
+ <line x1="20" y1="310" x2="520" y2="310" stroke="#c6d2dd" stroke-width="1.5"/>
+ <path class="dna" d="M30 356 h480"/>
+ <rect class="lnc" x="150" y="346" width="90" height="20"/>
+ <text class="m" x="164" y="361">lncRNA</text>
+ <rect class="enh" x="252" y="346" width="60" height="20"/>
+ <text class="m" x="258" y="361">enhancer</text>
+ <text class="s" x="30" y="390">Deleting the locus may have removed an enhancer as well, or the</text>
+ <text class="s" x="30" y="408">FUNCTION may have been the act of transcription (mode 4 in section 6).</text>
+ <text class="tb" x="30" y="430">Level 5 is what tells the two apart.</text>
+
+ <rect class="k" x="550" y="54" width="310" height="110" rx="8"/>
+ <text class="tb" x="564" y="78">The rescue test</text>
+ <text class="t" x="564" y="102">rescued  to  the RNA molecule works</text>
+ <text class="t" x="564" y="124">not rescued  to  the DNA at that place,</text>
+ <text class="t" x="564" y="142">or the act of transcribing it, works</text>
+
+ <rect class="bx" x="550" y="178" width="310" height="110" rx="8"/>
+ <text class="tb" x="564" y="202">A caution from section 7</text>
+ <text class="t" x="564" y="226">A cis-acting RNA such as Xist CANNOT</text>
+ <text class="t" x="564" y="246">pass the rescue test — supplied elsewhere</text>
+ <text class="t" x="564" y="266">it does not act. So use this ladder to tell</text>
+ <text class="t" x="564" y="284">WHAT functions, not as a pass/fail for function.</text>
+
+ <rect class="k" x="550" y="302" width="310" height="128" rx="8"/>
+ <text class="tb" x="564" y="326">The habit this unit asks for</text>
+ <text class="t" x="564" y="350">A mark measured is not a mark that caused.</text>
+ <text class="t" x="564" y="372">A factor bound is not a factor that changed</text>
+ <text class="t" x="564" y="390">transcription.</text>
+ <text class="tb" x="564" y="414">Do not convert correlation into mechanism,</text>
+ <text class="tb" x="564" y="430">or mechanism into cause, in one step.</text>
+</svg>

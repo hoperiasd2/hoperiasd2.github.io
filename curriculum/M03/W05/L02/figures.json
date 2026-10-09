@@ -1,4 +1,125 @@
 {
   "lesson_id": "M03-W05-L02",
-  "figures": []
+  "figures": [
+    {
+      "figure_id": "fig-ncrna-classes",
+      "lesson_id": "M03-W05-L02",
+      "html_anchor": "#fig-ncrna-classes",
+      "caption": "비암호화 RNA의 분류와 두 가지 오해. 단백질 주형이 되지 않는다는 정의, 기능 없음과 구분해야 하는 이유, 크기와 기능에 따른 부류별 정리, 그리고 기본 기계에 속하는 집단과 발현을 조절하는 집단의 구분을 함께 보인다.",
+      "asset_path": "assets/fig-ncrna-classes.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-mirna-biogenesis",
+      "lesson_id": "M03-W05-L02",
+      "html_anchor": "#fig-mirna-biogenesis",
+      "caption": "miRNA 생성 경로의 다섯 단계. 핵에서 Pol II가 만드는 pri-miRNA, Drosha·DGCR8이 머리핀 밑동을 자르는 1차 절단, exportin-5에 의한 수송, 세포질에서 Dicer가 고리를 자르는 2차 절단, 그리고 Argonaute에 유도 가닥이 실려 RISC를 이루는 적재를 함께 보인다.",
+      "asset_path": "assets/fig-mirna-biogenesis.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-mirna-target",
+      "lesson_id": "M03-W05-L02",
+      "html_anchor": "#fig-mirna-target",
+      "caption": "miRNA의 표적 인식과 작용. 5′ 2~8번 염기의 seed 서열과 3′ UTR의 결합 부위, 7염기 상보성 조건에서 나오는 다대다 관계, 상보성 정도에 따라 번역 억제와 분해 촉진이 갈리는 관계, 그리고 전사 조절과 전사 이후 조절의 작용 지점 차이를 함께 보인다.",
+      "asset_path": "assets/fig-mirna-target.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-sirna",
+      "lesson_id": "M03-W05-L02",
+      "html_anchor": "#fig-sirna",
+      "caption": "RNA 간섭의 기전과 siRNA·miRNA의 비교. 긴 이중나선 RNA가 Dicer에 의해 잘리고 Argonaute에 실려 완전 상보적인 mRNA를 절단하는 경로, 기원·전구체·상보성·결과·표적 수의 네 기준 비교, 그리고 포유류에서 선천 면역을 피하려고 잘린 siRNA를 직접 넣는 이유를 함께 보인다.",
+      "asset_path": "assets/fig-sirna.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-pirna",
+      "lesson_id": "M03-W05-L02",
+      "html_anchor": "#fig-pirna",
+      "caption": "piRNA의 생성과 전이인자 억제. Dicer를 쓰지 않는 성숙 경로와 ping-pong 증폭 고리, PIWI에 의한 전사체 절단, piRNA가 유도한 복합체가 해당 구역에 DNA methylation과 억제성 histone 표지를 배치하는 전사 수준 억제, 그리고 세 가지 짧은 RNA의 비교를 함께 보인다.",
+      "asset_path": "assets/fig-pirna.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-lncrna",
+      "lesson_id": "M03-W05-L02",
+      "html_anchor": "#fig-lncrna",
+      "caption": "lncRNA의 작용 방식 네 가지. 여러 단백질이 한 RNA의 서로 다른 구간에 결합하는 발판, 상보성으로 위치를 정해 조절 단백질을 그 자리에서 작용하게 하는 안내, 조절 분자를 붙잡아 본래 표적에서 떼어 놓는 유인, 그리고 RNA 산물이 아니라 전사 행위가 기능인 경우를 함께 보인다.",
+      "asset_path": "assets/fig-lncrna.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-xist",
+      "lesson_id": "M03-W05-L02",
+      "html_anchor": "#fig-xist",
+      "caption": "Xist가 조절 분자로서 작동하는 방식. 불활성화될 X에서만 전사되는 선택성, 자신이 전사된 염색체를 따라 퍼지는 cis 작용, 특정 구간에 결합한 단백질들이 histone 탈acetylation과 Polycomb 표지, DNA methylation을 차례로 만드는 경로, 그리고 RNA가 만들어진 자리를 출발점으로 가진다는 이점을 함께 보인다.",
+      "asset_path": "assets/fig-xist.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-regulation-stage",
+      "lesson_id": "M03-W05-L02",
+      "html_anchor": "#fig-regulation-stage",
+      "caption": "전사 조절과 전사 이후 조절의 작용 단계 비교. 각 기전이 mRNA의 생산과 이용 가운데 어디에 작용하는지, 전사체 양 측정으로 알 수 있는 범위와 알 수 없는 범위, 그리고 전사인자와 miRNA가 이루는 되먹임 회로를 함께 보인다.",
+      "asset_path": "assets/fig-regulation-stage.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-rna-therapeutics",
+      "lesson_id": "M03-W05-L02",
+      "html_anchor": "#fig-rna-therapeutics",
+      "caption": "RNA를 표적 또는 수단으로 쓰는 치료의 분류. siRNA의 절단, ASO의 세 가지 결과(분해 유도·splicing 변경·번역 차단), nusinersen과 exon 건너뛰기의 작용 지점, 그리고 화학적 수식·표적 리간드·지질 나노입자의 세 전달 전략을 함께 보인다.",
+      "asset_path": "assets/fig-rna-therapeutics.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-evidence-levels",
+      "lesson_id": "M03-W05-L02",
+      "html_anchor": "#fig-evidence-levels",
+      "caption": "비암호화 RNA의 기능을 확인하는 증거 수준. 전사 확인에서 상관, 보존, 제거 실험, 다른 위치에서의 공급에 의한 회복, 결합 상대 확인까지의 여섯 수준, 유전자좌가 필요하다는 것과 RNA 분자가 기능한다는 것의 구분, 그리고 cis로 작용하는 RNA가 회복 실험을 통과하지 못하는 이유를 함께 보인다.",
+      "asset_path": "assets/fig-evidence-levels.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    }
+  ]
 }

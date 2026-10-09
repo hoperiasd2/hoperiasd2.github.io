@@ -1,68 +1,70 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 480" width="900" height="480" role="img"
-     aria-label="MicroRNA biogenesis from pri-miRNA transcription through Drosha cleavage in the nucleus, export by exportin-5, Dicer cleavage in the cytosol and loading into the RISC complex">
-  <style>
-    .ttl{font:700 14px sans-serif;fill:#003c71}
-    .nm{font:700 12px sans-serif;fill:#003c71}
-    .sub{font:11px sans-serif;fill:#4a5159}
-    .nuc{fill:#e8eef4;stroke:#003c71;stroke-width:1.5}
-    .cyt{fill:none;stroke:#003c71;stroke-width:1.6}
-    .rna{stroke:#16191d;stroke-width:2.6;fill:none}
-    .rna2{stroke:#f2b705;stroke-width:2.6;fill:none}
-    .enz{fill:#003c71;stroke:#16191d;stroke-width:1.1}
-    .el{font:700 11px sans-serif;fill:#ffffff}
-    .ln{stroke:#003c71;stroke-width:1.7;fill:none}
-    .cut{stroke:#8a6300;stroke-width:1.8;stroke-dasharray:5 3;fill:none}
-    .out{font:700 11px sans-serif;fill:#8a6300}
-    .hl{fill:#fff5d6;stroke:#003c71;stroke-width:1.3}
-  </style>
-  <defs>
-    <marker id="f1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-      <path d="M0 0 L10 5 L0 10 z" fill="#003c71"/>
-    </marker>
-  </defs>
-  <rect class="nuc" x="20" y="34" width="420" height="300" rx="14"/>
-  <text class="nm" x="36" y="56">nucleus</text>
-  <text class="ttl" x="470" y="26">microRNA biogenesis</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 460" width="880" height="460" role="img"
+ aria-label="The five steps of miRNA biogenesis: pri-miRNA made by Pol II in the nucleus, the first cut by Drosha and DGCR8 at the hairpin base, export by exportin-5, the second cut by Dicer removing the loop in the cytoplasm, and loading of the guide strand onto Argonaute to form RISC.">
+ <style>
+  .bx{fill:#fff;stroke:#c6d2dd;stroke-width:1.8}.k{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .t{font:12px sans-serif;fill:#16191d}.tb{font:700 13px sans-serif;fill:#003c71}
+  .th{font:700 15px sans-serif;fill:#003c71}.s{font:11px sans-serif;fill:#4a5159}
+  .m{font:10px monospace;fill:#16191d}
+  .nuc{fill:#eef3f8;stroke:#6b8ba8;stroke-width:2.2}
+  .rna{stroke:#b3261e;stroke-width:3;fill:none}
+  .en{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .ago{fill:#e3f0e4;stroke:#2e7d32;stroke-width:2.4}
+  .ar{stroke:#003c71;stroke-width:2.2;fill:none;marker-end:url(#a)}
+  .cut{stroke:#b3261e;stroke-width:2.6;fill:none;stroke-dasharray:4 3}
+ </style>
+ <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker></defs>
 
-  <text class="sub" x="40" y="84">1. RNA polymerase II transcribes the miRNA gene</text>
-  <path class="rna" d="M50 108 C90 86 130 130 170 108 C210 86 250 130 290 108"/>
-  <path class="rna" d="M290 108 C300 130 330 130 340 108 C350 86 380 86 390 108"/>
-  <text class="nm" x="50" y="132">pri-miRNA, several hundred nt, capped and polyadenylated</text>
+ <rect class="nuc" x="20" y="48" width="500" height="250" rx="14"/>
+ <text class="tb" x="34" y="70">NUCLEUS</text>
+ <text class="tb" x="34" y="330">CYTOPLASM</text>
 
-  <text class="sub" x="40" y="166">2. Drosha with DGCR8 cuts out the hairpin</text>
-  <ellipse class="enz" cx="130" cy="206" rx="54" ry="18"/>
-  <text class="el" x="94" y="211">Drosha-DGCR8</text>
-  <path class="rna" d="M230 230 C230 190 290 190 290 230 L290 268 M230 230 L230 268"/>
-  <path class="cut" d="M214 262 L306 262"/>
-  <text class="nm" x="212" y="292">pre-miRNA, about 70 nt hairpin</text>
-  <text class="sub" x="40" y="318">RNase III family: two cuts, leaves a 2-nt 3' overhang</text>
+ <text class="m" x="44" y="96">1  Pol II transcribes the miRNA gene</text>
+ <path class="rna" d="M44 128 h40 q16 -28 32 0 q16 28 32 0 h30 q16 -28 32 0 q16 28 32 0 h40"/>
+ <text class="m" x="290" y="124">pri-miRNA (long, with hairpins)</text>
+ <text class="s" x="290" y="140">from its own gene or from an intron</text>
 
-  <path class="ln" d="M452 190 L516 190" marker-end="url(#f1)"/>
-  <text class="sub" x="446" y="178">exportin-5</text>
-  <text class="sub" x="452" y="212">Ran-GTP</text>
+ <path class="ar" d="M190 148 L190 174"/>
+ <rect class="en" x="200" y="150" width="140" height="26" rx="5"/>
+ <text class="m" x="208" y="168">Drosha + DGCR8</text>
+ <text class="m" x="44" y="196">2  cuts the hairpin BASE</text>
+ <path class="rna" d="M150 236 q0 -34 20 -34 q20 0 20 34"/>
+ <path class="rna" d="M162 236 q0 -22 8 -22 q8 0 8 22"/>
+ <path class="cut" d="M140 236 h60"/>
+ <text class="m" x="212" y="226">pre-miRNA, about 70 nt</text>
 
-  <rect class="cyt" x="530" y="34" width="350" height="300" rx="14"/>
-  <text class="nm" x="546" y="56">cytosol</text>
-  <text class="sub" x="546" y="84">3. Dicer with TRBP cuts the loop off</text>
-  <ellipse class="enz" cx="610" cy="124" rx="40" ry="17"/>
-  <text class="el" x="588" y="129">Dicer</text>
-  <path class="rna" d="M700 108 C700 96 740 96 740 108 L740 148 M700 108 L700 148"/>
-  <path class="cut" d="M692 104 L748 104"/>
-  <text class="sub" x="546" y="178">4. miRNA duplex, 21-23 bp</text>
-  <path class="rna" d="M560 206 L700 206"/>
-  <path class="rna2" d="M560 220 L700 220"/>
-  <text class="sub" x="712" y="210">guide strand (kept)</text>
-  <text class="sub" x="712" y="228">passenger strand (degraded)</text>
-  <text class="sub" x="546" y="254">5. Loading into Argonaute 2</text>
-  <ellipse class="enz" cx="650" cy="294" rx="88" ry="24"/>
-  <text class="el" x="586" y="292">RISC : AGO2 + GW182</text>
-  <path class="rna2" d="M592 310 L708 310"/>
-  <text class="sub" x="546" y="326">strand selection follows 5' end thermodynamic stability</text>
+ <path class="ar" d="M340 240 L420 240"/>
+ <rect class="bx" x="352" y="252" width="110" height="24" rx="5"/>
+ <text class="m" x="360" y="269">exportin-5</text>
+ <text class="m" x="352" y="246">3  export</text>
 
-  <rect class="hl" x="20" y="352" width="860" height="110" rx="10"/>
-  <text class="nm" x="36" y="376">Points where biogenesis itself is regulated or fails</text>
-  <text class="sub" x="36" y="398">- DGCR8 lies in the 22q11.2 region deleted in DiGeorge syndrome, so miRNA processing is reduced</text>
-  <text class="sub" x="36" y="418">- DICER1 germline mutation causes pleuropulmonary blastoma and multinodular goitre predisposition</text>
-  <text class="sub" x="36" y="438">- one pri-miRNA can yield several miRNAs; one miRNA can target hundreds of mRNAs</text>
-  <text class="sub" x="36" y="458">- about 60% of human protein-coding genes carry a conserved miRNA target site</text>
+ <path class="ar" d="M470 300 L470 330"/>
+ <text class="m" x="44" y="356">4  Dicer cuts the LOOP</text>
+ <path class="rna" d="M150 396 q0 -34 20 -34 q20 0 20 34"/>
+ <path class="cut" d="M150 364 q20 -14 40 0"/>
+ <rect class="en" x="210" y="366" width="70" height="26" rx="5"/>
+ <text class="m" x="222" y="384">Dicer</text>
+ <path class="ar" d="M290 380 L330 380"/>
+ <path class="rna" d="M340 372 h90 M340 388 h90"/>
+ <text class="m" x="340" y="412">about 22 nt duplex</text>
+
+ <path class="ar" d="M444 380 L490 380"/>
+ <text class="m" x="520" y="356">5  loading</text>
+ <path class="ago" d="M520 362 h150 v40 h-150 z"/>
+ <text class="m" x="534" y="386">Argonaute (RISC)</text>
+ <path class="rna" d="M548 398 h110" stroke-width="3.4"/>
+ <text class="m" x="690" y="382">guide strand kept;</text>
+ <text class="m" x="690" y="398">the other is discarded</text>
+
+ <rect class="k" x="548" y="60" width="312" height="120" rx="8"/>
+ <text class="tb" x="562" y="84">The division of labour to remember</text>
+ <text class="t" x="562" y="108">Drosha: in the NUCLEUS, cuts the BASE</text>
+ <text class="t" x="562" y="128">Dicer: in the CYTOPLASM, cuts the LOOP</text>
+ <text class="s" x="562" y="154">Both are RNase III enzymes that recognise</text>
+ <text class="s" x="562" y="170">double-stranded RNA, at different places.</text>
+
+ <rect class="bx" x="548" y="192" width="312" height="94" rx="8"/>
+ <text class="tb" x="562" y="216">Which strand is kept</text>
+ <text class="t" x="562" y="240">The strand whose 5-prime end is bound more</text>
+ <text class="t" x="562" y="258">weakly tends to be chosen. Tissues can differ,</text>
+ <text class="t" x="562" y="276">so one pre-miRNA may yield two functional miRNAs.</text>
 </svg>

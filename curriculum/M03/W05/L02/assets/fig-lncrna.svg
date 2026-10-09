@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 440" width="880" height="440" role="img"
+ aria-label="Four modes of lncRNA action: a scaffold on which several proteins bind at different segments, a guide that sets position by complementarity so a regulator acts there, a decoy that holds a regulator away from its real target, and the case in which the act of transcription rather than the RNA product is the function.">
+ <style>
+  .bx{fill:#fff;stroke:#c6d2dd;stroke-width:1.8}.k{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .t{font:12px sans-serif;fill:#16191d}.tb{font:700 13px sans-serif;fill:#003c71}
+  .th{font:700 15px sans-serif;fill:#003c71}.s{font:11px sans-serif;fill:#4a5159}
+  .m{font:10px monospace;fill:#16191d}
+  .rna{stroke:#b3261e;stroke-width:3.4;fill:none}
+  .p1{fill:#dce6f2;stroke:#1a4f8a;stroke-width:2}
+  .p2{fill:#e3f0e4;stroke:#2e7d32;stroke-width:2}
+  .p3{fill:#fff5d6;stroke:#f2b705;stroke-width:2}
+  .dna{fill:none;stroke:#16191d;stroke-width:2.4}
+  .gene{fill:#dce6f2;stroke:#1a4f8a;stroke-width:2}
+  .ar{stroke:#003c71;stroke-width:2;fill:none;marker-end:url(#a)}
+  .no{stroke:#b3261e;stroke-width:3;fill:none}
+ </style>
+ <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker></defs>
+
+ <text class="th" x="20" y="28">Four modes — the classes are of confirmed cases, not a property of all lncRNA</text>
+ <line x1="20" y1="38" x2="860" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+
+ <rect class="bx" x="20" y="54" width="410" height="150" rx="8"/>
+ <text class="tb" x="34" y="78">1  SCAFFOLD</text>
+ <path class="rna" d="M50 130 q40 -22 80 0 q40 22 80 0 q40 -22 80 0 q30 16 50 6"/>
+ <rect class="p1" x="70" y="100" width="44" height="22" rx="4"/>
+ <text class="m" x="80" y="116">P1</text>
+ <rect class="p2" x="166" y="140" width="44" height="22" rx="4"/>
+ <text class="m" x="176" y="156">P2</text>
+ <rect class="p3" x="256" y="100" width="44" height="22" rx="4"/>
+ <text class="m" x="266" y="116">P3</text>
+ <text class="s" x="34" y="188">different proteins bind different SEGMENTS of one RNA, forming a complex</text>
+
+ <rect class="bx" x="450" y="54" width="410" height="150" rx="8"/>
+ <text class="tb" x="464" y="78">2  GUIDE</text>
+ <path class="dna" d="M464 150 h380"/>
+ <rect class="gene" x="640" y="140" width="80" height="20"/>
+ <text class="m" x="660" y="155">target</text>
+ <path class="rna" d="M560 120 h110"/>
+ <rect class="p2" x="676" y="104" width="76" height="24" rx="5"/>
+ <text class="m" x="684" y="121">regulator</text>
+ <path class="ar" d="M620 128 L640 140"/>
+ <text class="s" x="464" y="188">the RNA sets the POSITION, and the bound regulator acts there</text>
+
+ <rect class="bx" x="20" y="216" width="410" height="150" rx="8"/>
+ <text class="tb" x="34" y="240">3  DECOY</text>
+ <path class="rna" d="M50 300 q60 -24 120 0 q60 24 120 0"/>
+ <rect class="p1" x="96" y="276" width="44" height="22" rx="4"/>
+ <rect class="p1" x="200" y="302" width="44" height="22" rx="4"/>
+ <rect class="gene" x="320" y="290" width="80" height="20"/>
+ <text class="m" x="332" y="305">real target</text>
+ <line class="no" x1="258" y1="300" x2="312" y2="300"/>
+ <line class="no" x1="278" y1="288" x2="292" y2="312"/>
+ <text class="s" x="34" y="340">holds the regulator (or another RNA) away from where it would act;</text>
+ <text class="s" x="34" y="356">a lncRNA that sequesters miRNA is sometimes called a sponge</text>
+
+ <rect class="bx" x="450" y="216" width="410" height="150" rx="8"/>
+ <text class="tb" x="464" y="240">4  THE ACT OF TRANSCRIPTION</text>
+ <path class="dna" d="M464 300 h380"/>
+ <path class="rna" d="M520 280 h120" stroke-dasharray="5 4"/>
+ <rect class="gene" x="700" y="290" width="100" height="20"/>
+ <text class="m" x="718" y="305">neighbour</text>
+ <line class="no" x1="652" y1="300" x2="692" y2="300"/>
+ <text class="s" x="464" y="334">being transcribed here itself changes chromatin or obstructs the</text>
+ <text class="s" x="464" y="350">neighbouring gene. Removing the RNA and blocking transcription</text>
+ <text class="s" x="464" y="366">then give DIFFERENT results.</text>
+
+ <rect class="k" x="20" y="378" width="840" height="52" rx="8"/>
+ <text class="tb" x="34" y="400">What "scaffold" and "recruit" actually mean: a protein binds a particular segment of the RNA, and that changes the protein's position and contacts.</text>
+ <text class="t" x="34" y="420">The correction matters because it turns the claim into a testable one: delete that segment, or block that binding, and see.</text>
+</svg>

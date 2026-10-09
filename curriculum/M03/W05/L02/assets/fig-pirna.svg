@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 440" width="880" height="440" role="img"
+ aria-label="piRNA biogenesis and transposon silencing: a maturation route that does not use Dicer and the ping-pong amplification cycle, cleavage of transposon transcripts by PIWI, placement of DNA methylation and repressive histone marks at that locus by a piRNA-guided complex, and a comparison of the three small RNAs.">
+ <style>
+  .bx{fill:#fff;stroke:#c6d2dd;stroke-width:1.8}.k{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .t{font:12px sans-serif;fill:#16191d}.tb{font:700 13px sans-serif;fill:#003c71}
+  .th{font:700 15px sans-serif;fill:#003c71}.s{font:11px sans-serif;fill:#4a5159}
+  .m{font:10px monospace;fill:#16191d}
+  .rna{stroke:#b3261e;stroke-width:3;fill:none}
+  .piwi{fill:#f7dedc;stroke:#b3261e;stroke-width:2.4}
+  .te{fill:#fff5d6;stroke:#f2b705;stroke-width:2}
+  .dna{fill:none;stroke:#16191d;stroke-width:2.4}
+  .oct{fill:#dce6f2;stroke:#1a4f8a;stroke-width:2}
+  .ar{stroke:#003c71;stroke-width:2;fill:none;marker-end:url(#a)}
+  .cyc{stroke:#2e7d32;stroke-width:2.4;fill:none;stroke-dasharray:6 4;marker-end:url(#g)}
+  .cut{stroke:#b3261e;stroke-width:3;fill:none}
+  .no{stroke:#b3261e;stroke-width:3;fill:none}
+ </style>
+ <defs>
+  <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker>
+  <marker id="g" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#2e7d32"/></marker>
+ </defs>
+
+ <text class="th" x="20" y="28">A  Maturation without Dicer</text>
+ <line x1="20" y1="38" x2="430" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+ <path class="dna" d="M30 78 h300"/>
+ <rect class="te" x="90" y="68" width="160" height="20"/>
+ <text class="m" x="120" y="83">piRNA cluster</text>
+ <path class="ar" d="M170 94 L170 114"/>
+ <path class="rna" d="M40 128 h280"/>
+ <text class="m" x="40" y="150">long primary transcript</text>
+ <rect class="bx" x="210" y="138" width="110" height="24" rx="5" stroke="#b3261e"/>
+ <text class="m" x="216" y="155">no Dicer step</text>
+ <line class="no" x1="248" y1="140" x2="282" y2="160"/>
+ <path class="ar" d="M170 168 L170 188"/>
+ <rect class="piwi" x="100" y="190" width="140" height="28" rx="6"/>
+ <text class="m" x="108" y="209">PIWI + piRNA</text>
+ <text class="s" x="30" y="238">PIWI's own cleavage activity and other nucleases do the maturing</text>
+ <path class="cyc" d="M244 204 q50 -10 50 -30 q0 -24 -50 -24"/>
+ <text class="m" x="256" y="178">ping-pong</text>
+ <text class="m" x="256" y="192">amplification</text>
+
+ <text class="th" x="460" y="28">B  Silencing at two levels</text>
+ <line x1="460" y1="38" x2="860" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+ <rect class="bx" x="460" y="54" width="400" height="86" rx="8"/>
+ <text class="tb" x="474" y="76">Post-transcriptional</text>
+ <path class="rna" d="M474 106 h200"/>
+ <text class="m" x="474" y="128">transposon transcript</text>
+ <rect class="piwi" x="690" y="92" width="60" height="26" rx="5"/>
+ <text class="m" x="700" y="110">PIWI</text>
+ <path class="cut" d="M600 96 L600 118"/>
+
+ <rect class="k" x="460" y="152" width="400" height="110" rx="8"/>
+ <text class="tb" x="474" y="174">Transcriptional</text>
+ <path class="dna" d="M474 212 h360"/>
+ <rect class="te" x="540" y="202" width="140" height="20"/>
+ <text class="m" x="572" y="217">transposon locus</text>
+ <circle cx="566" cy="194" r="5" fill="#f2b705" stroke="#8a6300" stroke-width="1.4"/>
+ <circle cx="596" cy="194" r="5" fill="#f2b705" stroke="#8a6300" stroke-width="1.4"/>
+ <circle class="oct" cx="640" cy="192" r="12"/>
+ <circle cx="640" cy="176" r="4" fill="#b3261e"/>
+ <text class="s" x="474" y="248">piRNA-guided complexes place DNA methylation and repressive histone marks</text>
+
+ <rect class="bx" x="460" y="274" width="400" height="64" rx="8"/>
+ <text class="tb" x="474" y="296">The link back to the previous lesson</text>
+ <text class="t" x="474" y="318">RNA GUIDES where chromatin marks go, choosing the place by</text>
+ <text class="t" x="474" y="334">sequence complementarity instead of a protein-DNA contact.</text>
+
+ <text class="th" x="20" y="286">C  Three small RNAs at a glance</text>
+ <line x1="20" y1="294" x2="430" y2="294" stroke="#c6d2dd" stroke-width="1.5"/>
+ <rect class="bx" x="20" y="306" width="410" height="120" rx="8"/>
+ <text class="tb" x="34" y="326">Feature</text>
+ <text class="tb" x="170" y="326">miRNA</text>
+ <text class="tb" x="250" y="326">siRNA</text>
+ <text class="tb" x="340" y="326">piRNA</text>
+ <line x1="34" y1="332" x2="416" y2="332" stroke="#c6d2dd" stroke-width="1.2"/>
+ <text class="t" x="34" y="350">size (nt)</text>
+ <text class="t" x="170" y="350">~22</text>
+ <text class="t" x="250" y="350">21-23</text>
+ <text class="t" x="340" y="350">24-31</text>
+ <text class="t" x="34" y="370">Dicer</text>
+ <text class="t" x="170" y="370">yes</text>
+ <text class="t" x="250" y="370">yes</text>
+ <text class="tb" x="340" y="370">NO</text>
+ <text class="t" x="34" y="390">partner</text>
+ <text class="t" x="170" y="390">AGO</text>
+ <text class="t" x="250" y="390">AGO</text>
+ <text class="tb" x="340" y="390">PIWI</text>
+ <text class="t" x="34" y="410">where</text>
+ <text class="t" x="170" y="410">most cells</text>
+ <text class="t" x="250" y="410">most cells</text>
+ <text class="tb" x="340" y="410">germ cells</text>
+
+ <text class="s" x="460" y="358">Defects in the piRNA pathway show up as transposon activation and infertility: preserving genome stability between generations is a task separate from somatic regulation.</text>
+</svg>
