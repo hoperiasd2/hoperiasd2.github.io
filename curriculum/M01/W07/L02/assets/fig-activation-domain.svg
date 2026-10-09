@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 450" width="880" height="450" role="img"
+ aria-label="The two jobs of an activation domain: recruiting coactivators that acetylate histones and remodel nucleosomes to open the chromatin, and contacting the mediator complex that relays the signal from a distant enhancer to polymerase two, with repressor and corepressor acting in the opposite direction at the same point.">
+ <style>
+  .bx{fill:#fff;stroke:#c6d2dd;stroke-width:1.8}.k{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .t{font:12px sans-serif;fill:#16191d}.tb{font:700 13px sans-serif;fill:#003c71}
+  .th{font:700 15px sans-serif;fill:#003c71}.s{font:11px sans-serif;fill:#4a5159}
+  .m{font:11px monospace;fill:#16191d}
+  .rna{stroke:#b3261e;stroke-width:3;fill:none}
+  .dna{stroke:#1a4f8a;stroke-width:3;fill:none}
+  .g{fill:#e3f0e4;stroke:#2e7d32;stroke-width:2.2}
+  .me{fill:#f2b705;stroke:#8a6300;stroke-width:1.6}
+  .ar{stroke:#003c71;stroke-width:2;fill:none;marker-end:url(#a)}
+  .arr{stroke:#b3261e;stroke-width:2;fill:none;marker-end:url(#b)}
+  .ex{fill:#f7dedc;stroke:#b3261e;stroke-width:2.2}
+  .pr{fill:#dce6f2;stroke:#1a4f8a;stroke-width:2.2}
+  .no{stroke:#b3261e;stroke-width:3;fill:none}
+ </style>
+ <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker>
+ <marker id="b" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#b3261e"/></marker></defs>
+ <text class="th" x="20" y="28">A  Job one: open the chromatin</text>
+ <line x1="20" y1="38" x2="430" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+ <circle class="bx" cx="80" cy="96" r="20"/><circle class="bx" cx="140" cy="96" r="20"/>
+ <circle class="bx" cx="200" cy="96" r="20"/><circle class="bx" cx="260" cy="96" r="20"/>
+ <path class="dna" d="M40 96 q40 -26 80 0 q40 26 80 0 q40 -26 80 0 q20 12 40 0"/>
+ <text class="s" x="300" y="100">closed: the sequence is hidden</text>
+ <rect class="pr" x="40" y="130" width="70" height="26"/><text class="s" x="50" y="148">DBD</text>
+ <rect class="ex" x="110" y="130" width="96" height="26"/><text class="s" x="120" y="148">activation</text>
+ <path class="ar" d="M210 143 L254 143"/>
+ <rect class="k" x="262" y="124" width="160" height="40" rx="5"/>
+ <text class="s" x="272" y="140">coactivator, often</text>
+ <text class="s" x="272" y="158">an enzyme</text>
+ <text class="s" x="40" y="186">histone acetyltransferase  adds acetyl, loosens the grip</text>
+ <text class="s" x="40" y="206">remodelling complex       uses ATP, pushes nucleosomes aside</text>
+ <path class="ar" d="M200 216 L200 238"/>
+ <circle class="bx" cx="80" cy="272" r="20"/><circle class="bx" cx="300" cy="272" r="20"/>
+ <path class="dna" d="M40 272 q40 -26 80 0 L260 272 q40 -26 80 0"/>
+ <rect class="k" x="150" y="262" width="90" height="20"/>
+ <text class="s" x="156" y="277">now exposed</text>
+ <text class="s" x="40" y="314">the promoter DNA is accessible</text>
+
+ <text class="th" x="460" y="28">B  Job two: gather the machinery</text>
+ <line x1="460" y1="38" x2="860" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+ <path class="dna" d="M470 180 q110 -110 220 0"/>
+ <rect class="ex" x="458" y="170" width="44" height="20"/><text class="s" x="464" y="185">enh</text>
+ <rect class="k" x="668" y="170" width="44" height="20"/><text class="s" x="674" y="185">pro</text>
+ <rect class="pr" x="500" y="112" width="60" height="24"/><text class="s" x="510" y="129">TF</text>
+ <ellipse class="g" cx="640" cy="120" rx="46" ry="20"/><text class="s" x="618" y="125">Pol II</text>
+ <ellipse class="k" cx="580" cy="96" rx="58" ry="24"/>
+ <text class="tb" x="548" y="101">mediator</text>
+ <text class="s" x="730" y="112">over 20 subunits</text>
+ <text class="s" x="730" y="130">one face touches the</text>
+ <text class="s" x="730" y="148">transcription factor,</text>
+ <text class="s" x="730" y="166">the other touches Pol II</text>
+ <text class="s" x="730" y="184">and the GTFs</text>
+ <text class="s" x="470" y="226">a relay that carries the signal from a distant enhancer</text>
+ <text class="s" x="470" y="244">to the machinery sitting at the promoter</text>
+
+ <text class="th" x="460" y="284">C  Who does what</text>
+ <line x1="460" y1="294" x2="860" y2="294" stroke="#c6d2dd" stroke-width="1.5"/>
+ <rect class="pr" x="470" y="308" width="180" height="62" rx="6"/>
+ <text class="tb" x="482" y="328">transcription factor</text>
+ <text class="s" x="482" y="350">decides WHERE and</text>
+ <text class="s" x="482" y="366">HOW MUCH</text>
+ <rect class="g" x="664" y="308" width="176" height="62" rx="6"/>
+ <text class="tb" x="676" y="328">the rest of the machinery</text>
+ <text class="s" x="676" y="350">carries out HOW:</text>
+ <text class="s" x="676" y="366">opening, loading, starting</text>
+
+ <text class="th" x="20" y="352">D  Repression is the mirror image</text>
+ <line x1="20" y1="362" x2="430" y2="362" stroke="#c6d2dd" stroke-width="1.5"/>
+ <rect class="ex" x="30" y="376" width="90" height="26"/><text class="s" x="42" y="394">repressor</text>
+ <path class="arr" d="M124 389 L162 389"/>
+ <rect class="ex" x="170" y="376" width="110" height="26"/><text class="s" x="180" y="394">corepressor</text>
+ <text class="s" x="30" y="422">brings histone deacetylase or methyltransferase: the chromatin closes</text>
+ <text class="s" x="30" y="442">activation and repression act at the same point in opposite directions, so the balance decides</text>
+</svg>

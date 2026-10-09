@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 490" width="880" height="490" role="img"
+ aria-label="Four routes by which an extracellular signal reaches a promoter: a steroid crossing the membrane and entering the nucleus with its receptor, CREB waiting in the nucleus and switched on by phosphorylation, STAT phosphorylated by JAK and entering only as a dimer, and NF-kappa-B released when I-kappa-B is degraded, all of them converting a protein that already exists rather than making a new one.">
+ <style>
+  .bx{fill:#fff;stroke:#c6d2dd;stroke-width:1.8}.k{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .t{font:12px sans-serif;fill:#16191d}.tb{font:700 13px sans-serif;fill:#003c71}
+  .th{font:700 15px sans-serif;fill:#003c71}.s{font:11px sans-serif;fill:#4a5159}
+  .m{font:11px monospace;fill:#16191d}
+  .rna{stroke:#b3261e;stroke-width:3;fill:none}
+  .dna{stroke:#1a4f8a;stroke-width:3;fill:none}
+  .g{fill:#e3f0e4;stroke:#2e7d32;stroke-width:2.2}
+  .me{fill:#f2b705;stroke:#8a6300;stroke-width:1.6}
+  .ar{stroke:#003c71;stroke-width:2;fill:none;marker-end:url(#a)}
+  .arr{stroke:#b3261e;stroke-width:2;fill:none;marker-end:url(#b)}
+  .ex{fill:#f7dedc;stroke:#b3261e;stroke-width:2.2}
+  .pr{fill:#dce6f2;stroke:#1a4f8a;stroke-width:2.2}
+  .no{stroke:#b3261e;stroke-width:3;fill:none}
+ </style>
+ <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker>
+ <marker id="b" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#b3261e"/></marker></defs>
+ <line x1="20" y1="60" x2="860" y2="60" stroke="#4a5159" stroke-width="2.4"/>
+ <text class="s" x="20" y="52">outside the cell</text>
+ <rect x="20" y="300" width="840" height="150" fill="#f4f8fb" stroke="#1a4f8a" stroke-width="2" rx="10"/>
+ <text class="tb" x="34" y="322">nucleus</text>
+
+ <text class="th" x="24" y="88">1  Steroid receptor</text>
+ <circle class="me" cx="60" cy="112" r="8"/>
+ <text class="s" x="76" y="116">steroid: lipid, crosses the membrane</text>
+ <path class="ar" d="M60 66 L60 100"/>
+ <rect class="pr" x="30" y="150" width="120" height="30" rx="5"/>
+ <text class="s" x="40" y="170">receptor</text>
+ <rect class="bx" x="150" y="150" width="56" height="30" rx="5"/>
+ <text class="s" x="156" y="170">inhib</text>
+ <text class="s" x="30" y="202">ligand binding changes the shape;</text>
+ <text class="s" x="30" y="220">the inhibitory protein falls off</text>
+ <path class="ar" d="M90 240 L90 296"/>
+ <rect class="pr" x="40" y="338" width="130" height="28" rx="5"/>
+ <text class="s" x="50" y="357">receptor on HRE</text>
+ <text class="s" x="30" y="392">the receptor IS the</text>
+ <text class="s" x="30" y="410">transcription factor:</text>
+ <text class="s" x="30" y="428">the shortest route</text>
+
+ <text class="th" x="236" y="88">2  CREB</text>
+ <path class="ar" d="M280 66 L280 96"/>
+ <text class="s" x="236" y="116">hormone on a GPCR</text>
+ <text class="m" x="236" y="142">cAMP up</text>
+ <path class="ar" d="M270 150 L270 170"/>
+ <rect class="k" x="236" y="178" width="130" height="28" rx="5"/>
+ <text class="s" x="248" y="197">protein kinase A</text>
+ <path class="ar" d="M280 212 L280 296"/>
+ <rect class="pr" x="246" y="338" width="120" height="28" rx="5"/>
+ <text class="s" x="258" y="357">CREB  phospho</text>
+ <text class="s" x="236" y="392">CREB already waits</text>
+ <text class="s" x="236" y="410">in the nucleus; CBP</text>
+ <text class="s" x="236" y="428">is then recruited</text>
+
+ <text class="th" x="452" y="88">3  STAT</text>
+ <path class="ar" d="M496 66 L496 96"/>
+ <text class="s" x="452" y="116">cytokine on its receptor</text>
+ <rect class="k" x="452" y="130" width="70" height="26" rx="5"/>
+ <text class="s" x="462" y="148">JAK</text>
+ <rect class="pr" x="452" y="178" width="60" height="26" rx="5"/>
+ <text class="s" x="460" y="196">STAT</text>
+ <rect class="pr" x="516" y="178" width="60" height="26" rx="5"/>
+ <text class="s" x="524" y="196">STAT</text>
+ <text class="s" x="452" y="226">phosphorylated, then paired</text>
+ <path class="ar" d="M510 240 L510 296"/>
+ <rect class="pr" x="452" y="338" width="130" height="28" rx="5"/>
+ <text class="s" x="462" y="357">STAT dimer</text>
+ <text class="s" x="452" y="392">only the dimer can</text>
+ <text class="s" x="452" y="410">enter the nucleus</text>
+
+ <text class="th" x="664" y="88">4  NF-kappa-B</text>
+ <path class="ar" d="M708 66 L708 96"/>
+ <text class="s" x="664" y="116">inflammatory signal</text>
+ <rect class="pr" x="664" y="140" width="96" height="28" rx="5"/>
+ <text class="s" x="672" y="159">NF-kB</text>
+ <rect class="ex" x="760" y="140" width="64" height="28" rx="5"/>
+ <text class="s" x="770" y="159">IkB</text>
+ <text class="s" x="664" y="192">IkB is phosphorylated,</text>
+ <text class="s" x="664" y="210">ubiquitinated, then</text>
+ <text class="s" x="664" y="228">destroyed by the proteasome</text>
+ <path class="no" d="M758 136 L828 172"/>
+ <path class="ar" d="M712 248 L712 296"/>
+ <rect class="pr" x="664" y="338" width="130" height="28" rx="5"/>
+ <text class="s" x="674" y="357">NF-kB released</text>
+ <text class="s" x="664" y="392">removal of the anchor</text>
+ <text class="s" x="664" y="410">is itself the signal</text>
+
+ <text class="th" x="20" y="470">Common principle: none of the four makes a new transcription factor. Each converts a protein already present from a waiting state to an active one, because transcription and translation would be far too slow for a response within minutes.</text>
+</svg>

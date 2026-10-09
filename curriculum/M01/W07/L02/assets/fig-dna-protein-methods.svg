@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 470" width="880" height="470" role="img"
+ aria-label="Three ways to see protein binding to DNA: footprinting where DNase cannot reach and bands are missing, the electrophoretic mobility shift of DNA slowed by bound protein, chromatin immunoprecipitation with sequencing reading where the protein sits in intact cells, and the question each method answers against its limitation.">
+ <style>
+  .bx{fill:#fff;stroke:#c6d2dd;stroke-width:1.8}.k{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .t{font:12px sans-serif;fill:#16191d}.tb{font:700 13px sans-serif;fill:#003c71}
+  .th{font:700 15px sans-serif;fill:#003c71}.s{font:11px sans-serif;fill:#4a5159}
+  .m{font:11px monospace;fill:#16191d}
+  .rna{stroke:#b3261e;stroke-width:3;fill:none}
+  .dna{stroke:#1a4f8a;stroke-width:3;fill:none}
+  .g{fill:#e3f0e4;stroke:#2e7d32;stroke-width:2.2}
+  .me{fill:#f2b705;stroke:#8a6300;stroke-width:1.6}
+  .ar{stroke:#003c71;stroke-width:2;fill:none;marker-end:url(#a)}
+  .arr{stroke:#b3261e;stroke-width:2;fill:none;marker-end:url(#b)}
+  .ex{fill:#f7dedc;stroke:#b3261e;stroke-width:2.2}
+  .pr{fill:#dce6f2;stroke:#1a4f8a;stroke-width:2.2}
+  .no{stroke:#b3261e;stroke-width:3;fill:none}
+ </style>
+ <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker>
+ <marker id="b" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#b3261e"/></marker></defs>
+ <text class="th" x="20" y="28">A  DNase footprinting: which bases are covered</text>
+ <line x1="20" y1="38" x2="290" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+ <line class="dna" x1="30" y1="76" x2="270" y2="76"/>
+ <ellipse class="pr" cx="150" cy="62" rx="40" ry="16"/>
+ <text class="s" x="126" y="67">protein</text>
+ <path class="arr" d="M50 42 L50 64"/><path class="arr" d="M80 42 L80 64"/>
+ <path class="arr" d="M220 42 L220 64"/><path class="arr" d="M250 42 L250 64"/>
+ <text class="s" x="30" y="104">DNase I cuts at random, but not where protein sits</text>
+ <rect class="bx" x="30" y="116" width="100" height="190"/>
+ <rect class="bx" x="150" y="116" width="100" height="190"/>
+ <text class="s" x="38" y="134">no protein</text>
+ <text class="s" x="158" y="134">+ protein</text>
+ <g stroke="#16191d" stroke-width="3">
+ <line x1="44" y1="152" x2="116" y2="152"/><line x1="44" y1="170" x2="116" y2="170"/>
+ <line x1="44" y1="188" x2="116" y2="188"/><line x1="44" y1="206" x2="116" y2="206"/>
+ <line x1="44" y1="224" x2="116" y2="224"/><line x1="44" y1="242" x2="116" y2="242"/>
+ <line x1="44" y1="260" x2="116" y2="260"/><line x1="44" y1="278" x2="116" y2="278"/>
+ <line x1="164" y1="152" x2="236" y2="152"/><line x1="164" y1="170" x2="236" y2="170"/>
+ <line x1="164" y1="260" x2="236" y2="260"/><line x1="164" y1="278" x2="236" y2="278"/>
+ </g>
+ <rect x="158" y="182" width="84" height="66" fill="none" stroke="#b3261e" stroke-width="2.4" stroke-dasharray="5 4"/>
+ <text class="s" x="30" y="332">the gap is the footprint: base-level position</text>
+
+ <text class="th" x="310" y="28">B  EMSA: does it bind at all</text>
+ <line x1="310" y1="38" x2="570" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+ <text class="s" x="320" y="60">labelled short DNA + cell extract, then electrophoresis</text>
+ <rect class="bx" x="320" y="74" width="72" height="200"/>
+ <rect class="bx" x="402" y="74" width="72" height="200"/>
+ <rect class="bx" x="484" y="74" width="72" height="200"/>
+ <text class="s" x="326" y="92">DNA</text>
+ <text class="s" x="406" y="92">+ extract</text>
+ <text class="s" x="488" y="92">+ competitor</text>
+ <g stroke="#16191d" stroke-width="5">
+ <line x1="332" y1="236" x2="380" y2="236"/>
+ <line x1="414" y1="140" x2="462" y2="140"/>
+ <line x1="496" y1="236" x2="544" y2="236"/>
+ </g>
+ <text class="s" x="320" y="296">bound DNA is heavier and runs slower:</text>
+ <text class="s" x="320" y="314">the band shifts up</text>
+ <text class="s" x="320" y="336">excess unlabelled competitor abolishes the</text>
+ <text class="s" x="320" y="354">shift, which shows sequence specificity</text>
+
+ <text class="th" x="590" y="28">C  ChIP-seq: where it sits in the cell</text>
+ <line x1="590" y1="38" x2="860" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+ <text class="s" x="600" y="62">1  fix cells: protein locked onto DNA</text>
+ <text class="s" x="600" y="84">2  fragment the chromatin</text>
+ <text class="s" x="600" y="106">3  precipitate with a specific antibody</text>
+ <text class="s" x="600" y="128">4  sequence the DNA that came down</text>
+ <ellipse class="pr" cx="650" cy="166" rx="26" ry="14"/>
+ <line class="dna" x1="610" y1="180" x2="700" y2="180"/>
+ <path d="M700 150 l20 -14 l0 28 z" class="k"/>
+ <text class="s" x="726" y="170">antibody</text>
+ <line x1="600" y1="240" x2="840" y2="240" stroke="#4a5159" stroke-width="1.6"/>
+ <path d="M640 240 l14 -36 l14 36 z" class="ex"/>
+ <path d="M740 240 l18 -48 l18 48 z" class="ex"/>
+ <text class="s" x="600" y="262">read pile-up marks each occupied site</text>
+ <text class="s" x="600" y="290">covers the whole genome in one experiment</text>
+ <text class="s" x="600" y="312">needs a good antibody; indirect binding</text>
+ <text class="s" x="600" y="330">is captured too</text>
+
+ <text class="th" x="20" y="384">D  Each answers a different question, so all three are needed</text>
+ <line x1="20" y1="394" x2="860" y2="394" stroke="#c6d2dd" stroke-width="1.5"/>
+ <text class="s" x="40" y="416">footprinting   which bases are contacted        limit: in vitro, purified components</text>
+ <text class="s" x="40" y="436">EMSA           binding and its specificity      limit: poor positional resolution</text>
+ <text class="s" x="40" y="456">ChIP-seq       real occupancy inside the cell   limit: antibody quality, indirect binding</text>
+</svg>

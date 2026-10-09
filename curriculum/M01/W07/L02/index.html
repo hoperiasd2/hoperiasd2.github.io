@@ -3,9 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>M01-W07-L02 전사 조절과 후성유전 [7장]</title>
-<meta name="description" content="전사 조절과 후성유전 [7장]">
+<title>전사 조절과 후성유전 · M01-W07-L02</title>
+<meta name="description" content="전사 조절과 후성유전">
 <link rel="stylesheet" href="../../../../assets/site.css">
+<link rel="stylesheet" href="../../../../assets/lesson.css">
 </head>
 <body>
 
@@ -15,50 +16,161 @@
     <nav>
       <a href="../../../../curriculum/index.html">전체 수업</a>
       <a href="../../../../curriculum/materials.html">자료 내려받기</a>
-      <a href="../../../../curriculum/M07/index.html">실습</a>
       <a href="../../../../archive/index.html">아카이브</a>
     </nav>
   </div>
 </header>
 
-<main class="wrap">
-<nav class="crumb" aria-label="이동 경로"><a href="../../../../index.html">대문</a><span aria-hidden="true">›</span><a href="../../../index.html">전체 수업</a><span aria-hidden="true">›</span><a href="../../index.html">M01</a><span aria-hidden="true">›</span><a href="../index.html">7주차</a><span aria-hidden="true">›</span><span>M01-W07-L02</span></nav>
+<main class="wrap wrap--narrow lesson">
+<nav class="crumb" aria-label="이동 경로"><a href="../../../../index.html">대문</a><span aria-hidden="true">›</span><a href="../../../../curriculum/index.html">전체 수업</a><span aria-hidden="true">›</span><a href="../../index.html">M01</a><span aria-hidden="true">›</span><a href="../index.html">7주차</a><span aria-hidden="true">›</span><span>M01-W07-L02</span></nav>
 
   <section class="hero">
     <p class="eyebrow">M01-W07-L02 · 인체일반생물학과 기초세포생물학</p>
-    <h1>전사 조절과 후성유전 [7장]</h1>
-    <p class="lede">강의 수업 · 상태 <span class="badge badge--design">설계</span></p>
+    <h1>전사 조절과 후성유전</h1>
+    <p class="en">Transcriptional Regulation and Epigenetics</p>
   </section>
-
-  
-  <div class="callout">이 수업은 아직 집필 전이다. 제작 기준은
-  <a href="../../../../PROJECT.md">PROJECT.md</a>의 집필 원칙과 산출물 규격을 따른다.</div>
-
+  <p class="dl"><a class="dlbtn" href="slides.pptx">슬라이드 내려받기 (PPTX)</a></p>
   <h2>학습목표</h2>
-  <p>작성 예정. 이 수업이 답하는 질문 6~9개를 먼저 확정한 뒤 측정 가능한 학습목표로 옮긴다.</p>
-
+  <ul><li>유전자 발현을 바꿀 수 있는 단계를 모두 열거하고 전사 단계가 조절의 중심이 되는 이유를 설명한다.</li><li>Reporter gene 분석의 원리를 쓰고 결실 분석과 linker scanning이 각각 답하는 질문을 구분한다.</li><li>DNase footprinting, EMSA, ChIP-seq가 각각 무엇을 보여주는지 구분하고 세 방법을 함께 쓰는 이유를 설명한다.</li><li>Promoter와 enhancer를 실험적 기준으로 정의하고 enhancer의 위치·방향 독립성을 설명한다.</li><li>영역 교환 실험의 설계와 결과를 쓰고 전사인자가 모듈 구조라는 결론이 어떻게 도출되는지 설명한다.</li><li>DNA 결합 도메인의 네 가지 구조 계열을 쓰고 이량체 형성이 결합 특이성에 미치는 영향을 설명한다.</li><li>활성화 영역이 수행하는 두 가지 일을 쓰고 공동활성화인자와 mediator의 역할을 구분한다.</li><li>세포 외 신호가 promoter에 도달하는 네 경로를 전사인자의 대기 장소와 활성화 방식으로 구분한다.</li><li>Master regulator의 개념을 쓰고 조합 조절과 함께 조직 특이적 발현을 설명한다.</li><li>후성유전 조절이 전사 조절에 더하는 층이 무엇인지 쓰고 그 범위를 정의한다.</li></ul>
   <h2>선수지식</h2>
-  <p>작성 예정.</p>
-
-  <h2>본문</h2>
-  <p>작성 예정. 각 절은 하나의 질문에 답하는 단위로 쓰고
-  질문 → 답 → 근거 → 조건과 한계 → 귀결의 순서로 전개한다.</p>
-
+  <ul><li>M01-W07-L01 RNA 합성과 가공 — Pol II, general transcription factor, preinitiation complex</li><li>M01-W06-L02 유전자와 유전체의 구성 — promoter, 조절서열, 염색질의 기본 구조</li><li>M01-W06-L01 재조합 DNA와 분자생물학 실험 기법 — 클로닝, 형질도입, 전기영동</li></ul>
+  <h2>강의 구성</h2>
+  <ol class="qlist"><li><a href="#s1">1. 조절은 주로 어느 단계에서 일어나는가</a></li><li><a href="#s2">2. 조절서열을 어떻게 찾는가 — reporter gene 분석</a></li><li><a href="#s3">3. 단백질이 DNA의 어디에 붙는지 보는 방법</a></li><li><a href="#s4">4. Promoter와 enhancer — 실험이 정한 구분</a></li><li><a href="#s5">5. 전사인자는 모듈로 되어 있다 — 영역 교환 실험</a></li><li><a href="#s6">6. DNA 결합 도메인의 구조 계열</a></li><li><a href="#s7">7. 활성화 영역은 무엇을 하는가</a></li><li><a href="#s8">8. 세포 외 신호가 promoter까지 도달하는 경로</a></li><li><a href="#s9">9. 조직 특이적 발현과 master regulator</a></li><li><a href="#s10">10. 후성유전 조절 — 전사 조절에 더해지는 층</a></li></ol>
+  <section id="s1">
+  <h2>1. 조절은 주로 어느 단계에서 일어나는가</h2>
+  <p>사람의 모든 체세포는 같은 유전체를 가진다. 그런데 간세포와 신경세포는 완전히 다르다. 차이를 만드는 것은 유전자의 유무가 아니라 <strong>어떤 유전자가 켜져 있는지</strong>다.</p>
+  <p>발현을 바꿀 수 있는 단계는 많다. 순서대로 보면 다음과 같다.</p>
+  <div class="tw"><table><thead><tr><th>단계</th><th>조절 수단</th><th>반응 속도</th></tr></thead><tbody><tr><td>염색질 접근성</td><td>nucleosome 배치, histone 변형, DNA methylation</td><td>느림, 오래 유지</td></tr><tr><td>전사 개시</td><td>전사인자, 공동활성화인자, mediator</td><td>분~시간</td></tr><tr><td>전사 신장</td><td>Pol II 일시정지의 해제</td><td>빠름</td></tr><tr><td>RNA 가공</td><td>대체 splicing, 3′ 말단 선택</td><td>중간</td></tr><tr><td>전사체 수명</td><td>3′ UTR 결합 단백질, miRNA</td><td>중간</td></tr><tr><td>번역 효율</td><td>개시인자의 인산화, 5′ UTR 구조</td><td>빠름</td></tr><tr><td>단백질 안정성</td><td>ubiquitin화와 proteasome 분해</td><td>빠름</td></tr></tbody></table></div>
+  <p>이 가운데 <strong>전사 개시가 조절의 중심</strong>이다. 이유는 두 가지다.</p>
+  <p><strong>경제성.</strong> 전사 단계에서 끄면 그 뒤의 모든 과정에 자원이 들지 않는다. 가공·번역·분해까지 다 한 뒤에 없애는 것은 낭비다.</p>
+  <p><strong>증폭.</strong> 전사체 하나에서 단백질 수백 개가 나오므로, 전사량의 작은 차이가 단백질량의 큰 차이로 증폭된다.</p>
+  <p>따라서 발달과 분화, 신호 반응의 대부분은 전사 수준에서 결정된다. 나머지 단계는 전사가 정한 큰 틀 안에서 미세 조정을 한다.</p>
+  <figure class="fig" id="fig-regulation-levels"><img src="assets/fig-regulation-levels.svg" alt="발현 조절이 가능한 단계와 전사 개시가 중심이 되는 이유. 염색질 접근성에서 단백질 안정성까지의 순서, 각 단계의 반응 속도와 유지 기간의 차이, 전사 단계에서 끄는 것이 자원을 아끼는 구조, 그리고 전사량의 차이가 단백질량으로 증폭되는 관계를 함께 보인다." loading="lazy"><figcaption><b>그림 1</b> 발현 조절이 가능한 단계와 전사 개시가 중심이 되는 이유. 염색질 접근성에서 단백질 안정성까지의 순서, 각 단계의 반응 속도와 유지 기간의 차이, 전사 단계에서 끄는 것이 자원을 아끼는 구조, 그리고 전사량의 차이가 단백질량으로 증폭되는 관계를 함께 보인다.</figcaption></figure>
+  </section>
+  <section id="s2">
+  <h2>2. 조절서열을 어떻게 찾는가 — reporter gene 분석</h2>
+  <p>"이 유전자의 발현을 정하는 DNA 구간은 어디인가"라는 질문에 답하는 방법을 먼저 익혀야 한다. 기전보다 방법을 먼저 보는 이유는, 이 분야의 개념 대부분이 특정 실험의 결과로 정의되었기 때문이다.</p>
+  <p><strong>원리.</strong> 발현을 측정하기 어려운 유전자 대신, <strong>측정하기 쉬운 유전자</strong>를 붙인다. 조사하려는 DNA 구간을 클로닝해 그 뒤에 <strong>reporter gene</strong>을 연결하고, 세포에 넣어 reporter의 산물을 측정한다. 산물이 많으면 그 구간이 전사를 촉진한 것이다.</p>
+  <p>Reporter로는 측정이 간단한 것을 쓴다. luciferase는 발광량으로, β-galactosidase는 발색으로, GFP는 형광으로 측정한다.</p>
+  <p>이 틀 위에서 두 가지 설계가 서로 다른 질문에 답한다.</p>
+  <p><strong>결실 분석(deletion analysis).</strong> 조사 구간의 5′ 쪽을 점점 잘라 내면서 발현을 측정한다. 어느 지점을 자른 순간 발현이 떨어지면, <strong>잘려 나간 구간 안에 필요한 서열이 있다</strong>. 반대로 자른 뒤 발현이 올라가면 그 구간에 억제 서열이 있었다는 뜻이다. 이 방법은 <strong>대략의 위치</strong>를 좁힌다.</p>
+  <p><strong>Linker scanning.</strong> 전체 길이는 유지하고, 짧은 구간씩 차례로 무관한 서열로 바꿔치기한다. 어느 구간을 바꿨을 때 발현이 떨어지면 그 구간이 필요한 서열이다. 길이가 변하지 않으므로 <strong>길이 변화의 영향과 서열 자체의 영향을 분리</strong>할 수 있다. 결실 분석보다 해상도가 높다.</p>
+  <p>더 좁히려면 <strong>부위 특이적 돌연변이(site-directed mutagenesis)</strong> 로 몇 개의 염기만 바꿔 본다. 이 단계에서 개별 염기의 기여를 알 수 있다.</p>
+  <div class="box box--result"><b>핵심 정리</b> 세 방법의 관계를 정리하면 <strong>결실 분석으로 구간을 좁히고, linker scanning으로 요소를 특정하고, 점 변이로 염기를 확정한다</strong>. 해상도를 단계적으로 올려 가는 설계다.</div>
+  <figure class="fig" id="fig-reporter-assay"><img src="assets/fig-reporter-assay.svg" alt="Reporter gene 분석의 설계와 두 가지 변형. 조사 구간 뒤에 측정하기 쉬운 유전자를 연결하는 기본 구성, 5′ 쪽을 점점 잘라 발현이 떨어지는 지점을 찾는 결실 분석, 길이를 유지한 채 구간을 바꿔치기해 길이 효과를 배제하는 linker scanning, 그리고 세 방법으로 해상도를 단계적으로 올리는 순서를 함께 보인다." loading="lazy"><figcaption><b>그림 2</b> Reporter gene 분석의 설계와 두 가지 변형. 조사 구간 뒤에 측정하기 쉬운 유전자를 연결하는 기본 구성, 5′ 쪽을 점점 잘라 발현이 떨어지는 지점을 찾는 결실 분석, 길이를 유지한 채 구간을 바꿔치기해 길이 효과를 배제하는 linker scanning, 그리고 세 방법으로 해상도를 단계적으로 올리는 순서를 함께 보인다.</figcaption></figure>
+  </section>
+  <section id="s3">
+  <h2>3. 단백질이 DNA의 어디에 붙는지 보는 방법</h2>
+  <p>Reporter 분석은 <strong>어느 구간이 필요한가</strong>를 알려주지만 <strong>무엇이 거기 붙는가</strong>는 알려주지 않는다. 결합을 직접 보는 방법이 따로 있다.</p>
+  <p><strong>DNase footprinting.</strong> DNA 조각을 표지하고 DNase I로 무작위 절단한다. 단백질이 붙어 있던 구간은 효소가 접근하지 못하므로 자리지 않는다. 전기영동에서 그 구간에 해당하는 띠가 <strong>빠져 있는 것</strong>으로 나타난다. 빈 자리가 발자국처럼 보이므로 footprint라 부른다. 이 방법은 <strong>결합 위치를 염기 수준으로</strong> 알려준다.</p>
+  <p><strong>EMSA(electrophoretic mobility shift assay).</strong> 표지한 짧은 DNA에 단백질 추출물을 섞고 전기영동한다. 단백질이 붙은 DNA는 무거워져 느리게 이동하므로 띠의 위치가 <strong>이동(shift)</strong> 한다. 경쟁 DNA를 넣어 띠가 사라지는지 보면 결합의 서열 특이성을 확인할 수 있다. 이 방법은 <strong>결합이 일어나는지 여부와 특이성</strong>을 본다.</p>
+  <p><strong>ChIP(chromatin immunoprecipitation).</strong> 앞의 두 방법은 시험관 안의 결합을 본다. 살아 있는 세포에서 실제로 붙어 있는지는 다른 문제다. ChIP는 세포를 고정해 단백질과 DNA를 결합된 상태로 묶고, 염색질을 조각 내고, 그 단백질에 대한 항체로 침전시킨 뒤 함께 붙어 나온 DNA를 분석한다. 염기서열 분석과 결합하면 <strong>ChIP-seq</strong>가 되고, 유전체 전체에서 그 단백질이 붙는 위치를 한 번에 얻는다.</p>
+  <p>세 방법을 함께 쓰는 이유는 각각이 다른 질문에 답하기 때문이다.</p>
+  <div class="tw"><table><thead><tr><th>방법</th><th>답하는 질문</th><th>한계</th></tr></thead><tbody><tr><td>DNase footprinting</td><td>어느 염기에 붙는가</td><td>시험관 조건, 정제된 성분</td></tr><tr><td>EMSA</td><td>붙는가, 서열 특이적인가</td><td>위치 해상도 낮음</td></tr><tr><td>ChIP-seq</td><td>세포 안에서 실제로 어디에 붙어 있는가</td><td>좋은 항체가 필요, 간접 결합 포함</td></tr></tbody></table></div>
+  <div class="box box--limit"><b>임상 연계</b> <strong>임상 연계 </strong> ChIP-seq와 접근성 분석은 질환 연구의 기본 도구가 되었다. 전장 유전체 연관 분석(GWAS)에서 나온 질환 관련 변이의 대부분은 단백질을 암호화하지 않는 영역에 있다. 그 변이가 무엇을 하는지는 서열만 보면 알 수 없고, <strong>그 위치가 어느 세포 종류에서 조절 영역으로 쓰이는지</strong>를 봐야 해석된다. 자가면역질환의 위험 변이가 면역세포에서만 활성인 enhancer에 모여 있다는 발견이 그런 방식으로 나왔다. 변이의 의미가 세포 종류에 따라 달라진다는 점이 이 분야의 핵심 난제다.</div>
+  <figure class="fig" id="fig-dna-protein-methods"><img src="assets/fig-dna-protein-methods.svg" alt="단백질-DNA 결합을 보는 세 방법. DNase I이 접근하지 못해 띠가 빠지는 footprinting의 원리, 단백질이 붙어 느려진 DNA의 띠 이동을 보는 EMSA, 세포를 고정해 항체로 침전시키고 함께 나온 DNA를 읽는 ChIP-seq, 그리고 세 방법이 각각 답하는 질문과 한계의 대응을 함께 보인다." loading="lazy"><figcaption><b>그림 3</b> 단백질-DNA 결합을 보는 세 방법. DNase I이 접근하지 못해 띠가 빠지는 footprinting의 원리, 단백질이 붙어 느려진 DNA의 띠 이동을 보는 EMSA, 세포를 고정해 항체로 침전시키고 함께 나온 DNA를 읽는 ChIP-seq, 그리고 세 방법이 각각 답하는 질문과 한계의 대응을 함께 보인다.</figcaption></figure>
+  </section>
+  <section id="s4">
+  <h2>4. Promoter와 enhancer — 실험이 정한 구분</h2>
+  <p>앞 절의 방법으로 조절서열을 조사한 결과 두 종류가 드러났다. 구분의 기준이 실험적이라는 점이 중요하다.</p>
+  <p><strong>Promoter.</strong> 전사 시작점 바로 앞에 있고, 전사가 시작되는 자리를 정한다. <strong>위치와 방향이 고정</strong>되어 있다. 전사 시작점에서 떼어 놓거나 방향을 뒤집으면 기능하지 않는다. TATA box와 그 주변의 core promoter 요소, 그리고 그보다 약간 상류에 있는 인접 조절서열이 여기에 속한다.</p>
+  <p><strong>Enhancer.</strong> 전사를 강화하는데 성질이 다르다. 세 가지 성질로 정의된다.</p>
+  <p><strong>거리 독립성.</strong> 전사 시작점에서 수천, 때로는 수십만 염기 떨어져 있어도 작동한다.</p>
+  <p><strong>방향 독립성.</strong> 방향을 뒤집어도 작동한다.</p>
+  <p><strong>위치 독립성.</strong> 유전자 상류, 하류, 심지어 intron 안에 넣어도 작동한다.</p>
+  <p>세 성질은 모두 reporter 분석으로 확인되었다. Enhancer 구간을 떼어 다른 위치, 다른 방향에 붙여도 reporter의 발현이 올라가는 것이 그 근거다.</p>
+  <p>여기서 즉시 문제가 생긴다. <strong>거리와 방향에 구애받지 않는다면, enhancer는 어느 유전자를 활성화하는가.</strong> 수십만 염기 안에는 여러 유전자가 있다. 답의 핵심은 두 가지다. <strong>DNA가 고리를 만들어 enhancer와 promoter를 물리적으로 접촉시킨다</strong>는 것, 그리고 <strong>접촉할 수 있는 범위가 구조적으로 제한되어 있다</strong>는 것이다. 이 범위를 정하는 구조와 고리 형성의 기전은 M03-W04-L03에서 다룬다.</p>
+  <figure class="fig" id="fig-promoter-enhancer"><img src="assets/fig-promoter-enhancer.svg" alt="Promoter와 enhancer의 실험적 구분. 위치와 방향이 고정된 promoter와 떼어서 뒤집어 붙여도 작동하는 enhancer의 대비, reporter 분석으로 그 성질을 확인하는 설계, 그리고 거리에 구애받지 않는 결과로 생기는 표적 판정 문제와 DNA 고리를 통한 접촉을 함께 보인다." loading="lazy"><figcaption><b>그림 4</b> Promoter와 enhancer의 실험적 구분. 위치와 방향이 고정된 promoter와 떼어서 뒤집어 붙여도 작동하는 enhancer의 대비, reporter 분석으로 그 성질을 확인하는 설계, 그리고 거리에 구애받지 않는 결과로 생기는 표적 판정 문제와 DNA 고리를 통한 접촉을 함께 보인다.</figcaption></figure>
+  </section>
+  <section id="s5">
+  <h2>5. 전사인자는 모듈로 되어 있다 — 영역 교환 실험</h2>
+  <p>Enhancer에 붙는 단백질이 <strong>전사인자</strong>다. 전사인자가 어떻게 작동하는지는 하나의 깔끔한 실험으로 밝혀졌다.</p>
+  <p><strong>관찰.</strong> 효모의 전사인자 GAL4는 특정 서열에 붙고 전사를 활성화한다. 단백질을 잘라 보면 <strong>DNA에 붙는 부분</strong>과 <strong>전사를 활성화하는 부분</strong>이 서로 다른 구간에 있다.</p>
+  <p><strong>설계.</strong> 두 기능이 정말 분리되어 있는지 확인하려면 <strong>바꿔 붙여 보면 된다</strong>. GAL4의 DNA 결합 영역을 떼고, 전혀 다른 단백질인 세균의 LexA의 DNA 결합 영역을 대신 붙인다. 활성화 영역은 GAL4의 것을 그대로 둔다.</p>
+  <p><strong>결과.</strong> 이 잡종 단백질은 <strong>LexA의 표적 서열</strong>에 붙고, 거기서 전사를 활성화한다. 반대 조합도 성립한다.</p>
+  <p><strong>결론.</strong> 전사인자는 <strong>독립적으로 작동하는 두 모듈</strong>로 되어 있다.</p>
+  <p><strong>DNA 결합 영역(DNA-binding domain).</strong> 어느 서열에 붙을지를 정한다. 즉 <strong>어느 유전자를 조절할지</strong>를 결정한다.</p>
+  <p><strong>활성화 영역(activation domain).</strong> 붙은 자리에서 전사를 얼마나 올릴지를 정한다. 즉 <strong>얼마나 조절할지</strong>를 결정한다.</p>
+  <p>이 모듈 구조가 두 가지 결과를 낳는다.</p>
+  <p><strong>설계가 가능하다.</strong> 원하는 DNA 결합 영역과 원하는 활성화 영역을 조합해 <strong>임의의 유전자를 켜는 인공 전사인자</strong>를 만들 수 있다. Zinc finger 조합, TALE, 그리고 촉매 활성을 없앤 Cas9에 활성화 영역을 붙인 CRISPR 활성화 도구가 모두 이 원리다.</p>
+  <p><strong>상호작용을 측정할 수 있다.</strong> 두 단백질의 결합 여부를 전사 활성으로 바꾸어 읽을 수 있다. 한 단백질에 DNA 결합 영역을, 다른 단백질에 활성화 영역을 붙여 두면, 두 단백질이 결합할 때만 reporter가 켜진다. 이것이 <strong>two-hybrid 분석</strong>이다.</p>
+  <div class="box box--result"><b>핵심 정리</b> 영역 교환 실험이 모범적인 이유는 <strong>결론이 설계에서 직접 나온다</strong>는 데 있다. 두 기능이 분리되어 있다는 가설이 맞다면 바꿔 붙인 단백질은 새 서열에서 작동해야 하고, 틀리다면 작동하지 않아야 한다. 결과가 가설을 가를 수 있게 설계된 실험이다.</div>
+  <figure class="fig" id="fig-domain-swap"><img src="assets/fig-domain-swap.svg" alt="전사인자의 모듈 구조를 밝힌 영역 교환 실험. GAL4의 DNA 결합 영역을 LexA의 것으로 바꿔 붙이면 표적 서열이 LexA의 것으로 바뀌는 설계와 결과, 결합 영역이 대상을 정하고 활성화 영역이 정도를 정하는 분업, 그리고 그 결과로 가능해진 인공 전사인자와 two-hybrid 분석을 함께 보인다." loading="lazy"><figcaption><b>그림 5</b> 전사인자의 모듈 구조를 밝힌 영역 교환 실험. GAL4의 DNA 결합 영역을 LexA의 것으로 바꿔 붙이면 표적 서열이 LexA의 것으로 바뀌는 설계와 결과, 결합 영역이 대상을 정하고 활성화 영역이 정도를 정하는 분업, 그리고 그 결과로 가능해진 인공 전사인자와 two-hybrid 분석을 함께 보인다.</figcaption></figure>
+  </section>
+  <section id="s6">
+  <h2>6. DNA 결합 도메인의 구조 계열</h2>
+  <p>DNA 결합 영역은 무한히 다양하지 않다. 몇 개의 구조 계열로 분류된다. 계열마다 DNA를 붙잡는 방식이 정해져 있고, 서열 특이성은 그 틀 안에서 접촉하는 아미노산이 정한다.</p>
+  <p><strong>Helix-turn-helix와 homeodomain.</strong> 두 개의 α helix가 짧은 굽힘으로 이어진 구조다. 뒤쪽 helix가 DNA의 큰 홈에 들어가 염기와 접촉한다. 세균의 조절 단백질에서 처음 발견되었고, 진핵세포에서는 <strong>homeodomain</strong>이 같은 구조를 쓴다. Homeodomain 단백질은 발달에서 체축의 구획을 정한다.</p>
+  <p><strong>Zinc finger.</strong> Zn²⁺ 이온 하나가 cysteine과 histidine 잔기에 배위되어 작은 구조 단위를 접어 쥔다. 이 단위 하나가 약 3개의 염기쌍을 읽고, 여러 개가 줄지어 더 긴 서열을 인식한다. 손가락 수를 늘려 특이성을 올릴 수 있으므로 인공 DNA 결합 단백질의 설계에 쓰였다. 사람 전사인자 가운데 가장 큰 계열이다. <strong>Steroid hormone receptor</strong>도 zinc finger 계열의 변형을 쓴다.</p>
+  <p><strong>Leucine zipper.</strong> 긴 α helix에 leucine이 7잔기마다 반복되어 한쪽 면에 소수성 띠를 만든다. 두 분자의 소수성 면이 서로 감겨 이량체가 되고, 각 분자에서 뻗어 나온 염기성 구간이 DNA를 붙잡는다.</p>
+  <p><strong>Helix-loop-helix.</strong> 두 helix가 고리로 이어진 구조로 역시 이량체를 만든다. 근육 분화를 정하는 MyoD가 이 계열이다.</p>
+  <p>뒤의 두 계열에서 중요한 성질이 나온다. <strong>이량체 형성이 특이성을 바꾼다.</strong></p>
+  <p>같은 계열의 서로 다른 단백질이 짝을 이룰 수 있다. 세 종류의 단백질이 있다면 동종 이량체 3가지와 이종 이량체 3가지, 모두 6가지 조합이 가능하고 각 조합이 다른 서열을 선호한다. <strong>단백질의 종류 수보다 많은 결합 특이성</strong>이 조합에서 나온다.</p>
+  <p>여기서 억제의 한 방식도 나온다. <strong>활성화 영역이 없는 짝</strong>이 끼어들어 이량체를 만들면, 그 이량체는 DNA에 붙어도 전사를 올리지 못하고 자리만 차지한다. 짝의 양을 바꾸는 것으로 발현을 끌 수 있다.</p>
+  <figure class="fig" id="fig-binding-domains"><img src="assets/fig-binding-domains.svg" alt="DNA 결합 도메인의 네 가지 구조 계열과 이량체 형성의 효과. Helix-turn-helix와 homeodomain이 큰 홈에 들어가는 방식, Zn 이온이 접어 쥐는 zinc finger와 손가락 수에 따른 인식 길이, leucine의 7잔기 반복이 만드는 소수성 면과 감긴 이량체, helix-loop-helix의 구성, 그리고 이종 이량체의 조합이 단백질 수보다 많은 특이성을 만드는 관계를 함께 보인다." loading="lazy"><figcaption><b>그림 6</b> DNA 결합 도메인의 네 가지 구조 계열과 이량체 형성의 효과. Helix-turn-helix와 homeodomain이 큰 홈에 들어가는 방식, Zn 이온이 접어 쥐는 zinc finger와 손가락 수에 따른 인식 길이, leucine의 7잔기 반복이 만드는 소수성 면과 감긴 이량체, helix-loop-helix의 구성, 그리고 이종 이량체의 조합이 단백질 수보다 많은 특이성을 만드는 관계를 함께 보인다.</figcaption></figure>
+  </section>
+  <section id="s7">
+  <h2>7. 활성화 영역은 무엇을 하는가</h2>
+  <p>DNA 결합 영역이 자리를 정했다면, 활성화 영역이 실제로 전사를 올려야 한다. 그 일은 두 가지로 나뉜다.</p>
+  <p><strong>일 1: 염색질을 열어 준다.</strong> 활성화 영역이 <strong>공동활성화인자(coactivator)</strong> 를 불러들인다. 공동활성화인자 가운데 상당수는 효소다. <strong>histone acetyltransferase</strong>는 histone에 acetyl기를 붙여 결합을 느슨하게 하고, <strong>chromatin remodeling 복합체</strong>는 ATP를 써서 nucleosome을 밀어낸다. 그 결과 promoter의 DNA가 노출된다.</p>
+  <p><strong>일 2: 전사 기구를 모은다.</strong> 활성화 영역은 <strong>mediator</strong> 복합체와 상호작용한다. Mediator는 20개 이상의 소단위로 된 큰 복합체로, 한쪽은 전사인자와 닿고 다른 쪽은 Pol II와 general transcription factor에 닿는다. 멀리 있는 enhancer에 붙은 전사인자의 신호를 promoter의 전사 기구로 <strong>전달하는 중계자</strong>다.</p>
+  <p>두 일의 관계를 정리하면 다음과 같다. 전사인자는 <strong>직접 전사를 시작하지 않는다.</strong> 전사인자는 신호를 제공하고, 실제로 염색질을 열고 폴리머라제를 앉히는 일은 공동활성화인자와 mediator, general transcription factor가 한다. 전사인자가 <strong>어디에서 얼마나</strong>를 정하고, 나머지 기구가 <strong>어떻게</strong>를 수행한다.</p>
+  <p>억제는 대칭적으로 작동한다. <strong>억제인자(repressor)</strong> 가 <strong>공동억제인자(corepressor)</strong> 를 불러들이고, 공동억제인자는 <strong>histone deacetylase</strong>나 methyltransferase를 동반해 염색질을 닫는다. 활성화와 억제가 같은 지점에서 반대 방향으로 작동하므로, 한 유전자의 발현은 양쪽 신호의 균형으로 정해진다.</p>
+  <div class="box box--limit"><b>임상 연계</b> <strong>임상 연계 </strong> 이 구조 때문에 <strong>공동활성화인자와 공동억제인자가 약물 표적</strong>이 된다. 전사인자 자체는 결합 홈이 평평해 저분자 약물을 붙이기 어렵지만, 그 아래에서 일하는 효소는 표적으로 삼기 쉽다. <strong>HDAC 억제제</strong>(vorinostat, romidepsin)가 T세포 림프종 치료에 쓰이고, acetyl 표지를 읽는 단백질을 막는 BET 억제제가 개발되었다. 급성 전골수성 백혈병에서 PML-RARA 융합 단백질이 공동억제인자를 비정상적으로 붙잡고 있는 것이 병태의 핵심이고, all-trans retinoic acid가 그 결합을 풀어 분화를 재개시킨다. 전사 조절의 기전을 알면 치료 지점이 보인다는 예다.</div>
+  <figure class="fig" id="fig-activation-domain"><img src="assets/fig-activation-domain.svg" alt="활성화 영역이 수행하는 두 가지 일. 공동활성화인자를 불러 histone acetylation과 nucleosome 재배치로 염색질을 여는 경로, mediator가 enhancer의 전사인자와 promoter의 Pol II를 잇는 중계 구조, 전사인자가 어디와 얼마를 정하고 다른 기구가 어떻게를 수행하는 분업, 그리고 억제인자-공동억제인자가 같은 지점에서 반대로 작동하는 대칭을 함께 보인다." loading="lazy"><figcaption><b>그림 7</b> 활성화 영역이 수행하는 두 가지 일. 공동활성화인자를 불러 histone acetylation과 nucleosome 재배치로 염색질을 여는 경로, mediator가 enhancer의 전사인자와 promoter의 Pol II를 잇는 중계 구조, 전사인자가 어디와 얼마를 정하고 다른 기구가 어떻게를 수행하는 분업, 그리고 억제인자-공동억제인자가 같은 지점에서 반대로 작동하는 대칭을 함께 보인다.</figcaption></figure>
+  </section>
+  <section id="s8">
+  <h2>8. 세포 외 신호가 promoter까지 도달하는 경로</h2>
+  <p>전사인자는 언제 활성화되는가. 세포 밖의 신호가 전사인자를 켜는 방식은 네 가지로 정리된다. 구분하는 기준은 <strong>전사인자가 활성화되기 전에 어디에서 대기하는가</strong>다.</p>
+  <p><strong>경로 1: 세포질에 대기하다 리간드와 함께 들어간다 — steroid hormone receptor.</strong> Cortisol, estrogen, testosterone 같은 <strong>스테로이드</strong>는 지질이므로 세포막을 그대로 통과한다. 세포질에 있는 수용체와 결합하면 수용체의 구조가 바뀌어 억제 단백질이 떨어지고, 수용체가 핵으로 들어가 표적 서열(hormone response element)에 붙어 전사를 조절한다. <strong>수용체 자체가 전사인자</strong>이므로 신호 전달 단계가 가장 짧다.</p>
+  <p><strong>경로 2: 핵 안에 대기하다 인산화로 켜진다 — CREB.</strong> 호르몬이 G protein 연결 수용체에 붙으면 cAMP가 올라가고 protein kinase A가 활성화된다. PKA의 촉매 소단위가 핵으로 들어가 <strong>CREB</strong>을 인산화한다. 인산화된 CREB은 공동활성화인자 CBP를 불러들여 cAMP response element를 가진 유전자를 켠다.</p>
+  <p><strong>경로 3: 세포질에 대기하다 인산화 후 이량체로 들어간다 — STAT.</strong> Cytokine이나 성장인자가 수용체에 붙으면 수용체에 결합한 <strong>JAK</strong> kinase가 <strong>STAT</strong>을 인산화한다. 인산화된 STAT은 서로 결합해 이량체가 되고, 그 형태에서만 핵으로 들어가 표적 유전자를 켠다.</p>
+  <p><strong>경로 4: 세포질에 묶여 있다 억제자가 분해되며 풀린다 — NF-κB.</strong> NF-κB는 평소 <strong>IκB</strong>에 붙잡혀 세포질에 머문다. 염증 신호가 오면 IκB가 인산화되고 ubiquitin화되어 proteasome에서 분해된다. 묶여 있던 NF-κB가 풀려 핵으로 들어가 염증 유전자를 켠다.</p>
+  <div class="tw"><table><thead><tr><th>경로</th><th>대기 장소</th><th>활성화 방식</th><th>신호</th></tr></thead><tbody><tr><td>Steroid receptor</td><td>세포질</td><td>리간드 결합</td><td>스테로이드 호르몬</td></tr><tr><td>CREB</td><td>핵</td><td>인산화</td><td>cAMP, PKA</td></tr><tr><td>STAT</td><td>세포질</td><td>인산화 후 이량체화</td><td>cytokine, JAK</td></tr><tr><td>NF-κB</td><td>세포질 (IκB에 결합)</td><td>억제자의 분해</td><td>염증 신호</td></tr></tbody></table></div>
+  <p>네 경로에서 공통 원리를 읽어야 한다. <strong>전사인자는 만들어진 뒤 바로 일하지 않는다.</strong> 이미 존재하는 단백질을 <strong>대기 상태에서 활성 상태로 전환</strong>하는 방식이 쓰인다. 새로 합성하는 것보다 훨씬 빠르기 때문이다. 신호가 오고 수분 안에 표적 유전자가 켜지는 것은 전사인자가 이미 준비되어 있어야만 가능하다.</p>
+  <div class="box box--limit"><b>임상 연계</b> <strong>임상 연계 </strong> 네 경로가 모두 약물 표적이다. <strong>글루코코르티코이드</strong>는 경로 1을 직접 쓰는 약물로, 수용체를 통해 염증 유전자를 억제하고 동시에 NF-κB의 작용을 방해한다. 광범위한 효과와 광범위한 부작용이 같은 기전에서 나온다. 수용체가 수백 개의 유전자를 함께 조절하기 때문이다. <strong>JAK 억제제</strong>(tofacitinib, baricitinib)는 경로 3을 차단해 류마티스 관절염과 아토피 피부염에 쓰이며, 여러 cytokine 신호가 JAK-STAT으로 모이므로 하나의 약물이 여러 경로를 동시에 끈다. <strong>프로테아솜 억제제</strong>(bortezomib)는 IκB의 분해를 막아 NF-κB의 활성화를 간접적으로 억제한다.</div>
+  <figure class="fig" id="fig-signal-to-promoter"><img src="assets/fig-signal-to-promoter.svg" alt="세포 외 신호가 promoter에 도달하는 네 경로. 막을 통과한 스테로이드가 세포질 수용체와 결합해 함께 핵으로 들어가는 경로, 핵에 대기하던 CREB이 PKA에 인산화되는 경로, JAK에 인산화된 STAT이 이량체가 되어야 들어가는 경로, IκB의 분해로 풀려나는 NF-κB 경로, 그리고 네 경로 모두 새 합성이 아니라 대기 상태의 전환이라는 공통 원리를 함께 보인다." loading="lazy"><figcaption><b>그림 8</b> 세포 외 신호가 promoter에 도달하는 네 경로. 막을 통과한 스테로이드가 세포질 수용체와 결합해 함께 핵으로 들어가는 경로, 핵에 대기하던 CREB이 PKA에 인산화되는 경로, JAK에 인산화된 STAT이 이량체가 되어야 들어가는 경로, IκB의 분해로 풀려나는 NF-κB 경로, 그리고 네 경로 모두 새 합성이 아니라 대기 상태의 전환이라는 공통 원리를 함께 보인다.</figcaption></figure>
+  </section>
+  <section id="s9">
+  <h2>9. 조직 특이적 발현과 master regulator</h2>
+  <p>같은 유전체에서 200종이 넘는 세포 종류가 나온다. 전사인자 하나가 그 차이를 만드는 것은 아니다. 두 원리가 함께 작동한다.</p>
+  <p><strong>원리 1: 조합 조절.</strong> 하나의 유전자 주변에는 여러 개의 조절서열이 있고, 각각에 다른 전사인자가 붙는다. 그 유전자가 켜지는 조건은 <strong>필요한 전사인자가 모두 있는 것</strong>이다. 조절서열이 다섯 개라면 다섯 개의 조합이 세포마다 다를 수 있다.</p>
+  <p>이 구조의 이점은 수에서 나온다. 전사인자가 N종 있을 때 조합의 수는 2의 N제곱으로 늘어난다. 사람이 약 1,600종의 전사인자로 수백 종의 세포를 만들 수 있는 것은 각 유전자가 전사인자 하나가 아니라 <strong>조합</strong>에 반응하기 때문이다.</p>
+  <p><strong>원리 2: Master regulator.</strong> 그러나 모든 유전자가 독립적으로 조절되는 것은 아니다. 하나의 전사인자가 <strong>한 세포 계통 전체의 유전자군</strong>을 켜는 경우가 있다. 이런 인자를 master regulator라 한다.</p>
+  <p><strong>MyoD</strong>가 전형이다. MyoD는 helix-loop-helix 계열의 전사인자로, 근육 세포에서 발현된다. 중요한 점은 MyoD를 <strong>근육이 아닌 세포에 강제로 발현시키면 그 세포가 근육세포의 성질을 얻는다</strong>는 것이다. 섬유아세포에 MyoD를 넣으면 근육 특이 유전자들이 켜지고 세포가 융합해 근섬유 모양이 된다.</p>
+  <p>이 결과가 뜻하는 바가 크다. <strong>세포의 정체성이 소수의 전사인자로 지정될 수 있다.</strong> 그 전사인자가 자기 자신의 발현을 유지하고 동시에 다른 계통의 유전자를 억제하면, 상태가 안정하게 유지된다.</p>
+  <p>이 원리가 <strong>역분화(reprogramming)</strong> 로 이어졌다. 체세포에 네 개의 전사인자(Oct4, Sox2, Klf4, c-Myc)를 넣으면 세포가 배아줄기세포에 가까운 상태로 되돌아간다. 유도 만능 줄기세포(iPSC)의 제작이다. 분화가 되돌릴 수 없는 과정이라는 생각이 이 실험으로 뒤집혔다.</p>
+  <div class="box box--result"><b>핵심 정리</b> 이 절의 요점은 <strong>정체성이 유전체에 있지 않고 전사인자의 조합에 있다</strong>는 것이다. 유전체는 모든 세포에서 같으므로, 세포가 무엇인지는 어느 전사인자 집합이 활성인지로 정해진다. 그 집합을 바꾸면 세포가 바뀐다.</div>
+  <figure class="fig" id="fig-master-regulator"><img src="assets/fig-master-regulator.svg" alt="조직 특이적 발현을 만드는 두 원리. 여러 조절서열에 붙는 전사인자의 조합이 유전자를 켜는 조건이 되는 구조와 조합 수가 지수로 늘어나는 관계, MyoD를 비근육 세포에 강제 발현시켰을 때 근육 유전자군이 켜지는 결과, 자기 유지와 타 계통 억제로 상태가 고정되는 회로, 그리고 네 전사인자로 체세포를 되돌리는 역분화를 함께 보인다." loading="lazy"><figcaption><b>그림 9</b> 조직 특이적 발현을 만드는 두 원리. 여러 조절서열에 붙는 전사인자의 조합이 유전자를 켜는 조건이 되는 구조와 조합 수가 지수로 늘어나는 관계, MyoD를 비근육 세포에 강제 발현시켰을 때 근육 유전자군이 켜지는 결과, 자기 유지와 타 계통 억제로 상태가 고정되는 회로, 그리고 네 전사인자로 체세포를 되돌리는 역분화를 함께 보인다.</figcaption></figure>
+  </section>
+  <section id="s10">
+  <h2>10. 후성유전 조절 — 전사 조절에 더해지는 층</h2>
+  <p>지금까지 다룬 조절은 <strong>전사인자가 DNA의 조절서열에 붙는다</strong>는 그림이었다. 여기에 빠진 것이 있다. 핵 안의 DNA는 벌거벗은 상태가 아니라 <strong>nucleosome에 감겨 있다</strong>.</p>
+  <p><strong>Nucleosome이 문제를 만든다.</strong> DNA가 histone 8량체를 약 1.7회 감고 있으면 그 구간의 서열은 전사인자에 노출되지 않는다. 즉 <strong>조절서열이 존재한다는 것과 접근 가능하다는 것이 다르다.</strong> 같은 서열이 어떤 세포에서는 열려 있고 어떤 세포에서는 닫혀 있다.</p>
+  <p>이 접근성의 상태를 정하고 유지하는 기전이 <strong>후성유전 조절(epigenetic regulation)</strong> 이다. 세 종류가 함께 작동한다.</p>
+  <p><strong>Chromatin remodeling.</strong> ATP를 써서 nucleosome을 밀거나 떼어 낸다. 조절서열이 노출되거나 가려진다.</p>
+  <p><strong>Histone 변형.</strong> Histone의 꼬리에 acetyl기, methyl기, phosphate기 등이 붙는다. Acetylation은 대체로 열린 상태와, 특정 위치의 methylation은 닫힌 상태와 연관된다. 변형은 그 자체로 결합을 바꾸기도 하고, 그 표지를 읽는 단백질을 불러들이기도 한다.</p>
+  <p><strong>DNA methylation.</strong> CpG의 cytosine에 methyl기가 붙는다. Promoter 영역의 CpG가 methyl화되면 그 유전자는 대개 꺼진다.</p>
+  <p><strong>후성유전이라는 말의 범위를 정확히 해야 한다.</strong> 이 용어는 <strong>DNA 염기서열의 변화 없이 유전자 발현 상태가 바뀌고, 그 상태가 세포 분열을 넘어 유지되는 현상</strong>을 가리킨다. 두 조건이 모두 필요하다.</p>
+  <p>따라서 다음 셋을 구분해야 한다.</p>
+  <p><strong>일시적 조절.</strong> 신호에 따라 전사인자가 켜지고 꺼지는 것. 분열을 넘어 유지되지 않으므로 후성유전이 아니다.</p>
+  <p><strong>세포 분열을 넘는 유지.</strong> 분화한 세포가 분열해도 같은 정체성을 유지하는 것. 후성유전 조절의 본래 범위다. DNA methylation 양상이 복제 후 복원되는 기전이 그 예다.</p>
+  <p><strong>세대를 넘는 전달.</strong> 부모의 경험이 자손의 발현 상태로 전달되는 것. 포유류에서 명확히 입증된 예는 <strong>각인(imprinting)</strong> 처럼 제한적이며, 일반화된 주장은 근거가 약하다.</p>
+  <p>세 기전의 분자 수준 상세와 유지 기전, 암에서의 이상은 M03-W05-L01에서 다룬다.</p>
+  <div class="box box--limit"><b>임상 연계</b> <strong>임상 연계 </strong> 후성유전 변화는 <strong>되돌릴 수 있다</strong>는 점에서 치료 표적으로서 특별하다. 유전자 변이는 고치기 어렵지만 methyl기와 acetyl기는 붙이고 떼는 효소가 있으므로 약물로 개입할 수 있다. <strong>DNA methyltransferase 억제제</strong>(azacitidine, decitabine)가 골수이형성증후군과 급성 골수성 백혈병에 쓰이고, <strong>HDAC 억제제</strong>가 T세포 림프종에 쓰인다. 두 약물군 모두 특정 유전자를 표적으로 하지 않고 발현 양상 전체를 바꾸므로, 효과와 독성의 예측이 어렵다는 공통의 한계가 있다.</div>
+  <figure class="fig" id="fig-epigenetic-layer"><img src="assets/fig-epigenetic-layer.svg" alt="후성유전 조절이 전사 조절에 더하는 층. Nucleosome에 감긴 DNA에서 조절서열의 존재와 접근 가능성이 분리되는 구조, chromatin remodeling과 histone 변형, DNA methylation의 세 기전, 그리고 일시적 조절·분열을 넘는 유지·세대를 넘는 전달 세 범주를 구분하는 기준을 함께 보인다." loading="lazy"><figcaption><b>그림 10</b> 후성유전 조절이 전사 조절에 더하는 층. Nucleosome에 감긴 DNA에서 조절서열의 존재와 접근 가능성이 분리되는 구조, chromatin remodeling과 histone 변형, DNA methylation의 세 기전, 그리고 일시적 조절·분열을 넘는 유지·세대를 넘는 전달 세 범주를 구분하는 기준을 함께 보인다.</figcaption></figure>
+  <div class="box box--result"><b>핵심 정리</b> 이 수업 전체의 요점은 <strong>발현 조절이 두 질문으로 나뉜다</strong>는 것이다. 첫째, 어느 전사인자가 활성인가. 둘째, 그 전사인자가 붙을 자리가 열려 있는가. 전사인자가 있어도 염색질이 닫혀 있으면 유전자는 켜지지 않고, 염색질이 열려 있어도 전사인자가 없으면 켜지지 않는다. 두 조건이 함께 충족될 때만 전사가 일어나며, 이것이 같은 유전체에서 다른 세포가 나오는 근거다.</div>
+  </section>
   <h2>확인 문항</h2>
-  <p>작성 예정. 5개 이상, 절반 이상은 판단을 묻는 문항으로 한다.</p>
-
+  <ol class="quiz"><li><p class="qq">발현 조절이 여러 단계에서 가능한데 전사 개시가 조절의 중심이 되는 이유를 두 가지로 설명하시오.</p><details><summary>해설</summary><p>첫째, 경제성이다. 전사 단계에서 끄면 가공·번역·분해에 자원이 들지 않는다. 뒤의 단계에서 없애는 것은 이미 투입한 자원을 버리는 일이다. 둘째, 증폭이다. 전사체 하나에서 단백질 수백 개가 나오므로 전사량의 작은 차이가 단백질량의 큰 차이로 증폭된다. 따라서 발달과 분화, 신호 반응의 대부분이 전사 수준에서 결정되고 나머지 단계는 그 틀 안에서 미세 조정을 한다.</p></details></li><li><p class="qq">결실 분석과 linker scanning이 각각 답하는 질문을 구분하고, linker scanning이 더 높은 해상도를 주는 이유를 설명하시오.</p><details><summary>해설</summary><p>결실 분석은 조사 구간의 5′ 쪽을 점점 잘라 내면서 발현이 떨어지는 지점을 찾으므로, 필요한 서열이 들어 있는 대략의 구간을 좁힌다. Linker scanning은 전체 길이를 유지한 채 짧은 구간씩 무관한 서열로 바꿔치기하므로 어느 구간이 필요한지 직접 특정한다. 결실 분석에서는 길이가 짧아지는 변화가 함께 일어나 전사 시작점과 조절서열 사이의 거리 변화가 결과에 섞이는데, linker scanning은 길이가 변하지 않으므로 길이 효과와 서열 자체의 효과를 분리할 수 있다.</p></details></li><li><p class="qq">DNase footprinting, EMSA, ChIP-seq가 각각 답하는 질문과 한계를 쓰고, 세 방법을 함께 써야 하는 이유를 설명하시오.</p><details><summary>해설</summary><p>DNase footprinting은 단백질이 가려 절단되지 않은 구간을 띠의 빈자리로 보여주어 어느 염기에 붙는지를 알려주지만 시험관 조건에서 정제된 성분으로 수행한다. EMSA는 단백질이 붙은 DNA가 느려지는 띠 이동으로 결합 여부와 서열 특이성을 보지만 위치 해상도가 낮다. ChIP-seq는 세포를 고정해 항체로 침전시켜 살아 있는 세포에서 실제 결합 위치를 유전체 전체에서 얻지만 좋은 항체가 필요하고 간접 결합까지 포함된다. 세 방법이 결합 위치, 결합 여부와 특이성, 생체 내 실제 점유라는 다른 질문에 답하므로 하나로는 결론을 낼 수 없다.</p></details></li><li><p class="qq">Enhancer를 정의하는 세 가지 성질을 쓰고, 그 성질 때문에 생기는 문제와 해결의 핵심을 설명하시오.</p><details><summary>해설</summary><p>거리 독립성(수천에서 수십만 염기 떨어져도 작동), 방향 독립성(뒤집어도 작동), 위치 독립성(상류·하류·intron 안에서도 작동)이다. 세 성질은 enhancer 구간을 떼어 다른 위치와 방향에 붙여도 reporter 발현이 올라가는 것으로 확인되었다. 그 결과 생기는 문제는 수십만 염기 안에 여러 유전자가 있을 때 어느 유전자를 활성화하는지가 정해지지 않는다는 것이다. 해결의 핵심은 DNA가 고리를 만들어 enhancer와 promoter를 물리적으로 접촉시키며, 접촉할 수 있는 범위가 구조적으로 제한되어 있다는 두 가지다.</p></details></li><li><p class="qq">영역 교환 실험의 설계와 결과를 쓰고, 그 결과에서 어떤 결론이 나오는지 설명하시오.</p><details><summary>해설</summary><p>GAL4에서 DNA 결합 영역을 떼고 전혀 다른 단백질인 세균 LexA의 DNA 결합 영역을 붙이되 활성화 영역은 GAL4의 것을 남긴다. 이 잡종 단백질은 LexA의 표적 서열에 붙어 거기서 전사를 활성화하며 반대 조합도 성립한다. 결론은 전사인자가 독립적으로 작동하는 두 모듈로 되어 있다는 것이다. DNA 결합 영역이 어느 서열에 붙을지, 즉 어느 유전자를 조절할지를 정하고, 활성화 영역이 전사를 얼마나 올릴지를 정한다. 이 실험이 모범적인 이유는 가설이 맞으면 잡종이 새 서열에서 작동하고 틀리면 작동하지 않도록 결과가 가설을 가를 수 있게 설계되었다는 점이다.</p></details></li><li><p class="qq">전사인자의 모듈 구조가 가능하게 한 두 가지 응용을 쓰고 각각의 원리를 설명하시오.</p><details><summary>해설</summary><p>첫째, 인공 전사인자의 설계다. 원하는 DNA 결합 영역과 원하는 활성화 영역을 조합하면 임의의 유전자를 켤 수 있다. Zinc finger 조합, TALE, 촉매 활성을 없앤 Cas9에 활성화 영역을 붙인 CRISPR 활성화 도구가 모두 이 원리다. 둘째, two-hybrid 분석이다. 한 단백질에 DNA 결합 영역을, 다른 단백질에 활성화 영역을 각각 붙여 두면 두 단백질이 결합할 때만 두 모듈이 한자리에 모여 reporter가 켜진다. 단백질 간 상호작용을 전사 활성으로 바꾸어 읽는 방법이다.</p></details></li><li><p class="qq">Leucine zipper와 helix-loop-helix 계열에서 이량체 형성이 결합 특이성에 미치는 영향을 설명하고, 그 구조가 어떻게 억제 수단이 되는지 쓰시오.</p><details><summary>해설</summary><p>같은 계열의 서로 다른 단백질이 짝을 이룰 수 있으므로, 세 종류가 있으면 동종 이량체 3가지와 이종 이량체 3가지로 모두 6가지 조합이 생기고 각 조합이 다른 서열을 선호한다. 따라서 단백질의 종류 수보다 많은 결합 특이성이 조합에서 나온다. 억제 수단이 되는 방식은 활성화 영역이 없는 짝이 끼어들어 이량체를 만드는 것이다. 그 이량체는 DNA에 붙어도 전사를 올리지 못하고 자리만 차지하므로, 짝의 양을 바꾸는 것만으로 발현을 끌 수 있다.</p></details></li><li><p class="qq">활성화 영역이 수행하는 두 가지 일을 쓰고, 전사인자가 전사를 직접 시작하지 않는다는 말의 뜻을 설명하시오.</p><details><summary>해설</summary><p>첫째, 공동활성화인자를 불러들여 염색질을 연다. Histone acetyltransferase가 acetyl기를 붙여 결합을 느슨하게 하고 chromatin remodeling 복합체가 ATP를 써서 nucleosome을 밀어낸다. 둘째, mediator 복합체와 상호작용해 전사 기구를 모은다. Mediator는 한쪽이 전사인자와, 다른 쪽이 Pol II와 general transcription factor에 닿는 중계자다. 전사인자가 직접 전사를 시작하지 않는다는 것은, 전사인자는 어디에서 얼마나 할지를 정하는 신호를 제공할 뿐이고 실제로 염색질을 열고 폴리머라제를 앉히는 일은 공동활성화인자·mediator·general transcription factor가 수행한다는 뜻이다.</p></details></li><li><p class="qq">세포 외 신호가 promoter에 도달하는 네 경로를 전사인자의 대기 장소와 활성화 방식으로 구분하시오.</p><details><summary>해설</summary><p>Steroid hormone receptor는 세포질에서 대기하다 막을 통과한 리간드와 결합하면 억제 단백질이 떨어지고 핵으로 들어가며, 수용체 자체가 전사인자여서 단계가 가장 짧다. CREB은 핵 안에서 대기하다 cAMP로 활성화된 protein kinase A에 인산화되어 CBP를 불러들인다. STAT은 세포질에서 대기하다 수용체에 결합한 JAK에 인산화되고 이량체가 되어야 핵으로 들어간다. NF-κB는 IκB에 붙잡혀 세포질에 머물다 염증 신호로 IκB가 인산화·ubiquitin화되어 분해되면 풀려 핵으로 들어간다.</p></details></li><li><p class="qq">네 경로에서 읽어야 하는 공통 원리를 쓰고, 그 원리가 필요한 이유를 설명하시오.</p><details><summary>해설</summary><p>공통 원리는 전사인자를 새로 합성하는 것이 아니라 이미 존재하는 단백질을 대기 상태에서 활성 상태로 전환한다는 것이다. 활성화 방식은 리간드 결합, 인산화, 이량체화, 억제자의 분해로 다르지만 모두 기존 단백질의 상태 변화다. 이 방식이 필요한 이유는 속도다. 전사와 번역을 새로 거치면 수십 분이 걸리는데, 신호가 오고 수분 안에 표적 유전자가 켜져야 하는 반응이 많다. 전사인자가 미리 준비되어 있어야만 그 속도가 가능하다.</p></details></li><li><p class="qq">MyoD 실험의 결과를 쓰고, 그 결과가 세포의 정체성에 대해 무엇을 말하는지 설명하시오.</p><details><summary>해설</summary><p>MyoD를 근육이 아닌 세포, 예컨대 섬유아세포에 강제로 발현시키면 근육 특이 유전자들이 켜지고 세포가 융합해 근섬유 모양이 된다. 이 결과는 세포의 정체성이 소수의 전사인자로 지정될 수 있다는 것을 뜻한다. 그 전사인자가 자기 자신의 발현을 유지하면서 다른 계통의 유전자를 억제하면 상태가 안정하게 유지된다. 유전체는 모든 세포에서 같으므로 세포가 무엇인지는 어느 전사인자 집합이 활성인지로 정해지며, 그 집합을 바꾸면 세포가 바뀐다. 네 전사인자로 체세포를 되돌린 유도 만능 줄기세포의 제작이 같은 원리의 연장이다.</p></details></li><li><p class="qq">'후성유전'이 가리키는 범위를 두 조건으로 정의하고, 그 기준으로 구분되는 세 가지를 설명하시오.</p><details><summary>해설</summary><p>DNA 염기서열의 변화 없이 발현 상태가 바뀌고, 그 상태가 세포 분열을 넘어 유지되는 현상을 가리킨다. 두 조건이 모두 필요하다. 이 기준으로 세 가지를 구분한다. 첫째, 신호에 따라 전사인자가 켜지고 꺼지는 일시적 조절은 분열을 넘어 유지되지 않으므로 후성유전이 아니다. 둘째, 분화한 세포가 분열해도 정체성을 유지하는 것은 후성유전 조절의 본래 범위이며, DNA methylation 양상이 복제 후 복원되는 기전이 그 예다. 셋째, 부모의 경험이 자손의 발현 상태로 전달된다는 세대를 넘는 전달은 포유류에서 각인처럼 제한적으로만 입증되어 있고 일반화된 주장은 근거가 약하다.</p></details></li><li><p class="qq">유전자가 켜지려면 두 조건이 함께 충족되어야 한다. 두 조건을 쓰고 그것이 같은 유전체에서 다른 세포가 나오는 근거가 되는 이유를 설명하시오.</p><details><summary>해설</summary><p>첫째, 필요한 전사인자가 활성 상태로 존재해야 한다. 둘째, 그 전사인자가 붙을 조절서열이 염색질에서 접근 가능한 상태로 열려 있어야 한다. 전사인자가 있어도 nucleosome에 가려 서열이 노출되지 않으면 켜지지 않고, 열려 있어도 전사인자가 없으면 켜지지 않는다. 세포마다 활성인 전사인자의 조합이 다르고 열려 있는 영역의 지도도 다르므로, 같은 유전체를 가진 세포들이 서로 다른 유전자 집합을 발현하게 된다.</p></details></li></ol>
   <h2>참고문헌</h2>
-  <p>작성 예정.</p>
-
-  <nav class="pager"><a href="../../../M01/W07/L01/index.html">← M01-W07-L01 RNA 합성과 가공</a><a href="../../../M01/W07/L03/index.html">M01-W07-L03 단백질 합성 →</a></nav>
-
+  <ol class="ref"><li>Cooper GM. The Cell: A Molecular Approach. 9th ed. Chapter 7: Transcriptional Regulation and Epigenetics. Oxford University Press; 2022.</li><li>Alberts B, et al. Molecular Biology of the Cell. 7th ed. Chapter 7: Control of Gene Expression. W.W. Norton; 2022.</li><li>Lambert SA, et al. The human transcription factors. Cell. 2018;172(4):650-65.</li><li>Spitz F, Furlong EEM. Transcription factors: from enhancer binding to developmental control. Nat Rev Genet. 2012;13(9):613-26.</li><li>Takahashi K, Yamanaka S. Induction of pluripotent stem cells from mouse embryonic and adult fibroblast cultures by defined factors. Cell. 2006;126(4):663-76.</li><li>Weintraub H, et al. Activation of muscle-specific genes in pigment, nerve, fat, liver, and fibroblast cell lines by forced expression of MyoD. Proc Natl Acad Sci USA. 1989;86(14):5434-8.</li><li>Allis CD, Jenuwein T. The molecular hallmarks of epigenetic control. Nat Rev Genet. 2016;17(8):487-500.</li></ol>
+  <nav class="pager"><a href="../../../M01/W07/L01/index.html">← M01-W07-L01</a><a href="../../../M01/W07/L03/index.html">M01-W07-L03 →</a></nav>
 </main>
 
 <footer class="foot wrap">
   <span>© 2026 Kim Jintae · Hanyang University</span>
   <a href="https://github.com/hoperiasd2/hoperiasd2.github.io">GitHub 저장소</a>
 </footer>
-
-<script src="../../../../assets/site.js"></script>
 </body>
 </html>

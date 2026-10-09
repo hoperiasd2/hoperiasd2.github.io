@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 450" width="880" height="450" role="img"
+ aria-label="Experimental distinction between promoter and enhancer: the promoter fixed in position and orientation, the enhancer still working when moved, flipped or placed in an intron, the reporter design that established this, and the targeting problem that follows with DNA looping as the answer.">
+ <style>
+  .bx{fill:#fff;stroke:#c6d2dd;stroke-width:1.8}.k{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .t{font:12px sans-serif;fill:#16191d}.tb{font:700 13px sans-serif;fill:#003c71}
+  .th{font:700 15px sans-serif;fill:#003c71}.s{font:11px sans-serif;fill:#4a5159}
+  .m{font:11px monospace;fill:#16191d}
+  .rna{stroke:#b3261e;stroke-width:3;fill:none}
+  .dna{stroke:#1a4f8a;stroke-width:3;fill:none}
+  .g{fill:#e3f0e4;stroke:#2e7d32;stroke-width:2.2}
+  .me{fill:#f2b705;stroke:#8a6300;stroke-width:1.6}
+  .ar{stroke:#003c71;stroke-width:2;fill:none;marker-end:url(#a)}
+  .arr{stroke:#b3261e;stroke-width:2;fill:none;marker-end:url(#b)}
+  .ex{fill:#f7dedc;stroke:#b3261e;stroke-width:2.2}
+  .pr{fill:#dce6f2;stroke:#1a4f8a;stroke-width:2.2}
+  .no{stroke:#b3261e;stroke-width:3;fill:none}
+ </style>
+ <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker>
+ <marker id="b" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#b3261e"/></marker></defs>
+ <text class="th" x="20" y="28">A  Promoter: position and orientation are fixed</text>
+ <line x1="20" y1="38" x2="430" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+ <line class="dna" x1="30" y1="76" x2="410" y2="76"/>
+ <rect class="k" x="120" y="64" width="60" height="24"/>
+ <text class="m" x="126" y="81">TATA</text>
+ <rect class="g" x="200" y="64" width="150" height="24"/>
+ <text class="s" x="232" y="81">transcribed</text>
+ <path class="arr" d="M200 58 L250 58"/>
+ <text class="s" x="30" y="108">sits immediately upstream and sets where transcription starts</text>
+ <text class="s" x="30" y="130">move it away or flip it and it stops working</text>
+
+ <text class="th" x="20" y="174">B  Enhancer: three independences</text>
+ <line x1="20" y1="184" x2="430" y2="184" stroke="#c6d2dd" stroke-width="1.5"/>
+ <line class="dna" x1="30" y1="216" x2="410" y2="216"/>
+ <rect class="ex" x="40" y="206" width="56" height="20"/><text class="s" x="46" y="221">enh</text>
+ <rect class="k" x="200" y="206" width="40" height="20"/>
+ <rect class="g" x="250" y="206" width="100" height="20"/>
+ <rect class="bx" x="356" y="204" width="54" height="24"/><text class="s" x="366" y="221">high</text>
+ <text class="s" x="30" y="244">1  far upstream: works</text>
+ <line class="dna" x1="30" y1="282" x2="410" y2="282"/>
+ <rect class="ex" x="40" y="272" width="56" height="20"/><text class="s" x="46" y="287">hne</text>
+ <rect class="k" x="200" y="272" width="40" height="20"/>
+ <rect class="g" x="250" y="272" width="100" height="20"/>
+ <rect class="bx" x="356" y="270" width="54" height="24"/><text class="s" x="366" y="287">high</text>
+ <text class="s" x="30" y="310">2  reversed orientation: works</text>
+ <line class="dna" x1="30" y1="348" x2="410" y2="348"/>
+ <rect class="k" x="60" y="338" width="40" height="20"/>
+ <rect class="g" x="110" y="338" width="200" height="20"/>
+ <rect class="ex" x="190" y="338" width="56" height="20"/><text class="s" x="196" y="353">enh</text>
+ <rect class="bx" x="356" y="336" width="54" height="24"/><text class="s" x="366" y="353">high</text>
+ <text class="s" x="30" y="376">3  inside an intron, downstream: works</text>
+ <text class="s" x="30" y="402">all three were shown with the reporter design of the previous section:</text>
+ <text class="s" x="30" y="420">cut the enhancer out, paste it elsewhere, measure the reporter</text>
+
+ <text class="th" x="460" y="174">C  The problem this creates</text>
+ <line x1="460" y1="184" x2="860" y2="184" stroke="#c6d2dd" stroke-width="1.5"/>
+ <line class="dna" x1="470" y1="226" x2="840" y2="226"/>
+ <rect class="ex" x="480" y="216" width="50" height="20"/><text class="s" x="486" y="231">enh</text>
+ <rect class="g" x="580" y="216" width="70" height="20"/><text class="s" x="596" y="258">gene A</text>
+ <rect class="g" x="680" y="216" width="70" height="20"/><text class="s" x="696" y="258">gene B</text>
+ <rect class="g" x="770" y="216" width="60" height="20"/><text class="s" x="782" y="258">gene C</text>
+ <text class="s" x="470" y="286">if distance and direction do not matter,</text>
+ <text class="s" x="470" y="304">which gene does the enhancer act on?</text>
+ <text class="th" x="460" y="336">D  Contact decides</text>
+ <path class="dna" d="M470 400 q70 -60 140 0"/>
+ <rect class="ex" x="458" y="390" width="34" height="18"/>
+ <rect class="k" x="596" y="390" width="34" height="18"/>
+ <ellipse class="pr" cx="540" cy="370" rx="40" ry="16"/>
+ <text class="s" x="512" y="375">contact</text>
+ <text class="s" x="650" y="382">a DNA loop brings the enhancer</text>
+ <text class="s" x="650" y="400">and the promoter physically together</text>
+ <text class="s" x="650" y="422">the range within which contact is</text>
+ <text class="s" x="650" y="440">possible is structurally limited</text>
+</svg>

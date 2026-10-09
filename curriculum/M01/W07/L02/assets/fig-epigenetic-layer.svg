@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 510" width="880" height="510" role="img"
+ aria-label="The layer epigenetic regulation adds to transcriptional control: DNA wound on nucleosomes so that a regulatory sequence may exist yet not be accessible, the three mechanisms of remodelling, histone modification and DNA methylation, and the criteria separating transient control, maintenance through cell division and transmission across generations.">
+ <style>
+  .bx{fill:#fff;stroke:#c6d2dd;stroke-width:1.8}.k{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .t{font:12px sans-serif;fill:#16191d}.tb{font:700 13px sans-serif;fill:#003c71}
+  .th{font:700 15px sans-serif;fill:#003c71}.s{font:11px sans-serif;fill:#4a5159}
+  .m{font:11px monospace;fill:#16191d}
+  .rna{stroke:#b3261e;stroke-width:3;fill:none}
+  .dna{stroke:#1a4f8a;stroke-width:3;fill:none}
+  .g{fill:#e3f0e4;stroke:#2e7d32;stroke-width:2.2}
+  .me{fill:#f2b705;stroke:#8a6300;stroke-width:1.6}
+  .ar{stroke:#003c71;stroke-width:2;fill:none;marker-end:url(#a)}
+  .arr{stroke:#b3261e;stroke-width:2;fill:none;marker-end:url(#b)}
+  .ex{fill:#f7dedc;stroke:#b3261e;stroke-width:2.2}
+  .pr{fill:#dce6f2;stroke:#1a4f8a;stroke-width:2.2}
+  .no{stroke:#b3261e;stroke-width:3;fill:none}
+ </style>
+ <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker>
+ <marker id="b" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#b3261e"/></marker></defs>
+ <text class="th" x="20" y="28">A  Existing and being accessible are not the same</text>
+ <line x1="20" y1="38" x2="430" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+ <circle class="bx" cx="90" cy="92" r="24"/><circle class="bx" cx="162" cy="92" r="24"/>
+ <circle class="bx" cx="234" cy="92" r="24"/><circle class="bx" cx="306" cy="92" r="24"/>
+ <path class="dna" d="M50 92 q40 -30 80 0 q40 30 80 0 q40 -30 80 0 q30 20 56 0"/>
+ <text class="s" x="50" y="140">DNA wraps the histone octamer about 1.7 times</text>
+ <text class="s" x="50" y="160">a sequence inside that turn is not exposed to a transcription factor</text>
+ <rect class="ex" x="30" y="176" width="380" height="60" rx="6"/>
+ <text class="s" x="42" y="198">the same regulatory sequence is open in one cell type</text>
+ <text class="s" x="42" y="220">and closed in another: presence does not mean availability</text>
+
+ <text class="th" x="460" y="28">B  Three mechanisms set the state</text>
+ <line x1="460" y1="38" x2="860" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+ <rect class="pr" x="470" y="52" width="370" height="60" rx="6"/>
+ <text class="tb" x="482" y="72">chromatin remodelling</text>
+ <text class="s" x="482" y="94">ATP-driven sliding or eviction of nucleosomes</text>
+ <rect class="k" x="470" y="122" width="370" height="78" rx="6"/>
+ <text class="tb" x="482" y="142">histone modification</text>
+ <text class="s" x="482" y="164">acetyl, methyl, phosphate groups on the tails</text>
+ <text class="s" x="482" y="184">acetylation tends to open; some methylations close</text>
+ <rect class="g" x="470" y="210" width="370" height="78" rx="6"/>
+ <text class="tb" x="482" y="230">DNA methylation</text>
+ <text class="s" x="482" y="252">methyl on the cytosine of a CpG</text>
+ <text class="s" x="482" y="272">a methylated promoter region is usually silent</text>
+
+ <text class="th" x="20" y="286">C  What the word covers: two conditions</text>
+ <line x1="20" y1="296" x2="430" y2="296" stroke="#c6d2dd" stroke-width="1.5"/>
+ <rect class="k" x="30" y="310" width="380" height="62" rx="6"/>
+ <text class="s" x="42" y="332">1  expression state changes with no change in DNA sequence</text>
+ <text class="s" x="42" y="354">2  that state survives cell division</text>
+ <text class="s" x="30" y="396">both are required, which is what the three rows below separate</text>
+
+ <text class="th" x="20" y="430">D  Three categories, kept distinct</text>
+ <line x1="20" y1="440" x2="860" y2="440" stroke="#c6d2dd" stroke-width="1.5"/>
+ <text class="s" x="40" y="460">transient control  factors switched on and off by a signal; not inherited through division, so NOT epigenetic</text>
+ <text class="s" x="40" y="478">maintenance through division  a differentiated cell keeps its identity; the proper scope of the term</text>
+ <text class="s" x="40" y="496">across generations  shown only in limited cases such as imprinting; broader claims rest on weak evidence</text>
+</svg>

@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 450" width="880" height="450" role="img"
+ aria-label="Levels at which gene expression can be controlled and why initiation of transcription is the main one: the order from chromatin accessibility to protein stability with the response speed of each, the saving made by switching off early, and the amplification of a small transcriptional difference into a large difference in protein.">
+ <style>
+  .bx{fill:#fff;stroke:#c6d2dd;stroke-width:1.8}.k{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .t{font:12px sans-serif;fill:#16191d}.tb{font:700 13px sans-serif;fill:#003c71}
+  .th{font:700 15px sans-serif;fill:#003c71}.s{font:11px sans-serif;fill:#4a5159}
+  .m{font:11px monospace;fill:#16191d}
+  .rna{stroke:#b3261e;stroke-width:3;fill:none}
+  .dna{stroke:#1a4f8a;stroke-width:3;fill:none}
+  .g{fill:#e3f0e4;stroke:#2e7d32;stroke-width:2.2}
+  .me{fill:#f2b705;stroke:#8a6300;stroke-width:1.6}
+  .ar{stroke:#003c71;stroke-width:2;fill:none;marker-end:url(#a)}
+  .arr{stroke:#b3261e;stroke-width:2;fill:none;marker-end:url(#b)}
+  .ex{fill:#f7dedc;stroke:#b3261e;stroke-width:2.2}
+  .pr{fill:#dce6f2;stroke:#1a4f8a;stroke-width:2.2}
+  .no{stroke:#b3261e;stroke-width:3;fill:none}
+ </style>
+ <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker>
+ <marker id="b" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#b3261e"/></marker></defs>
+ <text class="th" x="20" y="28">A  Every step is a possible control point</text>
+ <line x1="20" y1="38" x2="500" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+ <rect class="pr" x="30" y="52" width="300" height="34" rx="5"/>
+ <text class="tb" x="40" y="74">chromatin accessibility</text>
+ <text class="s" x="344" y="74">slow, long lasting</text>
+ <rect class="k" x="30" y="92" width="300" height="34" rx="5"/>
+ <text class="tb" x="40" y="114">initiation of transcription</text>
+ <text class="s" x="344" y="114">minutes to hours</text>
+ <rect class="bx" x="30" y="132" width="300" height="30" rx="5"/>
+ <text class="t" x="40" y="152">elongation (release of paused Pol II)</text>
+ <text class="s" x="344" y="152">fast</text>
+ <rect class="bx" x="30" y="168" width="300" height="30" rx="5"/>
+ <text class="t" x="40" y="188">RNA processing (alternative splicing)</text>
+ <text class="s" x="344" y="188">intermediate</text>
+ <rect class="bx" x="30" y="204" width="300" height="30" rx="5"/>
+ <text class="t" x="40" y="224">transcript lifetime (3' UTR, miRNA)</text>
+ <text class="s" x="344" y="224">intermediate</text>
+ <rect class="bx" x="30" y="240" width="300" height="30" rx="5"/>
+ <text class="t" x="40" y="260">translation efficiency</text>
+ <text class="s" x="344" y="260">fast</text>
+ <rect class="bx" x="30" y="276" width="300" height="30" rx="5"/>
+ <text class="t" x="40" y="296">protein stability (ubiquitin, proteasome)</text>
+ <text class="s" x="344" y="296">fast</text>
+
+ <text class="th" x="540" y="28">B  Why initiation is the centre</text>
+ <line x1="540" y1="38" x2="860" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+ <rect class="k" x="550" y="52" width="290" height="104" rx="6"/>
+ <text class="tb" x="560" y="72">1  Economy</text>
+ <text class="s" x="560" y="94">switch off here and nothing is spent</text>
+ <text class="s" x="560" y="112">on processing, translation or decay</text>
+ <text class="s" x="560" y="134">discarding a finished protein wastes</text>
+ <text class="s" x="560" y="152">everything already invested</text>
+ <rect class="k" x="550" y="170" width="290" height="124" rx="6"/>
+ <text class="tb" x="560" y="190">2  Amplification</text>
+ <text class="s" x="560" y="212">1 gene</text>
+ <path class="ar" d="M620 208 L672 208"/>
+ <text class="s" x="684" y="212">100 transcripts</text>
+ <text class="s" x="560" y="240">1 transcript</text>
+ <path class="ar" d="M640 236 L692 236"/>
+ <text class="s" x="704" y="240">100s of proteins</text>
+ <text class="s" x="560" y="268">a two-fold change in transcription</text>
+ <text class="s" x="560" y="286">becomes a large change in protein</text>
+ <text class="s" x="30" y="344">development, differentiation and signal responses are decided mostly at this level</text>
+ <text class="s" x="30" y="366">the later steps fine-tune within the frame transcription has set</text>
+ <rect class="ex" x="30" y="386" width="810" height="48" rx="6"/>
+ <text class="s" x="42" y="406">all somatic cells carry the same genome, so a liver cell and a neuron differ not in which genes they have</text>
+ <text class="s" x="42" y="426">but in which genes are switched on</text>
+</svg>

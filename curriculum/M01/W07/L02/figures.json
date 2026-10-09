@@ -1,4 +1,125 @@
 {
   "lesson_id": "M01-W07-L02",
-  "figures": []
+  "figures": [
+    {
+      "figure_id": "fig-regulation-levels",
+      "lesson_id": "M01-W07-L02",
+      "html_anchor": "#fig-regulation-levels",
+      "caption": "발현 조절이 가능한 단계와 전사 개시가 중심이 되는 이유. 염색질 접근성에서 단백질 안정성까지의 순서, 각 단계의 반응 속도와 유지 기간의 차이, 전사 단계에서 끄는 것이 자원을 아끼는 구조, 그리고 전사량의 차이가 단백질량으로 증폭되는 관계를 함께 보인다.",
+      "asset_path": "assets/fig-regulation-levels.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-reporter-assay",
+      "lesson_id": "M01-W07-L02",
+      "html_anchor": "#fig-reporter-assay",
+      "caption": "Reporter gene 분석의 설계와 두 가지 변형. 조사 구간 뒤에 측정하기 쉬운 유전자를 연결하는 기본 구성, 5′ 쪽을 점점 잘라 발현이 떨어지는 지점을 찾는 결실 분석, 길이를 유지한 채 구간을 바꿔치기해 길이 효과를 배제하는 linker scanning, 그리고 세 방법으로 해상도를 단계적으로 올리는 순서를 함께 보인다.",
+      "asset_path": "assets/fig-reporter-assay.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-dna-protein-methods",
+      "lesson_id": "M01-W07-L02",
+      "html_anchor": "#fig-dna-protein-methods",
+      "caption": "단백질-DNA 결합을 보는 세 방법. DNase I이 접근하지 못해 띠가 빠지는 footprinting의 원리, 단백질이 붙어 느려진 DNA의 띠 이동을 보는 EMSA, 세포를 고정해 항체로 침전시키고 함께 나온 DNA를 읽는 ChIP-seq, 그리고 세 방법이 각각 답하는 질문과 한계의 대응을 함께 보인다.",
+      "asset_path": "assets/fig-dna-protein-methods.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-promoter-enhancer",
+      "lesson_id": "M01-W07-L02",
+      "html_anchor": "#fig-promoter-enhancer",
+      "caption": "Promoter와 enhancer의 실험적 구분. 위치와 방향이 고정된 promoter와 떼어서 뒤집어 붙여도 작동하는 enhancer의 대비, reporter 분석으로 그 성질을 확인하는 설계, 그리고 거리에 구애받지 않는 결과로 생기는 표적 판정 문제와 DNA 고리를 통한 접촉을 함께 보인다.",
+      "asset_path": "assets/fig-promoter-enhancer.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-domain-swap",
+      "lesson_id": "M01-W07-L02",
+      "html_anchor": "#fig-domain-swap",
+      "caption": "전사인자의 모듈 구조를 밝힌 영역 교환 실험. GAL4의 DNA 결합 영역을 LexA의 것으로 바꿔 붙이면 표적 서열이 LexA의 것으로 바뀌는 설계와 결과, 결합 영역이 대상을 정하고 활성화 영역이 정도를 정하는 분업, 그리고 그 결과로 가능해진 인공 전사인자와 two-hybrid 분석을 함께 보인다.",
+      "asset_path": "assets/fig-domain-swap.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-binding-domains",
+      "lesson_id": "M01-W07-L02",
+      "html_anchor": "#fig-binding-domains",
+      "caption": "DNA 결합 도메인의 네 가지 구조 계열과 이량체 형성의 효과. Helix-turn-helix와 homeodomain이 큰 홈에 들어가는 방식, Zn 이온이 접어 쥐는 zinc finger와 손가락 수에 따른 인식 길이, leucine의 7잔기 반복이 만드는 소수성 면과 감긴 이량체, helix-loop-helix의 구성, 그리고 이종 이량체의 조합이 단백질 수보다 많은 특이성을 만드는 관계를 함께 보인다.",
+      "asset_path": "assets/fig-binding-domains.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-activation-domain",
+      "lesson_id": "M01-W07-L02",
+      "html_anchor": "#fig-activation-domain",
+      "caption": "활성화 영역이 수행하는 두 가지 일. 공동활성화인자를 불러 histone acetylation과 nucleosome 재배치로 염색질을 여는 경로, mediator가 enhancer의 전사인자와 promoter의 Pol II를 잇는 중계 구조, 전사인자가 어디와 얼마를 정하고 다른 기구가 어떻게를 수행하는 분업, 그리고 억제인자-공동억제인자가 같은 지점에서 반대로 작동하는 대칭을 함께 보인다.",
+      "asset_path": "assets/fig-activation-domain.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-signal-to-promoter",
+      "lesson_id": "M01-W07-L02",
+      "html_anchor": "#fig-signal-to-promoter",
+      "caption": "세포 외 신호가 promoter에 도달하는 네 경로. 막을 통과한 스테로이드가 세포질 수용체와 결합해 함께 핵으로 들어가는 경로, 핵에 대기하던 CREB이 PKA에 인산화되는 경로, JAK에 인산화된 STAT이 이량체가 되어야 들어가는 경로, IκB의 분해로 풀려나는 NF-κB 경로, 그리고 네 경로 모두 새 합성이 아니라 대기 상태의 전환이라는 공통 원리를 함께 보인다.",
+      "asset_path": "assets/fig-signal-to-promoter.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-master-regulator",
+      "lesson_id": "M01-W07-L02",
+      "html_anchor": "#fig-master-regulator",
+      "caption": "조직 특이적 발현을 만드는 두 원리. 여러 조절서열에 붙는 전사인자의 조합이 유전자를 켜는 조건이 되는 구조와 조합 수가 지수로 늘어나는 관계, MyoD를 비근육 세포에 강제 발현시켰을 때 근육 유전자군이 켜지는 결과, 자기 유지와 타 계통 억제로 상태가 고정되는 회로, 그리고 네 전사인자로 체세포를 되돌리는 역분화를 함께 보인다.",
+      "asset_path": "assets/fig-master-regulator.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-epigenetic-layer",
+      "lesson_id": "M01-W07-L02",
+      "html_anchor": "#fig-epigenetic-layer",
+      "caption": "후성유전 조절이 전사 조절에 더하는 층. Nucleosome에 감긴 DNA에서 조절서열의 존재와 접근 가능성이 분리되는 구조, chromatin remodeling과 histone 변형, DNA methylation의 세 기전, 그리고 일시적 조절·분열을 넘는 유지·세대를 넘는 전달 세 범주를 구분하는 기준을 함께 보인다.",
+      "asset_path": "assets/fig-epigenetic-layer.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    }
+  ]
 }
