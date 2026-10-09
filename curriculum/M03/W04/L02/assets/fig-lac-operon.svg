@@ -1,77 +1,87 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 430" width="880" height="430" role="img"
-     aria-label="The lac operon under four nutrient conditions, showing negative control by the repressor and positive control by the cAMP-CAP complex">
-  <style>
-    .ttl { font:700 14px sans-serif; fill:#003c71; }
-    .nm { font:700 12px sans-serif; fill:#003c71; }
-    .sub { font:11px sans-serif; fill:#4a5159; }
-    .gene { fill:#003c71; stroke:#16191d; stroke-width:1.1; }
-    .reg { fill:#f2b705; stroke:#16191d; stroke-width:1.1; }
-    .gl { font:700 11px sans-serif; fill:#ffffff; }
-    .rl { font:700 11px sans-serif; fill:#16191d; }
-    .ln { stroke:#16191d; stroke-width:1.6; fill:none; }
-    .rep { fill:#ffffff; stroke:#16191d; stroke-width:1.4; }
-    .out { font:700 11px sans-serif; fill:#8a6300; }
-    .rna { stroke:#003c71; stroke-width:2.4; fill:none; stroke-dasharray:6 3; }
-  </style>
-  <defs>
-    <marker id="l1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-      <path d="M0 0 L10 5 L0 10 z" fill="#003c71"/>
-    </marker>
-  </defs>
-  <text class="ttl" x="20" y="24">The lac operon: three enzymes for lactose use under one promoter</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 450" width="880" height="450" role="img"
+ aria-label="Negative control of the lac operon: the repressed state with LacI bound to the operator when lactose is absent, the small basal amount of LacY and LacZ, conversion of lactose to allolactose, allosteric release of LacI, and the resulting rise in transcription.">
+ <style>
+  .bx{fill:#fff;stroke:#c6d2dd;stroke-width:1.8}.k{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .t{font:12px sans-serif;fill:#16191d}.tb{font:700 13px sans-serif;fill:#003c71}
+  .th{font:700 15px sans-serif;fill:#003c71}.s{font:11px sans-serif;fill:#4a5159}
+  .m{font:10px monospace;fill:#16191d}
+  .dna{fill:#fff;stroke:#16191d;stroke-width:2.2}
+  .prom{fill:#e8eff6;stroke:#003c71;stroke-width:2}
+  .oper{fill:#f7dedc;stroke:#b3261e;stroke-width:2}
+  .z{fill:#fff5d6;stroke:#f2b705;stroke-width:2}
+  .rep{fill:#f7dedc;stroke:#b3261e;stroke-width:2.4}
+  .pol{fill:#dce6f2;stroke:#1a4f8a;stroke-width:2.2}
+  .rna{stroke:#b3261e;stroke-width:3.2;fill:none}
+  .ar{stroke:#003c71;stroke-width:2.2;fill:none;marker-end:url(#a)}
+  .no{stroke:#b3261e;stroke-width:3;fill:none}
+  .mem{fill:#e8eff6;stroke:#003c71;stroke-width:1.8}
+ </style>
+ <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker></defs>
 
-  <rect class="gene" x="60" y="44" width="56" height="22"/><text class="gl" x="70" y="60">lacI</text>
-  <rect class="reg" x="150" y="44" width="56" height="22"/><text class="rl" x="156" y="60">CAP</text>
-  <rect class="reg" x="206" y="44" width="46" height="22"/><text class="rl" x="216" y="60">P</text>
-  <rect class="reg" x="252" y="44" width="46" height="22"/><text class="rl" x="264" y="60">O</text>
-  <rect class="gene" x="298" y="44" width="90" height="22"/><text class="gl" x="312" y="60">lacZ</text>
-  <rect class="gene" x="388" y="44" width="76" height="22"/><text class="gl" x="402" y="60">lacY</text>
-  <rect class="gene" x="464" y="44" width="76" height="22"/><text class="gl" x="478" y="60">lacA</text>
-  <text class="sub" x="60" y="82">repressor gene,</text><text class="sub" x="60" y="96">always expressed</text>
-  <text class="sub" x="150" y="82">CAP site</text>
-  <text class="sub" x="200" y="96">promoter</text>
-  <text class="sub" x="252" y="82">operator</text>
-  <text class="sub" x="298" y="96">beta-galactosidase</text>
-  <text class="sub" x="392" y="82">permease</text>
-  <text class="sub" x="464" y="96">transacetylase</text>
-  <text class="sub" x="570" y="60">One mRNA carries all three genes: a polycistronic transcript.</text>
-  <text class="sub" x="570" y="78">The inducer is allolactose, made from lactose by beta-galactosidase.</text>
-  <text class="sub" x="570" y="96">cAMP rises only when glucose is low.</text>
+ <text class="th" x="20" y="28">A  No lactose: LacI occupies the operator, transcription is low</text>
+ <line x1="20" y1="38" x2="860" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
 
-  <g>
-    <text class="nm" x="24" y="142">1. No lactose, no glucose</text>
-    <rect class="reg" x="252" y="130" width="46" height="20"/>
-    <rect class="gene" x="298" y="130" width="242" height="20"/>
-    <ellipse class="rep" cx="275" cy="112" rx="34" ry="14"/><text class="rl" x="258" y="117">Rep</text>
-    <text class="out" x="570" y="146">OFF: repressor sits on the operator</text>
-  </g>
-  <g>
-    <text class="nm" x="24" y="208">2. Lactose, no glucose</text>
-    <rect class="reg" x="252" y="196" width="46" height="20"/>
-    <rect class="gene" x="298" y="196" width="242" height="20"/>
-    <ellipse class="rep" cx="150" cy="180" rx="34" ry="14"/><text class="rl" x="133" y="185">Rep</text>
-    <circle class="reg" cx="196" cy="180" r="10"/>
-    <text class="sub" x="100" y="208">allolactose bound: repressor leaves</text>
-    <ellipse class="reg" cx="176" cy="150" rx="40" ry="13"/><text class="rl" x="146" y="155">cAMP-CAP</text>
-    <path class="rna" d="M300 170 L540 170" marker-end="url(#l1)"/>
-    <text class="out" x="570" y="212">FULLY ON: high transcription</text>
-  </g>
-  <g>
-    <text class="nm" x="24" y="282">3. Lactose and glucose</text>
-    <rect class="reg" x="252" y="270" width="46" height="20"/>
-    <rect class="gene" x="298" y="270" width="242" height="20"/>
-    <ellipse class="rep" cx="150" cy="254" rx="34" ry="14"/><text class="rl" x="133" y="259">Rep</text>
-    <text class="sub" x="100" y="282">no cAMP-CAP: promoter is weak</text>
-    <path class="rna" d="M300 248 L360 248" marker-end="url(#l1)"/>
-    <text class="out" x="570" y="286">BARELY ON: catabolite repression</text>
-  </g>
-  <g>
-    <text class="nm" x="24" y="348">4. No lactose, glucose present</text>
-    <rect class="reg" x="252" y="336" width="46" height="20"/>
-    <rect class="gene" x="298" y="336" width="242" height="20"/>
-    <ellipse class="rep" cx="275" cy="318" rx="34" ry="14"/><text class="rl" x="258" y="323">Rep</text>
-    <text class="out" x="570" y="352">OFF: both controls say no</text>
-  </g>
-  <text class="sub" x="24" y="398">Negative control (repressor and operator) sets whether transcription is allowed; positive control (cAMP-CAP) sets how strong it is.</text>
-  <text class="sub" x="24" y="416">The cell therefore uses glucose first and turns to lactose only when glucose runs out.</text>
+ <rect class="dna" x="40" y="96" width="700" height="22"/>
+ <rect class="prom" x="90" y="96" width="70" height="22"/>
+ <text class="m" x="104" y="112">Plac</text>
+ <rect class="oper" x="160" y="96" width="60" height="22"/>
+ <text class="m" x="172" y="112">lacO</text>
+ <rect class="z" x="220" y="96" width="170" height="22"/>
+ <text class="m" x="276" y="112">lacZ</text>
+ <rect class="z" x="390" y="96" width="150" height="22"/>
+ <text class="m" x="446" y="112">lacY</text>
+ <rect class="z" x="540" y="96" width="130" height="22"/>
+ <text class="m" x="590" y="112">lacA</text>
+
+ <path class="rep" d="M162 66 h56 v30 h-56 z"/>
+ <text class="m" x="172" y="86">LacI</text>
+ <path class="pol" d="M94 66 h62 v30 h-62 z"/>
+ <text class="m" x="100" y="86">RNA pol</text>
+ <line class="no" x1="232" y1="80" x2="286" y2="80"/>
+ <line class="no" x1="252" y1="68" x2="266" y2="92"/>
+ <text class="s" x="300" y="78">initiation obstructed: transcription is LOW, not zero</text>
+
+ <rect class="k" x="40" y="138" width="420" height="52" rx="8"/>
+ <text class="t" x="54" y="160">Basal expression leaves a SMALL amount of LacY and LacZ in the cell.</text>
+ <text class="s" x="54" y="180">Without it, nothing could import lactose or make the signal in the first place.</text>
+ <text class="s" x="476" y="158">LacI is not made in response to lactose.</text>
+ <text class="s" x="476" y="176">It is always present; control is whether</text>
+ <text class="s" x="476" y="194">it is ON or OFF the DNA.</text>
+
+ <text class="th" x="20" y="232">B  Lactose arrives: the signal is allolactose, not lactose itself</text>
+ <line x1="20" y1="242" x2="860" y2="242" stroke="#c6d2dd" stroke-width="1.5"/>
+
+ <rect class="mem" x="40" y="262" width="16" height="70"/>
+ <text class="s" x="22" y="350">membrane</text>
+ <rect class="z" x="38" y="282" width="20" height="30" rx="4"/>
+ <text class="m" x="62" y="276">LacY (basal)</text>
+ <path class="ar" d="M20 300 L34 300"/>
+ <text class="m" x="64" y="304">lactose in</text>
+ <path class="ar" d="M130 300 L170 300"/>
+ <text class="s" x="120" y="288">LacZ (basal)</text>
+ <rect class="k" x="178" y="284" width="110" height="32" rx="6"/>
+ <text class="m" x="192" y="305">ALLOLACTOSE</text>
+ <path class="ar" d="M294 300 L334 300"/>
+ <rect class="rep" x="342" y="282" width="56" height="34" rx="5"/>
+ <text class="m" x="352" y="304">LacI</text>
+ <text class="s" x="340" y="274">allosteric binding</text>
+ <path class="ar" d="M404 300 L444 300"/>
+ <text class="s" x="452" y="296">shape changes, DNA affinity falls,</text>
+ <text class="s" x="452" y="314">LacI leaves the operator</text>
+
+ <rect class="dna" x="40" y="370" width="700" height="22"/>
+ <rect class="prom" x="90" y="370" width="70" height="22"/>
+ <rect class="oper" x="160" y="370" width="60" height="22"/>
+ <rect class="z" x="220" y="370" width="170" height="22"/>
+ <rect class="z" x="390" y="370" width="150" height="22"/>
+ <rect class="z" x="540" y="370" width="130" height="22"/>
+ <path class="pol" d="M94 340 h62 v30 h-62 z"/>
+ <text class="m" x="100" y="360">RNA pol</text>
+ <path class="rna" d="M224 354 h450"/>
+ <rect class="rep" x="700" y="336" width="56" height="30" rx="5"/>
+ <text class="m" x="710" y="356">LacI</text>
+ <circle cx="770" cy="351" r="7" fill="#f2b705" stroke="#8a6300" stroke-width="1.6"/>
+ <text class="s" x="692" y="326">released</text>
+ <text class="s" x="40" y="414">NEGATIVE control: LacI's own action is to repress. Allolactose only RELIEVES that repression; it does not help polymerase.</text>
+ <text class="s" x="40" y="434">In the laboratory IPTG is used instead: it releases LacI but is not cleaved by LacZ, so its concentration stays constant (a gratuitous inducer).</text>
 </svg>

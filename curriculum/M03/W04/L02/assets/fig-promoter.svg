@@ -1,63 +1,75 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 410" width="880" height="410" role="img"
-     aria-label="Architecture of a eukaryotic protein-coding gene: distal enhancer and silencer, proximal promoter elements, core promoter with TATA box, and the general transcription factor assembly on RNA polymerase II">
-  <style>
-    .ttl { font:700 14px sans-serif; fill:#003c71; }
-    .nm { font:700 12px sans-serif; fill:#003c71; }
-    .sub { font:11px sans-serif; fill:#4a5159; }
-    .dna { stroke:#16191d; stroke-width:2.6; fill:none; }
-    .enh { fill:#f2b705; stroke:#16191d; stroke-width:1.2; }
-    .sil { fill:#ffffff; stroke:#16191d; stroke-width:1.4; }
-    .core { fill:#003c71; stroke:#16191d; stroke-width:1.2; }
-    .gene { fill:#003c71; stroke:#16191d; stroke-width:1.2; }
-    .gl { font:700 11px sans-serif; fill:#ffffff; }
-    .rl { font:700 11px sans-serif; fill:#16191d; }
-    .pol { fill:#e8eef4; stroke:#003c71; stroke-width:1.4; }
-    .med { fill:#fff5d6; stroke:#003c71; stroke-width:1.3; }
-    .ln { stroke:#16191d; stroke-width:1.4; fill:none; }
-    .tag { font:700 11px sans-serif; fill:#8a6300; }
-  </style>
-  <defs>
-    <marker id="p1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-      <path d="M0 0 L10 5 L0 10 z" fill="#003c71"/>
-    </marker>
-  </defs>
-  <text class="ttl" x="20" y="26">Regulatory architecture of a eukaryotic gene</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 430" width="880" height="430" role="img"
+ aria-label="Position and binding molecules of promoter and operator: the coordinate system taking the transcription start site as plus one, the conserved minus ten and minus thirty-five sequences of a bacterial promoter, recognition by the sigma factor, and how a regulatory protein bound at the operator obstructs initiation.">
+ <style>
+  .bx{fill:#fff;stroke:#c6d2dd;stroke-width:1.8}.k{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .t{font:12px sans-serif;fill:#16191d}.tb{font:700 13px sans-serif;fill:#003c71}
+  .th{font:700 15px sans-serif;fill:#003c71}.s{font:11px sans-serif;fill:#4a5159}
+  .m{font:11px monospace;fill:#16191d}
+  .dna{fill:#fff;stroke:#16191d;stroke-width:2.4}
+  .prom{fill:#e8eff6;stroke:#003c71;stroke-width:2.2}
+  .oper{fill:#f7dedc;stroke:#b3261e;stroke-width:2.2}
+  .gene{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .pol{fill:#dce6f2;stroke:#1a4f8a;stroke-width:2.4}
+  .rep{fill:#f7dedc;stroke:#b3261e;stroke-width:2.4}
+  .ar{stroke:#003c71;stroke-width:2.4;fill:none;marker-end:url(#a)}
+  .no{stroke:#b3261e;stroke-width:3;fill:none}
+ </style>
+ <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker></defs>
 
-  <path class="dna" d="M30 230 L850 230"/>
-  <rect class="enh" x="60" y="218" width="90" height="24"/><text class="rl" x="76" y="235">enhancer</text>
-  <rect class="sil" x="176" y="218" width="84" height="24"/><text class="rl" x="190" y="235">silencer</text>
-  <rect class="sil" x="286" y="218" width="78" height="24"/><text class="rl" x="300" y="235">insulator</text>
-  <rect class="enh" x="430" y="218" width="64" height="24"/><text class="rl" x="438" y="235">GC box</text>
-  <rect class="enh" x="500" y="218" width="76" height="24"/><text class="rl" x="508" y="235">CAAT box</text>
-  <rect class="core" x="600" y="218" width="68" height="24"/><text class="gl" x="608" y="235">TATA</text>
-  <rect class="gene" x="690" y="214" width="160" height="32"/><text class="gl" x="730" y="235">coding region</text>
-  <path class="ln" d="M676 254 L690 240" marker-end="url(#p1)" stroke="#003c71"/>
-  <text class="tag" x="640" y="272">+1 start site</text>
+ <text class="th" x="20" y="28">A  The coordinate system and the two kinds of regulatory sequence</text>
+ <line x1="20" y1="38" x2="860" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
 
-  <text class="sub" x="40" y="206">kilobases to megabases away,</text>
-  <text class="sub" x="40" y="192">works in either orientation</text>
-  <text class="sub" x="286" y="206">blocks enhancer</text>
-  <text class="sub" x="286" y="192">crossing (CTCF)</text>
-  <text class="sub" x="424" y="206">proximal elements,</text>
-  <text class="sub" x="424" y="192">about -40 to -110</text>
-  <text class="sub" x="586" y="206">core promoter,</text>
-  <text class="sub" x="586" y="192">about -25 to -35</text>
+ <rect class="dna" x="40" y="110" width="800" height="26"/>
+ <rect class="prom" x="150" y="110" width="60" height="26"/>
+ <text class="m" x="162" y="128">-35</text>
+ <rect class="prom" x="258" y="110" width="60" height="26"/>
+ <text class="m" x="270" y="128">-10</text>
+ <rect class="oper" x="330" y="110" width="90" height="26"/>
+ <text class="m" x="342" y="128">operator</text>
+ <rect class="gene" x="440" y="110" width="330" height="26"/>
+ <text class="m" x="560" y="128">structural gene</text>
 
-  <ellipse class="pol" cx="640" cy="140" rx="76" ry="26"/>
-  <text class="nm" x="596" y="145">RNA Pol II</text>
-  <ellipse class="med" cx="640" cy="98" rx="110" ry="20"/>
-  <text class="nm" x="572" y="104">general factors TFIIA-H</text>
-  <path class="ln" d="M640 166 L640 212"/>
-  <ellipse class="med" cx="380" cy="104" rx="98" ry="22"/>
-  <text class="nm" x="296" y="110">Mediator complex</text>
-  <path class="ln" d="M478 104 L530 100"/>
-  <path class="ln" d="M105 214 C120 160 240 128 290 112" marker-end="url(#p1)" stroke="#003c71"/>
-  <text class="sub" x="120" y="146">DNA loops so that a distant</text>
-  <text class="sub" x="120" y="164">enhancer reaches the promoter</text>
+ <path class="ar" d="M352 152 L352 186"/>
+ <text class="m" x="356" y="172">+1</text>
+ <text class="s" x="300" y="206">transcription start site: the base where RNA synthesis actually begins</text>
+ <text class="s" x="60" y="170">upstream = negative numbers</text>
+ <text class="s" x="620" y="170">downstream = positive numbers</text>
+ <text class="s" x="150" y="94">PROMOTER: conserved sequences recognised by the sigma factor</text>
+ <text class="s" x="330" y="76">OPERATOR</text>
 
-  <text class="nm" x="30" y="318">Three classes of sequence</text>
-  <text class="sub" x="30" y="340">Core promoter: where the polymerase and general factors assemble. Sets the start site.</text>
-  <text class="sub" x="30" y="358">Proximal elements: nearby boxes bound by common factors. Set the basal level.</text>
-  <text class="sub" x="30" y="376">Response elements and enhancers: bound by signal-dependent factors. Set when and where the gene is on.</text>
-  <text class="sub" x="30" y="398">A locus control region can coordinate a whole gene cluster, as in the beta-globin locus.</text>
+ <text class="th" x="20" y="246">B  Who binds where, and what happens</text>
+ <line x1="20" y1="256" x2="430" y2="256" stroke="#c6d2dd" stroke-width="1.5"/>
+ <rect class="dna" x="40" y="300" width="380" height="22"/>
+ <rect class="prom" x="110" y="300" width="130" height="22"/>
+ <rect class="oper" x="250" y="300" width="70" height="22"/>
+ <path class="pol" d="M120 274 h110 v26 h-110 z"/>
+ <text class="m" x="134" y="292">RNA pol + sigma</text>
+ <path class="ar" d="M330 288 L410 288"/>
+ <text class="s" x="40" y="344">Promoter closer to the ideal sequence means initiation happens more often.</text>
+
+ <rect class="dna" x="40" y="396" width="380" height="22"/>
+ <rect class="prom" x="110" y="396" width="130" height="22"/>
+ <rect class="oper" x="250" y="396" width="70" height="22"/>
+ <path class="rep" d="M254 370 h62 v26 h-62 z"/>
+ <text class="m" x="262" y="388">repressor</text>
+ <path class="pol" d="M120 370 h110 v26 h-110 z"/>
+ <line class="no" x1="330" y1="384" x2="400" y2="384"/>
+ <line class="no" x1="358" y1="372" x2="372" y2="396"/>
+ <text class="s" x="40" y="430">A protein sitting on the operator obstructs the start of transcription.</text>
+
+ <text class="th" x="460" y="246">C  Same DNA, different information</text>
+ <line x1="460" y1="256" x2="860" y2="256" stroke="#c6d2dd" stroke-width="1.5"/>
+ <rect class="bx" x="460" y="270" width="400" height="148" rx="8"/>
+ <text class="tb" x="474" y="294">Promoter</text>
+ <text class="t" x="600" y="294">Operator</text>
+ <line x1="474" y1="302" x2="846" y2="302" stroke="#c6d2dd" stroke-width="1.2"/>
+ <text class="t" x="474" y="324">RNA polymerase</text>
+ <text class="t" x="600" y="324">regulatory protein</text>
+ <text class="t" x="474" y="348">sets WHERE</text>
+ <text class="t" x="600" y="348">sets HOW OFTEN</text>
+ <text class="t" x="474" y="372">mutation shifts the</text>
+ <text class="t" x="600" y="372">mutation changes the</text>
+ <text class="t" x="474" y="388">overall output</text>
+ <text class="t" x="600" y="388">response to control</text>
+ <text class="s" x="474" y="412">Neither sequence codes for protein: both carry positional information.</text>
 </svg>

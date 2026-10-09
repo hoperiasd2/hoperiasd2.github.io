@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 460" width="880" height="460" role="img"
+ aria-label="Four conditions that differ between prokaryotic and eukaryotic regulation: access restricted by chromatin, spatial separation of transcription and translation, distant enhancers with DNA looping, and combinatorial control by several transcription factors, with the control layer each adds and the three principles common to both.">
+ <style>
+  .bx{fill:#fff;stroke:#c6d2dd;stroke-width:1.8}.k{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .t{font:12px sans-serif;fill:#16191d}.tb{font:700 13px sans-serif;fill:#003c71}
+  .th{font:700 15px sans-serif;fill:#003c71}.s{font:11px sans-serif;fill:#4a5159}
+  .m{font:10px monospace;fill:#16191d}
+  .ar{stroke:#003c71;stroke-width:2;fill:none;marker-end:url(#a)}
+  .dna{stroke:#16191d;stroke-width:2.2;fill:none}
+  .nuc{fill:#dce6f2;stroke:#1a4f8a;stroke-width:1.8}
+  .env{fill:none;stroke:#003c71;stroke-width:2.2}
+  .enh{fill:#e3f0e4;stroke:#2e7d32;stroke-width:2}
+  .prom{fill:#e8eff6;stroke:#003c71;stroke-width:2}
+  .tf{fill:#f7dedc;stroke:#b3261e;stroke-width:2}
+ </style>
+ <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker></defs>
+
+ <text class="th" x="20" y="28">Four conditions change, and each adds a layer of control</text>
+ <line x1="20" y1="38" x2="860" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+
+ <rect class="bx" x="20" y="54" width="410" height="150" rx="8"/>
+ <text class="tb" x="34" y="78">1  DNA is wrapped in chromatin</text>
+ <path class="dna" d="M40 118 h50"/>
+ <circle class="nuc" cx="108" cy="118" r="17"/>
+ <path class="dna" d="M126 118 h22"/>
+ <circle class="nuc" cx="166" cy="118" r="17"/>
+ <path class="dna" d="M184 118 h22"/>
+ <circle class="nuc" cx="224" cy="118" r="17"/>
+ <path class="dna" d="M242 118 h60"/>
+ <text class="m" x="314" y="114">147 bp per</text>
+ <text class="m" x="314" y="128">histone octamer</text>
+ <text class="t" x="34" y="160">Accessibility itself becomes a control target.</text>
+ <text class="s" x="34" y="182">ADDS: chromatin remodelling, histone modification,</text>
+ <text class="s" x="34" y="198">DNA methylation</text>
+
+ <rect class="bx" x="450" y="54" width="410" height="150" rx="8"/>
+ <text class="tb" x="464" y="78">2  Transcription and translation are separated</text>
+ <ellipse class="env" cx="560" cy="130" rx="70" ry="44"/>
+ <text class="m" x="536" y="122">NUCLEUS</text>
+ <text class="m" x="534" y="142">transcription</text>
+ <text class="m" x="660" y="126">CYTOPLASM</text>
+ <text class="m" x="660" y="144">translation</text>
+ <path class="ar" d="M632 130 L652 130"/>
+ <text class="t" x="464" y="178">Attenuation becomes impossible, but the nuclear steps</text>
+ <text class="s" x="464" y="196">ADD: splicing, capping, polyadenylation, export control</text>
+
+ <rect class="bx" x="20" y="216" width="410" height="150" rx="8"/>
+ <text class="tb" x="34" y="240">3  Regulatory sequences can be far away</text>
+ <path class="dna" d="M40 300 h360"/>
+ <rect class="enh" x="60" y="290" width="54" height="20"/>
+ <text class="m" x="68" y="305">enhancer</text>
+ <rect class="prom" x="310" y="290" width="54" height="20"/>
+ <text class="m" x="318" y="305">promoter</text>
+ <path class="dna" d="M114 290 q80 -46 196 0" stroke-dasharray="5 4"/>
+ <text class="m" x="150" y="268">kb to hundreds of kb away;</text>
+ <text class="m" x="150" y="282">may sit downstream or in an intron</text>
+ <text class="s" x="34" y="332">ADDS: DNA looping, mediator, chromatin domains</text>
+ <text class="s" x="34" y="352">The DNA must fold for a distant element to act.</text>
+
+ <rect class="bx" x="450" y="216" width="410" height="150" rx="8"/>
+ <text class="tb" x="464" y="240">4  One gene integrates many signals</text>
+ <path class="dna" d="M470 300 h370"/>
+ <rect class="tf" x="490" y="290" width="36" height="20"/>
+ <rect class="tf" x="534" y="290" width="36" height="20"/>
+ <rect class="tf" x="578" y="290" width="36" height="20"/>
+ <rect class="tf" x="622" y="290" width="36" height="20"/>
+ <rect class="prom" x="740" y="290" width="54" height="20"/>
+ <text class="m" x="490" y="282">several binding sites, read in combination</text>
+ <text class="t" x="464" y="332">Cell type, stage, hormone and neighbour signals must all</text>
+ <text class="t" x="464" y="350">be reflected. ADDS: combinatorial control.</text>
+
+ <rect class="k" x="20" y="378" width="840" height="34" rx="8"/>
+ <text class="tb" x="34" y="400">Prokaryotic control mainly decides WHETHER TO START. Eukaryotic control decides a long path, from access to whether the RNA is used.</text>
+
+ <text class="th" x="20" y="438">Common to both: cis element versus trans factor; allosteric control of the regulator; positive and negative control working together.</text>
+</svg>

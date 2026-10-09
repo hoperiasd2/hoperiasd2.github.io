@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 440" width="880" height="440" role="img"
+ aria-label="Why cells with the same genome do different work: the same gene set is present in a hepatocyte and a neuron but a different subset is expressed, the distinction between constitutive and regulated genes, and the three situations that require expression to change, with their time scales.">
+ <style>
+  .bx{fill:#fff;stroke:#c6d2dd;stroke-width:1.8}.k{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .t{font:12px sans-serif;fill:#16191d}.tb{font:700 13px sans-serif;fill:#003c71}
+  .th{font:700 15px sans-serif;fill:#003c71}.s{font:11px sans-serif;fill:#4a5159}
+  .m{font:10px monospace;fill:#16191d}
+  .cell{fill:#fff;stroke:#003c71;stroke-width:2.2}
+  .on{fill:#f2b705;stroke:#8a6300;stroke-width:1.6}
+  .off{fill:#fff;stroke:#c6d2dd;stroke-width:1.6;stroke-dasharray:3 3}
+  .dna{stroke:#16191d;stroke-width:2.4;fill:none}
+  .ar{stroke:#003c71;stroke-width:2.2;fill:none;marker-end:url(#a)}
+ </style>
+ <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker></defs>
+
+ <text class="th" x="20" y="28">A  The same genome, a different subset expressed</text>
+ <line x1="20" y1="38" x2="560" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+
+ <ellipse class="cell" cx="150" cy="120" rx="118" ry="62"/>
+ <text class="tb" x="112" y="70">Hepatocyte</text>
+ <path class="dna" d="M48 112 h204"/>
+ <rect class="on" x="60" y="104" width="26" height="16" rx="3"/>
+ <rect class="off" x="100" y="104" width="26" height="16" rx="3"/>
+ <rect class="on" x="140" y="104" width="26" height="16" rx="3"/>
+ <rect class="on" x="180" y="104" width="26" height="16" rx="3"/>
+ <rect class="off" x="220" y="104" width="26" height="16" rx="3"/>
+ <text class="m" x="52" y="144">albumin, urea cycle enzymes ON</text>
+ <text class="m" x="52" y="160">ion channel genes present but OFF</text>
+
+ <ellipse class="cell" cx="430" cy="120" rx="118" ry="62"/>
+ <text class="tb" x="402" y="70">Neuron</text>
+ <path class="dna" d="M328 112 h204"/>
+ <rect class="off" x="340" y="104" width="26" height="16" rx="3"/>
+ <rect class="on" x="380" y="104" width="26" height="16" rx="3"/>
+ <rect class="off" x="420" y="104" width="26" height="16" rx="3"/>
+ <rect class="off" x="460" y="104" width="26" height="16" rx="3"/>
+ <rect class="on" x="500" y="104" width="26" height="16" rx="3"/>
+ <text class="m" x="332" y="144">ion channels, receptors ON</text>
+ <text class="m" x="332" y="160">albumin gene present but OFF</text>
+
+ <rect class="k" x="20" y="196" width="540" height="36" rx="8"/>
+ <text class="tb" x="34" y="220">A gene being PRESENT in the genome and a gene being EXPRESSED are two separate facts.</text>
+
+ <text class="th" x="590" y="28">B  Two classes of gene</text>
+ <line x1="590" y1="38" x2="860" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+ <rect class="bx" x="590" y="54" width="270" height="86" rx="8"/>
+ <text class="tb" x="604" y="78">Constitutive (housekeeping)</text>
+ <text class="t" x="604" y="100">needed by every cell at all times:</text>
+ <text class="t" x="604" y="120">ribosomal proteins, glycolytic</text>
+ <text class="t" x="604" y="136">enzymes, cytoskeleton</text>
+ <rect class="k" x="590" y="150" width="270" height="86" rx="8"/>
+ <text class="tb" x="604" y="174">Regulated</text>
+ <text class="t" x="604" y="196">specific cell, time or condition:</text>
+ <text class="t" x="604" y="216">albumin, insulin, immunoglobulin,</text>
+ <text class="t" x="604" y="232">developmental regulators</text>
+
+ <text class="th" x="20" y="272">C  Three situations that require a change, and their time scales</text>
+ <line x1="20" y1="282" x2="860" y2="282" stroke="#c6d2dd" stroke-width="1.5"/>
+
+ <rect class="bx" x="20" y="296" width="270" height="110" rx="8"/>
+ <text class="tb" x="34" y="320">1  Responding to the environment</text>
+ <text class="t" x="34" y="344">a bacterium meets a different sugar</text>
+ <text class="s" x="34" y="372">fast and reversible</text>
+ <text class="m" x="34" y="394">minutes</text>
+
+ <rect class="bx" x="302" y="296" width="270" height="110" rx="8"/>
+ <text class="tb" x="316" y="320">2  Differentiating</text>
+ <text class="t" x="316" y="344">a pattern once set must survive</text>
+ <text class="t" x="316" y="362">cell division</text>
+ <text class="s" x="316" y="382">slow and stable</text>
+ <text class="m" x="316" y="400">days, then maintained</text>
+
+ <rect class="bx" x="584" y="296" width="276" height="110" rx="8"/>
+ <text class="tb" x="598" y="320">3  Receiving a signal</text>
+ <text class="t" x="598" y="344">a hormone or growth factor</text>
+ <text class="t" x="598" y="362">arrives</text>
+ <text class="s" x="598" y="382">fast, then resets</text>
+ <text class="m" x="598" y="400">minutes to hours</text>
+
+ <text class="s" x="20" y="430">Prokaryotes mainly solve problem 1; eukaryotes must solve all three, and that difference drives the difference in mechanism.</text>
+</svg>

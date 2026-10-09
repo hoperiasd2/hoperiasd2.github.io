@@ -1,65 +1,74 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 430" width="880" height="430" role="img"
-     aria-label="The trp operon controlled at two levels: repression by tryptophan acting as a corepressor, and attenuation in which ribosome stalling at tandem tryptophan codons determines whether a terminator hairpin forms">
-  <style>
-    .ttl { font:700 14px sans-serif; fill:#003c71; }
-    .nm { font:700 12px sans-serif; fill:#003c71; }
-    .sub { font:11px sans-serif; fill:#4a5159; }
-    .gene { fill:#003c71; stroke:#16191d; stroke-width:1.1; }
-    .reg { fill:#f2b705; stroke:#16191d; stroke-width:1.1; }
-    .gl { font:700 11px sans-serif; fill:#ffffff; }
-    .rl { font:700 11px sans-serif; fill:#16191d; }
-    .rep { fill:#ffffff; stroke:#16191d; stroke-width:1.4; }
-    .ln { stroke:#16191d; stroke-width:1.6; fill:none; }
-    .rna { stroke:#003c71; stroke-width:2.2; fill:none; }
-    .rib { fill:#e8eef4; stroke:#003c71; stroke-width:1.3; }
-    .out { font:700 11px sans-serif; fill:#8a6300; }
-  </style>
-  <text class="ttl" x="20" y="24">A. Repression: tryptophan is a corepressor</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 450" width="880" height="450" role="img"
+ aria-label="Repression of the trp operon and its correspondence with the lac operon: TrpR binding the operator with tryptophan as a corepressor, comparison with the opposite direction of the LacI conformational change, and how catabolic versus biosynthetic purpose sets the default state.">
+ <style>
+  .bx{fill:#fff;stroke:#c6d2dd;stroke-width:1.8}.k{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .t{font:12px sans-serif;fill:#16191d}.tb{font:700 13px sans-serif;fill:#003c71}
+  .th{font:700 15px sans-serif;fill:#003c71}.s{font:11px sans-serif;fill:#4a5159}
+  .m{font:10px monospace;fill:#16191d}
+  .dna{fill:#fff;stroke:#16191d;stroke-width:2.2}
+  .oper{fill:#f7dedc;stroke:#b3261e;stroke-width:2}
+  .gene{fill:#fff5d6;stroke:#f2b705;stroke-width:2}
+  .rep{fill:#f7dedc;stroke:#b3261e;stroke-width:2.4}
+  .repo{fill:#fff;stroke:#b3261e;stroke-width:2.4;stroke-dasharray:4 3}
+  .pol{fill:#dce6f2;stroke:#1a4f8a;stroke-width:2.2}
+  .rna{stroke:#b3261e;stroke-width:3;fill:none}
+  .ar{stroke:#003c71;stroke-width:2;fill:none;marker-end:url(#a)}
+  .no{stroke:#b3261e;stroke-width:3;fill:none}
+ </style>
+ <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker></defs>
 
-  <rect class="reg" x="150" y="42" width="44" height="20"/><text class="rl" x="162" y="58">P</text>
-  <rect class="reg" x="194" y="42" width="44" height="20"/><text class="rl" x="208" y="58">O</text>
-  <rect class="reg" x="238" y="42" width="70" height="20"/><text class="rl" x="252" y="58">leader</text>
-  <rect class="gene" x="308" y="42" width="52" height="20"/><text class="gl" x="316" y="58">trpE</text>
-  <rect class="gene" x="360" y="42" width="52" height="20"/><text class="gl" x="368" y="58">trpD</text>
-  <rect class="gene" x="412" y="42" width="52" height="20"/><text class="gl" x="420" y="58">trpC</text>
-  <rect class="gene" x="464" y="42" width="52" height="20"/><text class="gl" x="472" y="58">trpB</text>
-  <rect class="gene" x="516" y="42" width="52" height="20"/><text class="gl" x="524" y="58">trpA</text>
-  <text class="sub" x="308" y="78">five genes for tryptophan biosynthesis</text>
+ <text class="th" x="20" y="28">A  Tryptophan scarce: the default state is EXPRESSION</text>
+ <line x1="20" y1="38" x2="860" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+ <rect class="dna" x="40" y="86" width="620" height="20"/>
+ <rect class="oper" x="120" y="86" width="56" height="20"/>
+ <text class="m" x="130" y="101">trpO</text>
+ <rect class="gene" x="190" y="86" width="440" height="20"/>
+ <text class="m" x="340" y="101">trpE  trpD  trpC  trpB  trpA  (biosynthetic enzymes)</text>
+ <rect class="repo" x="700" y="80" width="56" height="28" rx="5"/>
+ <text class="m" x="706" y="98">TrpR</text>
+ <text class="s" x="692" y="124">inactive: cannot bind</text>
+ <path class="pol" d="M52 58 h60 v28 h-60 z"/>
+ <text class="m" x="58" y="76">RNA pol</text>
+ <path class="rna" d="M194 72 h420"/>
+ <text class="s" x="300" y="64">enzymes are made, tryptophan is synthesised</text>
 
-  <text class="nm" x="24" y="116">Tryptophan low</text>
-  <ellipse class="rep" cx="120" cy="112" rx="38" ry="15"/><text class="rl" x="100" y="117">Rep</text>
-  <text class="sub" x="166" y="116">repressor alone cannot bind the operator</text>
-  <path class="rna" d="M240 128 L560 128"/>
-  <text class="out" x="580" y="132">transcription proceeds</text>
+ <text class="th" x="20" y="156">B  Tryptophan plentiful: it acts as a COREPRESSOR</text>
+ <line x1="20" y1="166" x2="860" y2="166" stroke="#c6d2dd" stroke-width="1.5"/>
+ <rect class="repo" x="60" y="190" width="56" height="28" rx="5"/>
+ <text class="m" x="66" y="208">TrpR</text>
+ <path class="ar" d="M122 204 L158 204"/>
+ <circle cx="140" cy="188" r="6" fill="#2e7d32"/>
+ <text class="m" x="128" y="178">Trp</text>
+ <rect class="rep" x="166" y="190" width="70" height="28" rx="5"/>
+ <text class="m" x="172" y="208">TrpR-Trp</text>
+ <text class="s" x="246" y="200">now able to bind DNA</text>
+ <rect class="dna" x="40" y="250" width="620" height="20"/>
+ <rect class="oper" x="120" y="250" width="56" height="20"/>
+ <rect class="gene" x="190" y="250" width="440" height="20"/>
+ <rect class="rep" x="122" y="222" width="54" height="28" rx="5"/>
+ <text class="m" x="128" y="240">TrpR</text>
+ <path class="pol" d="M52 222 h60 v28 h-60 z"/>
+ <line class="no" x1="190" y1="236" x2="240" y2="236"/>
+ <line class="no" x1="208" y1="226" x2="222" y2="248"/>
+ <text class="s" x="256" y="240">transcription is shut down: no point making more of what is already there</text>
 
-  <text class="nm" x="24" y="166">Tryptophan high</text>
-  <ellipse class="rep" cx="216" cy="162" rx="38" ry="15"/><text class="rl" x="196" y="167">Rep</text>
-  <circle class="reg" cx="256" cy="162" r="9"/>
-  <text class="sub" x="272" y="166">Trp bound: repressor binds the operator</text>
-  <text class="out" x="580" y="166">transcription blocked</text>
-
-  <text class="ttl" x="20" y="214">B. Attenuation: the leader peptide has two adjacent Trp codons</text>
-  <text class="sub" x="20" y="234">Transcription and translation are coupled, so a stalled ribosome changes which RNA hairpin forms.</text>
-
-  <text class="nm" x="24" y="282">Trp scarce</text>
-  <text class="sub" x="24" y="300">ribosome stalls</text>
-  <text class="sub" x="24" y="316">at the Trp codons</text>
-  <path class="rna" d="M170 286 L470 286"/>
-  <rect class="rib" x="186" y="266" width="54" height="26" rx="8"/>
-  <text class="rl" x="196" y="262">UGG UGG</text>
-  <path class="rna" d="M300 286 C306 258 340 258 346 286"/>
-  <text class="sub" x="300" y="310">2:3 pairing (antiterminator)</text>
-  <text class="out" x="500" y="282">RNA polymerase reads through:</text>
-  <text class="out" x="500" y="300">the five genes are transcribed</text>
-
-  <text class="nm" x="24" y="372">Trp plentiful</text>
-  <text class="sub" x="24" y="390">ribosome moves on</text>
-  <text class="sub" x="24" y="406">without stalling</text>
-  <path class="rna" d="M170 376 L370 376"/>
-  <rect class="rib" x="276" y="356" width="54" height="26" rx="8"/>
-  <path class="rna" d="M340 376 C346 346 380 346 386 376"/>
-  <text class="sub" x="330" y="400">3:4 pairing (terminator hairpin)</text>
-  <text class="out" x="500" y="372">transcription stops in the leader</text>
-  <text class="out" x="500" y="390">before the first gene</text>
-  <text class="sub" x="20" y="424">Repression and attenuation multiply, so the operon spans a far wider range of output than either mechanism alone.</text>
+ <text class="th" x="20" y="308">C  The two operons are mirror images</text>
+ <line x1="20" y1="318" x2="860" y2="318" stroke="#c6d2dd" stroke-width="1.5"/>
+ <rect class="bx" x="20" y="332" width="840" height="112" rx="8"/>
+ <text class="tb" x="34" y="354">Feature</text>
+ <text class="tb" x="300" y="354">lac operon</text>
+ <text class="tb" x="580" y="354">trp operon</text>
+ <line x1="34" y1="362" x2="846" y2="362" stroke="#c6d2dd" stroke-width="1.2"/>
+ <text class="t" x="34" y="382">pathway type</text>
+ <text class="t" x="300" y="382">catabolic: break lactose down</text>
+ <text class="t" x="580" y="382">biosynthetic: build tryptophan</text>
+ <text class="t" x="34" y="402">small molecule</text>
+ <text class="t" x="300" y="402">allolactose = INDUCER</text>
+ <text class="t" x="580" y="402">tryptophan = COREPRESSOR</text>
+ <text class="t" x="34" y="422">on binding, repressor</text>
+ <text class="t" x="300" y="422">LEAVES the DNA</text>
+ <text class="t" x="580" y="422">BINDS the DNA</text>
+ <text class="t" x="34" y="440">default state</text>
+ <text class="t" x="300" y="440">repressed (substrate only matters if present)</text>
+ <text class="t" x="580" y="440">expressed (Trp is always needed)</text>
 </svg>

@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 450" width="880" height="450" role="img"
+ aria-label="Structure of an operon and coordinate regulation: the lacZ lacY lacA arrangement with its common promoter, the polycistronic mRNA, lacI with its own separate promoter, the naming convention for genes and proteins, and how eukaryotes reach the same goal by sharing regulatory sequences.">
+ <style>
+  .bx{fill:#fff;stroke:#c6d2dd;stroke-width:1.8}.k{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .t{font:12px sans-serif;fill:#16191d}.tb{font:700 13px sans-serif;fill:#003c71}
+  .th{font:700 15px sans-serif;fill:#003c71}.s{font:11px sans-serif;fill:#4a5159}
+  .m{font:11px monospace;fill:#16191d}
+  .dna{fill:#fff;stroke:#16191d;stroke-width:2.2}
+  .prom{fill:#e8eff6;stroke:#003c71;stroke-width:2}
+  .oper{fill:#f7dedc;stroke:#b3261e;stroke-width:2}
+  .z{fill:#fff5d6;stroke:#f2b705;stroke-width:2}
+  .rna{stroke:#b3261e;stroke-width:3.4;fill:none}
+  .ar{stroke:#003c71;stroke-width:2.2;fill:none;marker-end:url(#a)}
+ </style>
+ <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker></defs>
+
+ <text class="th" x="20" y="28">A  One promoter, one transcript, three proteins</text>
+ <line x1="20" y1="38" x2="860" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+
+ <rect class="dna" x="40" y="88" width="800" height="24"/>
+ <rect class="prom" x="60" y="88" width="50" height="24"/>
+ <text class="m" x="56" y="82">Plac</text>
+ <rect class="z" x="40" y="88" width="0" height="24"/>
+ <rect class="prom" x="150" y="88" width="56" height="24"/>
+ <text class="m" x="156" y="106">lacI</text>
+ <text class="s" x="140" y="76">own promoter</text>
+ <rect class="prom" x="240" y="88" width="46" height="24"/>
+ <text class="m" x="244" y="106">Plac</text>
+ <rect class="oper" x="286" y="88" width="50" height="24"/>
+ <text class="m" x="292" y="106">lacO</text>
+ <rect class="z" x="336" y="88" width="170" height="24"/>
+ <text class="m" x="398" y="106">lacZ</text>
+ <rect class="z" x="506" y="88" width="150" height="24"/>
+ <text class="m" x="560" y="106">lacY</text>
+ <rect class="z" x="656" y="88" width="130" height="24"/>
+ <text class="m" x="706" y="106">lacA</text>
+
+ <path class="ar" d="M312 124 L312 148"/>
+ <path class="rna" d="M336 158 h450"/>
+ <text class="m" x="796" y="162">3'</text>
+ <text class="m" x="322" y="162">5'</text>
+ <text class="s" x="440" y="184">one polycistronic mRNA carrying three coding regions</text>
+
+ <path class="ar" d="M410 194 L410 216"/>
+ <path class="ar" d="M580 194 L580 216"/>
+ <path class="ar" d="M720 194 L720 216"/>
+ <rect class="k" x="350" y="222" width="120" height="34" rx="6"/>
+ <text class="m" x="356" y="244">LacZ</text>
+ <text class="s" x="392" y="244">beta-galactosidase</text>
+ <rect class="k" x="520" y="222" width="120" height="34" rx="6"/>
+ <text class="m" x="526" y="244">LacY</text>
+ <text class="s" x="562" y="244">permease</text>
+ <rect class="bx" x="660" y="222" width="126" height="34" rx="6"/>
+ <text class="m" x="666" y="244">LacA</text>
+ <text class="s" x="702" y="244">transacetylase</text>
+
+ <rect class="bx" x="20" y="274" width="400" height="76" rx="8"/>
+ <text class="tb" x="34" y="298">Why bundle them</text>
+ <text class="t" x="34" y="320">Lactose must be brought IN (LacY) and broken DOWN (LacZ). Either</text>
+ <text class="t" x="34" y="340">alone is useless, so one signal should switch both: coordinate regulation.</text>
+
+ <rect class="k" x="440" y="274" width="420" height="76" rx="8"/>
+ <text class="tb" x="454" y="298">Naming convention, used throughout bacterial genetics</text>
+ <text class="t" x="454" y="322">italic lower case (lacI, lacZ) = the GENE</text>
+ <text class="t" x="454" y="342">initial capital (LacI, LacZ) = the PROTEIN it makes</text>
+
+ <text class="th" x="20" y="384">B  The limit, and how eukaryotes do the same job</text>
+ <line x1="20" y1="394" x2="860" y2="394" stroke="#c6d2dd" stroke-width="1.5"/>
+ <text class="t" x="20" y="416">Limit: the three proteins do not end up in equal amounts — each translation start site has its own efficiency and each protein its own half-life.</text>
+ <text class="t" x="20" y="438">Eukaryotes have almost no operons. Each gene has its own promoter, and genes that must be co-expressed instead SHARE a regulatory sequence that one transcription factor reads.</text>
+</svg>

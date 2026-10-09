@@ -1,58 +1,61 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 440" width="860" height="440" role="img"
-     aria-label="Levels at which eukaryotic gene expression is controlled, from chromatin access through transcription, RNA processing, translation and protein degradation">
-  <style>
-    .ttl { font:700 14px sans-serif; fill:#003c71; }
-    .nm { font:700 13px sans-serif; fill:#003c71; }
-    .sub { font:11px sans-serif; fill:#4a5159; }
-    .lv { fill:#ffffff; stroke:#003c71; stroke-width:1.4; }
-    .lvh { fill:#fff5d6; stroke:#003c71; stroke-width:1.4; }
-    .ln { stroke:#003c71; stroke-width:2; fill:none; }
-    .tag { font:700 11px sans-serif; fill:#8a6300; }
-  </style>
-  <defs>
-    <marker id="r1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-      <path d="M0 0 L10 5 L0 10 z" fill="#003c71"/>
-    </marker>
-  </defs>
-  <text class="ttl" x="20" y="26">Six points of control between a gene and its working protein</text>
-  <text class="sub" x="20" y="46">Prokaryotes regulate mainly at transcription initiation; eukaryotes use every level, and the slowest levels are the most stable.</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 450" width="880" height="450" role="img"
+ aria-label="The eight stages at which gene expression can be controlled and the character of each, showing the resource-saving logic that makes transcription initiation the main control point and the speed advantage of the later stages as a cost versus speed trade-off.">
+ <style>
+  .bx{fill:#fff;stroke:#c6d2dd;stroke-width:1.8}.k{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .t{font:12px sans-serif;fill:#16191d}.tb{font:700 13px sans-serif;fill:#003c71}
+  .th{font:700 15px sans-serif;fill:#003c71}.s{font:11px sans-serif;fill:#4a5159}
+  .m{font:10px monospace;fill:#16191d}
+  .ar{stroke:#003c71;stroke-width:2.2;fill:none;marker-end:url(#a)}
+  .st{fill:#e8eff6;stroke:#003c71;stroke-width:1.8}
+  .main{fill:#fff5d6;stroke:#f2b705;stroke-width:2.6}
+ </style>
+ <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker></defs>
 
-  <rect class="lvh" x="40" y="62" width="330" height="48" rx="6"/>
-  <text class="nm" x="56" y="82">1. Chromatin accessibility</text>
-  <text class="sub" x="56" y="100">histone acetylation and methylation, DNA methylation</text>
-  <text class="tag" x="392" y="84">time scale: hours to generations</text>
-  <text class="sub" x="392" y="102">heritable through cell division</text>
-  <path class="ln" d="M205 110 L205 128" marker-end="url(#r1)"/>
+ <text class="th" x="20" y="28">The eight stages, from DNA access to protein destruction</text>
+ <line x1="20" y1="38" x2="860" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
 
-  <rect class="lvh" x="40" y="128" width="330" height="48" rx="6"/>
-  <text class="nm" x="56" y="148">2. Transcription initiation</text>
-  <text class="sub" x="56" y="166">promoter, enhancer, transcription factor availability</text>
-  <text class="tag" x="392" y="150">minutes to hours</text>
-  <text class="sub" x="392" y="168">the main switch for most genes</text>
-  <path class="ln" d="M205 176 L205 194" marker-end="url(#r1)"/>
+ <rect class="st" x="20" y="54" width="300" height="34" rx="6"/>
+ <text class="m" x="34" y="76">1  Chromatin state: is the DNA accessible?</text>
+ <path class="ar" d="M170 90 L170 102"/>
+ <rect class="main" x="20" y="106" width="300" height="34" rx="6"/>
+ <text class="m" x="34" y="128">2  TRANSCRIPTION INITIATION</text>
+ <path class="ar" d="M170 142 L170 154"/>
+ <rect class="st" x="20" y="158" width="300" height="34" rx="6"/>
+ <text class="m" x="34" y="180">3  Elongation and termination</text>
+ <path class="ar" d="M170 194 L170 206"/>
+ <rect class="st" x="20" y="210" width="300" height="34" rx="6"/>
+ <text class="m" x="34" y="232">4  RNA processing (alternative splicing)</text>
+ <path class="ar" d="M170 246 L170 258"/>
+ <rect class="st" x="20" y="262" width="300" height="34" rx="6"/>
+ <text class="m" x="34" y="284">5  Nuclear export and localization</text>
+ <path class="ar" d="M170 298 L170 310"/>
+ <rect class="st" x="20" y="314" width="300" height="34" rx="6"/>
+ <text class="m" x="34" y="336">6  mRNA stability (half-life)</text>
+ <path class="ar" d="M170 350 L170 362"/>
+ <rect class="st" x="20" y="366" width="300" height="34" rx="6"/>
+ <text class="m" x="34" y="388">7  Translation initiation</text>
+ <path class="ar" d="M170 402 L170 414"/>
+ <rect class="st" x="20" y="418" width="300" height="30" rx="6"/>
+ <text class="m" x="34" y="438">8  Modification and degradation</text>
 
-  <rect class="lv" x="40" y="194" width="330" height="48" rx="6"/>
-  <text class="nm" x="56" y="214">3. RNA processing</text>
-  <text class="sub" x="56" y="232">alternative splicing, alternative poly(A) site</text>
-  <text class="tag" x="392" y="216">changes which protein, not how much</text>
-  <path class="ln" d="M205 242 L205 260" marker-end="url(#r1)"/>
+ <text class="th" x="360" y="66">The trade-off along this axis</text>
+ <line x1="360" y1="76" x2="860" y2="76" stroke="#c6d2dd" stroke-width="1.5"/>
 
-  <rect class="lv" x="40" y="260" width="330" height="48" rx="6"/>
-  <text class="nm" x="56" y="280">4. mRNA stability and export</text>
-  <text class="sub" x="56" y="298">poly(A) length, AU-rich elements, microRNA</text>
-  <text class="tag" x="392" y="282">minutes to days</text>
-  <text class="sub" x="392" y="300">sets how long a signal persists</text>
-  <path class="ln" d="M205 308 L205 326" marker-end="url(#r1)"/>
+ <rect class="k" x="360" y="92" width="500" height="112" rx="8"/>
+ <text class="tb" x="374" y="116">Early stages are ECONOMICAL</text>
+ <text class="t" x="374" y="140">Switch off at the front and every downstream cost disappears with it.</text>
+ <text class="t" x="374" y="160">No mRNA means no template, so no amino acids and no ATP are spent.</text>
+ <text class="s" x="374" y="186">This is why transcription initiation is the most widely used control point.</text>
 
-  <rect class="lv" x="40" y="326" width="330" height="48" rx="6"/>
-  <text class="nm" x="56" y="346">5. Translation</text>
-  <text class="sub" x="56" y="364">eIF2 alpha phosphorylation, iron-responsive elements</text>
-  <text class="tag" x="392" y="348">seconds to minutes</text>
-  <text class="sub" x="392" y="366">fastest global brake</text>
-  <path class="ln" d="M205 374 L205 392" marker-end="url(#r1)"/>
+ <rect class="bx" x="360" y="216" width="500" height="112" rx="8"/>
+ <text class="tb" x="374" y="240">Late stages are FAST</text>
+ <text class="t" x="374" y="264">Starting from transcription takes tens of minutes. Switching on the</text>
+ <text class="t" x="374" y="284">translation of stored mRNA, or activating stored protein, takes seconds.</text>
+ <text class="s" x="374" y="310">An egg divides on stored mRNA after fertilization without transcribing anything.</text>
 
-  <rect class="lv" x="40" y="392" width="330" height="40" rx="6"/>
-  <text class="nm" x="56" y="412">6. Protein degradation</text>
-  <text class="sub" x="56" y="428">ubiquitin-proteasome, lysosome</text>
-  <text class="tag" x="392" y="414">sets the steady-state amount together with level 2</text>
+ <rect class="bx" x="360" y="340" width="500" height="108" rx="8"/>
+ <text class="tb" x="374" y="364">How to read this</text>
+ <text class="t" x="374" y="388">Before discussing control, name the stage. "Gene X is upregulated" does</text>
+ <text class="t" x="374" y="408">not say whether more RNA is made, less is destroyed, or more is translated.</text>
+ <text class="t" x="374" y="432">Which stage a gene uses tells you what that gene is required to do.</text>
 </svg>

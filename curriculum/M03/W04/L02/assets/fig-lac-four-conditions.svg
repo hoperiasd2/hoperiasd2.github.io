@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 450" width="880" height="450" role="img"
+ aria-label="Positive control by cAMP and CAP and comparison of the four conditions: the path from glucose level through cAMP to CAP, how CAP raises the initiation probability of RNA polymerase, and a table of LacI and CAP states with the resulting expression for the four combinations of glucose and lactose.">
+ <style>
+  .bx{fill:#fff;stroke:#c6d2dd;stroke-width:1.8}.k{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .t{font:12px sans-serif;fill:#16191d}.tb{font:700 13px sans-serif;fill:#003c71}
+  .th{font:700 15px sans-serif;fill:#003c71}.s{font:11px sans-serif;fill:#4a5159}
+  .m{font:10px monospace;fill:#16191d}
+  .dna{fill:#fff;stroke:#16191d;stroke-width:2.2}
+  .prom{fill:#e8eff6;stroke:#003c71;stroke-width:2}
+  .cap{fill:#e3f0e4;stroke:#2e7d32;stroke-width:2.2}
+  .pol{fill:#dce6f2;stroke:#1a4f8a;stroke-width:2.2}
+  .ar{stroke:#003c71;stroke-width:2.2;fill:none;marker-end:url(#a)}
+  .hi{fill:#e3f0e4}.lo{fill:#f7f9fb}.vlo{fill:#f7dedc}
+ </style>
+ <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker></defs>
+
+ <text class="th" x="20" y="28">A  Low glucose raises cAMP, and cAMP-CAP helps polymerase start</text>
+ <line x1="20" y1="38" x2="860" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+
+ <rect class="bx" x="20" y="54" width="130" height="38" rx="7"/>
+ <text class="m" x="34" y="78">glucose LOW</text>
+ <path class="ar" d="M156 72 L192 72"/>
+ <rect class="bx" x="200" y="54" width="120" height="38" rx="7"/>
+ <text class="m" x="222" y="78">cAMP rises</text>
+ <path class="ar" d="M326 72 L362 72"/>
+ <rect class="cap" x="370" y="54" width="150" height="38" rx="7"/>
+ <text class="m" x="384" y="78">cAMP binds CAP</text>
+ <path class="ar" d="M526 72 L562 72"/>
+ <rect class="cap" x="570" y="54" width="290" height="38" rx="7"/>
+ <text class="m" x="584" y="78">CAP binds upstream of Plac</text>
+
+ <rect class="dna" x="60" y="146" width="620" height="22"/>
+ <rect class="cap" x="100" y="146" width="80" height="22"/>
+ <text class="m" x="112" y="162">CAP site</text>
+ <rect class="prom" x="200" y="146" width="80" height="22"/>
+ <text class="m" x="222" y="162">Plac</text>
+ <rect class="prom" x="280" y="146" width="60" height="22" fill="#f7dedc" stroke="#b3261e"/>
+ <text class="m" x="290" y="162">lacO</text>
+ <rect class="bx" x="340" y="146" width="340" height="22" fill="#fff5d6" stroke="#f2b705"/>
+ <text class="m" x="470" y="162">lacZYA</text>
+ <path class="cap" d="M104 116 h72 v30 h-72 z"/>
+ <text class="m" x="112" y="136">CAP</text>
+ <path class="pol" d="M204 116 h72 v30 h-72 z"/>
+ <text class="m" x="212" y="136">RNA pol</text>
+ <path class="ar" d="M180 131 L200 131"/>
+ <text class="s" x="300" y="130">"helps" means: raises the PROBABILITY that polymerase binds and forms an initiation complex</text>
+ <text class="s" x="60" y="192">The lac promoter sequence is poor, so initiation is rare without CAP. POSITIVE control: CAP's own action increases transcription.</text>
+
+ <text class="th" x="20" y="232">B  The four conditions</text>
+ <line x1="20" y1="242" x2="860" y2="242" stroke="#c6d2dd" stroke-width="1.5"/>
+
+ <rect class="bx" x="20" y="256" width="840" height="130" rx="8"/>
+ <text class="tb" x="34" y="278">Glucose</text>
+ <text class="tb" x="130" y="278">Lactose</text>
+ <text class="tb" x="230" y="278">LacI (negative)</text>
+ <text class="tb" x="430" y="278">cAMP-CAP (positive)</text>
+ <text class="tb" x="680" y="278">lac expression</text>
+ <line x1="34" y1="286" x2="846" y2="286" stroke="#c6d2dd" stroke-width="1.2"/>
+
+ <rect class="vlo" x="676" y="292" width="170" height="20"/>
+ <text class="t" x="34" y="307">high</text><text class="t" x="130" y="307">absent</text>
+ <text class="t" x="230" y="307">bound: repressing</text>
+ <text class="t" x="430" y="307">cAMP low: no help</text>
+ <text class="m" x="686" y="307">VERY LOW</text>
+
+ <rect class="lo" x="676" y="316" width="170" height="20"/>
+ <text class="t" x="34" y="331">low</text><text class="t" x="130" y="331">absent</text>
+ <text class="t" x="230" y="331">bound: repressing</text>
+ <text class="t" x="430" y="331">cAMP high: could help</text>
+ <text class="m" x="686" y="331">LOW</text>
+
+ <rect class="lo" x="676" y="340" width="170" height="20"/>
+ <text class="t" x="34" y="355">high</text><text class="t" x="130" y="355">present</text>
+ <text class="t" x="230" y="355">released</text>
+ <text class="t" x="430" y="355">cAMP low: no help</text>
+ <text class="m" x="686" y="355">LOW</text>
+
+ <rect class="hi" x="676" y="364" width="170" height="20"/>
+ <text class="t" x="34" y="379">low</text><text class="t" x="130" y="379">present</text>
+ <text class="t" x="230" y="379">released</text>
+ <text class="t" x="430" y="379">cAMP high: ACTIVE</text>
+ <text class="m" x="686" y="379">HIGH</text>
+
+ <rect class="k" x="20" y="396" width="840" height="48" rx="8"/>
+ <text class="t" x="34" y="418">Rows 1 and 2: lactose absent, so LacI blocks the operator and CAP cannot rescue it — relief of repression is the prerequisite.</text>
+ <text class="t" x="34" y="438">Rows 3 and 4: LacI is off in both; the difference is entirely the positive control. Two independent inputs are combined into one output.</text>
+</svg>
