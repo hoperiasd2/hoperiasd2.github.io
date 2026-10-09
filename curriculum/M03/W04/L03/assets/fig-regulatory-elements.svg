@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 430" width="880" height="430" role="img"
+ aria-label="Classification of eukaryotic regulatory sequences by distance: the position range and binding molecules of core promoter, proximal elements, enhancer and silencer, examples of the GC box and CAAT box, and the relation that DNA provides the site while protein does the regulating.">
+ <style>
+  .bx{fill:#fff;stroke:#c6d2dd;stroke-width:1.8}.k{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .t{font:12px sans-serif;fill:#16191d}.tb{font:700 13px sans-serif;fill:#003c71}
+  .th{font:700 15px sans-serif;fill:#003c71}.s{font:11px sans-serif;fill:#4a5159}
+  .m{font:10px monospace;fill:#16191d}
+  .dna{fill:#fff;stroke:#16191d;stroke-width:2.2}
+  .core{fill:#dce6f2;stroke:#1a4f8a;stroke-width:2}
+  .prox{fill:#e8eff6;stroke:#003c71;stroke-width:2}
+  .enh{fill:#e3f0e4;stroke:#2e7d32;stroke-width:2}
+  .sil{fill:#f7dedc;stroke:#b3261e;stroke-width:2}
+  .gene{fill:#fff5d6;stroke:#f2b705;stroke-width:2}
+  .ar{stroke:#003c71;stroke-width:2;fill:none;marker-end:url(#a)}
+ </style>
+ <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker></defs>
+
+ <text class="th" x="20" y="28">A  Four classes, by distance from the start site</text>
+ <line x1="20" y1="38" x2="860" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+
+ <rect class="dna" x="30" y="110" width="820" height="22"/>
+ <rect class="enh" x="50" y="110" width="90" height="22"/>
+ <text class="m" x="60" y="126">enhancer</text>
+ <rect class="sil" x="170" y="110" width="80" height="22"/>
+ <text class="m" x="180" y="126">silencer</text>
+ <rect class="prox" x="400" y="110" width="60" height="22"/>
+ <text class="m" x="404" y="126">CAAT</text>
+ <rect class="prox" x="462" y="110" width="48" height="22"/>
+ <text class="m" x="468" y="126">GC</text>
+ <rect class="core" x="512" y="110" width="76" height="22"/>
+ <text class="m" x="520" y="126">core</text>
+ <rect class="gene" x="588" y="110" width="200" height="22"/>
+ <text class="m" x="664" y="126">gene</text>
+ <rect class="enh" x="660" y="110" width="50" height="22" opacity="0.6"/>
+ <text class="m" x="648" y="150">enhancer inside an intron</text>
+ <path class="ar" d="M552 136 L552 156"/>
+ <text class="m" x="556" y="152">+1</text>
+ <text class="m" x="30" y="100">-100 kb</text>
+ <text class="m" x="400" y="100">-200 to -40</text>
+ <text class="m" x="790" y="100">downstream</text>
+
+ <rect class="bx" x="20" y="180" width="840" height="130" rx="8"/>
+ <text class="tb" x="34" y="202">Class</text>
+ <text class="tb" x="230" y="202">Position</text>
+ <text class="tb" x="470" y="202">Example element</text>
+ <text class="tb" x="650" y="202">Binding molecule</text>
+ <line x1="34" y1="210" x2="846" y2="210" stroke="#c6d2dd" stroke-width="1.2"/>
+ <text class="t" x="34" y="230">Core promoter</text>
+ <text class="t" x="230" y="230">start site plus or minus 40 bp</text>
+ <text class="t" x="470" y="230">TATA, Inr, DPE</text>
+ <text class="t" x="650" y="230">general TFs (TFIID)</text>
+ <text class="t" x="34" y="252">Proximal element</text>
+ <text class="t" x="230" y="252">tens to hundreds bp upstream</text>
+ <text class="t" x="470" y="252">GC box, CAAT box</text>
+ <text class="t" x="650" y="252">Sp1, NF-Y, CTF</text>
+ <text class="t" x="34" y="274">Enhancer</text>
+ <text class="t" x="230" y="274">kb to hundreds of kb, either side, intron</text>
+ <text class="t" x="470" y="274">tissue-specific clusters</text>
+ <text class="t" x="650" y="274">activators</text>
+ <text class="t" x="34" y="296">Silencer</text>
+ <text class="t" x="230" y="296">same range as enhancer</text>
+ <text class="t" x="470" y="296">—</text>
+ <text class="t" x="650" y="296">repressors</text>
+
+ <rect class="k" x="20" y="326" width="840" height="36" rx="8"/>
+ <text class="tb" x="34" y="350">DNA SEQUENCE PROVIDES THE SITE; THE PROTEIN BOUND THERE DOES THE REGULATING.</text>
+
+ <text class="t" x="20" y="390">Follows from this: (1) the same sequence gives different results in different cells, because the result depends on which protein is present and active;</text>
+ <text class="t" x="20" y="412">(2) several sites around one gene mean several independent inputs, and the output is their sum — the basis of combinatorial control.</text>
+</svg>

@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 450" width="880" height="450" role="img"
+ aria-label="Chromatin domains and how an enhancer's target is decided: loop formation and boundaries by CTCF and cohesin, frequent contact with promoters inside the same domain and less across a boundary, an arrangement in which the nearest gene on the sequence is not the target, and enhancer hijacking after boundary deletion.">
+ <style>
+  .bx{fill:#fff;stroke:#c6d2dd;stroke-width:1.8}.k{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .t{font:12px sans-serif;fill:#16191d}.tb{font:700 13px sans-serif;fill:#003c71}
+  .th{font:700 15px sans-serif;fill:#003c71}.s{font:11px sans-serif;fill:#4a5159}
+  .m{font:10px monospace;fill:#16191d}
+  .dna{fill:none;stroke:#16191d;stroke-width:2.6}
+  .enh{fill:#e3f0e4;stroke:#2e7d32;stroke-width:2}
+  .geneA{fill:#fff5d6;stroke:#f2b705;stroke-width:2}
+  .geneB{fill:#f7dedc;stroke:#b3261e;stroke-width:2}
+  .ctcf{fill:#dce6f2;stroke:#1a4f8a;stroke-width:2.4}
+  .coh{fill:none;stroke:#1a4f8a;stroke-width:3;stroke-dasharray:4 3}
+  .dom{fill:#e8eff6;opacity:0.45}
+  .ok{stroke:#2e7d32;stroke-width:2.6;fill:none;marker-end:url(#g)}
+  .no{stroke:#b3261e;stroke-width:2.6;fill:none;stroke-dasharray:5 4}
+ </style>
+ <defs><marker id="g" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#2e7d32"/></marker></defs>
+
+ <text class="th" x="20" y="28">A  CTCF and cohesin make loops, and the loops make boundaries</text>
+ <line x1="20" y1="38" x2="860" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+
+ <rect class="dom" x="60" y="110" width="330" height="70" rx="10"/>
+ <rect class="dom" x="420" y="110" width="300" height="70" rx="10"/>
+ <path class="dna" d="M40 150 h780"/>
+ <rect class="ctcf" x="52" y="140" width="18" height="22"/>
+ <rect class="ctcf" x="382" y="140" width="18" height="22"/>
+ <rect class="ctcf" x="412" y="140" width="18" height="22"/>
+ <rect class="ctcf" x="712" y="140" width="18" height="22"/>
+ <text class="m" x="36" y="134">CTCF</text>
+ <path class="coh" d="M61 140 q110 -46 330 0"/>
+ <path class="coh" d="M421 140 q100 -42 300 0"/>
+ <text class="m" x="170" y="100">cohesin pushes the loop out and stops at CTCF</text>
+ <text class="m" x="150" y="196">DOMAIN 1: contacts are frequent inside</text>
+ <text class="m" x="500" y="196">DOMAIN 2</text>
+
+ <rect class="enh" x="100" y="140" width="56" height="20"/>
+ <text class="m" x="106" y="155">enhancer</text>
+ <rect class="geneA" x="300" y="140" width="60" height="20"/>
+ <text class="m" x="312" y="155">gene A</text>
+ <rect class="geneB" x="440" y="140" width="60" height="20"/>
+ <text class="m" x="452" y="155">gene B</text>
+ <path class="ok" d="M156 170 q70 40 144 -8"/>
+ <text class="m" x="196" y="222">acts here</text>
+ <path class="no" d="M156 176 q160 60 284 -12"/>
+ <text class="m" x="330" y="236">rarely acts across the boundary</text>
+
+ <rect class="k" x="20" y="252" width="840" height="56" rx="8"/>
+ <text class="tb" x="34" y="276">Gene B is CLOSER on the sequence than gene A, yet gene A is the target.</text>
+ <text class="t" x="34" y="298">So the target of an enhancer cannot be decided by "the nearest gene".</text>
+
+ <text class="th" x="20" y="344">B  Boundary lost: enhancer hijacking</text>
+ <line x1="20" y1="354" x2="860" y2="354" stroke="#c6d2dd" stroke-width="1.5"/>
+ <rect class="dom" x="60" y="382" width="660" height="46" rx="10"/>
+ <path class="dna" d="M40 408 h780"/>
+ <rect class="ctcf" x="52" y="398" width="18" height="22"/>
+ <rect class="ctcf" x="712" y="398" width="18" height="22"/>
+ <text class="m" x="376" y="394">CTCF sites deleted</text>
+ <rect class="enh" x="100" y="398" width="56" height="20"/>
+ <rect class="geneA" x="300" y="398" width="60" height="20"/>
+ <rect class="geneB" x="440" y="398" width="60" height="20"/>
+ <path class="ok" d="M156 428 q160 26 284 -8"/>
+ <text class="t" x="552" y="400">Now the enhancer reaches gene B as well. The gene itself</text>
+ <text class="t" x="552" y="420">is normal but is expressed in the wrong place and time.</text>
+ <text class="s" x="552" y="442">A domain is probabilistic, not a fixed partition.</text>
+</svg>

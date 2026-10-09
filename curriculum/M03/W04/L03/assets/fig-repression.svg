@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 450" width="880" height="450" role="img"
+ aria-label="Three ways a eukaryotic repressor lowers transcription: competing with the activator, blocking the interaction between activation domain and mediator, and recruiting a corepressor complex containing HDAC to change chromatin, with a comparison to bacterial LacI in range of effect and persistence through division.">
+ <style>
+  .bx{fill:#fff;stroke:#c6d2dd;stroke-width:1.8}.k{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .t{font:12px sans-serif;fill:#16191d}.tb{font:700 13px sans-serif;fill:#003c71}
+  .th{font:700 15px sans-serif;fill:#003c71}.s{font:11px sans-serif;fill:#4a5159}
+  .m{font:10px monospace;fill:#16191d}
+  .dna{fill:none;stroke:#16191d;stroke-width:2.4}
+  .act{fill:#e3f0e4;stroke:#2e7d32;stroke-width:2.2}
+  .rep{fill:#f7dedc;stroke:#b3261e;stroke-width:2.2}
+  .med{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .pol{fill:#dce6f2;stroke:#1a4f8a;stroke-width:2.2}
+  .nuc{fill:#dce6f2;stroke:#1a4f8a;stroke-width:1.8}
+  .no{stroke:#b3261e;stroke-width:3;fill:none}
+ </style>
+
+ <text class="th" x="20" y="28">Three ways, which overlap in practice</text>
+ <line x1="20" y1="38" x2="860" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+
+ <text class="tb" x="30" y="62">1  Compete with the activator</text>
+ <path class="dna" d="M30 110 h250"/>
+ <rect class="rep" x="80" y="100" width="60" height="22" rx="4"/>
+ <text class="m" x="92" y="116">repressor</text>
+ <rect class="act" x="150" y="76" width="60" height="22" rx="4"/>
+ <text class="m" x="160" y="92">activator</text>
+ <line class="no" x1="128" y1="92" x2="148" y2="100"/>
+ <text class="s" x="30" y="140">binds the same or an overlapping site, or binds the</text>
+ <text class="s" x="30" y="158">activator itself so it cannot reach the DNA</text>
+
+ <text class="tb" x="320" y="62">2  Cut the link to the machinery</text>
+ <path class="dna" d="M320 110 h250"/>
+ <rect class="act" x="350" y="100" width="56" height="22" rx="4"/>
+ <text class="m" x="358" y="116">activator</text>
+ <rect class="rep" x="412" y="100" width="54" height="22" rx="4"/>
+ <text class="m" x="418" y="116">repr.</text>
+ <rect class="med" x="480" y="76" width="54" height="24" rx="5"/>
+ <text class="m" x="488" y="92">mediator</text>
+ <line class="no" x1="412" y1="92" x2="474" y2="90"/>
+ <line class="no" x1="436" y1="78" x2="450" y2="102"/>
+ <text class="s" x="320" y="140">the activator stays bound but its activation domain</text>
+ <text class="s" x="320" y="158">cannot engage mediator: the signal is interrupted</text>
+
+ <text class="tb" x="610" y="62">3  Recruit a corepressor</text>
+ <path class="dna" d="M610 110 h240"/>
+ <rect class="rep" x="640" y="100" width="54" height="22" rx="4"/>
+ <text class="m" x="648" y="116">repr.</text>
+ <rect class="bx" x="700" y="74" width="120" height="26" rx="5" stroke="#b3261e"/>
+ <text class="m" x="708" y="92">HDAC complex</text>
+ <circle class="nuc" cx="730" cy="134" r="12"/>
+ <circle class="nuc" cx="762" cy="134" r="12"/>
+ <circle class="nuc" cx="794" cy="134" r="12"/>
+ <text class="s" x="610" y="162">the repressor has no enzyme activity: it brings the</text>
+ <text class="s" x="610" y="180">enzyme to this place, and chromatin closes</text>
+
+ <text class="th" x="20" y="222">Why the third way matters most in eukaryotes</text>
+ <line x1="20" y1="232" x2="860" y2="232" stroke="#c6d2dd" stroke-width="1.5"/>
+ <rect class="k" x="20" y="246" width="410" height="90" rx="8"/>
+ <text class="tb" x="34" y="270">It can SPREAD</text>
+ <text class="t" x="34" y="292">A chromatin change begun at one site can extend into</text>
+ <text class="t" x="34" y="312">the neighbourhood and silence a wide region. Simple</text>
+ <text class="t" x="34" y="330">competitive repression cannot do that.</text>
+ <rect class="k" x="450" y="246" width="410" height="90" rx="8"/>
+ <text class="tb" x="464" y="270">It can PERSIST through division</text>
+ <text class="t" x="464" y="292">The mark can be copied to the daughter cells, which is</text>
+ <text class="t" x="464" y="312">how a differentiated state is maintained. This is the</text>
+ <text class="t" x="464" y="330">subject of the next lesson.</text>
+
+ <rect class="bx" x="20" y="350" width="840" height="92" rx="8"/>
+ <text class="tb" x="34" y="372">Compared with bacterial LacI</text>
+ <text class="tb" x="330" y="372">LacI</text>
+ <text class="tb" x="600" y="372">eukaryotic repressor</text>
+ <line x1="34" y1="380" x2="846" y2="380" stroke="#c6d2dd" stroke-width="1.2"/>
+ <text class="t" x="34" y="400">main mechanism</text>
+ <text class="t" x="330" y="400">physically masks the operator</text>
+ <text class="t" x="600" y="400">three ways, overlapping</text>
+ <text class="t" x="34" y="420">range of effect</text>
+ <text class="t" x="330" y="420">that operon</text>
+ <text class="t" x="600" y="420">can extend over a chromatin region</text>
+ <text class="t" x="34" y="438">after division</text>
+ <text class="t" x="330" y="438">none: set by concentration</text>
+ <text class="t" x="600" y="438">can persist as a chromatin mark</text>
+</svg>

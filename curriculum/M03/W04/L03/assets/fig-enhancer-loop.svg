@@ -1,53 +1,70 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 410" width="880" height="410" role="img"
-     aria-label="Enhancer action through DNA looping, the role of insulators and topologically associating domains, and enhancer hijacking by a chromosomal rearrangement">
-  <style>
-    .ttl { font:700 14px sans-serif; fill:#003c71; }
-    .nm { font:700 12px sans-serif; fill:#003c71; }
-    .sub { font:11px sans-serif; fill:#4a5159; }
-    .dna { stroke:#16191d; stroke-width:2.6; fill:none; }
-    .enh { fill:#f2b705; stroke:#16191d; stroke-width:1.2; }
-    .prom { fill:#003c71; stroke:#16191d; stroke-width:1.2; }
-    .gene { fill:#003c71; stroke:#16191d; stroke-width:1.2; }
-    .ins { fill:#ffffff; stroke:#16191d; stroke-width:1.4; }
-    .gl { font:700 11px sans-serif; fill:#ffffff; }
-    .rl { font:700 11px sans-serif; fill:#16191d; }
-    .tf { fill:#fff5d6; stroke:#003c71; stroke-width:1.3; }
-    .ln { stroke:#003c71; stroke-width:1.5; fill:none; }
-    .bad { stroke:#8a6300; stroke-width:2; fill:none; stroke-dasharray:5 3; }
-  </style>
-  <defs>
-    <marker id="n1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-      <path d="M0 0 L10 5 L0 10 z" fill="#003c71"/>
-    </marker>
-  </defs>
-  <text class="ttl" x="20" y="26">A. An enhancer reaches its promoter by looping the DNA</text>
-  <path class="dna" d="M40 150 C120 70 200 70 240 110 C280 150 320 190 420 190 L820 190"/>
-  <rect class="enh" x="40" y="138" width="80" height="24" transform="rotate(-38 80 150)"/>
-  <text class="rl" x="30" y="190">enhancer</text>
-  <rect class="prom" x="420" y="178" width="70" height="24"/><text class="gl" x="428" y="195">prom</text>
-  <rect class="gene" x="500" y="174" width="180" height="32"/><text class="gl" x="540" y="195">target gene</text>
-  <ellipse class="tf" cx="140" cy="88" rx="56" ry="17"/><text class="nm" x="100" y="94">activators</text>
-  <ellipse class="tf" cx="300" cy="118" rx="54" ry="17"/><text class="nm" x="258" y="124">Mediator</text>
-  <path class="ln" d="M354 126 L414 160" marker-end="url(#n1)"/>
-  <text class="sub" x="700" y="150">Distance in base pairs does not</text>
-  <text class="sub" x="700" y="168">matter; the loop does. Cohesin</text>
-  <text class="sub" x="700" y="186">and CTCF organise the loops.</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 440" width="880" height="440" role="img"
+ aria-label="Connection by DNA looping and mediator: the difference between genomic distance and spatial distance in the nucleus, formation of a loop that brings the enhancer-bound activator close to the promoter complex, the position where mediator bridges the two, and the distinction between activator and coactivator.">
+ <style>
+  .bx{fill:#fff;stroke:#c6d2dd;stroke-width:1.8}.k{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .t{font:12px sans-serif;fill:#16191d}.tb{font:700 13px sans-serif;fill:#003c71}
+  .th{font:700 15px sans-serif;fill:#003c71}.s{font:11px sans-serif;fill:#4a5159}
+  .m{font:10px monospace;fill:#16191d}
+  .dna{fill:none;stroke:#16191d;stroke-width:2.6}
+  .enh{fill:#e3f0e4;stroke:#2e7d32;stroke-width:2}
+  .prom{fill:#dce6f2;stroke:#1a4f8a;stroke-width:2}
+  .act{fill:#e3f0e4;stroke:#2e7d32;stroke-width:2.4}
+  .med{fill:#fff5d6;stroke:#f2b705;stroke-width:2.6}
+  .pol{fill:#dce6f2;stroke:#1a4f8a;stroke-width:2.4}
+  .ar{stroke:#003c71;stroke-width:2;fill:none;marker-end:url(#a)}
+ </style>
+ <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker></defs>
 
-  <text class="ttl" x="20" y="252">B. Insulators keep an enhancer inside its own domain</text>
-  <path class="dna" d="M40 300 L840 300"/>
-  <rect class="ins" x="300" y="288" width="60" height="24"/><text class="rl" x="310" y="305">CTCF</text>
-  <rect class="enh" x="120" y="288" width="80" height="24"/><text class="rl" x="128" y="305">enhancer</text>
-  <rect class="gene" x="200" y="284" width="90" height="32"/><text class="gl" x="214" y="305">gene A</text>
-  <rect class="gene" x="420" y="284" width="90" height="32"/><text class="gl" x="434" y="305">gene B</text>
-  <path class="ln" d="M160 284 C180 254 220 254 240 280" marker-end="url(#n1)"/>
-  <path class="bad" d="M160 320 C240 348 400 348 460 322"/>
-  <text class="sub" x="300" y="340">blocked by the insulator</text>
-  <text class="sub" x="560" y="296">The domain bounded by CTCF sites is a topologically</text>
-  <text class="sub" x="560" y="314">associating domain (TAD): enhancers act within it.</text>
+ <text class="th" x="20" y="28">A  Two distances that must not be confused</text>
+ <line x1="20" y1="38" x2="860" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
 
-  <text class="ttl" x="20" y="372">C. Enhancer hijacking: a rearrangement puts a strong enhancer beside the wrong gene</text>
-  <path class="dna" d="M40 398 L400 398"/>
-  <rect class="enh" x="60" y="386" width="110" height="22"/><text class="rl" x="66" y="402">IGH enhancer</text>
-  <rect class="gene" x="200" y="384" width="80" height="28"/><text class="gl" x="222" y="403">MYC</text>
-  <text class="sub" x="420" y="402">t(8;14) in Burkitt lymphoma: the MYC protein is normal, but it is transcribed at the wrong level in the wrong cell.</text>
+ <text class="tb" x="30" y="64">Drawn as a straight line: genomic distance</text>
+ <path class="dna" d="M30 96 h420"/>
+ <rect class="enh" x="40" y="86" width="56" height="20"/>
+ <text class="m" x="46" y="101">enhancer</text>
+ <rect class="prom" x="370" y="86" width="56" height="20"/>
+ <text class="m" x="378" y="101">promoter</text>
+ <text class="m" x="190" y="122">100 kb apart on the sequence</text>
+
+ <text class="tb" x="500" y="64">Folded in the nucleus: spatial distance</text>
+ <path class="dna" d="M520 136 q-10 -70 70 -70 q90 0 90 42 q0 36 -70 36 q-60 0 -60 -26"/>
+ <rect class="enh" x="548" y="52" width="56" height="20"/>
+ <rect class="prom" x="608" y="60" width="56" height="20"/>
+ <text class="m" x="520" y="156">the same two points are touching</text>
+
+ <rect class="k" x="20" y="150" width="440" height="36" rx="8"/>
+ <text class="t" x="34" y="173">10 kb apart can also mean almost no contact, if in different loops.</text>
+
+ <text class="th" x="20" y="222">B  The loop, and the bridge</text>
+ <line x1="20" y1="232" x2="860" y2="232" stroke="#c6d2dd" stroke-width="1.5"/>
+
+ <path class="dna" d="M60 380 h80 q120 -120 240 0 h80"/>
+ <rect class="enh" x="130" y="312" width="60" height="20" transform="rotate(-38 160 322)"/>
+ <text class="m" x="86" y="312">enhancer</text>
+ <rect class="prom" x="330" y="312" width="60" height="20" transform="rotate(38 360 322)"/>
+ <text class="m" x="398" y="312">promoter</text>
+ <text class="m" x="212" y="396">the intervening DNA forms a loop</text>
+
+ <rect class="act" x="170" y="270" width="64" height="30" rx="6"/>
+ <text class="m" x="178" y="290">activator</text>
+ <path class="pol" d="M290 268 h70 v34 h-70 z"/>
+ <text class="m" x="302" y="290">Pol II</text>
+ <rect class="med" x="238" y="248" width="52" height="54" rx="8"/>
+ <text class="m" x="246" y="272">medi-</text>
+ <text class="m" x="248" y="288">ator</text>
+ <path class="ar" d="M236 284 L238 284"/>
+ <text class="s" x="170" y="238">the activator and Pol II need not touch directly</text>
+
+ <rect class="bx" x="500" y="246" width="360" height="146" rx="8"/>
+ <text class="tb" x="514" y="268">Activator vs coactivator</text>
+ <line x1="514" y1="276" x2="846" y2="276" stroke="#c6d2dd" stroke-width="1.2"/>
+ <text class="t" x="514" y="296">Recognises a DNA sequence</text>
+ <text class="m" x="730" y="296">activator: YES</text>
+ <text class="m" x="730" y="314">coactivator: NO</text>
+ <text class="t" x="514" y="336">Selectivity comes from</text>
+ <text class="m" x="730" y="336">its own DBD</text>
+ <text class="m" x="730" y="354">who recruited it</text>
+ <text class="t" x="514" y="378">Examples: Sp1, NF-kB, nuclear receptors  /  mediator, CBP-p300</text>
+
+ <text class="s" x="20" y="424">"Recruitment" means proteins bind one another so the regulatory complex stays near that DNA — a rise in local concentration, not a summons from elsewhere. A COREPRESSOR is defined the same way, brought in by a repressor.</text>
 </svg>

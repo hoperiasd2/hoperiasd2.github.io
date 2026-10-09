@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 450" width="880" height="450" role="img"
+ aria-label="Pol II pausing and its release: Pol II halted 20 to 60 bases downstream of the start site, maintenance by NELF and DSIF, release by P-TEFb phosphorylation into productive elongation, why this allows a fast response, and a comparison showing it shares no mechanism with bacterial attenuation.">
+ <style>
+  .bx{fill:#fff;stroke:#c6d2dd;stroke-width:1.8}.k{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .t{font:12px sans-serif;fill:#16191d}.tb{font:700 13px sans-serif;fill:#003c71}
+  .th{font:700 15px sans-serif;fill:#003c71}.s{font:11px sans-serif;fill:#4a5159}
+  .m{font:10px monospace;fill:#16191d}
+  .dna{fill:#fff;stroke:#16191d;stroke-width:2.2}
+  .prom{fill:#dce6f2;stroke:#1a4f8a;stroke-width:2}
+  .gene{fill:#fff5d6;stroke:#f2b705;stroke-width:2}
+  .pol{fill:#dce6f2;stroke:#1a4f8a;stroke-width:2.4}
+  .nelf{fill:#f7dedc;stroke:#b3261e;stroke-width:2.2}
+  .ptef{fill:#e3f0e4;stroke:#2e7d32;stroke-width:2.2}
+  .rna{stroke:#b3261e;stroke-width:3;fill:none}
+  .ar{stroke:#003c71;stroke-width:2.2;fill:none;marker-end:url(#a)}
+ </style>
+ <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker></defs>
+
+ <text class="th" x="20" y="28">A  Starting is not the same as finishing</text>
+ <line x1="20" y1="38" x2="860" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+
+ <text class="tb" x="30" y="66">Paused state</text>
+ <rect class="dna" x="30" y="112" width="500" height="22"/>
+ <rect class="prom" x="60" y="112" width="50" height="22"/>
+ <text class="m" x="68" y="128">prom</text>
+ <rect class="gene" x="110" y="112" width="420" height="22"/>
+ <path class="pol" d="M126 82 h66 v30 h-66 z"/>
+ <text class="m" x="140" y="102">Pol II</text>
+ <rect class="nelf" x="196" y="82" width="42" height="30" rx="5"/>
+ <text class="m" x="200" y="101">NELF</text>
+ <rect class="nelf" x="240" y="82" width="42" height="30" rx="5"/>
+ <text class="m" x="244" y="101">DSIF</text>
+ <path class="rna" d="M150 76 q24 -12 44 -4"/>
+ <text class="m" x="112" y="152">20 to 60 bases downstream: a short RNA already made, DNA already unwound</text>
+
+ <path class="ar" d="M300 170 L300 196"/>
+ <rect class="ptef" x="320" y="166" width="78" height="28" rx="6"/>
+ <text class="m" x="328" y="185">P-TEFb</text>
+ <text class="s" x="406" y="185">phosphorylates the Pol II tail and NELF/DSIF</text>
+
+ <text class="tb" x="30" y="226">Released: productive elongation</text>
+ <rect class="dna" x="30" y="266" width="500" height="22"/>
+ <rect class="prom" x="60" y="266" width="50" height="22"/>
+ <rect class="gene" x="110" y="266" width="420" height="22"/>
+ <path class="pol" d="M330 236 h66 v30 h-66 z"/>
+ <text class="m" x="344" y="256">Pol II</text>
+ <circle cx="404" cy="240" r="6" fill="#2e7d32"/>
+ <text class="m" x="414" y="244">P</text>
+ <rect class="nelf" x="236" y="236" width="42" height="30" rx="5" opacity="0.4"/>
+ <text class="m" x="222" y="226">NELF off</text>
+ <path class="rna" d="M150 258 h176"/>
+ <path class="ar" d="M404 272 L500 272"/>
+
+ <text class="th" x="20" y="320">B  Two consequences</text>
+ <line x1="20" y1="330" x2="430" y2="330" stroke="#c6d2dd" stroke-width="1.5"/>
+ <rect class="k" x="20" y="344" width="410" height="52" rx="8"/>
+ <text class="t" x="34" y="366">FAST: no need to rebuild the complex. Heat-shock and</text>
+ <text class="t" x="34" y="386">immediate-early genes use this to fire within minutes.</text>
+ <rect class="bx" x="20" y="402" width="410" height="42" rx="8"/>
+ <text class="t" x="34" y="426">ANOTHER CONTROL POINT: initiation rate and release rate are independent.</text>
+
+ <text class="th" x="460" y="320">C  Not the same as attenuation</text>
+ <line x1="460" y1="330" x2="860" y2="330" stroke="#c6d2dd" stroke-width="1.5"/>
+ <rect class="bx" x="460" y="344" width="400" height="100" rx="8"/>
+ <text class="tb" x="474" y="364">bacterial attenuation</text>
+ <text class="tb" x="672" y="364">Pol II pausing</text>
+ <line x1="474" y1="370" x2="846" y2="370" stroke="#c6d2dd" stroke-width="1.2"/>
+ <text class="t" x="474" y="388">RNA hairpin stops it</text>
+ <text class="t" x="672" y="388">NELF and DSIF stop it</text>
+ <text class="t" x="474" y="406">ribosome speed decides</text>
+ <text class="t" x="672" y="406">P-TEFb decides</text>
+ <text class="tb" x="474" y="426">transcription TERMINATES</text>
+ <text class="tb" x="672" y="426">transcription RESUMES</text>
+ <text class="s" x="474" y="440">ribosome required</text>
+ <text class="s" x="672" y="440">no ribosome involved</text>
+</svg>

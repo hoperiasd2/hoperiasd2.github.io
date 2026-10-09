@@ -1,75 +1,80 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 400" width="880" height="400" role="img"
-     aria-label="Diseases caused by transcription factor and coactivator defects, grouped by the class of DNA-binding domain">
-  <style>
-    .ttl { font:700 14px sans-serif; fill:#003c71; }
-    .hdc { fill:#003c71; }
-    .hdt { font:700 11px sans-serif; fill:#ffffff; }
-    .cell { fill:#ffffff; stroke:#c6d2dd; stroke-width:0.9; }
-    .alt { fill:#fff5d6; stroke:#c6d2dd; stroke-width:0.9; }
-    .t { font:11px sans-serif; fill:#16191d; }
-    .tb { font:700 11px sans-serif; fill:#003c71; }
-    .sub { font:11px sans-serif; fill:#4a5159; }
-  </style>
-  <text class="ttl" x="20" y="26">Transcription factor defects and the diseases they cause</text>
-  <rect class="hdc" x="20" y="40" width="170" height="28"/><text class="hdt" x="30" y="59">Domain class</text>
-  <rect class="hdc" x="190" y="40" width="130" height="28"/><text class="hdt" x="200" y="59">Gene</text>
-  <rect class="hdc" x="320" y="40" width="270" height="28"/><text class="hdt" x="330" y="59">Disease</text>
-  <rect class="hdc" x="590" y="40" width="270" height="28"/><text class="hdt" x="600" y="59">Mechanism</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 460" width="880" height="460" role="img"
+ aria-label="Four categories of disease caused by transcription factor abnormality and the treatment strategies: loss of function, gain of function by fusion, regulatory sequence variants and change in amount; the mechanism by which a nuclear receptor switches between corepressor and coactivator according to its ligand; and the route by which ATRA restarts differentiation in PML-RAR alpha.">
+ <style>
+  .bx{fill:#fff;stroke:#c6d2dd;stroke-width:1.8}.k{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .t{font:12px sans-serif;fill:#16191d}.tb{font:700 13px sans-serif;fill:#003c71}
+  .th{font:700 15px sans-serif;fill:#003c71}.s{font:11px sans-serif;fill:#4a5159}
+  .m{font:10px monospace;fill:#16191d}
+  .ar{stroke:#003c71;stroke-width:2;fill:none;marker-end:url(#a)}
+  .nr{fill:#dce6f2;stroke:#1a4f8a;stroke-width:2.2}
+  .cor{fill:#f7dedc;stroke:#b3261e;stroke-width:2.2}
+  .coa{fill:#e3f0e4;stroke:#2e7d32;stroke-width:2.2}
+  .dna{fill:none;stroke:#16191d;stroke-width:2.4}
+ </style>
+ <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker></defs>
 
-  <rect class="alt" x="20" y="68" width="170" height="28"/><text class="tb" x="30" y="87">Zinc finger</text>
-  <rect class="alt" x="190" y="68" width="130" height="28"/><text class="t" x="200" y="87">WT1</text>
-  <rect class="alt" x="320" y="68" width="270" height="28"/><text class="t" x="330" y="87">Wilms tumour, Denys-Drash syndrome</text>
-  <rect class="alt" x="590" y="68" width="270" height="28"/><text class="t" x="600" y="87">loss of a kidney and gonad programme</text>
+ <text class="th" x="20" y="28">A  Four categories</text>
+ <line x1="20" y1="38" x2="860" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+ <rect class="bx" x="20" y="54" width="206" height="118" rx="8"/>
+ <text class="tb" x="34" y="78">1  Loss of function</text>
+ <text class="s" x="34" y="98">not made, or DBD/AD broken</text>
+ <text class="t" x="34" y="122">MODY (HNF1A, HNF4A)</text>
+ <text class="t" x="34" y="142">Rett syndrome (MECP2)</text>
+ <text class="t" x="34" y="162">developmental malformations</text>
 
-  <rect class="cell" x="20" y="96" width="170" height="28"/><text class="tb" x="30" y="115">Zinc finger</text>
-  <rect class="cell" x="190" y="96" width="130" height="28"/><text class="t" x="200" y="115">GATA1</text>
-  <rect class="cell" x="320" y="96" width="270" height="28"/><text class="t" x="330" y="115">X-linked thrombocytopenia with anaemia</text>
-  <rect class="cell" x="590" y="96" width="270" height="28"/><text class="t" x="600" y="115">blocked erythroid and platelet maturation</text>
+ <rect class="bx" x="238" y="54" width="206" height="118" rx="8"/>
+ <text class="tb" x="252" y="78">2  Fusion, gain of function</text>
+ <text class="s" x="252" y="98">translocation joins two genes</text>
+ <text class="t" x="252" y="122">PML-RAR alpha in APL</text>
+ <text class="t" x="252" y="146">here the target is transcription</text>
+ <text class="t" x="252" y="162">control itself, not a kinase</text>
 
-  <rect class="alt" x="20" y="124" width="170" height="28"/><text class="tb" x="30" y="143">Leucine zipper</text>
-  <rect class="alt" x="190" y="124" width="130" height="28"/><text class="t" x="200" y="143">CEBPA</text>
-  <rect class="alt" x="320" y="124" width="270" height="28"/><text class="t" x="330" y="143">acute myeloid leukaemia (somatic)</text>
-  <rect class="alt" x="590" y="124" width="270" height="28"/><text class="t" x="600" y="143">myeloid differentiation is arrested</text>
+ <rect class="bx" x="456" y="54" width="196" height="118" rx="8"/>
+ <text class="tb" x="470" y="78">3  Regulatory sequence</text>
+ <text class="s" x="470" y="98">the factor is normal</text>
+ <text class="t" x="470" y="122">enhancer variant or</text>
+ <text class="t" x="470" y="142">hijacking after rearrangement</text>
+ <text class="s" x="470" y="164">invisible to coding-only tests</text>
 
-  <rect class="cell" x="20" y="152" width="170" height="28"/><text class="tb" x="30" y="171">Homeodomain</text>
-  <rect class="cell" x="190" y="152" width="130" height="28"/><text class="t" x="200" y="171">PAX6</text>
-  <rect class="cell" x="320" y="152" width="270" height="28"/><text class="t" x="330" y="171">aniridia, Peters anomaly</text>
-  <rect class="cell" x="590" y="152" width="270" height="28"/><text class="t" x="600" y="171">haploinsufficiency: one copy is not enough</text>
+ <rect class="bx" x="664" y="54" width="196" height="118" rx="8"/>
+ <text class="tb" x="678" y="78">4  Change in amount</text>
+ <text class="s" x="678" y="98">over-expressed or not degraded</text>
+ <text class="t" x="678" y="122">MYC over-expression in</text>
+ <text class="t" x="678" y="142">many cancers</text>
 
-  <rect class="alt" x="20" y="180" width="170" height="28"/><text class="tb" x="30" y="199">Homeodomain, POU</text>
-  <rect class="alt" x="190" y="180" width="130" height="28"/><text class="t" x="200" y="199">POU1F1</text>
-  <rect class="alt" x="320" y="180" width="270" height="28"/><text class="t" x="330" y="199">combined pituitary hormone deficiency</text>
-  <rect class="alt" x="590" y="180" width="270" height="28"/><text class="t" x="600" y="199">one factor, several hormone genes lost</text>
+ <text class="th" x="20" y="212">B  Why nuclear receptors are druggable: one protein, two states</text>
+ <line x1="20" y1="222" x2="860" y2="222" stroke="#c6d2dd" stroke-width="1.5"/>
 
-  <rect class="cell" x="20" y="208" width="170" height="28"/><text class="tb" x="30" y="227">Homeodomain, HOX</text>
-  <rect class="cell" x="190" y="208" width="130" height="28"/><text class="t" x="200" y="227">HOXD13</text>
-  <rect class="cell" x="320" y="208" width="270" height="28"/><text class="t" x="330" y="227">synpolydactyly</text>
-  <rect class="cell" x="590" y="208" width="270" height="28"/><text class="t" x="600" y="227">limb pattern is mis-specified</text>
+ <text class="tb" x="40" y="248">no ligand</text>
+ <path class="dna" d="M40 300 h240"/>
+ <rect class="nr" x="100" y="288" width="64" height="24" rx="5"/>
+ <text class="m" x="112" y="305">receptor</text>
+ <rect class="cor" x="168" y="262" width="94" height="26" rx="5"/>
+ <text class="m" x="176" y="280">corepressor</text>
+ <text class="s" x="40" y="330">target gene is repressed (or the receptor waits in the cytosol)</text>
 
-  <rect class="alt" x="20" y="236" width="170" height="28"/><text class="tb" x="30" y="255">bHLH</text>
-  <rect class="alt" x="190" y="236" width="130" height="28"/><text class="t" x="200" y="255">TWIST1</text>
-  <rect class="alt" x="320" y="236" width="270" height="28"/><text class="t" x="330" y="255">Saethre-Chotzen syndrome</text>
-  <rect class="alt" x="590" y="236" width="270" height="28"/><text class="t" x="600" y="255">premature suture fusion</text>
+ <path class="ar" d="M300 290 L352 290"/>
+ <circle cx="326" cy="272" r="7" fill="#f2b705" stroke="#8a6300" stroke-width="1.6"/>
+ <text class="m" x="306" y="262">ligand</text>
 
-  <rect class="cell" x="20" y="264" width="170" height="28"/><text class="tb" x="30" y="283">HMG box</text>
-  <rect class="cell" x="190" y="264" width="130" height="28"/><text class="t" x="200" y="283">SRY, SOX9</text>
-  <rect class="cell" x="320" y="264" width="270" height="28"/><text class="t" x="330" y="283">46,XY sex reversal; campomelic dysplasia</text>
-  <rect class="cell" x="590" y="264" width="270" height="28"/><text class="t" x="600" y="283">a single switch sets a whole pathway</text>
+ <text class="tb" x="372" y="248">ligand bound</text>
+ <path class="dna" d="M372 300 h240"/>
+ <rect class="nr" x="432" y="288" width="64" height="24" rx="5"/>
+ <text class="m" x="444" y="305">receptor</text>
+ <circle cx="464" cy="282" r="6" fill="#f2b705" stroke="#8a6300" stroke-width="1.4"/>
+ <rect class="coa" x="500" y="262" width="96" height="26" rx="5"/>
+ <text class="m" x="506" y="280">coactivator</text>
+ <text class="s" x="372" y="330">shape changes: corepressor leaves, coactivator binds, transcription on</text>
 
-  <rect class="alt" x="20" y="292" width="170" height="28"/><text class="tb" x="30" y="311">Nuclear receptor</text>
-  <rect class="alt" x="190" y="292" width="130" height="28"/><text class="t" x="200" y="311">AR, THRB, VDR</text>
-  <rect class="alt" x="320" y="292" width="270" height="28"/><text class="t" x="330" y="311">androgen insensitivity; thyroid hormone</text>
-  <text class="t" x="330" y="326">resistance; vitamin D-resistant rickets</text>
-  <rect class="alt" x="590" y="292" width="270" height="36"/>
-  <text class="t" x="600" y="311">hormone is present and high, yet the</text>
-  <text class="t" x="600" y="326">target tissue does not respond</text>
-  <rect class="alt" x="20" y="320" width="300" height="8"/>
+ <rect class="k" x="644" y="240" width="216" height="100" rx="8"/>
+ <text class="tb" x="656" y="264">Drugs that use this</text>
+ <text class="t" x="656" y="286">tamoxifen (ER)</text>
+ <text class="t" x="656" y="306">glucocorticoid agents</text>
+ <text class="t" x="656" y="326">ATRA, vitamin D analogues</text>
 
-  <rect class="cell" x="20" y="328" width="170" height="28"/><text class="tb" x="30" y="347">Coactivator</text>
-  <rect class="cell" x="190" y="328" width="130" height="28"/><text class="t" x="200" y="347">CREBBP</text>
-  <rect class="cell" x="320" y="328" width="270" height="28"/><text class="t" x="330" y="347">Rubinstein-Taybi syndrome</text>
-  <rect class="cell" x="590" y="328" width="270" height="28"/><text class="t" x="600" y="347">lost histone acetyltransferase activity</text>
-
-  <text class="sub" x="20" y="378">Transcription factors are dosage sensitive, so many of these conditions are dominant through haploinsufficiency rather than through a changed protein.</text>
-  <text class="sub" x="20" y="396">A fusion factor can instead act as a fixed repressor: PML-RARA in acute promyelocytic leukaemia, reversed by pharmacologic all-trans retinoic acid.</text>
+ <text class="th" x="20" y="374">C  ATRA in acute promyelocytic leukaemia, and three other routes</text>
+ <line x1="20" y1="384" x2="860" y2="384" stroke="#c6d2dd" stroke-width="1.5"/>
+ <text class="t" x="20" y="406">PML-RAR alpha holds corepressors abnormally and keeps differentiation genes off. ATRA binds it, the corepressor leaves, and the blocked</text>
+ <text class="t" x="20" y="424">differentiation restarts. The treatment does not kill the cell; it switches differentiation back on.</text>
+ <text class="t" x="20" y="448">Other routes: target the coregulators and chromatin enzymes (HDAC, BET, EZH2 inhibitors) · target the machinery kinase (CDK9) · induce degradation of the factor.</text>
 </svg>

@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 450" width="880" height="450" role="img"
+ aria-label="The logic of combinatorial control: four outcomes depending on whether factors A and B are present, how the same DNA gives different results, the number of states a small set of factors can produce, and the structure of an immunoglobulin enhancer with many binding sites.">
+ <style>
+  .bx{fill:#fff;stroke:#c6d2dd;stroke-width:1.8}.k{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .t{font:12px sans-serif;fill:#16191d}.tb{font:700 13px sans-serif;fill:#003c71}
+  .th{font:700 15px sans-serif;fill:#003c71}.s{font:11px sans-serif;fill:#4a5159}
+  .m{font:10px monospace;fill:#16191d}
+  .dna{fill:none;stroke:#16191d;stroke-width:2.4}
+  .sa{fill:#dce6f2;stroke:#1a4f8a;stroke-width:2}
+  .sb{fill:#e3f0e4;stroke:#2e7d32;stroke-width:2}
+  .emp{fill:#fff;stroke:#c6d2dd;stroke-width:1.8;stroke-dasharray:3 3}
+  .gene{fill:#fff5d6;stroke:#f2b705;stroke-width:2}
+  .hi{fill:#2e7d32}.lo{fill:#c6d2dd}
+ </style>
+
+ <text class="th" x="20" y="28">A  One gene, two required factors, four cells</text>
+ <line x1="20" y1="38" x2="860" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+
+ <g>
+  <text class="tb" x="34" y="64">cell 1: A and B</text>
+  <path class="dna" d="M34 94 h260"/>
+  <rect class="sa" x="60" y="84" width="34" height="20"/><text class="m" x="72" y="99">A</text>
+  <rect class="sb" x="104" y="84" width="34" height="20"/><text class="m" x="116" y="99">B</text>
+  <rect class="gene" x="200" y="84" width="80" height="20"/><text class="m" x="226" y="99">gene</text>
+  <rect class="hi" x="310" y="86" width="170" height="16"/>
+  <text class="m" x="492" y="99">HIGH</text>
+ </g>
+ <g>
+  <text class="tb" x="34" y="144">cell 2: A only</text>
+  <path class="dna" d="M34 174 h260"/>
+  <rect class="sa" x="60" y="164" width="34" height="20"/><text class="m" x="72" y="179">A</text>
+  <rect class="emp" x="104" y="164" width="34" height="20"/>
+  <rect class="gene" x="200" y="164" width="80" height="20"/>
+  <rect class="lo" x="310" y="166" width="34" height="16"/>
+  <text class="m" x="492" y="179">low</text>
+ </g>
+ <g>
+  <text class="tb" x="34" y="224">cell 3: B only</text>
+  <path class="dna" d="M34 254 h260"/>
+  <rect class="emp" x="60" y="244" width="34" height="20"/>
+  <rect class="sb" x="104" y="244" width="34" height="20"/><text class="m" x="116" y="259">B</text>
+  <rect class="gene" x="200" y="244" width="80" height="20"/>
+  <rect class="lo" x="310" y="246" width="34" height="16"/>
+  <text class="m" x="492" y="259">low</text>
+ </g>
+ <g>
+  <text class="tb" x="34" y="304">cell 4: neither</text>
+  <path class="dna" d="M34 334 h260"/>
+  <rect class="emp" x="60" y="324" width="34" height="20"/>
+  <rect class="emp" x="104" y="324" width="34" height="20"/>
+  <rect class="gene" x="200" y="324" width="80" height="20"/>
+  <text class="m" x="492" y="339">none</text>
+ </g>
+ <rect class="k" x="20" y="356" width="500" height="36" rx="8"/>
+ <text class="tb" x="34" y="380">Same genome, four results. The difference is in the PROTEINS, not the DNA.</text>
+
+ <text class="th" x="556" y="64">B  Why combinations, not dedicated factors</text>
+ <line x1="556" y1="74" x2="860" y2="74" stroke="#c6d2dd" stroke-width="1.5"/>
+ <rect class="bx" x="556" y="88" width="304" height="124" rx="8"/>
+ <text class="t" x="570" y="112">about 1,600 transcription factors</text>
+ <text class="t" x="570" y="134">about 20,000 genes to regulate</text>
+ <text class="t" x="570" y="156">hundreds of cell types</text>
+ <text class="s" x="570" y="182">One dedicated factor per gene is impossible.</text>
+ <text class="m" x="570" y="202">10 factors in combination = 1,024 states</text>
+
+ <text class="th" x="556" y="248">C  A real example</text>
+ <line x1="556" y1="258" x2="860" y2="258" stroke="#c6d2dd" stroke-width="1.5"/>
+ <text class="s" x="556" y="280">immunoglobulin enhancer: many sites in one short region</text>
+ <path class="dna" d="M560 310 h290"/>
+ <rect class="sa" x="572" y="300" width="28" height="20"/>
+ <rect class="sb" x="606" y="300" width="28" height="20"/>
+ <rect class="sa" x="640" y="300" width="28" height="20" opacity="0.6"/>
+ <rect class="sb" x="674" y="300" width="28" height="20" opacity="0.6"/>
+ <rect class="sa" x="708" y="300" width="28" height="20" opacity="0.4"/>
+ <rect class="sb" x="742" y="300" width="28" height="20" opacity="0.4"/>
+ <text class="t" x="556" y="344">In a B cell the needed factors and the right chromatin state</text>
+ <text class="t" x="556" y="362">are both in place. In other cells the same DNA is there but</text>
+ <text class="t" x="556" y="380">the combination is not filled.</text>
+
+ <rect class="bx" x="20" y="404" width="840" height="40" rx="8"/>
+ <text class="t" x="34" y="430">If a gene is expressed only in one cell type, the right question is not "which factor is unique to that cell" but "which combination is filled only there".</text>
+</svg>

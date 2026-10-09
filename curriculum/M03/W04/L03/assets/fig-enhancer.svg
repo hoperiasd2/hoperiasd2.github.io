@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 450" width="880" height="450" role="img"
+ aria-label="The three properties of an enhancer and the evidence for them: the range of positions it may occupy upstream, downstream or inside an intron, activity retained when its orientation is reversed, the logic of the SV40 add-and-remove comparison, how tissue-specific enhancers let one gene be used differently in different tissues, and the correspondence with a silencer.">
+ <style>
+  .bx{fill:#fff;stroke:#c6d2dd;stroke-width:1.8}.k{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .t{font:12px sans-serif;fill:#16191d}.tb{font:700 13px sans-serif;fill:#003c71}
+  .th{font:700 15px sans-serif;fill:#003c71}.s{font:11px sans-serif;fill:#4a5159}
+  .m{font:10px monospace;fill:#16191d}
+  .dna{fill:#fff;stroke:#16191d;stroke-width:2.2}
+  .enh{fill:#e3f0e4;stroke:#2e7d32;stroke-width:2}
+  .prom{fill:#dce6f2;stroke:#1a4f8a;stroke-width:2}
+  .gene{fill:#fff5d6;stroke:#f2b705;stroke-width:2}
+  .sil{fill:#f7dedc;stroke:#b3261e;stroke-width:2}
+  .ar{stroke:#003c71;stroke-width:2;fill:none;marker-end:url(#a)}
+  .bar{fill:#2e7d32}
+ </style>
+ <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker></defs>
+
+ <text class="th" x="20" y="28">A  Three properties</text>
+ <line x1="20" y1="38" x2="500" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+
+ <text class="m" x="30" y="62">1  far upstream</text>
+ <rect class="dna" x="30" y="68" width="440" height="18"/>
+ <rect class="enh" x="40" y="68" width="60" height="18"/>
+ <rect class="prom" x="300" y="68" width="40" height="18"/>
+ <rect class="gene" x="340" y="68" width="120" height="18"/>
+
+ <text class="m" x="30" y="112">2  downstream, or inside an intron</text>
+ <rect class="dna" x="30" y="118" width="440" height="18"/>
+ <rect class="prom" x="60" y="118" width="40" height="18"/>
+ <rect class="gene" x="100" y="118" width="200" height="18"/>
+ <rect class="enh" x="180" y="118" width="50" height="18" opacity="0.65"/>
+ <rect class="enh" x="390" y="118" width="60" height="18"/>
+
+ <text class="m" x="30" y="162">3  activity survives reversal of orientation</text>
+ <rect class="dna" x="30" y="168" width="440" height="18"/>
+ <path class="enh" d="M40 168 h50 l10 9 l-10 9 h-50 z"/>
+ <rect class="prom" x="300" y="168" width="40" height="18"/>
+ <rect class="gene" x="340" y="168" width="120" height="18"/>
+ <rect class="dna" x="30" y="196" width="440" height="18"/>
+ <path class="enh" d="M100 196 h-50 l-10 9 l10 9 h50 z"/>
+ <rect class="prom" x="300" y="196" width="40" height="18"/>
+ <rect class="gene" x="340" y="196" width="120" height="18"/>
+ <text class="m" x="480" y="182">same</text>
+ <text class="m" x="480" y="212">effect</text>
+
+ <text class="th" x="530" y="62">B  The SV40 evidence</text>
+ <line x1="530" y1="72" x2="860" y2="72" stroke="#c6d2dd" stroke-width="1.5"/>
+ <rect class="bx" x="530" y="86" width="330" height="128" rx="8"/>
+ <text class="t" x="544" y="110">Take a segment of the SV40 genome, put it</text>
+ <text class="t" x="544" y="128">behind a promoter, and transcription rises.</text>
+ <text class="t" x="544" y="152">Move it far away, shift it downstream, or flip</text>
+ <text class="t" x="544" y="170">it: much of the increase remains.</text>
+ <text class="s" x="544" y="196">The point of the experiment is the comparison WITH</text>
+ <rect x="544" y="204" width="0" height="0"/>
+ <text class="s" x="544" y="208">and WITHOUT that segment.</text>
+ <rect x="560" y="226" width="26" height="14" class="bar" opacity="0.3"/>
+ <text class="m" x="596" y="238">no segment</text>
+ <rect x="560" y="248" width="150" height="14" class="bar"/>
+ <text class="m" x="720" y="260">with segment</text>
+
+ <text class="th" x="20" y="262">C  Not a signal across empty space</text>
+ <line x1="20" y1="272" x2="500" y2="272" stroke="#c6d2dd" stroke-width="1.5"/>
+ <rect class="k" x="20" y="286" width="480" height="56" rx="8"/>
+ <text class="t" x="34" y="310">An enhancer does not broadcast across distance. The bound activator must</text>
+ <text class="t" x="34" y="330">act PHYSICALLY on the transcription machinery — see the next figure.</text>
+
+ <text class="th" x="20" y="374">D  Tissue specificity: one gene, several enhancers</text>
+ <line x1="20" y1="384" x2="860" y2="384" stroke="#c6d2dd" stroke-width="1.5"/>
+ <rect class="dna" x="30" y="404" width="500" height="18"/>
+ <rect class="enh" x="50" y="404" width="46" height="18"/>
+ <text class="m" x="44" y="400">liver</text>
+ <rect class="enh" x="130" y="404" width="46" height="18"/>
+ <text class="m" x="120" y="400">neuron</text>
+ <rect class="enh" x="210" y="404" width="46" height="18"/>
+ <text class="m" x="196" y="400">embryo</text>
+ <rect class="prom" x="360" y="404" width="40" height="18"/>
+ <rect class="gene" x="400" y="404" width="120" height="18"/>
+ <text class="t" x="552" y="412">Each enhancer works in a different tissue or stage,</text>
+ <text class="t" x="552" y="432">so one gene is used differently in each. A SILENCER is</text>
+ <text class="t" x="552" y="448">the mirror case: a repressor binds, same position rules.</text>
+</svg>

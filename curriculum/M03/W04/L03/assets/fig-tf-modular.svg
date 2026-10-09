@@ -1,54 +1,83 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 380" width="860" height="380" role="img"
-     aria-label="Modular structure of a transcription factor: separate DNA-binding, activation, dimerization, ligand-binding and nuclear localization regions">
-  <style>
-    .ttl { font:700 14px sans-serif; fill:#003c71; }
-    .nm { font:700 12px sans-serif; fill:#003c71; }
-    .sub { font:11px sans-serif; fill:#4a5159; }
-    .d1 { fill:#003c71; stroke:#16191d; stroke-width:1.2; }
-    .d2 { fill:#f2b705; stroke:#16191d; stroke-width:1.2; }
-    .d3 { fill:#ffffff; stroke:#16191d; stroke-width:1.4; }
-    .wl { font:700 12px sans-serif; fill:#ffffff; }
-    .kl { font:700 12px sans-serif; fill:#16191d; }
-    .dna { stroke:#16191d; stroke-width:2.6; fill:none; }
-    .ln { stroke:#4a5159; stroke-width:1.2; stroke-dasharray:4 3; fill:none; }
-    .box { fill:#fff5d6; stroke:#c6d2dd; stroke-width:1; }
-  </style>
-  <text class="ttl" x="20" y="26">A transcription factor is built from separable modules</text>
-  <text class="sub" x="20" y="46">Each module can be swapped experimentally, which is how their functions were mapped.</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 460" width="880" height="460" role="img"
+ aria-label="Modular structure of a transcription factor and the four types of DNA-binding domain: separation of DNA-binding and activation domains, the different consequence of a defect in each including dominant negative effect, the logic of a domain-swap experiment, and the structure and dimer formation of helix-turn-helix, zinc finger, leucine zipper and helix-loop-helix.">
+ <style>
+  .bx{fill:#fff;stroke:#c6d2dd;stroke-width:1.8}.k{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .t{font:12px sans-serif;fill:#16191d}.tb{font:700 13px sans-serif;fill:#003c71}
+  .th{font:700 15px sans-serif;fill:#003c71}.s{font:11px sans-serif;fill:#4a5159}
+  .m{font:10px monospace;fill:#16191d}
+  .dbd{fill:#dce6f2;stroke:#1a4f8a;stroke-width:2.2}
+  .ad{fill:#e3f0e4;stroke:#2e7d32;stroke-width:2.2}
+  .xx{fill:#fff;stroke:#b3261e;stroke-width:2.2;stroke-dasharray:4 3}
+  .dna{fill:none;stroke:#16191d;stroke-width:2.6}
+  .hel{fill:none;stroke:#003c71;stroke-width:3.4}
+  .ar{stroke:#003c71;stroke-width:2;fill:none;marker-end:url(#a)}
+ </style>
+ <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker></defs>
 
-  <rect class="d3" x="60" y="70" width="110" height="36" rx="4"/><text class="kl" x="74" y="93">NLS</text>
-  <rect class="d1" x="170" y="70" width="170" height="36" rx="4"/><text class="wl" x="190" y="93">DNA-binding</text>
-  <rect class="d2" x="340" y="70" width="140" height="36" rx="4"/><text class="kl" x="356" y="93">dimerization</text>
-  <rect class="d3" x="480" y="70" width="170" height="36" rx="4"/><text class="kl" x="498" y="93">activation domain</text>
-  <rect class="d2" x="650" y="70" width="150" height="36" rx="4"/><text class="kl" x="664" y="93">ligand binding</text>
+ <text class="th" x="20" y="28">A  Two jobs, two domains</text>
+ <line x1="20" y1="38" x2="430" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+ <rect class="dbd" x="40" y="58" width="120" height="30" rx="6"/>
+ <text class="m" x="62" y="78">DBD</text>
+ <rect class="ad" x="160" y="58" width="130" height="30" rx="6"/>
+ <text class="m" x="196" y="78">AD</text>
+ <text class="s" x="40" y="106">finds the target sequence</text>
+ <text class="s" x="190" y="106">talks to mediator, GTFs, chromatin enzymes</text>
+ <path class="dna" d="M40 128 h340"/>
+ <text class="s" x="40" y="148">plus regulatory parts: ligand site, phosphorylation site, nuclear import signal</text>
 
-  <path class="ln" d="M115 110 L115 136"/>
-  <text class="sub" x="40" y="152">import into</text>
-  <text class="sub" x="52" y="168">the nucleus</text>
-  <path class="ln" d="M255 110 L255 136"/>
-  <text class="nm" x="180" y="152">recognises a specific</text>
-  <text class="sub" x="180" y="168">sequence 6-20 bp long</text>
-  <path class="ln" d="M410 110 L410 136"/>
-  <text class="sub" x="348" y="152">pairs with a partner;</text>
-  <text class="sub" x="348" y="168">combinations widen</text>
-  <text class="sub" x="348" y="184">the range of targets</text>
-  <path class="ln" d="M565 110 L565 136"/>
-  <text class="sub" x="500" y="152">recruits coactivators</text>
-  <text class="sub" x="500" y="168">and Mediator; does not</text>
-  <text class="sub" x="500" y="184">touch the DNA</text>
-  <path class="ln" d="M725 110 L725 136"/>
-  <text class="sub" x="668" y="152">present in nuclear</text>
-  <text class="sub" x="668" y="168">receptors only</text>
+ <text class="th" x="20" y="184">B  The two defects differ</text>
+ <line x1="20" y1="194" x2="430" y2="194" stroke="#c6d2dd" stroke-width="1.5"/>
+ <rect class="dbd" x="40" y="212" width="90" height="26" rx="5"/>
+ <text class="m" x="58" y="230">DBD ok</text>
+ <rect class="xx" x="130" y="212" width="90" height="26" rx="5"/>
+ <text class="m" x="146" y="230">AD broken</text>
+ <path class="dna" d="M40 250 h340"/>
+ <text class="t" x="240" y="230">binds but cannot activate;</text>
+ <text class="t" x="240" y="246">occupies the site and blocks</text>
+ <text class="tb" x="240" y="266">the normal factor: DOMINANT NEGATIVE</text>
 
-  <text class="nm" x="20" y="228">Two separate questions, two separate modules</text>
-  <path class="dna" d="M60 282 L560 282"/>
-  <rect class="d1" x="200" y="268" width="90" height="28" rx="3"/>
-  <text class="wl" x="226" y="287">site</text>
-  <text class="sub" x="60" y="312">WHERE: set by the DNA-binding domain</text>
-  <rect class="box" x="600" y="244" width="240" height="96" rx="4"/>
-  <text class="nm" x="616" y="268">WHETHER AND HOW MUCH</text>
-  <text class="sub" x="616" y="288">set by the activation domain, by</text>
-  <text class="sub" x="616" y="306">modifications on the factor, and by</text>
-  <text class="sub" x="616" y="324">which partners are available.</text>
-  <text class="sub" x="60" y="338">A factor can therefore sit on its site and still be inactive: binding and activating are different events.</text>
+ <rect class="xx" x="40" y="290" width="90" height="26" rx="5"/>
+ <text class="m" x="50" y="308">DBD broken</text>
+ <rect class="ad" x="130" y="290" width="90" height="26" rx="5"/>
+ <text class="m" x="150" y="308">AD ok</text>
+ <path class="dna" d="M40 340 h340"/>
+ <text class="t" x="240" y="306">cannot find the target:</text>
+ <text class="tb" x="240" y="326">simple LOSS OF FUNCTION</text>
+ <text class="s" x="40" y="366">Which domain a patient's mutation hits changes the inheritance pattern and severity.</text>
+
+ <text class="th" x="20" y="402">C  Domain swap proves they are separable</text>
+ <line x1="20" y1="412" x2="430" y2="412" stroke="#c6d2dd" stroke-width="1.5"/>
+ <text class="t" x="20" y="434">Join factor 1's DBD to factor 2's AD and factor 2's activation appears at factor 1's sequence.</text>
+ <text class="s" x="20" y="452">This is the design principle behind the yeast two-hybrid assay and CRISPR activation tools.</text>
+
+ <text class="th" x="460" y="38">D  Four DNA-binding domain types</text>
+ <line x1="460" y1="48" x2="860" y2="48" stroke="#c6d2dd" stroke-width="1.5"/>
+
+ <path class="hel" d="M478 86 h40 M478 86 q20 -22 40 0" />
+ <path class="hel" d="M478 108 h40"/>
+ <text class="tb" x="534" y="92">Helix-turn-helix</text>
+ <text class="s" x="534" y="110">no metal · HOX homeodomain, Pit-1</text>
+
+ <path class="hel" d="M486 150 q-12 -20 6 -26 q18 -6 18 14 q0 18 -18 14 z"/>
+ <circle cx="498" cy="150" r="5" fill="#f2b705" stroke="#8a6300" stroke-width="1.4"/>
+ <text class="m" x="490" y="170">Zn</text>
+ <text class="tb" x="534" y="146">Zinc finger</text>
+ <text class="s" x="534" y="164">needs Zn(2+) · Sp1, nuclear receptors, GATA</text>
+
+ <path class="hel" d="M478 208 h46 M478 224 h46"/>
+ <path class="hel" d="M496 208 l0 16 M510 208 l0 16" stroke-width="2"/>
+ <text class="tb" x="534" y="212">Leucine zipper</text>
+ <text class="s" x="534" y="230">dimer via leucine faces · C/EBP, Jun-Fos, CREB</text>
+
+ <path class="hel" d="M478 272 h30 q14 10 0 20 h-30"/>
+ <path class="hel" d="M514 272 h30 q-14 10 0 20 h-30" transform="translate(0,0)"/>
+ <text class="tb" x="534" y="276">Helix-loop-helix</text>
+ <text class="s" x="534" y="294">dimer · MyoD, Myc, SREBP</text>
+
+ <rect class="k" x="460" y="314" width="400" height="128" rx="8"/>
+ <text class="tb" x="474" y="338">The common principle: most act as DIMERS</text>
+ <text class="t" x="474" y="362">A dimer reads a longer sequence, so selectivity rises.</text>
+ <text class="t" x="474" y="384">And the partner changes what the factor does, so PARTNER</text>
+ <text class="t" x="474" y="402">CHOICE is itself a means of control.</text>
+ <text class="s" x="474" y="426">Jun with Fos gives AP-1; Myc pairs with Max.</text>
 </svg>

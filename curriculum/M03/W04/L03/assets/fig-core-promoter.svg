@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 450" width="880" height="450" role="img"
+ aria-label="Assembly of the core promoter and the preinitiation complex: the binding order of TFIID, TFIIA, TFIIB, Pol II with TFIIF, TFIIE and TFIIH, the helicase and kinase actions of TFIIH, the difference between promoters with and without a TATA box, and the meaning of basal transcription.">
+ <style>
+  .bx{fill:#fff;stroke:#c6d2dd;stroke-width:1.8}.k{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .t{font:12px sans-serif;fill:#16191d}.tb{font:700 13px sans-serif;fill:#003c71}
+  .th{font:700 15px sans-serif;fill:#003c71}.s{font:11px sans-serif;fill:#4a5159}
+  .m{font:10px monospace;fill:#16191d}
+  .dna{fill:#fff;stroke:#16191d;stroke-width:2.2}
+  .tata{fill:#fff5d6;stroke:#f2b705;stroke-width:2}
+  .gtf{fill:#e8eff6;stroke:#003c71;stroke-width:2}
+  .pol{fill:#dce6f2;stroke:#1a4f8a;stroke-width:2.4}
+  .ar{stroke:#003c71;stroke-width:2.2;fill:none;marker-end:url(#a)}
+  .rna{stroke:#b3261e;stroke-width:3;fill:none}
+ </style>
+ <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker></defs>
+
+ <text class="th" x="20" y="28">A  Pol II cannot find the promoter alone: the complex is built in order</text>
+ <line x1="20" y1="38" x2="860" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+
+ <rect class="dna" x="40" y="104" width="420" height="22"/>
+ <rect class="tata" x="150" y="104" width="60" height="22"/>
+ <text class="m" x="158" y="120">TATA</text>
+ <text class="m" x="258" y="120">+1</text>
+ <path class="ar" d="M262 130 L262 146"/>
+ <rect class="gtf" x="152" y="74" width="56" height="30" rx="5"/>
+ <text class="m" x="160" y="94">TFIID</text>
+ <text class="s" x="40" y="66">1  TFIID recognises the core promoter (TBP binds DNA; TAFs read other elements)</text>
+ <text class="s" x="40" y="160">about -30 to -25</text>
+
+ <rect class="dna" x="40" y="222" width="420" height="22"/>
+ <rect class="tata" x="150" y="222" width="60" height="22"/>
+ <rect class="gtf" x="152" y="192" width="56" height="30" rx="5"/>
+ <text class="m" x="160" y="212">TFIID</text>
+ <rect class="gtf" x="212" y="192" width="40" height="30" rx="5"/>
+ <text class="m" x="218" y="212">IIB</text>
+ <rect class="gtf" x="112" y="192" width="38" height="30" rx="5"/>
+ <text class="m" x="118" y="212">IIA</text>
+ <text class="s" x="40" y="184">2  TFIIA and TFIIB stabilise it and set the start point</text>
+
+ <rect class="dna" x="40" y="340" width="420" height="22"/>
+ <rect class="tata" x="150" y="340" width="60" height="22"/>
+ <rect class="gtf" x="112" y="310" width="38" height="30" rx="5"/>
+ <rect class="gtf" x="152" y="310" width="56" height="30" rx="5"/>
+ <rect class="gtf" x="212" y="310" width="40" height="30" rx="5"/>
+ <path class="pol" d="M256 300 h86 v40 h-86 z"/>
+ <text class="m" x="268" y="324">Pol II</text>
+ <rect class="gtf" x="346" y="310" width="36" height="30" rx="5"/>
+ <text class="m" x="350" y="330">IIF</text>
+ <rect class="gtf" x="386" y="310" width="36" height="30" rx="5"/>
+ <text class="m" x="390" y="330">IIE</text>
+ <rect class="k" x="426" y="310" width="36" height="30" rx="5"/>
+ <text class="m" x="430" y="330">IIH</text>
+ <text class="s" x="40" y="300">3  Pol II with TFIIF, then TFIIE and TFIIH</text>
+ <text class="s" x="40" y="382">4  TFIIH unwinds the duplex (helicase) and phosphorylates the Pol II</text>
+ <text class="s" x="40" y="400">C-terminal tail (kinase), releasing it into elongation</text>
+ <path class="rna" d="M300 292 q40 -16 80 -4"/>
+
+ <text class="th" x="500" y="66">B  TATA box is one option, not a requirement</text>
+ <line x1="500" y1="76" x2="860" y2="76" stroke="#c6d2dd" stroke-width="1.5"/>
+ <rect class="bx" x="500" y="90" width="360" height="104" rx="8"/>
+ <text class="t" x="514" y="114">Only some human genes have a TATA box.</text>
+ <text class="t" x="514" y="136">Housekeeping genes commonly have none and sit</text>
+ <text class="t" x="514" y="154">in a CpG island instead; there TFIID anchors on</text>
+ <text class="t" x="514" y="172">other sequence elements (Inr, DPE).</text>
+ <rect class="k" x="500" y="204" width="360" height="56" rx="8"/>
+ <text class="tb" x="514" y="226">What to remember</text>
+ <text class="t" x="514" y="248">Several factors gather around the start site and seat Pol II.</text>
+
+ <text class="th" x="500" y="296">C  Where regulation enters</text>
+ <line x1="500" y1="306" x2="860" y2="306" stroke="#c6d2dd" stroke-width="1.5"/>
+ <rect class="bx" x="500" y="320" width="360" height="80" rx="8"/>
+ <text class="t" x="514" y="344">GTFs plus Pol II give transcription, but only at a BASAL</text>
+ <text class="t" x="514" y="364">level. The actual output is set by regulatory proteins that</text>
+ <text class="t" x="514" y="384">raise or lower that basal level — the subject of this lesson.</text>
+ <text class="s" x="500" y="424">TFIIH's helicase subunit is shared with nucleotide excision repair, which is why its mutations give both repair and developmental disease.</text>
+</svg>
