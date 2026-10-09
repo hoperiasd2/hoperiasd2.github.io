@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 470" width="880" height="470" role="img"
+ aria-label="Four steps of tRNA processing and the two routes of RNA editing: RNase P cutting the 5-prime end as a ribozyme, templateless CCA addition providing the amino acid attachment site, the anticodon inosine, and cytosine to uracil editing of apolipoprotein B producing two protein lengths in different tissues.">
+ <style>
+  .bx{fill:#fff;stroke:#c6d2dd;stroke-width:1.8}.k{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .t{font:12px sans-serif;fill:#16191d}.tb{font:700 13px sans-serif;fill:#003c71}
+  .th{font:700 15px sans-serif;fill:#003c71}.s{font:11px sans-serif;fill:#4a5159}
+  .m{font:11px monospace;fill:#16191d}
+  .rna{stroke:#b3261e;stroke-width:3;fill:none}
+  .dna{stroke:#1a4f8a;stroke-width:3;fill:none}
+  .g{fill:#e3f0e4;stroke:#2e7d32;stroke-width:2.2}
+  .me{fill:#f2b705;stroke:#8a6300;stroke-width:1.6}
+  .ar{stroke:#003c71;stroke-width:2;fill:none;marker-end:url(#a)}
+  .arr{stroke:#b3261e;stroke-width:2;fill:none;marker-end:url(#b)}
+  .ex{fill:#f7dedc;stroke:#b3261e;stroke-width:2.2}
+  .pr{fill:#dce6f2;stroke:#1a4f8a;stroke-width:2.2}
+  .no{stroke:#b3261e;stroke-width:3;fill:none}
+ </style>
+ <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker>
+ <marker id="b" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#b3261e"/></marker></defs>
+ <text class="th" x="20" y="28">A  tRNA processing: four steps</text>
+ <line x1="20" y1="38" x2="430" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+ <line class="rna" x1="30" y1="76" x2="410" y2="76"/>
+ <rect class="pr" x="110" y="64" width="210" height="24"/>
+ <text class="s" x="170" y="82">mature tRNA region</text>
+ <text class="s" x="38" y="60">extra 5'</text>
+ <text class="s" x="334" y="60">extra 3'</text>
+ <text class="tb" x="30" y="112">1  RNase P cuts the 5' end</text>
+ <text class="s" x="30" y="132">RNase P is RNA plus protein, and the catalytic part</text>
+ <text class="s" x="30" y="150">is the RNA: it is a ribozyme</text>
+ <text class="tb" x="30" y="178">2  the extra 3' region is trimmed</text>
+ <text class="tb" x="30" y="206">3  CCA is added to the 3' end</text>
+ <rect class="k" x="30" y="216" width="380" height="64" rx="6"/>
+ <text class="m" x="40" y="238">...  C  C  A - 3'OH</text>
+ <text class="s" x="40" y="258">not encoded in the genome; added without a template</text>
+ <text class="s" x="40" y="276">the amino acid attaches to this final 3'-OH</text>
+ <text class="tb" x="30" y="308">4  bases are modified</text>
+ <text class="s" x="30" y="328">dihydrouridine, pseudouridine, inosine, methyl derivatives</text>
+ <text class="s" x="30" y="346">inosine at the first anticodon position pairs with several bases,</text>
+ <text class="s" x="30" y="364">so one tRNA reads more than one codon</text>
+ <rect class="bx" x="30" y="378" width="380" height="54" rx="6"/>
+ <text class="s" x="40" y="398">some tRNA genes carry an intron, but the spliceosome</text>
+ <text class="s" x="40" y="418">does not remove it: a dedicated endonuclease and ligase do</text>
+
+ <text class="th" x="460" y="28">B  RNA editing changes single bases</text>
+ <line x1="460" y1="38" x2="860" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+ <rect class="ex" x="470" y="52" width="370" height="58" rx="6"/>
+ <text class="tb" x="482" y="72">splicing</text>
+ <text class="s" x="482" y="94">removes a segment and joins what remains</text>
+ <rect class="g" x="470" y="120" width="370" height="58" rx="6"/>
+ <text class="tb" x="482" y="140">editing</text>
+ <text class="s" x="482" y="162">swaps one base for another, one residue at a time</text>
+ <text class="s" x="470" y="200">the transcript no longer matches the genome, so genomic</text>
+ <text class="s" x="470" y="218">sequence alone cannot predict the protein</text>
+
+ <text class="tb" x="470" y="252">C to U deamination:  apolipoprotein B</text>
+ <line class="rna" x1="480" y1="292" x2="820" y2="292"/>
+ <text class="m" x="600" y="284">C</text>
+ <text class="s" x="480" y="276">liver</text>
+ <text class="s" x="480" y="316">codon read as glutamine, translation continues</text>
+ <text class="s" x="480" y="336">full-length  ApoB-100</text>
+ <line class="rna" x1="480" y1="388" x2="620" y2="388"/>
+ <text class="m" x="600" y="380">U</text>
+ <text class="s" x="480" y="372">small intestine</text>
+ <path class="no" d="M612 396 L628 380"/>
+ <text class="s" x="480" y="412">that codon becomes a stop codon</text>
+ <text class="s" x="480" y="432">truncated  ApoB-48</text>
+
+ <text class="tb" x="470" y="462">A to I deamination (ADAR): inosine is read as guanosine, so codons change; frequent in the nervous system</text>
+</svg>

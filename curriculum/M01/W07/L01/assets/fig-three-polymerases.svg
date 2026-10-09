@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 440" width="880" height="440" role="img"
+ aria-label="Division of labour among the three eukaryotic nuclear RNA polymerases: their products and locations, polymerase one packed along tandem rRNA gene repeats, the internal promoter of polymerase three, and the differing sensitivity to alpha-amanitin.">
+ <style>
+  .bx{fill:#fff;stroke:#c6d2dd;stroke-width:1.8}.k{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .t{font:12px sans-serif;fill:#16191d}.tb{font:700 13px sans-serif;fill:#003c71}
+  .th{font:700 15px sans-serif;fill:#003c71}.s{font:11px sans-serif;fill:#4a5159}
+  .m{font:11px monospace;fill:#16191d}
+  .rna{stroke:#b3261e;stroke-width:3;fill:none}
+  .dna{stroke:#1a4f8a;stroke-width:3;fill:none}
+  .g{fill:#e3f0e4;stroke:#2e7d32;stroke-width:2.2}
+  .me{fill:#f2b705;stroke:#8a6300;stroke-width:1.6}
+  .ar{stroke:#003c71;stroke-width:2;fill:none;marker-end:url(#a)}
+  .arr{stroke:#b3261e;stroke-width:2;fill:none;marker-end:url(#b)}
+  .ex{fill:#f7dedc;stroke:#b3261e;stroke-width:2.2}
+  .pr{fill:#dce6f2;stroke:#1a4f8a;stroke-width:2.2}
+  .no{stroke:#b3261e;stroke-width:3;fill:none}
+ </style>
+ <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker>
+ <marker id="b" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#b3261e"/></marker></defs>
+ <text class="th" x="20" y="28">A  Who makes what, and where</text>
+ <line x1="20" y1="38" x2="860" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+ <rect class="g" x="30" y="52" width="262" height="138" rx="6"/>
+ <text class="tb" x="42" y="74">RNA polymerase I</text>
+ <text class="s" x="42" y="98">product   45S pre-rRNA</text>
+ <text class="s" x="42" y="116">          (18S, 5.8S, 28S)</text>
+ <text class="s" x="42" y="138">site      nucleolus</text>
+ <text class="s" x="42" y="160">amanitin  resistant</text>
+ <text class="s" x="42" y="180">share of total activity: largest</text>
+ <rect class="ex" x="306" y="52" width="262" height="138" rx="6"/>
+ <text class="tb" x="318" y="74">RNA polymerase II</text>
+ <text class="s" x="318" y="98">product   mRNA, snRNA, snoRNA</text>
+ <text class="s" x="318" y="116">          miRNA, lncRNA</text>
+ <text class="s" x="318" y="138">site      nucleoplasm</text>
+ <text class="s" x="318" y="160">amanitin  highly sensitive</text>
+ <text class="s" x="318" y="180">the centre of gene regulation</text>
+ <rect class="pr" x="582" y="52" width="262" height="138" rx="6"/>
+ <text class="tb" x="594" y="74">RNA polymerase III</text>
+ <text class="s" x="594" y="98">product   tRNA, 5S rRNA</text>
+ <text class="s" x="594" y="116">          some snRNA</text>
+ <text class="s" x="594" y="138">site      nucleoplasm</text>
+ <text class="s" x="594" y="160">amanitin  intermediate</text>
+ <text class="s" x="594" y="180">short RNAs only</text>
+
+ <text class="th" x="20" y="232">B  Pol I: tandem repeats worked in parallel</text>
+ <line x1="20" y1="242" x2="430" y2="242" stroke="#c6d2dd" stroke-width="1.5"/>
+ <line class="dna" x1="30" y1="300" x2="410" y2="300"/>
+ <rect class="k" x="40" y="290" width="104" height="20"/>
+ <rect class="k" x="160" y="290" width="104" height="20"/>
+ <rect class="k" x="280" y="290" width="104" height="20"/>
+ <text class="s" x="50" y="332">rRNA gene</text>
+ <text class="s" x="170" y="332">rRNA gene</text>
+ <text class="s" x="290" y="332">rRNA gene</text>
+ <ellipse class="g" cx="70" cy="278" rx="14" ry="10"/>
+ <ellipse class="g" cx="104" cy="278" rx="14" ry="10"/>
+ <ellipse class="g" cx="190" cy="278" rx="14" ry="10"/>
+ <ellipse class="g" cx="224" cy="278" rx="14" ry="10"/>
+ <ellipse class="g" cx="310" cy="278" rx="14" ry="10"/>
+ <ellipse class="g" cx="344" cy="278" rx="14" ry="10"/>
+ <text class="s" x="30" y="360">hundreds of copies in a row, many Pol I molecules transcribing at once</text>
+ <text class="s" x="30" y="378">the cell must keep producing ribosomes without pause</text>
+
+ <text class="th" x="460" y="232">C  Where the promoter sits</text>
+ <line x1="460" y1="242" x2="860" y2="242" stroke="#c6d2dd" stroke-width="1.5"/>
+ <line class="dna" x1="470" y1="282" x2="840" y2="282"/>
+ <rect class="k" x="500" y="272" width="52" height="20"/>
+ <rect class="ex" x="570" y="272" width="150" height="20"/>
+ <text class="s" x="476" y="266">Pol II</text>
+ <text class="s" x="498" y="312">TATA box</text>
+ <text class="s" x="596" y="312">transcribed region</text>
+ <line class="dna" x1="470" y1="360" x2="840" y2="360"/>
+ <rect class="ex" x="540" y="350" width="180" height="20"/>
+ <rect class="k" x="596" y="350" width="60" height="20"/>
+ <text class="s" x="476" y="344">Pol III</text>
+ <text class="s" x="560" y="390">promoter inside the transcribed region</text>
+ <text class="s" x="470" y="424">all three need general transcription factors first: they cannot bind DNA alone</text>
+</svg>

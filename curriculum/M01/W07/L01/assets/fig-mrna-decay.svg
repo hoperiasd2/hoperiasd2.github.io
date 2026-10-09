@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 480" width="880" height="480" role="img"
+ aria-label="mRNA half-life and the decay pathway: synthesis and decay balancing to set the steady-state amount, the spread of half-lives across gene classes, AU-rich elements in the 3-prime untranslated region with opposing binding proteins, the order from deadenylation through decapping to exonucleases, and the exon-boundary rule used by nonsense-mediated decay.">
+ <style>
+  .bx{fill:#fff;stroke:#c6d2dd;stroke-width:1.8}.k{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .t{font:12px sans-serif;fill:#16191d}.tb{font:700 13px sans-serif;fill:#003c71}
+  .th{font:700 15px sans-serif;fill:#003c71}.s{font:11px sans-serif;fill:#4a5159}
+  .m{font:11px monospace;fill:#16191d}
+  .rna{stroke:#b3261e;stroke-width:3;fill:none}
+  .dna{stroke:#1a4f8a;stroke-width:3;fill:none}
+  .g{fill:#e3f0e4;stroke:#2e7d32;stroke-width:2.2}
+  .me{fill:#f2b705;stroke:#8a6300;stroke-width:1.6}
+  .ar{stroke:#003c71;stroke-width:2;fill:none;marker-end:url(#a)}
+  .arr{stroke:#b3261e;stroke-width:2;fill:none;marker-end:url(#b)}
+  .ex{fill:#f7dedc;stroke:#b3261e;stroke-width:2.2}
+  .pr{fill:#dce6f2;stroke:#1a4f8a;stroke-width:2.2}
+  .no{stroke:#b3261e;stroke-width:3;fill:none}
+ </style>
+ <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker>
+ <marker id="b" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#b3261e"/></marker></defs>
+ <text class="th" x="20" y="28">A  Steady state is a balance, so half-life is its own control point</text>
+ <line x1="20" y1="38" x2="860" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+ <rect class="bx" x="200" y="56" width="180" height="56" rx="6"/>
+ <text class="tb" x="246" y="90">mRNA pool</text>
+ <path class="ar" d="M110 84 L194 84"/>
+ <text class="s" x="40" y="78">synthesis</text>
+ <text class="s" x="40" y="96">(transcription)</text>
+ <path class="arr" d="M386 84 L470 84"/>
+ <text class="s" x="486" y="78">decay</text>
+ <text class="s" x="486" y="96">(degradation)</text>
+ <text class="s" x="560" y="72">equal synthesis with a ten-fold</text>
+ <text class="s" x="560" y="90">longer half-life gives a ten-fold</text>
+ <text class="s" x="560" y="108">larger steady-state amount</text>
+
+ <text class="th" x="20" y="152">B  Half-lives sort by what the gene is for</text>
+ <line x1="20" y1="162" x2="430" y2="162" stroke="#c6d2dd" stroke-width="1.5"/>
+ <line x1="40" y1="212" x2="400" y2="212" stroke="#4a5159" stroke-width="2"/>
+ <text class="s" x="34" y="234">minutes</text>
+ <text class="s" x="194" y="234">hours</text>
+ <text class="s" x="354" y="234">days</text>
+ <rect class="ex" x="40" y="190" width="110" height="18"/>
+ <rect class="pr" x="270" y="190" width="130" height="18"/>
+ <text class="s" x="40" y="262">growth factors, cytokines,</text>
+ <text class="s" x="40" y="280">transcription factors</text>
+ <text class="s" x="40" y="300">must vanish when the signal</text>
+ <text class="s" x="40" y="318">stops, so the response ends</text>
+ <text class="s" x="250" y="262">structural proteins,</text>
+ <text class="s" x="250" y="280">housekeeping enzymes</text>
+ <text class="s" x="250" y="300">needed continuously</text>
+
+ <text class="th" x="460" y="152">C  The 3' UTR sets the half-life</text>
+ <line x1="460" y1="162" x2="860" y2="162" stroke="#c6d2dd" stroke-width="1.5"/>
+ <line class="rna" x1="470" y1="196" x2="840" y2="196"/>
+ <circle class="me" cx="474" cy="196" r="9"/>
+ <rect class="ex" x="500" y="186" width="160" height="20"/>
+ <text class="s" x="534" y="202">coding region</text>
+ <rect class="k" x="690" y="186" width="70" height="20"/>
+ <text class="m" x="694" y="201">ARE</text>
+ <text class="s" x="770" y="222">3' UTR</text>
+ <text class="m" x="640" y="246">AU-rich element:  UAUUUAU repeats</text>
+ <path class="arr" d="M700 254 L620 282"/>
+ <path class="ar" d="M740 254 L800 282"/>
+ <rect class="ex" x="500" y="288" width="170" height="52" rx="6"/>
+ <text class="s" x="510" y="308">destabilising protein</text>
+ <text class="s" x="510" y="328">binds: rapid decay</text>
+ <rect class="g" x="690" y="288" width="150" height="52" rx="6"/>
+ <text class="s" x="700" y="308">stabilising protein</text>
+ <text class="s" x="700" y="328">binds: long survival</text>
+
+ <text class="th" x="20" y="362">D  The decay pathway runs in a fixed order</text>
+ <line x1="20" y1="372" x2="430" y2="372" stroke="#c6d2dd" stroke-width="1.5"/>
+ <text class="tb" x="30" y="394">1  deadenylation</text>
+ <text class="s" x="156" y="394">the poly(A) tail shortens; PABP falls off</text>
+ <text class="s" x="30" y="412">this step usually sets the overall speed: the rate-limiting step</text>
+ <text class="tb" x="30" y="436">2  decapping</text>
+ <text class="s" x="140" y="436">the 5' cap is removed, exposing a free end</text>
+ <text class="tb" x="30" y="460">3  exonucleases</text>
+ <text class="s" x="156" y="460">5' to 3' enzyme and the 3' to 5' exosome</text>
+
+ <text class="th" x="460" y="362">E  Nonsense-mediated decay judges by position</text>
+ <line x1="460" y1="372" x2="860" y2="372" stroke="#c6d2dd" stroke-width="1.5"/>
+ <line class="rna" x1="470" y1="402" x2="840" y2="402"/>
+ <rect class="ex" x="470" y="392" width="110" height="20"/>
+ <rect class="ex" x="590" y="392" width="110" height="20"/>
+ <rect class="ex" x="710" y="392" width="130" height="20"/>
+ <text class="s" x="494" y="386">exon 1</text>
+ <text class="s" x="614" y="386">exon 2</text>
+ <text class="s" x="744" y="386">last exon</text>
+ <path class="no" d="M626 416 L626 430"/>
+ <text class="s" x="560" y="446">stop upstream of the last</text>
+ <text class="s" x="560" y="462">boundary: transcript destroyed</text>
+ <path class="ar" d="M770 416 L770 430"/>
+ <text class="s" x="760" y="446">stop here escapes NMD:</text>
+ <text class="s" x="760" y="462">truncated protein is made</text>
+</svg>

@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 450" width="880" height="450" role="img"
+ aria-label="Site-specific modification of rRNA by snoRNP particles: the chemical change in 2-prime-O-methylation and pseudouridine formation, the snoRNA base pairing with pre-rRNA to select the residue, the box C/D and box H/ACA families, and the general strategy of RNA choosing the site while protein performs the reaction.">
+ <style>
+  .bx{fill:#fff;stroke:#c6d2dd;stroke-width:1.8}.k{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .t{font:12px sans-serif;fill:#16191d}.tb{font:700 13px sans-serif;fill:#003c71}
+  .th{font:700 15px sans-serif;fill:#003c71}.s{font:11px sans-serif;fill:#4a5159}
+  .m{font:11px monospace;fill:#16191d}
+  .rna{stroke:#b3261e;stroke-width:3;fill:none}
+  .dna{stroke:#1a4f8a;stroke-width:3;fill:none}
+  .g{fill:#e3f0e4;stroke:#2e7d32;stroke-width:2.2}
+  .me{fill:#f2b705;stroke:#8a6300;stroke-width:1.6}
+  .ar{stroke:#003c71;stroke-width:2;fill:none;marker-end:url(#a)}
+  .arr{stroke:#b3261e;stroke-width:2;fill:none;marker-end:url(#b)}
+  .ex{fill:#f7dedc;stroke:#b3261e;stroke-width:2.2}
+  .pr{fill:#dce6f2;stroke:#1a4f8a;stroke-width:2.2}
+  .no{stroke:#b3261e;stroke-width:3;fill:none}
+ </style>
+ <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker>
+ <marker id="b" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#b3261e"/></marker></defs>
+ <text class="th" x="20" y="28">A  Two chemical changes, about one hundred sites each</text>
+ <line x1="20" y1="38" x2="860" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+ <rect class="k" x="30" y="52" width="390" height="112" rx="6"/>
+ <text class="tb" x="42" y="74">2'-O-methylation</text>
+ <text class="m" x="42" y="98">ribose 2'-OH   to   ribose 2'-O-CH3</text>
+ <text class="s" x="42" y="122">the reactive hydroxyl is capped, so that stretch</text>
+ <text class="s" x="42" y="140">resists hydrolysis and the local structure is locked</text>
+ <text class="s" x="42" y="158">carried out by the box C/D family</text>
+ <rect class="g" x="450" y="52" width="390" height="112" rx="6"/>
+ <text class="tb" x="462" y="74">pseudouridine formation</text>
+ <text class="m" x="462" y="98">uridine  N1-sugar   to   C5-sugar link</text>
+ <text class="s" x="462" y="122">pairing is preserved, but a new hydrogen bond</text>
+ <text class="s" x="462" y="140">donor appears, stiffening the structure</text>
+ <text class="s" x="462" y="158">carried out by the box H/ACA family</text>
+
+ <text class="th" x="20" y="206">B  The problem: how is one residue in thousands selected?</text>
+ <line x1="20" y1="216" x2="860" y2="216" stroke="#c6d2dd" stroke-width="1.5"/>
+ <line class="rna" x1="60" y1="268" x2="820" y2="268"/>
+ <text class="tb" x="60" y="248">pre-rRNA</text>
+ <text class="s" x="760" y="248">thousands of nt</text>
+ <circle class="me" cx="430" cy="268" r="9"/>
+ <text class="s" x="390" y="300">target residue</text>
+ <text class="s" x="60" y="330">an enzyme reading sequence directly cannot pick this one out</text>
+
+ <path class="rna" d="M330 356 L530 356"/>
+ <text class="tb" x="330" y="348">snoRNA</text>
+ <line x1="352" y1="358" x2="352" y2="270" stroke="#4a5159" stroke-width="1.3" stroke-dasharray="4 3"/>
+ <line x1="376" y1="358" x2="376" y2="270" stroke="#4a5159" stroke-width="1.3" stroke-dasharray="4 3"/>
+ <line x1="400" y1="358" x2="400" y2="270" stroke="#4a5159" stroke-width="1.3" stroke-dasharray="4 3"/>
+ <line x1="460" y1="358" x2="460" y2="270" stroke="#4a5159" stroke-width="1.3" stroke-dasharray="4 3"/>
+ <line x1="484" y1="358" x2="484" y2="270" stroke="#4a5159" stroke-width="1.3" stroke-dasharray="4 3"/>
+ <line x1="508" y1="358" x2="508" y2="270" stroke="#4a5159" stroke-width="1.3" stroke-dasharray="4 3"/>
+ <text class="s" x="540" y="352">snoRNA carries a sequence complementary to</text>
+ <text class="s" x="540" y="370">the region around the target: base pairing</text>
+ <text class="s" x="540" y="388">places the enzyme exactly on that residue</text>
+ <ellipse class="pr" cx="430" cy="398" rx="58" ry="20"/>
+ <text class="s" x="396" y="403">8-10 proteins</text>
+ <text class="s" x="330" y="434">snoRNP  =  one snoRNA  +  its protein partners</text>
+ <text class="tb" x="60" y="398">RNA selects the site.</text>
+ <text class="tb" x="60" y="418">Protein performs</text>
+ <text class="tb" x="60" y="438">the reaction.</text>
+</svg>

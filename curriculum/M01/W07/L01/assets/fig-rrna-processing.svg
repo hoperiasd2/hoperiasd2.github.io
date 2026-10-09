@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 450" width="880" height="450" role="img"
+ aria-label="Processing of 45S pre-rRNA and the organisation of the nucleolus: the order of 18S, 5.8S and 28S in one transcript with the cleavage sites, 5S rRNA arriving separately from polymerase three, the split between the two ribosomal subunits, and transcription, processing and assembly concentrated in one place.">
+ <style>
+  .bx{fill:#fff;stroke:#c6d2dd;stroke-width:1.8}.k{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .t{font:12px sans-serif;fill:#16191d}.tb{font:700 13px sans-serif;fill:#003c71}
+  .th{font:700 15px sans-serif;fill:#003c71}.s{font:11px sans-serif;fill:#4a5159}
+  .m{font:11px monospace;fill:#16191d}
+  .rna{stroke:#b3261e;stroke-width:3;fill:none}
+  .dna{stroke:#1a4f8a;stroke-width:3;fill:none}
+  .g{fill:#e3f0e4;stroke:#2e7d32;stroke-width:2.2}
+  .me{fill:#f2b705;stroke:#8a6300;stroke-width:1.6}
+  .ar{stroke:#003c71;stroke-width:2;fill:none;marker-end:url(#a)}
+  .arr{stroke:#b3261e;stroke-width:2;fill:none;marker-end:url(#b)}
+  .ex{fill:#f7dedc;stroke:#b3261e;stroke-width:2.2}
+  .pr{fill:#dce6f2;stroke:#1a4f8a;stroke-width:2.2}
+  .no{stroke:#b3261e;stroke-width:3;fill:none}
+ </style>
+ <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker>
+ <marker id="b" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#b3261e"/></marker></defs>
+ <text class="th" x="20" y="28">A  One long transcript holds three rRNAs in a row</text>
+ <line x1="20" y1="38" x2="860" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+ <line class="rna" x1="60" y1="76" x2="800" y2="76"/>
+ <rect class="g" x="150" y="62" width="130" height="28"/>
+ <text class="tb" x="196" y="82">18S</text>
+ <rect class="g" x="380" y="62" width="70" height="28"/>
+ <text class="tb" x="396" y="82">5.8S</text>
+ <rect class="g" x="530" y="62" width="200" height="28"/>
+ <text class="tb" x="606" y="82">28S</text>
+ <text class="tb" x="60" y="56">45S pre-rRNA  (Pol I)</text>
+ <text class="s" x="62" y="110">5'</text>
+ <text class="s" x="790" y="110">3'</text>
+ <path class="arr" d="M150 120 L150 98"/>
+ <path class="arr" d="M280 120 L280 98"/>
+ <path class="arr" d="M380 120 L380 98"/>
+ <path class="arr" d="M450 120 L450 98"/>
+ <path class="arr" d="M530 120 L530 98"/>
+ <path class="arr" d="M730 120 L730 98"/>
+ <text class="s" x="60" y="140">cleavage sites: the ends and the spacers between the three are cut away</text>
+
+ <text class="th" x="20" y="182">B  Where each piece goes</text>
+ <line x1="20" y1="192" x2="430" y2="192" stroke="#c6d2dd" stroke-width="1.5"/>
+ <rect class="bx" x="30" y="206" width="180" height="96" rx="6"/>
+ <text class="tb" x="40" y="226">small subunit  40S</text>
+ <rect class="g" x="40" y="238" width="80" height="22"/>
+ <text class="s" x="62" y="254">18S</text>
+ <text class="s" x="40" y="286">plus proteins</text>
+ <rect class="bx" x="230" y="206" width="180" height="96" rx="6"/>
+ <text class="tb" x="240" y="226">large subunit  60S</text>
+ <rect class="g" x="240" y="238" width="48" height="22"/>
+ <text class="s" x="250" y="254">5.8S</text>
+ <rect class="g" x="294" y="238" width="48" height="22"/>
+ <text class="s" x="306" y="254">28S</text>
+ <rect class="pr" x="240" y="264" width="48" height="22"/>
+ <text class="s" x="252" y="280">5S</text>
+ <text class="s" x="298" y="280">from Pol III</text>
+ <rect class="pr" x="30" y="318" width="380" height="68" rx="6"/>
+ <text class="tb" x="40" y="338">5S rRNA is the exception</text>
+ <text class="s" x="40" y="358">not part of the 45S transcript; its own gene is read by Pol III</text>
+ <text class="s" x="40" y="378">made in the nucleoplasm, then imported into the nucleolus</text>
+
+ <text class="th" x="460" y="182">C  The nucleolus is a place, not an organelle</text>
+ <line x1="460" y1="192" x2="860" y2="192" stroke="#c6d2dd" stroke-width="1.5"/>
+ <ellipse cx="660" cy="290" rx="180" ry="86" fill="#fdf6e3" stroke="#f2b705" stroke-width="2.4" stroke-dasharray="7 5"/>
+ <text class="tb" x="600" y="226">nucleolus</text>
+ <text class="s" x="520" y="258">1  Pol I transcribes the rRNA genes</text>
+ <text class="s" x="520" y="286">2  pre-rRNA is cleaved and modified</text>
+ <text class="s" x="520" y="314">3  subunits are assembled with proteins</text>
+ <text class="s" x="520" y="344">no membrane: the machinery gathers</text>
+ <text class="s" x="520" y="362">where the genes are</text>
+ <path class="ar" d="M840 290 L862 290"/>
+ <text class="s" x="460" y="404">function made the structure, so its size tracks the cell's state</text>
+ <text class="s" x="460" y="422">large in cells synthesising heavily, small in cells that stopped dividing</text>
+ <text class="s" x="460" y="440">a large prominent nucleolus is read as a malignant feature for this reason</text>
+</svg>

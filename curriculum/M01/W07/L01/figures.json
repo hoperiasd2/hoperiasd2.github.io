@@ -1,4 +1,125 @@
 {
   "lesson_id": "M01-W07-L01",
-  "figures": []
+  "figures": [
+    {
+      "figure_id": "fig-rna-chemistry",
+      "lesson_id": "M01-W07-L01",
+      "html_anchor": "#fig-rna-chemistry",
+      "caption": "RNA와 DNA의 화학적 차이와 그 결과. Ribose의 2′ hydroxyl기가 가수분해의 원인이면서 동시에 촉매 활성의 근거가 되는 양면성, uracil과 thymine의 구조 차이, 그리고 단일가닥 RNA가 자기 염기쌍으로 입체 구조를 만드는 방식을 함께 보인다.",
+      "asset_path": "assets/fig-rna-chemistry.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-rna-classes",
+      "lesson_id": "M01-W07-L01",
+      "html_anchor": "#fig-rna-classes",
+      "caption": "세포 안 RNA의 종류와 기능 분담. 양으로는 rRNA가 압도적이고 mRNA는 소수라는 구성비, 각 종류를 만드는 polymerase의 분담, 그리고 정보 전달·촉매·조절·해독으로 나뉘는 기능의 범주를 함께 보인다.",
+      "asset_path": "assets/fig-rna-classes.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-bacterial-transcription",
+      "lesson_id": "M01-W07-L01",
+      "html_anchor": "#fig-bacterial-transcription",
+      "caption": "세균 전사의 구성과 세 단계. Core enzyme과 sigma 인자의 분업, −35와 −10 영역의 위치, open complex 형성에서 sigma 방출까지의 개시 과정, 신장과 두 가지 종결 방식, 그리고 전사와 번역이 같은 공간에서 겹치는 배치를 함께 보인다.",
+      "asset_path": "assets/fig-bacterial-transcription.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-three-polymerases",
+      "lesson_id": "M01-W07-L01",
+      "html_anchor": "#fig-three-polymerases",
+      "caption": "진핵세포 세 RNA polymerase의 분담. 각 효소의 산물과 세포 내 위치, rRNA 유전자의 연속 배열에 Pol I이 빽빽하게 결합하는 배치, Pol III의 유전자 내부 promoter, 그리고 α-amanitin 감수성의 차이를 함께 보인다.",
+      "asset_path": "assets/fig-three-polymerases.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-pic-assembly",
+      "lesson_id": "M01-W07-L01",
+      "html_anchor": "#fig-pic-assembly",
+      "caption": "Pol II preinitiation complex의 조립 순서. TBP의 TATA box 결합과 DNA 굽힘, TFIIB가 정하는 전사 방향, TFIIF와 함께 들어오는 Pol II, TFIIH의 helicase와 kinase 두 활성, 그리고 인산화된 CTD가 가공 인자의 플랫폼이 되는 구조를 함께 보인다.",
+      "asset_path": "assets/fig-pic-assembly.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-premrna-processing",
+      "lesson_id": "M01-W07-L01",
+      "html_anchor": "#fig-premrna-processing",
+      "caption": "pre-mRNA 가공의 세 단계 개요. 5′ cap의 5′-5′ 결합과 세 기능, intron 제거와 exon 조합이 만드는 isoform, AAUAAA에 이어지는 절단과 주형 없는 poly(A) 부가, 그리고 가공 완료가 핵 밖 수송의 판정 기준이 되는 관문 구조를 함께 보인다.",
+      "asset_path": "assets/fig-premrna-processing.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-rrna-processing",
+      "lesson_id": "M01-W07-L01",
+      "html_anchor": "#fig-rrna-processing",
+      "caption": "45S pre-rRNA의 가공과 nucleolus의 구조. 18S-5.8S-28S가 한 전사체에 배열된 순서와 절단 지점, Pol III가 따로 만드는 5S의 합류, 두 소단위로 나뉘는 분배, 그리고 전사·가공·조립 세 기능이 집적되어 nucleolus를 이루는 배치를 함께 보인다.",
+      "asset_path": "assets/fig-rrna-processing.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-snornp",
+      "lesson_id": "M01-W07-L01",
+      "html_anchor": "#fig-snornp",
+      "caption": "snoRNP에 의한 위치 특이적 rRNA 변형. 2′-O-methylation과 pseudouridine 형성의 화학 구조 변화, snoRNA가 pre-rRNA와 염기쌍을 이루어 변형 지점을 지정하는 방식, box C/D와 box H/ACA 두 계열의 분담, 그리고 RNA가 위치를 정하고 단백질이 반응하는 공통 전략을 함께 보인다.",
+      "asset_path": "assets/fig-snornp.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-trna-editing",
+      "lesson_id": "M01-W07-L01",
+      "html_anchor": "#fig-trna-editing",
+      "caption": "tRNA 가공의 네 단계와 RNA editing의 두 방식. RNase P에 의한 5′ 절단과 그것이 ribozyme이라는 점, 주형 없이 붙는 CCA와 아미노산 결합 자리, anticodon의 inosine, 그리고 apolipoprotein B의 C→U editing이 조직에 따라 다른 길이의 단백질을 만드는 과정을 함께 보인다.",
+      "asset_path": "assets/fig-trna-editing.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-mrna-decay",
+      "lesson_id": "M01-W07-L01",
+      "html_anchor": "#fig-mrna-decay",
+      "caption": "mRNA 반감기와 분해 경로. 합성과 분해의 균형이 정상 상태의 양을 정하는 관계, 반감기에 따른 유전자 종류의 분포, 3′ UTR의 AU-rich element와 결합 단백질에 따라 갈리는 결과, deadenylation에서 decapping을 거쳐 exonuclease에 이르는 순서, 그리고 nonsense-mediated decay가 종결 codon 위치로 판정하는 기준을 함께 보인다.",
+      "asset_path": "assets/fig-mrna-decay.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    }
+  ]
 }

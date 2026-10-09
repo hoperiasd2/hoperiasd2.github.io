@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 470" width="880" height="470" role="img"
+ aria-label="Bacterial transcription: the division of labour between core enzyme and sigma factor, the minus 35 and minus 10 promoter elements, open complex formation and sigma release during initiation, elongation, the two termination routes, and transcription overlapping translation in one compartment.">
+ <style>
+  .bx{fill:#fff;stroke:#c6d2dd;stroke-width:1.8}.k{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .t{font:12px sans-serif;fill:#16191d}.tb{font:700 13px sans-serif;fill:#003c71}
+  .th{font:700 15px sans-serif;fill:#003c71}.s{font:11px sans-serif;fill:#4a5159}
+  .m{font:11px monospace;fill:#16191d}
+  .rna{stroke:#b3261e;stroke-width:3;fill:none}
+  .dna{stroke:#1a4f8a;stroke-width:3;fill:none}
+  .g{fill:#e3f0e4;stroke:#2e7d32;stroke-width:2.2}
+  .me{fill:#f2b705;stroke:#8a6300;stroke-width:1.6}
+  .ar{stroke:#003c71;stroke-width:2;fill:none;marker-end:url(#a)}
+  .arr{stroke:#b3261e;stroke-width:2;fill:none;marker-end:url(#b)}
+  .ex{fill:#f7dedc;stroke:#b3261e;stroke-width:2.2}
+  .pr{fill:#dce6f2;stroke:#1a4f8a;stroke-width:2.2}
+  .no{stroke:#b3261e;stroke-width:3;fill:none}
+ </style>
+ <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker>
+ <marker id="b" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#b3261e"/></marker></defs>
+ <text class="th" x="20" y="28">A  The enzyme: polymerisation and site selection are separate</text>
+ <line x1="20" y1="38" x2="860" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+ <rect class="pr" x="30" y="52" width="250" height="88" rx="6"/>
+ <text class="tb" x="42" y="72">core enzyme</text>
+ <text class="m" x="42" y="94">alpha2  beta  beta'  omega</text>
+ <text class="s" x="42" y="116">can polymerise RNA</text>
+ <text class="s" x="42" y="132">cannot find a promoter</text>
+ <text class="tb" x="296" y="100">+ sigma</text>
+ <path class="ar" d="M292 112 L352 112"/>
+ <rect class="k" x="366" y="52" width="250" height="88" rx="6"/>
+ <text class="tb" x="378" y="72">holoenzyme</text>
+ <text class="m" x="378" y="94">core  +  sigma factor</text>
+ <text class="s" x="378" y="116">reads -35 and -10</text>
+ <text class="s" x="378" y="132">starts at the right base</text>
+ <text class="s" x="636" y="88">swapping sigma</text>
+ <text class="s" x="636" y="106">points the same core</text>
+ <text class="s" x="636" y="124">at a different gene set</text>
+
+ <text class="th" x="20" y="180">B  The promoter</text>
+ <line x1="20" y1="190" x2="430" y2="190" stroke="#c6d2dd" stroke-width="1.5"/>
+ <line class="dna" x1="30" y1="226" x2="410" y2="226"/>
+ <rect class="k" x="60" y="212" width="78" height="28"/>
+ <text class="m" x="68" y="231">TTGACA</text>
+ <rect class="k" x="190" y="212" width="78" height="28"/>
+ <text class="m" x="198" y="231">TATAAT</text>
+ <text class="s" x="62" y="258">-35 region</text>
+ <text class="s" x="188" y="258">-10 region</text>
+ <text class="s" x="188" y="274">(Pribnow box)</text>
+ <text class="tb" x="296" y="231">+1</text>
+ <path class="arr" d="M300 212 L300 196 L360 196"/>
+ <text class="s" x="30" y="300">the closer each element is to the consensus, the stronger the promoter</text>
+
+ <text class="th" x="460" y="180">C  Three stages</text>
+ <line x1="460" y1="190" x2="860" y2="190" stroke="#c6d2dd" stroke-width="1.5"/>
+ <rect class="bx" x="470" y="202" width="370" height="54" rx="6"/>
+ <text class="tb" x="482" y="222">1  Initiation</text>
+ <text class="s" x="482" y="244">about 14 bp unwound: open complex; sigma leaves after ~10 nt</text>
+ <rect class="bx" x="470" y="264" width="370" height="54" rx="6"/>
+ <text class="tb" x="482" y="284">2  Elongation</text>
+ <text class="s" x="482" y="306">core moves along, adds to the 3' end, about 50 nt per second</text>
+ <rect class="bx" x="470" y="326" width="370" height="72" rx="6"/>
+ <text class="tb" x="482" y="346">3  Termination</text>
+ <text class="s" x="482" y="366">intrinsic: GC-rich hairpin followed by a run of U stalls the enzyme</text>
+ <text class="s" x="482" y="386">Rho-dependent: Rho tracks the transcript and strips the enzyme off</text>
+
+ <text class="th" x="20" y="336">D  No nuclear envelope: both at once</text>
+ <line x1="20" y1="346" x2="430" y2="346" stroke="#c6d2dd" stroke-width="1.5"/>
+ <line class="dna" x1="30" y1="376" x2="410" y2="376"/>
+ <ellipse class="pr" cx="300" cy="376" rx="26" ry="16"/>
+ <text class="s" x="282" y="380">Pol</text>
+ <path class="rna" d="M276 386 L140 412"/>
+ <circle class="g" cx="200" cy="404" r="13"/>
+ <circle class="g" cx="160" cy="411" r="13"/>
+ <text class="s" x="30" y="440">ribosomes load on the 5' end while the 3' end is still being made</text>
+ <text class="s" x="30" y="458">no processing step exists here: this is what eukaryotes add</text>
+</svg>

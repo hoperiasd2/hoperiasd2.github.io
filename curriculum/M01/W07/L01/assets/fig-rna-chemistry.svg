@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 430" width="880" height="430" role="img"
+ aria-label="Chemical differences between RNA and DNA and what each one causes: the 2-prime hydroxyl of ribose makes RNA both hydrolysis-prone and catalytic, uracil lacks the methyl group thymine carries, and single-stranded RNA folds through internal base pairing.">
+ <style>
+  .bx{fill:#fff;stroke:#c6d2dd;stroke-width:1.8}.k{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .t{font:12px sans-serif;fill:#16191d}.tb{font:700 13px sans-serif;fill:#003c71}
+  .th{font:700 15px sans-serif;fill:#003c71}.s{font:11px sans-serif;fill:#4a5159}
+  .m{font:11px monospace;fill:#16191d}
+  .rna{stroke:#b3261e;stroke-width:3;fill:none}
+  .dna{stroke:#1a4f8a;stroke-width:3;fill:none}
+  .g{fill:#e3f0e4;stroke:#2e7d32;stroke-width:2.2}
+  .me{fill:#f2b705;stroke:#8a6300;stroke-width:1.6}
+  .ar{stroke:#003c71;stroke-width:2;fill:none;marker-end:url(#a)}
+  .arr{stroke:#b3261e;stroke-width:2;fill:none;marker-end:url(#b)}
+  .ex{fill:#f7dedc;stroke:#b3261e;stroke-width:2.2}
+  .pr{fill:#dce6f2;stroke:#1a4f8a;stroke-width:2.2}
+  .no{stroke:#b3261e;stroke-width:3;fill:none}
+ </style>
+ <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker>
+ <marker id="b" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#b3261e"/></marker></defs>
+ <text class="th" x="20" y="28">A  The sugar: one hydroxyl is the whole difference</text>
+ <line x1="20" y1="38" x2="430" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+ <rect class="ex" x="30" y="52" width="170" height="104" rx="6"/>
+ <text class="tb" x="40" y="72">RNA  ribose</text>
+ <text class="m" x="40" y="94">2' position:  OH</text>
+ <text class="m" x="40" y="112">3' position:  OH</text>
+ <text class="s" x="40" y="136">reactive hydroxyl present</text>
+ <rect class="pr" x="230" y="52" width="170" height="104" rx="6"/>
+ <text class="tb" x="240" y="72">DNA  deoxyribose</text>
+ <text class="m" x="240" y="94">2' position:  H</text>
+ <text class="m" x="240" y="112">3' position:  OH</text>
+ <text class="s" x="240" y="136">no reactive hydroxyl</text>
+
+ <text class="tb" x="30" y="184">The same 2'-OH gives two opposite results</text>
+ <path class="arr" d="M70 192 L70 214"/>
+ <path class="arr" d="M300 192 L300 214"/>
+ <rect class="bx" x="30" y="218" width="180" height="92" rx="6"/>
+ <text class="tb" x="40" y="238">1  Instability</text>
+ <text class="s" x="40" y="258">2'-OH attacks the</text>
+ <text class="s" x="40" y="274">neighbouring phosphodiester</text>
+ <text class="s" x="40" y="290">bond: alkaline hydrolysis</text>
+ <rect class="k" x="230" y="218" width="180" height="92" rx="6"/>
+ <text class="tb" x="240" y="238">2  Catalysis</text>
+ <text class="s" x="240" y="258">the same group acts as</text>
+ <text class="s" x="240" y="274">the attacking nucleophile:</text>
+ <text class="s" x="240" y="290">ribozymes are possible</text>
+ <text class="s" x="30" y="336">short-lived messenger  and  RNA enzyme  come from one chemical group</text>
+
+ <text class="th" x="460" y="28">B  The base: uracil in place of thymine</text>
+ <line x1="460" y1="38" x2="860" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+ <rect class="ex" x="470" y="52" width="170" height="74" rx="6"/>
+ <text class="tb" x="480" y="72">uracil (RNA)</text>
+ <text class="m" x="480" y="94">C5 carries  H</text>
+ <text class="s" x="480" y="114">pairs with adenine</text>
+ <rect class="pr" x="670" y="52" width="170" height="74" rx="6"/>
+ <text class="tb" x="680" y="72">thymine (DNA)</text>
+ <text class="m" x="680" y="94">C5 carries  CH3</text>
+ <text class="s" x="680" y="114">pairs with adenine</text>
+ <text class="s" x="470" y="146">pairing behaviour identical; only the methyl differs</text>
+
+ <text class="th" x="460" y="184">C  Strand number: folding follows</text>
+ <line x1="460" y1="194" x2="860" y2="194" stroke="#c6d2dd" stroke-width="1.5"/>
+ <line class="dna" x1="470" y1="222" x2="690" y2="222"/>
+ <line class="dna" x1="470" y1="236" x2="690" y2="236"/>
+ <text class="s" x="700" y="233">DNA: double helix</text>
+ <path class="rna" d="M475 282 q20 -28 42 0 q16 24 40 -2 q22 -26 44 4 q20 26 44 -6 q18 -22 40 2"/>
+ <text class="s" x="700" y="282">RNA: single strand</text>
+ <path class="rna" d="M500 330 q34 -26 68 0 q-10 26 -34 26 q-24 0 -34 -26 z"/>
+ <path class="rna" d="M600 330 l0 34 M620 330 l0 34"/>
+ <line x1="600" y1="338" x2="620" y2="338" stroke="#4a5159" stroke-width="1.4"/>
+ <line x1="600" y1="350" x2="620" y2="350" stroke="#4a5159" stroke-width="1.4"/>
+ <text class="s" x="500" y="388">loop</text>
+ <text class="s" x="594" y="388">hairpin stem</text>
+ <text class="s" x="470" y="412">internal base pairing builds the three-dimensional shape that carries the function</text>
+ <text class="s" x="470" y="428">examples: the L shape of tRNA, the catalytic centre of the ribosome</text>
+</svg>

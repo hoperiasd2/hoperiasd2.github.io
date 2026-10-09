@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 420" width="880" height="420" role="img"
+ aria-label="Classes of cellular RNA and the division of labour: rRNA dominates by mass while mRNA is a minority, each class is made by a specific polymerase, and the functions divide into information transfer, catalysis, regulation and decoding.">
+ <style>
+  .bx{fill:#fff;stroke:#c6d2dd;stroke-width:1.8}.k{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .t{font:12px sans-serif;fill:#16191d}.tb{font:700 13px sans-serif;fill:#003c71}
+  .th{font:700 15px sans-serif;fill:#003c71}.s{font:11px sans-serif;fill:#4a5159}
+  .m{font:11px monospace;fill:#16191d}
+  .rna{stroke:#b3261e;stroke-width:3;fill:none}
+  .dna{stroke:#1a4f8a;stroke-width:3;fill:none}
+  .g{fill:#e3f0e4;stroke:#2e7d32;stroke-width:2.2}
+  .me{fill:#f2b705;stroke:#8a6300;stroke-width:1.6}
+  .ar{stroke:#003c71;stroke-width:2;fill:none;marker-end:url(#a)}
+  .arr{stroke:#b3261e;stroke-width:2;fill:none;marker-end:url(#b)}
+  .ex{fill:#f7dedc;stroke:#b3261e;stroke-width:2.2}
+  .pr{fill:#dce6f2;stroke:#1a4f8a;stroke-width:2.2}
+  .no{stroke:#b3261e;stroke-width:3;fill:none}
+ </style>
+ <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker>
+ <marker id="b" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#b3261e"/></marker></defs>
+ <text class="th" x="20" y="28">A  By amount: the messenger is the minority</text>
+ <line x1="20" y1="38" x2="430" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+ <rect x="30" y="56" width="304" height="34" class="g"/>
+ <text class="tb" x="40" y="79">rRNA  about 80%</text>
+ <rect x="30" y="98" width="58" height="30" class="pr"/>
+ <text class="tb" x="98" y="119">tRNA  about 15%</text>
+ <rect x="30" y="136" width="17" height="26" class="ex"/>
+ <text class="tb" x="60" y="155">mRNA  3 to 5%</text>
+ <rect x="30" y="170" width="8" height="22" class="k"/>
+ <text class="tb" x="52" y="187">snRNA, snoRNA, miRNA, lncRNA  trace</text>
+ <text class="s" x="30" y="216">most of what a cell transcribes is never translated</text>
+
+ <text class="th" x="20" y="256">B  Which polymerase makes which</text>
+ <line x1="20" y1="266" x2="430" y2="266" stroke="#c6d2dd" stroke-width="1.5"/>
+ <rect class="bx" x="30" y="280" width="118" height="110" rx="6"/>
+ <text class="tb" x="40" y="300">Pol I</text>
+ <text class="s" x="40" y="322">45S pre-rRNA</text>
+ <text class="s" x="40" y="340">(18S, 5.8S, 28S)</text>
+ <rect class="bx" x="158" y="280" width="118" height="110" rx="6"/>
+ <text class="tb" x="168" y="300">Pol II</text>
+ <text class="s" x="168" y="322">mRNA, snRNA</text>
+ <text class="s" x="168" y="340">snoRNA, miRNA</text>
+ <text class="s" x="168" y="358">lncRNA</text>
+ <rect class="bx" x="286" y="280" width="118" height="110" rx="6"/>
+ <text class="tb" x="296" y="300">Pol III</text>
+ <text class="s" x="296" y="322">tRNA, 5S rRNA</text>
+ <text class="s" x="296" y="340">some snRNA</text>
+
+ <text class="th" x="460" y="28">C  By function: four jobs, not one</text>
+ <line x1="460" y1="38" x2="860" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+ <rect class="ex" x="470" y="52" width="370" height="76" rx="6"/>
+ <text class="tb" x="482" y="72">Information transfer</text>
+ <text class="s" x="482" y="94">mRNA  carries the amino acid order of a protein</text>
+ <text class="s" x="482" y="114">read in the cytoplasm by the ribosome</text>
+ <rect class="g" x="470" y="138" width="370" height="76" rx="6"/>
+ <text class="tb" x="482" y="158">Catalysis</text>
+ <text class="s" x="482" y="180">rRNA  forms peptide bonds in the ribosome</text>
+ <text class="s" x="482" y="200">snRNA  catalyses splicing in the spliceosome</text>
+ <rect class="k" x="470" y="224" width="370" height="76" rx="6"/>
+ <text class="tb" x="482" y="244">Regulation</text>
+ <text class="s" x="482" y="266">miRNA  blocks translation and triggers decay</text>
+ <text class="s" x="482" y="286">lncRNA  organises chromatin, acts as scaffold</text>
+ <rect class="pr" x="470" y="310" width="370" height="76" rx="6"/>
+ <text class="tb" x="482" y="330">Decoding</text>
+ <text class="s" x="482" y="352">tRNA  matches one codon to one amino acid</text>
+ <text class="s" x="482" y="372">snoRNA  marks which residue of pre-rRNA to modify</text>
+ <text class="s" x="470" y="410">information transfer is one of several things RNA does, not the whole of it</text>
+</svg>

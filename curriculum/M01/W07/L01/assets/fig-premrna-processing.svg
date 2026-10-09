@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 460" width="880" height="460" role="img"
+ aria-label="Overview of the three pre-mRNA processing events: the backwards 5-prime to 5-prime cap bond and its three functions, intron removal with exon combinations producing isoforms, cleavage after AAUAAA followed by templateless poly-A addition, and processing acting as the gate for nuclear export.">
+ <style>
+  .bx{fill:#fff;stroke:#c6d2dd;stroke-width:1.8}.k{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .t{font:12px sans-serif;fill:#16191d}.tb{font:700 13px sans-serif;fill:#003c71}
+  .th{font:700 15px sans-serif;fill:#003c71}.s{font:11px sans-serif;fill:#4a5159}
+  .m{font:11px monospace;fill:#16191d}
+  .rna{stroke:#b3261e;stroke-width:3;fill:none}
+  .dna{stroke:#1a4f8a;stroke-width:3;fill:none}
+  .g{fill:#e3f0e4;stroke:#2e7d32;stroke-width:2.2}
+  .me{fill:#f2b705;stroke:#8a6300;stroke-width:1.6}
+  .ar{stroke:#003c71;stroke-width:2;fill:none;marker-end:url(#a)}
+  .arr{stroke:#b3261e;stroke-width:2;fill:none;marker-end:url(#b)}
+  .ex{fill:#f7dedc;stroke:#b3261e;stroke-width:2.2}
+  .pr{fill:#dce6f2;stroke:#1a4f8a;stroke-width:2.2}
+  .no{stroke:#b3261e;stroke-width:3;fill:none}
+ </style>
+ <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker>
+ <marker id="b" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#b3261e"/></marker></defs>
+ <text class="th" x="20" y="28">A  One primary transcript, three modifications</text>
+ <line x1="20" y1="38" x2="860" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+ <line class="rna" x1="110" y1="74" x2="700" y2="74"/>
+ <rect class="ex" x="110" y="64" width="70" height="20"/>
+ <rect class="ex" x="300" y="64" width="80" height="20"/>
+ <rect class="ex" x="520" y="64" width="70" height="20"/>
+ <text class="s" x="118" y="102">exon 1</text>
+ <text class="s" x="312" y="102">exon 2</text>
+ <text class="s" x="532" y="102">exon 3</text>
+ <text class="s" x="212" y="56">intron</text>
+ <text class="s" x="428" y="56">intron</text>
+ <text class="tb" x="30" y="79">pre-mRNA</text>
+ <text class="s" x="620" y="102">most of the length is intron</text>
+
+ <path class="ar" d="M400 112 L400 136"/>
+ <line class="rna" x1="150" y1="166" x2="420" y2="166"/>
+ <rect class="ex" x="150" y="156" width="70" height="20"/>
+ <rect class="ex" x="220" y="156" width="80" height="20"/>
+ <rect class="ex" x="300" y="156" width="70" height="20"/>
+ <circle class="me" cx="136" cy="166" r="12"/>
+ <text class="m" x="128" y="142">cap</text>
+ <path class="rna" d="M420 166 l60 0"/>
+ <text class="m" x="424" y="190">AAAA...</text>
+ <text class="tb" x="30" y="171">mature mRNA</text>
+
+ <text class="th" x="20" y="236">B  5' cap</text>
+ <line x1="20" y1="246" x2="290" y2="246" stroke="#c6d2dd" stroke-width="1.5"/>
+ <text class="s" x="30" y="268">added at 25 to 30 nt</text>
+ <text class="m" x="30" y="290">7-methylguanosine</text>
+ <text class="m" x="30" y="310">5'-5' triphosphate bond</text>
+ <text class="s" x="30" y="332">the bond runs backwards, so</text>
+ <text class="s" x="30" y="350">no free 5' end is left for a</text>
+ <text class="s" x="30" y="368">5' to 3' exonuclease to grip</text>
+ <rect class="k" x="30" y="382" width="240" height="60" rx="6"/>
+ <text class="s" x="40" y="402">1  protection from decay</text>
+ <text class="s" x="40" y="420">2  export tag</text>
+ <text class="s" x="40" y="438">3  foothold for translation</text>
+
+ <text class="th" x="310" y="236">C  Splicing</text>
+ <line x1="310" y1="246" x2="570" y2="246" stroke="#c6d2dd" stroke-width="1.5"/>
+ <text class="s" x="320" y="268">introns removed, exons joined</text>
+ <text class="s" x="320" y="290">the amount removed is large:</text>
+ <text class="s" x="320" y="308">introns dominate human genes</text>
+ <rect class="ex" x="320" y="326" width="230" height="76" rx="6"/>
+ <text class="tb" x="330" y="346">alternative splicing</text>
+ <text class="s" x="330" y="366">different exon combinations give</text>
+ <text class="s" x="330" y="384">different proteins from one gene</text>
+ <text class="s" x="320" y="424">over 90% of human genes</text>
+ <text class="s" x="320" y="442">are alternatively spliced</text>
+
+ <text class="th" x="590" y="236">D  3' end</text>
+ <line x1="590" y1="246" x2="860" y2="246" stroke="#c6d2dd" stroke-width="1.5"/>
+ <text class="m" x="600" y="268">...AAUAAA...</text>
+ <text class="s" x="600" y="290">cleavage occurs downstream</text>
+ <text class="s" x="600" y="312">then about 200 adenines are</text>
+ <text class="s" x="600" y="330">added with no template</text>
+ <rect class="pr" x="600" y="344" width="240" height="58" rx="6"/>
+ <text class="s" x="610" y="364">the poly(A) tail is not</text>
+ <text class="s" x="610" y="382">encoded in the genome</text>
+ <text class="s" x="600" y="424">tail governs stability, export</text>
+ <text class="s" x="600" y="442">and translation efficiency</text>
+</svg>
