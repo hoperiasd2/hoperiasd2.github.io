@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 430" width="880" height="430" role="img"
+ aria-label="Three chemical differences between RNA and DNA and their consequences: the presence or absence of the 2-prime hydroxyl and the instability and catalytic possibility it creates, how the difference between thymine and uracil provides a criterion for repair, and single-stranded RNA folding according to its sequence.">
+ <style>
+  .bx{fill:#fff;stroke:#c6d2dd;stroke-width:1.8}.k{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .t{font:12px sans-serif;fill:#16191d}.tb{font:700 13px sans-serif;fill:#003c71}
+  .th{font:700 15px sans-serif;fill:#003c71}.s{font:11px sans-serif;fill:#4a5159}
+  .m{font:10px monospace;fill:#16191d}
+  .ring{fill:none;stroke:#16191d;stroke-width:2.2}
+  .oh{fill:#f2b705;stroke:#8a6300;stroke-width:1.8}
+  .ar{stroke:#003c71;stroke-width:2;fill:none;marker-end:url(#a)}
+  .rna{stroke:#b3261e;stroke-width:3;fill:none}
+  .dna{stroke:#16191d;stroke-width:2.6;fill:none}
+ </style>
+ <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker></defs>
+
+ <text class="th" x="20" y="28">A  The sugar: 2-prime OH or not</text>
+ <line x1="20" y1="38" x2="430" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+ <path class="ring" d="M60 110 l34 -24 l34 24 l-13 40 h-42 z"/>
+ <text class="m" x="46" y="86">deoxyribose</text>
+ <text class="m" x="112" y="156">2' H</text>
+ <path class="ring" d="M250 110 l34 -24 l34 24 l-13 40 h-42 z"/>
+ <text class="m" x="256" y="86">ribose</text>
+ <circle class="oh" cx="320" cy="150" r="8"/>
+ <text class="m" x="332" y="156">2' OH</text>
+ <rect class="k" x="20" y="176" width="410" height="90" rx="8"/>
+ <text class="tb" x="34" y="198">Two consequences of that OH</text>
+ <text class="t" x="34" y="220">1  it can attack the neighbouring phosphate, so RNA breaks</text>
+ <text class="t" x="34" y="238">(especially in alkali): RNA is unstable, DNA is not</text>
+ <text class="t" x="34" y="258">2  a group that can take part in reactions: RNA can be catalytic</text>
+
+ <text class="th" x="460" y="28">B  The base: thymine or uracil</text>
+ <line x1="460" y1="38" x2="860" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+ <rect class="bx" x="460" y="54" width="400" height="112" rx="8"/>
+ <text class="m" x="474" y="78">cytosine  deaminates spontaneously  to  URACIL</text>
+ <path class="ar" d="M474 86 L474 104"/>
+ <text class="t" x="474" y="122">If DNA used uracil as a normal base, damage-derived uracil</text>
+ <text class="t" x="474" y="140">could not be told from the real thing.</text>
+ <text class="tb" x="474" y="160">DNA uses thymine, so any uracil found in DNA IS damage.</text>
+ <text class="s" x="460" y="186">Uracil-DNA glycosylase can then remove it. RNA is not kept long, so it needs no such protection — and saves the cost of a methyl group.</text>
+
+ <text class="th" x="20" y="298">C  Strandedness: in RNA the sequence becomes the structure</text>
+ <line x1="20" y1="308" x2="860" y2="308" stroke="#c6d2dd" stroke-width="1.5"/>
+ <path class="dna" d="M40 340 h240 M40 356 h240"/>
+ <text class="m" x="40" y="382">DNA: double helix, nearly uniform shape, good for holding sequence</text>
+ <path class="rna" d="M460 356 q20 -30 44 -12 q24 18 44 -14 q24 -32 48 -2 q20 20 44 2 q24 -18 44 10"/>
+ <text class="m" x="460" y="390">RNA: single strand that pairs with itself — hairpins, loops, 3-D folds</text>
+ <text class="s" x="460" y="410">tRNA's cloverleaf, the ribosome's catalytic centre, the leader RNA's two alternative structures all come from this.</text>
+ <text class="s" x="40" y="410">Sequence is structure, and structure is function.</text>
+</svg>

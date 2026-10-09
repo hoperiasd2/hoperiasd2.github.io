@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 420" width="880" height="420" role="img"
+ aria-label="Classes of cellular RNA and their proportions: the quantitative distribution of rRNA, tRNA, mRNA and regulatory RNA, the fact that mRNA is only two to five percent and why ribosomal RNA must be removed for transcriptome analysis, and four differences in character between bacterial and eukaryotic mRNA.">
+ <style>
+  .bx{fill:#fff;stroke:#c6d2dd;stroke-width:1.8}.k{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .t{font:12px sans-serif;fill:#16191d}.tb{font:700 13px sans-serif;fill:#003c71}
+  .th{font:700 15px sans-serif;fill:#003c71}.s{font:11px sans-serif;fill:#4a5159}
+  .m{font:10px monospace;fill:#16191d}
+  .r{fill:#1a4f8a}.tr{fill:#2e7d32}.mr{fill:#b3261e}.og{fill:#f2b705}
+ </style>
+
+ <text class="th" x="20" y="28">A  How much of each</text>
+ <line x1="20" y1="38" x2="430" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+ <rect class="r" x="40" y="60" width="312" height="28"/>
+ <text class="m" x="150" y="79" fill="#fff">rRNA  about 80 percent</text>
+ <rect class="tr" x="40" y="94" width="58" height="28"/>
+ <text class="m" x="106" y="113">tRNA  about 15 percent</text>
+ <rect class="mr" x="40" y="128" width="16" height="28"/>
+ <text class="m" x="64" y="147">mRNA  2 to 5 percent</text>
+ <rect class="og" x="40" y="162" width="8" height="28"/>
+ <text class="m" x="56" y="181">regulatory and other: little mass, many kinds</text>
+
+ <rect class="k" x="20" y="202" width="410" height="78" rx="8"/>
+ <text class="tb" x="34" y="224">Two lessons from the numbers</text>
+ <text class="t" x="34" y="246">Read total RNA and you read rRNA. To see mRNA you must deplete</text>
+ <text class="t" x="34" y="264">rRNA or select poly(A) RNA.</text>
+ <text class="t" x="34" y="300">Mass does not track importance: mRNA is a small mass but over</text>
+ <text class="t" x="34" y="318">20,000 kinds, each separately regulated; rRNA is a large mass but</text>
+ <text class="t" x="34" y="336">four kinds, needed in bulk almost always.</text>
+
+ <text class="th" x="460" y="28">B  Bacterial and eukaryotic mRNA differ</text>
+ <line x1="460" y1="38" x2="860" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+ <rect class="bx" x="460" y="54" width="400" height="140" rx="8"/>
+ <text class="tb" x="474" y="76">Feature</text>
+ <text class="tb" x="630" y="76">bacterial</text>
+ <text class="tb" x="760" y="76">eukaryotic</text>
+ <line x1="474" y1="84" x2="846" y2="84" stroke="#c6d2dd" stroke-width="1.2"/>
+ <text class="t" x="474" y="104">genes per transcript</text>
+ <text class="t" x="630" y="104">several</text>
+ <text class="t" x="760" y="104">usually one</text>
+ <text class="t" x="474" y="128">processing</text>
+ <text class="t" x="630" y="128">almost none</text>
+ <text class="t" x="760" y="128">cap, splice, poly(A)</text>
+ <text class="t" x="474" y="152">half-life</text>
+ <text class="t" x="630" y="152">minutes</text>
+ <text class="t" x="760" y="152">tens of min to h</text>
+ <text class="t" x="474" y="176">transcription-translation</text>
+ <text class="t" x="630" y="176">together</text>
+ <text class="t" x="760" y="176">separated</text>
+
+ <rect class="bx" x="460" y="208" width="400" height="92" rx="8"/>
+ <text class="tb" x="474" y="230">Why the short bacterial half-life helps</text>
+ <text class="t" x="474" y="252">When a need disappears the existing mRNA is gone within</text>
+ <text class="t" x="474" y="270">minutes, so expression can be withdrawn fast. Eukaryotic mRNA</text>
+ <text class="t" x="474" y="288">persists, so translation continues after transcription stops.</text>
+ <text class="s" x="460" y="326">The two strategies match the difference in regulatory task: fast environmental response versus stable differentiated state.</text>
+</svg>

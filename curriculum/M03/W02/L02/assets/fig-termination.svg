@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 450" width="880" height="450" role="img"
+ aria-label="Three modes of transcription termination: why bacterial intrinsic termination needs both a hairpin and a U run, how Rho travels along the RNA to unwind the hybrid and how a ribosome blocks it as quality control, and the eukaryotic Pol II mode where poly-A signal recognition, cleavage and a degradation chase separate completion of the RNA from termination of transcription.">
+ <style>
+  .bx{fill:#fff;stroke:#c6d2dd;stroke-width:1.8}.k{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .t{font:12px sans-serif;fill:#16191d}.tb{font:700 13px sans-serif;fill:#003c71}
+  .th{font:700 15px sans-serif;fill:#003c71}.s{font:11px sans-serif;fill:#4a5159}
+  .m{font:10px monospace;fill:#16191d}
+  .dna{fill:none;stroke:#16191d;stroke-width:2.4}
+  .pol{fill:#dce6f2;stroke:#1a4f8a;stroke-width:2.4}
+  .rna{stroke:#b3261e;stroke-width:3;fill:none}
+  .rho{fill:#e3f0e4;stroke:#2e7d32;stroke-width:2.2}
+  .rib{fill:#dce6f2;stroke:#1a4f8a;stroke-width:2}
+  .ar{stroke:#003c71;stroke-width:2;fill:none;marker-end:url(#a)}
+  .cut{stroke:#b3261e;stroke-width:3;fill:none}
+  .no{stroke:#b3261e;stroke-width:3;fill:none}
+ </style>
+ <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker></defs>
+
+ <text class="th" x="20" y="28">A  Bacterial intrinsic termination: BOTH parts are required</text>
+ <line x1="20" y1="38" x2="860" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+ <path class="rna" d="M40 110 h70 q0 -36 22 -36 q22 0 22 36 h20"/>
+ <text class="m" x="106" y="66">GC-rich hairpin</text>
+ <text class="m" x="178" y="114">U U U U U U</text>
+ <path class="pol" d="M250 88 h60 v30 h-60 z"/>
+ <text class="m" x="262" y="108">Pol</text>
+ <text class="s" x="40" y="140">1 the hairpin STOPS the polymerase    2 the weak A-U pairs destabilise the hybrid, so the RNA FALLS OFF</text>
+ <text class="tb" x="40" y="162">hairpin alone: stops but does not release · U run alone: does not stop</text>
+
+ <text class="th" x="20" y="202">B  Rho-dependent termination, and its quality control</text>
+ <line x1="20" y1="212" x2="860" y2="212" stroke="#c6d2dd" stroke-width="1.5"/>
+ <path class="rna" d="M40 258 h300"/>
+ <rect class="rho" x="60" y="242" width="52" height="24" rx="5"/>
+ <text class="m" x="70" y="259">Rho</text>
+ <path class="ar" d="M120 250 L230 250"/>
+ <text class="m" x="130" y="242">ATP-driven travel along the RNA</text>
+ <path class="pol" d="M300 232 h56 v28 h-56 z"/>
+ <text class="s" x="40" y="286">catches the slowed polymerase and unwinds the RNA-DNA hybrid. No specific terminator sequence is needed.</text>
+
+ <path class="rna" d="M460 330 h330"/>
+ <rect class="rib" x="520" y="314" width="44" height="22" rx="10"/>
+ <rect class="rib" x="576" y="314" width="44" height="22" rx="10"/>
+ <rect class="rib" x="632" y="314" width="44" height="22" rx="10"/>
+ <rect class="rho" x="460" y="346" width="48" height="24" rx="5"/>
+ <text class="m" x="468" y="363">Rho</text>
+ <path class="no" d="M512 346 L548 340"/>
+ <path class="no" d="M524 334 L536 354"/>
+ <text class="s" x="460" y="392">Rho needs RNA not covered by ribosomes. Active translation blocks it,</text>
+ <text class="tb" x="460" y="412">so a transcript that is NOT being translated gets terminated and discarded.</text>
+ <text class="s" x="460" y="430">Possible only in bacteria, where transcription and translation share one space.</text>
+
+ <text class="th" x="20" y="320">C  Eukaryotic Pol II</text>
+ <line x1="20" y1="330" x2="430" y2="330" stroke="#c6d2dd" stroke-width="1.5"/>
+ <text class="m" x="34" y="352">1  the polymerase passes AAUAAA</text>
+ <text class="m" x="34" y="370">2  processing factors CUT the RNA</text>
+ <text class="m" x="34" y="388">3  the upstream piece gets poly(A): mature mRNA</text>
+ <text class="m" x="34" y="406">4  new RNA has an unprotected 5' end and is degraded;</text>
+ <text class="m" x="46" y="422">when the degradation catches the polymerase, transcription ends</text>
+ <text class="tb" x="34" y="444">So the mRNA is finished BEFORE the polymerase stops: two separate events.</text>
+</svg>

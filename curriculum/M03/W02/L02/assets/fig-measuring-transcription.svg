@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 420" width="880" height="420" role="img"
+ aria-label="Four ways to measure transcription and the range each reports: measuring RNA amount, labelling newly synthesised RNA, mapping polymerase position, and measuring regulator binding, with the three possible explanations of a fall in mRNA and which measurement can tell them apart.">
+ <style>
+  .bx{fill:#fff;stroke:#c6d2dd;stroke-width:1.8}.k{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .t{font:12px sans-serif;fill:#16191d}.tb{font:700 13px sans-serif;fill:#003c71}
+  .th{font:700 15px sans-serif;fill:#003c71}.s{font:11px sans-serif;fill:#4a5159}
+  .m{font:10px monospace;fill:#16191d}
+  .ar{stroke:#003c71;stroke-width:2;fill:none;marker-end:url(#a)}
+  .ok{fill:#e3f0e4;stroke:#2e7d32;stroke-width:2.2}
+  .no{fill:#f7dedc;stroke:#b3261e;stroke-width:2.2}
+ </style>
+ <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker></defs>
+
+ <text class="th" x="20" y="28">A  Four measurements, four questions</text>
+ <line x1="20" y1="38" x2="860" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+ <rect class="bx" x="20" y="54" width="840" height="130" rx="8"/>
+ <text class="tb" x="34" y="76">Method</text>
+ <text class="tb" x="330" y="76">What it measures</text>
+ <text class="tb" x="620" y="76">What it does NOT tell you</text>
+ <line x1="34" y1="84" x2="846" y2="84" stroke="#c6d2dd" stroke-width="1.2"/>
+ <text class="t" x="34" y="104">RT-qPCR, RNA sequencing</text>
+ <text class="t" x="330" y="104">the amount present now</text>
+ <text class="t" x="620" y="104">the rate of synthesis</text>
+ <text class="t" x="34" y="128">label with a modified nucleotide briefly</text>
+ <text class="t" x="330" y="128">RNA made in that window</text>
+ <text class="t" x="620" y="128">which stage changed</text>
+ <text class="t" x="34" y="152">map polymerase position genome-wide</text>
+ <text class="t" x="330" y="152">where polymerases sit</text>
+ <text class="t" x="620" y="152">the fate of the RNA</text>
+ <text class="t" x="34" y="176">ChIP</text>
+ <text class="t" x="330" y="176">factor and mark distribution</text>
+ <text class="t" x="620" y="176">whether binding changed output</text>
+ <text class="s" x="20" y="202">The amount present is the balance of synthesis and degradation — not a rate.</text>
+
+ <text class="th" x="20" y="240">B  A worked case: mRNA went down after a treatment</text>
+ <line x1="20" y1="250" x2="860" y2="250" stroke="#c6d2dd" stroke-width="1.5"/>
+ <rect class="bx" x="20" y="264" width="250" height="40" rx="6"/>
+ <text class="t" x="34" y="290">1  transcription fell</text>
+ <rect class="bx" x="20" y="312" width="250" height="40" rx="6"/>
+ <text class="t" x="34" y="338">2  decay sped up</text>
+ <rect class="bx" x="20" y="360" width="250" height="40" rx="6"/>
+ <text class="t" x="34" y="386">3  processing failed</text>
+
+ <rect class="no" x="300" y="264" width="180" height="88" rx="6"/>
+ <text class="t" x="314" y="288">RNA amount alone</text>
+ <text class="tb" x="314" y="310">cannot tell 1, 2 and 3</text>
+ <text class="s" x="314" y="332">apart</text>
+ <path class="ar" d="M276 300 L296 300"/>
+
+ <rect class="ok" x="510" y="264" width="350" height="40" rx="6"/>
+ <text class="t" x="524" y="290">label newly made RNA  to  separates 1 from 2</text>
+ <rect class="ok" x="510" y="312" width="350" height="40" rx="6"/>
+ <text class="t" x="524" y="338">map polymerase position  to  initiation or elongation?</text>
+ <path class="ar" d="M486 300 L506 300"/>
+
+ <rect class="k" x="300" y="360" width="560" height="40" rx="8"/>
+ <text class="tb" x="314" y="386">Fix what a measurement measures first, then sort the questions it can and cannot answer.</text>
+</svg>

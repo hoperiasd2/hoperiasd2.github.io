@@ -1,4 +1,125 @@
 {
   "lesson_id": "M03-W02-L02",
-  "figures": []
+  "figures": [
+    {
+      "figure_id": "fig-rna-vs-dna",
+      "lesson_id": "M03-W02-L02",
+      "html_anchor": "#fig-rna-vs-dna",
+      "caption": "RNA와 DNA의 세 가지 화학적 차이와 그 결과. 2′ hydroxyl기의 유무와 그것이 만드는 불안정성·촉매 가능성, thymine과 uracil의 차이가 수선의 기준을 만드는 논리, 그리고 단일가닥 RNA가 서열에 따라 접히는 구조를 함께 보인다.",
+      "asset_path": "assets/fig-rna-vs-dna.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-rna-classes",
+      "lesson_id": "M03-W02-L02",
+      "html_anchor": "#fig-rna-classes",
+      "caption": "세포 내 RNA의 종류와 비율. rRNA·tRNA·mRNA·조절 RNA의 양적 분포, mRNA가 전체의 2~5%에 불과하다는 사실과 전사체 분석에서 rRNA를 제거해야 하는 이유, 그리고 세균과 진핵세포 mRNA의 네 가지 성질 차이를 함께 보인다.",
+      "asset_path": "assets/fig-rna-classes.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-template-strand",
+      "lesson_id": "M03-W02-L02",
+      "html_anchor": "#fig-template-strand",
+      "caption": "주형 가닥과 암호 가닥의 구분과 전사의 방향. 두 가닥의 서열과 RNA 산물의 관계, 유전자 서열을 암호 가닥으로 기록하는 관례, promoter의 방향이 주형을 정하는 관계, 그리고 RNA가 5′→3′로 자라고 주형은 3′→5′로 읽히는 두 기준을 함께 보인다.",
+      "asset_path": "assets/fig-template-strand.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-bacterial-polymerase",
+      "lesson_id": "M03-W02-L02",
+      "html_anchor": "#fig-bacterial-polymerase",
+      "caption": "세균 RNA polymerase의 구성과 σ 인자의 역할. Core enzyme과 holoenzyme의 구분, σ가 promoter 인식을 담당하고 신장 단계에서 떨어져 재사용되는 과정, 여러 σ 인자가 서로 다른 유전자 집합을 켜는 교환 가능한 부품 구조, 그리고 rifampin의 작용 지점을 함께 보인다.",
+      "asset_path": "assets/fig-bacterial-polymerase.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-eukaryotic-polymerases",
+      "lesson_id": "M03-W02-L02",
+      "html_anchor": "#fig-eukaryotic-polymerases",
+      "caption": "진핵세포의 세 가지 RNA polymerase와 분업. 각 효소의 위치·산물·α-amanitin 감수성, rRNA가 전사량의 대부분이라는 점, Pol II가 조절의 중심이라는 점, 그리고 α-amanitin 중독에서 증상이 지연되는 이유를 함께 보인다.",
+      "asset_path": "assets/fig-eukaryotic-polymerases.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-initiation",
+      "lesson_id": "M03-W02-L02",
+      "html_anchor": "#fig-initiation",
+      "caption": "전사 개시의 네 단계. 닫힌 복합체에서 열린 복합체로의 전환과 전사 거품의 형성, primer 없이 첫 뉴클레오타이드가 놓이는 과정과 abortive initiation, promoter 탈출의 조건, 그리고 polymerase 안에서 주형 가닥·암호 가닥·새 RNA가 동시에 존재하는 구조를 함께 보인다.",
+      "asset_path": "assets/fig-initiation.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-elongation",
+      "lesson_id": "M03-W02-L02",
+      "html_anchor": "#fig-elongation",
+      "caption": "신장 단계와 전사의 충실도. Polymerase가 전진하며 앞에서 DNA를 풀고 뒤에서 감는 과정과 RNA–DNA 잡종, 하나의 유전자에 여러 polymerase가 줄지어 진행하는 모습, 전사가 만드는 초나선과 topoisomerase의 역할, 그리고 복제와 전사의 오류율 차이가 결과의 가역성에서 나온다는 논리를 함께 보인다.",
+      "asset_path": "assets/fig-elongation.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-termination",
+      "lesson_id": "M03-W02-L02",
+      "html_anchor": "#fig-termination",
+      "caption": "전사 종결의 세 방식. 세균의 내재적 종결에서 머리핀과 U 구간이 함께 필요한 이유, Rho 단백질이 RNA를 따라 이동해 잡종을 푸는 과정과 ribosome이 그것을 막는 품질 관리, 그리고 진핵 Pol II에서 poly(A) 신호 인식·절단·분해 추격으로 이루어져 RNA의 완성과 전사의 종결이 분리되는 구조를 함께 보인다.",
+      "asset_path": "assets/fig-termination.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-transcription-inhibitors",
+      "lesson_id": "M03-W02-L02",
+      "html_anchor": "#fig-transcription-inhibitors",
+      "caption": "전사를 억제하는 약물과 독소의 작용 지점. 개시를 막는 rifampin과 fidaxomicin, 신장을 막는 α-amanitin, DNA에 끼어드는 actinomycin D와 doxorubicin의 작용 위치, 그리고 표적 분자의 차이가 선택성을 정하고 단일 표적이 내성의 원인이 되는 관계를 함께 보인다.",
+      "asset_path": "assets/fig-transcription-inhibitors.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-measuring-transcription",
+      "lesson_id": "M03-W02-L02",
+      "html_anchor": "#fig-measuring-transcription",
+      "caption": "전사를 측정하는 네 가지 방법과 각각이 알려 주는 범위. RNA 양 측정, 새로 합성된 RNA의 표지, polymerase 위치 지도, 조절 단백질 결합 측정의 대상 차이, 그리고 mRNA 양 감소의 세 가지 가능한 설명을 어떤 측정이 가를 수 있는지를 함께 보인다.",
+      "asset_path": "assets/fig-measuring-transcription.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    }
+  ]
 }

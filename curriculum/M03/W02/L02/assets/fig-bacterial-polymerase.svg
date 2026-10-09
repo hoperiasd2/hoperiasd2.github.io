@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 420" width="880" height="420" role="img"
+ aria-label="Composition of bacterial RNA polymerase and the role of the sigma factor: the distinction between core enzyme and holoenzyme, sigma recognising the promoter and being released for reuse at elongation, the interchangeable-part structure in which different sigma factors switch on different gene sets, and the point of action of rifampin.">
+ <style>
+  .bx{fill:#fff;stroke:#c6d2dd;stroke-width:1.8}.k{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .t{font:12px sans-serif;fill:#16191d}.tb{font:700 13px sans-serif;fill:#003c71}
+  .th{font:700 15px sans-serif;fill:#003c71}.s{font:11px sans-serif;fill:#4a5159}
+  .m{font:10px monospace;fill:#16191d}
+  .core{fill:#dce6f2;stroke:#1a4f8a;stroke-width:2.4}
+  .sig{fill:#fff5d6;stroke:#f2b705;stroke-width:2.4}
+  .dna{fill:none;stroke:#16191d;stroke-width:2.4}
+  .prom{fill:#e8eff6;stroke:#003c71;stroke-width:2}
+  .ar{stroke:#003c71;stroke-width:2;fill:none;marker-end:url(#a)}
+  .inh{stroke:#b3261e;stroke-width:2.6;fill:none;marker-end:url(#bar)}
+  .cyc{stroke:#2e7d32;stroke-width:2.2;fill:none;stroke-dasharray:6 4;marker-end:url(#g)}
+ </style>
+ <defs>
+  <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker>
+  <marker id="g" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#2e7d32"/></marker>
+  <marker id="bar" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M6 0 L6 10" stroke="#b3261e" stroke-width="3"/></marker>
+ </defs>
+
+ <text class="th" x="20" y="28">A  Core, sigma, holoenzyme</text>
+ <line x1="20" y1="38" x2="860" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+ <path class="core" d="M40 60 h150 v46 h-150 z"/>
+ <text class="m" x="56" y="80">CORE</text>
+ <text class="m" x="50" y="98">alpha2 beta beta' omega</text>
+ <text class="s" x="40" y="126">polymerises, but cannot find a promoter</text>
+ <text class="m" x="206" y="88">+</text>
+ <path class="sig" d="M230 66 h70 v34 h-70 z"/>
+ <text class="m" x="250" y="88">sigma</text>
+ <text class="s" x="222" y="126">gives promoter recognition</text>
+ <path class="ar" d="M320 84 L368 84"/>
+ <path class="core" d="M384 60 h150 v46 h-150 z"/>
+ <path class="sig" d="M534 66 h50 v34 h-50 z"/>
+ <text class="m" x="414" y="88">HOLOENZYME</text>
+ <text class="s" x="384" y="126">can initiate</text>
+ <rect class="k" x="620" y="56" width="240" height="78" rx="8"/>
+ <text class="tb" x="634" y="78">The division of labour</text>
+ <text class="t" x="634" y="100">core polymerises;</text>
+ <text class="t" x="634" y="120">sigma chooses the target.</text>
+
+ <text class="th" x="20" y="176">B  Sigma is an initiation-only part</text>
+ <line x1="20" y1="186" x2="430" y2="186" stroke="#c6d2dd" stroke-width="1.5"/>
+ <path class="dna" d="M40 240 h340"/>
+ <rect class="prom" x="90" y="230" width="56" height="20"/>
+ <text class="m" x="96" y="245">promoter</text>
+ <path class="core" d="M94 196 h100 v34 h-100 z"/>
+ <path class="sig" d="M194 200 h40 v26 h-40 z"/>
+ <path class="ar" d="M244 258 L320 258"/>
+ <path class="sig" d="M250 268 h40 v26 h-40 z"/>
+ <text class="s" x="40" y="286">at elongation sigma falls off</text>
+ <path class="cyc" d="M250 294 q-80 24 -100 -40"/>
+ <text class="s" x="40" y="318">and rebinds another core: reused</text>
+
+ <text class="th" x="460" y="176">C  Swap the part, switch the gene set</text>
+ <line x1="460" y1="186" x2="860" y2="186" stroke="#c6d2dd" stroke-width="1.5"/>
+ <rect class="bx" x="460" y="200" width="400" height="110" rx="8"/>
+ <text class="m" x="474" y="222">sigma-70   most genes, normal growth</text>
+ <text class="m" x="474" y="244">sigma-32   heat shock genes</text>
+ <text class="m" x="474" y="266">sigma-54   nitrogen starvation genes</text>
+ <text class="m" x="474" y="288">sigma-28   flagellar genes</text>
+ <text class="s" x="460" y="330">Heat shock raises sigma-32, so part of the holoenzyme pool now reads heat-shock promoters:</text>
+ <text class="s" x="460" y="348">dozens of genes switch on at once. Eukaryotes instead divide this job among several general factors.</text>
+
+ <text class="th" x="20" y="384">D  Rifampin binds the beta subunit and blocks INITIATION. Selective because the human enzyme differs — but a single point mutation in rpoB gives resistance, which is why tuberculosis is treated with combinations.</text>
+ <line x1="20" y1="368" x2="860" y2="368" stroke="#c6d2dd" stroke-width="1.5"/>
+</svg>

@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 440" width="880" height="440" role="img"
+ aria-label="The four stages of transcription initiation: the change from closed to open complex and formation of the transcription bubble, placing the first nucleotide without a primer and abortive initiation, the condition for promoter escape, and the structure in which template strand, coding strand and new RNA coexist inside the polymerase.">
+ <style>
+  .bx{fill:#fff;stroke:#c6d2dd;stroke-width:1.8}.k{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .t{font:12px sans-serif;fill:#16191d}.tb{font:700 13px sans-serif;fill:#003c71}
+  .th{font:700 15px sans-serif;fill:#003c71}.s{font:11px sans-serif;fill:#4a5159}
+  .m{font:10px monospace;fill:#16191d}
+  .dna{fill:none;stroke:#16191d;stroke-width:2.4}
+  .pol{fill:#dce6f2;stroke:#1a4f8a;stroke-width:2.4}
+  .prom{fill:#e8eff6;stroke:#003c71;stroke-width:2}
+  .rna{stroke:#b3261e;stroke-width:3;fill:none}
+  .ar{stroke:#003c71;stroke-width:2.2;fill:none;marker-end:url(#a)}
+  .disc{stroke:#b3261e;stroke-width:2;fill:none;stroke-dasharray:4 3;marker-end:url(#r)}
+ </style>
+ <defs>
+  <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker>
+  <marker id="r" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#b3261e"/></marker>
+ </defs>
+
+ <text class="th" x="20" y="28">A  Four stages</text>
+ <line x1="20" y1="38" x2="860" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+
+ <text class="tb" x="30" y="62">1  closed complex</text>
+ <path class="dna" d="M30 100 h180 M30 112 h180"/>
+ <rect class="prom" x="70" y="96" width="50" height="20"/>
+ <path class="pol" d="M66 66 h70 v30 h-70 z"/>
+ <text class="s" x="30" y="136">bound; the duplex is still intact</text>
+
+ <path class="ar" d="M224 100 L256 100"/>
+
+ <text class="tb" x="270" y="62">2  open complex</text>
+ <path class="dna" d="M270 100 h40 q24 -14 48 0 h40"/>
+ <path class="dna" d="M270 112 h40 q24 14 48 0 h40"/>
+ <rect class="prom" x="300" y="96" width="40" height="20" opacity="0.4"/>
+ <path class="pol" d="M300 66 h70 v30 h-70 z"/>
+ <text class="s" x="270" y="136">12 to 14 bp unwound: the TRANSCRIPTION BUBBLE</text>
+ <text class="s" x="270" y="152">bacteria: sigma helps · Pol II: TFIIH helicase</text>
+
+ <text class="tb" x="30" y="206">3  first nucleotides — no primer needed</text>
+ <path class="dna" d="M30 250 h40 q24 -14 48 0 h60"/>
+ <path class="dna" d="M30 262 h40 q24 14 48 0 h60"/>
+ <path class="rna" d="M80 240 h26"/>
+ <path class="disc" d="M120 236 L170 220"/>
+ <text class="s" x="176" y="218">short products often released:</text>
+ <text class="s" x="176" y="234">ABORTIVE INITIATION</text>
+ <text class="s" x="30" y="286">RNA polymerase can place the first nucleotide on nothing — unlike DNA polymerase, no primer</text>
+
+ <text class="tb" x="460" y="206">4  promoter escape</text>
+ <path class="dna" d="M460 250 h40 q24 -14 48 0 h120"/>
+ <path class="dna" d="M460 262 h40 q24 14 48 0 h120"/>
+ <path class="pol" d="M500 216 h70 v30 h-70 z"/>
+ <path class="rna" d="M470 238 h60"/>
+ <path class="ar" d="M580 232 L640 232"/>
+ <text class="s" x="460" y="286">past about 8 to 10 nt the complex is stable; it leaves the promoter</text>
+ <text class="s" x="460" y="302">bacteria: sigma drops · Pol II: TFIIH phosphorylates the CTD</text>
+
+ <rect class="k" x="20" y="318" width="420" height="56" rx="8"/>
+ <text class="tb" x="34" y="340">Why control concentrates here</text>
+ <text class="t" x="34" y="362">Several stages, each reversible: changing the probability of any one changes the overall initiation rate.</text>
+
+ <text class="th" x="460" y="340">B  Inside the polymerase, three strands at once</text>
+ <line x1="460" y1="348" x2="860" y2="348" stroke="#c6d2dd" stroke-width="1.5"/>
+ <path class="dna" d="M470 400 h120 q20 -16 40 0 h130"/>
+ <path class="dna" d="M470 414 h120 q20 16 40 0 h130"/>
+ <path class="rna" d="M560 392 h60"/>
+ <text class="m" x="470" y="386">coding strand re-anneals behind</text>
+ <text class="m" x="640" y="432">DNA unwound ahead</text>
+ <text class="m" x="556" y="382">RNA-DNA hybrid, 8-9 bp; RNA leaves by the exit channel</text>
+</svg>

@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 420" width="880" height="420" role="img"
+ aria-label="Points of action of drugs and toxins that inhibit transcription: rifampin and fidaxomicin blocking initiation, alpha-amanitin blocking elongation, actinomycin D and doxorubicin intercalating into DNA, and how the difference in target molecule sets selectivity while a single target becomes the cause of resistance.">
+ <style>
+  .bx{fill:#fff;stroke:#c6d2dd;stroke-width:1.8}.k{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .t{font:12px sans-serif;fill:#16191d}.tb{font:700 13px sans-serif;fill:#003c71}
+  .th{font:700 15px sans-serif;fill:#003c71}.s{font:11px sans-serif;fill:#4a5159}
+  .m{font:10px monospace;fill:#16191d}
+  .dna{fill:none;stroke:#16191d;stroke-width:2.4}
+  .pol{fill:#dce6f2;stroke:#1a4f8a;stroke-width:2.4}
+  .prom{fill:#e8eff6;stroke:#003c71;stroke-width:2}
+  .rna{stroke:#b3261e;stroke-width:3;fill:none}
+  .drg{fill:#f7dedc;stroke:#b3261e;stroke-width:2.2}
+  .inh{stroke:#b3261e;stroke-width:2.6;fill:none;marker-end:url(#bar)}
+  .ar{stroke:#003c71;stroke-width:2;fill:none;marker-end:url(#a)}
+ </style>
+ <defs>
+  <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker>
+  <marker id="bar" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M6 0 L6 10" stroke="#b3261e" stroke-width="3"/></marker>
+ </defs>
+
+ <text class="th" x="20" y="28">A  Where each one acts</text>
+ <line x1="20" y1="38" x2="860" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+ <path class="dna" d="M40 150 h760 M40 164 h760"/>
+ <rect class="prom" x="110" y="146" width="60" height="22"/>
+ <text class="m" x="118" y="162">promoter</text>
+ <path class="pol" d="M112 112 h66 v30 h-66 z"/>
+ <text class="m" x="124" y="132">Pol</text>
+ <path class="pol" d="M430 112 h66 v30 h-66 z"/>
+ <path class="rna" d="M200 106 h230"/>
+
+ <rect class="drg" x="70" y="72" width="150" height="26" rx="5"/>
+ <text class="m" x="78" y="90">rifampin, fidaxomicin</text>
+ <path class="inh" d="M145 100 L145 110"/>
+ <text class="tb" x="70" y="62">INITIATION</text>
+
+ <rect class="drg" x="420" y="68" width="110" height="26" rx="5"/>
+ <text class="m" x="428" y="86">alpha-amanitin</text>
+ <path class="inh" d="M470 96 L470 110"/>
+ <text class="tb" x="420" y="58">ELONGATION (Pol II)</text>
+
+ <rect class="drg" x="600" y="186" width="200" height="26" rx="5"/>
+ <text class="m" x="608" y="204">actinomycin D, doxorubicin</text>
+ <path class="inh" d="M690 184 L690 170"/>
+ <text class="tb" x="600" y="236">intercalate into the DNA itself</text>
+
+ <text class="th" x="20" y="268">B  Selectivity follows the target</text>
+ <line x1="20" y1="278" x2="860" y2="278" stroke="#c6d2dd" stroke-width="1.5"/>
+ <rect class="bx" x="20" y="292" width="410" height="112" rx="8"/>
+ <text class="tb" x="34" y="314">Target the BACTERIAL enzyme  to  selective</text>
+ <text class="t" x="34" y="336">rifampin (beta subunit), fidaxomicin (sigma-binding step).</text>
+ <text class="t" x="34" y="356">The human enzyme differs enough; fidaxomicin is also barely</text>
+ <text class="t" x="34" y="374">absorbed from the gut, so it acts where C. difficile is.</text>
+ <text class="s" x="34" y="396">uses: tuberculosis, meningococcal prophylaxis, C. difficile colitis</text>
+
+ <rect class="k" x="450" y="292" width="410" height="112" rx="8"/>
+ <text class="tb" x="464" y="314">Target DNA ITSELF  to  not selective</text>
+ <text class="t" x="464" y="336">Actinomycin D and doxorubicin cannot tell a tumour cell from a</text>
+ <text class="t" x="464" y="356">normal one. The anticancer effect rests on a QUANTITATIVE</text>
+ <text class="t" x="464" y="374">difference in division and transcriptional demand —</text>
+ <text class="s" x="464" y="396">hence marrow suppression, mucositis and hair loss.</text>
+
+ <text class="th" x="20" y="256">One enzyme makes all bacterial RNA: that makes inhibition effective AND makes a single point mutation enough for resistance.</text>
+</svg>

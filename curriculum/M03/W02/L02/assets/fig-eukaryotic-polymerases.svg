@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 420" width="880" height="420" role="img"
+ aria-label="The three eukaryotic RNA polymerases and their division of labour: the location, product and alpha-amanitin sensitivity of each, the fact that ribosomal RNA accounts for most transcription, that Pol II is the centre of regulation, and why symptoms in amanitin poisoning are delayed.">
+ <style>
+  .bx{fill:#fff;stroke:#c6d2dd;stroke-width:1.8}.k{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .t{font:12px sans-serif;fill:#16191d}.tb{font:700 13px sans-serif;fill:#003c71}
+  .th{font:700 15px sans-serif;fill:#003c71}.s{font:11px sans-serif;fill:#4a5159}
+  .m{font:10px monospace;fill:#16191d}
+  .nuc{fill:#eef3f8;stroke:#6b8ba8;stroke-width:2.2}
+  .nol{fill:#dce6f2;stroke:#1a4f8a;stroke-width:2.2}
+  .p1{fill:#dce6f2;stroke:#1a4f8a;stroke-width:2.2}
+  .p2{fill:#f7dedc;stroke:#b3261e;stroke-width:2.4}
+  .p3{fill:#e3f0e4;stroke:#2e7d32;stroke-width:2.2}
+  .ax{stroke:#16191d;stroke-width:1.6;fill:none}
+  .cur{stroke:#b3261e;stroke-width:2.6;fill:none}
+ </style>
+
+ <text class="th" x="20" y="28">A  Three enzymes, three product sets</text>
+ <line x1="20" y1="38" x2="520" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+ <ellipse class="nuc" cx="150" cy="150" rx="120" ry="86"/>
+ <ellipse class="nol" cx="110" cy="130" rx="46" ry="34"/>
+ <text class="m" x="86" y="128">nucleolus</text>
+ <rect class="p1" x="86" y="138" width="50" height="22" rx="4"/>
+ <text class="m" x="98" y="154">Pol I</text>
+ <rect class="p2" x="176" y="124" width="54" height="22" rx="4"/>
+ <text class="m" x="188" y="140">Pol II</text>
+ <rect class="p3" x="176" y="172" width="56" height="22" rx="4"/>
+ <text class="m" x="186" y="188">Pol III</text>
+ <text class="m" x="100" y="252">NUCLEUS</text>
+
+ <rect class="bx" x="290" y="54" width="230" height="200" rx="8"/>
+ <text class="tb" x="304" y="78">Pol I  (nucleolus)</text>
+ <text class="t" x="304" y="98">28S, 18S, 5.8S rRNA</text>
+ <text class="s" x="304" y="114">as one precursor · amanitin RESISTANT</text>
+ <text class="tb" x="304" y="146">Pol II  (nucleoplasm)</text>
+ <text class="t" x="304" y="166">mRNA, most snRNA, miRNA, lncRNA</text>
+ <text class="s" x="304" y="182">amanitin VERY SENSITIVE</text>
+ <text class="tb" x="304" y="214">Pol III  (nucleoplasm)</text>
+ <text class="t" x="304" y="234">tRNA, 5S rRNA, some snRNA</text>
+ <text class="s" x="304" y="248">amanitin intermediate</text>
+
+ <text class="th" x="550" y="28">B  Three readings</text>
+ <line x1="550" y1="38" x2="860" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+ <rect class="bx" x="550" y="54" width="310" height="62" rx="8"/>
+ <text class="tb" x="564" y="76">Pol I does the most WORK</text>
+ <text class="t" x="564" y="98">rRNA is 80 percent of cellular RNA</text>
+ <rect class="k" x="550" y="124" width="310" height="62" rx="8"/>
+ <text class="tb" x="564" y="146">Pol II is the centre of CONTROL</text>
+ <text class="t" x="564" y="168">factors, enhancers and chromatin all target it</text>
+ <rect class="bx" x="550" y="194" width="310" height="62" rx="8"/>
+ <text class="tb" x="564" y="216">Amanitin sensitivity is a TOOL</text>
+ <text class="t" x="564" y="238">it identifies which polymerase makes an RNA</text>
+
+ <text class="th" x="20" y="300">C  Why amanitin poisoning is delayed</text>
+ <line x1="20" y1="310" x2="860" y2="310" stroke="#c6d2dd" stroke-width="1.5"/>
+ <path class="ax" d="M70 390 L70 326 M70 390 L480 390"/>
+ <text class="s" x="34" y="358">liver injury</text>
+ <path class="cur" d="M76 386 L180 386 L260 382 L340 352 L430 332"/>
+ <text class="m" x="86" y="406">0-12 h</text>
+ <text class="m" x="200" y="406">12-24 h</text>
+ <text class="m" x="330" y="406">24-48 h</text>
+ <text class="m" x="86" y="372">no or only GI symptoms</text>
+ <text class="t" x="510" y="344">Blocking transcription does nothing until the mRNA and protein</text>
+ <text class="t" x="510" y="364">already present are used up. Hepatocytes, with a high demand</text>
+ <text class="t" x="510" y="384">for protein synthesis, are hit first.</text>
+ <text class="s" x="510" y="406">"Each level of control has its own time scale" — shown as a clinical course.</text>
+</svg>
