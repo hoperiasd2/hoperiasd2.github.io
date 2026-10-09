@@ -137,3 +137,8 @@
 }
 .fig figcaption > b { color: var(--navy); margin-right: 6px; }
 .fig .credit { color: var(--ink-3); font-size: 13px; }
+
+/* 보강 입력 상자와 외부 링크 그림 */
+.box--notes{border-left:4px solid #f2b705;background:#fffaec}
+.fig--ext img{outline:2px dashed #f2b705;outline-offset:3px}
+.fig .credit{font-size:.82em;color:#8a6300}

@@ -80,6 +80,12 @@ def parse_blocks(lines):
             flush()
             parts = s[5:].split(None, 1)
             blocks.append(("fig", [parts[0], parts[1] if len(parts) > 1 else ""]))
+        elif s.startswith("@img "):
+            # @img <주소> | <설명>  — 외부 이미지를 주소로 바로 가져온다
+            flush()
+            rest = s[5:].strip()
+            url, cap = (rest.split("|", 1) + [""])[:2]
+            blocks.append(("img", [url.strip(), cap.strip()]))
         elif s.startswith("|"):
             if mode != "table":
                 flush()
@@ -97,7 +103,7 @@ def parse_blocks(lines):
 
 
 def parse_source(path):
-    text = path.read_text(encoding="utf-8")
+    text = expand_snippets(path.read_text(encoding="utf-8"))
     meta, body = {}, text
     if text.startswith("---"):
         _, fm, body = text.split("---", 2)
@@ -151,6 +157,14 @@ def parse_source(path):
             quiz.append((q, ln[2:].strip()))
             q = None
 
+    # 보강 입력: 같은 폴더의 notes.md 를 읽어 둔다(있을 때만).
+    nf = Path(path).parent / "notes.md"
+    if nf.exists():
+        nt = expand_snippets(nf.read_text(encoding="utf-8"))
+        nt = re.sub(r"^<!--.*?-->\s*", "", nt, flags=re.S)
+        if nt.strip():
+            named["notes"] = nt.split("\n")
+
     lists = {k: [l.strip()[2:].strip() for l in v if l.strip().startswith("- ")]
              for k, v in named.items()}
     return meta, named, lists, secs, quiz
@@ -163,6 +177,40 @@ def esc(s):
 
 
 FIGN = {"n": 0}
+SNIP_DIR = ROOT / "tools" / "snippets"
+
+
+def snippet_text(name):
+    """tools/snippets/<name>.md 의 본문. front matter는 떼어 낸다."""
+    f = SNIP_DIR / f"{name}.md"
+    if not f.exists():
+        return None
+    t = f.read_text(encoding="utf-8")
+    if t.startswith("---"):
+        parts = t.split("---", 2)
+        if len(parts) == 3:
+            t = parts[2]
+    return t.strip("\n")
+
+
+def expand_snippets(text, depth=0):
+    """'@use <이름>' 줄을 저장된 스니펫 본문으로 바꾼다."""
+    if depth > 4:
+        return text
+    out = []
+    for ln in text.split("\n"):
+        m = re.match(r"^@use\s+([\w.-]+)\s*$", ln.strip())
+        if not m:
+            out.append(ln)
+            continue
+        body = snippet_text(m.group(1))
+        if body is None:
+            out.append(f"> 저장된 입력 명령 '{m.group(1)}'을 찾지 못했다.")
+        else:
+            out.append(expand_snippets(body, depth + 1))
+    return "\n".join(out)
+
+
 FIG_SRC = {}
 FIG_CREDIT = {}
 FIG_EXT = (".svg", ".png", ".jpg", ".jpeg", ".webp", ".gif")
@@ -190,6 +238,16 @@ def render_blocks(blocks):
                 f'<figure class="fig" id="{esc(fid)}">'
                 f'<img src="{esc(src)}" alt="{esc(plain(cap))}" loading="lazy">'
                 f'<figcaption><b>그림 {FIGN["n"]}</b> {_inline(cap)}{cr}</figcaption></figure>')
+            continue
+        if kind == "img":
+            FIGN["n"] += 1
+            url, cap = buf[0], buf[1]
+            out.append(
+                f'<figure class="fig fig--ext">'
+                f'<img src="{esc(url)}" alt="{esc(plain(cap))}" loading="lazy">'
+                f'<figcaption><b>그림 {FIGN["n"]}</b> {_inline(cap)}'
+                f' <span class="credit">외부 링크 · 저작권 확인 후 자체 작도로 교체</span>'
+                f'</figcaption></figure>')
             continue
         if kind == "p":
             out.append("<p>" + _inline(" ".join(buf)) + "</p>")
@@ -301,6 +359,12 @@ def lesson_html(row, meta, named, lists, secs, quiz, prev_r, next_r, lesson_dir=
             f'<details><summary>해설</summary><p>{_inline(a)}</p></details></li>'
             for q, a in quiz)
         body.append(f'  <h2>확인 문항</h2>\n  <ol class="quiz">{items}</ol>')
+
+    if named.get("notes"):
+        body.append('  <h2>보강 입력</h2>')
+        body.append('  <div class="box box--notes"><b>아직 본문에 편입되지 않은 입력이다.</b> '
+                    '다음 개정에서 해당 절로 옮긴다.</div>')
+        body.append("  " + render_blocks(parse_blocks(named["notes"])))
 
     if lists.get("ref"):
         items = "".join(f"<li>{_inline(x)}</li>" for x in lists["ref"])
@@ -713,11 +777,19 @@ def _compose(row, meta, lists, secs, quiz, lesson_dir, pack):
                 f = find_figure(lesson_dir, buf[0])
                 if f:
                     d.figure(plain(sec.title), f, buf[1], kick)
+            elif kind == "img":
+                # 외부 주소의 이미지는 내려받지 않는다. 자리와 설명만 남긴다.
+                flush_text()
+                d.bullets(plain(sec.title),
+                          [(0, f"**외부 이미지** {buf[1]}"), (1, buf[0])], kick)
         flush_text()
         if pend:
             d.boxes(plain(sec.title), pend, kick)
     if quiz:
         d.quiz(quiz)
+    if lists.get("notes"):
+        d.bullets("보강 입력", lists["notes"], kicker="INBOX",
+                  note="본문에 편입되지 않은 입력이다.")
     if lists.get("ref"):
         d.bullets("참고문헌", lists["ref"], kicker="REFERENCES")
     return d
