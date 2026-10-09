@@ -1,65 +1,66 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 400" width="900" height="400" role="img"
-     aria-label="Writers, readers and erasers of histone marks, with the chromatin remodelling complexes that move nucleosomes">
-  <style>
-    .ttl{font:700 14px sans-serif;fill:#003c71}
-    .nm{font:700 12px sans-serif;fill:#003c71}
-    .sub{font:11px sans-serif;fill:#4a5159}
-    .bx{fill:#ffffff;stroke:#c6d2dd;stroke-width:1.4}
-    .hl{fill:#fff5d6;stroke:#003c71;stroke-width:1.4}
-    .ln{stroke:#003c71;stroke-width:1.7;fill:none}
-    .nuc{fill:#003c71;stroke:#16191d;stroke-width:1.1}
-    .me{fill:#f2b705;stroke:#16191d;stroke-width:1}
-    .mk{font:700 9px sans-serif;fill:#16191d}
-    .out{font:700 11px sans-serif;fill:#8a6300}
-  </style>
-  <defs>
-    <marker id="b1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-      <path d="M0 0 L10 5 L0 10 z" fill="#003c71"/>
-    </marker>
-  </defs>
-  <text class="ttl" x="20" y="24">A. Three enzyme classes act on one mark</text>
-  <rect class="hl" x="30" y="40" width="200" height="86" rx="8"/>
-  <text class="nm" x="44" y="62">WRITER</text>
-  <text class="sub" x="44" y="82">HAT (p300/CBP, GCN5)</text>
-  <text class="sub" x="44" y="100">HMT (EZH2, SETD2, SUV39H1)</text>
-  <text class="sub" x="44" y="118">DNMT1, DNMT3A/3B</text>
-  <rect class="bx" x="350" y="40" width="200" height="86" rx="8"/>
-  <text class="nm" x="364" y="62">READER</text>
-  <text class="sub" x="364" y="82">bromodomain reads Kac (BRD4)</text>
-  <text class="sub" x="364" y="100">chromodomain reads Kme (HP1)</text>
-  <text class="sub" x="364" y="118">MBD domain reads 5mC (MeCP2)</text>
-  <rect class="hl" x="670" y="40" width="200" height="86" rx="8"/>
-  <text class="nm" x="684" y="62">ERASER</text>
-  <text class="sub" x="684" y="82">HDAC1-11, SIRT1-7</text>
-  <text class="sub" x="684" y="100">KDM (LSD1, KDM6A)</text>
-  <text class="sub" x="684" y="118">TET1-3 oxidize 5mC</text>
-  <path class="ln" d="M236 82 L344 82" marker-end="url(#b1)"/>
-  <path class="ln" d="M556 82 L664 82" marker-end="url(#b1)"/>
-  <path class="ln" d="M770 132 C770 170 130 170 130 132" marker-end="url(#b1)"/>
-  <text class="sub" x="380" y="166">the mark is reversible, so the state is a steady balance of writer and eraser</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 430" width="880" height="430" role="img"
+ aria-label="Division of roles between writer, reader and eraser and the amplification structure: the enzyme that adds a mark, the domains that recognise and bind it, the enzyme that removes it, the principle that a mark does not decide anything by itself, and the route by which reading and writing pair into positive feedback.">
+ <style>
+  .bx{fill:#fff;stroke:#c6d2dd;stroke-width:1.8}.k{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .t{font:12px sans-serif;fill:#16191d}.tb{font:700 13px sans-serif;fill:#003c71}
+  .th{font:700 15px sans-serif;fill:#003c71}.s{font:11px sans-serif;fill:#4a5159}
+  .m{font:10px monospace;fill:#16191d}
+  .oct{fill:#dce6f2;stroke:#1a4f8a;stroke-width:2.2}
+  .wr{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .rd{fill:#e3f0e4;stroke:#2e7d32;stroke-width:2.2}
+  .er{fill:#f7dedc;stroke:#b3261e;stroke-width:2.2}
+  .ar{stroke:#003c71;stroke-width:2;fill:none;marker-end:url(#a)}
+  .fb{stroke:#2e7d32;stroke-width:2.4;fill:none;stroke-dasharray:6 4;marker-end:url(#g)}
+  .dna{fill:none;stroke:#16191d;stroke-width:2.4}
+ </style>
+ <defs>
+  <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker>
+  <marker id="g" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#2e7d32"/></marker>
+ </defs>
 
-  <text class="ttl" x="20" y="226">B. The reader converts the mark into a chromatin change</text>
-  <g>
-    <ellipse class="nuc" cx="110" cy="300" rx="26" ry="18"/>
-    <ellipse class="nuc" cx="180" cy="300" rx="26" ry="18"/>
-    <ellipse class="nuc" cx="250" cy="300" rx="26" ry="18"/>
-    <ellipse class="nuc" cx="320" cy="300" rx="26" ry="18"/>
-  </g>
-  <path d="M60 300 L370 300" stroke="#16191d" stroke-width="2" fill="none"/>
-  <circle class="me" cx="180" cy="274" r="9"/><text class="mk" x="174" y="278">Me</text>
-  <text class="sub" x="70" y="340">closed: nucleosomes evenly spaced over the promoter</text>
-  <path class="ln" d="M386 300 L452 300" marker-end="url(#b1)"/>
-  <rect class="hl" x="392" y="248" width="180" height="44" rx="6"/>
-  <text class="nm" x="402" y="266">SWI/SNF, ISWI, NuRD</text>
-  <text class="sub" x="402" y="284">ATP-dependent remodellers</text>
-  <g>
-    <ellipse class="nuc" cx="500" cy="300" rx="26" ry="18"/>
-    <ellipse class="nuc" cx="700" cy="300" rx="26" ry="18"/>
-    <ellipse class="nuc" cx="770" cy="300" rx="26" ry="18"/>
-  </g>
-  <path d="M470 300 L820 300" stroke="#16191d" stroke-width="2" fill="none"/>
-  <rect x="556" y="286" width="112" height="28" rx="4" fill="#fff5d6" stroke="#003c71" stroke-width="1.3"/>
-  <text class="nm" x="570" y="305">Pol II + TF</text>
-  <text class="out" x="470" y="340">open: nucleosome slid aside, a nucleosome-free region appears</text>
-  <text class="sub" x="470" y="362">remodellers slide, evict or exchange nucleosomes using ATP; they do not add or remove marks</text>
+ <text class="th" x="20" y="28">A  Three roles around one mark</text>
+ <line x1="20" y1="38" x2="860" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+
+ <rect class="wr" x="40" y="60" width="200" height="34" rx="6"/>
+ <text class="tb" x="54" y="83">WRITER  adds the mark</text>
+ <text class="s" x="40" y="112">HAT, histone methyltransferase</text>
+ <path class="ar" d="M248 77 L286 77"/>
+ <rect class="rd" x="294" y="60" width="240" height="34" rx="6"/>
+ <text class="tb" x="308" y="83">READER  recognises and binds</text>
+ <text class="s" x="294" y="112">bromodomain for acetyl-lysine;</text>
+ <text class="s" x="294" y="128">chromodomain and PHD finger for methyl-lysine</text>
+ <path class="ar" d="M542 77 L580 77"/>
+ <rect class="er" x="588" y="60" width="200" height="34" rx="6"/>
+ <text class="tb" x="602" y="83">ERASER  removes it</text>
+ <text class="s" x="588" y="112">HDAC, histone demethylase</text>
+
+ <rect class="k" x="20" y="150" width="840" height="36" rx="8"/>
+ <text class="tb" x="34" y="174">A MARK DOES NOT DECIDE ANYTHING BY ITSELF. The molecule that reads it carries out what follows.</text>
+
+ <text class="th" x="20" y="222">B  What this principle explains</text>
+ <line x1="20" y1="232" x2="430" y2="232" stroke="#c6d2dd" stroke-width="1.5"/>
+ <rect class="bx" x="20" y="246" width="410" height="74" rx="8"/>
+ <text class="tb" x="34" y="268">1  the same mark, different outcomes</text>
+ <text class="t" x="34" y="290">which reader reads it, and what that reader binds,</text>
+ <text class="t" x="34" y="310">decides the result. Readers differ by cell type.</text>
+ <rect class="bx" x="20" y="330" width="410" height="74" rx="8"/>
+ <text class="tb" x="34" y="352">2  one modification is amplified</text>
+ <text class="t" x="34" y="374">writer adds, reader binds, reader brings another</text>
+ <text class="t" x="34" y="394">enzyme, and the action spreads to the neighbourhood.</text>
+
+ <text class="th" x="460" y="222">C  Reading and writing paired: positive feedback</text>
+ <line x1="460" y1="232" x2="860" y2="232" stroke="#c6d2dd" stroke-width="1.5"/>
+ <path class="dna" d="M480 320 h360"/>
+ <circle class="oct" cx="540" cy="320" r="22"/>
+ <circle cx="540" cy="294" r="6" fill="#f2b705" stroke="#8a6300" stroke-width="1.4"/>
+ <circle class="oct" cx="640" cy="320" r="22"/>
+ <circle class="oct" cx="740" cy="320" r="22"/>
+ <rect class="rd" x="568" y="256" width="150" height="30" rx="6"/>
+ <text class="m" x="576" y="276">complex: reader + writer</text>
+ <path class="ar" d="M580 290 L552 290"/>
+ <path class="fb" d="M694 288 q40 10 40 22"/>
+ <circle cx="740" cy="294" r="6" fill="#f2b705" stroke="#8a6300" stroke-width="1.4" opacity="0.5"/>
+ <text class="s" x="460" y="366">Some complexes carry a domain that recognises the very mark they make.</text>
+ <text class="s" x="460" y="384">Where the mark is, the complex lingers; where it lingers, it makes more mark.</text>
+ <text class="tb" x="460" y="410">This is how a mark SPREADS into a region and PERSISTS — see section 8.</text>
 </svg>

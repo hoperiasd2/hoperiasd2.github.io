@@ -1,55 +1,81 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 440" width="900" height="440" role="img"
-     aria-label="Histone tail modifications: acetylation, methylation, phosphorylation and ubiquitination on H3 and H4 tails, with the transcriptional consequence of each mark">
-  <style>
-    .ttl{font:700 14px sans-serif;fill:#003c71}
-    .nm{font:700 12px sans-serif;fill:#003c71}
-    .sub{font:11px sans-serif;fill:#4a5159}
-    .core{fill:#003c71;stroke:#16191d;stroke-width:1.2}
-    .cl{font:700 11px sans-serif;fill:#ffffff}
-    .tail{stroke:#16191d;stroke-width:2;fill:none}
-    .ac{fill:#f2b705;stroke:#16191d;stroke-width:1}
-    .me{fill:#ffffff;stroke:#003c71;stroke-width:1.4}
-    .ph{fill:#4a5159;stroke:#16191d;stroke-width:1}
-    .ub{fill:#fff5d6;stroke:#003c71;stroke-width:1.3}
-    .mk{font:700 9px sans-serif;fill:#16191d}
-    .mkw{font:700 9px sans-serif;fill:#ffffff}
-    .bx{fill:#ffffff;stroke:#c6d2dd;stroke-width:1.3}
-    .hl{fill:#fff5d6;stroke:#003c71;stroke-width:1.3}
-    .out{font:700 11px sans-serif;fill:#8a6300}
-  </style>
-  <text class="ttl" x="20" y="24">A. Nucleosome and the histone tails that carry the marks</text>
-  <ellipse class="core" cx="250" cy="130" rx="92" ry="62"/>
-  <text class="cl" x="196" y="126">histone octamer</text>
-  <text class="cl" x="206" y="146">H2A H2B H3 H4</text>
-  <path class="tail" d="M158 96 C120 70 100 62 62 58"/>
-  <path class="tail" d="M158 164 C120 190 100 198 62 202"/>
-  <path class="tail" d="M342 96 C380 70 400 62 438 58"/>
-  <path class="tail" d="M342 164 C380 190 400 198 438 202"/>
-  <text class="nm" x="36" y="46">H3 tail</text>
-  <text class="nm" x="36" y="222">H4 tail</text>
-  <text class="nm" x="430" y="46">H3 tail</text>
-  <text class="nm" x="430" y="222">H2B tail</text>
-  <circle class="ac" cx="112" cy="70" r="9"/><text class="mk" x="106" y="74">Ac</text>
-  <circle class="me" cx="84" cy="62" r="9"/><text class="mk" x="78" y="66">Me</text>
-  <circle class="ac" cx="112" cy="192" r="9"/><text class="mk" x="106" y="196">Ac</text>
-  <circle class="ph" cx="392" cy="70" r="9"/><text class="mkw" x="387" y="74">P</text>
-  <circle class="ub" cx="396" cy="192" r="10"/><text class="mk" x="389" y="196">Ub</text>
-  <text class="sub" x="150" y="214">lysine-rich tails protrude from the core and are the substrate of all four modifications</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 440" width="880" height="440" role="img"
+ aria-label="The four chemical groups of histone modification and the distribution of representative marks: the charge change and reversibility of each group, how to read the H3K4me3 notation, the fact that methylation does not change charge and so acts only through reader binding, and where active and repressive marks lie along a gene.">
+ <style>
+  .bx{fill:#fff;stroke:#c6d2dd;stroke-width:1.8}.k{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .t{font:12px sans-serif;fill:#16191d}.tb{font:700 13px sans-serif;fill:#003c71}
+  .th{font:700 15px sans-serif;fill:#003c71}.s{font:11px sans-serif;fill:#4a5159}
+  .m{font:10px monospace;fill:#16191d}
+  .dna{fill:none;stroke:#16191d;stroke-width:2.4}
+  .prom{fill:#e8eff6;stroke:#003c71;stroke-width:2}
+  .gene{fill:#fff5d6;stroke:#f2b705;stroke-width:2}
+  .enh{fill:#e3f0e4;stroke:#2e7d32;stroke-width:2}
+  .act{fill:#2e7d32}.rep{fill:#b3261e}
+ </style>
 
-  <text class="ttl" x="20" y="268">B. What each mark does</text>
-  <rect class="hl" x="20" y="282" width="420" height="140" rx="8"/>
-  <text class="nm" x="34" y="304">Acetylation of lysine (H3K9ac, H3K27ac)</text>
-  <text class="sub" x="34" y="324">neutralizes the positive charge of lysine, loosens the</text>
-  <text class="sub" x="34" y="342">histone-DNA contact. Always permissive for transcription.</text>
-  <text class="nm" x="34" y="368">Phosphorylation of serine (H3S10ph)</text>
-  <text class="sub" x="34" y="388">adds negative charge; mitotic condensation and</text>
-  <text class="sub" x="34" y="406">immediate-early gene induction.</text>
-  <rect class="bx" x="460" y="282" width="420" height="140" rx="8"/>
-  <text class="nm" x="474" y="304">Methylation of lysine or arginine</text>
-  <text class="sub" x="474" y="324">charge is unchanged, so the effect depends on position:</text>
-  <text class="sub" x="474" y="342">H3K4me3 active promoter; H3K36me3 active body;</text>
-  <text class="sub" x="474" y="360">H3K9me3 and H3K27me3 repressed.</text>
-  <text class="nm" x="474" y="386">Ubiquitination (H2BK120ub, H2AK119ub)</text>
-  <text class="sub" x="474" y="406">bulky mark; H2BK120ub supports elongation, H2AK119ub represses.</text>
-  <text class="out" x="20" y="256">acetylation acts through charge; methylation acts through the reader it attracts</text>
+ <text class="th" x="20" y="28">A  Four chemical groups</text>
+ <line x1="20" y1="38" x2="860" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+ <rect class="bx" x="20" y="54" width="840" height="116" rx="8"/>
+ <text class="tb" x="34" y="76">Group</text>
+ <text class="tb" x="190" y="76">Residue</text>
+ <text class="tb" x="360" y="76">Charge change</text>
+ <text class="tb" x="540" y="76">Reversibility</text>
+ <text class="tb" x="670" y="76">Mainly linked with</text>
+ <line x1="34" y1="84" x2="846" y2="84" stroke="#c6d2dd" stroke-width="1.2"/>
+ <text class="t" x="34" y="104">Acetyl</text>
+ <text class="t" x="190" y="104">lysine</text>
+ <text class="t" x="360" y="104">positive neutralised</text>
+ <text class="t" x="540" y="104">fast</text>
+ <text class="t" x="670" y="104">active chromatin</text>
+ <text class="t" x="34" y="124">Methyl</text>
+ <text class="t" x="190" y="124">lysine, arginine</text>
+ <text class="tb" x="360" y="124">NONE</text>
+ <text class="t" x="540" y="124">slow</text>
+ <text class="t" x="670" y="124">depends on position</text>
+ <text class="t" x="34" y="144">Phosphate</text>
+ <text class="t" x="190" y="144">serine, threonine</text>
+ <text class="t" x="360" y="144">negative added</text>
+ <text class="t" x="540" y="144">fast</text>
+ <text class="t" x="670" y="144">division, damage response</text>
+ <text class="t" x="34" y="164">Ubiquitin</text>
+ <text class="t" x="190" y="164">lysine</text>
+ <text class="t" x="360" y="164">large addition</text>
+ <text class="t" x="540" y="164">medium</text>
+ <text class="t" x="670" y="164">repression and repair</text>
+
+ <rect class="k" x="20" y="182" width="400" height="56" rx="8"/>
+ <text class="tb" x="34" y="204">Methylation changes NO charge</text>
+ <text class="t" x="34" y="226">so its effect comes almost entirely through reader binding.</text>
+
+ <text class="th" x="450" y="202">B  How to read the notation</text>
+ <line x1="450" y1="210" x2="860" y2="210" stroke="#c6d2dd" stroke-width="1.5"/>
+ <text class="m" x="470" y="236" style="font:700 16px monospace">H3  K4  me3</text>
+ <text class="s" x="466" y="254">histone</text>
+ <text class="s" x="520" y="254">4th lysine</text>
+ <text class="s" x="590" y="254">3 methyl groups</text>
+
+ <text class="th" x="20" y="286">C  Where representative marks lie</text>
+ <line x1="20" y1="296" x2="860" y2="296" stroke="#c6d2dd" stroke-width="1.5"/>
+ <path class="dna" d="M40 356 h780"/>
+ <rect class="enh" x="80" y="346" width="60" height="20"/>
+ <text class="m" x="90" y="361">enhancer</text>
+ <rect class="prom" x="250" y="346" width="70" height="20"/>
+ <text class="m" x="262" y="361">promoter</text>
+ <rect class="gene" x="320" y="346" width="280" height="20"/>
+ <text class="m" x="430" y="361">gene body</text>
+ <rect x="660" y="346" width="150" height="20" fill="#f7dedc" stroke="#b3261e" stroke-width="2"/>
+ <text class="m" x="676" y="361">heterochromatin</text>
+
+ <circle class="act" cx="110" cy="330" r="6"/>
+ <text class="m" x="86" y="320">H3K4me1</text>
+ <circle class="act" cx="285" cy="330" r="6"/>
+ <text class="m" x="256" y="320">H3K4me3</text>
+ <circle class="act" cx="200" cy="330" r="6"/>
+ <text class="m" x="172" y="320">H3K27ac</text>
+ <circle class="act" cx="460" cy="330" r="6"/>
+ <text class="m" x="432" y="320">H3K36me3</text>
+ <circle class="rep" cx="620" cy="386" r="6"/>
+ <text class="m" x="584" y="402">H3K27me3</text>
+ <circle class="rep" cx="730" cy="386" r="6"/>
+ <text class="m" x="700" y="402">H3K9me3</text>
+ <text class="s" x="40" y="424">Measuring a mark gives you a CANDIDATE regulatory state. To know whether it CAUSES the expression change, remove the enzyme or alter the region and see. Measured by ChIP.</text>
 </svg>

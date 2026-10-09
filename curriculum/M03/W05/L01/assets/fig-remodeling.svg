@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 440" width="880" height="440" role="img"
+ aria-label="Action of chromatin remodeling complexes and how they differ from modification: the three ATP-driven modes of sliding, eviction and variant exchange, the order from pioneer factor binding to access by other transcription factors, and the difference between remodeling and chemical modification in target, energy and responsible molecule.">
+ <style>
+  .bx{fill:#fff;stroke:#c6d2dd;stroke-width:1.8}.k{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .t{font:12px sans-serif;fill:#16191d}.tb{font:700 13px sans-serif;fill:#003c71}
+  .th{font:700 15px sans-serif;fill:#003c71}.s{font:11px sans-serif;fill:#4a5159}
+  .m{font:10px monospace;fill:#16191d}
+  .dna{fill:none;stroke:#16191d;stroke-width:2.6}
+  .oct{fill:#dce6f2;stroke:#1a4f8a;stroke-width:2}
+  .var{fill:#fff5d6;stroke:#f2b705;stroke-width:2}
+  .site{fill:#f7dedc;stroke:#b3261e;stroke-width:2}
+  .rem{fill:#e3f0e4;stroke:#2e7d32;stroke-width:2.2}
+  .tf{fill:#e3f0e4;stroke:#2e7d32;stroke-width:2}
+  .ar{stroke:#003c71;stroke-width:2;fill:none;marker-end:url(#a)}
+ </style>
+ <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker></defs>
+
+ <text class="th" x="20" y="28">A  Three ATP-driven modes</text>
+ <line x1="20" y1="38" x2="430" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+
+ <text class="tb" x="30" y="62">sliding</text>
+ <path class="dna" d="M30 92 h190"/>
+ <circle class="oct" cx="90" cy="92" r="20"/>
+ <path class="site" d="M140 84 h28 v16 h-28 z"/>
+ <path class="ar" d="M232 92 L262 92"/>
+ <path class="dna" d="M270 92 h150"/>
+ <circle class="oct" cx="360" cy="92" r="20"/>
+ <path class="site" d="M292 84 h28 v16 h-28 z"/>
+
+ <text class="tb" x="30" y="146">eviction</text>
+ <path class="dna" d="M30 176 h190"/>
+ <circle class="oct" cx="130" cy="176" r="20"/>
+ <path class="ar" d="M232 176 L262 176"/>
+ <path class="dna" d="M270 176 h150"/>
+ <circle class="oct" cx="396" cy="142" r="18" opacity="0.4"/>
+ <path class="site" d="M316 168 h28 v16 h-28 z"/>
+
+ <text class="tb" x="30" y="230">variant exchange</text>
+ <path class="dna" d="M30 260 h190"/>
+ <circle class="oct" cx="130" cy="260" r="20"/>
+ <path class="ar" d="M232 260 L262 260"/>
+ <path class="dna" d="M270 260 h150"/>
+ <circle class="var" cx="370" cy="260" r="20"/>
+ <text class="m" x="356" y="264">H2A.Z</text>
+
+ <text class="th" x="460" y="28">B  The order of events</text>
+ <line x1="460" y1="38" x2="860" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+ <rect class="bx" x="460" y="54" width="400" height="34" rx="6"/>
+ <text class="t" x="474" y="76">1  a pioneer factor binds an accessible gap</text>
+ <path class="ar" d="M660 90 L660 100"/>
+ <rect class="bx" x="460" y="104" width="400" height="34" rx="6"/>
+ <text class="t" x="474" y="126">2  it holds the remodeler at that place</text>
+ <path class="ar" d="M660 140 L660 150"/>
+ <rect class="rem" x="460" y="154" width="400" height="34" rx="6"/>
+ <text class="t" x="474" y="176">3  the complex spends ATP and rearranges nucleosomes</text>
+ <path class="ar" d="M660 190 L660 200"/>
+ <rect class="k" x="460" y="204" width="400" height="34" rx="6"/>
+ <text class="t" x="474" y="226">4  other transcription factors reach the exposed site</text>
+ <text class="s" x="460" y="258">One first binding makes the following bindings possible. A pioneer factor</text>
+ <text class="s" x="460" y="276">can bind DNA still wrapped on a nucleosome, which is how a new programme opens.</text>
+ <text class="s" x="460" y="300">Families: SWI/SNF (human BAF), ISWI, CHD, INO80.</text>
+
+ <text class="th" x="20" y="320">C  Remodeling and modification are different processes</text>
+ <line x1="20" y1="330" x2="860" y2="330" stroke="#c6d2dd" stroke-width="1.5"/>
+ <rect class="bx" x="20" y="344" width="840" height="96" rx="8"/>
+ <text class="tb" x="34" y="366">What changes</text>
+ <text class="tb" x="300" y="366">Remodeling</text>
+ <text class="tb" x="580" y="366">Modification</text>
+ <line x1="34" y1="374" x2="846" y2="374" stroke="#c6d2dd" stroke-width="1.2"/>
+ <text class="t" x="34" y="394">target</text>
+ <text class="t" x="300" y="394">nucleosome position and composition</text>
+ <text class="t" x="580" y="394">chemical state of histone protein</text>
+ <text class="t" x="34" y="414">energy source</text>
+ <text class="t" x="300" y="414">ATP</text>
+ <text class="t" x="580" y="414">acetyl-CoA, SAM and other donors</text>
+ <text class="t" x="34" y="434">responsible molecule</text>
+ <text class="t" x="300" y="434">SWI/SNF, ISWI complexes</text>
+ <text class="t" x="580" y="434">HAT, HDAC, methyltransferase enzymes</text>
+</svg>

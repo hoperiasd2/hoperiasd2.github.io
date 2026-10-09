@@ -1,55 +1,97 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 450" width="900" height="450" role="img"
-     aria-label="Genomic imprinting at chromosome 15q11-q13 and the origin of Prader-Willi and Angelman syndromes">
-  <style>
-    .ttl{font:700 14px sans-serif;fill:#003c71}
-    .nm{font:700 12px sans-serif;fill:#003c71}
-    .sub{font:11px sans-serif;fill:#4a5159}
-    .chr{fill:#ffffff;stroke:#16191d;stroke-width:1.6}
-    .on{fill:#f2b705;stroke:#16191d;stroke-width:1.2}
-    .off{fill:#c6d2dd;stroke:#16191d;stroke-width:1.2}
-    .gl{font:700 10px sans-serif;fill:#16191d}
-    .hl{fill:#fff5d6;stroke:#003c71;stroke-width:1.3}
-    .bx{fill:#ffffff;stroke:#c6d2dd;stroke-width:1.3}
-    .me{fill:#16191d}
-    .out{font:700 11px sans-serif;fill:#8a6300}
-  </style>
-  <text class="ttl" x="20" y="24">A. Normal imprinting of the 15q11-q13 region</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 460" width="880" height="460" role="img"
+ aria-label="Three cases of state maintenance: formation and recognition of H3K27me3 by PRC2 and PRC1 maintaining repression, the maternal versus paternal contrast at H19 and IGF2 where methylation of the imprinting control region changes the enhancer's reach through CTCF binding, random choice and maintenance in X chromosome inactivation, and the parental-origin correspondence of Prader-Willi and Angelman syndromes.">
+ <style>
+  .bx{fill:#fff;stroke:#c6d2dd;stroke-width:1.8}.k{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .t{font:12px sans-serif;fill:#16191d}.tb{font:700 13px sans-serif;fill:#003c71}
+  .th{font:700 15px sans-serif;fill:#003c71}.s{font:11px sans-serif;fill:#4a5159}
+  .m{font:10px monospace;fill:#16191d}
+  .dna{fill:none;stroke:#16191d;stroke-width:2.4}
+  .oct{fill:#dce6f2;stroke:#1a4f8a;stroke-width:2}
+  .prc{fill:#f7dedc;stroke:#b3261e;stroke-width:2.2}
+  .enh{fill:#e3f0e4;stroke:#2e7d32;stroke-width:2}
+  .ctcf{fill:#dce6f2;stroke:#1a4f8a;stroke-width:2.2}
+  .h19{fill:#fff5d6;stroke:#f2b705;stroke-width:2}
+  .igf2{fill:#f7dedc;stroke:#b3261e;stroke-width:2}
+  .off{fill:#fff;stroke:#c6d2dd;stroke-width:1.8;stroke-dasharray:3 3}
+  .ok{stroke:#2e7d32;stroke-width:2.4;fill:none;marker-end:url(#g)}
+  .no{stroke:#b3261e;stroke-width:2.4;fill:none;stroke-dasharray:5 4}
+  .fb{stroke:#b3261e;stroke-width:2.2;fill:none;stroke-dasharray:5 4;marker-end:url(#r)}
+ </style>
+ <defs>
+  <marker id="g" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#2e7d32"/></marker>
+  <marker id="r" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#b3261e"/></marker>
+ </defs>
 
-  <text class="nm" x="20" y="60">paternal</text>
-  <rect class="chr" x="110" y="46" width="700" height="26" rx="6"/>
-  <rect class="on" x="150" y="48" width="90" height="22"/><text class="gl" x="164" y="63">SNRPN</text>
-  <rect class="on" x="250" y="48" width="110" height="22"/><text class="gl" x="262" y="63">SNORD116</text>
-  <rect class="off" x="600" y="48" width="90" height="22"/><text class="gl" x="616" y="63">UBE3A</text>
-  <circle class="me" cx="130" cy="36" r="5"/>
-  <text class="sub" x="140" y="34">IC unmethylated on the paternal allele</text>
+ <text class="th" x="20" y="28">Case 1  Polycomb keeps developmental genes off</text>
+ <line x1="20" y1="38" x2="430" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+ <path class="dna" d="M30 100 h380"/>
+ <circle class="oct" cx="90" cy="100" r="18"/>
+ <circle cx="90" cy="80" r="5" fill="#b3261e"/>
+ <circle class="oct" cx="150" cy="100" r="18"/>
+ <circle cx="150" cy="80" r="5" fill="#b3261e"/>
+ <circle class="oct" cx="210" cy="100" r="18"/>
+ <text class="m" x="60" y="130">H3K27me3</text>
+ <rect class="prc" x="96" y="50" width="56" height="24" rx="5"/>
+ <text class="m" x="102" y="67">PRC2</text>
+ <rect class="prc" x="162" y="50" width="56" height="24" rx="5"/>
+ <text class="m" x="168" y="67">PRC1</text>
+ <path class="fb" d="M152 62 L196 72"/>
+ <path class="fb" d="M196 76 q20 10 14 22"/>
+ <circle cx="210" cy="80" r="5" fill="#b3261e" opacity="0.5"/>
+ <text class="s" x="30" y="152">PRC2 writes H3K27me3 and carries a subunit that recognises it:</text>
+ <text class="s" x="30" y="170">where the mark is it lingers, and lingering makes more mark.</text>
+ <text class="s" x="30" y="188">PRC1 reads it and adds ubiquitination and compaction.</text>
 
-  <text class="nm" x="20" y="134">maternal</text>
-  <rect class="chr" x="110" y="120" width="700" height="26" rx="6"/>
-  <rect class="off" x="150" y="122" width="90" height="22"/><text class="gl" x="164" y="137">SNRPN</text>
-  <rect class="off" x="250" y="122" width="110" height="22"/><text class="gl" x="262" y="137">SNORD116</text>
-  <rect class="on" x="600" y="122" width="90" height="22"/><text class="gl" x="616" y="137">UBE3A</text>
-  <circle class="on" cx="130" cy="110" r="7"/>
-  <text class="sub" x="142" y="108">imprinting centre methylated on the maternal allele</text>
+ <text class="th" x="460" y="28">Case 3  X inactivation</text>
+ <line x1="460" y1="38" x2="860" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+ <rect class="bx" x="470" y="54" width="60" height="110" rx="8"/>
+ <text class="m" x="490" y="112">Xa</text>
+ <rect x="546" y="54" width="60" height="110" rx="8" fill="#f7dedc" stroke="#b3261e" stroke-width="2.2"/>
+ <text class="m" x="564" y="112">Xi</text>
+ <text class="s" x="470" y="186">one X is silenced to match gene dosage;</text>
+ <text class="s" x="470" y="204">the choice is random and then kept in all descendants</text>
+ <rect class="k" x="628" y="54" width="232" height="110" rx="8"/>
+ <text class="t" x="640" y="78">Xist (a long non-coding RNA)</text>
+ <text class="t" x="640" y="98">then histone deacetylation,</text>
+ <text class="t" x="640" y="118">Polycomb marks and DNA</text>
+ <text class="t" x="640" y="138">methylation stabilise it.</text>
+ <text class="s" x="640" y="158">Mechanism of Xist: next lesson.</text>
+ <text class="s" x="628" y="186">Visible result: the tortoiseshell cat. Some genes escape.</text>
 
-  <rect class="bx" x="110" y="166" width="700" height="40" rx="6"/>
-  <text class="sub" x="124" y="192">filled = expressed, grey = silenced. Each gene is expressed from one parental allele only, so there is no functional back-up copy.</text>
+ <text class="th" x="20" y="236">Case 2  H19 / IGF2 — methylation changes the enhancer's REACH, not the gene directly</text>
+ <line x1="20" y1="246" x2="860" y2="246" stroke="#c6d2dd" stroke-width="1.5"/>
 
-  <text class="ttl" x="20" y="248">B. Loss of the paternal contribution: Prader-Willi syndrome</text>
-  <rect class="chr" x="110" y="262" width="340" height="24" rx="6"/>
-  <rect class="off" x="150" y="264" width="200" height="20"/><text class="gl" x="186" y="278">SNRPN, SNORD116 absent</text>
-  <text class="sub" x="110" y="306">causes: paternal 15q11-q13 deletion 65-75%,</text>
-  <text class="sub" x="110" y="324">maternal uniparental disomy 20-30%, imprinting defect 1-3%</text>
-  <text class="out" x="110" y="350">neonatal hypotonia and poor feeding, then hyperphagia and obesity,</text>
-  <text class="out" x="110" y="368">short stature, hypogonadism, intellectual disability</text>
+ <text class="tb" x="30" y="272">MATERNAL copy: control region UNmethylated</text>
+ <path class="dna" d="M30 310 h400"/>
+ <rect class="h19" x="60" y="300" width="56" height="20"/>
+ <text class="m" x="72" y="315">H19</text>
+ <rect class="ctcf" x="150" y="300" width="46" height="20"/>
+ <text class="m" x="156" y="315">ICR</text>
+ <rect class="igf2" x="240" y="300" width="56" height="20"/>
+ <text class="m" x="250" y="315">IGF2</text>
+ <rect class="enh" x="350" y="300" width="60" height="20"/>
+ <text class="m" x="356" y="315">enhancer</text>
+ <rect class="ctcf" x="152" y="276" width="42" height="22" rx="4"/>
+ <text class="m" x="156" y="292">CTCF</text>
+ <path class="ok" d="M350 326 q-120 24 -234 -8"/>
+ <text class="m" x="196" y="350">reaches H19</text>
+ <path class="no" d="M346 300 q-30 -10 -48 -2"/>
+ <text class="s" x="30" y="370">CTCF binds and its boundary function keeps the enhancer away from IGF2, so H19 is expressed.</text>
 
-  <text class="ttl" x="470" y="248">C. Loss of the maternal contribution: Angelman syndrome</text>
-  <rect class="chr" x="490" y="262" width="340" height="24" rx="6"/>
-  <rect class="off" x="690" y="264" width="120" height="20"/><text class="gl" x="712" y="278">UBE3A absent</text>
-  <text class="sub" x="490" y="306">causes: maternal 15q11-q13 deletion 70-75%,</text>
-  <text class="sub" x="490" y="324">UBE3A mutation 10%, paternal uniparental disomy 3-7%</text>
-  <text class="out" x="490" y="350">severe speech impairment, ataxic gait, seizures,</text>
-  <text class="out" x="490" y="368">frequent laughter, microcephaly</text>
+ <text class="tb" x="460" y="396">PATERNAL copy: control region METHYLATED</text>
+ <path class="dna" d="M460 434 h400"/>
+ <rect class="off" x="490" y="424" width="56" height="20"/>
+ <text class="m" x="502" y="439">H19</text>
+ <rect class="ctcf" x="580" y="424" width="46" height="20"/>
+ <circle cx="603" cy="414" r="5" fill="#f2b705" stroke="#8a6300" stroke-width="1.4"/>
+ <rect class="igf2" x="670" y="424" width="56" height="20"/>
+ <text class="m" x="680" y="439">IGF2</text>
+ <rect class="enh" x="780" y="424" width="60" height="20"/>
+ <path class="ok" d="M780 418 q-50 -10 -56 -2"/>
+ <text class="s" x="460" y="390">Methylation blocks CTCF, so there is no boundary and the enhancer contacts IGF2: IGF2 is expressed.</text>
 
-  <rect class="hl" x="110" y="396" width="700" height="40" rx="6"/>
-  <text class="sub" x="124" y="422">The same deletion gives two different diseases depending on the parent of origin. Methylation testing of the imprinting centre, not sequencing, makes the diagnosis.</text>
+ <rect class="k" x="20" y="382" width="420" height="62" rx="8"/>
+ <text class="tb" x="34" y="404">The teaching point</text>
+ <text class="t" x="34" y="424">Read the binding protein and the contact relation together. Chr15: paternal</text>
+ <text class="t" x="34" y="440">deletion gives Prader-Willi, maternal deletion gives Angelman.</text>
 </svg>

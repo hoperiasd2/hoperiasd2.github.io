@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 460" width="880" height="460" role="img"
+ aria-label="The two mechanisms by which marks are restored after replication: distribution of old histones and formation of marks on new histones by reader-writer pairs, recognition of the hemimethylated state by UHRF1 and DNMT1 adding methyl to the new strand, passive demethylation when maintenance fails, active demethylation by stepwise TET oxidation, and the point that replicating the sequence and copying the mark are separate processes.">
+ <style>
+  .bx{fill:#fff;stroke:#c6d2dd;stroke-width:1.8}.k{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .t{font:12px sans-serif;fill:#16191d}.tb{font:700 13px sans-serif;fill:#003c71}
+  .th{font:700 15px sans-serif;fill:#003c71}.s{font:11px sans-serif;fill:#4a5159}
+  .m{font:10px monospace;fill:#16191d}
+  .old{fill:#dce6f2;stroke:#1a4f8a;stroke-width:2.2}
+  .new{fill:#fff;stroke:#1a4f8a;stroke-width:2.2;stroke-dasharray:4 3}
+  .dnaO{stroke:#16191d;stroke-width:2.6;fill:none}
+  .dnaN{stroke:#6b8ba8;stroke-width:2.6;fill:none;stroke-dasharray:5 4}
+  .en{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .ar{stroke:#003c71;stroke-width:2;fill:none;marker-end:url(#a)}
+ </style>
+ <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker></defs>
+
+ <text class="th" x="20" y="28">A  Histone marks: old histones are the template for new ones</text>
+ <line x1="20" y1="38" x2="430" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+ <path class="dnaO" d="M30 94 h170"/>
+ <circle class="old" cx="80" cy="94" r="18"/>
+ <circle cx="80" cy="72" r="5" fill="#f2b705" stroke="#8a6300" stroke-width="1.4"/>
+ <circle class="old" cx="140" cy="94" r="18"/>
+ <circle cx="140" cy="72" r="5" fill="#f2b705" stroke="#8a6300" stroke-width="1.4"/>
+ <text class="m" x="30" y="128">before replication</text>
+ <path class="ar" d="M218 94 L252 94"/>
+ <path class="dnaO" d="M268 76 h150"/>
+ <circle class="old" cx="310" cy="76" r="15"/>
+ <circle cx="310" cy="58" r="5" fill="#f2b705" stroke="#8a6300" stroke-width="1.4"/>
+ <circle class="new" cx="364" cy="76" r="15"/>
+ <path class="dnaO" d="M268 124 h150"/>
+ <circle class="new" cx="310" cy="124" r="15"/>
+ <circle class="old" cx="364" cy="124" r="15"/>
+ <circle cx="364" cy="106" r="5" fill="#f2b705" stroke="#8a6300" stroke-width="1.4"/>
+ <text class="m" x="268" y="152">old histones split between the two; new ones carry no mark</text>
+ <rect class="k" x="20" y="166" width="410" height="52" rx="8"/>
+ <text class="t" x="34" y="188">A reader of the remaining mark holds the writer there, and the</text>
+ <text class="t" x="34" y="208">writer marks the neighbouring new histones. Not all marks do this equally.</text>
+
+ <text class="th" x="460" y="28">B  DNA methylation: the symmetry is used</text>
+ <line x1="460" y1="38" x2="860" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+ <text class="m" x="470" y="66">parental, both strands marked</text>
+ <path class="dnaO" d="M470 80 h150"/>
+ <path class="dnaO" d="M470 100 h150"/>
+ <circle cx="520" cy="80" r="5" fill="#f2b705" stroke="#8a6300" stroke-width="1.4"/>
+ <circle cx="520" cy="100" r="5" fill="#f2b705" stroke="#8a6300" stroke-width="1.4"/>
+ <path class="ar" d="M636 90 L670 90"/>
+ <text class="m" x="680" y="66">right after replication: HEMIMETHYLATED</text>
+ <path class="dnaO" d="M680 80 h150"/>
+ <path class="dnaN" d="M680 100 h150"/>
+ <circle cx="730" cy="80" r="5" fill="#f2b705" stroke="#8a6300" stroke-width="1.4"/>
+ <circle cx="730" cy="100" r="5" fill="none" stroke="#8a6300" stroke-width="1.4" stroke-dasharray="2 2"/>
+ <rect class="en" x="690" y="118" width="150" height="26" rx="5"/>
+ <text class="m" x="698" y="136">UHRF1 + DNMT1</text>
+ <path class="ar" d="M740 116 L734 108"/>
+ <text class="s" x="680" y="164">UHRF1 recognises the hemimethylated CpG and brings DNMT1,</text>
+ <text class="s" x="680" y="182">which methylates the matching position on the new strand.</text>
+ <rect class="k" x="460" y="196" width="400" height="36" rx="8"/>
+ <text class="tb" x="474" y="220">Replicating the SEQUENCE and copying the MARK are separate processes.</text>
+
+ <text class="th" x="20" y="268">C  Two ways a mark is lost</text>
+ <line x1="20" y1="278" x2="860" y2="278" stroke="#c6d2dd" stroke-width="1.5"/>
+ <rect class="bx" x="20" y="292" width="410" height="96" rx="8"/>
+ <text class="tb" x="34" y="314">PASSIVE: dilution, not an enzyme</text>
+ <text class="t" x="34" y="336">Skip maintenance and replicate again: some daughter DNA</text>
+ <text class="t" x="34" y="356">inherits an unmarked strand. Over repeated divisions the</text>
+ <text class="t" x="34" y="376">fraction of methylated positions falls.</text>
+
+ <rect class="bx" x="450" y="292" width="410" height="96" rx="8"/>
+ <text class="tb" x="464" y="314">ACTIVE: TET oxidises in steps</text>
+ <text class="m" x="464" y="338">5mC to 5hmC to 5fC to 5caC</text>
+ <text class="t" x="464" y="358">TET does not simply pull the methyl off — it CHANGES the</text>
+ <text class="t" x="464" y="376">chemical form. Base excision repair then restores plain cytosine.</text>
+
+ <rect class="bx" x="20" y="400" width="840" height="48" rx="8"/>
+ <text class="t" x="34" y="422">DNMT1 maintenance on hemimethylated CpG  ·  DNMT3A/3B de novo on unmethylated CpG  ·  TET1/2/3 oxidise 5mC</text>
+ <text class="tb" x="34" y="442">So methylation is a state that can be MAINTAINED and also CHANGED. Which enzyme works there sets its stability.</text>
+</svg>

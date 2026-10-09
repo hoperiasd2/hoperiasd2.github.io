@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 440" width="880" height="440" role="img"
+ aria-label="The two routes of histone acetylation and the balance of enzymes: the route in which neutralising the lysine positive charge loosens DNA binding, the route in which a bromodomain reader comes to bind, the opposing actions of HAT and HDAC, and how a transcription factor brings the enzyme to a particular place through a coregulator.">
+ <style>
+  .bx{fill:#fff;stroke:#c6d2dd;stroke-width:1.8}.k{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .t{font:12px sans-serif;fill:#16191d}.tb{font:700 13px sans-serif;fill:#003c71}
+  .th{font:700 15px sans-serif;fill:#003c71}.s{font:11px sans-serif;fill:#4a5159}
+  .m{font:10px monospace;fill:#16191d}
+  .dna{fill:none;stroke:#16191d;stroke-width:2.6}
+  .oct{fill:#dce6f2;stroke:#1a4f8a;stroke-width:2.2}
+  .tail{stroke:#1a4f8a;stroke-width:2.4;fill:none}
+  .rd{fill:#e3f0e4;stroke:#2e7d32;stroke-width:2.2}
+  .tf{fill:#e3f0e4;stroke:#2e7d32;stroke-width:2}
+  .en{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .enr{fill:#f7dedc;stroke:#b3261e;stroke-width:2.2}
+  .ar{stroke:#003c71;stroke-width:2;fill:none;marker-end:url(#a)}
+  .arr{stroke:#003c71;stroke-width:2;fill:none;marker-end:url(#a);marker-start:url(#c)}
+ </style>
+ <defs>
+  <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker>
+  <marker id="c" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10 0 L0 5 L10 10 z" fill="#003c71"/></marker>
+ </defs>
+
+ <text class="th" x="20" y="28">A  Two routes, both from one acetyl group</text>
+ <line x1="20" y1="38" x2="860" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+
+ <circle class="oct" cx="120" cy="130" r="40"/>
+ <path class="dna" d="M60 108 q60 -26 120 0 M60 152 q60 26 120 0"/>
+ <path class="tail" d="M120 90 q-10 -22 6 -32"/>
+ <text class="m" x="110" y="52">K+</text>
+ <text class="m" x="60" y="190">lysine carries a POSITIVE charge;</text>
+ <text class="m" x="60" y="204">the DNA backbone is negative</text>
+ <path class="ar" d="M200 130 L250 130"/>
+ <text class="m" x="196" y="118">acetyl</text>
+
+ <text class="tb" x="290" y="62">Route 1  physical</text>
+ <circle class="oct" cx="340" cy="130" r="40"/>
+ <path class="dna" d="M276 100 q64 -34 128 0 M276 160 q64 34 128 0" stroke-dasharray="6 4"/>
+ <circle cx="340" cy="84" r="7" fill="#f2b705" stroke="#8a6300" stroke-width="1.4"/>
+ <text class="m" x="290" y="190">charge neutralised, binding</text>
+ <text class="m" x="290" y="204">to DNA loosens</text>
+
+ <text class="tb" x="530" y="62">Route 2  reader binding</text>
+ <circle class="oct" cx="580" cy="130" r="40"/>
+ <circle cx="580" cy="84" r="7" fill="#f2b705" stroke="#8a6300" stroke-width="1.4"/>
+ <rect class="rd" x="630" y="68" width="104" height="30" rx="6"/>
+ <text class="m" x="638" y="88">bromodomain</text>
+ <path class="ar" d="M626 83 L594 83"/>
+ <text class="m" x="530" y="190">a protein that recognises acetyl-lysine</text>
+ <text class="m" x="530" y="204">can now sit there</text>
+ <rect class="k" x="750" y="112" width="110" height="52" rx="7"/>
+ <text class="t" x="760" y="134">often the more</text>
+ <text class="t" x="760" y="152">decisive route</text>
+
+ <rect class="bx" x="20" y="222" width="840" height="36" rx="8"/>
+ <text class="tb" x="34" y="246">Do NOT memorise "acetyl group on means the gene is on". It is a modification that changes physical interaction AND protein binding.</text>
+
+ <text class="th" x="20" y="292">B  Two enzymes set the level, and a factor decides WHERE</text>
+ <line x1="20" y1="302" x2="860" y2="302" stroke="#c6d2dd" stroke-width="1.5"/>
+ <rect class="en" x="60" y="320" width="140" height="34" rx="6"/>
+ <text class="m" x="70" y="342">HAT / KAT: adds</text>
+ <path class="arr" d="M208 337 L286 337"/>
+ <rect class="enr" x="294" y="320" width="140" height="34" rx="6"/>
+ <text class="m" x="304" y="342">HDAC: removes</text>
+ <text class="s" x="60" y="372">from acetyl-CoA; CBP/p300, GCN5</text>
+ <text class="s" x="294" y="372">18 kinds in humans, four classes</text>
+
+ <rect class="tf" x="520" y="312" width="80" height="28" rx="5"/>
+ <text class="m" x="534" y="330">activator</text>
+ <path class="ar" d="M604 326 L636 326"/>
+ <rect class="k" x="644" y="312" width="120" height="28" rx="5"/>
+ <text class="m" x="654" y="330">coactivator+HAT</text>
+ <rect class="tf" x="520" y="352" width="80" height="28" rx="5" stroke="#b3261e"/>
+ <text class="m" x="530" y="370">repressor</text>
+ <path class="ar" d="M604 366 L636 366"/>
+ <rect class="enr" x="644" y="352" width="124" height="28" rx="5"/>
+ <text class="m" x="652" y="370">corepressor+HDAC</text>
+ <text class="s" x="520" y="400">The enzyme has no sequence specificity of its own; where it acts is decided by what brought it.</text>
+ <text class="s" x="20" y="424">HAT and HDAC also act on non-histone proteins (p53, tubulin, metabolic enzymes), so HDAC inhibitor effects cannot be explained by histones alone.</text>
+</svg>

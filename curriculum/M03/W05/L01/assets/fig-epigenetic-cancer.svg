@@ -1,69 +1,68 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 430" width="900" height="430" role="img"
-     aria-label="Epigenetic changes in cancer: promoter hypermethylation of tumour suppressors, global hypomethylation, and the drugs that target DNMT and HDAC">
-  <style>
-    .ttl{font:700 14px sans-serif;fill:#003c71}
-    .nm{font:700 12px sans-serif;fill:#003c71}
-    .sub{font:11px sans-serif;fill:#4a5159}
-    .dna{stroke:#16191d;stroke-width:2.2;fill:none}
-    .me{fill:#f2b705;stroke:#16191d;stroke-width:1}
-    .um{fill:#ffffff;stroke:#16191d;stroke-width:1}
-    .bx{fill:#ffffff;stroke:#c6d2dd;stroke-width:1.3}
-    .hl{fill:#fff5d6;stroke:#003c71;stroke-width:1.3}
-    .ln{stroke:#003c71;stroke-width:1.7;fill:none}
-    .gl{font:700 10px sans-serif;fill:#16191d}
-    .out{font:700 11px sans-serif;fill:#8a6300}
-  </style>
-  <defs>
-    <marker id="d1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-      <path d="M0 0 L10 5 L0 10 z" fill="#003c71"/>
-    </marker>
-  </defs>
-  <text class="ttl" x="20" y="24">A. Two opposite changes occur in the same tumour genome</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 450" width="880" height="450" role="img"
+ aria-label="Epigenetic abnormality in cancer and targeted therapy, plus the three distinctions: focal hypermethylation at tumour suppressor promoters together with global hypomethylation, the points of action of DNMT, HDAC, EZH2, IDH and BET inhibitors, and the difference in time scale and strength of evidence between a change in molecular mark, maintenance of somatic state, and transgenerational transmission.">
+ <style>
+  .bx{fill:#fff;stroke:#c6d2dd;stroke-width:1.8}.k{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .t{font:12px sans-serif;fill:#16191d}.tb{font:700 13px sans-serif;fill:#003c71}
+  .th{font:700 15px sans-serif;fill:#003c71}.s{font:11px sans-serif;fill:#4a5159}
+  .m{font:10px monospace;fill:#16191d}
+  .dna{fill:none;stroke:#16191d;stroke-width:2.4}
+  .isl{fill:#fff5d6;stroke:#f2b705;stroke-width:2}
+  .rep{fill:#f7dedc;stroke:#b3261e;stroke-width:2}
+  .ok{fill:#e3f0e4;stroke:#2e7d32;stroke-width:2}
+  .inh{stroke:#b3261e;stroke-width:2.4;fill:none;marker-end:url(#bar)}
+ </style>
+ <defs><marker id="bar" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M6 0 L6 10" stroke="#b3261e" stroke-width="3"/></marker></defs>
 
-  <rect class="hl" x="30" y="40" width="400" height="140" rx="8"/>
-  <text class="nm" x="44" y="62">CpG island hypermethylation (local)</text>
-  <path class="dna" d="M50 96 L410 96"/>
-  <circle class="me" cx="90" cy="96" r="7"/><circle class="me" cx="118" cy="96" r="7"/>
-  <circle class="me" cx="146" cy="96" r="7"/><circle class="me" cx="174" cy="96" r="7"/>
-  <rect x="210" y="84" width="90" height="24" rx="3" fill="#c6d2dd" stroke="#16191d"/>
-  <text class="gl" x="226" y="100">silenced</text>
-  <text class="sub" x="50" y="130">tumour suppressor promoters turned off without mutation:</text>
-  <text class="sub" x="50" y="148">CDKN2A, MLH1, BRCA1, MGMT, VHL</text>
-  <text class="out" x="50" y="170">a second hit that leaves the sequence intact</text>
+ <text class="th" x="20" y="28">A  Two directions at once, and why that is not a contradiction</text>
+ <line x1="20" y1="38" x2="860" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
+ <rect class="bx" x="20" y="54" width="410" height="112" rx="8"/>
+ <text class="tb" x="34" y="78">FOCAL hypermethylation</text>
+ <path class="dna" d="M34 110 h380"/>
+ <rect class="isl" x="110" y="100" width="90" height="20"/>
+ <circle cx="140" cy="92" r="5" fill="#f2b705" stroke="#8a6300" stroke-width="1.4"/>
+ <circle cx="170" cy="92" r="5" fill="#f2b705" stroke="#8a6300" stroke-width="1.4"/>
+ <rect class="rep" x="200" y="100" width="130" height="20"/>
+ <text class="m" x="222" y="115">tumour suppressor OFF</text>
+ <text class="s" x="34" y="140">MLH1 (mismatch repair), CDKN2A (p16), MGMT.</text>
+ <text class="s" x="34" y="158">No sequence change, so variant-only testing misses it.</text>
 
-  <rect class="bx" x="470" y="40" width="400" height="140" rx="8"/>
-  <text class="nm" x="484" y="62">Global hypomethylation (genome-wide)</text>
-  <path class="dna" d="M490 96 L850 96"/>
-  <circle class="um" cx="520" cy="96" r="7"/><circle class="um" cx="556" cy="96" r="7"/>
-  <circle class="um" cx="592" cy="96" r="7"/><circle class="um" cx="628" cy="96" r="7"/>
-  <circle class="um" cx="664" cy="96" r="7"/>
-  <text class="sub" x="490" y="130">repeats and transposons lose methylation:</text>
-  <text class="sub" x="490" y="148">chromosomal instability, re-expression of silent elements,</text>
-  <text class="sub" x="490" y="166">loss of imprinting (IGF2 in Wilms tumour)</text>
+ <rect class="bx" x="450" y="54" width="410" height="112" rx="8"/>
+ <text class="tb" x="464" y="78">GLOBAL hypomethylation</text>
+ <path class="dna" d="M464 110 h380"/>
+ <rect class="ok" x="520" y="100" width="260" height="20"/>
+ <text class="m" x="572" y="115">repeats and transposons ACTIVE</text>
+ <text class="s" x="464" y="140">Chromosome instability, and sequences normally kept</text>
+ <text class="s" x="464" y="158">silent become active.</text>
 
-  <text class="ttl" x="20" y="226">B. Drugs that act on the epigenetic machinery</text>
-  <rect class="hl" x="30" y="240" width="250" height="100" rx="8"/>
-  <text class="nm" x="44" y="262">DNMT inhibitors</text>
-  <text class="sub" x="44" y="282">azacitidine, decitabine</text>
-  <text class="sub" x="44" y="300">cytidine analogues incorporated</text>
-  <text class="sub" x="44" y="318">into DNA, trap and deplete DNMT1</text>
-  <text class="sub" x="44" y="336">-&gt; passive loss of methylation</text>
+ <rect class="k" x="20" y="178" width="840" height="36" rx="8"/>
+ <text class="tb" x="34" y="202">The problem is not the TOTAL amount of methylation but the loss of its precise placement — the same logic as DNMT3A and TET2 mutations both causing cancer.</text>
 
-  <rect class="bx" x="310" y="240" width="250" height="100" rx="8"/>
-  <text class="nm" x="324" y="262">HDAC inhibitors</text>
-  <text class="sub" x="324" y="282">vorinostat, romidepsin,</text>
-  <text class="sub" x="324" y="300">belinostat, panobinostat</text>
-  <text class="sub" x="324" y="318">acetylation accumulates,</text>
-  <text class="sub" x="324" y="336">chromatin opens</text>
+ <text class="th" x="20" y="248">B  Marks are reversible, so they can be drugged</text>
+ <line x1="20" y1="258" x2="860" y2="258" stroke="#c6d2dd" stroke-width="1.5"/>
+ <rect class="bx" x="20" y="272" width="840" height="112" rx="8"/>
+ <text class="tb" x="34" y="294">Drug class</text>
+ <text class="tb" x="250" y="294">Target</text>
+ <text class="tb" x="410" y="294">Action</text>
+ <text class="tb" x="660" y="294">Use</text>
+ <line x1="34" y1="302" x2="846" y2="302" stroke="#c6d2dd" stroke-width="1.2"/>
+ <text class="t" x="34" y="320">azacitidine, decitabine</text>
+ <text class="t" x="250" y="320">DNMT</text>
+ <text class="t" x="410" y="320">less methylation: silenced genes back on</text>
+ <text class="t" x="660" y="320">MDS, AML</text>
+ <text class="t" x="34" y="338">vorinostat, romidepsin</text>
+ <text class="t" x="250" y="338">HDAC</text>
+ <text class="t" x="410" y="338">more acetylation: chromatin opens</text>
+ <text class="t" x="660" y="338">T-cell lymphoma</text>
+ <text class="t" x="34" y="356">tazemetostat</text>
+ <text class="t" x="250" y="356">EZH2 of PRC2</text>
+ <text class="t" x="410" y="356">blocks H3K27me3 formation</text>
+ <text class="t" x="660" y="356">epithelioid sarcoma</text>
+ <text class="t" x="34" y="374">IDH and BET inhibitors</text>
+ <text class="t" x="250" y="374">mutant IDH / READER</text>
+ <text class="t" x="410" y="374">stop the TET-blocking metabolite / cut reader binding</text>
+ <text class="t" x="660" y="374">AML / in trials</text>
+ <text class="s" x="20" y="400">Targeting the READER applies "a mark does not decide anything by itself" directly to therapy. IDH shows metabolism feeding into epigenetic change.</text>
 
-  <rect class="bx" x="590" y="240" width="280" height="100" rx="8"/>
-  <text class="nm" x="604" y="262">Other writer / eraser targets</text>
-  <text class="sub" x="604" y="282">tazemetostat : EZH2 (H3K27 HMT)</text>
-  <text class="sub" x="604" y="300">ivosidenib, enasidenib : mutant IDH1/2,</text>
-  <text class="sub" x="604" y="318">which produce 2-hydroxyglutarate and</text>
-  <text class="sub" x="604" y="336">inhibit TET and KDM enzymes</text>
-
-  <rect class="hl" x="30" y="356" width="840" height="56" rx="8"/>
-  <text class="nm" x="44" y="378">Why the epigenome is a drug target at all</text>
-  <text class="sub" x="44" y="398">The marks are enzyme-made and reversible, so the silenced gene is still present and can be switched back on. A deleted gene cannot.</text>
+ <text class="th" x="20" y="424">C  Three things to keep apart:  1 a change in molecular mark (hours to days, reversible) · 2 maintenance of somatic state across division (well established) · 3 transmission to offspring (separate question; most marks are reset in germ cells and early development). Ask: WHAT mark, for HOW LONG, in WHICH cells.</text>
+ <line x1="20" y1="412" x2="860" y2="412" stroke="#c6d2dd" stroke-width="1.5"/>
 </svg>
