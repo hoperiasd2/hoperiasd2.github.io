@@ -1,0 +1,59 @@
+<!-- 정맥 환류 곡선과 심기능 곡선이 만드는 순환의 작동점.
+
+   이 그림은 글로는 잘 전달되지 않는 한 가지만 보인다.
+   두 곡선의 기울기 방향이 반대이고, 그래서 교점이 하나뿐이라는 것.
+
+   가로축 우심방압, 세로축 유량(L/min). 두 곡선을 같은 축에 올린다.
+   정맥 환류 곡선은 오른쪽으로 내려간다. 우심방압이 오르면 MSFP와의
+   압력차가 줄어 환류가 준다. 가로축과 만나는 지점이 MSFP(약 7 mmHg)다.
+   심기능 곡선은 오른쪽으로 올라간다. 전부하가 커지면 박출량이 는다.
+   교점에서만 내보내는 양과 돌아오는 양이 같다.
+
+   점선으로 두 가지 이동을 함께 보인다.
+   혈액량이 늘면 환류 곡선이 오른쪽으로 평행 이동한다(수혈, 수액).
+   수축력이 떨어지면 심기능 곡선이 내려간다(심부전). 교점이 왼쪽 아래로
+   가면서 우심방압이 오르는 것이 울혈의 정체다.
+
+   캡션에 적을 것: 이뇨제는 환류 곡선을 왼쪽으로 옮겨 우심방압을 낮추지만
+   심기능 곡선은 그대로이므로 박출량을 늘리지는 않는다.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 380" width="560" height="380" role="img"
+ aria-label="Venous return and cardiac function curves on one axis of right atrial pressure against flow. The venous return line falls to the right and meets the axis at the mean systemic filling pressure; the cardiac function curve rises to the right. They cross at the single operating point. Dashed lines show the venous return curve shifted right by added volume and the cardiac function curve lowered by heart failure.">
+ <style>
+  .t{font:12px sans-serif;fill:#16191d}
+  .s{font:11px sans-serif;fill:#4a5159}
+  .ax{stroke:#4a5159;stroke-width:2;fill:none}
+  .vr{stroke:#1a4f8a;stroke-width:3;fill:none}
+  .cf{stroke:#b3261e;stroke-width:3;fill:none}
+  .alt{stroke-dasharray:6 4;opacity:.75}
+  .gd{stroke:#c6d2dd;stroke-width:1.4;fill:none}
+ </style>
+
+ <line class="ax" x1="70" y1="310" x2="520" y2="310"/>
+ <line class="ax" x1="70" y1="310" x2="70" y2="40"/>
+ <text class="t" x="300" y="344">right atrial pressure (mmHg)</text>
+ <text class="t" x="18" y="36">flow</text>
+ <text class="s" x="18" y="52">L/min</text>
+ <text class="s" x="66" y="328">0</text>
+ <text class="s" x="200" y="328">4</text>
+ <text class="s" x="330" y="328">8</text>
+ <text class="s" x="460" y="328">12</text>
+
+ <path class="vr" d="M80 110 L300 310"/>
+ <text class="t" x="96" y="100">venous return</text>
+ <circle cx="300" cy="310" r="4" fill="#1a4f8a"/>
+ <text class="s" x="268" y="296">MSFP</text>
+
+ <path class="cf" d="M90 300 q90 -130 190 -168 q90 -26 170 -16"/>
+ <text class="t" x="330" y="96">cardiac function</text>
+
+ <circle cx="178" cy="200" r="7" fill="#f2b705" stroke="#8a6300" stroke-width="2"/>
+ <text class="t" x="196" y="196">operating point</text>
+ <line class="gd" x1="178" y1="200" x2="178" y2="310"/>
+ <line class="gd" x1="70" y1="200" x2="178" y2="200"/>
+
+ <path class="vr alt" d="M150 90 L390 310"/>
+ <text class="s" x="396" y="306">volume added</text>
+ <path class="cf alt" d="M90 306 q90 -70 190 -96 q90 -18 170 -10"/>
+ <text class="s" x="396" y="214">heart failure</text>
+</svg>

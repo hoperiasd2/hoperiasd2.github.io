@@ -42,8 +42,11 @@ FILLER = ["매우 중요하다", "핵심이라고 할 수 있다", "라고 할 �
 
 HANGUL = re.compile(r"[가-힣]")
 
-MIN = {"secs": 7, "chars": 10000, "figs": 3, "quiz": 5, "refs": 5}
-SLIDES = (38, 52)
+# 교재로서의 기준. 학부 설명에서 시작해 Step 1 수준의 식별 지점과 연구 전선까지
+# 한 수업 안에 모두 들어간다. 분량을 줄여 슬라이드에 맞추지 않는다.
+MIN = {"secs": 8, "chars": 22000, "figs": 1, "quiz": 10, "refs": 6,
+       "step": 3, "front": 2}
+SLIDES = (30, 130)      # 두 편으로 나뉘면 합계로 센다
 
 # 그림은 논문 figure처럼 라벨만 둔다. 설명은 캡션과 SVG 주석으로 옮긴다.
 #   one   라벨 한 줄의 길이 한계. 이보다 길면 글자가 그림 밖으로 나가거나 겹친다.
@@ -89,6 +92,8 @@ def check(row):
     notes["secs"] = len(re.findall(r"^@sec ", body, re.M))
     notes["figs"] = len(re.findall(r"^@fig ", body, re.M))
     notes["quiz"] = len(re.findall(r"^Q: ", body, re.M))
+    notes["step"] = len(re.findall(r"^>> ", body, re.M))
+    notes["front"] = len(re.findall(r"^~ ", body, re.M))
     refs = re.search(r"^@ref\s*$(.*?)(?=^@|\Z)", body, re.M | re.S)
     notes["refs"] = len(re.findall(r"^- ", refs.group(1), re.M)) if refs else 0
     notes["chars"] = len(re.sub(r"\s", "", body))
@@ -146,6 +151,8 @@ def check(row):
         try:
             from pptx import Presentation
             n = len(Presentation(str(pptx)).slides)
+            if (d / "slides-2.pptx").exists():
+                n += len(Presentation(str(d / "slides-2.pptx")).slides)
             notes["slides"] = n
             if not (SLIDES[0] <= n <= SLIDES[1]):
                 problems.append(f"슬라이드 {n}장 (기준 {SLIDES[0]}~{SLIDES[1]})")
@@ -179,7 +186,8 @@ def main():
     for lid, n, probs in results:
         mark = "OK " if not probs else "NG "
         print(f"{mark}{lid}  절{n['secs']} 그림{n['figs']} 문항{n['quiz']} "
-              f"출처{n['refs']} {n['chars']:,}자 슬라이드{n.get('slides','-')}")
+              f"시험{n['step']} 연구{n['front']} 출처{n['refs']} "
+              f"{n['chars']:,}자 슬라이드{n.get('slides','-')}")
         for p in probs:
             print(f"      - {p}")
         for x in n.get("fat", []):

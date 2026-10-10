@@ -29,15 +29,36 @@ class Sec:
     blocks: list = field(default_factory=list)
 
 
+# 뒤에 한글이 바로 붙는 경우가 많다. \b 는 한글도 단어 문자로 보므로 쓸 수 없다.
+LID = re.compile(r"(?<![0-9A-Za-z])(M\d{2})-(W\d{2})-(L\d{2})(?![0-9A-Za-z])")
+HERE = {"lid": ""}          # 지금 만들고 있는 수업. 자기 자신은 연결하지 않는다.
+
+
+def _links(t):
+    """본문 어디에 적힌 수업 ID든 그 수업 페이지로 연결한다.
+
+    모듈을 순서대로 읽는 교재이므로, 앞 모듈이 얕은 자리에서 뒤 모듈을 가리키고
+    뒤 모듈이 앞 모듈을 되짚을 수 있어야 한다. 그 연결을 손으로 적지 않게 한다.
+    """
+    def one(m):
+        lid = m.group(0)
+        if lid == HERE["lid"]:
+            return f'<b>{lid}</b>'
+        mod, wk, ls = m.groups()
+        href = f"../../../../curriculum/{mod}/{wk}/{ls}/index.html"
+        return f'<a class="xref" href="{href}">{lid}</a>'
+    return LID.sub(one, t)
+
+
 def _inline(t):
-    """**굵게**, *기울임*, `코드`, ^{위}, _{아래} → HTML"""
+    """**굵게**, *기울임*, `코드`, ^{위}, _{아래}, 수업 ID 연결 → HTML"""
     t = html.escape(t, quote=False)
     t = re.sub(r"\*\*(.+?)\*\*", r"<strong>\1</strong>", t)
     t = re.sub(r"(?<!\w)\*([^*]+?)\*(?!\w)", r"<em>\1</em>", t)
     t = re.sub(r"`(.+?)`", r"<code>\1</code>", t)
     t = re.sub(r"\^\{(.+?)\}", r"<sup>\1</sup>", t)
     t = re.sub(r"_\{(.+?)\}", r"<sub>\1</sub>", t)
-    return t
+    return _links(t)
 
 
 def plain(t):
@@ -50,7 +71,7 @@ def plain(t):
 
 
 def parse_blocks(lines):
-    """문단, 불릿(- , 2칸 들여쓰기로 하위), 표(| |), 조건상자(> ), 귀결상자(=> )"""
+    """문단, 불릿(- ), 표(| |), 임상(> ), 정리(=> ), 시험(>> ), 연구(~ )"""
     blocks, buf, mode = [], [], None
 
     def flush():
@@ -67,6 +88,14 @@ def parse_blocks(lines):
         if s.startswith("=> "):
             flush()
             blocks.append(("result", [s[3:].strip()]))
+        elif s.startswith(">> "):
+            # 시험에서 가려내는 지점. USMLE Step 1 수준의 식별 포인트.
+            flush()
+            blocks.append(("step", [s[3:].strip()]))
+        elif s.startswith("~ "):
+            # 아직 정해지지 않은 것. 연구가 진행 중인 지점.
+            flush()
+            blocks.append(("front", [s[2:].strip()]))
         elif s.startswith("> "):
             flush()
             blocks.append(("limit", [s[2:].strip()]))
@@ -273,6 +302,12 @@ def render_blocks(blocks):
             out.append('<div class="box box--limit"><b>임상 연계</b> ' + _inline(buf[0]) + "</div>")
         elif kind == "result":
             out.append('<div class="box box--result"><b>핵심 정리</b> ' + _inline(buf[0]) + "</div>")
+        elif kind == "step":
+            out.append('<div class="box box--step"><b>시험에서 가려내는 지점</b> '
+                       + _inline(buf[0]) + "</div>")
+        elif kind == "front":
+            out.append('<div class="box box--front"><b>연구 전선</b> '
+                       + _inline(buf[0]) + "</div>")
     return "\n  ".join(out)
 
 
@@ -283,6 +318,7 @@ SECTION_LABEL = {
 
 
 def lesson_html(row, meta, named, lists, secs, quiz, prev_r, next_r, lesson_dir=None):
+    HERE["lid"] = row["lesson_id"]
     FIGN["n"] = 0
     FIG_SRC.clear()
     if lesson_dir:
@@ -315,7 +351,11 @@ def lesson_html(row, meta, named, lists, secs, quiz, prev_r, next_r, lesson_dir=
   </section>"""]
 
     if (meta.get("slides") or "").lower() != "none":
-        body.append('  <p class="dl"><a class="dlbtn" href="slides.pptx">슬라이드 내려받기 (PPTX)</a></p>')
+        dl = ['<a class="dlbtn" href="slides.pptx">슬라이드 내려받기 (PPTX)</a>']
+        if lesson_dir and (Path(lesson_dir) / "slides-2.pptx").exists():
+            dl[0] = '<a class="dlbtn" href="slides.pptx">슬라이드 1부 (PPTX)</a>'
+            dl.append('<a class="dlbtn" href="slides-2.pptx">슬라이드 2부 (PPTX)</a>')
+        body.append('  <p class="dl">' + " ".join(dl) + "</p>")
 
     # 안전 고지는 실습에서 맨 위에 둔다.
     if practicum and lists.get("safety"):
@@ -469,6 +509,15 @@ FONT = "Malgun Gothic"
 W, H = Inches(13.333), Inches(7.5)
 
 
+# 상자 네 종류. 임상, 정리, 시험, 연구.
+BOXBG = {"limit": QBG, "result": ABG,
+         "step": RGBColor(0xEC, 0xF6, 0xEC), "front": RGBColor(0xF3, 0xEF, 0xF9)}
+BOXFG = {"limit": NAVY, "result": RGBColor(0x8A, 0x63, 0x00),
+         "step": RGBColor(0x1E, 0x6B, 0x2C), "front": RGBColor(0x5B, 0x3A, 0x8A)}
+BOXLAB = {"limit": "임상 연계", "result": "핵심 정리",
+          "step": "시험에서 가려내는 지점", "front": "연구 전선"}
+
+
 def set_font(run, size, bold=False, color=INK, italic=False):
     f = run.font
     f.size, f.bold, f.italic, f.name = Pt(size), bold, italic, FONT
@@ -516,7 +565,9 @@ def textbox(slide, x, y, w, h, anchor=MSO_ANCHOR.TOP):
 
 
 class Deck:
-    def __init__(self, row, meta, pack=(760, 9)):
+    def __init__(self, row, meta, pack=(760, 9), part=None):
+        self.pack = pack
+        self.part = part
         self.row, self.meta = row, meta
         self.pack_chars, self.pack_items = pack
         self.prs = Presentation()
@@ -569,8 +620,13 @@ class Deck:
             set_font(r, 15, color=RGBColor(0xB9, 0xD2, 0xE8))
         tf = textbox(s, Inches(0.8), Inches(5.2), Inches(11.7), Inches(1.2))
         r = tf.paragraphs[0].add_run()
-        r.text = self.row["lesson_id"]
+        r.text = self.row["lesson_id"] + (f'  ·  {self.part[0]}' if self.part else "")
         set_font(r, 13, bold=True, color=WHITE)
+        if self.part:
+            p = tf.add_paragraph()
+            r = p.add_run()
+            r.text = f'전체 {self.part[2]}절 가운데 {self.part[1]}절'
+            set_font(r, 11, color=CHROME)
         p = tf.add_paragraph()
         r = p.add_run()
         r.text = f'{self.row["week"]}주 {self.row["session"]}회' + (f'  ·  {self.row["group"]}' if self.row["group"] else "")
@@ -670,8 +726,7 @@ class Deck:
             lines = max(1, len(plain(t)) // 72 + 1)
             need = Pt(lines * fs * 1.45) + Inches(0.55)
             h = min(share, need)
-            box = rect(s, Inches(0.7), y, Inches(11.9), h,
-                       QBG if kind == "limit" else ABG)
+            box = rect(s, Inches(0.7), y, Inches(11.9), h, BOXBG.get(kind, ABG))
             tf = box.text_frame
             tf.word_wrap = True
             tf.vertical_anchor = MSO_ANCHOR.MIDDLE
@@ -679,8 +734,8 @@ class Deck:
             p = tf.paragraphs[0]
             p.alignment = PP_ALIGN.LEFT
             r = p.add_run()
-            r.text = ("임상 연계   " if kind == "limit" else "핵심 정리   ")
-            set_font(r, 12, bold=True, color=NAVY if kind == "limit" else RGBColor(0x8A, 0x63, 0x00))
+            r.text = BOXLAB.get(kind, "핵심 정리") + "   "
+            set_font(r, 12, bold=True, color=BOXFG.get(kind, RGBColor(0x8A, 0x63, 0x00)))
             add_rich(p, t, fs, color=INK)
             y += h + Inches(0.15)
 
@@ -735,8 +790,9 @@ class Deck:
             self.note(s, plain(a))
 
 
-def _compose(row, meta, lists, secs, quiz, lesson_dir, pack):
-    d = Deck(row, meta, pack)
+def _compose(row, meta, lists, secs, quiz, lesson_dir, pack,
+             part=None, first=0):
+    d = Deck(row, meta, pack, part=part)
     d.title_slide()
     if lists.get("obj"):
         d.bullets("학습목표", lists["obj"], kicker="GOALS", numbered=True)
@@ -748,7 +804,7 @@ def _compose(row, meta, lists, secs, quiz, lesson_dir, pack):
         d.bullets("준비물·시약·장비", lists["materials"], kicker="SETUP")
     if secs:
         d.bullets("강의 구성", [s.title for s in secs], kicker="OUTLINE", numbered=True)
-    for i, sec in enumerate(secs, 1):
+    for i, sec in enumerate(secs, first + 1):
         if sec.question and sec.answer:
             d.qa(i, sec)
         kick = f"{i:02d}"
@@ -760,7 +816,7 @@ def _compose(row, meta, lists, secs, quiz, lesson_dir, pack):
                 text.clear()
 
         for kind, buf in sec.blocks:
-            if kind in ("limit", "result"):
+            if kind in ("limit", "result", "step", "front"):
                 pend.append((kind, buf[0]))
                 continue
             if pend:
@@ -797,25 +853,60 @@ def _compose(row, meta, lists, secs, quiz, lesson_dir, pack):
     return d
 
 
-# 한 장에 담는 분량을 조절해 슬라이드 수를 기준 범위(38~52장) 안으로 맞춘다.
-PACKS = [(760, 9), (820, 10), (900, 11), (1000, 12), (1120, 13),
-         (1260, 14), (1420, 16), (700, 8), (640, 7)]
+# 한 장에 담는 분량. 본문이 길어지면 슬라이드도 늘어나는데, 본문을 줄여 슬라이드에
+# 맞추지는 않는다. 슬라이드가 한 시간에 넘치면 두 편으로 나눈다.
+PACKS = [(900, 11), (1000, 12), (1120, 13), (1260, 14), (1420, 16),
+         (1600, 18), (820, 10), (760, 9)]
+SPLIT = 62          # 이보다 많으면 두 편으로 나눈다
+TARGET = (40, 60)   # 한 편에 담고 싶은 범위
 
 
 def build_deck(row, meta, lists, secs, quiz, out, lesson_dir):
-    lo, hi = 38, 52
+    lo, hi = TARGET
     best = None
     for pack in PACKS:
         d = _compose(row, meta, lists, secs, quiz, lesson_dir, pack)
         if lo <= d.n <= hi:
-            d.prs.save(out)
-            return d.n
-        # 범위를 벗어나면 기준에서 가장 덜 벗어난 결과를 남겨 둔다.
+            best = (0, d)
+            break
         miss = lo - d.n if d.n < lo else d.n - hi
         if best is None or miss < best[0]:
             best = (miss, d)
-    best[1].prs.save(out)
-    return best[1].n
+    d = best[1]
+
+    out = Path(out)
+    part2 = out.with_name("slides-2.pptx")
+    if d.n <= SPLIT:
+        d.prs.save(str(out))
+        if part2.exists():
+            part2.unlink()
+        return d.n
+
+    # 절 단위로 앞뒤를 갈라 두 편을 만든다. 둘 다 표지와 구성 슬라이드를 가진다.
+    half = split_point(secs)
+    a = _compose(row, meta, lists, secs[:half], [], lesson_dir, best[1].pack,
+                 part=("1부", half, len(secs)))
+    b = _compose(row, meta, lists, secs[half:], quiz, lesson_dir, best[1].pack,
+                 part=("2부", len(secs) - half, len(secs)), first=half)
+    a.prs.save(str(out))
+    b.prs.save(str(part2))
+    return a.n + b.n
+
+
+def split_point(secs):
+    """절의 본문 길이를 보고 두 편의 분량이 비슷해지는 경계를 찾는다."""
+    size = []
+    for sec in secs:
+        n = len(sec.title)
+        for _, buf in sec.blocks:
+            n += sum(len(str(x)) for x in buf)
+        size.append(n)
+    total, run = sum(size), 0
+    for i, n in enumerate(size):
+        run += n
+        if run >= total / 2:
+            return min(max(i + 1, 1), len(secs) - 1)
+    return max(1, len(secs) // 2)
 
 
 # --------------------------------------------------------------------------- 실행

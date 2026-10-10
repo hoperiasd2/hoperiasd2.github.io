@@ -108,6 +108,18 @@
       "status": "확정",
       "replacement_requirements": "",
       "review_result": ""
+    },
+    {
+      "figure_id": "fig-venous-return",
+      "lesson_id": "M01-W01-L01",
+      "html_anchor": "#fig-venous-return",
+      "caption": "정맥 환류 곡선과 심기능 곡선이 만드는 순환의 작동점. 두 곡선의 기울기 방향이 반대라는 점, 교점에서만 박출량과 환류량이 같아진다는 점, 그리고 혈액량 변화와 수축력 변화가 각각 어느 곡선을 어느 방향으로 옮기는지를 함께 보인다.",
+      "asset_path": "assets/fig-venous-return.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
     }
   ]
 }

@@ -186,3 +186,12 @@ h2.has-memo::after{content:"메모";font-size:.58em;font-weight:400;margin-left:
   border:1px solid #c6d2dd;border-radius:8px;resize:vertical;box-sizing:border-box}
 .editmodal__box textarea:focus{outline:2px solid #003c71;border-color:#003c71}
 .editmodal__row{display:flex;gap:8px;justify-content:flex-end;margin-top:12px}
+
+/* 깊이 층위 상자와 수업 사이 연결 */
+.box--step{border-left:4px solid #2e7d32;background:#ecf6ec}
+.box--step>b{color:#1e6b2c}
+.box--front{border-left:4px solid #6b4fa0;background:#f3eff9}
+.box--front>b{color:#5b3a8a}
+a.xref{font-variant-numeric:tabular-nums;white-space:nowrap;text-decoration:none;
+  border-bottom:1px dotted currentColor}
+a.xref:hover{background:#eaf1f8}
