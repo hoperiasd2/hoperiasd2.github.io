@@ -1,4 +1,17 @@
 {
   "lesson_id": "M01-W04-L01",
-  "figures": []
+  "figures": [
+    {
+      "figure_id": "fig-bone-remodeling",
+      "lesson_id": "M01-W04-L01",
+      "html_anchor": "#fig-bone-remodeling",
+      "caption": "재형성 단위의 작동 순서와 RANKL·OPG 체계. 활성화에서 흡수, 역전, 형성에 이르는 네 단계와 흡수가 빠르고 형성이 느린 비대칭, osteoblast 계열 세포가 RANKL과 OPG의 비율로 osteoclast를 지휘하는 구조, 그리고 주요 치료제의 작용 지점을 함께 보인다.",
+      "asset_path": "assets/fig-bone-remodeling.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    }
+  ]
 }
