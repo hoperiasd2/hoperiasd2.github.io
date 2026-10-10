@@ -958,12 +958,14 @@ def main():
         prev_r = rows[i - 1] if i and rows[i - 1]["module"] == row["module"] else None
         next_r = rows[i + 1] if i + 1 < len(rows) and rows[i + 1]["module"] == row["module"] else None
 
-        (d / "index.html").write_text(
-            lesson_html(row, meta, named, lists, secs, quiz, prev_r, next_r, d), encoding="utf-8")
-
+        # 슬라이드를 먼저 만든다. 두 편으로 나뉘었는지를 알아야 페이지에
+        # 내려받기 단추를 하나 둘지 둘 둘지 정할 수 있다.
         n = 0
         if not a.html_only and (meta.get("slides") or "").lower() != "none":
             n = build_deck(row, meta, lists, secs, quiz, str(d / "slides.pptx"), d)
+
+        (d / "index.html").write_text(
+            lesson_html(row, meta, named, lists, secs, quiz, prev_r, next_r, d), encoding="utf-8")
         figs = []
         k = 0
         for sec in secs:
