@@ -1,0 +1,54 @@
+<!-- 발생을 이루는 세 과정과 그 상호 의존.
+
+   세 과정을 나란히 놓고, 아래에 순환 화살표로 서로를 조건 삼는 관계를 보인다.
+   증식은 수를, 분화는 성질을, 형태형성은 배치를 바꾼다.
+   캡션에 적을 것: 분화가 유전자를 버리는 것이 아니라 선택하는 것이라는 점,
+   위치가 분화를 정하고 분화가 다시 형태를 만든다는 순환.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 290" width="640" height="290" role="img"
+ aria-label="The three processes of development. Proliferation changes cell number, differentiation changes cell character while the genome stays the same, and morphogenesis changes arrangement. Arrows below show that position sets differentiation and differentiation in turn enables morphogenesis.">
+ <style>
+  .t{font:12px sans-serif;fill:#16191d}
+  .s{font:11px sans-serif;fill:#4a5159}
+  .p{font:700 14px sans-serif;fill:#003c71}
+  .c1{fill:#dce6f2;stroke:#1a4f8a;stroke-width:2}
+  .c2{fill:#f7dedc;stroke:#b3261e;stroke-width:2}
+  .c3{fill:#e3f0e4;stroke:#2e7d32;stroke-width:2}
+  .ar{stroke:#003c71;stroke-width:2;fill:none;marker-end:url(#a)}
+ </style>
+ <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker></defs>
+
+ <text class="p" x="40" y="34">proliferation</text>
+ <circle class="c1" cx="60" cy="80" r="16"/>
+ <path class="ar" d="M84 80 L112 80"/>
+ <circle class="c1" cx="136" cy="62" r="14"/>
+ <circle class="c1" cx="136" cy="98" r="14"/>
+ <text class="s" x="40" y="136">number</text>
+
+ <text class="p" x="250" y="34">differentiation</text>
+ <circle class="c1" cx="266" cy="80" r="16"/>
+ <path class="ar" d="M290 80 L318 80"/>
+ <circle class="c2" cx="342" cy="62" r="14"/>
+ <circle class="c3" cx="342" cy="98" r="14"/>
+ <text class="s" x="250" y="136">character, same genome</text>
+
+ <text class="p" x="470" y="34">morphogenesis</text>
+ <circle class="c2" cx="486" cy="68" r="12"/>
+ <circle class="c3" cx="514" cy="68" r="12"/>
+ <circle class="c2" cx="486" cy="96" r="12"/>
+ <circle class="c3" cx="514" cy="96" r="12"/>
+ <path class="ar" d="M538 82 L566 82"/>
+ <path class="c3" d="M586 60 q30 22 0 44 z"/>
+ <text class="s" x="470" y="136">arrangement</text>
+
+ <path class="ar" d="M120 190 L300 190"/>
+ <text class="t" x="130" y="182">position sets fate</text>
+ <path class="ar" d="M420 230 L240 230"/>
+ <text class="t" x="258" y="252">fate enables shape</text>
+ <rect x="40" y="168" width="70" height="26" rx="5" class="c3"/>
+ <text class="t" x="52" y="186">shape</text>
+ <rect x="310" y="168" width="70" height="26" rx="5" class="c2"/>
+ <text class="t" x="326" y="186">fate</text>
+ <rect x="430" y="216" width="80" height="26" rx="5" class="c1"/>
+ <text class="t" x="440" y="234">adhesion</text>
+</svg>

@@ -1,0 +1,54 @@
+<!-- 낭배 형성의 순서와 세 배엽의 생성.
+
+   패널 A는 위에서 본 배반엽상층과 원시선. 원시선이 생기는 순간
+   앞뒤 축과 좌우가 정해진다는 점이 요점이므로 축을 함께 표시한다.
+   패널 B는 단면. 함입의 순서가 중요하다. 먼저 들어간 세포가 배반엽하층을
+   밀어내고 내배엽이 되고, 뒤이어 들어간 세포가 두 층 사이에서 중배엽이
+   되며, 남은 세포가 외배엽이 된다. 번호로 순서를 보인다.
+   패널 C는 척삭이 위쪽 외배엽에 보내는 유도 신호.
+
+   캡션에 적을 것: 낭배 형성의 의미는 재료가 마련된다는 것과
+   세포들이 새 이웃을 갖게 되어 새 유도가 가능해진다는 것 두 가지.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 340" width="700" height="340" role="img"
+ aria-label="Gastrulation. Panel A views the epiblast from above with the primitive streak defining the anterior-posterior axis. Panel B is a cross section numbering the order of ingression: cells entering first displace the hypoblast to form endoderm, later cells settle between the layers as mesoderm, and cells remaining on the surface become ectoderm. Panel C shows the notochord signalling upward to the overlying ectoderm.">
+ <style>
+  .t{font:12px sans-serif;fill:#16191d}
+  .s{font:11px sans-serif;fill:#4a5159}
+  .p{font:700 15px sans-serif;fill:#003c71}
+  .ecto{fill:#dce6f2;stroke:#1a4f8a;stroke-width:2}
+  .meso{fill:#f7dedc;stroke:#b3261e;stroke-width:2}
+  .endo{fill:#e3f0e4;stroke:#2e7d32;stroke-width:2}
+  .ar{stroke:#003c71;stroke-width:2;fill:none;marker-end:url(#a)}
+ </style>
+ <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker></defs>
+
+ <text class="p" x="16" y="30">A</text>
+ <ellipse class="ecto" cx="130" cy="150" rx="80" ry="105"/>
+ <rect x="124" y="150" width="12" height="80" fill="#fff5d6" stroke="#f2b705" stroke-width="2"/>
+ <circle cx="130" cy="150" r="9" fill="#f2b705" stroke="#8a6300" stroke-width="2"/>
+ <text class="s" x="146" y="146">node</text>
+ <text class="s" x="146" y="200">primitive streak</text>
+ <text class="s" x="112" y="34">anterior</text>
+ <text class="s" x="110" y="278">posterior</text>
+
+ <text class="p" x="256" y="30">B</text>
+ <rect class="ecto" x="276" y="60" width="300" height="26"/>
+ <text class="t" x="590" y="78">ectoderm</text>
+ <rect class="meso" x="276" y="96" width="300" height="24"/>
+ <text class="t" x="590" y="113">mesoderm</text>
+ <rect class="endo" x="276" y="130" width="300" height="24"/>
+ <text class="t" x="590" y="147">endoderm</text>
+ <path class="ar" d="M420 54 L420 100"/>
+ <path class="ar" d="M440 54 L440 138"/>
+ <text class="s" x="398" y="48">2</text>
+ <text class="s" x="446" y="48">1</text>
+ <text class="s" x="276" y="178">1 first in, 2 next in, rest stay</text>
+
+ <text class="p" x="256" y="226">C</text>
+ <rect class="ecto" x="276" y="236" width="300" height="26"/>
+ <ellipse class="meso" cx="420" cy="292" rx="40" ry="14"/>
+ <text class="t" x="394" y="297">notochord</text>
+ <path class="ar" d="M420 278 L420 268"/>
+ <text class="s" x="276" y="322">neural plate induced above</text>
+</svg>

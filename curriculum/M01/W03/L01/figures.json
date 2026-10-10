@@ -1,4 +1,41 @@
 {
   "lesson_id": "M01-W03-L01",
-  "figures": []
+  "figures": [
+    {
+      "figure_id": "fig-three-processes",
+      "lesson_id": "M01-W03-L01",
+      "html_anchor": "#fig-three-processes",
+      "caption": "발생을 이루는 세 과정과 그 상호 의존. 증식·분화·형태형성이 각각 무엇을 바꾸는지, 같은 유전체에서 서로 다른 세포가 나오는 과정이 유전자의 선택이라는 점, 그리고 위치가 분화를 정하고 분화가 다시 형태를 만드는 순환을 보인다.",
+      "asset_path": "assets/fig-three-processes.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-gastrulation",
+      "lesson_id": "M01-W03-L01",
+      "html_anchor": "#fig-gastrulation",
+      "caption": "낭배 형성의 순서와 세 배엽의 생성. 원시선의 출현이 앞뒤 축을 정하는 과정, 함입의 순서가 내배엽과 중배엽을 차례로 만드는 구조, 척삭의 형성과 그것이 위쪽 외배엽에 보내는 유도 신호를 함께 보인다.",
+      "asset_path": "assets/fig-gastrulation.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-morphogen",
+      "lesson_id": "M01-W03-L01",
+      "html_anchor": "#fig-morphogen",
+      "caption": "형태형성인자 기울기와 Hox 유전자가 위치 정보를 만드는 두 방식. 신경관 등배 축에서 Shh와 BMP의 기울기가 마주 보며 세포 운명의 띠를 만드는 구조, 연속적 농도가 역치로 읽혀 불연속적 구획이 되는 변환, 그리고 Hox 유전자의 염색체상 순서와 몸의 앞뒤 순서가 일치하는 공선성을 함께 보인다.",
+      "asset_path": "assets/fig-morphogen.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    }
+  ]
 }
