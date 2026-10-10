@@ -1,0 +1,64 @@
+<!-- Sarcomere의 구성과 수축 시 띠의 변화.
+
+   위는 이완, 아래는 수축. 같은 척도로 나란히 놓아 비교가 눈으로 되게 한다.
+   요점은 하나다. A대의 길이가 변하지 않고 I대와 H구역만 짧아진다는 것.
+   그래서 A대 폭을 재는 보조선을 두 상태에 모두 긋는다.
+   굵은 필라멘트는 가운데 M선에 고정, 가는 필라멘트는 양쪽 Z선에 고정.
+   titin은 Z선에서 M선까지 용수철로 그린다.
+
+   캡션에 적을 것: 이 관찰이 미끄럼 필라멘트 모형의 근거라는 점.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 330" width="680" height="330" role="img"
+ aria-label="Sarcomere structure relaxed and contracted. Thick filaments anchored at the M line and thin filaments anchored at the Z lines. In the contracted state the A band keeps the same width while the I band and H zone shorten and the Z lines move closer, which is the evidence for the sliding filament model.">
+ <style>
+  .t{font:12px sans-serif;fill:#16191d}
+  .s{font:11px sans-serif;fill:#4a5159}
+  .h{font:700 13px sans-serif;fill:#003c71}
+  .thin{stroke:#1a4f8a;stroke-width:3}
+  .thick{stroke:#b3261e;stroke-width:7}
+  .z{stroke:#16191d;stroke-width:4}
+  .m{stroke:#8a6300;stroke-width:2;stroke-dasharray:4 3}
+  .gd{stroke:#c6d2dd;stroke-width:1.4;stroke-dasharray:4 4}
+  .ti{stroke:#2e7d32;stroke-width:1.8;fill:none}
+ </style>
+
+ <text class="h" x="20" y="30">relaxed</text>
+ <line class="z" x1="80" y1="46" x2="80" y2="118"/>
+ <line class="z" x1="500" y1="46" x2="500" y2="118"/>
+ <line class="m" x1="290" y1="50" x2="290" y2="114"/>
+ <g class="thin">
+  <line x1="80" y1="60" x2="250" y2="60"/><line x1="80" y1="76" x2="250" y2="76"/>
+  <line x1="330" y1="60" x2="500" y2="60"/><line x1="330" y1="76" x2="500" y2="76"/>
+ </g>
+ <g class="thick">
+  <line x1="180" y1="92" x2="400" y2="92"/>
+ </g>
+ <path class="ti" d="M80 108 q12 -10 24 0 q12 10 24 0 q12 -10 24 0 q12 10 24 0 L290 108"/>
+ <line class="gd" x1="180" y1="40" x2="180" y2="130"/>
+ <line class="gd" x1="400" y1="40" x2="400" y2="130"/>
+ <text class="s" x="258" y="36">A band</text>
+ <text class="s" x="112" y="36">I band</text>
+ <text class="s" x="424" y="36">I band</text>
+ <text class="s" x="266" y="140">H zone</text>
+ <text class="s" x="70" y="140">Z</text>
+ <text class="s" x="494" y="140">Z</text>
+ <text class="s" x="284" y="156">M</text>
+
+ <text class="h" x="20" y="208">contracted</text>
+ <line class="z" x1="130" y1="224" x2="130" y2="296"/>
+ <line class="z" x1="450" y1="224" x2="450" y2="296"/>
+ <line class="m" x1="290" y1="228" x2="290" y2="292"/>
+ <g class="thin">
+  <line x1="130" y1="238" x2="330" y2="238"/><line x1="130" y1="254" x2="330" y2="254"/>
+  <line x1="250" y1="238" x2="450" y2="238"/><line x1="250" y1="254" x2="450" y2="254"/>
+ </g>
+ <g class="thick">
+  <line x1="180" y1="270" x2="400" y2="270"/>
+ </g>
+ <line class="gd" x1="180" y1="218" x2="180" y2="308"/>
+ <line class="gd" x1="400" y1="218" x2="400" y2="308"/>
+ <text class="s" x="258" y="214">A band unchanged</text>
+ <text class="s" x="140" y="318">I band shorter</text>
+ <text class="s" x="360" y="318">I band shorter</text>
+ <text class="s" x="252" y="214"> </text>
+</svg>

@@ -1,4 +1,29 @@
 {
   "lesson_id": "M01-W03-L03",
-  "figures": []
+  "figures": [
+    {
+      "figure_id": "fig-sarcomere",
+      "lesson_id": "M01-W03-L03",
+      "html_anchor": "#fig-sarcomere",
+      "caption": "Sarcomere의 구성과 수축 시 띠의 변화. 가는 필라멘트와 굵은 필라멘트의 배치, A대·I대·H구역·Z선·M선의 위치, 수축할 때 A대는 변하지 않고 I대와 H구역만 짧아진다는 점, 그리고 Z선에서 M선까지 걸친 titin의 위치를 함께 보인다.",
+      "asset_path": "assets/fig-sarcomere.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-ec-coupling",
+      "lesson_id": "M01-W03-L03",
+      "html_anchor": "#fig-ec-coupling",
+      "caption": "흥분–수축 짝이음의 경로와 세 근육의 차이. T세관이 신호를 세포 안으로 전달하는 구조, 골격근에서 DHPR과 RyR1이 물리적으로 맞닿아 있는 배치, 심근에서 들어온 Ca²⁺이 더 많은 Ca²⁺ 방출을 유도하는 증폭, 그리고 평활근에서 표적이 calmodulin으로 바뀌는 지점을 함께 보인다.",
+      "asset_path": "assets/fig-ec-coupling.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    }
+  ]
 }
