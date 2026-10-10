@@ -1,4 +1,17 @@
 {
   "lesson_id": "M01-W04-L03",
-  "figures": []
+  "figures": [
+    {
+      "figure_id": "fig-meiosis",
+      "lesson_id": "M01-W04-L03",
+      "html_anchor": "#fig-meiosis",
+      "caption": "유사분열과 감수분열의 비교, 그리고 다양성이 만들어지는 두 지점. 한 번의 복제 뒤 두 번 분열하는 구조, 제1분열에서 상동 염색체가 갈라지고 제2분열에서 자매 염색분체가 갈라지는 차이, 독립적 배열과 교차가 조합을 늘리는 방식을 함께 보인다.",
+      "asset_path": "assets/fig-meiosis.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    }
+  ]
 }

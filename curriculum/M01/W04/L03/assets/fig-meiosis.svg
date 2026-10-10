@@ -1,0 +1,74 @@
+<!-- 유사분열과 감수분열의 비교, 그리고 다양성의 두 지점.
+
+   한 쌍의 상동 염색체만 색을 달리해 그린다. 염색체를 여러 쌍 그리면
+   복잡해지기만 하고 요점이 흐려진다.
+   유사분열은 결과가 같다는 것, 감수분열은 두 번 나뉘고 넷이 모두
+   다르다는 것만 보이면 된다.
+   아래에 다양성의 두 지점을 따로 둔다. 독립적 배열은 두 가지 배열을
+   나란히 놓아 보이고, 교차는 색이 섞인 염색체로 보인다.
+
+   캡션에 적을 것: 사람의 23쌍에서 독립적 배열만으로 약 840만 가지.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 360" width="680" height="360" role="img"
+ aria-label="Mitosis compared with meiosis using one pair of homologous chromosomes in two colours. Mitosis gives two identical cells; meiosis divides twice and gives four cells that all differ. Below, the two sources of variety: independent assortment shown as two alternative arrangements, and crossing over shown as chromosomes of mixed colour.">
+ <style>
+  .t{font:12px sans-serif;fill:#16191d}
+  .s{font:11px sans-serif;fill:#4a5159}
+  .h{font:700 13px sans-serif;fill:#003c71}
+  .c{fill:#fff;stroke:#8a98a6;stroke-width:1.6}
+  .ar{stroke:#003c71;stroke-width:2;fill:none;marker-end:url(#a)}
+ </style>
+ <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker></defs>
+
+ <text class="h" x="20" y="28">mitosis</text>
+ <ellipse class="c" cx="70" cy="70" rx="34" ry="26"/>
+ <rect x="56" y="58" width="7" height="24" fill="#1a4f8a"/>
+ <rect x="76" y="58" width="7" height="24" fill="#b3261e"/>
+ <path class="ar" d="M110 70 L146 70"/>
+ <ellipse class="c" cx="186" cy="48" rx="30" ry="22"/>
+ <rect x="174" y="38" width="6" height="20" fill="#1a4f8a"/>
+ <rect x="190" y="38" width="6" height="20" fill="#b3261e"/>
+ <ellipse class="c" cx="186" cy="100" rx="30" ry="22"/>
+ <rect x="174" y="90" width="6" height="20" fill="#1a4f8a"/>
+ <rect x="190" y="90" width="6" height="20" fill="#b3261e"/>
+ <text class="s" x="226" y="76">2 identical, 2n</text>
+
+ <text class="h" x="360" y="28">meiosis</text>
+ <ellipse class="c" cx="400" cy="70" rx="30" ry="24"/>
+ <rect x="388" y="58" width="7" height="22" fill="#1a4f8a"/>
+ <rect x="406" y="58" width="7" height="22" fill="#b3261e"/>
+ <path class="ar" d="M434 70 L464 70"/>
+ <ellipse class="c" cx="496" cy="44" rx="26" ry="20"/>
+ <rect x="490" y="34" width="7" height="20" fill="#1a4f8a"/>
+ <ellipse class="c" cx="496" cy="100" rx="26" ry="20"/>
+ <rect x="490" y="90" width="7" height="20" fill="#b3261e"/>
+ <path class="ar" d="M524 44 L552 44"/>
+ <path class="ar" d="M524 100 L552 100"/>
+ <ellipse class="c" cx="580" cy="28" rx="22" ry="17"/>
+ <ellipse class="c" cx="580" cy="64" rx="22" ry="17"/>
+ <ellipse class="c" cx="580" cy="100" rx="22" ry="17"/>
+ <ellipse class="c" cx="580" cy="136" rx="22" ry="17"/>
+ <text class="s" x="612" y="86">4, all n</text>
+ <text class="s" x="466" y="162">first: homologues split</text>
+ <text class="s" x="554" y="178">second: sisters split</text>
+
+ <text class="h" x="20" y="226">two sources of variety</text>
+ <text class="t" x="20" y="252">independent assortment</text>
+ <rect x="30" y="266" width="7" height="22" fill="#1a4f8a"/>
+ <rect x="48" y="266" width="7" height="22" fill="#b3261e"/>
+ <rect x="30" y="296" width="7" height="22" fill="#b3261e"/>
+ <rect x="48" y="296" width="7" height="22" fill="#1a4f8a"/>
+ <text class="s" x="74" y="282">either way</text>
+ <text class="s" x="74" y="312">per pair, independently</text>
+ <text class="s" x="20" y="340">23 pairs give about 8.4 million</text>
+
+ <text class="t" x="360" y="252">crossing over</text>
+ <rect x="370" y="266" width="8" height="30" fill="#1a4f8a"/>
+ <rect x="392" y="266" width="8" height="30" fill="#b3261e"/>
+ <path class="ar" d="M410 282 L444 282"/>
+ <rect x="456" y="266" width="8" height="18" fill="#1a4f8a"/>
+ <rect x="456" y="284" width="8" height="12" fill="#b3261e"/>
+ <rect x="478" y="266" width="8" height="18" fill="#b3261e"/>
+ <rect x="478" y="284" width="8" height="12" fill="#1a4f8a"/>
+ <text class="s" x="360" y="326">segments exchanged between homologues</text>
+</svg>
