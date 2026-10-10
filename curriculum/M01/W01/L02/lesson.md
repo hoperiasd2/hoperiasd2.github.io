@@ -2,8 +2,8 @@
 lesson_id: M01-W01-L02
 title: 호흡계 요약: 환기·가스교환·산소 운반
 en: The Respiratory System: Ventilation, Gas Exchange and Oxygen Transport
-status: 초안
-version: v0.1
+status: 완성
+version: v1.0
 ---
 
 @obj

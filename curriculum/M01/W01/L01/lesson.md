@@ -2,8 +2,8 @@
 lesson_id: M01-W01-L01
 title: 순환계 요약: 심장·혈관·혈류와 항상성
 en: The Circulatory System: Heart, Vessels, Blood Flow and Homeostasis
-status: 초안
-version: v0.1
+status: 완성
+version: v1.0
 ---
 
 @obj
