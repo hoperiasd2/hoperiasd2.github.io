@@ -2,13 +2,16 @@
 """즉석 입력을 수업으로 보내고, 저장된 입력 명령을 관리한다.
 
 사용:
-    python3 tools/inbox.py                   INBOX.md의 입력을 각 수업으로 보낸다
+    python3 tools/inbox.py                   INBOX.md와 inbox/ 의 .md 파일을 각 수업으로 보낸다
     python3 tools/inbox.py --show            보낸 뒤 각 수업에 쌓인 입력을 모아 본다
     python3 tools/inbox.py --snippets        저장된 입력 명령 목록
     python3 tools/inbox.py --save 이름       표준입력을 입력 명령으로 저장한다
     python3 tools/inbox.py --dry             보내지 않고 무엇이 어디로 갈지만 보인다
 
-INBOX.md 형식:
+강의록 페이지의 '수정' 단추로 내려받은 파일도 inbox/ 에 넣으면 같이 처리된다.
+처리한 파일은 inbox/done/ 으로 옮긴다.
+
+형식:
     ## M03-W05-L02
     @img https://example.org/xist.png | Xist가 X 염색체를 덮는 과정
     > 이 부분은 lncRNA 절 뒤에 넣어라
@@ -65,38 +68,67 @@ def split_sections(text):
     return out
 
 
+def inputs():
+    """INBOX.md 와 inbox/ 에 들어온 .md 파일을 모은다."""
+    out = []
+    if INBOX.exists():
+        out.append(INBOX)
+    for f in sorted(INBOX.parent.glob("*.md")):
+        if f != INBOX and f.name.upper() != "README.MD":
+            out.append(f)
+    return out
+
+
 def dispatch(dry=False):
+    INBOX.parent.mkdir(parents=True, exist_ok=True)
     if not INBOX.exists():
         INBOX.write_text(TEMPLATE, encoding="utf-8")
         print(f"입력 칸을 만들었다: {INBOX.relative_to(ROOT)}")
-        return 0
-    text = re.sub(r"<!--.*?-->", "", INBOX.read_text(encoding="utf-8"), flags=re.S)
-    secs = split_sections(text)
-    if not secs:
+
+    known, n, used = rows(), 0, []
+    for src in inputs():
+        text = re.sub(r"<!--.*?-->", "", src.read_text(encoding="utf-8"), flags=re.S)
+        secs = split_sections(text)
+        if not secs:
+            continue
+        print(f"{src.relative_to(ROOT)}")
+        sent = 0
+        for lid, body in secs:
+            body = "\n".join(body).strip("\n")
+            if not body.strip():
+                continue
+            if lid not in known:
+                print(f"  건너뜀 {lid}: curriculum.csv에 없는 수업 ID")
+                continue
+            d = ROOT / known[lid]["path"]
+            print(f"  {lid} → {d.relative_to(ROOT)}/notes.md  ({len(body)}자)")
+            if dry:
+                continue
+            d.mkdir(parents=True, exist_ok=True)
+            f = d / "notes.md"
+            old = f.read_text(encoding="utf-8") if f.exists() else ""
+            f.write_text(f"{old}\n\n{body}\n".lstrip("\n")
+                         if old.strip() else f"{body}\n", encoding="utf-8")
+            sent += 1
+        if sent:
+            n += sent
+            used.append(src)
+
+    if dry:
+        return n
+    if not n:
         print("보낼 입력이 없다.")
         return 0
-    known, n = rows(), 0
-    for lid, body in secs:
-        body = "\n".join(body).strip("\n")
-        if not body.strip():
-            continue
-        if lid not in known:
-            print(f"  건너뜀 {lid}: curriculum.csv에 없는 수업 ID")
-            continue
-        d = ROOT / known[lid]["path"]
-        print(f"  {lid} → {d.relative_to(ROOT)}/notes.md  ({len(body)}자)")
-        if dry:
-            continue
-        d.mkdir(parents=True, exist_ok=True)
-        f = d / "notes.md"
-        old = f.read_text(encoding="utf-8") if f.exists() else ""
-        f.write_text(f"{old}\n\n{body}\n".lstrip("\n")
-                     if old.strip() else f"{body}\n", encoding="utf-8")
-        n += 1
-    if not dry and n:
-        INBOX.write_text(TEMPLATE, encoding="utf-8")
-        print(f"\n{n}개 수업으로 보냈다. 입력 칸을 비웠다.")
-        print("다음: python3 tools/build_lesson.py <수업ID>  (또는 --all)")
+
+    done = INBOX.parent / "done"
+    for src in used:
+        if src == INBOX:
+            INBOX.write_text(TEMPLATE, encoding="utf-8")
+        else:
+            done.mkdir(parents=True, exist_ok=True)
+            src.replace(done / src.name)
+    print(f"\n{n}개 수업으로 보냈다. 입력 칸을 비우고 받은 파일은 inbox/done/ 으로 옮겼다.")
+    print("다음: python3 tools/build_lesson.py <수업ID>  (또는 --all)")
     return n
 
 

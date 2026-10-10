@@ -2,8 +2,12 @@
 """집필된 수업이 PROJECT.md의 기준을 지켰는지 확인한다.
 
 사용:
-    python3 tools/qa_lesson.py            집필된 모든 수업
+    python3 tools/qa_lesson.py              집필된 모든 수업
     python3 tools/qa_lesson.py M02-W09-L02
+    python3 tools/qa_lesson.py --strict ... 그림 글자 예산 초과도 불통과로 본다
+
+그림 글자 예산은 FIG 에 있다. 새로 그리는 그림은 --strict 로 확인한다.
+먼저 쓴 그림은 예산을 넘는 것이 많아 기본값에서는 경고로만 알린다.
 """
 import csv
 import re
@@ -11,6 +15,7 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
+STRICT = "--strict" in sys.argv
 
 # 금지 용어 → 대체어
 BANNED = {
@@ -39,6 +44,33 @@ HANGUL = re.compile(r"[가-힣]")
 
 MIN = {"secs": 7, "chars": 10000, "figs": 3, "quiz": 5, "refs": 5}
 SLIDES = (38, 52)
+
+# 그림은 논문 figure처럼 라벨만 둔다. 설명은 캡션과 SVG 주석으로 옮긴다.
+#   one   라벨 한 줄의 길이 한계. 이보다 길면 글자가 그림 밖으로 나가거나 겹친다.
+#   chars, nodes 는 권고값이다. 표 형태의 그림은 짧은 칸이 많아 넘을 수 있다.
+FIG = {"one": 48, "chars": 380, "nodes": 26}
+
+
+def is_sentence(t):
+    """라벨이 아니라 문장인지 본다. 문장은 캡션과 주석으로 옮겨야 한다."""
+    if len(t) > FIG["one"]:
+        return True
+    if re.search(r"[a-z)\]][.]$", t):          # 마침표로 끝나면 문장이다
+        return True
+    if re.search(r"[.][ ][A-Z]", t):           # 한 칸 안에 두 문장
+        return True
+    return False
+
+
+def fig_text(svg):
+    """그림 안에 보이는 글자를 센다. 주석과 aria-label은 설명이므로 빼고 센다."""
+    vis = re.sub(r"<!--.*?-->", "", svg, flags=re.S)
+    vis = re.sub(r"<(desc|title)\b.*?</\1>", "", vis, flags=re.S)
+    items = [re.sub(r"<[^>]+>", "", t) for t in
+             re.findall(r"<text\b[^>]*>(.*?)</text>", vis, re.S)]
+    items = [re.sub(r"\s+", " ", t).strip() for t in items]
+    items = [t for t in items if t]
+    return items
 
 
 def check(row):
@@ -79,7 +111,8 @@ def check(row):
         if w in body:
             problems.append(f"상투어 '{w}'")
 
-    # 그림 파일과 그림 속 한글
+    # 그림 파일과 그림 속 한글, 그리고 그림 안 글자 분량
+    fat, hint = [], []
     for fid in re.findall(r"^@fig (\S+)", body, re.M):
         found = None
         for ext in (".svg", ".png", ".jpg", ".jpeg", ".webp"):
@@ -96,6 +129,16 @@ def check(row):
                 problems.append(f"SVG 안에 한글: {fid}")
             if not re.search(r'viewBox="', svg):
                 problems.append(f"viewBox 없음: {fid}")
+            items = fig_text(svg)
+            sent = [t for t in items if is_sentence(t)]
+            if sent:
+                worst = max(sent, key=len)
+                fat.append(f"{fid}: 문장 {len(sent)}개 (가장 긴 것 {len(worst)}자) "
+                           f"- 캡션과 주석으로 옮긴다")
+            total = sum(len(t) for t in items)
+            if total > FIG["chars"] or len(items) > FIG["nodes"]:
+                hint.append(f"{fid}: 글자 {total}자, text {len(items)}개 "
+                            f"(권고 {FIG['chars']}자, {FIG['nodes']}개)")
 
     # 슬라이드 장수
     pptx = d / "slides.pptx"
@@ -111,27 +154,42 @@ def check(row):
     else:
         problems.append("슬라이드 없음")
 
+    if fat:
+        if STRICT:
+            problems += ["그림 안 문장 — " + x for x in fat]
+        else:
+            notes["fat"] = fat
+    if hint:
+        notes["hint"] = hint
+
     return lid, notes, problems
 
 
 def main():
     with (ROOT / "curriculum.csv").open(encoding="utf-8") as f:
         rows = list(csv.DictReader(f))
-    want = sys.argv[1] if len(sys.argv) > 1 else None
+    args = [a for a in sys.argv[1:] if a != "--strict"]
+    want = args[0] if args else None
     results = [r for r in (check(x) for x in rows
                            if not want or x["lesson_id"] == want) if r]
     if not results:
         print("집필된 수업이 없습니다.")
         return
-    bad = 0
+    bad = fatn = 0
     for lid, n, probs in results:
         mark = "OK " if not probs else "NG "
         print(f"{mark}{lid}  절{n['secs']} 그림{n['figs']} 문항{n['quiz']} "
               f"출처{n['refs']} {n['chars']:,}자 슬라이드{n.get('slides','-')}")
         for p in probs:
             print(f"      - {p}")
+        for x in n.get("fat", []):
+            print(f"      ~ 그림 안 문장 {x}")
+            fatn += 1
         bad += bool(probs)
     print(f"\n{len(results)}편 중 {len(results)-bad}편 통과, {bad}편 수정 필요")
+    if fatn:
+        print(f"그림 안에 문장이 남은 그림 {fatn}개. 새로 그릴 때는 라벨만 두고 "
+              f"설명을 캡션과 SVG 주석으로 옮긴다. 목록은 tools/fig_audit.py 로 본다.")
     sys.exit(1 if bad else 0)
 
 

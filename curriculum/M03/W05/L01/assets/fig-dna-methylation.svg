@@ -1,68 +1,99 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 450" width="880" height="450" role="img"
- aria-label="The chemical nature of DNA methylation and the two mechanisms that lower transcription: methylation at carbon five of cytosine and the symmetry of the CpG arrangement, the difference in target molecule from histone methylation, the position and property of CpG islands, direct obstruction of transcription factor binding, and the route by which a methyl-CpG binding protein brings in a repressive complex.">
+<!-- DNA methylation의 실체와 전사를 낮추는 두 기전.
+
+   패널 구성
+   A  같은 "methylation" 이지만 표적 분자가 다르다는 대비.
+      histone은 단백질 잔기(Lys, Arg), DNA는 염기(cytosine의 5번 탄소).
+   B  CpG의 대칭성. C 다음에 G가 같은 가닥에 오는 배열이고, p는 인산이다.
+      C-G 염기쌍으로 읽으면 안 된다. 반대 가닥도 CpG이므로 양쪽 가닥이
+      표지를 가질 수 있고, 이 대칭이 8절 유지 기전의 근거가 된다.
+   C  CpG island. 사람 유전자의 약 60퍼센트가 promoter에 가진다.
+      유전체 전체에서 CpG가 드문 이유는 5mC가 T로 탈아미노화되어 CpG가
+      사라져 왔기 때문이고, island는 그 손실을 피했다. 대부분의 세포에서
+      methyl화되지 않은 상태로 있었다는 뜻이다.
+   D  전사를 낮추는 두 경로. 직접 방해는 결합면을 가리는 것이고,
+      reader 경로는 MeCP2, MBD가 methyl화된 CpG를 읽고 HDAC을 포함한
+      공동억제인자를 데려오는 것이다. 후자는 염색질 변화가 퍼지므로
+      작용 범위가 더 넓다.
+
+   캡션에 넣을 유보 사항
+   - methylation은 돌연변이가 아니다. 염기가 바뀌지 않고 기가 붙는다.
+     일반 염기서열 분석으로는 보이지 않고 bisulfite 처리가 필요하다.
+   - 유전자 몸통의 methylation은 활발히 전사되는 유전자에서 오히려 높다.
+     각인 조절 영역에서는 enhancer의 도달 범위를 바꾼다.
+     따라서 어느 영역을 측정했는지를 늘 확인해야 한다.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 440" width="820" height="440" role="img"
+ aria-label="DNA methylation. Panel A contrasts histone methylation on a protein residue with DNA methylation on carbon 5 of cytosine. Panel B shows the symmetry of a CpG site on both strands. Panel C places a CpG island at a gene promoter. Panel D shows two routes that lower transcription: a transcription factor blocked by the methyl group, and MeCP2 recruiting a corepressor complex with HDAC.">
  <style>
-  .bx{fill:#fff;stroke:#c6d2dd;stroke-width:1.8}.k{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
-  .t{font:12px sans-serif;fill:#16191d}.tb{font:700 13px sans-serif;fill:#003c71}
-  .th{font:700 15px sans-serif;fill:#003c71}.s{font:11px sans-serif;fill:#4a5159}
-  .m{font:10px monospace;fill:#16191d}
-  .dna{fill:none;stroke:#16191d;stroke-width:2.4}
-  .tf{fill:#e3f0e4;stroke:#2e7d32;stroke-width:2}
-  .mbd{fill:#f7dedc;stroke:#b3261e;stroke-width:2.2}
-  .hdac{fill:#f7dedc;stroke:#b3261e;stroke-width:2.2}
-  .oct{fill:#dce6f2;stroke:#1a4f8a;stroke-width:2}
-  .isl{fill:#fff5d6;stroke:#f2b705;stroke-width:2}
-  .no{stroke:#b3261e;stroke-width:3;fill:none}
+  .t{font:12px sans-serif;fill:#16191d}
+  .m{font:11px monospace;fill:#16191d}
+  .p{font:700 15px sans-serif;fill:#003c71}
+  .s{font:11px sans-serif;fill:#4a5159}
+  .dna{stroke:#1a4f8a;stroke-width:3;fill:none}
+  .prot{fill:#e3f0e4;stroke:#2e7d32;stroke-width:2}
+  .base{fill:#dce6f2;stroke:#1a4f8a;stroke-width:2}
+  .me{fill:#f2b705;stroke:#8a6300;stroke-width:1.6}
+  .isl{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .gene{fill:#f7dedc;stroke:#b3261e;stroke-width:2}
   .ar{stroke:#003c71;stroke-width:2;fill:none;marker-end:url(#a)}
+  .no{stroke:#b3261e;stroke-width:3;fill:none}
  </style>
  <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker></defs>
 
- <text class="th" x="20" y="28">A  Same word, different target molecule</text>
- <line x1="20" y1="38" x2="430" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
- <rect class="bx" x="20" y="54" width="410" height="34" rx="6"/>
- <text class="t" x="34" y="76">histone methylation  to  a PROTEIN residue (Lys, Arg)</text>
- <rect class="k" x="20" y="94" width="410" height="34" rx="6"/>
- <text class="t" x="34" y="116">DNA methylation  to  the BASE cytosine, carbon 5</text>
+ <text class="p" x="16" y="30">A</text>
+ <rect class="prot" x="40" y="18" width="116" height="26" rx="4"/>
+ <text class="t" x="52" y="36">histone</text>
+ <path class="ar" d="M162 31 L196 31"/>
+ <circle class="me" cx="214" cy="31" r="9"/>
+ <text class="m" x="232" y="35">Lys, Arg</text>
+ <rect class="base" x="40" y="54" width="116" height="26" rx="4"/>
+ <text class="t" x="52" y="72">DNA</text>
+ <path class="ar" d="M162 67 L196 67"/>
+ <circle class="me" cx="214" cy="67" r="9"/>
+ <text class="m" x="232" y="71">cytosine C5</text>
 
- <text class="th" x="20" y="162">B  CpG and its symmetry</text>
- <line x1="20" y1="172" x2="430" y2="172" stroke="#c6d2dd" stroke-width="1.5"/>
- <text class="m" x="40" y="204" style="font:700 14px monospace">5'- C p G -3'</text>
- <text class="m" x="40" y="224" style="font:700 14px monospace">3'- G p C -5'</text>
- <circle cx="62" cy="192" r="5" fill="#f2b705" stroke="#8a6300" stroke-width="1.4"/>
- <circle cx="104" cy="230" r="5" fill="#f2b705" stroke="#8a6300" stroke-width="1.4"/>
- <text class="s" x="40" y="252">CpG means C followed by G ON THE SAME STRAND. The p is the</text>
- <text class="s" x="40" y="270">phosphate — do not read it as the C-G base pair.</text>
- <text class="tb" x="40" y="294">The opposite strand is also CpG, so BOTH strands can carry the mark.</text>
- <text class="s" x="40" y="314">That symmetry is the basis of the maintenance mechanism in section 8.</text>
- <text class="s" x="40" y="338">Methylation is not a mutation: the base is not exchanged, a group is added.</text>
- <text class="s" x="40" y="356">Ordinary sequencing misses it; bisulfite treatment is needed.</text>
+ <text class="p" x="16" y="146">B</text>
+ <text class="m" x="70" y="140">5' - C  p  G - 3'</text>
+ <text class="m" x="70" y="164">3' - G  p  C - 5'</text>
+ <line x1="106" y1="128" x2="106" y2="114" stroke="#8a6300" stroke-width="2"/>
+ <circle class="me" cx="106" cy="107" r="7"/>
+ <line x1="146" y1="170" x2="146" y2="184" stroke="#8a6300" stroke-width="2"/>
+ <circle class="me" cx="146" cy="191" r="7"/>
+ <text class="s" x="270" y="118">p = phosphate, not a base pair</text>
+ <text class="s" x="270" y="146">both strands carry the mark</text>
+ <text class="s" x="270" y="174">this symmetry allows maintenance</text>
 
- <text class="th" x="460" y="162">C  CpG island</text>
- <line x1="460" y1="172" x2="860" y2="172" stroke="#c6d2dd" stroke-width="1.5"/>
- <path class="dna" d="M470 212 h380"/>
- <rect class="isl" x="560" y="202" width="110" height="20"/>
- <text class="m" x="584" y="217">CpG island</text>
- <rect class="bx" x="670" y="202" width="170" height="20"/>
- <text class="m" x="730" y="217">gene</text>
- <text class="s" x="460" y="244">Present at the promoter of about 60 percent of human genes.</text>
- <text class="s" x="460" y="262">CpG is rare genome-wide because 5mC deaminates to T and CpG</text>
- <text class="s" x="460" y="280">was lost over time; islands escaped that loss, which implies they</text>
- <text class="s" x="460" y="298">stayed unmethylated in most cells.</text>
+ <text class="p" x="16" y="216">C</text>
+ <line class="dna" x1="40" y1="222" x2="420" y2="222"/>
+ <rect class="isl" x="96" y="210" width="78" height="24"/>
+ <rect class="gene" x="186" y="210" width="190" height="24"/>
+ <text class="t" x="100" y="252">CpG island</text>
+ <text class="t" x="240" y="252">gene</text>
+ <text class="s" x="440" y="216">at the promoter of about 60%</text>
+ <text class="s" x="440" y="234">of human genes</text>
+ <text class="s" x="440" y="254">rare elsewhere</text>
 
- <text class="th" x="20" y="386">D  Two mechanisms that lower transcription</text>
- <line x1="20" y1="396" x2="860" y2="396" stroke="#c6d2dd" stroke-width="1.5"/>
- <text class="t" x="20" y="418">1  DIRECT: some factors cannot bind their recognition sequence when a methyl group sits on it — the group masks the binding surface.</text>
- <text class="t" x="20" y="440">2  READER: MeCP2 and MBD proteins recognise methylated CpG and bring in corepressors with HDAC. This acts over a wider range, since the chromatin change can spread.</text>
+ <text class="p" x="16" y="312">D</text>
+ <text class="t" x="40" y="306">1  direct</text>
+ <line class="dna" x1="40" y1="362" x2="300" y2="362"/>
+ <line x1="150" y1="354" x2="150" y2="342" stroke="#8a6300" stroke-width="2"/>
+ <circle class="me" cx="150" cy="335" r="7"/>
+ <ellipse class="base" cx="150" cy="300" rx="34" ry="16"/>
+ <text class="t" x="139" y="305">TF</text>
+ <g stroke="#b3261e" stroke-width="3">
+  <line x1="196" y1="310" x2="216" y2="330"/>
+  <line x1="216" y1="310" x2="196" y2="330"/>
+ </g>
+ <text class="s" x="40" y="394">methyl masks the binding surface</text>
 
- <path class="dna" d="M470 324 h160"/>
- <circle cx="520" cy="316" r="5" fill="#f2b705" stroke="#8a6300" stroke-width="1.4"/>
- <rect class="tf" x="546" y="300" width="50" height="22" rx="4"/>
- <text class="m" x="556" y="316">TF</text>
- <line class="no" x1="528" y1="312" x2="542" y2="310"/>
- <path class="dna" d="M668 324 h172"/>
- <circle cx="700" cy="316" r="5" fill="#f2b705" stroke="#8a6300" stroke-width="1.4"/>
- <rect class="mbd" x="684" y="296" width="60" height="22" rx="4"/>
- <text class="m" x="690" y="312">MeCP2</text>
- <rect class="hdac" x="752" y="296" width="76" height="22" rx="4"/>
- <text class="m" x="758" y="312">HDAC cx</text>
- <text class="s" x="460" y="352">Caveat: gene-body methylation is HIGH in actively transcribed genes, and at an imprinting control region methylation changes an enhancer's reach instead. Always check WHICH region was measured.</text>
+ <text class="t" x="420" y="306">2  reader</text>
+ <line class="dna" x1="420" y1="362" x2="780" y2="362"/>
+ <line x1="520" y1="354" x2="520" y2="342" stroke="#8a6300" stroke-width="2"/>
+ <circle class="me" cx="520" cy="335" r="7"/>
+ <ellipse class="prot" cx="520" cy="300" rx="40" ry="16"/>
+ <text class="t" x="498" y="305">MeCP2</text>
+ <path class="ar" d="M562 300 L610 300"/>
+ <ellipse class="gene" cx="678" cy="300" rx="58" ry="18"/>
+ <text class="t" x="645" y="305">HDAC cx</text>
+ <text class="s" x="420" y="394">reader brings a corepressor</text>
 </svg>

@@ -1,68 +1,92 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 450" width="880" height="450" role="img"
- aria-label="Epigenetic abnormality in cancer and targeted therapy, plus the three distinctions: focal hypermethylation at tumour suppressor promoters together with global hypomethylation, the points of action of DNMT, HDAC, EZH2, IDH and BET inhibitors, and the difference in time scale and strength of evidence between a change in molecular mark, maintenance of somatic state, and transgenerational transmission.">
+<!-- 암의 후성유전 이상과 표적 치료, 그리고 세 가지 구분.
+
+   본문에 이미 약물 표와 세 가지 구분이 글로 있다. 그림은 글이 할 수 없는 것만 한다.
+   표를 다시 그리지 않고, 배치로만 보이는 세 가지를 보인다.
+
+   패널 구성
+   A  두 방향이 한 유전체에 같이 나타난다는 것을 같은 축에 놓아 보인다.
+      종양 억제 유전자 promoter의 CpG island에는 표지가 몰려 붙고(국소 과메틸화),
+      반복서열 구간에서는 표지가 빠진다(전체 저메틸화). 모순이 아니라 배치가
+      흐트러진 것이다. 8절의 DNMT3A, TET2 변이가 양쪽으로 모두 암을 만드는 것과
+      같은 논리다. 캡션에 MLH1, CDKN2A, MGMT를 적는다.
+   B  약물의 작용 지점을 writer, eraser, reader, 대사물의 네 자리로 나눠 보인다.
+      본문 표의 다섯 약물 계열이 각각 어디에 붙는지가 이 그림의 몫이고,
+      적응증은 본문 표에 있으므로 그림에 넣지 않는다.
+      BET는 reader를 표적으로 한다는 점, IDH는 대사가 후성유전으로 들어오는
+      경로라는 점이 요점이다.
+   C  시간 규모를 하나의 축에 올려 세 현상을 가른다.
+      표지의 변화는 시간에서 일 규모, 체세포 상태 유지는 분열을 넘어,
+      세대 간 전달은 생식세포 재설정이라는 관문 뒤에 있다. 관문을 끊긴 축으로
+      그려 근거 수준이 다르다는 것을 배치로 보인다.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 430" width="820" height="430" role="img"
+ aria-label="Epigenetic change in cancer. Panel A places focal hypermethylation at a tumour suppressor promoter and global hypomethylation over repeats on one genome axis. Panel B maps drug classes onto writer, eraser, reader and metabolite positions. Panel C puts the three phenomena on one time axis, with germline resetting drawn as a break before transmission to offspring.">
  <style>
-  .bx{fill:#fff;stroke:#c6d2dd;stroke-width:1.8}.k{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
-  .t{font:12px sans-serif;fill:#16191d}.tb{font:700 13px sans-serif;fill:#003c71}
-  .th{font:700 15px sans-serif;fill:#003c71}.s{font:11px sans-serif;fill:#4a5159}
-  .m{font:10px monospace;fill:#16191d}
-  .dna{fill:none;stroke:#16191d;stroke-width:2.4}
-  .isl{fill:#fff5d6;stroke:#f2b705;stroke-width:2}
-  .rep{fill:#f7dedc;stroke:#b3261e;stroke-width:2}
-  .ok{fill:#e3f0e4;stroke:#2e7d32;stroke-width:2}
-  .inh{stroke:#b3261e;stroke-width:2.4;fill:none;marker-end:url(#bar)}
+  .t{font:12px sans-serif;fill:#16191d}
+  .p{font:700 15px sans-serif;fill:#003c71}
+  .s{font:11px sans-serif;fill:#4a5159}
+  .dna{stroke:#1a4f8a;stroke-width:3;fill:none}
+  .isl{fill:#fff5d6;stroke:#f2b705;stroke-width:2.2}
+  .gene{fill:#f7dedc;stroke:#b3261e;stroke-width:2}
+  .rep{fill:#e8edf2;stroke:#8899a8;stroke-width:2}
+  .me{fill:#f2b705;stroke:#8a6300;stroke-width:1.5}
+  .off{fill:#fff;stroke:#8a6300;stroke-width:1.5}
+  .dr{fill:#dce6f2;stroke:#1a4f8a;stroke-width:2}
+  .ar{stroke:#003c71;stroke-width:2;fill:none;marker-end:url(#a)}
+  .no{stroke:#b3261e;stroke-width:2.6;fill:none;marker-end:url(#b)}
+  .ax{stroke:#4a5159;stroke-width:2;fill:none}
  </style>
- <defs><marker id="bar" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M6 0 L6 10" stroke="#b3261e" stroke-width="3"/></marker></defs>
+ <defs>
+  <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker>
+  <marker id="b" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#b3261e"/></marker>
+ </defs>
 
- <text class="th" x="20" y="28">A  Two directions at once, and why that is not a contradiction</text>
- <line x1="20" y1="38" x2="860" y2="38" stroke="#c6d2dd" stroke-width="1.5"/>
- <rect class="bx" x="20" y="54" width="410" height="112" rx="8"/>
- <text class="tb" x="34" y="78">FOCAL hypermethylation</text>
- <path class="dna" d="M34 110 h380"/>
- <rect class="isl" x="110" y="100" width="90" height="20"/>
- <circle cx="140" cy="92" r="5" fill="#f2b705" stroke="#8a6300" stroke-width="1.4"/>
- <circle cx="170" cy="92" r="5" fill="#f2b705" stroke="#8a6300" stroke-width="1.4"/>
- <rect class="rep" x="200" y="100" width="130" height="20"/>
- <text class="m" x="222" y="115">tumour suppressor OFF</text>
- <text class="s" x="34" y="140">MLH1 (mismatch repair), CDKN2A (p16), MGMT.</text>
- <text class="s" x="34" y="158">No sequence change, so variant-only testing misses it.</text>
+ <text class="p" x="16" y="30">A</text>
+ <line class="dna" x1="40" y1="64" x2="780" y2="64"/>
+ <rect class="isl" x="96" y="52" width="88" height="24"/>
+ <rect class="gene" x="190" y="52" width="150" height="24"/>
+ <rect class="rep" x="470" y="52" width="260" height="24"/>
+ <g><circle class="me" cx="108" cy="40" r="7"/><circle class="me" cx="126" cy="40" r="7"/>
+    <circle class="me" cx="144" cy="40" r="7"/><circle class="me" cx="162" cy="40" r="7"/></g>
+ <g><circle class="off" cx="500" cy="40" r="7"/><circle class="off" cx="560" cy="40" r="7"/>
+    <circle class="off" cx="620" cy="40" r="7"/><circle class="off" cx="690" cy="40" r="7"/></g>
+ <text class="t" x="96" y="96">CpG island</text>
+ <text class="t" x="196" y="96">tumour suppressor</text>
+ <text class="t" x="470" y="96">repeats, transposons</text>
+ <text class="s" x="96" y="116">focal gain, gene OFF</text>
+ <text class="s" x="470" y="116">global loss, elements ON</text>
+ <text class="s" x="40" y="142">not the total amount but the placement</text>
 
- <rect class="bx" x="450" y="54" width="410" height="112" rx="8"/>
- <text class="tb" x="464" y="78">GLOBAL hypomethylation</text>
- <path class="dna" d="M464 110 h380"/>
- <rect class="ok" x="520" y="100" width="260" height="20"/>
- <text class="m" x="572" y="115">repeats and transposons ACTIVE</text>
- <text class="s" x="464" y="140">Chromosome instability, and sequences normally kept</text>
- <text class="s" x="464" y="158">silent become active.</text>
+ <text class="p" x="16" y="196">B</text>
+ <circle class="me" cx="300" cy="238" r="12"/>
+ <text class="t" x="276" y="268">mark</text>
+ <rect class="dr" x="40" y="186" width="118" height="26" rx="4"/>
+ <text class="t" x="52" y="204">DNMT, EZH2</text>
+ <text class="s" x="52" y="228">writer</text>
+ <path class="no" d="M164 199 L256 230"/>
+ <rect class="dr" x="40" y="286" width="118" height="26" rx="4"/>
+ <text class="t" x="52" y="304">HDAC</text>
+ <text class="s" x="52" y="328">eraser</text>
+ <path class="no" d="M164 299 L256 250"/>
+ <rect class="dr" x="440" y="186" width="118" height="26" rx="4"/>
+ <text class="t" x="452" y="204">BET</text>
+ <text class="s" x="452" y="228">reader</text>
+ <path class="no" d="M436 199 L344 230"/>
+ <rect class="dr" x="440" y="286" width="118" height="26" rx="4"/>
+ <text class="t" x="452" y="304">mutant IDH</text>
+ <text class="s" x="452" y="328">metabolite</text>
+ <path class="no" d="M436 299 L344 250"/>
+ <text class="s" x="600" y="238">marks are reversible</text>
+ <text class="s" x="600" y="258">so they can be drugged</text>
 
- <rect class="k" x="20" y="178" width="840" height="36" rx="8"/>
- <text class="tb" x="34" y="202">The problem is not the TOTAL amount of methylation but the loss of its precise placement — the same logic as DNMT3A and TET2 mutations both causing cancer.</text>
-
- <text class="th" x="20" y="248">B  Marks are reversible, so they can be drugged</text>
- <line x1="20" y1="258" x2="860" y2="258" stroke="#c6d2dd" stroke-width="1.5"/>
- <rect class="bx" x="20" y="272" width="840" height="112" rx="8"/>
- <text class="tb" x="34" y="294">Drug class</text>
- <text class="tb" x="250" y="294">Target</text>
- <text class="tb" x="410" y="294">Action</text>
- <text class="tb" x="660" y="294">Use</text>
- <line x1="34" y1="302" x2="846" y2="302" stroke="#c6d2dd" stroke-width="1.2"/>
- <text class="t" x="34" y="320">azacitidine, decitabine</text>
- <text class="t" x="250" y="320">DNMT</text>
- <text class="t" x="410" y="320">less methylation: silenced genes back on</text>
- <text class="t" x="660" y="320">MDS, AML</text>
- <text class="t" x="34" y="338">vorinostat, romidepsin</text>
- <text class="t" x="250" y="338">HDAC</text>
- <text class="t" x="410" y="338">more acetylation: chromatin opens</text>
- <text class="t" x="660" y="338">T-cell lymphoma</text>
- <text class="t" x="34" y="356">tazemetostat</text>
- <text class="t" x="250" y="356">EZH2 of PRC2</text>
- <text class="t" x="410" y="356">blocks H3K27me3 formation</text>
- <text class="t" x="660" y="356">epithelioid sarcoma</text>
- <text class="t" x="34" y="374">IDH and BET inhibitors</text>
- <text class="t" x="250" y="374">mutant IDH / READER</text>
- <text class="t" x="410" y="374">stop the TET-blocking metabolite / cut reader binding</text>
- <text class="t" x="660" y="374">AML / in trials</text>
- <text class="s" x="20" y="400">Targeting the READER applies "a mark does not decide anything by itself" directly to therapy. IDH shows metabolism feeding into epigenetic change.</text>
-
- <text class="th" x="20" y="424">C  Three things to keep apart:  1 a change in molecular mark (hours to days, reversible) · 2 maintenance of somatic state across division (well established) · 3 transmission to offspring (separate question; most marks are reset in germ cells and early development). Ask: WHAT mark, for HOW LONG, in WHICH cells.</text>
- <line x1="20" y1="412" x2="860" y2="412" stroke="#c6d2dd" stroke-width="1.5"/>
+ <text class="p" x="16" y="382">C</text>
+ <line class="ax" x1="40" y1="394" x2="470" y2="394"/>
+ <line class="ax" x1="520" y1="394" x2="780" y2="394"/>
+ <path class="ax" d="M478 382 L492 406 M498 382 L512 406"/>
+ <text class="t" x="40" y="384">mark change</text>
+ <text class="s" x="40" y="414">hours to days</text>
+ <text class="t" x="240" y="384">somatic maintenance</text>
+ <text class="s" x="240" y="414">across division</text>
+ <text class="t" x="560" y="384">to offspring</text>
+ <text class="s" x="560" y="414">germline reset between</text>
 </svg>

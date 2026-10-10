@@ -401,7 +401,7 @@ def lesson_html(row, meta, named, lists, secs, quiz, prev_r, next_r, lesson_dir=
   </div>
 </header>
 
-<main class="wrap wrap--narrow lesson">
+<main class="wrap wrap--narrow lesson" data-lesson="{row["lesson_id"]}">
 {inner}
 </main>
 
@@ -409,6 +409,8 @@ def lesson_html(row, meta, named, lists, secs, quiz, prev_r, next_r, lesson_dir=
   <span>© 2026 Kim Jintae · Hanyang University</span>
   <a href="https://github.com/hoperiasd2/hoperiasd2.github.io">GitHub 저장소</a>
 </footer>
+
+<script src="{up}assets/edit.js" defer></script>
 </body>
 </html>
 """
