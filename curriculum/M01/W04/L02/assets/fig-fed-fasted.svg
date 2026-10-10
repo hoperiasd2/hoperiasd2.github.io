@@ -1,0 +1,56 @@
+<!-- 섭식과 공복에서 장기 사이의 흐름.
+
+   같은 네 기관을 두 번 그리고 화살표 방향만 뒤집는다.
+   방향이 뒤집힌다는 사실 자체가 이 그림의 전부이므로
+   기관 배치를 두 패널에서 정확히 같게 둔다.
+   아래에 주 연료가 바뀌는 순서를 시간 축으로 하나 더 둔다.
+
+   캡션에 적을 것: 전환의 목적이 단백질 보호라는 점.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 360" width="700" height="360" role="img"
+ aria-label="Interorgan fuel flow when fed and when fasting, with the same four organs drawn twice and the arrows reversed. Below, a time axis showing the main fuel shifting from liver glycogen to gluconeogenesis and then to ketone bodies as fasting continues.">
+ <style>
+  .t{font:12px sans-serif;fill:#16191d}
+  .s{font:11px sans-serif;fill:#4a5159}
+  .h{font:700 13px sans-serif;fill:#003c71}
+  .o{fill:#dce6f2;stroke:#1a4f8a;stroke-width:2}
+  .f{fill:#fff5d6;stroke:#f2b705;stroke-width:2}
+  .ar{stroke:#1a4f8a;stroke-width:2;fill:none;marker-end:url(#a)}
+  .ag{stroke:#8a6300;stroke-width:2;fill:none;marker-end:url(#b)}
+  .ax{stroke:#4a5159;stroke-width:2;fill:none}
+ </style>
+ <defs>
+  <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#1a4f8a"/></marker>
+  <marker id="b" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#8a6300"/></marker>
+ </defs>
+
+ <text class="h" x="20" y="28">fed</text>
+ <ellipse class="o" cx="100" cy="70" rx="46" ry="22"/><text class="t" x="82" y="75">gut</text>
+ <ellipse class="o" cx="100" cy="150" rx="46" ry="22"/><text class="t" x="86" y="155">liver</text>
+ <ellipse class="o" cx="240" cy="110" rx="46" ry="22"/><text class="t" x="218" y="115">muscle</text>
+ <ellipse class="o" cx="240" cy="190" rx="46" ry="22"/><text class="t" x="226" y="195">fat</text>
+ <path class="ar" d="M100 94 L100 126"/>
+ <path class="ar" d="M146 140 L196 116"/>
+ <path class="ar" d="M146 162 L196 184"/>
+ <text class="s" x="20" y="228">store: glycogen, protein, triacylglycerol</text>
+
+ <text class="h" x="380" y="28">fasting</text>
+ <ellipse class="f" cx="460" cy="70" rx="46" ry="22"/><text class="t" x="438" y="75">brain</text>
+ <ellipse class="f" cx="460" cy="150" rx="46" ry="22"/><text class="t" x="446" y="155">liver</text>
+ <ellipse class="f" cx="600" cy="110" rx="46" ry="22"/><text class="t" x="578" y="115">muscle</text>
+ <ellipse class="f" cx="600" cy="190" rx="46" ry="22"/><text class="t" x="586" y="195">fat</text>
+ <path class="ag" d="M460 126 L460 94"/>
+ <path class="ag" d="M556 116 L506 140"/>
+ <path class="ag" d="M556 184 L506 162"/>
+ <text class="s" x="380" y="228">release: amino acid, glycerol, fatty acid</text>
+
+ <line class="ax" x1="40" y1="286" x2="660" y2="286"/>
+ <text class="s" x="40" y="306">0</text>
+ <text class="s" x="190" y="306">12 to 24 h</text>
+ <text class="s" x="370" y="306">1 to 3 days</text>
+ <text class="s" x="560" y="306">beyond 3 days</text>
+ <text class="t" x="40" y="272">glycogen</text>
+ <text class="t" x="300" y="272">gluconeogenesis</text>
+ <text class="t" x="540" y="272">ketone bodies</text>
+ <text class="s" x="40" y="332">each shift spares protein</text>
+</svg>

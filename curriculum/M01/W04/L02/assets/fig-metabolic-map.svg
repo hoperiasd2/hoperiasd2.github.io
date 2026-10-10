@@ -1,0 +1,71 @@
+<!-- 세 영양소가 acetyl-CoA로 수렴하는 구조.
+
+   요점은 두 가지뿐이다. 셋이 한 점으로 모인다는 것, 그리고 지방산에서
+   포도당으로 돌아가는 길만 끊겨 있다는 것. 그래서 수렴하는 화살표는
+   모두 같은 색으로 모으고, 끊긴 길만 빨간 X로 표시한다.
+   공통 구간(TCA, ETC)은 하나의 띠로 묶어 재사용되는 구간임을 보인다.
+
+   캡션에 적을 것: 수렴 구조의 세 이점(경제성, 유연성, 상호 전환)과
+   비대칭이 공복 대사 전체를 규정한다는 점.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 660 340" width="660" height="340" role="img"
+ aria-label="The three macronutrients converge on acetyl-CoA. Carbohydrate goes through glucose and pyruvate, fat through fatty acids and beta oxidation, protein through amino acid carbon skeletons. From acetyl-CoA the shared TCA cycle and electron transport chain produce ATP. A red cross marks the missing route from acetyl-CoA back to glucose.">
+ <style>
+  .t{font:12px sans-serif;fill:#16191d}
+  .s{font:11px sans-serif;fill:#4a5159}
+  .h{font:700 13px sans-serif;fill:#003c71}
+  .carb{fill:#dce6f2;stroke:#1a4f8a;stroke-width:2}
+  .fat{fill:#fff5d6;stroke:#f2b705;stroke-width:2}
+  .pro{fill:#e3f0e4;stroke:#2e7d32;stroke-width:2}
+  .hub{fill:#f7dedc;stroke:#b3261e;stroke-width:2.6}
+  .sh{fill:#eef2f6;stroke:#8a98a6;stroke-width:2}
+  .ar{stroke:#003c71;stroke-width:2;fill:none;marker-end:url(#a)}
+ </style>
+ <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker></defs>
+
+ <rect class="carb" x="20" y="40" width="110" height="28" rx="5"/>
+ <text class="t" x="40" y="59">carbohydrate</text>
+ <path class="ar" d="M136 54 L176 54"/>
+ <rect class="carb" x="182" y="40" width="80" height="28" rx="5"/>
+ <text class="t" x="202" y="59">glucose</text>
+ <path class="ar" d="M268 54 L308 54"/>
+ <rect class="carb" x="314" y="40" width="80" height="28" rx="5"/>
+ <text class="t" x="330" y="59">pyruvate</text>
+
+ <rect class="fat" x="20" y="150" width="110" height="28" rx="5"/>
+ <text class="t" x="56" y="169">fat</text>
+ <path class="ar" d="M136 164 L176 164"/>
+ <rect class="fat" x="182" y="150" width="90" height="28" rx="5"/>
+ <text class="t" x="196" y="169">fatty acid</text>
+ <path class="ar" d="M278 164 L318 164"/>
+ <text class="s" x="282" y="156">beta oxidation</text>
+
+ <rect class="pro" x="20" y="260" width="110" height="28" rx="5"/>
+ <text class="t" x="48" y="279">protein</text>
+ <path class="ar" d="M136 274 L176 274"/>
+ <rect class="pro" x="182" y="260" width="110" height="28" rx="5"/>
+ <text class="t" x="196" y="279">carbon skeleton</text>
+ <path class="ar" d="M298 274 L330 274"/>
+
+ <ellipse class="hub" cx="420" cy="164" rx="62" ry="30"/>
+ <text class="h" x="388" y="169">acetyl-CoA</text>
+ <path class="ar" d="M396 76 L410 130"/>
+ <path class="ar" d="M330 164 L354 164"/>
+ <path class="ar" d="M346 266 L396 196"/>
+
+ <rect class="sh" x="516" y="86" width="126" height="150" rx="8"/>
+ <text class="h" x="540" y="112">shared</text>
+ <text class="t" x="534" y="142">TCA cycle</text>
+ <path class="ar" d="M578 152 L578 172"/>
+ <text class="t" x="528" y="190">electron chain</text>
+ <path class="ar" d="M578 200 L578 216"/>
+ <text class="t" x="562" y="230">ATP</text>
+ <path class="ar" d="M484 164 L510 164"/>
+
+ <path d="M420 128 L420 88 L270 88 L270 74" stroke="#b3261e" stroke-width="2.4" fill="none" stroke-dasharray="6 4"/>
+ <g stroke="#b3261e" stroke-width="3.4">
+  <line x1="332" y1="78" x2="352" y2="98"/><line x1="352" y1="78" x2="332" y2="98"/>
+ </g>
+ <text class="s" x="300" y="116">no route back</text>
+ <text class="s" x="20" y="324">partial exceptions: glycerol, odd-chain</text>
+</svg>

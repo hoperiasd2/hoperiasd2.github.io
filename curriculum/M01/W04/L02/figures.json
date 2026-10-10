@@ -1,4 +1,29 @@
 {
   "lesson_id": "M01-W04-L02",
-  "figures": []
+  "figures": [
+    {
+      "figure_id": "fig-metabolic-map",
+      "lesson_id": "M01-W04-L02",
+      "html_anchor": "#fig-metabolic-map",
+      "caption": "세 영양소가 acetyl-CoA로 수렴하는 구조. 탄수화물, 지방, 단백질이 각각의 경로를 거쳐 공통 중간체에 모이는 배치, TCA cycle과 electron transport chain의 공통 구간, 그리고 지방산에서 포도당으로 가는 길이 끊겨 있다는 비대칭을 함께 보인다.",
+      "asset_path": "assets/fig-metabolic-map.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-fed-fasted",
+      "lesson_id": "M01-W04-L02",
+      "html_anchor": "#fig-fed-fasted",
+      "caption": "섭식 상태와 공복 상태에서 장기 사이의 물질 흐름. 간, 근육, 지방조직, 뇌 사이에서 방향이 뒤집히는 구조, 공복이 길어질수록 glycogen에서 gluconeogenesis로, 다시 ketone body로 주 연료가 옮겨 가는 순서, 그리고 그 전환이 단백질을 아끼는 결과로 이어지는 관계를 함께 보인다.",
+      "asset_path": "assets/fig-fed-fasted.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    }
+  ]
 }
