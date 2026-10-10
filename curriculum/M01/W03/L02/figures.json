@@ -1,4 +1,29 @@
 {
   "lesson_id": "M01-W03-L02",
-  "figures": []
+  "figures": [
+    {
+      "figure_id": "fig-four-questions",
+      "lesson_id": "M01-W03-L02",
+      "html_anchor": "#fig-four-questions",
+      "caption": "행동을 묻는 네 가지 질문의 배치. 근접 원인과 궁극 원인의 구분, 시간 축에서 개체 안의 사건과 계통의 역사가 갈리는 지점, 그리고 네 답이 경쟁이 아니라 보완 관계라는 점을 보인다.",
+      "asset_path": "assets/fig-four-questions.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-motor-control",
+      "lesson_id": "M01-W03-L02",
+      "html_anchor": "#fig-motor-control",
+      "caption": "운동 조절의 세 축과 각각의 손상이 만드는 증상. 겉질척수로가 명령을, 기저핵이 시작과 억제를, 소뇌가 오차 교정을 맡는 분업과 세 체계의 손상에서 나타나는 증상의 성격 차이를 보인다.",
+      "asset_path": "assets/fig-motor-control.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    }
+  ]
 }

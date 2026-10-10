@@ -1,0 +1,46 @@
+<!-- 행동을 묻는 네 가지 질문의 배치.
+
+   가로축은 시간 규모, 세로축은 질문의 성격.
+   왼쪽 두 칸이 근접 원인(개체 안에서 일어나는 일),
+   오른쪽 두 칸이 궁극 원인(계통의 역사).
+   위 두 칸은 지금의 상태, 아래 두 칸은 어떻게 그렇게 되었는가.
+   네 칸이 경쟁하지 않고 한 현상의 서로 다른 면이라는 점을 격자로 보인다.
+   캡션에 적을 것: 발열의 예. prostaglandin이 설정점을 올렸다는 답과
+   체온 상승이 면역에 유리하다는 답은 층위가 다른 두 답이다.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 300" width="560" height="300" role="img"
+ aria-label="A grid of the four questions about behaviour. Columns separate proximate causes within the individual from ultimate causes across the lineage; rows separate the current state from how it came to be. The four cells are mechanism, development, function and evolution.">
+ <style>
+  .t{font:12px sans-serif;fill:#16191d}
+  .s{font:11px sans-serif;fill:#4a5159}
+  .h{font:700 12px sans-serif;fill:#003c71}
+  .c1{fill:#dce6f2;stroke:#1a4f8a;stroke-width:2}
+  .c2{fill:#f7dedc;stroke:#b3261e;stroke-width:2}
+ </style>
+ <text class="h" x="130" y="34">proximate</text>
+ <text class="s" x="118" y="50">within the individual</text>
+ <text class="h" x="360" y="34">ultimate</text>
+ <text class="s" x="352" y="50">across the lineage</text>
+ <text class="h" x="16" y="104">state</text>
+ <text class="h" x="16" y="214">history</text>
+
+ <rect class="c1" x="90" y="70" width="190" height="90" rx="6"/>
+ <text class="t" x="106" y="98">mechanism</text>
+ <text class="s" x="106" y="120">which nerves and hormones</text>
+ <text class="s" x="106" y="140">are acting right now</text>
+
+ <rect class="c2" x="300" y="70" width="190" height="90" rx="6"/>
+ <text class="t" x="316" y="98">function</text>
+ <text class="s" x="316" y="120">what survival or breeding</text>
+ <text class="s" x="316" y="140">benefit it gives</text>
+
+ <rect class="c1" x="90" y="180" width="190" height="90" rx="6"/>
+ <text class="t" x="106" y="208">development</text>
+ <text class="s" x="106" y="230">how this individual came</text>
+ <text class="s" x="106" y="250">to have the behaviour</text>
+
+ <rect class="c2" x="300" y="180" width="190" height="90" rx="6"/>
+ <text class="t" x="316" y="208">evolution</text>
+ <text class="s" x="316" y="230">how it changed in</text>
+ <text class="s" x="316" y="250">ancestral lineages</text>
+</svg>

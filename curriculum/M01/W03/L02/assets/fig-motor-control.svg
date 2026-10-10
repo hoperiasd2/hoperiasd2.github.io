@@ -1,0 +1,53 @@
+<!-- 운동 조절의 세 축과 손상의 성격.
+
+   세 상자를 각각 명령, 관문, 교정으로 놓고 아래에 손상 시 증상을 둔다.
+   요점은 세 축의 증상 성격이 다르다는 것 하나다.
+   움직일 수 없다는 추체로, 너무 적거나 많다는 기저핵,
+   움직이는데 부정확하다는 소뇌.
+   캡션에 적을 것: 각 체계의 회로는 M04-W06의 세 수업에서 다룬다.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 300" width="620" height="300" role="img"
+ aria-label="Three systems of motor control. The corticospinal tract issues the command, the basal ganglia gate which movements start, and the cerebellum corrects error. Below each, the character of the deficit when it is damaged: paralysis, too little or too much movement, and inaccuracy.">
+ <style>
+  .t{font:12px sans-serif;fill:#16191d}
+  .s{font:11px sans-serif;fill:#4a5159}
+  .h{font:700 13px sans-serif;fill:#003c71}
+  .a{fill:#dce6f2;stroke:#1a4f8a;stroke-width:2}
+  .b{fill:#fff5d6;stroke:#f2b705;stroke-width:2}
+  .c{fill:#e3f0e4;stroke:#2e7d32;stroke-width:2}
+  .d{fill:#f7dedc;stroke:#b3261e;stroke-width:2}
+  .ar{stroke:#003c71;stroke-width:2;fill:none;marker-end:url(#a)}
+ </style>
+ <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker></defs>
+
+ <rect class="a" x="30" y="40" width="160" height="56" rx="6"/>
+ <text class="h" x="44" y="64">corticospinal</text>
+ <text class="s" x="44" y="84">issues the command</text>
+ <rect class="b" x="226" y="40" width="160" height="56" rx="6"/>
+ <text class="h" x="240" y="64">basal ganglia</text>
+ <text class="s" x="240" y="84">gates start and stop</text>
+ <rect class="c" x="422" y="40" width="160" height="56" rx="6"/>
+ <text class="h" x="436" y="64">cerebellum</text>
+ <text class="s" x="436" y="84">corrects error</text>
+
+ <path class="ar" d="M110 104 L110 150"/>
+ <path class="ar" d="M306 104 L306 150"/>
+ <path class="ar" d="M502 104 L502 150"/>
+
+ <rect class="d" x="30" y="158" width="160" height="70" rx="6"/>
+ <text class="t" x="44" y="182">paralysis</text>
+ <text class="s" x="44" y="204">spasticity, hyperreflexia</text>
+ <text class="s" x="44" y="220">Babinski sign</text>
+ <rect class="d" x="226" y="158" width="160" height="70" rx="6"/>
+ <text class="t" x="240" y="182">too little or too much</text>
+ <text class="s" x="240" y="204">bradykinesia, rigidity</text>
+ <text class="s" x="240" y="220">or chorea</text>
+ <rect class="d" x="422" y="158" width="160" height="70" rx="6"/>
+ <text class="t" x="436" y="182">inaccurate</text>
+ <text class="s" x="436" y="204">dysmetria, intention tremor</text>
+ <text class="s" x="436" y="220">ataxia, no paralysis</text>
+
+ <text class="t" x="30" y="266">cannot move</text>
+ <text class="t" x="226" y="266">moves wrong amount</text>
+ <text class="t" x="422" y="266">moves but misses</text>
+</svg>
