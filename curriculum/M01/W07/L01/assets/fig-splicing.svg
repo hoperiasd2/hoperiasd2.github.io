@@ -1,0 +1,84 @@
+<!-- Splicing 그림. 라벨만 두고 설명은 캡션에 둔다.
+
+   보이려는 것
+   - A 두 번의 에스터 교환. branch point A의 2 프라임 OH 공격으로 lariat이 생기고,
+     이어서 상류 exon의 3 프라임 OH가 3 프라임 splice site를 공격해 exon이 이어진다.
+   - B snRNP 교체 순서. U1 과 U2 가 먼저 붙고, U4 U5 U6 삼중체가 들어온 뒤
+     U1 과 U4 가 빠지면서 U6 가 5 프라임 splice site를 잡아 촉매 중심이 만들어진다.
+   - C exon 가려내기. SR 단백질은 enhancer 에, hnRNP 는 silencer 에 붙는다.
+   캡션에 쓸 내용: 촉매를 수행하는 것이 snRNA 라는 점과, 약한 splice site 신호를
+   SR 과 hnRNP 의 농도비가 보완한다는 점.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" width="640" height="420" role="img"
+ aria-label="Splicing 그림. A 패널은 branch point adenosine의 공격으로 lariat이 생기고 두 번째 공격으로 exon이 이어지는 두 단계를, B 패널은 U1과 U2에서 시작해 U4와 U1이 빠지고 U6가 5 프라임 splice site를 잡는 snRNP 교체 순서를, C 패널은 SR 단백질과 hnRNP가 exonic enhancer와 silencer에 결합하는 배치를 보인다.">
+ <style>
+  .t{font:12px sans-serif;fill:#16191d}
+  .s{font:11px sans-serif;fill:#50585f}
+  .p{font:700 15px sans-serif;fill:#003c71}
+  .ex{fill:#dce6f2;stroke:#1a4f8a;stroke-width:2}
+  .in{stroke:#8a8f96;stroke-width:2.5;fill:none}
+  .sn{fill:#e3f0e4;stroke:#2e7d32;stroke-width:2}
+  .hot{fill:#fff5d6;stroke:#f2b705;stroke-width:2}
+  .ar{stroke:#003c71;stroke-width:2;fill:none;marker-end:url(#a)}
+  .at{stroke:#b3261e;stroke-width:1.8;fill:none;marker-end:url(#r)}
+ </style>
+ <defs>
+  <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker>
+  <marker id="r" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#b3261e"/></marker>
+ </defs>
+
+ <text class="p" x="16" y="26">A</text>
+ <rect class="ex" x="40" y="44" width="86" height="22"/>
+ <text class="t" x="68" y="60">exon 1</text>
+ <path class="in" d="M126 55 L300 55"/>
+ <rect class="ex" x="300" y="44" width="86" height="22"/>
+ <text class="t" x="328" y="60">exon 2</text>
+ <text class="s" x="128" y="38">5' SS  GU</text>
+ <text class="s" x="196" y="86">A  branch point</text>
+ <circle class="hot" cx="208" cy="55" r="7"/>
+ <text class="s" x="258" y="38">AG  3' SS</text>
+ <path class="at" d="M204 48 q-30 -22 -70 -2"/>
+ <text class="s" x="118" y="24">2'-OH</text>
+
+ <path class="ar" d="M400 55 L436 55"/>
+ <rect class="ex" x="452" y="44" width="56" height="22"/>
+ <text class="t" x="468" y="60">ex 1</text>
+ <circle class="hot" cx="546" cy="38" r="7"/>
+ <path class="in" d="M508 55 q10 -26 38 -17 q28 9 10 30 L540 86"/>
+ <rect class="ex" x="556" y="76" width="56" height="22"/>
+ <text class="t" x="572" y="92">ex 2</text>
+ <text class="s" x="452" y="118">lariat intermediate</text>
+ <path class="at" d="M506 62 q24 20 48 16"/>
+
+ <text class="p" x="16" y="160">B</text>
+ <rect class="ex" x="40" y="186" width="70" height="20"/>
+ <path class="in" d="M110 196 L300 196"/>
+ <rect class="ex" x="300" y="186" width="70" height="20"/>
+ <ellipse class="sn" cx="122" cy="166" rx="22" ry="14"/><text class="t" x="114" y="171">U1</text>
+ <ellipse class="sn" cx="222" cy="166" rx="22" ry="14"/><text class="t" x="214" y="171">U2</text>
+ <text class="s" x="40" y="232">E, A complex</text>
+ <path class="ar" d="M384 196 L418 196"/>
+ <rect class="ex" x="434" y="186" width="60" height="20"/>
+ <path class="in" d="M494 196 L584 196"/>
+ <rect class="ex" x="584" y="186" width="44" height="20"/>
+ <ellipse class="sn" cx="500" cy="166" rx="20" ry="14"/><text class="t" x="493" y="171">U6</text>
+ <ellipse class="sn" cx="546" cy="166" rx="20" ry="14"/><text class="t" x="539" y="171">U5</text>
+ <ellipse class="sn" cx="590" cy="166" rx="20" ry="14"/><text class="t" x="583" y="171">U2</text>
+ <text class="s" x="434" y="232">B* , C complex</text>
+ <text class="s" x="434" y="248">U1 , U4 released</text>
+
+ <text class="p" x="16" y="296">C</text>
+ <rect class="ex" x="40" y="320" width="60" height="22"/>
+ <path class="in" d="M100 331 L190 331"/>
+ <rect class="ex" x="190" y="320" width="110" height="22"/>
+ <path class="in" d="M300 331 L390 331"/>
+ <rect class="ex" x="390" y="320" width="60" height="22"/>
+ <rect class="hot" x="200" y="322" width="38" height="18"/>
+ <text class="s" x="203" y="336">ESE</text>
+ <rect class="hot" x="250" y="322" width="38" height="18"/>
+ <text class="s" x="253" y="336">ESS</text>
+ <ellipse class="sn" cx="219" cy="298" rx="26" ry="14"/><text class="t" x="208" y="303">SR</text>
+ <ellipse class="sn" cx="282" cy="298" rx="30" ry="14"/><text class="t" x="263" y="303">hnRNP</text>
+ <text class="s" x="40" y="368">cassette exon</text>
+ <text class="s" x="190" y="368">include  or  skip</text>
+</svg>

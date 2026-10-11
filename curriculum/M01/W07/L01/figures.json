@@ -74,6 +74,18 @@
       "review_result": ""
     },
     {
+      "figure_id": "fig-splicing",
+      "lesson_id": "M01-W07-L01",
+      "html_anchor": "#fig-splicing",
+      "caption": "Splicing의 두 단계 반응과 spliceosome의 조립. Branch point adenosine의 2′ hydroxyl 공격으로 생기는 lariat, 두 번째 에스터 교환으로 이어지는 exon, U1에서 U6까지의 snRNP 교체 순서, 그리고 SR 단백질과 hnRNP가 enhancer·silencer에 결합해 exon을 가려내는 배치를 함께 보인다.",
+      "asset_path": "assets/fig-splicing.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
       "figure_id": "fig-rrna-processing",
       "lesson_id": "M01-W07-L01",
       "html_anchor": "#fig-rrna-processing",

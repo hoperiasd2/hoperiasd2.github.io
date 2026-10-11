@@ -2,8 +2,8 @@
 lesson_id: M01-W07-L01
 title: RNA 합성과 가공
 en: RNA Synthesis and Processing
-status: 초안
-version: v0.1
+status: 완성
+version: v1.0
 ---
 
 @obj
@@ -114,6 +114,8 @@ Sigma가 인식하는 것은 두 개의 보존 서열이다. 전사 시작점을
 
 > **임상 연계 ** **α-amanitin**은 독우산광대버섯 등 Amanita 속 독버섯의 독소로, Pol II에 결합해 신장을 멈춘다. 중독의 임상 경과가 분자 기전과 정확히 맞아떨어진다. 섭취 후 6~12시간 동안은 위장관 증상만 나타나고 환자는 회복한 듯 보인다. 그러나 이미 간세포에서 mRNA 합성이 멈추어 있고, 기존 mRNA와 단백질이 소모되는 2~4일째에 급성 간부전이 나타난다. **잠복기가 긴 이유가 전사 차단과 단백질 소모 사이의 시간차**이며, 이 때문에 초기 진료에서 중증도를 과소평가하기 쉽다.
 
+>> 전사를 막는 약과 독소를 작용 지점으로 구별하는 문제가 반복된다. **Rifampicin**은 세균 RNA polymerase의 β 소단위에 결합해 개시를 막으므로 사람 세포에는 작용하지 않는다. **α-amanitin**은 진핵 Pol II의 신장을 막으므로 mRNA 합성이 멈추고, Pol I은 영향을 받지 않아 rRNA 합성은 한동안 계속된다. **Actinomycin D**는 DNA의 작은 홈에 끼어들어 모든 polymerase의 진행을 막되 낮은 농도에서는 rRNA 유전자처럼 전사량이 많은 구간에 먼저 영향을 주므로, 실험에서 Pol I을 선택적으로 억제하는 데 쓰였다. **Fluoroquinolone**과 **doxorubicin**은 전사가 아니라 topoisomerase를 표적으로 하므로 이 목록에 들어가지 않는다. 요구되는 구별은 (1) 원핵과 진핵 가운데 어느 효소인가, (2) 개시인가 신장인가, (3) 효소에 붙는가 DNA에 붙는가의 세 축이다.
+
 @fig fig-three-polymerases 진핵세포 세 RNA polymerase의 분담. 각 효소의 산물과 세포 내 위치, rRNA 유전자의 연속 배열에 Pol I이 빽빽하게 결합하는 배치, Pol III의 유전자 내부 promoter, 그리고 α-amanitin 감수성의 차이를 함께 보인다.
 
 @sec 5. Pol II의 전사 개시 — preinitiation complex의 조립
@@ -142,13 +144,20 @@ CTD의 인산화는 단순한 출발 신호가 아니다. 인산화된 CTD는 �
 | TFIIF | Pol II와 함께 진입 |
 | TFIIE | TFIIH 모집 |
 | TFIIH | DNA 풀기(helicase), CTD 인산화(kinase) |
+| Mediator | 조절 인자의 신호를 PIC에 전달한다 |
+
+조립된 복합체가 곧바로 멀리 가는 것은 아니다. 포유류 유전자에서 Pol II는 전사 시작점에서 20~60 nucleotide 지점까지 진행한 뒤 **멈춘 상태로 대기한다.** DSIF와 NELF가 이 정지를 유지하고, 신호가 오면 CDK9을 가진 **P-TEFb**가 NELF와 CTD의 Ser2를 인산화해 정지를 풀고 신장으로 전환한다. 이 **promoter-proximal pausing**이 중요한 이유는 조절의 위치를 옮겨 놓는다는 점이다. 많은 유전자에서 조절 대상은 "Pol II가 앉는가"가 아니라 "앉아서 대기하던 Pol II가 풀리는가"이며, 그래서 자극에 수 분 안에 반응해야 하는 유전자가 미리 Pol II를 대기시켜 둔다. Heat shock 유전자와 즉각 초기 유전자가 그 예다.
+
+CTD의 인산화는 전사가 진행되는 동안 **차례로 바뀌는 부호**로 작동한다. 개시 직후에는 TFIIH의 CDK7이 Ser5를 인산화하고 이 상태의 CTD에 capping 효소가 붙으며, 신장으로 들어가면 Ser2 인산화가 늘어나 splicing 인자와 3′ 말단 가공 인자가 실린다. 전사가 종결 구간에 이르면 절단·polyadenylation 인자가 전사체를 자르고, 남은 전사체가 분해되며 Pol II가 떨어진다. 즉 **하나의 꼬리에 실린 인산화 양상이 가공의 시간표를 만든다.**
+
+신장은 nucleosome을 통과해야 하는 과정이기도 하다. FACT 같은 histone chaperone이 Pol II 앞의 nucleosome을 일시적으로 해체하고 뒤에서 다시 조립하며, 이 과정이 실패하면 전사가 지나간 구간에서 부적절한 전사 개시가 일어난다. 신장 속도는 평균 초당 약 2 kb 정도이고, 속도가 느려지면 약한 splice site가 쓰일 시간이 길어져 splicing의 결과까지 달라진다. 전사와 가공이 분리될 수 없다는 사실이 여기서도 나타난다.
 
 > **임상 연계 ** TFIIH의 소단위인 **XPB**와 **XPD**는 nucleotide excision repair에도 쓰인다. 같은 단백질이 전사와 DNA 수선 두 과정에 참여한다. 이 소단위의 변이는 **색소성 건피증(xeroderma pigmentosum)** 과 **Cockayne 증후군**을 일으킨다. 두 질환의 표현형이 다른 이유를 분업으로 설명할 수 있다. 수선 기능만 손상되면 자외선 민감성과 피부암이 주로 나타나고, 전사 기능까지 손상되면 성장 장애와 신경 퇴화가 더해진다. 하나의 복합체가 두 일을 하므로 변이 위치에 따라 임상 양상이 갈린다.
 
 @fig fig-pic-assembly Pol II preinitiation complex의 조립 순서. TBP의 TATA box 결합과 DNA 굽힘, TFIIB가 정하는 전사 방향, TFIIF와 함께 들어오는 Pol II, TFIIH의 helicase와 kinase 두 활성, 그리고 인산화된 CTD가 가공 인자의 플랫폼이 되는 구조를 함께 보인다.
 
 @sec 6. pre-mRNA 가공의 세 단계 — 개요
-Pol II가 만든 1차 전사체는 그대로 쓰이지 않는다. **5′ cap 부가**, **splicing**, **3′ 말단 절단과 polyadenylation**의 세 가공을 거쳐야 성숙한 mRNA가 된다. 세 가공의 상세한 기전은 M03-W02-L03에서 다루므로, 여기서는 각 가공이 무엇을 하고 어떤 결과를 남기는지만 확정한다.
+Pol II가 만든 1차 전사체는 그대로 쓰이지 않는다. **5′ cap 부가**, **splicing**, **3′ 말단 절단과 polyadenylation**의 세 가공을 거쳐야 성숙한 mRNA가 된다. 여기서는 세 가공이 무엇을 하고 어떤 결과를 남기는지를 먼저 확정하고, 가장 복잡하고 임상적으로 중요한 splicing은 다음 절에서 기전까지 다룬다. Cap과 3′ 말단 가공의 효소 수준 상세는 M03-W02-L03에 있다.
 
 **5′ cap.** 전사체가 25~30 염기일 때 5′ 말단에 **7-methylguanosine**이 붙는다. 결합이 특이하다. 일반적인 RNA 결합은 5′와 3′를 잇지만, cap은 **5′-5′ 삼인산 결합**이다. 자유로운 5′ 말단이 없어지므로 5′→3′ exonuclease가 공격할 자리가 사라진다. Cap은 분해 방지, 핵 밖 수송의 표시, 번역 개시의 발판 세 가지로 쓰인다.
 
@@ -164,7 +173,53 @@ Pol II가 만든 1차 전사체는 그대로 쓰이지 않는다. **5′ cap 부
 
 @fig fig-premrna-processing pre-mRNA 가공의 세 단계 개요. 5′ cap의 5′-5′ 결합과 세 기능, intron 제거와 exon 조합이 만드는 isoform, AAUAAA에 이어지는 절단과 주형 없는 poly(A) 부가, 그리고 가공 완료가 핵 밖 수송의 판정 기준이 되는 관문 구조를 함께 보인다.
 
-@sec 7. rRNA의 가공과 nucleolus
+@sec 7. Splicing의 기전과 대체 splicing
+Intron을 제거하는 반응은 두 번의 **에스터 교환(transesterification)**으로 이루어진다. 반응 자체는 에너지를 쓰지 않고 결합을 옮기는 것이며, 어디를 옮길지 정하는 데 ATP가 쓰인다.
+
+1. Intron 안쪽의 **branch point adenosine**의 2′ hydroxyl기가 intron 5′ 경계의 인산을 공격해 결합을 끊는다. Intron이 자기 안쪽과 2′-5′ 결합을 만들어 **올가미(lariat)** 구조가 되고, 상류 exon의 3′ 말단이 자유로워진다.
+2. 자유로워진 exon의 3′ hydroxyl기가 intron 3′ 경계의 인산을 공격한다. 두 exon이 이어지고 lariat 상태의 intron이 떨어져 나와 분해된다.
+
+반응을 수행하는 것은 **spliceosome**이다. 다섯 개의 small nuclear RNA(U1, U2, U4, U5, U6)와 각각에 붙은 단백질이 이루는 snRNP들이 전사체 위에서 조립되고 재배열되며 반응을 만든다. 조립 순서가 정해져 있다.
+
+| 단계 | 일어나는 일 |
+|---|---|
+| E 복합체 | U1 snRNP가 5′ splice site와 염기쌍으로 짝짓고, U2AF와 SF1이 3′ 쪽 신호에 붙는다 |
+| A 복합체 | U2 snRNP가 branch point에 결합한다(ATP 소모) |
+| B 복합체 | U4/U6·U5 삼중 snRNP가 들어온다 |
+| B* 활성화 | U1과 U4가 떨어지고 U6가 5′ splice site를 대신 잡으며 촉매 중심이 만들어진다 |
+| C 복합체 | 두 번의 에스터 교환이 일어나고 exon이 이어진다 |
+
+이 순서에서 읽어야 할 점은 **촉매를 수행하는 것이 단백질이 아니라 RNA라는 사실**이다. U6와 U2 snRNA가 금속 이온을 배위해 반응 중심을 만들며, 구조가 group II self-splicing intron의 활성 중심과 겹친다. Spliceosome은 RNA가 촉매였던 시기의 유물을 단백질로 둘러싼 복합체로 해석된다.
+
+Spliceosome이 읽는 신호는 약하다. 5′ splice site와 branch point, 3′ splice site의 공통 서열만으로는 실제 splice site와 유전체에 흔한 유사 서열을 구별할 수 없다. 사람에서 **진짜 exon을 가려내는 일**은 보조 서열과 단백질이 맡는다. Exon 안의 **exonic splicing enhancer**에 **SR 단백질**이 결합해 그 exon의 양쪽 splice site를 쓰도록 유도하고, **silencer**에 **hnRNP** 계열 단백질이 결합해 억제한다. 사람의 exon이 평균 150 염기쌍으로 짧고 intron이 길기 때문에, spliceosome은 긴 intron을 건너뛰며 짧은 exon을 단위로 인식하는 **exon definition** 방식으로 작동한다고 본다.
+
+@fig fig-splicing Splicing의 두 단계 반응과 spliceosome의 조립. Branch point adenosine의 2′ hydroxyl 공격으로 생기는 lariat, 두 번째 에스터 교환으로 이어지는 exon, U1에서 U6까지의 snRNP 교체 순서, 그리고 SR 단백질과 hnRNP가 enhancer·silencer에 결합해 exon을 가려내는 배치를 함께 보인다.
+
+**대체 splicing**의 양식은 다섯 가지로 분류된다.
+
+| 양식 | 내용 | 결과 |
+|---|---|---|
+| Exon skipping(cassette exon) | 한 exon이 포함되거나 빠진다 | 가장 흔한 양식 |
+| 상호 배타적 exon | 두 exon 중 하나만 쓰인다 | 서로 다른 성질의 도메인 교체 |
+| 대체 5′ splice site | exon의 끝 위치가 달라진다 | 도메인 길이 변화 |
+| 대체 3′ splice site | exon의 시작 위치가 달라진다 | 읽기틀 또는 N 말단 변화 |
+| Intron retention | intron이 남는다 | 조기 종결, 핵 내 보관 |
+
+여기에 대체 promoter와 대체 polyadenylation 부위가 더해지면 한 전사 단위에서 나올 수 있는 산물의 수가 크게 늘어난다. 극단적인 예가 *Drosophila*의 *Dscam*으로, 조합상 38,000종 이상의 isoform이 가능하다.
+
+대체 splicing의 결과는 단순히 단백질의 종류를 늘리는 것이 아니다. 세 가지 서로 다른 쓰임이 있다.
+
+- **기능이 다른 단백질을 만든다.** Fibronectin은 간에서 만들어지는 혈장형에 세포 결합 도메인이 빠져 있고, 섬유아세포가 만드는 조직형에는 들어 있다. 같은 유전자에서 가용성 단백질과 기질 단백질이 나온다.
+- **막 결합형과 분비형을 가른다.** 면역글로불린 중쇄는 막 관통 도메인을 암호화하는 exon의 포함 여부로 B 세포 표면의 수용체와 분비되는 항체로 갈린다.
+- **발현을 끈다.** Intron retention이나 조기 종결 codon을 만드는 exon의 포함은 전사체를 nonsense-mediated decay로 보내므로, splicing이 발현량 조절 수단으로 쓰인다. SR 단백질 자신의 유전자가 이 방식으로 자기 양을 조절한다.
+
+Splicing의 선택은 조절된다. 조절 단백질의 농도비가 그 자리에서의 결과를 정하므로, 조직마다 SR 단백질과 hnRNP의 조성이 다르면 같은 전사체에서 다른 isoform이 나온다. 신경계에서 NOVA와 PTBP, 근육에서 RBFOX, 상피-중간엽 전환에서 ESRP가 그런 조직 특이 조절자다. 또 **전사 속도**가 조절에 들어간다. Pol II가 느리게 지나가면 약한 splice site가 쓰일 시간이 길어지고, chromatin 상태가 신장 속도를 바꾸므로 후성유전 상태가 splicing에 영향을 준다.
+
+>> Splicing은 질환과 치료 양쪽에서 출제 빈도가 높다. 변이가 splicing을 바꾸는 경로는 네 가지다. (1) **splice site 자체의 변이**, (2) branch point나 pyrimidine 구간의 변이, (3) exon 안의 enhancer·silencer를 바꾸는 **겉보기 silent 변이**, (4) spliceosome 구성 요소나 조절 단백질의 변이. 네 번째의 예가 중요하다. *SF3B1*, *U2AF1*, *SRSF2* 변이는 myelodysplastic syndrome에서 흔하며, 조절 단백질 하나의 변이가 수백 개 전사체의 splicing을 함께 바꾼다. 치료 쪽에서는 같은 기전을 역이용한다. **Nusinersen**은 *SMN2*의 intron 7에 있는 silencer에 붙는 antisense oligonucleotide로, hnRNP의 결합을 막아 exon 7이 포함되도록 만들어 기능하는 SMN 단백질을 늘린다. 척수근위축의 치료 원리가 이것이다. 반대로 **eteplirsen** 계열은 *DMD*의 특정 exon을 일부러 건너뛰게 해 읽기틀을 복원한다. 같은 도구가 한쪽에서는 exon을 넣고 다른 쪽에서는 빼는 데 쓰인다는 점이 요점이다.
+
+~ **연구 전선** Spliceosome의 구조는 최근 10년 사이 저온전자현미경으로 단계마다 풀렸고, 그 결과가 약으로 이어졌다. **Risdiplam**과 branaplam은 U1 snRNP가 약한 5′ splice site를 쓰도록 안정화하는 저분자로, 주사가 아니라 먹는 약으로 척수근위축을 치료한다. 반대로 SF3B1에 결합해 splicing을 교란하는 저분자는 *SF3B1* 변이 종양이 정상 세포보다 더 민감하다는 관찰을 근거로 시험되고 있다. **저분자로 splicing의 선택을 바꿀 수 있다**는 것이 이 분야의 전환점이었고, 쟁점은 특이성이다. 하나의 약이 수백 개 전사체의 splicing을 함께 바꾸므로, 표적 전사체에서의 효과와 나머지에서의 부작용을 전사체 전체 수준에서 측정해야 한다. 아울러 종양에서 나타나는 비정상 splicing 산물이 신생항원의 원천이 될 수 있다는 관찰은 splicing을 면역치료의 표적으로 보는 새 방향을 열었다.
+
+@sec 8. rRNA의 가공과 nucleolus
 mRNA 가공과 달리 rRNA와 tRNA의 가공은 **하나의 긴 전사체를 잘라 여러 산물을 얻는** 방식이 중심이다. 세균과 진핵세포에 공통된 전략이다.
 
 진핵세포에서 Pol I은 **45S pre-rRNA**라는 하나의 긴 전사체를 만든다. 여기에 세 rRNA가 한 줄로 들어 있다.
@@ -181,7 +236,7 @@ Nucleolus의 크기는 세포의 상태를 반영한다. 단백질 합성이 활
 
 @fig fig-rrna-processing 45S pre-rRNA의 가공과 nucleolus의 구조. 18S-5.8S-28S가 한 전사체에 배열된 순서와 절단 지점, Pol III가 따로 만드는 5S의 합류, 두 소단위로 나뉘는 분배, 그리고 전사·가공·조립 세 기능이 집적되어 nucleolus를 이루는 배치를 함께 보인다.
 
-@sec 8. snoRNP에 의한 rRNA의 화학 변형
+@sec 9. snoRNP에 의한 rRNA의 화학 변형
 rRNA 가공은 절단만이 아니다. 수십 곳의 염기와 당이 **화학적으로 변형**된다. 사람의 rRNA에서 약 100곳의 ribose가 methyl화되고 약 100곳의 uridine이 **pseudouridine**으로 바뀐다.
 
 변형의 두 종류를 구분한다.
@@ -200,7 +255,7 @@ snoRNA는 두 계열로 나뉘고 각각 한 종류의 변형을 담당한다. *
 
 @fig fig-snornp snoRNP에 의한 위치 특이적 rRNA 변형. 2′-O-methylation과 pseudouridine 형성의 화학 구조 변화, snoRNA가 pre-rRNA와 염기쌍을 이루어 변형 지점을 지정하는 방식, box C/D와 box H/ACA 두 계열의 분담, 그리고 RNA가 위치를 정하고 단백질이 반응하는 공통 전략을 함께 보인다.
 
-@sec 9. tRNA의 가공과 RNA editing
+@sec 10. tRNA의 가공과 RNA editing
 **tRNA의 가공.** Pol III가 만든 pre-tRNA도 여러 단계를 거친다.
 
 **5′ 말단 절단.** **RNase P**가 여분의 5′ 구간을 자른다. RNase P는 RNA와 단백질로 되어 있고, **촉매 활성을 가진 쪽이 RNA**다. 즉 ribozyme이다.
@@ -219,9 +274,11 @@ snoRNA는 두 계열로 나뉘고 각각 한 종류의 변형을 담당한다. *
 
 **A→I 탈아미노화.** Adenosine이 inosine으로 바뀐다. **ADAR** 계열 효소가 수행하고, 이중가닥 RNA 구간에서 일어난다. Inosine은 번역 기구에서 guanosine처럼 읽히므로 codon이 바뀔 수 있다. 신경계에서 흔하며, glutamate 수용체 소단위의 editing이 통로의 Ca²⁺ 투과성을 바꾸는 것이 잘 알려진 예다.
 
+A→I editing의 대부분은 단백질 서열을 바꾸지 않는다. 사람에서 확인된 editing 부위의 압도적 다수가 Alu를 비롯한 반복 서열이 서로 짝지어 만든 이중가닥 구간에 있고, 그 기능은 **자기 RNA를 외부 RNA와 구별하는 것**으로 해석된다. 세포질의 이중가닥 RNA는 바이러스의 표지이므로 MDA5 같은 센서가 이를 인식해 인터페론 반응을 켠다. ADAR1이 자기 유래 이중가닥 RNA를 editing해 구조를 흐트러뜨리면 이 센서가 작동하지 않는다. *ADAR1*의 기능 상실 변이가 인터페론이 만성적으로 켜진 상태인 Aicardi–Goutières 증후군을 일으키는 것이 이 해석의 임상적 근거다. 종양에서는 같은 축이 거꾸로 이용된다. ADAR1을 제거하면 종양세포가 자기 RNA를 외부 RNA로 인식해 인터페론 반응을 켜므로, ADAR1이 면역치료의 감작 표적으로 연구되고 있다.
+
 @fig fig-trna-editing tRNA 가공의 네 단계와 RNA editing의 두 방식. RNase P에 의한 5′ 절단과 그것이 ribozyme이라는 점, 주형 없이 붙는 CCA와 아미노산 결합 자리, anticodon의 inosine, 그리고 apolipoprotein B의 C→U editing이 조직에 따라 다른 길이의 단백질을 만드는 과정을 함께 보인다.
 
-@sec 10. mRNA의 안정성과 분해
+@sec 11. mRNA의 안정성과 분해
 전사량만으로 단백질의 양이 정해지지 않는다. mRNA가 **얼마나 오래 남아 있는지**가 함께 작용한다.
 
 원리는 간단하다. 정상 상태에서 mRNA의 양은 **합성 속도와 분해 속도의 균형**으로 정해진다. 합성이 같아도 반감기가 열 배 길면 쌓이는 양이 열 배가 된다. 따라서 **반감기는 전사와 독립된 조절 지점**이다.
@@ -240,11 +297,29 @@ snoRNA는 두 계열로 나뉘고 각각 한 종류의 변형을 담당한다. *
 
 **품질 관리 경로.** 정상 분해와 별도로, 결함 있는 전사체를 제거하는 경로가 있다. **Nonsense-mediated decay(NMD)** 는 번역 중 비정상적으로 이른 위치에서 종결 codon을 만나면 그 전사체를 분해한다. 판정 기준은 종결 codon이 마지막 exon 경계보다 **상류에 있는지**다. 이 경로 때문에 종결 codon을 만드는 변이는 단백질이 짧아지는 데 그치지 않고 전사체 자체가 사라지는 결과를 낳는다.
 
+분해는 세포질의 특정 장소에 모여 일어난다. Decapping 효소와 5′→3′ exonuclease가 모인 **P body**, 그리고 스트레스에서 번역이 멈춘 전사체와 개시 인자가 모이는 **stress granule**은 막이 없는 응축체이며, 전사체가 이 사이를 오가며 분해되거나 보관되었다가 다시 번역에 들어간다. 즉 전사체의 운명은 "있다/없다"가 아니라 번역, 보관, 분해 사이의 분배로 정해진다. ALS와 전두측두엽 치매에서 변이가 보고된 TDP-43과 FUS가 이 응축체의 구성 단백질이며, 응축체가 비정상적으로 굳는 것이 병리와 연결된다는 모형이 제시되어 있다.
+
 **신호에 따른 안정성 조절.** 세포 상태가 mRNA의 수명을 직접 바꾼다. **Transferrin receptor** mRNA가 전형이다. 3′ UTR에 **iron-response element(IRE)** 가 있고, 철이 부족하면 IRE-binding protein이 결합해 전사체를 분해로부터 보호한다. 수용체가 많아져 철을 더 들여온다. 철이 충분하면 결합이 풀려 전사체가 분해되고 수용체가 줄어든다. 전사를 건드리지 않고 반감기만 바꾸어 발현량을 조절하는 예다.
 
 > **임상 연계 ** NMD는 유전 질환의 표현형을 예측하는 데 직접 쓰인다. 같은 유전자의 종결 codon 변이라도 **위치에 따라 결과가 다르다.** 마지막 exon에 있는 종결 codon은 NMD를 피하므로 짧아진 단백질이 만들어지고, 그 단백질이 정상 단백질을 방해하면 **우성 음성(dominant negative)** 효과가 나타난다. 반면 상류의 종결 codon은 NMD로 전사체가 사라져 단순한 기능 상실이 되고, 이형접합자에서는 절반의 양이 남아 증상이 가볍다. β-thalassemia에서 변이 위치에 따라 경증과 중증이 갈리는 데 이 차이가 작용한다.
 
+>> 종결 codon 변이의 결과를 예측하는 문제는 **위치**로 답이 갈린다. (1) 마지막 exon에 있거나 마지막 exon 경계에서 55 nucleotide 이내에 있으면 NMD를 피해 짧아진 단백질이 만들어지고, 그 단백질이 정상 단백질과 복합체를 이루면 **우성 음성**으로 작동해 이형접합자에서도 증상이 나타난다. (2) 그보다 상류에 있으면 전사체가 분해되어 단순한 기능 상실(haploinsufficiency)이 되고, 유전자에 따라 이형접합자가 무증상이거나 경증이 된다. 같은 유전자에서 변이 위치에 따라 유전 양식이 우성과 열성으로 갈리는 사례가 이 기전으로 설명된다. 아울러 NMD는 치료 반응에도 들어간다. 조기 종결 codon을 건너뛰게 하는 read-through 약물은 전사체가 NMD로 이미 사라진 경우에는 효과를 볼 수 없으므로, NMD 억제와 함께 쓰는 전략이 시도된다.
+
+~ **연구 전선** RNA를 약으로 쓰는 분야가 지난 10년 사이에 임상으로 들어왔다. 세 갈래가 있다. 첫째, **antisense oligonucleotide**는 splicing을 바꾸거나 전사체를 분해해 nusinersen, eteplirsen, 그리고 transthyretin과 apolipoprotein을 표적으로 하는 약으로 승인되었다. 둘째, **siRNA 치료제**는 간을 표적으로 하는 전달이 확립되어 patisiran, inclisiran 등이 쓰이고 있으며, 과제는 간 이외의 장기다. 셋째, **mRNA 치료제와 백신**이다. 외부에서 넣은 mRNA가 선천 면역을 자극하는 문제를 uridine을 **N1-methylpseudouridine**으로 바꾸어 해결한 것이 결정적 진전이었고, 이 변형이 센서의 인식을 피하면서 번역 효율까지 올린다. 남은 과제는 반감기와 전달이다. 자기 복제 mRNA, 고리 모양 RNA, cap 유사체와 UTR 설계로 단백질 생산량과 지속 시간을 늘리려는 연구가 진행되며, 간 이외의 조직으로 보내는 지질 나노입자의 조성 탐색이 함께 이루어지고 있다. 이 분야는 "전사체의 수명과 번역 효율을 정하는 요소가 무엇인가"라는 이 절의 질문을 공학의 문제로 바꾸어 놓았다.
+
 @fig fig-mrna-decay mRNA 반감기와 분해 경로. 합성과 분해의 균형이 정상 상태의 양을 정하는 관계, 반감기에 따른 유전자 종류의 분포, 3′ UTR의 AU-rich element와 결합 단백질에 따라 갈리는 결과, deadenylation에서 decapping을 거쳐 exonuclease에 이르는 순서, 그리고 nonsense-mediated decay가 종결 codon 위치로 판정하는 기준을 함께 보인다.
+
+@sec 12. 연결
+이 수업은 RNA가 만들어지고 다듬어지고 사라지는 과정을 다루었다. 그 각 지점이 조절의 대상이 되는 방식은 뒤의 수업에서 이어진다.
+
+- **M01-W05-L03 유전정보의 흐름** — 이 수업의 내용이 전체 흐름의 어느 자리에 놓이는지, 조절 지점의 지도를 다시 확인한다.
+- **M01-W06-L02 유전자와 유전체의 구성** — exon·intron의 구조와 intron의 분류를 유전체 쪽에서 다루었다. 이 수업의 splicing 기전과 함께 보아야 한다.
+- **M01-W07-L02 전사 조절과 후성유전** — enhancer, 전사인자, chromatin 상태가 여기서 다룬 개시와 신장을 어떻게 조절하는지를 다룬다.
+- **M01-W07-L03 단백질 합성** — 이 수업에서 만든 mRNA와 tRNA, rRNA가 ribosome에서 어떻게 쓰이는지를 다룬다. Cap과 poly(A) 꼬리의 기능이 거기서 번역 개시의 요소로 다시 나타난다.
+- **M01-W08-L01 번역 후 가공·접힘·분해** — 번역 이후의 조절 지점을 다루며, mRNA 수명과 단백질 수명이 각각 어떻게 발현량에 들어가는지를 비교한다.
+- **M01-W08-L03 핵과 핵-세포질 수송** — 가공이 완료된 전사체가 핵을 떠나는 과정과 그 품질 관문을 다룬다.
+- **M02-W01-L02 유전 질환의 분자 기전** — splice site 변이, NMD, 반복 확장에 의한 RNA 독성을 질환의 분류 안에서 정리한다.
+- **M03-W02-L03 RNA 가공의 상세** — cap 부가와 3′ 말단 가공의 효소 수준 기전, 그리고 non-coding RNA의 생성을 다룬다.
 
 => 이 수업 전체를 묶는 요점은 **유전자 발현이 전사량 하나로 정해지지 않는다**는 것이다. 어느 polymerase가 전사하는지, preinitiation complex가 얼마나 잘 조립되는지, 가공이 어떻게 되는지, 전사체가 얼마나 오래 남는지가 모두 최종 단백질량에 들어간다. 다음 수업에서는 이 가운데 전사 자체의 조절을 다룬다.
 
@@ -290,3 +365,9 @@ A: NMD는 종결 codon이 마지막 exon 경계보다 상류에 있는지를 기
 - Nishikura K. A-to-I editing of coding and non-coding RNAs by ADARs. Nat Rev Mol Cell Biol. 2016;17(2):83-96.
 - Kurosaki T, Popp MW, Maquat LE. Quality and quantity control of gene expression by nonsense-mediated mRNA decay. Nat Rev Mol Cell Biol. 2019;20(7):406-20.
 - Lafontaine DLJ, Riback JA, Bascetin R, Brangwynne CP. The nucleolus as a multiphase liquid condensate. Nat Rev Mol Cell Biol. 2021;22(3):165-82.
+- Will CL, Lührmann R. Spliceosome structure and function. *Cold Spring Harb Perspect Biol* 2011;3:a003707.
+- Wahl MC, Will CL, Lührmann R. The spliceosome: design principles of a dynamic RNP machine. *Cell* 2009;136:701–718.
+- Finkel RS, Mercuri E, Darras BT, et al. Nusinersen versus sham control in infantile-onset spinal muscular atrophy. *N Engl J Med* 2017;377:1723–1732.
+- Karikó K, Buckstein M, Ni H, Weissman D. Suppression of RNA recognition by Toll-like receptors: the impact of nucleoside modification. *Immunity* 2005;23:165–175.
+- Core L, Adelman K. Promoter-proximal pausing of RNA polymerase II: a nexus of gene regulation. *Genes Dev* 2019;33:960–982.
+- Yoshida K, Sanada M, Shiraishi Y, et al. Frequent pathway mutations of splicing machinery in myelodysplasia. *Nature* 2011;478:64–69.
