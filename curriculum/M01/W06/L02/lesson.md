@@ -170,7 +170,9 @@ Alu가 100만 copy 이상으로 흩어져 있다는 사실 자체가 임상적 �
 
 Histone도 한 종류가 아니다. 주요 histone 외에 서열이 조금 다른 **변이체**가 특정 위치와 상태를 표시한다. H2A.Z는 promoter 주변 nucleosome에, H3.3은 전사가 활발한 구간과 telomere에, CENP-A는 centromere에, 그리고 DNA 손상 부위에서는 H2AX가 인산화되어(γH2AX) 복구 단백질을 모은다. 변이체의 배치 자체가 유전체 위의 주석이 된다.
 
-Nucleosome의 위치도 무작위가 아니다. DNA의 굽힘 성질이 서열에 따라 다르므로 nucleosome이 앉기 쉬운 서열과 어려운 서열이 있고, 전사 개시점 바로 위쪽에는 nucleosome이 비어 있는 구간이 규칙적으로 나타난다. 이 nucleosome-free region의 존재가 전사인자의 접근을 가능하게 하며, M01-W06-L01에서 다룬 ATAC-seq이 측정하는 대상이 바로 이것이다. 양전하를 띠고, DNA의 음전하 인산 골격과 정전기적으로 결합한다. Histone의 N 말단 꼬리는 nucleosome 바깥으로 나와 있어 acetylation, methylation, phosphorylation을 받는다. Lysine의 acetylation은 양전하를 중화해 DNA와의 결합을 약하게 하고, 수식된 꼬리는 다른 단백질의 결합 표지가 된다. 이 수식과 전사 조절의 연결은 M01-W07-L02에서 다룬다.
+Nucleosome의 위치도 무작위가 아니다. DNA의 굽힘 성질이 서열에 따라 다르므로 nucleosome이 앉기 쉬운 서열과 어려운 서열이 있고, 전사 개시점 바로 위쪽에는 nucleosome이 비어 있는 구간이 규칙적으로 나타난다. 이 nucleosome-free region의 존재가 전사인자의 접근을 가능하게 하며, M01-W06-L01에서 다룬 ATAC-seq이 측정하는 대상이 바로 이것이다.
+
+Histone은 lysine과 arginine이 많아 양전하를 띠고, DNA의 음전하 인산 골격과 정전기적으로 결합한다. Histone의 N 말단 꼬리는 nucleosome 바깥으로 나와 있어 acetylation, methylation, phosphorylation을 받는다. Lysine의 acetylation은 양전하를 중화해 DNA와의 결합을 약하게 하고, 수식된 꼬리는 다른 단백질의 결합 표지가 된다. 이 수식과 전사 조절의 연결은 M01-W07-L02에서 다룬다.
 
 중기 염색체의 형태는 임상 세포유전학의 좌표가 된다. Giemsa 염색으로 나타나는 띠는 AT가 풍부하고 유전자 밀도가 낮은 구간이 진하게(G-band positive), GC가 풍부하고 유전자 밀도가 높은 구간이 연하게 보이는 양상이며, 이 띠에 번호를 붙여 위치를 표기한다. 17p13.1은 17번 염색체 단완(p)의 1번 영역 3번 띠 1번 세부 띠라는 뜻이고, 핵형은 46,XY 뒤에 이상을 적어 `46,XX,del(5)(p15.2)`처럼 쓴다. 이 표기법은 지금도 종양의 전좌와 선천 이상을 기술하는 공통 언어로 쓰인다.
 
