@@ -1,0 +1,48 @@
+<!-- 개시 비교. 라벨만 둔다.
+   A 세균. 16S rRNA 와 Shine-Dalgarno 서열의 짝짓기. polycistronic 구조.
+   B 진핵. cap 에 붙은 eIF4F 에서 출발하는 scanning. Kozak 맥락의 AUG.
+   캡션에 쓸 내용: 서열을 직접 읽는 방식과 말단에서 찾아가는 방식의 차이가
+   전사체 하나에서 나오는 단백질의 수를 정한다는 것.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 300" width="640" height="300" role="img"
+ aria-label="번역 개시 비교 그림. A 패널은 세균에서 16S rRNA가 Shine-Dalgarno 서열과 짝지어 개시 codon에 바로 앉고 하나의 전사체에 여러 개시 지점이 있는 polycistronic 구조를, B 패널은 진핵세포에서 cap에 결합한 eIF4F에서 출발해 5 프라임에서 3 프라임으로 훑어 내려가 Kozak 맥락의 AUG에서 멈추는 scanning 방식을 보인다.">
+ <style>
+  .t{font:12px sans-serif;fill:#16191d}
+  .s{font:11px sans-serif;fill:#50585f}
+  .p{font:700 15px sans-serif;fill:#003c71}
+  .rna{stroke:#1a4f8a;stroke-width:3;fill:none}
+  .orf{fill:#dce6f2;stroke:#1a4f8a;stroke-width:2}
+  .hot{fill:#fff5d6;stroke:#f2b705;stroke-width:2}
+  .rib{fill:#e3f0e4;stroke:#2e7d32;stroke-width:2}
+  .ar{stroke:#003c71;stroke-width:2;fill:none;marker-end:url(#a)}
+ </style>
+ <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker></defs>
+
+ <text class="p" x="14" y="26">A</text>
+ <text class="s" x="40" y="26">bacteria  70S</text>
+ <path class="rna" d="M40 96 L600 96"/>
+ <rect class="hot" x="78" y="86" width="34" height="20"/><text class="s" x="82" y="101">SD</text>
+ <rect class="orf" x="120" y="84" width="130" height="24"/><text class="t" x="168" y="101">ORF 1</text>
+ <rect class="hot" x="276" y="86" width="34" height="20"/><text class="s" x="280" y="101">SD</text>
+ <rect class="orf" x="318" y="84" width="120" height="24"/><text class="t" x="361" y="101">ORF 2</text>
+ <rect class="hot" x="462" y="86" width="34" height="20"/><text class="s" x="466" y="101">SD</text>
+ <rect class="orf" x="504" y="84" width="92" height="24"/><text class="t" x="533" y="101">ORF 3</text>
+ <ellipse class="rib" cx="118" cy="60" rx="30" ry="16"/><text class="s" x="104" y="64">30S</text>
+ <ellipse class="rib" cx="316" cy="60" rx="30" ry="16"/><text class="s" x="302" y="64">30S</text>
+ <ellipse class="rib" cx="502" cy="60" rx="30" ry="16"/><text class="s" x="488" y="64">30S</text>
+ <text class="s" x="40" y="138">16S rRNA  pairs with SD</text>
+ <text class="s" x="300" y="138">IF1 , IF2-GTP , IF3 ; fMet-tRNA</text>
+
+ <text class="p" x="14" y="186">B</text>
+ <text class="s" x="40" y="186">eukaryote  80S</text>
+ <path class="rna" d="M80 250 L600 250"/>
+ <circle class="hot" cx="74" cy="250" r="11"/><text class="s" x="56" y="232">cap</text>
+ <ellipse class="rib" cx="124" cy="218" rx="34" ry="16"/><text class="s" x="106" y="222">43S</text>
+ <path class="ar" d="M162 218 L300 218"/>
+ <text class="s" x="190" y="208">scanning</text>
+ <rect class="hot" x="310" y="240" width="40" height="20"/><text class="s" x="314" y="255">AUG</text>
+ <text class="s" x="300" y="282">Kozak</text>
+ <rect class="orf" x="356" y="238" width="190" height="24"/><text class="t" x="430" y="255">single ORF</text>
+ <text class="s" x="560" y="238">poly(A)</text>
+ <text class="s" x="396" y="208">eIF4F : 4E , 4G , 4A ; PABP loop</text>
+</svg>

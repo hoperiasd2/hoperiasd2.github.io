@@ -1,4 +1,41 @@
 {
   "lesson_id": "M01-W07-L03",
-  "figures": []
+  "figures": [
+    {
+      "figure_id": "fig-trna-charging",
+      "lesson_id": "M01-W07-L03",
+      "html_anchor": "#fig-trna-charging",
+      "caption": "tRNA의 구조와 아미노산 적재. Clover leaf 2차 구조에서 anticodon과 CCA 말단의 위치, L 모양 3차 구조에서 두 기능 부위가 분자의 양 끝에 놓이는 배치, 활성화와 전이 두 단계로 진행되는 적재 반응, 그리고 일부 synthetase가 가진 편집 부위에서 잘못 실린 아미노산이 가수분해되는 과정을 함께 보인다.",
+      "asset_path": "assets/fig-trna-charging.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-initiation",
+      "lesson_id": "M01-W07-L03",
+      "html_anchor": "#fig-initiation",
+      "caption": "세균과 진핵세포의 번역 개시 비교. 16S rRNA와 Shine–Dalgarno 서열의 짝짓기로 개시 codon에 바로 앉는 방식, cap을 인식한 eIF4F에서 출발해 5′에서 3′로 훑어 내려가며 AUG를 찾는 방식, 두 체계의 개시 인자와 개시 tRNA, 그리고 polycistronic 전사체와 단일 ORF 전사체의 구조 차이를 함께 보인다.",
+      "asset_path": "assets/fig-initiation.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-translation-targets",
+      "lesson_id": "M01-W07-L03",
+      "html_anchor": "#fig-translation-targets",
+      "caption": "번역 기구의 작용 지점 지도. 30S의 해독 중심과 A 자리, 50S의 peptidyl transferase 중심과 exit tunnel, 신장 인자 EF-G와 적재 효소에 각각 작용하는 약물의 위치, 그리고 사람 미토콘드리아 ribosome이 세균 ribosome과 구조를 공유해 부작용의 통로가 되는 관계를 함께 보인다.",
+      "asset_path": "assets/fig-translation-targets.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    }
+  ]
 }

@@ -1,0 +1,64 @@
+<!-- 번역 억제제의 작용 지점 지도. 라벨만 둔다.
+   왼쪽 작은 소단위. 해독 중심과 A 자리.
+   오른쪽 큰 소단위. peptidyl transferase 중심과 exit tunnel.
+   아래 인자와 적재 효소. 오른쪽 아래 미토콘드리아 ribosome.
+   캡션에 쓸 내용: 선택독성이 70S 와 80S 의 차이에 기대는데,
+   55S 미토콘드리아 ribosome 이 그 차이를 좁혀 부작용의 통로가 된다는 것.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 340" width="640" height="340" role="img"
+ aria-label="번역 억제제 작용 지점 그림. 작은 소단위의 해독 중심과 A 자리에 작용하는 aminoglycoside와 tetracycline, 큰 소단위의 peptidyl transferase 중심에 작용하는 chloramphenicol과 exit tunnel에 작용하는 macrolide와 clindamycin, A 자리 쪽의 linezolid, 신장 인자 EF-G에 작용하는 fusidic acid, 적재 효소에 작용하는 mupirocin, 진핵 60S에 작용하는 cycloheximide, 그리고 사람 미토콘드리아 55S ribosome이 세균 ribosome과 구조를 공유하는 관계를 보인다.">
+ <style>
+  .t{font:12px sans-serif;fill:#16191d}
+  .s{font:11px sans-serif;fill:#50585f}
+  .p{font:700 15px sans-serif;fill:#003c71}
+  .sub{fill:#dce6f2;stroke:#1a4f8a;stroke-width:2}
+  .big{fill:#e8eef5;stroke:#1a4f8a;stroke-width:2}
+  .hot{fill:#fff5d6;stroke:#f2b705;stroke-width:2}
+  .mt{fill:#f7e4e2;stroke:#b3261e;stroke-width:2}
+  .ar{stroke:#b3261e;stroke-width:1.8;fill:none;marker-end:url(#r)}
+  .rna{stroke:#1a4f8a;stroke-width:3;fill:none}
+ </style>
+ <defs><marker id="r" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#b3261e"/></marker></defs>
+
+ <text class="p" x="14" y="26">A</text>
+ <text class="s" x="40" y="26">bacterial 70S</text>
+ <path class="big" d="M150 44 q150 0 150 70 q0 70 -150 70 q-40 -30 -40 -70 q0 -40 40 -70 z"/>
+ <text class="t" x="196" y="86">50S</text>
+ <rect class="hot" x="178" y="100" width="56" height="20"/><text class="s" x="182" y="115">PTC</text>
+ <path class="rna" d="M206 120 L206 168"/>
+ <text class="s" x="212" y="156">exit tunnel</text>
+ <path class="sub" d="M150 190 q140 0 140 44 q0 44 -140 44 q-36 -20 -36 -44 q0 -24 36 -44 z"/>
+ <text class="t" x="188" y="224">30S</text>
+ <rect class="hot" x="170" y="236" width="80" height="20"/><text class="s" x="174" y="251">decoding</text>
+ <rect class="hot" x="256" y="200" width="30" height="20"/><text class="s" x="263" y="215">A</text>
+
+ <path class="ar" d="M66 246 L164 246"/>
+ <text class="s" x="14" y="242">aminoglycoside</text>
+ <path class="ar" d="M330 210 L292 210"/>
+ <text class="s" x="336" y="206">tetracycline</text>
+ <path class="ar" d="M120 110 L172 110"/>
+ <text class="s" x="14" y="106">chloramphenicol</text>
+ <path class="ar" d="M300 150 L246 158"/>
+ <text class="s" x="306" y="148">macrolide</text>
+ <text class="s" x="306" y="164">clindamycin</text>
+ <path class="ar" d="M330 176 L292 194"/>
+ <text class="s" x="336" y="180">linezolid</text>
+
+ <text class="p" x="430" y="26">B</text>
+ <text class="s" x="456" y="26">factors</text>
+ <rect class="sub" x="430" y="40" width="96" height="30" rx="6"/>
+ <text class="t" x="452" y="60">EF-G</text>
+ <path class="ar" d="M560 56 L530 56"/>
+ <text class="s" x="440" y="88">fusidic acid</text>
+ <rect class="sub" x="430" y="104" width="120" height="30" rx="6"/>
+ <text class="t" x="438" y="124">synthetase</text>
+ <text class="s" x="440" y="152">mupirocin</text>
+ <rect class="big" x="430" y="168" width="96" height="30" rx="6"/>
+ <text class="t" x="452" y="188">60S</text>
+ <text class="s" x="440" y="216">cycloheximide</text>
+
+ <path class="mt" d="M430 248 q110 0 110 34 q0 34 -110 34 q-28 -16 -28 -34 q0 -18 28 -34 z"/>
+ <text class="t" x="462" y="286">mito 55S</text>
+ <path class="ar" d="M300 282 L398 282"/>
+ <text class="s" x="190" y="300">shared target</text>
+</svg>

@@ -1,0 +1,63 @@
+<!-- tRNA 구조와 적재. 라벨만 둔다.
+   A clover leaf 2차 구조. anticodon 과 CCA 말단의 위치.
+   B L 모양 3차 구조. 두 기능 부위가 약 7 nm 떨어져 양 끝에 놓인다.
+   C 적재 반응 두 단계와 편집 부위.
+   캡션에 쓸 내용: 적재 단계에서 에너지가 미리 지불되고, 편집 부위가
+   잘못 실린 아미노산을 가수분해해 오류율을 낮춘다는 것.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 330" width="640" height="330" role="img"
+ aria-label="tRNA 그림. A 패널은 clover leaf 2차 구조에서 anticodon 고리와 3 프라임 CCA 말단, D 고리와 T 고리의 위치를, B 패널은 L 모양 3차 구조에서 anticodon과 아미노산 결합 자리가 분자의 양 끝에 놓이는 배치를, C 패널은 활성화와 전이 두 단계로 진행되는 적재 반응과 편집 부위에서의 가수분해를 보인다.">
+ <style>
+  .t{font:12px sans-serif;fill:#16191d}
+  .s{font:11px sans-serif;fill:#50585f}
+  .p{font:700 15px sans-serif;fill:#003c71}
+  .rna{stroke:#1a4f8a;stroke-width:3;fill:none}
+  .box{fill:#dce6f2;stroke:#1a4f8a;stroke-width:2}
+  .hot{fill:#fff5d6;stroke:#f2b705;stroke-width:2}
+  .en{fill:#e3f0e4;stroke:#2e7d32;stroke-width:2}
+  .ar{stroke:#003c71;stroke-width:2;fill:none;marker-end:url(#a)}
+  .dim{stroke:#8a8f96;stroke-width:1.2;fill:none}
+ </style>
+ <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker></defs>
+
+ <text class="p" x="14" y="24">A</text>
+ <path class="rna" d="M96 46 L136 46 M96 60 L136 60"/>
+ <text class="s" x="140" y="44">3' CCA</text>
+ <text class="s" x="140" y="64">5' P</text>
+ <path class="rna" d="M116 60 L116 96"/>
+ <path class="rna" d="M116 96 L66 112 M116 96 L166 112"/>
+ <ellipse class="box" cx="56" cy="118" rx="22" ry="14"/><text class="s" x="47" y="122">D</text>
+ <ellipse class="box" cx="176" cy="118" rx="22" ry="14"/><text class="s" x="166" y="122">T</text>
+ <path class="rna" d="M116 96 L116 160"/>
+ <ellipse class="hot" cx="116" cy="178" rx="34" ry="16"/>
+ <text class="s" x="90" y="182">anticodon</text>
+ <text class="s" x="60" y="214">clover leaf</text>
+
+ <text class="p" x="226" y="24">B</text>
+ <path class="rna" d="M258 56 L358 56 q18 0 18 18 L376 170"/>
+ <circle class="box" cx="252" cy="56" r="9"/>
+ <text class="s" x="236" y="42">aa</text>
+ <ellipse class="hot" cx="376" cy="186" rx="32" ry="15"/>
+ <text class="s" x="352" y="190">anticodon</text>
+ <path class="dim" d="M252 72 L252 150 M252 150 L360 182"/>
+ <text class="s" x="252" y="146">~7 nm</text>
+ <text class="s" x="262" y="214">L shape</text>
+
+ <text class="p" x="440" y="24">C</text>
+ <text class="s" x="440" y="52">aa + ATP</text>
+ <path class="ar" d="M506 48 L540 48"/>
+ <text class="s" x="548" y="52">aa-AMP</text>
+ <text class="s" x="548" y="68">+ PPi</text>
+ <path class="ar" d="M470 62 L470 92"/>
+ <text class="s" x="440" y="112">+ tRNA</text>
+ <path class="ar" d="M506 108 L540 108"/>
+ <text class="s" x="548" y="112">aa-tRNA</text>
+ <text class="s" x="548" y="128">+ AMP</text>
+ <rect class="en" x="440" y="150" width="180" height="46" rx="6"/>
+ <text class="t" x="452" y="170">synthetase</text>
+ <rect class="hot" x="548" y="158" width="62" height="30"/>
+ <text class="s" x="553" y="177">editing</text>
+ <path class="ar" d="M600 200 L600 224"/>
+ <text class="s" x="548" y="240">hydrolysis</text>
+ <text class="s" x="440" y="214">2 steps</text>
+</svg>
