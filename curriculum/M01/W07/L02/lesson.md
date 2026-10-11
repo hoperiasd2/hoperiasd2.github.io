@@ -2,8 +2,8 @@
 lesson_id: M01-W07-L02
 title: 전사 조절과 후성유전
 en: Transcriptional Regulation and Epigenetics
-status: 초안
-version: v0.1
+status: 완성
+version: v1.0
 ---
 
 @obj
@@ -188,6 +188,8 @@ DNA 결합 영역이 자리를 정했다면, 활성화 영역이 실제로 전�
 
 > **임상 연계 ** 네 경로가 모두 약물 표적이다. **글루코코르티코이드**는 경로 1을 직접 쓰는 약물로, 수용체를 통해 염증 유전자를 억제하고 동시에 NF-κB의 작용을 방해한다. 광범위한 효과와 광범위한 부작용이 같은 기전에서 나온다. 수용체가 수백 개의 유전자를 함께 조절하기 때문이다. **JAK 억제제**(tofacitinib, baricitinib)는 경로 3을 차단해 류마티스 관절염과 아토피 피부염에 쓰이며, 여러 cytokine 신호가 JAK-STAT으로 모이므로 하나의 약물이 여러 경로를 동시에 끈다. **프로테아솜 억제제**(bortezomib)는 IκB의 분해를 막아 NF-κB의 활성화를 간접적으로 억제한다.
 
+>> 핵수용체는 "신호가 전사인자를 직접 바꾸는" 가장 단순한 경로이면서, 세부에서 갈리는 지점이 많아 출제가 잦다. **리간드가 없을 때 어디에 있는가**가 첫 구분이다. 글루코코르티코이드 수용체와 광물부신피질호르몬 수용체는 세포질에서 chaperone과 결합해 있다가 리간드가 붙으면 핵으로 들어가고, 갑상샘호르몬 수용체와 레티노산 수용체는 리간드가 없어도 이미 DNA에 붙어 **공동억제인자와 함께 유전자를 꺼 두고** 있다가 리간드가 오면 공동활성화인자로 교체한다. 그래서 갑상샘호르몬 수용체의 기능 상실 변이는 단순한 기능 저하가 아니라 정상 수용체의 작용까지 막는 **우성 음성**으로 작동해 호르몬 저항 증후군을 만든다. 둘째 구분은 **결합하는 DNA 서열의 배치**다. 수용체가 같은 서열의 두 반복에 이량체로 붙는지, 다른 수용체와 짝을 이루는지가 반응 요소의 방향과 간격을 정한다. 셋째는 **같은 수용체가 활성화와 억제를 함께 한다**는 점이다. 글루코코르티코이드의 항염 작용 가운데 상당 부분은 반응 요소에 붙어 유전자를 켜는 것이 아니라 NF-κB와 AP-1의 작용을 방해하는 데서 온다. 치료 효과와 대사 부작용이 서로 다른 기전에서 온다는 이 분리가, 둘을 떼어 놓는 선택적 작용제 개발의 근거다.
+
 @fig fig-signal-to-promoter 세포 외 신호가 promoter에 도달하는 네 경로. 막을 통과한 스테로이드가 세포질 수용체와 결합해 함께 핵으로 들어가는 경로, 핵에 대기하던 CREB이 PKA에 인산화되는 경로, JAK에 인산화된 STAT이 이량체가 되어야 들어가는 경로, IκB의 분해로 풀려나는 NF-κB 경로, 그리고 네 경로 모두 새 합성이 아니라 대기 상태의 전환이라는 공통 원리를 함께 보인다.
 
 @sec 9. 조직 특이적 발현과 master regulator
@@ -216,11 +218,31 @@ DNA 결합 영역이 자리를 정했다면, 활성화 영역이 실제로 전�
 
 이 접근성의 상태를 정하고 유지하는 기전이 **후성유전 조절(epigenetic regulation)** 이다. 세 종류가 함께 작동한다.
 
-**Chromatin remodeling.** ATP를 써서 nucleosome을 밀거나 떼어 낸다. 조절서열이 노출되거나 가려진다.
+**Chromatin remodeling.** ATP를 써서 nucleosome을 밀거나 떼어 낸다. 조절서열이 노출되거나 가려진다. Remodeler는 네 계열로 나뉘며 하는 일이 조금씩 다르다. **SWI/SNF(BAF)** 계열은 nucleosome을 밀어내거나 해체해 조절서열을 노출시키고, **ISWI** 계열은 nucleosome 사이의 간격을 고르게 정돈하며, **CHD** 계열은 nucleosome을 조립하고 억제성 복합체와 함께 작동하고, **INO80** 계열은 histone 변이체를 교체한다. 계열별 분업이 임상에서 확인된다. SWI/SNF 복합체의 소단위는 사람 암의 약 20%에서 변이가 발견되며, *ARID1A*(난소의 clear cell 암, 위암), *SMARCB1*(횡문근양 종양), *SMARCA4*(폐의 미분화 종양), *PBRM1*(신세포암)이 그 예다. **조절서열을 여는 기계의 고장이 종양 억제 유전자의 상실과 같은 결과를 낸다**는 점이 이 발견의 의미다.
 
-**Histone 변형.** Histone의 꼬리에 acetyl기, methyl기, phosphate기 등이 붙는다. Acetylation은 대체로 열린 상태와, 특정 위치의 methylation은 닫힌 상태와 연관된다. 변형은 그 자체로 결합을 바꾸기도 하고, 그 표지를 읽는 단백질을 불러들이기도 한다.
+**Histone 변형.** Histone의 꼬리에 acetyl기, methyl기, phosphate기 등이 붙는다. 변형은 두 방식으로 작동한다. 하나는 **직접적 효과**로, lysine의 acetylation이 양전하를 중화해 DNA와의 결합을 약하게 한다. 다른 하나는 **표지로서의 효과**로, 변형된 꼬리를 특정 도메인이 읽고 그 자리에 다른 복합체를 끌어온다. Acetyl-lysine은 bromodomain이 읽고, methyl-lysine은 chromodomain과 PHD finger가 읽는다.
 
-**DNA methylation.** CpG의 cytosine에 methyl기가 붙는다. Promoter 영역의 CpG가 methyl화되면 그 유전자는 대개 꺼진다.
+표지를 다루는 단백질은 세 역할로 나눈다. 붙이는 **writer**(acetyltransferase, methyltransferase), 떼는 **eraser**(HDAC, demethylase), 읽는 **reader**다. 어느 표지가 어디에 있는지는 규칙성이 높아 유전체의 주석으로 쓰인다.
+
+| 표지 | 분포 | 뜻 |
+|---|---|---|
+| H3K4me3 | 활성 promoter | 전사 개시점의 표지 |
+| H3K4me1 + H3K27ac | 활성 enhancer | 쓰이고 있는 enhancer |
+| H3K36me3 | 전사되는 유전자 몸통 | 신장이 지나간 흔적 |
+| H3K27me3 | Polycomb이 억제한 발생 유전자 | 되돌릴 수 있는 억제 |
+| H3K9me3 | constitutive heterochromatin, 반복 서열 | 안정한 침묵 |
+
+억제를 담당하는 두 체계가 서로 대립한다. **Polycomb(PRC2)**는 H3K27me3를 붙여 발생 조절 유전자를 꺼 두고, **Trithorax(MLL/COMPASS)**는 H3K4 methylation을 붙여 켜 둔다. 줄기세포에서는 같은 promoter에 H3K4me3와 H3K27me3가 함께 있는 **bivalent domain**이 관찰되는데, "아직 꺼져 있지만 곧 켜질 수 있게 준비된 상태"로 해석된다. 분화가 진행되면 한쪽 표지가 지워져 결정된다.
+
+이 체계의 고장은 질환으로 직결된다. H3K27me3를 지우는 반대편 효소 *KDM6A*, H3K4 methyltransferase *KMT2D*의 기능 상실은 Kabuki 증후군을 일으키고, 소아 glioma에서는 H3 자체의 K27M 변이가 PRC2를 억제해 H3K27me3를 유전체 전체에서 지운다. **표지를 읽는 쪽이 표적이 되기도 한다.** BRD4의 bromodomain을 막는 저분자가 *MYC* 발현을 떨어뜨린다는 관찰이 BET 억제제 개발의 출발점이었다.
+
+**DNA methylation.** CpG의 cytosine 5번 위치에 methyl기가 붙어 **5-methylcytosine**이 된다. 포유류 유전체의 CpG 가운데 70~80%가 이미 methylation되어 있고, 예외가 유전자의 promoter 주변에 CpG가 몰려 있는 **CpG island**다. 사람 유전자의 약 절반이 CpG island promoter를 가지며, 이 구간은 정상적으로 methylation되지 않은 상태로 유지된다. 거꾸로 **CpG island가 methylation되면 그 유전자는 안정적으로 꺼진다.**
+
+작동하는 효소가 역할별로 나뉘어 있다. **DNMT3A·DNMT3B**는 methylation이 없던 자리에 새로 붙이는 de novo 효소이고, **DNMT1**은 복제 직후 한쪽 가닥만 methylation된 반쪽 상태를 인식해 신생 가닥에 같은 표지를 복사하는 유지 효소다. 이 유지 기전이 **분열을 넘어 상태가 계승되는 분자적 근거**다. 지우는 쪽에는 **TET** 계열 효소가 있어 5-methylcytosine을 산화해 단계적으로 제거한다.
+
+침묵이 만들어지는 경로는 두 갈래다. Methylation이 전사인자의 결합을 직접 방해하기도 하고, **MeCP2**나 MBD 계열 단백질이 methylation된 CpG를 읽고 HDAC을 포함한 억제 복합체를 끌어오기도 한다. 후자가 더 일반적이며, DNA methylation과 histone 변형이 하나의 체계로 묶이는 지점이다. *MECP2* 변이가 Rett 증후군을 일으키는 것이 이 연결의 임상적 증거다.
+
+5-methylcytosine은 유전적 결과도 남긴다. 탈아미노화되면 thymine이 되어 복구 효소가 잘못된 염기로 인식하기 어렵고, 그 결과 CpG가 진화 과정에서 소실되어 사람 유전체의 CpG 빈도가 기대치의 5분의 1로 줄어 있다. 임상에서는 같은 이유로 **CpG 자리가 점 변이의 과열 지점(hotspot)**이 된다.
 
 **후성유전이라는 말의 범위를 정확히 해야 한다.** 이 용어는 **DNA 염기서열의 변화 없이 유전자 발현 상태가 바뀌고, 그 상태가 세포 분열을 넘어 유지되는 현상**을 가리킨다. 두 조건이 모두 필요하다.
 
@@ -232,11 +254,49 @@ DNA 결합 영역이 자리를 정했다면, 활성화 영역이 실제로 전�
 
 **세대를 넘는 전달.** 부모의 경험이 자손의 발현 상태로 전달되는 것. 포유류에서 명확히 입증된 예는 **각인(imprinting)** 처럼 제한적이며, 일반화된 주장은 근거가 약하다.
 
-세 기전의 분자 수준 상세와 유지 기전, 암에서의 이상은 M03-W05-L01에서 다룬다.
+암에서는 이 체계가 두 방향으로 동시에 어긋난다. 종양 억제 유전자의 CpG island promoter가 과메틸화되어 꺼지고(*MLH1*, *CDKN2A*, *MGMT*, *BRCA1*), 유전체 전체로는 반복 서열의 메틸화가 풀려 저메틸화되면서 transposable element의 전이 억제와 염색체 안정성이 약해진다. 변이가 없는데도 유전자가 꺼지는 경로가 있다는 사실은 종양 분석에서 서열만으로는 설명되지 않는 사례를 만든다. 질환별 상세와 치료 응용은 M03-W05-L01에서 다룬다.
+
+>> 유전자가 꺼진 원인을 묻는 문제는 **서열의 변화인가, 발현의 침묵인가**로 갈린다. 두 대립형질 모두 기능을 잃어야 하는 종양 억제 유전자에서, 한쪽은 생식계열 변이로 잃고 다른 쪽은 promoter 과메틸화로 잃는 조합이 흔하다. 이것이 Knudson의 두 번 타격 가설에서 "두 번째 타격"이 반드시 변이일 필요가 없는 이유다. 실제 검사에서는 세 가지를 함께 본다. 염기서열 분석으로 점 변이를, 복제수 분석으로 결실을, 메틸화 특이 PCR이나 bisulfite 염기서열 분석으로 침묵을 본다. **단백질은 없는데 서열은 정상**이라는 결과를 받았을 때 메틸화를 떠올리는 것이 이 부류 문제의 핵심이며, M01-W06-L03에서 다룬 *MLH1* 사례가 그 전형이다.
 
 > **임상 연계 ** 후성유전 변화는 **되돌릴 수 있다**는 점에서 치료 표적으로서 특별하다. 유전자 변이는 고치기 어렵지만 methyl기와 acetyl기는 붙이고 떼는 효소가 있으므로 약물로 개입할 수 있다. **DNA methyltransferase 억제제**(azacitidine, decitabine)가 골수이형성증후군과 급성 골수성 백혈병에 쓰이고, **HDAC 억제제**가 T세포 림프종에 쓰인다. 두 약물군 모두 특정 유전자를 표적으로 하지 않고 발현 양상 전체를 바꾸므로, 효과와 독성의 예측이 어렵다는 공통의 한계가 있다.
 
 @fig fig-epigenetic-layer 후성유전 조절이 전사 조절에 더하는 층. Nucleosome에 감긴 DNA에서 조절서열의 존재와 접근 가능성이 분리되는 구조, chromatin remodeling과 histone 변형, DNA methylation의 세 기전, 그리고 일시적 조절·분열을 넘는 유지·세대를 넘는 전달 세 범주를 구분하는 기준을 함께 보인다.
+
+@sec 11. 한쪽만 켜지는 조절 — X 염색체 불활성화와 각인
+앞의 절들은 유전자가 켜지는지 꺼지는지를 다루었다. 여기서는 **두 대립형질 가운데 한쪽만 쓰이는** 조절을 다룬다. 두 현상이 후성유전 조절의 정의를 가장 명확하게 보여 주고, 임상에서 직접 쓰이기 때문이다.
+
+**X 염색체 불활성화.** 여성의 두 X 염색체 가운데 하나가 발생 초기에 꺼지고, 그 선택이 분열을 넘어 유지된다. 꺼지는 쪽은 세포마다 무작위로 정해지므로 여성의 몸은 두 종류의 세포가 섞인 모자이크가 된다. 기전의 중심에는 X에만 있는 long non-coding RNA **XIST**가 있다. XIST는 자기가 만들어진 X 염색체를 따라 퍼지며 Polycomb과 억제 복합체를 끌어와 그 염색체 전체를 heterochromatin으로 바꾼다. 꺼진 X는 핵 주변에 응축된 **Barr body**로 관찰된다. 다만 모든 유전자가 꺼지는 것은 아니다. pseudoautosomal 영역을 비롯해 약 15%의 유전자가 불활성화를 **벗어난다(escape)**. 이 escape 때문에 X가 하나뿐인 Turner 증후군(45,X)에서 표현형이 나타나고, X가 둘인 Klinefelter 증후군(47,XXY)에서도 표현형이 나타난다.
+
+**각인(genomic imprinting).** 약 100개 남짓의 유전자는 부모 중 어느 쪽에서 왔는지에 따라 한쪽만 발현된다. 표지는 생식세포에서 DNA methylation으로 붙고, 수정 뒤 유전체 전체의 methylation이 지워지는 과정에서도 **각인 조절 영역(imprinting control region)**만은 보존된다. 발현 여부가 서열이 아니라 출처에 달려 있으므로, 같은 결실이 어느 부모에게서 왔는지에 따라 전혀 다른 질환이 된다.
+
+| 질환 | 좌위 | 기전 |
+|---|---|---|
+| Prader–Willi 증후군 | 15q11-13 | 부계 발현 유전자의 상실(부계 결실, 모계 uniparental disomy, 각인 결함) |
+| Angelman 증후군 | 15q11-13 | 모계 발현 *UBE3A*의 상실(모계 결실, 부계 UPD, *UBE3A* 변이) |
+| Beckwith–Wiedemann 증후군 | 11p15 | *IGF2* 발현 증가 또는 *CDKN1C* 상실 쪽으로 각인이 기울어짐 |
+| Silver–Russell 증후군 | 11p15, 7 | 같은 좌위에서 반대 방향의 변화 |
+
+표를 가로질러 두 가지 원리가 나온다. 첫째, **같은 좌위에서 반대 방향의 각인 변화가 서로 거울상 같은 표현형(과성장과 저성장)을 만든다.** 둘째, 각인 질환은 결실 말고도 **uniparental disomy**(두 copy를 한쪽 부모에게서만 받음)와 **각인 표지 자체의 결함**으로도 생기므로, 복제수가 정상이어도 배제되지 않는다. 그래서 검사는 메틸화 상태를 직접 보는 방법(methylation-specific PCR, MS-MLPA)이 1차 선별이 되고, 결과에 따라 결실 분석과 부모 기원 확인으로 나아간다.
+
+>> 각인 질환은 "검사 순서"를 묻는 문제로 자주 나온다. Prader–Willi와 Angelman이 모두 의심될 때 **메틸화 분석 하나가 두 질환의 대부분을 동시에 걸러낸다.** 15q11-13의 메틸화 양상이 비정상이면 두 질환 가운데 하나이며, 그다음에 결실인지 UPD인지 각인 결함인지를 가린다. 메틸화가 정상인데 Angelman의 임상 소견이 뚜렷하면 *UBE3A*의 점 변이를 찾는다(Prader–Willi에는 이에 해당하는 단일 유전자 변이형이 없다는 점이 비대칭이다). 또 **재발 위험이 기전에 따라 다르다.** 산발적 결실과 UPD의 재발 위험은 낮고, 각인 결함 가운데 각인 조절 영역의 미세결실에서 온 것과 *UBE3A* 변이는 유전될 수 있어 위험이 높다. 임상 소견이 아니라 기전이 유전상담의 답을 정한다.
+
+Non-coding RNA가 조절에 들어오는 방식도 여기서 정리해 둔다. XIST처럼 염색질을 직접 바꾸는 long non-coding RNA가 있고, 전사 수준이 아니라 전사체 수준에서 작동하는 **microRNA**가 있다. miRNA는 Pol II가 전사한 전구체가 Drosha와 Dicer에 의해 약 22 nucleotide로 다듬어진 뒤 Argonaute와 함께 표적 mRNA의 3′ UTR에 부분적으로 짝지어 번역을 막거나 분해를 유도한다. 한 miRNA가 수백 개 전사체를 조절하므로, miRNA 하나의 변화가 발현 양상 전체를 기울인다. 활성 enhancer에서 만들어지는 짧은 **enhancer RNA**도 있는데, 산물 자체의 기능보다 **그 자리에서 전사가 일어나고 있다는 표지**로서의 의미가 더 분명하다. Nucleosome에 감긴 DNA에서 조절서열의 존재와 접근 가능성이 분리되는 구조, chromatin remodeling과 histone 변형, DNA methylation의 세 기전, 그리고 일시적 조절·분열을 넘는 유지·세대를 넘는 전달 세 범주를 구분하는 기준을 함께 보인다.
+
+~ **연구 전선** 조절서열의 목록은 만들어졌지만, 그 목록을 **기능으로 번역하는 일**은 끝나지 않았다. ENCODE와 Roadmap 사업은 사람 유전체에서 수십만 개의 enhancer 후보를 표시했는데, 표지가 있다는 것과 그 서열이 실제로 어떤 유전자를 조절한다는 것은 다르다. 그래서 dCas9에 억제 도메인을 붙여 후보 서열을 하나씩 꺼 보는 **CRISPRi enhancer screen**이 표준 검증 수단이 되었고, 세포 하나에서 염색질 접근성과 전사체를 동시에 읽는 **single-cell multiome**이 어느 세포에서 어느 조절서열이 쓰이는지를 직접 보여 주기 시작했다. 임상적 동기가 분명하다. 질환 연관 변이의 90% 이상이 비coding 영역에 있고, 그 변이가 어느 세포의 어느 조절서열을 통해 어느 유전자에 작용하는지를 알아야 해석이 된다.
+
+~ **연구 전선** 전사인자가 promoter를 "켜는" 그림 자체가 다시 검토되고 있다. 활성화 영역은 대부분 고정된 구조가 없는 무정형 영역이며, 이런 영역이 Mediator와 Pol II를 모아 **응축체(condensate)**를 만든다는 모형이 제시되었다. 이 모형은 몇 가지 오래된 관찰을 설명한다. 서로 다른 활성화 영역을 서로 바꾸어도 작동하는 이유, 발생 유전자에서 enhancer가 떼로 모인 구간(super-enhancer)이 약물에 특히 민감한 이유, 그리고 enhancer가 수십 kb 떨어져서도 작동하는 이유다. 반대편에서는 enhancer와 promoter의 접촉이 실제로 지속적인지, 짧게 스쳐 지나는 것인지가 단일 분자 영상으로 측정되고 있고, 결과가 모형마다 다르다. 쟁점은 "접촉"과 "활성화"가 같은 사건인지다.
+
+@sec 12. 연결
+이 수업은 전사가 어떻게 조절되는지를 다루었다. 그 조절이 세포의 정체성과 질환으로 번역되는 과정은 뒤에서 이어진다.
+
+- **M01-W06-L02 유전자와 유전체의 구성** — nucleosome, loop 도메인, TAD, A/B compartment를 구조로 다루었다. 이 수업의 조절 기전과 함께 보아야 enhancer의 작용 범위가 설명된다.
+- **M01-W07-L01 RNA 합성과 가공** — 여기서 조절의 대상이 된 개시와 신장의 분자 과정, 그리고 promoter-proximal pausing을 다룬다.
+- **M01-W08-L01 번역 후 가공·접힘·분해** — 전사 조절 외의 층, 즉 단백질의 합성·변형·분해가 발현량에 들어가는 방식을 다룬다.
+- **M01-W11-L02 세포 신호전달** — 이 수업의 네 경로가 수용체에서 전사인자까지 어떻게 이어지는지를 신호 경로의 틀에서 상세히 다룬다.
+- **M01-W12-L03 암의 세포생물학** — SWI/SNF 변이, promoter 과메틸화, super-enhancer 재배치가 종양에서 작동하는 방식을 다룬다.
+- **M02-W01-L02 유전 질환의 분자 기전** — 각인 질환, X 연관 질환의 여성 보유자 표현형, 비coding 변이의 해석을 임상 유전학의 틀에서 정리한다.
+- **M03-W04-L02 발생과 세포 운명의 결정** — master regulator와 bivalent domain이 발생 과정에서 작동하는 방식을 다룬다.
+- **M03-W05-L01 후성유전학** — 유지 기전, 암에서의 이상, 후성유전 치료제를 상세히 다룬다.
 
 => 이 수업 전체의 요점은 **발현 조절이 두 질문으로 나뉜다**는 것이다. 첫째, 어느 전사인자가 활성인가. 둘째, 그 전사인자가 붙을 자리가 열려 있는가. 전사인자가 있어도 염색질이 닫혀 있으면 유전자는 켜지지 않고, 염색질이 열려 있어도 전사인자가 없으면 켜지지 않는다. 두 조건이 함께 충족될 때만 전사가 일어나며, 이것이 같은 유전체에서 다른 세포가 나오는 근거다.
 
@@ -288,3 +348,10 @@ A: 첫째, 필요한 전사인자가 활성 상태로 존재해야 한다. 둘�
 - Takahashi K, Yamanaka S. Induction of pluripotent stem cells from mouse embryonic and adult fibroblast cultures by defined factors. Cell. 2006;126(4):663-76.
 - Weintraub H, et al. Activation of muscle-specific genes in pigment, nerve, fat, liver, and fibroblast cell lines by forced expression of MyoD. Proc Natl Acad Sci USA. 1989;86(14):5434-8.
 - Allis CD, Jenuwein T. The molecular hallmarks of epigenetic control. Nat Rev Genet. 2016;17(8):487-500.
+- Bernstein BE, Mikkelsen TS, Xie X, et al. A bivalent chromatin structure marks key developmental genes in embryonic stem cells. *Cell* 2006;125:315–326.
+- Jones PA, Baylin SB. The epigenomics of cancer. *Cell* 2007;128:683–692.
+- Brockdorff N, Bowness JS, Wei G. Progress toward understanding chromosome silencing by Xist RNA. *Genes Dev* 2020;34:733–744.
+- Barlow DP, Bartolomei MS. Genomic imprinting in mammals. *Cold Spring Harb Perspect Biol* 2014;6:a018382.
+- Kadoch C, Crabtree GR. Mammalian SWI/SNF chromatin remodeling complexes and cancer. *Sci Adv* 2015;1:e1500447.
+- Hnisz D, Shrinivas K, Young RA, Chakraborty AK, Sharp PA. A phase separation model for transcriptional control. *Cell* 2017;169:13–23.
+- ENCODE Project Consortium. An integrated encyclopedia of DNA elements in the human genome. *Nature* 2012;489:57–74.
