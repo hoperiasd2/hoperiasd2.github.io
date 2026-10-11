@@ -2,8 +2,8 @@
 lesson_id: M01-W06-L03
 title: DNA 복제·복구와 유전체 재배열
 en: Replication, Maintenance and Rearrangement of Genomic DNA
-status: 초안
-version: v0.1
+status: 완성
+version: v1.0
 ---
 
 @obj
@@ -57,6 +57,10 @@ Watson과 Crick의 이중나선 모형은 복제 방식을 곧바로 제안했�
 
 Lagging 가닥의 합성은 다음 순서로 진행된다. Primase가 풀린 주형에 10 뉴클레오타이드 내외의 RNA primer를 놓는다. Clamp loader가 그 3′ 말단에 clamp를 끼우고 polymerase가 들어와 앞선 토막에 닿을 때까지 DNA를 합성한다. 다음으로 앞선 토막의 5′ 쪽 RNA primer가 제거된다. 진핵세포에서는 Pol δ가 primer를 밀어내 flap을 만들고 FEN1이 이를 잘라내며, *E. coli*에서는 RNase H와 Pol I의 5′→3′ exonuclease 활성이 같은 일을 한다. 생긴 틈을 DNA로 메운 뒤 DNA ligase가 인산이에스터 결합을 만들어 토막을 잇는다.
 
+분기점은 순조롭게만 전진하지 않는다. 앞에 단단한 단백질 복합체, 전사 중인 RNA polymerase, 손상된 염기, 또는 반복 서열이 만든 이차 구조가 있으면 속도가 느려지거나 멈춘다. 멈춘 분기점은 그대로 두면 단일가닥이 길게 노출되어 끊어지므로, 세포는 **분기점 보호와 재출발** 기구를 따로 갖는다. RPA로 덮인 단일가닥이 ATR을 활성화하고, ATR이 CHK1을 통해 세포주기 진행을 늦추면서 남은 원점의 추가 개시를 막고 분기점에 보호 단백질을 모은다. 분기점이 뒤로 접혀 손상 부위를 빼내는 **fork reversal**은 helicase와 재조합 단백질이 수행하며, BRCA1·BRCA2와 FANC 경로의 단백질이 접힌 분기점을 nuclease로부터 지킨다. 이 보호가 실패해 분기점이 분해되는 상태를 **복제 스트레스**라 하고, 종양에서 유전체 불안정성을 만드는 주된 경로로 지목된다.
+
+전사와 복제가 같은 주형 위에서 충돌하는 것도 분기점이 멈추는 흔한 원인이다. 전사 중에 새로 만들어진 RNA가 주형 DNA와 다시 짝지어 만드는 삼중 구조를 **R-loop**이라 하는데, 정상적으로는 RNase H와 helicase가 제거한다. 제거가 늦으면 분기점이 R-loop에 걸려 멈추고 단일가닥이 노출된다. 전사량이 많고 긴 유전자에서 재배열이 자주 보고되는 **common fragile site**가 이 기전으로 설명된다.
+
 두 가닥은 따로 떨어져 합성되지 않는다. Lagging 가닥 주형이 고리로 휘어 들어가면 두 polymerase가 하나의 복합체로 묶여 같은 속도로 전진할 수 있다. 분기점의 전진 속도는 *E. coli*에서 초당 약 1,000 뉴클레오타이드, 포유류 세포에서 초당 약 50 뉴클레오타이드다. 포유류가 느린데도 훨씬 큰 유전체를 몇 시간 안에 복제하는 것은 원점을 많이 쓰기 때문이다.
 
 @sec 3. 복제의 정확도: 염기 선택, proofreading, mismatch repair
@@ -70,6 +74,8 @@ Lagging 가닥의 합성은 다음 순서로 진행된다. Primase가 풀린 주
 
 Mismatch repair에서 핵심 문제는 **짝이 맞지 않는 두 염기 중 어느 쪽이 잘못되었는지**를 아는 것이다. 주형 가닥 쪽을 고치면 변이가 그대로 고정된다. 세포는 신생 가닥을 따로 표시한다. *E. coli*는 GATC 서열의 adenine이 Dam methylase로 메틸화되는 데 시간이 걸리므로, 복제 직후 신생 가닥만 메틸화되지 않은 상태다. MutS가 짝맞춤 오류를 인식하고 MutL과 MutH가 메틸화되지 않은 가닥을 끊어 그 구간을 제거한다. 진핵세포에는 이 메틸화 표시가 없고, MSH2–MSH6가 오류를 인식한 뒤 신생 가닥에 남아 있는 틈과 PCNA의 방향성을 단서로 신생 가닥을 구별한다.
 
+>> 세 층의 정확도 가운데 어느 층이 망가졌는지가 종양의 성질을 바꾼다는 점이 출제된다. **Proofreading이 망가진 경우**(*POLE*나 *POLD1*의 exonuclease 도메인 변이)에는 단일 염기 치환이 유전체 전체에 극단적으로 쌓여 종양당 변이 수가 수천에서 수만 개에 이르는 **ultramutated** 양상이 되며, microsatellite 길이는 정상이다. **Mismatch repair가 망가진 경우**에는 반복 구간의 길이 변화가 두드러져 MSI-high가 되고, 변이 수는 hypermutated 수준이다. 두 경우 모두 신생항원이 많아 면역관문 억제제에 잘 반응하지만, 선별 검사가 서로 다르다. MMR 결손은 네 단백질(MLH1, MSH2, MSH6, PMS2)의 면역조직화학 소실이나 MSI 검사로 찾고, 생식세포 변이가 확인되면 Lynch syndrome으로 진단한다. 다만 **MLH1 단백질 소실은 생식세포 변이 없이 promoter 과메틸화로도 일어나므로**, 산발성과 유전성을 가르려면 *BRAF* V600E 변이나 *MLH1* 메틸화 검사를 함께 해야 한다. 이 감별 단계를 묻는 문제가 흔하다.
+
 > **임상 연계** Mismatch repair 유전자의 생식세포 변이는 Lynch syndrome(유전성 비폴립성 대장암)을 일으킨다. *MSH2*, *MLH1*, *MSH6*, *PMS2* 중 하나가 기능을 잃으면 복제 오류가 100~1,000배로 늘고, 특히 반복 단위가 짧은 microsatellite에서 반복 수가 쉽게 변한다. 그래서 종양에서 microsatellite 길이가 정상 조직과 다른 **microsatellite instability**가 선별 지표로 쓰인다. 복구 결함 자체가 암을 만드는 것이 아니라, 변이가 쌓이는 속도를 올려 종양 억제 유전자와 proto-oncogene에 변이가 생길 확률을 높인다.
 
 @sec 4. 복제 원점과 개시 조절
@@ -81,6 +87,8 @@ Mismatch repair에서 핵심 문제는 **짝이 맞지 않는 두 염기 중 어
 
 원점이 세포주기당 두 번 열리면 그 구간만 copy 수가 늘어나 유전체가 불균형해진다. 이를 막는 장치가 **licensing**이다. G1기에 Cdc6과 Cdt1이 ORC 위로 MCM2–7 helicase를 올려놓는다. 이 상태가 사용 허가다. S기에 들어가 CDK와 DDK가 활성화되면 MCM2–7이 CDC45와 GINS를 받아 활성 helicase(CMG)가 되고 분기점이 출발한다. 동시에 Cdt1은 분해되거나 geminin에 묶이고 Cdc6은 인산화되어 핵에서 빠져나간다. 따라서 이미 출발한 원점에는 새 MCM이 올라가지 못하고, 다음 허가는 다음 세포주기의 G1기에야 가능하다. 허가 단계와 개시 단계를 세포주기의 서로 다른 시점에 배치한 것이 한 번의 복제를 보장하는 기전이다.
 
+원점이 모두 동시에 열리지 않는 것 자체가 조절이다. 전사가 활발한 euchromatin의 원점이 S기 전반에 먼저 열리고, heterochromatin과 핵막 쪽 구간은 후반에 열린다. 이 **복제 시기(replication timing)**는 세포 종류마다 재현성 있게 정해져 있고 발생 과정에서 바뀐다. 또 실제로 쓰이는 원점보다 훨씬 많은 원점이 허가를 받아 놓여 있는데, 평소에는 쓰이지 않는 이 **dormant origin**이 분기점이 멈췄을 때 그 구간을 대신 복제하는 예비 수단이 된다. ATR이 꺼지면 예비 원점이 한꺼번에 열려 dNTP와 RPA가 고갈되고 유전체 전체가 불안정해진다.
+
 @sec 5. Telomere와 telomerase
 선형 염색체의 말단에는 polymerase의 두 가지 제약이 그대로 문제로 드러난다. Lagging 가닥 주형의 맨 끝에서 마지막 RNA primer가 제거되면 그 자리를 메울 3′ 말단이 없다. 그 결과 복제마다 말단이 짧아진다. 사람의 체세포에서 측정된 단축은 분열마다 50~100 bp다.
 
@@ -90,14 +98,20 @@ Mismatch repair에서 핵심 문제는 **짝이 맞지 않는 두 염기 중 어
 
 사람에서 telomerase는 생식세포와 줄기세포에서 활성이 높고, 대부분의 체세포에서는 낮다. 그래서 배양한 정상 섬유아세포는 일정 횟수를 분열한 뒤 더 나뉘지 않는다. Telomere가 한계까지 짧아지면 shelterin이 떨어져 말단이 노출되고, 세포는 이를 DNA 손상으로 인식해 p53 경로를 켜고 분열을 멈춘다. 이 상태가 복제노화(replicative senescence)다. 섬유아세포에 *TERT*를 도입해 telomerase 활성을 복원하면 분열 한계가 늘어나므로, telomere 길이가 분열 횟수를 제한하는 인자임이 확인되었다.
 
+>> Telomere는 길이와 효소 활성이 반대 방향으로 문제가 되는 드문 예다. **짧은 쪽**에서는 telomerase(*TERT*, *TERC*)나 그 조절·shelterin 유전자의 기능 상실 변이가 telomere biology disorder를 만들어, 분열이 잦은 조직부터 무너진다. 전형적 순서는 골수 부전, 간 질환, 그리고 성인기에 발현하는 **특발성 폐 섬유화**이며, 가계에서 세대를 내려갈수록 발병이 이른 경향(유전적 anticipation)이 짧아진 telomere 자체의 전달로 설명된다. 설명되지 않는 폐 섬유화와 재생불량성 빈혈이 한 가계에 함께 있으면 telomere 길이 측정이 진단의 단서가 된다. **긴 쪽**에서는 종양이 *TERT* promoter의 변이로 효소를 다시 켠다. Melanoma, glioblastoma, 간세포암, 방광암에서 흔한 이 변이는 단백질의 아미노산을 바꾸지 않고 **전사인자 결합 부위를 새로 만들어** 발현만 올리므로, 암호화 서열만 읽는 검사에서는 보이지 않는다. 비coding 변이가 구동 변이가 될 수 있음을 보이는 표준 예다.
+
 > **임상 연계** Telomere 유지의 양쪽 극단이 모두 질환이다. Telomerase 구성 요소나 shelterin 유전자의 기능 상실 변이는 dyskeratosis congenita처럼 골수 기능 저하, 폐 섬유화, 피부·점막 이상을 보이는 질환군을 만든다. 분열이 잦은 조직이 먼저 손상된다. 반대로 사람 암세포의 약 90%가 telomerase 활성을 다시 켜서 분열 한계를 벗어난다. 남은 암에서는 ALT라 부르는 재조합 의존 경로로 telomere를 유지한다.
+
+~ **연구 전선** Telomere를 노화의 원인으로 볼 수 있는지는 아직 정리되지 않았다. 사람의 백혈구 telomere 길이는 나이와 함께 줄고 짧은 쪽이 심혈관 질환과 상관하지만, 상관의 방향이 원인인지 결과인지는 분리되지 않았다. 측정 자체도 문제다. Southern blot 기반의 TRF 측정, qPCR 상대 측정, 단일 분자 수준의 측정이 서로 다른 값을 주며, 평균 길이보다 **가장 짧은 telomere의 수**가 세포의 운명에 중요하다는 자료가 있다. 치료 쪽에서는 방향이 둘로 갈린다. 재생 조직의 소진을 늦추기 위해 telomerase를 일시적으로 올리려는 시도와, 종양에서 다시 켜진 telomerase를 끄거나 ALT 경로를 표적으로 하려는 시도가 함께 진행된다. 같은 효소가 재생과 발암 양쪽에 놓여 있다는 것이 이 분야의 근본적 제약이다.
 
 @sec 6. DNA 손상과 복구: 직접 복구와 excision repair
 DNA는 복제 오류가 없어도 계속 손상된다. 자연 발생 손상에는 염기의 탈아미노화, 탈퓨린화, 산화가 있다. Cytosine이 탈아미노화되면 **uracil**이 되고, 이 상태가 복제되면 G:C가 A:T로 바뀐다. 5-methylcytosine이 탈아미노화되면 thymine이 되므로 복구 효소가 잘못된 염기를 찾기 더 어렵다. 외부 요인으로는 자외선이 인접한 두 pyrimidine을 공유 결합으로 묶는 **pyrimidine dimer**를 만들고, 이온화 방사선과 산화 스트레스가 가닥 끊김을 만들며, alkylating제가 염기에 메틸기를 붙인다.
 
 복구 전략은 두 가지로 나뉜다.
 
-**직접 복구**는 손상을 원래대로 되돌린다. Photolyase는 빛 에너지를 써서 pyrimidine dimer의 결합을 끊어 두 염기를 분리한다(광재활성화, photoreactivation). 이 효소는 세균, 효모, 식물에 있으나 사람에는 없다. 사람에 있는 직접 복구의 예는 **MGMT**로, O^{6}-methylguanine의 메틸기를 떼어 자기 cysteine으로 옮긴다. 직접 복구는 효소 한 가지로 끝나지만 다룰 수 있는 손상 종류가 적다.
+**직접 복구**는 손상을 원래대로 되돌린다. Photolyase는 빛 에너지를 써서 pyrimidine dimer의 결합을 끊어 두 염기를 분리한다(광재활성화, photoreactivation). 이 효소는 세균, 효모, 식물에 있으나 사람에는 없다. 사람에 있는 직접 복구의 예는 **MGMT**로, O^{6}-methylguanine의 메틸기를 떼어 자기 cysteine으로 옮긴다. 직접 복구는 효소 한 가지로 끝나지만 다룰 수 있는 손상 종류가 적다. MGMT는 치료와 직접 연결된다. Glioblastoma에 쓰는 alkylating제 temozolomide는 guanine의 O⁶ 위치를 메틸화해 세포를 죽이는데, MGMT가 그 메틸기를 떼어 내면 약이 듣지 않는다. 종양에서 *MGMT* promoter가 메틸화되어 효소가 발현되지 않는 환자가 temozolomide에 더 잘 반응하며, 이 메틸화 상태가 예측 표지로 쓰인다. **복구 효소의 결손이 약에 대한 감수성으로 뒤집히는 관계**를 보이는 예다.
+
+손상의 규모를 수치로 알아 두면 복구 체계의 부담을 가늠할 수 있다. 사람 세포 하나에서 하루에 자발적으로 일어나는 염기 소실(탈퓨린화)은 약 1만 건, cytosine의 탈아미노화는 수백 건으로 추정되며, 산화 손상은 그보다 많다. 이 가운데 하나라도 복제 전에 처리되지 않으면 변이로 고정된다. 즉 복구는 드물게 작동하는 비상 장치가 아니라 **쉬지 않고 돌아가는 유지 보수 체계**다.
 
 **Excision repair**는 손상된 부분을 잘라내고 온전한 상대 가닥을 주형으로 다시 합성한다. 상보적인 두 가닥을 가진 구조 자체가 복구의 바탕이다. 세 경로로 나눈다.
 
@@ -120,15 +134,25 @@ Nucleotide-excision repair는 손상 염기의 종류를 하나하나 인식하�
 
 > **임상 연계** Xeroderma pigmentosum variant로 분류되는 환자군은 nucleotide-excision repair가 정상인데도 같은 증상을 보인다. 원인은 Pol η를 암호화하는 *POLH*의 변이다. 손상을 제거하는 경로와 손상을 건너뛰는 경로 중 어느 하나만 망가져도 자외선 손상이 분열에 치명적이 된다.
 
+손상은 복구되기 전에 먼저 **신호로 번역**된다. 이 체계를 DNA damage response라 하며, 두 kinase가 중심에 있다. **ATM**은 double-strand break에서 MRN 복합체에 의해 활성화되고, **ATR**은 RPA로 덮인 단일가닥에서 활성화된다. 두 kinase는 H2AX를 인산화해 γH2AX를 만들어 손상 부위에 복구 단백질을 모으고, CHK2·CHK1을 통해 CDK 활성을 낮춰 세포주기를 G1/S와 G2/M 경계에서 멈추고, p53을 안정화한다. 손상이 적으면 복구할 시간을 벌고, 크면 세포사멸이나 노화로 보낸다. 즉 **복구의 성패가 아니라 손상의 양이 세포의 운명을 정한다.** ATM이 망가진 ataxia-telangiectasia 환자가 소뇌 퇴행, 모세혈관 확장, 면역결핍, 림프종 위험 증가와 함께 방사선에 극단적으로 민감한 것이 이 연결의 임상적 증거다.
+
 **Double-strand break**는 두 가닥이 같은 위치에서 끊긴 상태다. 상대 가닥을 주형으로 쓸 수 없으므로 excision repair로는 복구되지 않는다. 이온화 방사선, 산화 스트레스, 멈춘 분기점의 붕괴, topoisomerase 반응의 실패가 원인이다. 끊긴 염색체가 그대로 남으면 조각이 소실되거나 다른 염색체와 이어져 전좌가 된다. 복구 경로는 둘이다.
 
 **Homologous recombination**은 온전한 서열을 주형으로 쓴다. 끊긴 말단이 nuclease에 깎여 3′ 단일가닥이 돌출되고, 여기에 RAD51(세균의 RecA에 해당)이 결합한다. 이 단일가닥이 상동 서열을 탐색해 침입하고 짝지은 뒤, 그 가닥을 주형으로 잃어버린 서열을 다시 합성한다. 복제 뒤라면 자매 염색분체가 완전히 같은 서열을 제공하므로 **서열 정보가 그대로 복원된다.** 이 경로는 상동 주형이 있는 S기 후반과 G2기에 주로 쓰인다. BRCA1과 BRCA2는 RAD51이 단일가닥에 올라가도록 돕는다.
 
 **Nonhomologous end joining**은 끊긴 두 말단을 바로 이어 붙인다. Ku70–Ku80이 말단에 결합하고 DNA-PK와 ligase IV–XRCC4가 접합을 수행한다. 주형을 쓰지 않으므로 세포주기 어느 시점에서도 쓸 수 있고 포유류 체세포에서 더 흔하지만, 접합 부위에서 몇 개의 뉴클레오타이드가 **소실되거나 삽입된다.** 즉 끊김은 봉합되지만 서열은 바뀐다.
 
+두 경로 밖에도 말단을 잇는 방식이 있다. **Microhomology-mediated end joining(alt-EJ, TMEJ)**은 말단을 깎아 드러난 2~20 염기의 짧은 상동 구간을 짝지어 잇고 그 사이를 Pol θ가 메우는 경로로, 반드시 결실을 남기며 염색체 전좌의 접합 부위에서 흔히 관찰된다. 긴 반복 서열 사이에서 일어나 그 사이를 통째로 지우는 **single-strand annealing**도 있다. 두 경로 모두 서열을 잃으므로, 세포가 이들에 의존하게 되는 상태 자체가 유전체 불안정성을 뜻한다.
+
+**경로 선택**은 세포주기와 경쟁하는 두 단백질이 정한다. G1기에는 상동 주형이 없으므로 53BP1과 그 하위 인자가 말단 깎기를 막아 nonhomologous end joining으로 보낸다. S기와 G2기에는 BRCA1과 CtIP이 53BP1의 작용을 밀어내고 말단을 깎아 단일가닥을 만들어 homologous recombination으로 보낸다. 이 경쟁 관계가 치료 저항의 기전을 설명한다. *BRCA1* 변이 종양에서 **53BP1이 추가로 소실되면** 말단 깎기가 다시 일어나 상동재조합이 부분적으로 회복되고, PARP 억제제에 저항성이 생긴다.
+
+>> 복구 경로가 세포주기의 어느 시기에 작동하는지가 세 가지 결론을 한꺼번에 낳는다. 첫째, **상동재조합은 S기 후반과 G2기에만** 쓸 수 있다. 주형이 될 자매 염색분체가 복제 뒤에만 존재하기 때문이다. 그래서 분열하지 않는 세포(신경세포, 심근세포)는 double-strand break를 거의 nonhomologous end joining으로만 처리하고, 그 결과 서열의 소실이 누적된다. 둘째, 방사선의 효과가 세포주기에 따라 달라진다. G2/M기의 세포가 가장 민감하고 S기 후반이 가장 저항성을 보이는 것은 복구에 쓸 주형의 유무와 검문지점에서 머무는 시간으로 설명된다. 셋째, 유전자 편집에서 HDR의 효율이 낮은 이유도 같다. 대부분의 세포가 G1기에 머물러 있는 동안에는 주형을 쓰는 복구가 작동하지 않으므로, knock-in 효율을 올리려면 세포를 S기에 맞추거나 53BP1을 일시적으로 억제한다. **"주형이 있는가"와 "세포주기의 어디인가"를 함께 묻는 것이 이 부류 문제의 공통 구조다.**
+
 @fig fig-dsb-repair Double-strand break의 두 복구 경로. 말단 가공과 RAD51 의존적 가닥 침입으로 자매 염색분체를 주형 삼아 서열을 복원하는 homologous recombination과, Ku와 ligase IV로 말단을 직접 잇되 접합 부위에 소실·삽입을 남기는 nonhomologous end joining을 비교한다.
 
 > **임상 연계** *BRCA1*과 *BRCA2*의 생식세포 변이는 유방암과 난소암 위험을 크게 올린다. 기전은 homologous recombination 결함이다. 이 결함이 치료 표적이 된다. PARP는 단일가닥 끊김 복구에 필요한데, PARP를 억제하면 단일가닥 끊김이 복제 분기점에서 double-strand break로 전환된다. Homologous recombination이 정상인 세포는 이를 복구하지만 *BRCA* 변이 세포는 복구하지 못해 죽는다. 두 경로 중 하나의 결함이 다른 경로의 억제와 겹칠 때만 치명적이 되는 이 관계를 합성 치사(synthetic lethality)라 한다.
+
+~ **연구 전선** 유전체에 남은 변이의 **양상**에서 그 변이를 만든 과정을 역추적하는 접근이 지난 10여 년 사이에 확립되었다. 종양의 전장유전체에서 치환의 종류와 그 양옆 염기의 조합을 세면 재현되는 조합이 나타나는데, 이것이 **mutational signature**다. 자외선은 CC에서 TT로 가는 변화를, 흡연은 C에서 A로 가는 변화를, APOBEC 효소는 특정 서열 맥락의 C 변화를, mismatch repair 결손과 proofreading 결손은 각각 다른 양상을 남긴다. 상동재조합 결손은 치환이 아니라 작은 결실과 특정 구조 변이의 조합으로 나타나고, 이 **HRD 점수**가 *BRCA* 변이가 없는 환자에게도 PARP 억제제를 쓸 근거로 임상에 들어왔다. 한 번의 재난적 사건으로 한 염색체가 수십 조각으로 부서진 뒤 무작위로 다시 이어 붙은 **chromothripsis**, 증폭된 구간이 염색체 밖의 고리 DNA로 떨어져 나와 비멘델 방식으로 분배되며 급격한 저항성을 만드는 **extrachromosomal DNA**도 같은 방법으로 발견되었다. 쟁점은 이 양상들을 치료 선택에 쓸 수 있을 만큼 정량적으로 해석하는 방법이다.
 
 @sec 8. 프로그램된 유전체 재배열과 유전자 증폭
 유전체는 정확히 유지되지만 완전히 고정된 것은 아니다. 일부 재배열은 손상의 결과가 아니라 **발생 과정에 프로그램된 정상 과정**이다. 척추동물의 면역글로불린과 T cell receptor 유전자가 대표 예다.
@@ -136,6 +160,10 @@ Nucleotide-excision repair는 손상 염기의 종류를 하나하나 인식하�
 생식세포 유전체에는 완성된 면역글로불린 유전자가 없다. 중쇄 좌위에는 수십 개의 **V** 토막, 20여 개의 **D** 토막, 6개의 **J** 토막이 따로 늘어서 있다. B lymphocyte가 발생하는 동안 각 세포에서 V 하나, D 하나, J 하나가 선택되어 이어 붙고 그 사이의 DNA가 제거된다. 이 재배열이 **V(D)J recombination**이다. 각 토막의 양옆에는 recombination signal sequence라 부르는 heptamer와 nonamer가 있고, RAG1–RAG2가 이 서열을 인식해 double-strand break를 만든다. 끊긴 말단은 nonhomologous end joining 기구가 잇는다. 접합 부위에 뉴클레오타이드의 소실과 삽입이 생기는 바로 그 성질이 여기서는 다양성의 원천이 된다. TdT가 주형 없이 뉴클레오타이드를 덧붙여 다양성을 더 넓힌다.
 
 @fig fig-vdj 면역글로불린 중쇄 유전자의 V(D)J recombination. 생식세포 배열의 V·D·J 토막, RAG1–RAG2가 recombination signal sequence를 인식해 만드는 끊김, nonhomologous end joining에 의한 접합과 접합 부위 다양성, 뒤이은 전사와 splicing을 보인다.
+
+재배열이 아무 조합으로나 일어나지 않게 하는 규칙도 있다. Recombination signal sequence의 heptamer와 nonamer 사이 간격이 12 염기쌍인 것과 23 염기쌍인 것이 있고, RAG 복합체는 **12와 23을 짝지어서만** 끊김을 만든다. 이 **12/23 규칙** 때문에 중쇄에서 V가 J에 직접 붙지 않고 반드시 D를 거쳐 V-D-J 순서로 이어진다. 또 한쪽 대립형질에서 생산적인 재배열이 완성되면 다른 쪽의 재배열이 중단되는 **allelic exclusion**이 작동해, 한 B 세포가 한 종류의 항체만 만든다.
+
+같은 기구가 잘못 쓰이면 질환이 된다. RAG가 만든 끊김이 면역글로불린 좌위와 다른 염색체의 유전자 사이에서 잘못 이어지면 전좌가 생기는데, Burkitt 림프종의 t(8;14)에서 *MYC*가 면역글로불린 중쇄의 강한 enhancer 아래로 옮겨 가 과발현되는 것이 그 예다. Follicular 림프종의 t(14;18)은 같은 방식으로 *BCL2*를 과발현시켜 세포사멸을 막는다. AID의 탈아미노화가 면역글로불린 좌위를 벗어나 다른 유전자에 작용하는 것도 림프계 종양의 변이 원천으로 지목된다. 아울러 RAG나 nonhomologous end joining 구성 요소(*DCLRE1C*, *PRKDC*, *LIG4*)의 기능 상실은 T·B 세포가 수용체를 만들지 못해 **중증 복합 면역결핍**을 일으키고, 접합 기구의 결손인 경우에는 방사선 민감성이 함께 나타난다.
 
 Tonegawa는 B 세포와 비림프계 세포의 유전체 DNA를 제한효소로 자르고 면역글로불린 탐침으로 hybridization해 두 세포에서 조각 패턴이 다르다는 것을 보였다. 모든 세포의 유전체가 동일하다는 가정이 깨진 지점이다. 조합의 수만으로도 중쇄와 경쇄를 합쳐 10^{6} 이상의 다른 항체가 가능하고, 접합 부위 다양성을 포함하면 훨씬 커진다.
 
@@ -149,6 +177,18 @@ Tonegawa는 B 세포와 비림프계 세포의 유전체 DNA를 제한효소로 
 암세포에서는 같은 현상이 조절 없이 일어난다. 증폭된 구간은 염색체에서 떨어져 나온 작은 염색체 조각(double minute)이나 원래 위치에서 늘어난 균일 염색 영역(homogeneously staining region)으로 관찰된다. 증폭 구간에 세포 증식을 촉진하는 유전자가 들어 있으면 그 산물이 과다 생산된다.
 
 > **임상 연계** 유방암의 15~20%에서 *ERBB2*(HER2)가 증폭되어 수용체가 과다 발현되고, 이 경우 항HER2 항체나 kinase 억제제가 효과를 보이므로 증폭 여부를 치료 결정에 쓴다. Neuroblastoma에서 *MYCN* 증폭은 예후가 나쁜 군을 구분하는 지표다. 증폭은 변이와 달리 서열이 아니라 copy 수의 변화이므로, 서열 분석만으로는 놓칠 수 있고 copy 수를 함께 측정해야 확인된다.
+
+@sec 9. 연결
+이 수업은 유전체가 어떻게 그대로 유지되는지를 다루었고, 유지가 실패할 때 생기는 일은 뒤의 수업에서 반복해 나타난다.
+
+- **M01-W06-L01 재조합 DNA와 분자생물학 실험 기법** — 여기서 복구 경로로 다룬 NHEJ와 HDR이 거기서는 CRISPR 편집의 결과를 정하는 도구로 쓰인다. 두 수업을 함께 보아야 knockout과 knock-in의 효율 차이가 설명된다.
+- **M01-W06-L02 유전자와 유전체의 구성** — 반복 서열의 배치가 비동등 재조합과 Alu 매개 결실의 발판이 되는 과정을 유전체 구조 쪽에서 다룬다.
+- **M01-W07-L02 전사 조절과 후성유전** — *MLH1*과 *MGMT* promoter의 메틸화처럼, 서열이 아니라 발현의 침묵이 복구 결손을 만드는 기전을 다룬다.
+- **M01-W12-L01 세포주기와 그 조절** — ATM·ATR·CHK·p53이 작동시키는 검문지점을 세포주기 조절의 틀 안에서 다룬다.
+- **M01-W12-L02 세포 재생과 사멸** — 복구가 실패한 세포가 사멸과 노화로 보내지는 결정 과정을 다룬다.
+- **M01-W12-L03 암의 세포생물학** — 복구 결손, mutational signature, 전좌와 증폭이 종양의 구동 기전과 치료 표적으로 어떻게 번역되는지를 다룬다.
+- **M02-W02-L03 종양의 분자 표지와 표적 치료** — MSI, HRD, *MGMT* 메틸화가 실제 치료 결정에 쓰이는 방식과 검사의 한계를 다룬다.
+- **M03-W01-L02 면역계의 유전적 다양성** — V(D)J recombination, somatic hypermutation, class switch가 면역 반응의 관점에서 다시 다루어진다.
 
 => **핵심 정리** 유전체 유지는 정확한 복제, 손상 복구, 그리고 둘이 실패했을 때의 손상 내성이라는 세 층으로 이루어진다. 각 층이 어떤 오류를 얼마나 걸러내는지가 변이율을 정하고, 변이율의 변화가 암 발생 위험으로 이어진다. 한편 같은 끊김 생성과 접합 기구가 면역계에서는 다양성을 만드는 정상 과정으로 쓰인다.
 
@@ -177,6 +217,12 @@ A: V(D)J recombination에서 RAG1–RAG2가 V·D·J 토막 옆의 recombination 
 Q: 어떤 종양에서 *ERBB2*의 서열에는 변이가 없는데 수용체 단백질이 정상 조직의 수십 배로 검출되었다. 가능한 기전과 확인 방법을 설명하라.
 A: 유전자 증폭을 의심한다. 염색체의 한 구간이 반복 복제되어 그 안의 유전자 copy 수가 늘어나면, 서열이 정상인 상태에서 전사체와 단백질의 양만 비례해 증가한다. 증폭 구간은 염색체에서 떨어져 나온 double minute나 원래 위치에서 늘어난 균일 염색 영역으로 존재할 수 있다. 확인 방법은 copy 수를 직접 측정하는 것이다. 형광 in situ hybridization으로 탐침 신호의 점 수를 세면 copy 수 증가와 그 물리적 배치를 함께 볼 수 있고, 정량 PCR이나 서열 기반 copy 수 분석으로 구간 전체의 증가를 확인한다. 단백질 과다 발현만으로는 전사 조절의 변화와 구별되지 않으므로 copy 수 측정이 필요하다. 유방암의 15~20%에서 이 증폭이 보고되며, 증폭 여부가 항HER2 치료의 적응을 정한다.
 
+Q: 어떤 대장암 조직에서 MLH1 단백질의 면역조직화학 염색이 소실되고 microsatellite instability가 확인되었다. 이 결과만으로 Lynch syndrome을 진단할 수 없는 이유와 추가 검사를 설명하라.
+A: MLH1의 기능 상실은 생식세포 변이 없이도 일어나기 때문이다. 산발성 대장암의 일부에서 *MLH1* promoter가 후성유전적으로 과메틸화되어 전사가 꺼지고, 그 결과 단백질이 소실되고 mismatch repair가 기능하지 않아 microsatellite instability가 나타난다. 이 경우 변이는 종양에만 있고 생식세포에는 없으므로 유전성 암 증후군이 아니다. 추가 검사는 두 단계다. 먼저 종양에서 *MLH1* promoter 메틸화를 측정하고 *BRAF* V600E 변이를 확인한다. *BRAF* V600E가 있으면 산발성 경로(serrated pathway)를 강하게 시사하며 Lynch syndrome일 가능성이 낮아진다. 메틸화가 없고 *BRAF*가 정상이면 생식세포 변이를 의심하고, 혈액 DNA에서 *MLH1*을 포함한 mismatch repair 유전자의 염기서열 분석과 큰 결실 검사를 수행한다. MSH2, MSH6, PMS2의 소실은 promoter 메틸화로 설명되는 경우가 드물어 처음부터 생식세포 검사로 간다는 점도 함께 알아 둔다.
+
+Q: *BRCA1* 변이를 가진 난소암 환자가 PARP 억제제에 처음에는 반응했으나 이후 저항성을 보였다. 합성 치사의 원리로 돌아가 저항이 생길 수 있는 기전을 세 가지 제시하라.
+A: 합성 치사는 PARP 억제로 생긴 double-strand break를 상동재조합으로 복구하지 못할 때만 성립하므로, 상동재조합 능력이 어느 방식으로든 회복되면 저항이 생긴다. 첫째, *BRCA1*이나 *BRCA2*의 **역전 변이**다. 원래 frameshift를 일으킨 변이 자리에 2차 변이가 생겨 읽기틀이 복원되면 기능하는 단백질이 다시 만들어진다. 둘째, 경로 선택의 균형이 바뀌는 경우다. 53BP1이나 그 하위 인자가 소실되면 G1기에 막혀 있던 말단 깎기가 다시 일어나 BRCA1 없이도 상동재조합이 부분적으로 작동한다. 셋째, 약물 자체에 대한 저항이다. PARP1의 변이로 약이 결합하지 못하거나, 약물 유출 수송체의 발현이 늘어 세포 내 농도가 낮아진다. 그 밖에 분기점 보호가 회복되어 멈춘 분기점이 분해되지 않는 경우도 보고되었다. 확인 방법으로는 재생검 조직에서 상동재조합 기능을 직접 보는 RAD51 집결 측정과, 혈중 종양 DNA의 염기서열 분석으로 역전 변이를 찾는 방법이 쓰인다.
+
 @ref
 - Cooper GM, Adams K. *The Cell: A Molecular Approach*. 9th ed. Oxford University Press; 2022. Chapter 5, Replication, Maintenance, and Rearrangements of Genomic DNA.
 - Alberts B, Heald R, Johnson A, et al. *Molecular Biology of the Cell*. 7th ed. W.W. Norton; 2022. Chapter 5, DNA Replication, Repair, and Recombination.
@@ -190,3 +236,9 @@ A: 유전자 증폭을 의심한다. 염색체의 한 구간이 반복 복제되
 - Farmer H, McCabe N, Lord CJ, et al. Targeting the DNA repair defect in BRCA mutant cells as a therapeutic strategy. *Nature* 2005;434:917–921.
 - Tonegawa S. Somatic generation of antibody diversity. *Nature* 1983;302:575–581.
 - Muramatsu M, Kinoshita K, Fagarasan S, Yamada S, Shinkai Y, Honjo T. Class switch recombination and hypermutation require activation-induced cytidine deaminase (AID), a potential RNA editing enzyme. *Cell* 2000;102:553–563.
+- Alexandrov LB, Kim J, Haradhvala NJ, et al. The repertoire of mutational signatures in human cancer. *Nature* 2020;578:94–101.
+- Bouwman P, Aly A, Escandell JM, et al. 53BP1 loss rescues BRCA1 deficiency and is associated with triple-negative and BRCA-mutated breast cancers. *Nat Struct Mol Biol* 2010;17:688–695.
+- Farmer H, McCabe N, Lord CJ, et al. Targeting the DNA repair defect in BRCA mutant cells as a therapeutic strategy. *Nature* 2005;434:917–921.
+- Hegi ME, Diserens AC, Gorlia T, et al. MGMT gene silencing and benefit from temozolomide in glioblastoma. *N Engl J Med* 2005;352:997–1003.
+- Zeman MK, Cimprich KA. Causes and consequences of replication stress. *Nat Cell Biol* 2014;16:2–9.
+- Armanios M, Blackburn EH. The telomere syndromes. *Nat Rev Genet* 2012;13:693–704.
