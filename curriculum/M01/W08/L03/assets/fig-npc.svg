@@ -1,0 +1,61 @@
+<!-- 핵공 복합체. 라벨만 둔다.
+   A 단면 배치. 세포질 섬유, 막 고리, 핵 바구니, FG 사슬이 메운 중앙 통로.
+   B 두 투과 양식. 작은 분자는 그대로 지나고, 큰 기질은 수용체에 실린다.
+   캡션에 쓸 내용: 고르는 기준이 구멍의 크기가 아니라 FG 사슬과
+   결합할 수 있는가라는 점.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 340" width="640" height="340" role="img"
+ aria-label="핵공 복합체 그림. A 패널은 두 겹 핵막에 끼워진 8중 대칭 복합체의 단면으로 세포질 쪽 섬유, 막에 박힌 고리, 핵 쪽 바구니와 FG 반복 사슬이 메운 중앙 통로를 보이고, B 패널은 약 40 kDa 이하 분자의 수동 확산과 수용체에 실린 큰 기질의 촉진 수송을 나란히 보인다.">
+ <style>
+  .t{font:12px sans-serif;fill:#16191d}
+  .s{font:11px sans-serif;fill:#50585f}
+  .p{font:700 15px sans-serif;fill:#003c71}
+  .mem{fill:#e8eef5;stroke:#1a4f8a;stroke-width:2}
+  .npc{fill:#dce6f2;stroke:#1a4f8a;stroke-width:2}
+  .fg{stroke:#c08a00;stroke-width:1.6;fill:none}
+  .car{fill:#e3f0e4;stroke:#2e7d32;stroke-width:2}
+  .small{fill:#fff5d6;stroke:#f2b705;stroke-width:1.6}
+  .ar{stroke:#003c71;stroke-width:2;fill:none;marker-end:url(#a)}
+ </style>
+ <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker></defs>
+
+ <text class="p" x="14" y="26">A</text>
+ <text class="s" x="40" y="26">cytoplasm</text>
+ <rect class="mem" x="40" y="96" width="250" height="14"/>
+ <rect class="mem" x="40" y="150" width="250" height="14"/>
+ <text class="s" x="40" y="92">outer membrane</text>
+ <text class="s" x="40" y="182">inner membrane</text>
+ <text class="s" x="200" y="134">perinuclear space</text>
+ <rect class="npc" x="150" y="92" width="26" height="76"/>
+ <rect class="npc" x="236" y="92" width="26" height="76"/>
+ <path class="npc" d="M150 92 L138 62 M176 92 L188 62 M236 92 L224 62 M262 92 L274 62"/>
+ <text class="s" x="134" y="52">cytoplasmic filaments</text>
+ <path class="npc" d="M150 168 L142 212 M176 168 L184 212 M236 168 L228 212 M262 168 L270 212"/>
+ <path class="npc" d="M142 212 L270 212"/>
+ <text class="s" x="150" y="230">nuclear basket</text>
+ <path class="fg" d="M178 100 q18 12 0 24 q-18 12 0 24 q18 12 0 20"/>
+ <path class="fg" d="M234 100 q-18 12 0 24 q18 12 0 24 q-18 12 0 20"/>
+ <path class="fg" d="M206 98 q16 14 -2 26 q-16 12 2 26 q16 12 0 18"/>
+ <text class="s" x="282" y="130">FG repeats</text>
+ <text class="s" x="40" y="258">nucleoplasm</text>
+ <text class="s" x="150" y="258">8-fold symmetry</text>
+
+ <text class="p" x="360" y="26">B</text>
+ <rect class="mem" x="380" y="86" width="230" height="12"/>
+ <rect class="mem" x="380" y="86" width="230" height="12"/>
+ <circle class="small" cx="420" cy="58" r="9"/>
+ <text class="s" x="440" y="54">&lt; 40 kDa</text>
+ <path class="ar" d="M420 70 L420 116"/>
+ <text class="s" x="380" y="140">passive</text>
+ <rect class="car" x="520" y="42" width="56" height="30" rx="8"/>
+ <text class="s" x="528" y="62">importin</text>
+ <circle class="npc" cx="586" cy="58" r="12"/>
+ <text class="s" x="580" y="34">cargo</text>
+ <path class="ar" d="M548 78 L548 116"/>
+ <text class="s" x="500" y="140">facilitated</text>
+ <text class="s" x="500" y="156">Ran-dependent</text>
+ <rect class="mem" x="380" y="196" width="230" height="12"/>
+ <text class="s" x="380" y="192">no signal , large</text>
+ <path class="ar" d="M470 236 L470 214"/>
+ <text class="s" x="430" y="256">excluded</text>
+</svg>

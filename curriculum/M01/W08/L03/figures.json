@@ -1,4 +1,29 @@
 {
   "lesson_id": "M01-W08-L03",
-  "figures": []
+  "figures": [
+    {
+      "figure_id": "fig-npc",
+      "lesson_id": "M01-W08-L03",
+      "html_anchor": "#fig-npc",
+      "caption": "핵공 복합체의 구조와 두 가지 투과 양식. 8중 대칭의 세포질 섬유·막 고리·핵 바구니 배치, FG 반복 사슬이 메운 중앙 통로, 작은 분자의 수동 확산과 수용체 매개 촉진 수송의 차이를 함께 보인다.",
+      "asset_path": "assets/fig-npc.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-ran-cycle",
+      "lesson_id": "M01-W08-L03",
+      "html_anchor": "#fig-ran-cycle",
+      "caption": "Ran 기울기에 의한 수송 방향의 결정. 핵 안의 RCC1과 세포질의 RanGAP이 만드는 Ran-GTP 농도 기울기, importin이 핵에서 기질을 놓는 과정과 exportin이 핵에서 기질을 잡는 과정, 그리고 Ran 자체가 NTF2에 의해 핵으로 되돌아오는 재순환을 함께 보인다.",
+      "asset_path": "assets/fig-ran-cycle.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    }
+  ]
 }

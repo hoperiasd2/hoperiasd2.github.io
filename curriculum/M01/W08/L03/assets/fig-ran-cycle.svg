@@ -1,0 +1,68 @@
+<!-- Ran 주기. 라벨만 둔다.
+   왼쪽 세포질, 오른쪽 핵. RCC1 은 핵에, RanGAP 은 세포질에 있다.
+   위 줄 들여오기, 아래 줄 내보내기. NTF2 가 Ran-GDP 를 되돌린다.
+   캡션에 쓸 내용: Ran-GTP 가 importin 에게는 놓으라는 신호,
+   exportin 에게는 잡으라는 신호로 작동한다는 점.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 340" width="640" height="340" role="img"
+ aria-label="Ran 주기 그림. 핵 안의 RCC1과 세포질의 RanGAP이 Ran-GTP 농도 기울기를 만들고, 위쪽 줄에서 importin이 세포질에서 기질을 싣고 핵에서 Ran-GTP에 의해 놓는 과정, 아래쪽 줄에서 exportin이 핵에서 Ran-GTP와 함께 기질을 잡고 세포질에서 가수분해로 놓는 과정, 그리고 NTF2가 Ran-GDP를 핵으로 되돌리는 재순환을 보인다.">
+ <style>
+  .t{font:12px sans-serif;fill:#16191d}
+  .s{font:11px sans-serif;fill:#50585f}
+  .p{font:700 15px sans-serif;fill:#003c71}
+  .mem{fill:#e8eef5;stroke:#1a4f8a;stroke-width:2}
+  .car{fill:#e3f0e4;stroke:#2e7d32;stroke-width:2}
+  .ran{fill:#fff5d6;stroke:#f2b705;stroke-width:2}
+  .cg{fill:#dce6f2;stroke:#1a4f8a;stroke-width:2}
+  .ar{stroke:#003c71;stroke-width:2;fill:none;marker-end:url(#a)}
+  .dim{stroke:#8a8f96;stroke-width:1.4;fill:none;marker-end:url(#g);stroke-dasharray:5 4}
+ </style>
+ <defs>
+  <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker>
+  <marker id="g" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#8a8f96"/></marker>
+ </defs>
+
+ <rect class="mem" x="300" y="20" width="14" height="300"/>
+ <text class="s" x="120" y="34">cytoplasm</text>
+ <text class="s" x="420" y="34">nucleus</text>
+ <text class="s" x="120" y="52">Ran-GDP high</text>
+ <text class="s" x="420" y="52">Ran-GTP high</text>
+ <rect class="cg" x="120" y="62" width="72" height="24" rx="6"/>
+ <text class="s" x="128" y="79">RanGAP</text>
+ <rect class="cg" x="420" y="62" width="60" height="24" rx="6"/>
+ <text class="s" x="430" y="79">RCC1</text>
+
+ <text class="p" x="14" y="124">A</text>
+ <text class="s" x="40" y="124">import</text>
+ <rect class="car" x="120" y="112" width="68" height="28" rx="8"/>
+ <text class="s" x="126" y="131">importin</text>
+ <circle class="cg" cx="200" cy="126" r="11"/>
+ <text class="s" x="194" y="106">NLS</text>
+ <path class="ar" d="M216 126 L296 126"/>
+ <rect class="car" x="340" y="112" width="68" height="28" rx="8"/>
+ <text class="s" x="346" y="131">importin</text>
+ <ellipse class="ran" cx="432" cy="126" rx="30" ry="14"/>
+ <text class="s" x="412" y="130">Ran-GTP</text>
+ <circle class="cg" cx="500" cy="126" r="11"/>
+ <text class="s" x="492" y="156">released</text>
+ <path class="dim" d="M408 160 L240 160"/>
+ <text class="s" x="250" y="178">recycle</text>
+
+ <text class="p" x="14" y="236">B</text>
+ <text class="s" x="40" y="236">export</text>
+ <rect class="car" x="470" y="224" width="68" height="28" rx="8"/>
+ <text class="s" x="476" y="243">exportin</text>
+ <ellipse class="ran" cx="424" cy="238" rx="30" ry="14"/>
+ <text class="s" x="404" y="242">Ran-GTP</text>
+ <circle class="cg" cx="360" cy="238" r="11"/>
+ <text class="s" x="350" y="218">NES</text>
+ <path class="ar" d="M340 238 L318 238"/>
+ <rect class="car" x="160" y="224" width="68" height="28" rx="8"/>
+ <text class="s" x="166" y="243">exportin</text>
+ <circle class="cg" cx="120" cy="238" r="11"/>
+ <text class="s" x="100" y="268">released</text>
+ <text class="s" x="160" y="286">GTP hydrolysis</text>
+ <rect class="cg" x="160" y="300" width="60" height="22" rx="6"/>
+ <text class="s" x="168" y="316">NTF2</text>
+ <path class="dim" d="M226 310 L296 310"/>
+</svg>
