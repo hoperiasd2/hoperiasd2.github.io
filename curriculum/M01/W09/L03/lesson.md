@@ -2,8 +2,8 @@
 lesson_id: M01-W09-L03
 title: Glycolysis·oxidative phosphorylation과 광합성 개요
 en: Glycolysis, Oxidative Phosphorylation and an Overview of Photosynthesis
-status: 초안
-version: v0.1
+status: 완성
+version: v1.0
 ---
 
 @obj
@@ -17,7 +17,7 @@ version: v0.1
 - 광합성의 명반응과 암반응을 oxidative phosphorylation과 비교해 공통 원리를 밝힌다.
 
 @prereq
-- M01-W05-L03 생체에너지: 자유에너지와 ATP — ΔG, 짝반응, 산화환원 전위, 효소 조절
+- M01-W09-L02 생체에너지: 자유에너지와 ATP — ΔG, 짝반응, 산화환원 전위, 효소 조절과 속도론
 - M01-W05-L02 생체분자와 막의 구조 — 막의 투과성, 막단백질, 수송
 - M01-W05-L01 세포의 기원·진화와 세포 연구 방법 — 미토콘드리아의 이중막 구조
 
@@ -148,6 +148,8 @@ NADH와 FADH₂에 담긴 전자는 미토콘드리아 **내막**의 네 복합�
 
 > **임상 연계** Cyanide는 복합체 IV의 heme 철에 결합해 전자 전달을 차단한다. 조직은 혈액에 산소가 충분히 있어도 그 산소를 쓸 수 없으므로 정맥혈 산소포화도가 비정상적으로 높게 유지되고, 세포는 발효에 의존해 lactic acidosis가 빠르게 진행한다. 치료는 두 방향이다. Hydroxocobalamin이 cyanide와 직접 결합하거나, nitrite로 methemoglobin을 만들어 cyanide를 복합체 IV보다 먼저 붙잡는다. 한편 **2,4-dinitrophenol**은 다른 기전으로 독성을 낸다. 양성자를 내막을 통해 직접 통과시켜 기울기를 없애는 uncoupler이므로, 전자 전달은 최대로 돌지만 ATP가 만들어지지 않고 에너지가 모두 열로 나가 치명적 고열이 생긴다. 신생아의 갈색지방에서 UCP1(thermogenin)이 같은 일을 생리적으로 수행해 체온을 유지한다.
 
+>> 호흡 사슬의 억제 지점을 묻는 문제는 "어디서 막히면 무엇이 쌓이고 무엇이 멈추는가"로 푼다. 억제제는 네 부류다. (1) **복합체 I 억제**(rotenone, barbiturate 고용량): NADH가 쌓이고 NADH 유래 전자는 멈추지만, succinate에서 복합체 II로 들어오는 전자는 계속 흐르므로 산소 소모가 완전히 멈추지는 않는다. (2) **복합체 III 억제**(antimycin A): 그 아래가 모두 멈춘다. (3) **복합체 IV 억제**(cyanide, 일산화탄소, azide): 전자가 산소로 갈 수 없어 사슬 전체가 멈춘다. 조직은 산소가 충분히 공급되어도 쓸 수 없으므로 **정맥 산소 포화도가 오히려 높아지고** 젖산산증이 생긴다. 일산화탄소 중독에서 hemoglobin 결합과 이 기전이 함께 작동한다는 점을 함께 알아 둔다. (4) **ATP synthase 억제**(oligomycin): 전자 전달이 양성자 기울기를 만들지만 쓰이지 않아 기울기가 커지고, 커진 기울기가 역압으로 작용해 전자 전달까지 느려진다. 여기에 성질이 다른 부류가 하나 더 있다. **짝풀림제(uncoupler)**인 2,4-dinitrophenol은 양성자를 막을 통해 그대로 통과시켜 기울기를 없앤다. 그러면 ATP 합성은 멈추지만 전자 전달은 오히려 **빨라지고** 에너지가 전부 열로 나가므로 체온이 오른다. 요점은 두 가지다. **전자 전달과 ATP 합성은 양성자 기울기로만 연결되어 있고, 그 연결을 끊으면 두 과정이 반대 방향으로 변한다.** 그리고 억제 지점이 아래쪽일수록 멈추는 범위가 넓다.
+
 @sec 6. Chemiosmosis와 ATP synthase
 전자 전달이 어떻게 ATP 합성과 연결되는가. 1961년 Peter Mitchell의 **chemiosmotic 가설**이 답을 주었다. 전자 전달의 에너지는 고에너지 화학 중간체로 저장되는 것이 아니라, **내막을 가로지르는 양성자의 전기화학적 기울기**로 저장된다.
 
@@ -201,7 +203,51 @@ Malate-aspartate shuttle은 전자를 NADH 수준으로 보존하지만, glycero
 
 @fig fig-atp-yield 포도당 한 분자의 ATP 수지. 각 단계의 산물과 ATP 환산, 두 shuttle에 따른 차이, 그리고 발효와 산소 호흡의 비교를 보인다.
 
-@sec 8. 광합성: 명반응과 암반응
+@sec 8. 지방산의 산화
+포도당만이 연료가 아니다. 공복과 지속적인 운동에서 주된 연료는 지방산이며, 심근은 안정 상태에서도 에너지의 60~70%를 지방산에서 얻는다. 지방산 산화의 구조는 포도당과 같다. **연료를 acetyl-CoA로 바꾸어 TCA cycle에 넣고, 거두어진 전자를 호흡 사슬로 보낸다.** 다른 것은 acetyl-CoA에 이르는 앞단이다.
+
+지방산이 산화되기까지 세 관문을 지난다.
+
+**1. 활성화.** 세포질에서 지방산이 CoA와 결합해 **acyl-CoA**가 된다. Acyl-CoA synthetase가 촉매하며 ATP 하나를 AMP와 pyrophosphate로 쪼개 쓰므로 **고에너지 결합 두 개**가 소모된다. 수지를 계산할 때 이 투자를 빼야 한다.
+
+**2. 미토콘드리아로의 운반.** 탄소 12개 이상의 긴 사슬 acyl-CoA는 내막을 통과하지 못한다. 그래서 **carnitine shuttle**을 쓴다. 외막 쪽의 **CPT1**이 acyl기를 CoA에서 carnitine으로 옮기고, 운반체 **CACT**가 acylcarnitine을 기질로 들여보내며, 내막 안쪽의 **CPT2**가 다시 CoA로 돌려놓는다. 이 단계가 지방산 산화의 **rate-limiting step**이며, 조절이 여기에 집중된다. 지방산 합성의 중간체 **malonyl-CoA가 CPT1을 억제**하므로, 지방산을 만들고 있는 상태에서는 지방산을 태우지 않는다. 합성과 분해가 동시에 일어나는 무익한 순환을 막는 장치이고, insulin이 malonyl-CoA를 늘려 산화를 끄는 경로의 중심이다. 짧은·중간 사슬 지방산은 shuttle 없이 들어가므로 이 조절을 받지 않는다.
+
+**3. β-산화.** 기질 안에서 네 반응이 한 주기를 이루며, 한 주기마다 탄소 두 개가 acetyl-CoA로 떨어진다.
+
+| 순서 | 반응 | 산물 |
+|---|---|---|
+| 1 | 산화(dehydrogenation) | FADH₂ |
+| 2 | 수화(hydration) | — |
+| 3 | 산화(dehydrogenation) | NADH |
+| 4 | 절단(thiolysis) | acetyl-CoA, 두 탄소 짧아진 acyl-CoA |
+
+첫 반응을 담당하는 acyl-CoA dehydrogenase는 사슬 길이에 따라 **동위효소**가 나뉘어 있다(VLCAD, LCAD, MCAD, SCAD). 사슬이 짧아지는 동안 담당 효소가 차례로 교체되며, 이 분업이 다음 상자의 질환 분류의 근거가 된다.
+
+수지를 비교해 본다. Palmitate(C16)는 β-산화를 7주기 돌아 acetyl-CoA 8개, NADH 7개, FADH₂ 7개를 낸다. ATP로 환산하면 acetyl-CoA 8개가 TCA cycle에서 각 10개씩 80개, NADH 7개가 17.5개, FADH₂ 7개가 10.5개로 합계 108개이고, 활성화에 쓴 2개를 빼면 **약 106개**다. 포도당 한 분자의 30~32개와 비교하면 분자당 세 배 이상이고, 그램당으로도 지방이 탄수화물의 두 배가 넘는다. 이유는 앞 수업에서 본 대로 **지방산의 탄소가 더 환원된 상태**여서 꺼낼 전자가 많기 때문이다.
+
+변형도 알아 둔다. 홀수 탄소 지방산은 마지막에 **propionyl-CoA**를 남기고, 이것은 biotin과 vitamin B₁₂를 쓰는 효소들을 거쳐 succinyl-CoA로 바뀌어 TCA cycle에 들어간다. 그래서 B₁₂ 결핍에서 methylmalonic acid가 쌓인다. 탄소 20개 이상의 매우 긴 사슬 지방산과 분지 지방산은 **퍼옥시좀**에서 먼저 짧게 깎인 뒤 미토콘드리아로 넘겨진다. 이 경로의 결손이 X 연관 adrenoleukodystrophy와 Zellweger 증후군이다(M01-W10-L01).
+
+지방산 산화가 많아지면 간에서 acetyl-CoA가 TCA cycle의 처리 용량을 넘어 쌓이고, 남은 acetyl-CoA가 **ketone body**(acetoacetate, β-hydroxybutyrate)로 전환되어 혈액으로 나간다. 간은 ketone body를 쓰는 효소가 없어 자기가 만든 것을 쓰지 못하고, 뇌와 심장, 근육이 쓴다. 공복이 길어질 때 뇌가 포도당 의존을 줄이는 수단이며, 생리적 적응이다. 반면 insulin이 거의 없는 1형 당뇨병에서는 지방 분해가 억제되지 않아 ketone body가 과도하게 생산되어 **당뇨병성 ketoacidosis**가 된다. 같은 기전이 양에 따라 적응과 질환으로 갈린다.
+
+>> 지방산 산화 결손은 "저혈당인데 ketone이 없다"는 소견에서 찾는다. 이 조합이 결정적이다. 공복이 길어지면 정상적으로는 지방산 산화가 올라가 ketone body를 만들고, 그 ketone이 포도당 대신 쓰이면서 간은 gluconeogenesis에 필요한 acetyl-CoA와 NADH를 얻는다. 산화가 막히면 세 가지가 동시에 일어난다. **저혈당**(포도당 소비가 계속되고 gluconeogenesis가 받쳐지지 않는다), **저ketone**(만들 재료가 없다), 그리고 **에너지 요구가 큰 조직의 손상**(심근병증, 간기능 이상, 횡문근 분해)이다. 이것을 저ketone성 저혈당(hypoketotic hypoglycemia)이라 하며, 신생아 선별검사의 표적이다. 결손의 위치를 혈중 acylcarnitine 양상으로 가린다. **MCAD 결핍**은 중간 사슬 acylcarnitine이 쌓이고 가장 흔하며, 금식이나 감염 때 급성으로 발현한다. **CPT1 결핍**은 간에서 운반이 막히는데 carnitine은 오히려 높게 나오고, **CPT2와 CACT 결핍**은 장쇄 acylcarnitine이 쌓이며 심근과 근육의 침범이 두드러진다. **일차성 carnitine 결핍**(수송체 OCTN2의 결손)은 혈중 carnitine이 매우 낮고 carnitine 보충으로 치료된다. 관리의 공통 원칙은 두 가지다. **금식을 피하고** 급성기에 포도당을 공급하는 것, 그리고 장쇄 결손에서는 shuttle을 거치지 않는 중간 사슬 지방산으로 열량을 공급하는 것이다. 반대로 MCAD 결핍에서는 중간 사슬 지방산이 금기라는 점이 함께 출제된다.
+
+@sec 9. Pentose phosphate 경로와 NADPH
+포도당이 에너지를 내는 길만 있는 것은 아니다. 세포는 포도당의 일부를 **pentose phosphate 경로**로 보내 두 가지를 얻는다. **NADPH**와 **ribose-5-phosphate**다. 이 경로는 세포질에서 일어나고 ATP를 만들지 않는다.
+
+경로는 두 부분으로 나뉜다.
+
+- **산화 단계**: glucose-6-phosphate가 두 번 산화되며 **NADPH 두 개**와 CO₂ 하나를 내고 ribulose-5-phosphate가 된다. 첫 효소 **glucose-6-phosphate dehydrogenase(G6PD)**가 rate-limiting step이며 NADP⁺ 농도로 조절된다. 즉 **NADPH가 소모되어 NADP⁺가 늘어날 때 경로가 켜진다.**
+- **비산화 단계**: 당의 탄소 골격을 서로 옮겨 ribose-5-phosphate, fructose-6-phosphate, glyceraldehyde-3-phosphate 사이를 가역적으로 전환한다. 그래서 세포는 NADPH만 필요할 때와 ribose만 필요할 때 각각 다른 조합으로 흐름을 조정할 수 있다.
+
+NADPH가 쓰이는 곳은 세 갈래다. 지방산과 cholesterol, 핵산의 **합성**, 면역세포의 NADPH oxidase가 만드는 **활성산소 생산**, 그리고 **항산화 방어**다. 세 번째가 임상적으로 가장 중요하다. 산화 스트레스를 중화하는 glutathione은 산화되면 다시 환원되어야 하는데, glutathione reductase가 그 일을 하며 **NADPH를 쓴다.** 즉 NADPH의 공급이 끊기면 환원형 glutathione이 바닥나고 세포는 산화 손상에 노출된다.
+
+>> G6PD 결핍은 "왜 적혈구만, 왜 특정 자극에서만"이라는 두 질문으로 출제된다. 첫째, **적혈구가 취약한 이유**는 미토콘드리아가 없어 NADPH를 pentose phosphate 경로에서만 얻기 때문이다. 다른 세포는 다른 공급원이 있다. 게다가 적혈구는 핵이 없어 효소를 새로 만들 수 없으므로, 효소가 불안정한 변이형에서는 세포가 나이 들수록 활성이 더 떨어진다. 둘째, **자극이 필요한 이유**는 평소에는 남은 활성으로 충분하고 산화 부담이 커질 때만 모자라기 때문이다. 자극은 세 부류다. 감염, 특정 약물(primaquine, dapsone, nitrofurantoin, sulfonamide, rasburicase 등), 그리고 fava bean이다. 산화 손상을 받은 hemoglobin이 변성되어 침전한 것을 **Heinz body**라 하고, 대식세포가 그 부분을 뜯어내 생긴 적혈구가 **bite cell**이다. 급성 용혈 중에는 오래된(효소 활성이 낮은) 적혈구가 먼저 파괴되고 어린 적혈구만 남으므로, **효소 활성 측정이 정상으로 나올 수 있다.** 그래서 검사는 급성기가 지난 뒤 2~3개월 후에 다시 한다는 점이 실제 진료와 시험 양쪽에서 요구된다. 이 질환은 X 연관 유전이고 말라리아 유행 지역에서 빈도가 높은데, G6PD 결핍 적혈구에서 말라리아 기생충의 생존이 불리하다는 선택이 작용한 것으로 해석된다. 신생아 황달의 원인으로도 중요하다.
+
+~ **연구 전선** 호흡 사슬의 복합체들이 막 안에 따로 떠 있는지, 서로 결합한 **초복합체(supercomplex)**를 이루는지가 지난 20년의 논쟁이었다. 저온전자현미경으로 복합체 I, III, IV가 결합한 구조가 풀리면서 초복합체의 존재는 확립되었고, 지금의 쟁점은 그 기능적 의미다. 초복합체가 전자 운반체의 이동 거리를 줄여 효율을 올리고 전자가 산소로 새는 것을 줄인다는 모형이 제시되었으나, 자유롭게 떠 있는 상태와 결합한 상태가 조건에 따라 전환되며 그 비율이 연료 선택과 함께 변한다는 결과도 있다. 임상적 동기는 분명하다. 심부전, 노화, 미토콘드리아 질환에서 초복합체의 조립이 어긋난다는 보고가 있고, 조립을 돕는 인자가 치료 표적으로 검토된다. 함께 다루어지는 주제가 **반응성 산소종의 생산 지점**이다. 복합체 I의 역방향 전자 흐름이 주된 생산 지점이라는 측정이 쌓였고, 허혈-재관류 손상에서 이 역방향 흐름을 억제하는 전략이 전임상에서 시험되고 있다. 쟁점은 ROS가 손상의 원인인지 신호인지다. 적당한 양의 ROS가 적응 반응을 켠다는 자료가 많아, 항산화제를 일괄 투여한 임상 시험이 대부분 실패한 것과 맞물려 해석된다.
+
+~ **연구 전선** 종양세포가 산소가 있어도 포도당을 젖산으로 내보낸다는 관찰(Warburg 효과)은 100년 전에 보고되었으나, 그 해석은 최근에 바뀌었다. 과거에는 미토콘드리아가 망가져서 그렇다고 보았지만, 대부분의 종양에서 미토콘드리아는 정상으로 작동한다. 현재의 설명은 **분열하는 세포의 요구가 에너지가 아니라 재료**라는 것이다. 새 세포를 만들려면 핵산, 지질, 아미노산이 필요하고, 그 재료는 포도당과 glutamine의 탄소에서 나온다. 포도당을 완전히 산화하면 탄소가 CO₂로 날아가 버리므로, 재료를 쓰려면 중간에서 빼내야 한다. NADPH 요구도 크다. 그래서 종양에서는 pentose phosphate 경로와 serine 합성 경로의 흐름이 올라가고, glutamine이 TCA cycle의 중간체를 채우는 데 쓰인다. 치료 쪽의 시도는 세 방향이다. 특정 대사 효소를 억제하는 것(IDH 변이 억제제가 승인되었다), 종양이 의존하는 영양소를 제한하는 것, 그리고 대사 상태를 영상으로 읽어 치료 반응을 평가하는 것이다. 쟁점은 선택성이다. 정상 분열 세포도 같은 요구를 가지므로, 종양에서만 다른 지점을 찾는 것이 이 분야의 과제다.
+
+@sec 10. 광합성: 명반응과 암반응
 광합성은 빛 에너지를 화학결합 에너지로 바꾸는 과정이다. 전체 반응은 산소 호흡의 역방향으로 쓸 수 있다.
 
 6 CO₂ + 6 H₂O + 빛 에너지 → C₆H₁₂O₆ + 6 O₂
@@ -236,7 +282,38 @@ Chloroplast는 미토콘드리아처럼 이중막을 갖고, 내부에 **thylako
 
 => **핵심 정리** 포도당 산화의 네 단계는 탄소를 CO₂로, 전자를 O₂로 보내는 두 흐름으로 요약된다. ATP의 대부분은 기질 수준의 인산화가 아니라 양성자 기울기를 매개한 chemiosmosis로 만들어지고, 그 기울기를 만드는 것은 전자가 전위를 따라 내려가며 내놓는 에너지다. 광합성은 같은 chemiosmosis를 쓰면서 전자를 빛으로 끌어올려 방향만 거꾸로 돌린 체계다.
 
+@sec 11. 연료 선택과 연결
+마지막으로 이 수업의 경로들이 **언제 쓰이는지**를 한자리에 모은다. 세포와 조직은 연료를 동시에 똑같이 쓰지 않고 상황에 따라 고른다.
+
+조절의 중심에 있는 관계가 **포도당과 지방산 사이의 상호 억제**다. 지방산 산화가 활발하면 acetyl-CoA와 NADH, citrate가 쌓이고, 이들이 pyruvate dehydrogenase를 억제하고 phosphofructokinase-1을 억제해 포도당의 산화를 줄인다. 반대로 포도당이 풍부하면 insulin이 malonyl-CoA를 늘려 CPT1을 억제하고 지방산 산화를 끈다. **두 연료가 서로를 끄는 되먹임**이며, 이 때문에 혈중 지방산이 높은 상태(비만, 공복)에서 근육의 포도당 이용이 떨어진다. 2형 당뇨병의 인슐린 저항성을 설명하는 여러 모형 가운데 하나가 이 축이다.
+
+조직별 선택도 정해져 있다. 뇌는 포도당을 주로 쓰고 지방산을 쓰지 못하며, 공복이 길어지면 ketone body로 일부를 대체한다. 적혈구는 미토콘드리아가 없어 glycolysis만 쓴다. 심근은 지방산을 선호하고 젖산도 쓴다. 골격근은 상황에 따라 바꾸며, 격렬한 운동에서는 glycolysis에 의존해 젖산을 낸다. 간은 자기 연료를 쓰는 것보다 **다른 조직에 연료를 공급하는 일**을 한다.
+
+이 수업이 이어지는 곳은 다음과 같다.
+
+- **M01-W09-L02 생체에너지: 자유에너지와 ATP** — 여기서 쓴 ΔG, 환원 전위, 조절 지점의 판정 기준이 거기에 있다.
+- **M01-W04-L02 대사의 기초** — 섭식과 공복의 전환, 전신 수준의 연료 분배를 다룬다.
+- **M01-W10-L01 미토콘드리아·엽록체·퍼옥시좀** — 양성자 기울기를 만드는 구조, 짝풀림과 열 생산, 퍼옥시좀의 지방산 산화를 다룬다.
+- **M01-W10-L03 원형질막과 막수송** — 포도당 수송체와 이차 능동수송을 다룬다.
+- **M01-W11-L02 세포 신호전달** — insulin 신호, AMPK, mTORC1이 대사를 전환하는 경로를 다룬다.
+- **M01-W12-L03 암의 세포생물학** — 종양의 대사 재편을 분열의 요구와 함께 다룬다.
+- **M02-W09-L03 당대사 질환** — 당뇨병의 병태생리와 ketoacidosis, 젖산산증의 임상 접근을 다룬다.
+- **M03-W02-L01 대사의 통합과 조절** — 조직 사이의 연료 교환과 호르몬 조절을 종합한다.
+- **M03-W02-L02 에너지대사와 미토콘드리아 질환** — 호흡 사슬 결손의 유전과 임상 양상을 다룬다.
+
 @quiz
+Q: 생후 10개월 영아가 밤새 금식한 뒤 아침에 처짐과 경련으로 왔다. 혈당 35 mg/dL, 혈중 ketone은 거의 검출되지 않았고 간이 커져 있었다. 가능한 진단군과 그 기전, 확진 검사를 설명하라.
+A: 지방산 산화 결손이다. 저혈당과 함께 ketone이 낮은 조합(저ketone성 저혈당)이 결정적 단서다. 금식이 길어지면 정상적으로는 지방 분해가 일어나 지방산이 간에서 β-산화되고, 그 산물인 acetyl-CoA가 ketone body로 전환되어 뇌가 쓸 연료가 되며, 동시에 생성된 NADH와 acetyl-CoA가 gluconeogenesis를 받쳐 준다. 산화가 막히면 ketone을 만들 수 없고 gluconeogenesis도 받쳐지지 않아 저혈당이 심해지며, 축적된 지방산과 그 대사물이 간과 심근에 독성을 준다. 간비대와 심근병증, 횡문근 분해가 함께 나타나는 이유다. 확진은 혈중 acylcarnitine 양상을 질량분석으로 보는 것이다. 중간 사슬 acylcarnitine이 쌓이면 MCAD 결핍, 장쇄가 쌓이면 CPT2나 CACT, VLCAD 결핍을 시사하고, carnitine이 매우 낮으면 일차성 carnitine 결핍을 생각한다. 소변 유기산 분석과 유전자 검사로 확정한다. 급성기 처치는 포도당 정주이고, 장기 관리의 핵심은 금식을 피하는 것이다. 장쇄 결손에서는 carnitine shuttle을 거치지 않는 중간 사슬 지방산으로 열량을 보충하지만, MCAD 결핍에서는 금기다.
+
+Q: Malonyl-CoA가 CPT1을 억제하는 조절의 의미를 설명하고, 이 조절이 없다면 어떤 문제가 생길지 쓰라.
+A: Malonyl-CoA는 지방산 합성의 첫 중간체이므로, 그 농도가 높다는 것은 세포가 지방산을 만들고 있다는 뜻이다. CPT1은 긴 사슬 acyl-CoA를 미토콘드리아로 들여보내는 rate-limiting step이므로, 이를 억제하면 지방산 산화가 멈춘다. 즉 **합성과 분해가 동시에 일어나지 않도록 하는 장치**다. 이 조절이 없다면 지방산을 만들면서 동시에 태우는 무익한 순환이 생겨, 알짜 변화 없이 ATP와 NADPH만 소모된다. 지방산 하나를 만드는 데 ATP와 NADPH가 투입되고 태우면 ATP가 나오지만, 두 과정의 효율이 100%가 아니므로 순환이 돌 때마다 에너지가 열로 빠져나간다. 조절의 생리적 맥락도 분명하다. 식후에는 insulin이 acetyl-CoA carboxylase를 활성화해 malonyl-CoA를 늘리므로 산화가 꺼지고 저장이 켜진다. 공복에는 glucagon과 AMPK가 그 효소를 인산화해 불활성화하므로 malonyl-CoA가 줄고 산화가 켜진다. 하나의 중간체 농도가 두 경로의 방향을 반대로 돌리는 스위치로 쓰이는 전형적인 설계다.
+
+Q: G6PD 결핍 환자가 감염 후 급성 용혈로 왔다. 이때 측정한 G6PD 활성이 정상 범위로 나올 수 있는 이유와, 적혈구가 특히 취약한 이유를 설명하라.
+A: 활성이 정상으로 나올 수 있는 이유는 검사 대상 세포가 바뀌어 있기 때문이다. 흔한 변이형에서 효소는 불안정해 적혈구가 나이 들수록 활성이 떨어지므로, 산화 부담이 걸리면 오래된 적혈구가 먼저 파괴된다. 급성 용혈 중에는 그 세포들이 이미 제거되고 골수가 내보낸 어린 적혈구와 망상적혈구가 혈액을 채우는데, 이들은 효소 활성이 높다. 따라서 급성기에 측정한 평균 활성이 정상으로 나올 수 있고, 2~3개월 뒤 적혈구 연령 분포가 정상으로 돌아온 다음 다시 측정해야 한다. 적혈구가 취약한 이유는 두 가지다. 미토콘드리아가 없어 NADPH를 pentose phosphate 경로에서만 얻으므로 다른 공급원이 없고, 핵이 없어 효소를 새로 만들 수 없다. NADPH는 산화된 glutathione을 환원하는 데 쓰이므로 공급이 끊기면 환원형 glutathione이 바닥나고, hemoglobin이 산화·변성되어 Heinz body로 침전하며 막이 손상되어 용혈이 일어난다. 대식세포가 침전물을 뜯어낸 bite cell이 말초혈액 도말에서 관찰된다. 관리의 핵심은 유발 인자를 피하는 것이다.
+
+Q: 간에서 ketone body가 만들어지는데 간은 그것을 쓰지 못한다. 이 배치의 의미를 설명하고, 생리적 적응과 당뇨병성 ketoacidosis의 차이를 쓰라.
+A: 간은 ketone body를 다시 acetyl-CoA로 되돌리는 효소(SCOT)가 없어 자기가 만든 ketone을 쓸 수 없다. 이 배치는 간이 자기 연료를 소비하지 않고 다른 조직에 연료를 공급하는 기관이라는 역할과 일치한다. 공복이 길어지면 지방 분해로 지방산이 간에 몰리고, β-산화로 생긴 acetyl-CoA가 TCA cycle의 처리 용량을 넘어 ketone body로 전환되어 혈액으로 나간다. 뇌는 지방산을 쓰지 못하지만 ketone은 쓸 수 있으므로, 이 전환이 포도당 요구를 줄여 근육 단백질의 분해를 아껴 준다. 즉 생리적 적응이다. 차이는 양과 조절에 있다. 정상 공복에서는 남아 있는 insulin이 지방 분해를 제한하므로 ketone 농도가 수 mM 수준에서 멈추고 혈액 pH가 유지된다. 1형 당뇨병에서 insulin이 거의 없으면 지방 분해가 억제되지 않아 ketone 생산이 폭주하고, acetoacetate와 β-hydroxybutyrate가 산이므로 농도가 10 mM을 넘으면 완충 능력을 넘겨 음이온 간격이 증가한 대사성 산증이 된다. 동시에 포도당이 이용되지 못해 고혈당과 삼투성 다뇨, 탈수가 겹친다. 치료가 insulin과 수분·전해질 보충인 이유는 두 기전을 함께 끊어야 하기 때문이다.
+
 Q: 적혈구는 산소가 충분한 혈액 안에서도 pyruvate를 lactate로 바꾼다. 그 이유와, 이 경로로 얻는 것이 무엇인지 설명하라.
 A: 적혈구에는 미토콘드리아가 없어 pyruvate를 acetyl-CoA로 바꾸어 TCA cycle과 oxidative phosphorylation으로 보낼 수 없다. 따라서 ATP를 glycolysis만으로 얻는데, glycolysis의 6단계에서 NAD⁺가 NADH로 환원되므로 NAD⁺를 다시 산화형으로 되돌리지 않으면 경로가 곧 멈춘다. Lactate dehydrogenase가 pyruvate를 lactate로 환원하면서 NADH를 NAD⁺로 되돌리므로 glycolysis가 계속 돌 수 있다. 이 반응 자체는 ATP를 만들지 않으며, 얻는 것은 ATP가 아니라 재생된 NAD⁺다.
 
@@ -263,3 +340,9 @@ A: Oxidative phosphorylation에서 전자는 NADH(E°′ −0.32 V)와 FADH₂�
 - Boyer PD. The ATP synthase: a splendid molecular machine. *Annu Rev Biochem* 1997;66:717–749.
 - Hinkle PC. P/O ratios of mitochondrial oxidative phosphorylation. *Biochim Biophys Acta* 2005;1706:1–11.
 - Vander Heiden MG, Cantley LC, Thompson CB. Understanding the Warburg effect: the metabolic requirements of cell proliferation. *Science* 2009;324:1029–1033.
+- Nelson DL, Cox MM. *Lehninger Principles of Biochemistry*. 8th ed. Macmillan; 2021. Chapter 14, Glycolysis; Chapter 17, Fatty Acid Catabolism; Chapter 19, Oxidative Phosphorylation.
+- Houten SM, Wanders RJA. A general introduction to the biochemistry of mitochondrial fatty acid β-oxidation. *J Inherit Metab Dis* 2010;33:469–477.
+- Luzzatto L, Ally M, Notaro R. Glucose-6-phosphate dehydrogenase deficiency. *Blood* 2020;136:1225–1240.
+- Vander Heiden MG, Cantley LC, Thompson CB. Understanding the Warburg effect: the metabolic requirements of cell proliferation. *Science* 2009;324:1029–1033.
+- Letts JA, Sazanov LA. Clarifying the supercomplex: the higher-order organization of the mitochondrial electron transport chain. *Nat Struct Mol Biol* 2017;24:800–808.
+- Murphy MP. How mitochondria produce reactive oxygen species. *Biochem J* 2009;417:1–13.
