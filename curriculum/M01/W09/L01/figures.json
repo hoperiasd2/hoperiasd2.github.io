@@ -1,4 +1,29 @@
 {
   "lesson_id": "M01-W09-L01",
-  "figures": []
+  "figures": [
+    {
+      "figure_id": "fig-cotranslational",
+      "lesson_id": "M01-W09-L01",
+      "html_anchor": "#fig-cotranslational",
+      "caption": "소포체로의 공동 번역 수송. 신호서열의 노출과 SRP 결합에 의한 번역 정지, SRP 수용체와의 도킹, translocon으로의 인계와 통로의 개방, 내강 쪽 BiP에 의한 포획, 그리고 signal peptidase에 의한 신호 제거까지의 순서를 함께 보인다.",
+      "asset_path": "assets/fig-cotranslational.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-vesicle-traffic",
+      "lesson_id": "M01-W09-L01",
+      "html_anchor": "#fig-vesicle-traffic",
+      "caption": "소포 수송의 네 단계와 세 가지 피막. 피막 단백질에 의한 출아와 화물 선별, Rab이 구획의 신분증으로 작동하는 표적 인식, v-SNARE와 t-SNARE의 짝짓기에 의한 융합, 그리고 COPII·COPI·clathrin이 담당하는 구간과 방향을 함께 보인다.",
+      "asset_path": "assets/fig-vesicle-traffic.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    }
+  ]
 }

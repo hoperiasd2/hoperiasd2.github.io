@@ -1,0 +1,71 @@
+<!-- 소포 수송. 라벨만 둔다.
+   A 네 단계. 출아, 운반, tethering, 융합.
+   B 세 피막이 담당하는 구간과 방향.
+   캡션에 쓸 내용: 피막이 막을 구부리면서 화물을 고르고,
+   Rab 과 SNARE 가 두 층으로 목적지를 검문한다는 점.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 350" width="640" height="350" role="img"
+ aria-label="소포 수송 그림. A 패널은 피막 조립과 출아, 운반, Rab에 의한 tethering, SNARE 짝짓기에 의한 융합의 네 단계를 차례로 보이고, B 패널은 COPII가 소포체에서 Golgi로, COPI가 Golgi에서 소포체로, clathrin이 trans-Golgi에서 endosome과 lysosome으로 그리고 세포막에서 endosome으로 작용하는 구간과 방향을 보인다.">
+ <style>
+  .t{font:12px sans-serif;fill:#16191d}
+  .s{font:11px sans-serif;fill:#50585f}
+  .p{font:700 15px sans-serif;fill:#003c71}
+  .mem{stroke:#1a4f8a;stroke-width:3;fill:none}
+  .ves{fill:#dce6f2;stroke:#1a4f8a;stroke-width:2}
+  .coat{stroke:#c08a00;stroke-width:2.4;fill:none;stroke-dasharray:4 3}
+  .rab{fill:#fff5d6;stroke:#f2b705;stroke-width:2}
+  .sn{stroke:#2e7d32;stroke-width:2.4;fill:none}
+  .org{fill:#e8eef5;stroke:#1a4f8a;stroke-width:2}
+  .ar{stroke:#003c71;stroke-width:2;fill:none;marker-end:url(#a)}
+  .arr{stroke:#b3261e;stroke-width:2;fill:none;marker-end:url(#r)}
+ </style>
+ <defs>
+  <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker>
+  <marker id="r" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#b3261e"/></marker>
+ </defs>
+
+ <text class="p" x="14" y="26">A</text>
+ <path class="mem" d="M40 96 q30 -34 60 0"/>
+ <path class="coat" d="M38 94 q32 -42 64 0"/>
+ <text class="s" x="40" y="126">1 budding</text>
+ <text class="s" x="40" y="142">coat + cargo</text>
+ <circle class="ves" cx="196" cy="78" r="22"/>
+ <path class="ar" d="M152 78 L170 78"/>
+ <text class="s" x="170" y="126">2 transport</text>
+ <circle class="ves" cx="330" cy="72" r="22"/>
+ <ellipse class="rab" cx="330" cy="100" rx="18" ry="11"/>
+ <text class="s" x="322" y="104">Rab</text>
+ <path class="mem" d="M290 132 L400 132"/>
+ <text class="s" x="300" y="158">3 tethering</text>
+ <circle class="ves" cx="500" cy="72" r="22"/>
+ <path class="sn" d="M500 94 L500 124"/>
+ <path class="sn" d="M512 94 L512 124"/>
+ <path class="mem" d="M460 130 L580 130"/>
+ <text class="s" x="470" y="158">4 fusion</text>
+ <text class="s" x="470" y="174">v-SNARE + t-SNARE</text>
+
+ <text class="p" x="14" y="216">B</text>
+ <rect class="org" x="40" y="236" width="90" height="60" rx="8"/>
+ <text class="t" x="68" y="270">ER</text>
+ <path class="org" d="M190 240 h110 M190 258 h110 M190 276 h110 M190 294 h110"/>
+ <text class="s" x="190" y="232">cis</text>
+ <text class="s" x="270" y="312">trans</text>
+ <text class="t" x="220" y="330">Golgi</text>
+ <rect class="org" x="360" y="236" width="86" height="40" rx="8"/>
+ <text class="t" x="372" y="260">endosome</text>
+ <rect class="org" x="360" y="292" width="86" height="40" rx="8"/>
+ <text class="t" x="374" y="316">lysosome</text>
+ <rect class="org" x="520" y="236" width="90" height="40" rx="8"/>
+ <text class="t" x="534" y="260">plasma mb</text>
+ <path class="ar" d="M134 254 L184 248"/>
+ <text class="s" x="134" y="240">COPII</text>
+ <path class="arr" d="M184 290 L134 284"/>
+ <text class="s" x="140" y="306">COPI</text>
+ <path class="ar" d="M306 262 L354 258"/>
+ <text class="s" x="300" y="248">clathrin</text>
+ <path class="ar" d="M306 294 L354 302"/>
+ <path class="ar" d="M306 278 L514 258"/>
+ <text class="s" x="420" y="226">constitutive</text>
+ <path class="arr" d="M514 272 L450 268"/>
+ <text class="s" x="460" y="290">clathrin , AP2</text>
+</svg>

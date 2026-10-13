@@ -1,0 +1,63 @@
+<!-- 공동 번역 수송. 라벨만 둔다.
+   1 신호서열 노출과 SRP 결합, 번역 일시 정지.
+   2 SRP 수용체와의 도킹.
+   3 translocon 인계와 통로 개방, 내강 쪽 BiP.
+   4 signal peptidase 절단.
+   캡션에 쓸 내용: 추진력이 번역 자체이고, 신호가 통과 뒤 제거된다는 점.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 330" width="640" height="330" role="img"
+ aria-label="소포체로의 공동 번역 수송 그림. 신호서열이 노출되어 SRP가 결합하며 번역이 느려지는 단계, SRP가 막의 SRP 수용체와 도킹하는 단계, ribosome이 translocon에 얹혀 통로가 열리고 사슬이 내강으로 들어가며 BiP가 붙잡는 단계, 그리고 signal peptidase가 신호서열을 끊어 내는 단계를 왼쪽에서 오른쪽으로 보인다.">
+ <style>
+  .t{font:12px sans-serif;fill:#16191d}
+  .s{font:11px sans-serif;fill:#50585f}
+  .p{font:700 15px sans-serif;fill:#003c71}
+  .mem{fill:#e8eef5;stroke:#1a4f8a;stroke-width:2}
+  .rib{fill:#e3f0e4;stroke:#2e7d32;stroke-width:2}
+  .ch{stroke:#1a4f8a;stroke-width:2.4;fill:none}
+  .sig{stroke:#c08a00;stroke-width:4;fill:none}
+  .srp{fill:#fff5d6;stroke:#f2b705;stroke-width:2}
+  .tl{fill:#dce6f2;stroke:#1a4f8a;stroke-width:2}
+  .ar{stroke:#003c71;stroke-width:2;fill:none;marker-end:url(#a)}
+ </style>
+ <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker></defs>
+
+ <text class="p" x="14" y="26">1</text>
+ <ellipse class="rib" cx="70" cy="70" rx="34" ry="24"/>
+ <text class="s" x="52" y="74">80S</text>
+ <path class="sig" d="M70 94 L70 120"/>
+ <ellipse class="srp" cx="100" cy="124" rx="26" ry="14"/>
+ <text class="s" x="88" y="128">SRP</text>
+ <text class="s" x="20" y="156">signal exposed</text>
+ <text class="s" x="20" y="172">pause</text>
+
+ <text class="p" x="176" y="26">2</text>
+ <ellipse class="rib" cx="232" cy="70" rx="34" ry="24"/>
+ <path class="sig" d="M232 94 L232 118"/>
+ <ellipse class="srp" cx="262" cy="122" rx="26" ry="14"/>
+ <text class="s" x="250" y="126">SRP</text>
+ <rect class="mem" x="160" y="150" width="150" height="16"/>
+ <rect class="tl" x="286" y="140" width="34" height="36" rx="4"/>
+ <text class="s" x="200" y="192">SRP receptor</text>
+ <text class="s" x="160" y="208">GTP</text>
+
+ <text class="p" x="356" y="26">3</text>
+ <ellipse class="rib" cx="400" cy="92" rx="34" ry="24"/>
+ <rect class="mem" x="344" y="150" width="130" height="16"/>
+ <rect class="tl" x="386" y="140" width="30" height="36" rx="4"/>
+ <path class="ch" d="M400 116 L400 140 L400 210"/>
+ <text class="s" x="420" y="134">translocon</text>
+ <ellipse class="srp" cx="432" cy="206" rx="22" ry="13"/>
+ <text class="s" x="422" y="210">BiP</text>
+ <text class="s" x="344" y="240">ER lumen</text>
+
+ <text class="p" x="516" y="26">4</text>
+ <rect class="mem" x="500" y="150" width="130" height="16"/>
+ <rect class="tl" x="540" y="140" width="30" height="36" rx="4"/>
+ <path class="ch" d="M554 176 L554 230"/>
+ <path class="sig" d="M588 196 L612 196"/>
+ <rect class="tl" x="584" y="160" width="46" height="22" rx="4"/>
+ <text class="s" x="586" y="176">SPase</text>
+ <text class="s" x="500" y="258">mature chain</text>
+ <path class="ar" d="M120 290 L560 290"/>
+ <text class="s" x="240" y="282">translation drives transfer</text>
+</svg>
