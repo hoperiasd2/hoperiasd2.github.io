@@ -1,0 +1,61 @@
+<!-- RTK 활성화와 분기. 라벨만 둔다.
+   왼쪽 비활성 단량체, 가운데 이량체와 자가인산화, 오른쪽 세 갈래 분기.
+   캡션에 쓸 내용: 인산화된 tyrosine 이 결합 자리가 되어 분기가 생긴다는 점.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 330" width="640" height="330" role="img"
+ aria-label="수용체 tyrosine kinase 그림. 왼쪽은 리간드가 없는 단량체, 가운데는 리간드가 두 수용체를 묶어 kinase 영역이 서로를 인산화한 이량체, 오른쪽은 인산화된 tyrosine에 GRB2와 SOS가 붙어 Ras 경로로, PI3K가 붙어 AKT 경로로, PLC gamma가 붙어 칼슘 경로로 갈라지는 분기를 보인다.">
+ <style>
+  .t{font:12px sans-serif;fill:#16191d}
+  .s{font:11px sans-serif;fill:#50585f}
+  .p{font:700 15px sans-serif;fill:#003c71}
+  .mem{fill:#e8eef5;stroke:#1a4f8a;stroke-width:2}
+  .rec{fill:#dce6f2;stroke:#1a4f8a;stroke-width:2}
+  .k{fill:#e3f0e4;stroke:#2e7d32;stroke-width:2}
+  .ph{fill:#fff5d6;stroke:#f2b705;stroke-width:1.8}
+  .ar{stroke:#003c71;stroke-width:2;fill:none;marker-end:url(#a)}
+ </style>
+ <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker></defs>
+
+ <rect class="mem" x="20" y="90" width="600" height="24"/>
+ <rect class="rec" x="54" y="82" width="20" height="40" rx="3"/>
+ <rect class="k" x="48" y="126" width="32" height="26" rx="5"/>
+ <text class="s" x="30" y="172">inactive</text>
+ <path class="ar" d="M104 110 L140 110"/>
+
+ <circle class="ph" cx="206" cy="58" r="11"/>
+ <text class="s" x="226" y="56">ligand</text>
+ <rect class="rec" x="186" y="82" width="20" height="40" rx="3"/>
+ <rect class="rec" x="212" y="82" width="20" height="40" rx="3"/>
+ <rect class="k" x="178" y="126" width="34" height="26" rx="5"/>
+ <rect class="k" x="214" y="126" width="34" height="26" rx="5"/>
+ <circle class="ph" cx="176" cy="164" r="7"/>
+ <circle class="ph" cx="196" cy="176" r="7"/>
+ <circle class="ph" cx="232" cy="176" r="7"/>
+ <circle class="ph" cx="252" cy="164" r="7"/>
+ <text class="s" x="162" y="200">autophosphorylation</text>
+ <text class="s" x="186" y="216">P-Tyr</text>
+ <path class="ar" d="M290 140 L326 140"/>
+
+ <rect class="rec" x="380" y="48" width="70" height="26" rx="6"/>
+ <text class="s" x="388" y="66">GRB2</text>
+ <rect class="rec" x="462" y="48" width="56" height="26" rx="6"/>
+ <text class="s" x="472" y="66">SOS</text>
+ <rect class="k" x="534" y="48" width="56" height="26" rx="6"/>
+ <text class="s" x="546" y="66">Ras</text>
+ <path class="ar" d="M452 61 L458 61"/>
+ <path class="ar" d="M522 61 L530 61"/>
+ <text class="s" x="534" y="40">RAF , MEK , ERK</text>
+
+ <rect class="rec" x="380" y="164" width="60" height="26" rx="6"/>
+ <text class="s" x="390" y="182">PI3K</text>
+ <rect class="k" x="462" y="164" width="60" height="26" rx="6"/>
+ <text class="s" x="474" y="182">AKT</text>
+ <path class="ar" d="M444 177 L458 177"/>
+ <text class="s" x="534" y="182">survival , growth</text>
+ <text class="s" x="380" y="206">PIP3 , PTEN reverses</text>
+
+ <rect class="rec" x="380" y="252" width="70" height="26" rx="6"/>
+ <text class="s" x="388" y="270">PLC gamma</text>
+ <text class="s" x="466" y="270">IP3 , DAG</text>
+ <text class="s" x="380" y="300">one receptor , three branches</text>
+</svg>

@@ -1,4 +1,29 @@
 {
   "lesson_id": "M01-W11-L02",
-  "figures": []
+  "figures": [
+    {
+      "figure_id": "fig-gpcr",
+      "lesson_id": "M01-W11-L02",
+      "html_anchor": "#fig-gpcr",
+      "caption": "G protein 연결 수용체의 작동 주기와 하류 분기. 리간드 결합 뒤 수용체가 GDP를 GTP로 교환시키고 알파와 베타감마가 분리되어 각각 표적을 조절하며, GTP 가수분해로 주기가 닫히는 과정, 그리고 Gs·Gi·Gq가 각각 adenylyl cyclase와 phospholipase C로 갈라지는 배치를 함께 보인다.",
+      "asset_path": "assets/fig-gpcr.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-rtk",
+      "lesson_id": "M01-W11-L02",
+      "html_anchor": "#fig-rtk",
+      "caption": "수용체 tyrosine kinase의 활성화와 신호 분기. 리간드에 의한 이량체화와 자가인산화, 인산화된 tyrosine이 SH2 도메인 단백질의 결합 자리가 되는 구조, adaptor GRB2와 SOS를 거친 Ras 경로, PI3K를 거친 AKT 경로, 그리고 PLCγ 분기를 함께 보인다.",
+      "asset_path": "assets/fig-rtk.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    }
+  ]
 }

@@ -1,0 +1,65 @@
+<!-- GPCR 주기와 하류 분기. 라벨만 둔다.
+   A 주기. 리간드 결합, GDP 에서 GTP 교환, 알파와 베타감마 분리, 가수분해.
+   B 분기. Gs 와 Gi 는 adenylyl cyclase 로, Gq 는 phospholipase C 로.
+   캡션에 쓸 내용: GTP 가수분해가 신호의 지속 시간을 정하는 타이머라는 점.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 340" width="640" height="340" role="img"
+ aria-label="G protein 연결 수용체 그림. A 패널은 리간드가 결합한 수용체가 G protein의 GDP를 GTP로 교환시키고 알파와 베타감마가 분리되어 표적을 조절한 뒤 GTP 가수분해로 주기가 닫히는 과정을, B 패널은 Gs가 adenylyl cyclase를 켜고 Gi가 끄며 Gq가 phospholipase C를 켜서 각각 cAMP와 PKA, IP3와 칼슘, DAG와 PKC로 이어지는 분기를 보인다.">
+ <style>
+  .t{font:12px sans-serif;fill:#16191d}
+  .s{font:11px sans-serif;fill:#50585f}
+  .p{font:700 15px sans-serif;fill:#003c71}
+  .mem{fill:#e8eef5;stroke:#1a4f8a;stroke-width:2}
+  .rec{fill:#dce6f2;stroke:#1a4f8a;stroke-width:2}
+  .g{fill:#e3f0e4;stroke:#2e7d32;stroke-width:2}
+  .hot{fill:#fff5d6;stroke:#f2b705;stroke-width:2}
+  .ar{stroke:#003c71;stroke-width:2;fill:none;marker-end:url(#a)}
+  .arr{stroke:#b3261e;stroke-width:2;fill:none;marker-end:url(#r)}
+ </style>
+ <defs>
+  <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker>
+  <marker id="r" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#b3261e"/></marker>
+ </defs>
+
+ <text class="p" x="14" y="26">A</text>
+ <rect class="mem" x="30" y="70" width="300" height="24"/>
+ <rect class="rec" x="90" y="62" width="30" height="40" rx="4"/>
+ <circle class="hot" cx="105" cy="46" r="10"/>
+ <text class="s" x="124" y="44">ligand</text>
+ <ellipse class="g" cx="150" cy="116" rx="30" ry="15"/>
+ <text class="s" x="136" y="120">GDP</text>
+ <path class="ar" d="M186 116 L222 116"/>
+ <ellipse class="g" cx="256" cy="116" rx="30" ry="15"/>
+ <text class="s" x="242" y="120">GTP</text>
+ <ellipse class="g" cx="200" cy="156" rx="34" ry="14"/>
+ <text class="s" x="182" y="160">beta gamma</text>
+ <path class="arr" d="M256 136 L200 182"/>
+ <text class="s" x="210" y="196">hydrolysis</text>
+ <text class="s" x="30" y="216">timer : GTP hydrolysis</text>
+
+ <text class="p" x="380" y="26">B</text>
+ <rect class="g" x="380" y="48" width="44" height="26" rx="6"/>
+ <text class="s" x="392" y="66">Gs</text>
+ <rect class="g" x="380" y="88" width="44" height="26" rx="6"/>
+ <text class="s" x="392" y="106">Gi</text>
+ <rect class="rec" x="470" y="64" width="90" height="30" rx="6"/>
+ <text class="s" x="478" y="84">cyclase</text>
+ <path class="ar" d="M430 60 L466 72"/>
+ <path class="arr" d="M430 102 L466 88"/>
+ <path class="ar" d="M566 80 L596 80"/>
+ <text class="s" x="470" y="116">cAMP</text>
+ <text class="s" x="520" y="116">PKA</text>
+
+ <rect class="g" x="380" y="168" width="44" height="26" rx="6"/>
+ <text class="s" x="392" y="186">Gq</text>
+ <rect class="rec" x="470" y="162" width="90" height="30" rx="6"/>
+ <text class="s" x="486" y="182">PLC</text>
+ <path class="ar" d="M430 180 L466 178"/>
+ <path class="ar" d="M506 198 L486 224"/>
+ <path class="ar" d="M530 198 L550 224"/>
+ <text class="s" x="440" y="240">IP3</text>
+ <text class="s" x="440" y="258">Ca2+ release</text>
+ <text class="s" x="540" y="240">DAG</text>
+ <text class="s" x="540" y="258">PKC</text>
+ <text class="s" x="380" y="300">PIP2 cleaved by PLC</text>
+</svg>
