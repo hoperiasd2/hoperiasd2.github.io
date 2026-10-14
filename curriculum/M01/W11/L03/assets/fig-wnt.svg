@@ -1,0 +1,70 @@
+<!-- Wnt 경로의 두 상태. 라벨만 둔다.
+   왼쪽 off 상태. 파괴 복합체가 베타카테닌을 인산화해 분해로 보낸다.
+   오른쪽 on 상태. 수용체가 복합체를 해체하고 베타카테닌이 쌓여 핵으로 간다.
+   캡션에 쓸 내용: 꺼진 상태를 유지하는 데 에너지가 쓰이고,
+   신호는 분해를 멈추는 방식으로 작동한다는 점.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 340" width="640" height="340" role="img"
+ aria-label="Wnt 경로 그림. 왼쪽은 신호가 없는 상태로 APC와 Axin, CK1, GSK3 베타로 된 파괴 복합체가 베타카테닌을 인산화해 proteasome 분해로 보내고 핵의 TCF가 억제자와 함께 유전자를 꺼 둔 모습, 오른쪽은 Wnt가 Frizzled와 LRP에 결합해 복합체를 해체하면 베타카테닌이 쌓여 핵으로 들어가 TCF와 함께 전사를 켜는 모습을 나란히 보인다.">
+ <style>
+  .t{font:12px sans-serif;fill:#16191d}
+  .s{font:11px sans-serif;fill:#50585f}
+  .p{font:700 15px sans-serif;fill:#003c71}
+  .mem{fill:#e8eef5;stroke:#1a4f8a;stroke-width:2}
+  .rec{fill:#dce6f2;stroke:#1a4f8a;stroke-width:2}
+  .cx{fill:#f2efe6;stroke:#8a8f96;stroke-width:2}
+  .bc{fill:#e3f0e4;stroke:#2e7d32;stroke-width:2}
+  .hot{fill:#fff5d6;stroke:#f2b705;stroke-width:2}
+  .nuc{fill:none;stroke:#1a4f8a;stroke-width:2}
+  .ar{stroke:#003c71;stroke-width:2;fill:none;marker-end:url(#a)}
+  .arr{stroke:#b3261e;stroke-width:2;fill:none;marker-end:url(#r)}
+ </style>
+ <defs>
+  <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker>
+  <marker id="r" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#b3261e"/></marker>
+ </defs>
+
+ <text class="p" x="14" y="26">A</text>
+ <text class="s" x="40" y="26">Wnt off</text>
+ <rect class="mem" x="20" y="48" width="280" height="22"/>
+ <rect class="rec" x="80" y="42" width="22" height="34" rx="3"/>
+ <rect class="cx" x="60" y="110" width="180" height="46" rx="8"/>
+ <text class="s" x="70" y="130">APC , Axin</text>
+ <text class="s" x="70" y="148">CK1 , GSK3b</text>
+ <ellipse class="bc" cx="200" cy="133" rx="26" ry="14"/>
+ <text class="s" x="184" y="137">b-cat</text>
+ <circle class="hot" cx="226" cy="116" r="7"/>
+ <text class="s" x="236" y="112">P</text>
+ <path class="arr" d="M200 160 L200 196"/>
+ <rect class="cx" x="150" y="202" width="100" height="26" rx="6"/>
+ <text class="s" x="158" y="220">proteasome</text>
+ <ellipse class="nuc" cx="110" cy="262" rx="76" ry="44"/>
+ <rect class="cx" x="62" y="252" width="44" height="22" rx="4"/>
+ <text class="s" x="68" y="268">TCF</text>
+ <text class="s" x="118" y="268">off</text>
+ <text class="s" x="46" y="316">maintenance costs ATP</text>
+
+ <text class="p" x="356" y="26">B</text>
+ <text class="s" x="382" y="26">Wnt on</text>
+ <rect class="mem" x="340" y="48" width="280" height="22"/>
+ <rect class="rec" x="400" y="42" width="22" height="34" rx="3"/>
+ <rect class="rec" x="426" y="42" width="16" height="34" rx="3"/>
+ <circle class="hot" cx="412" cy="24" r="10"/>
+ <text class="s" x="448" y="30">Wnt</text>
+ <text class="s" x="382" y="92">Frizzled , LRP</text>
+ <rect class="cx" x="470" y="100" width="130" height="30" rx="8"/>
+ <text class="s" x="478" y="120">Axin , GSK3b</text>
+ <path class="ar" d="M440 86 L466 104"/>
+ <text class="s" x="470" y="148">complex dispersed</text>
+ <ellipse class="bc" cx="382" cy="150" rx="26" ry="14"/>
+ <ellipse class="bc" cx="382" cy="182" rx="26" ry="14"/>
+ <text class="s" x="366" y="154">b-cat</text>
+ <text class="s" x="366" y="186">b-cat</text>
+ <path class="ar" d="M382 200 L382 226"/>
+ <ellipse class="nuc" cx="440" cy="268" rx="90" ry="46"/>
+ <ellipse class="bc" cx="404" cy="262" rx="26" ry="14"/>
+ <text class="s" x="388" y="266">b-cat</text>
+ <rect class="cx" x="440" y="252" width="44" height="22" rx="4"/>
+ <text class="s" x="446" y="268">TCF</text>
+ <text class="s" x="402" y="300">MYC , cyclin D1</text>
+</svg>

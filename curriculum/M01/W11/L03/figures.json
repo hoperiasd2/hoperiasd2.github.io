@@ -1,4 +1,17 @@
 {
   "lesson_id": "M01-W11-L03",
-  "figures": []
+  "figures": [
+    {
+      "figure_id": "fig-wnt",
+      "lesson_id": "M01-W11-L03",
+      "html_anchor": "#fig-wnt",
+      "caption": "Wnt 경로의 두 상태. 신호가 없을 때 APC·Axin·GSK3β 파괴 복합체가 β-catenin을 인산화해 분해로 보내는 과정과, Wnt가 Frizzled와 LRP에 결합해 복합체를 해체하면 β-catenin이 쌓여 핵에서 TCF와 함께 전사를 켜는 과정을 나란히 보인다.",
+      "asset_path": "assets/fig-wnt.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    }
+  ]
 }
