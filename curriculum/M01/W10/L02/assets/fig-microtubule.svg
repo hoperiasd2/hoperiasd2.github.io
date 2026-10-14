@@ -1,0 +1,67 @@
+<!-- Microtubule 구조와 동적 불안정성. 라벨만 둔다.
+   A 13개 원섬유로 된 관의 단면과 극성, 감마 tubulin 복합체가 마이너스 말단을 고정.
+   B 플러스 말단의 GTP 모자와 GDP 형 단위의 굽은 구조, 성장과 붕괴.
+   캡션에 쓸 내용: 모자가 사라지면 쌓인 굽힘 장력이 풀려 끝에서부터 붕괴한다는 점.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 300" width="640" height="300" role="img"
+ aria-label="Microtubule 그림. A 패널은 13개 원섬유로 된 관의 단면과 알파 베타 tubulin 이량체의 배열, 감마 tubulin 고리 복합체가 마이너스 말단을 중심체에 고정하는 모습을, B 패널은 플러스 말단의 GTP 모자가 있는 성장 상태와 모자가 사라져 GDP 형 원섬유가 바깥으로 휘며 붕괴하는 상태를 보인다.">
+ <style>
+  .t{font:12px sans-serif;fill:#16191d}
+  .s{font:11px sans-serif;fill:#50585f}
+  .p{font:700 15px sans-serif;fill:#003c71}
+  .a{fill:#dce6f2;stroke:#1a4f8a;stroke-width:1.6}
+  .b{fill:#b9cde4;stroke:#1a4f8a;stroke-width:1.6}
+  .cap{fill:#fff5d6;stroke:#f2b705;stroke-width:1.8}
+  .gd{fill:#f2efe6;stroke:#8a8f96;stroke-width:1.6}
+  .ring{fill:#e3f0e4;stroke:#2e7d32;stroke-width:2}
+  .ar{stroke:#003c71;stroke-width:2;fill:none;marker-end:url(#a)}
+ </style>
+ <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker></defs>
+
+ <text class="p" x="14" y="28">A</text>
+ <rect class="ring" x="40" y="60" width="26" height="76" rx="6"/>
+ <text class="s" x="34" y="152">gamma-TuRC</text>
+ <text class="s" x="40" y="48">minus</text>
+ <g>
+  <rect class="a" x="70" y="66" width="22" height="14"/><rect class="b" x="92" y="66" width="22" height="14"/>
+  <rect class="a" x="114" y="66" width="22" height="14"/><rect class="b" x="136" y="66" width="22" height="14"/>
+  <rect class="a" x="158" y="66" width="22" height="14"/><rect class="b" x="180" y="66" width="22" height="14"/>
+  <rect class="a" x="70" y="86" width="22" height="14"/><rect class="b" x="92" y="86" width="22" height="14"/>
+  <rect class="a" x="114" y="86" width="22" height="14"/><rect class="b" x="136" y="86" width="22" height="14"/>
+  <rect class="a" x="158" y="86" width="22" height="14"/><rect class="b" x="180" y="86" width="22" height="14"/>
+  <rect class="a" x="70" y="106" width="22" height="14"/><rect class="b" x="92" y="106" width="22" height="14"/>
+  <rect class="a" x="114" y="106" width="22" height="14"/><rect class="b" x="136" y="106" width="22" height="14"/>
+  <rect class="a" x="158" y="106" width="22" height="14"/><rect class="b" x="180" y="106" width="22" height="14"/>
+ </g>
+ <rect class="cap" x="202" y="66" width="22" height="54"/>
+ <text class="s" x="210" y="48">plus</text>
+ <text class="s" x="70" y="146">alpha</text>
+ <text class="s" x="112" y="146">beta</text>
+ <text class="s" x="196" y="146">GTP cap</text>
+ <circle cx="300" cy="96" r="34" fill="none" stroke="#1a4f8a" stroke-width="2"/>
+ <text class="s" x="268" y="150">13 protofilaments</text>
+ <text class="s" x="282" y="100">25 nm</text>
+
+ <text class="p" x="380" y="28">B</text>
+ <g>
+  <rect class="a" x="410" y="60" width="20" height="13"/><rect class="b" x="430" y="60" width="20" height="13"/>
+  <rect class="a" x="450" y="60" width="20" height="13"/><rect class="b" x="470" y="60" width="20" height="13"/>
+  <rect class="cap" x="490" y="60" width="20" height="13"/><rect class="cap" x="510" y="60" width="20" height="13"/>
+  <rect class="a" x="410" y="78" width="20" height="13"/><rect class="b" x="430" y="78" width="20" height="13"/>
+  <rect class="a" x="450" y="78" width="20" height="13"/><rect class="b" x="470" y="78" width="20" height="13"/>
+  <rect class="cap" x="490" y="78" width="20" height="13"/><rect class="cap" x="510" y="78" width="20" height="13"/>
+ </g>
+ <path class="ar" d="M546 74 L578 74"/>
+ <text class="s" x="410" y="110">growth</text>
+ <g>
+  <rect class="gd" x="410" y="160" width="20" height="13"/><rect class="gd" x="430" y="160" width="20" height="13"/>
+  <rect class="gd" x="450" y="160" width="20" height="13"/>
+  <rect class="gd" x="410" y="178" width="20" height="13"/><rect class="gd" x="430" y="178" width="20" height="13"/>
+  <rect class="gd" x="450" y="178" width="20" height="13"/>
+ </g>
+ <path d="M472 160 q26 -14 44 -34" stroke="#8a8f96" stroke-width="3" fill="none"/>
+ <path d="M472 190 q26 14 44 34" stroke="#8a8f96" stroke-width="3" fill="none"/>
+ <text class="s" x="410" y="214">catastrophe</text>
+ <text class="s" x="506" y="214">GDP , curved</text>
+ <text class="s" x="410" y="240">no cap</text>
+</svg>

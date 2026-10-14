@@ -1,4 +1,29 @@
 {
   "lesson_id": "M01-W10-L02",
-  "figures": []
+  "figures": [
+    {
+      "figure_id": "fig-actin-dynamics",
+      "lesson_id": "M01-W10-L02",
+      "html_anchor": "#fig-actin-dynamics",
+      "caption": "Actin 필라멘트의 중합 동역학. 두 말단의 임계농도 차이, ATP 형과 ADP 형 단위의 분포, 트레드밀링에서 단위가 플러스 말단으로 들어와 마이너스 말단으로 빠지는 흐름, 그리고 단량체의 뉴클레오타이드 교환 재순환을 함께 보인다.",
+      "asset_path": "assets/fig-actin-dynamics.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-microtubule",
+      "lesson_id": "M01-W10-L02",
+      "html_anchor": "#fig-microtubule",
+      "caption": "Microtubule의 구조와 동적 불안정성. 13개 원섬유로 된 관의 극성, 플러스 말단의 GTP 모자와 GDP 형 단위의 굽은 구조, 성장과 급격한 붕괴를 오가는 거동, 그리고 중심체의 감마 tubulin 복합체가 마이너스 말단을 고정하는 배치를 함께 보인다.",
+      "asset_path": "assets/fig-microtubule.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    }
+  ]
 }

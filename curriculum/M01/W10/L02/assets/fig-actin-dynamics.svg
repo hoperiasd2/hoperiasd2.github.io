@@ -1,0 +1,59 @@
+<!-- Actin 중합 동역학. 라벨만 둔다.
+   A 두 말단의 임계농도 차이와 ATP 형, ADP 형 단위의 분포.
+   B 트레드밀링. 플러스 말단으로 들어와 마이너스 말단으로 빠지는 흐름과
+     단량체의 뉴클레오타이드 교환 재순환.
+   캡션에 쓸 내용: 가수분해가 오래됨을 표시해 해체를 한쪽에 집중시킨다는 점.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 300" width="640" height="300" role="img"
+ aria-label="Actin 필라멘트 동역학 그림. A 패널은 플러스 말단과 마이너스 말단의 임계농도 차이와 ATP 형 단위가 플러스 말단 쪽에, ADP 형 단위가 마이너스 말단 쪽에 분포하는 모습을, B 패널은 단위가 플러스 말단으로 들어와 마이너스 말단에서 빠져나가는 트레드밀링과 떨어진 단량체가 뉴클레오타이드를 교환해 다시 쓰이는 재순환을 보인다.">
+ <style>
+  .t{font:12px sans-serif;fill:#16191d}
+  .s{font:11px sans-serif;fill:#50585f}
+  .p{font:700 15px sans-serif;fill:#003c71}
+  .atp{fill:#dce6f2;stroke:#1a4f8a;stroke-width:1.8}
+  .adp{fill:#f2efe6;stroke:#8a8f96;stroke-width:1.8}
+  .ar{stroke:#003c71;stroke-width:2;fill:none;marker-end:url(#a)}
+  .arr{stroke:#b3261e;stroke-width:2;fill:none;marker-end:url(#r)}
+ </style>
+ <defs>
+  <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker>
+  <marker id="r" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#b3261e"/></marker>
+ </defs>
+
+ <text class="p" x="14" y="28">A</text>
+ <text class="s" x="40" y="28">minus end</text>
+ <text class="s" x="500" y="28">plus end</text>
+ <g>
+  <circle class="adp" cx="60" cy="70" r="11"/><circle class="adp" cx="84" cy="56" r="11"/>
+  <circle class="adp" cx="108" cy="70" r="11"/><circle class="adp" cx="132" cy="56" r="11"/>
+  <circle class="adp" cx="156" cy="70" r="11"/><circle class="adp" cx="180" cy="56" r="11"/>
+  <circle class="adp" cx="204" cy="70" r="11"/><circle class="adp" cx="228" cy="56" r="11"/>
+  <circle class="adp" cx="252" cy="70" r="11"/><circle class="adp" cx="276" cy="56" r="11"/>
+  <circle class="adp" cx="300" cy="70" r="11"/><circle class="adp" cx="324" cy="56" r="11"/>
+  <circle class="atp" cx="348" cy="70" r="11"/><circle class="atp" cx="372" cy="56" r="11"/>
+  <circle class="atp" cx="396" cy="70" r="11"/><circle class="atp" cx="420" cy="56" r="11"/>
+  <circle class="atp" cx="444" cy="70" r="11"/><circle class="atp" cx="468" cy="56" r="11"/>
+  <circle class="atp" cx="492" cy="70" r="11"/><circle class="atp" cx="516" cy="56" r="11"/>
+ </g>
+ <text class="s" x="60" y="104">ADP-actin</text>
+ <text class="s" x="420" y="104">ATP-actin</text>
+ <text class="s" x="60" y="124">Cc high</text>
+ <text class="s" x="460" y="124">Cc low</text>
+
+ <text class="p" x="14" y="170">B</text>
+ <g>
+  <circle class="adp" cx="140" cy="212" r="11"/><circle class="adp" cx="164" cy="198" r="11"/>
+  <circle class="adp" cx="188" cy="212" r="11"/><circle class="adp" cx="212" cy="198" r="11"/>
+  <circle class="adp" cx="236" cy="212" r="11"/><circle class="adp" cx="260" cy="198" r="11"/>
+  <circle class="atp" cx="284" cy="212" r="11"/><circle class="atp" cx="308" cy="198" r="11"/>
+  <circle class="atp" cx="332" cy="212" r="11"/><circle class="atp" cx="356" cy="198" r="11"/>
+  <circle class="atp" cx="380" cy="212" r="11"/><circle class="atp" cx="404" cy="198" r="11"/>
+ </g>
+ <path class="ar" d="M470 204 L420 204"/>
+ <text class="s" x="480" y="200">on</text>
+ <path class="arr" d="M126 206 L76 206"/>
+ <text class="s" x="40" y="200">off</text>
+ <path class="ar" d="M70 228 q190 50 390 -14"/>
+ <text class="s" x="200" y="272">ADP to ATP exchange</text>
+ <text class="s" x="140" y="248">treadmilling</text>
+</svg>
