@@ -1,4 +1,17 @@
 {
   "lesson_id": "M01-W10-L03",
-  "figures": []
+  "figures": [
+    {
+      "figure_id": "fig-transport-types",
+      "lesson_id": "M01-W10-L03",
+      "html_anchor": "#fig-transport-types",
+      "caption": "막수송의 분류와 기구. 단순 확산·촉진 확산·일차 능동 수송·이차 능동 수송의 방향과 에너지원, 통로와 운반체의 작동 방식과 포화 곡선의 차이, 그리고 공수송과 역수송의 배치를 함께 보인다.",
+      "asset_path": "assets/fig-transport-types.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    }
+  ]
 }

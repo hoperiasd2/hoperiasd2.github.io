@@ -1,0 +1,74 @@
+<!-- 막수송의 분류. 라벨만 둔다.
+   A 네 가지 방식. 단순 확산, 촉진 확산, 일차 능동, 이차 능동.
+   B 통로와 운반체의 거동 차이와 포화 곡선.
+   캡션에 쓸 내용: 단백질이 관여한다는 사실과 에너지를 쓴다는 사실이
+   별개이고, 포화의 유무가 통로와 운반체를 가른다는 점.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 330" width="640" height="330" role="img"
+ aria-label="막수송 분류 그림. A 패널은 단순 확산, 통로와 운반체를 통한 촉진 확산, ATP를 쓰는 일차 능동 수송, 그리고 나트륨 기울기를 쓰는 이차 능동 수송의 공수송과 역수송을 막을 가로질러 나란히 보이고, B 패널은 기질 농도에 따라 통로는 선형으로 늘고 운반체는 포화 곡선을 보이는 차이를 보인다.">
+ <style>
+  .t{font:12px sans-serif;fill:#16191d}
+  .s{font:11px sans-serif;fill:#50585f}
+  .p{font:700 15px sans-serif;fill:#003c71}
+  .mem{fill:#e8eef5;stroke:#1a4f8a;stroke-width:2}
+  .ch{fill:#dce6f2;stroke:#1a4f8a;stroke-width:2}
+  .car{fill:#e3f0e4;stroke:#2e7d32;stroke-width:2}
+  .pump{fill:#fff5d6;stroke:#f2b705;stroke-width:2}
+  .ar{stroke:#003c71;stroke-width:2;fill:none;marker-end:url(#a)}
+  .arr{stroke:#b3261e;stroke-width:2;fill:none;marker-end:url(#r)}
+  .ax{stroke:#50585f;stroke-width:1.6;fill:none}
+  .cv{stroke:#1a4f8a;stroke-width:2.4;fill:none}
+  .cv2{stroke:#2e7d32;stroke-width:2.4;fill:none}
+ </style>
+ <defs>
+  <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker>
+  <marker id="r" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#b3261e"/></marker>
+ </defs>
+
+ <text class="p" x="14" y="26">A</text>
+ <rect class="mem" x="30" y="86" width="580" height="30"/>
+ <text class="s" x="30" y="76">out</text>
+ <text class="s" x="30" y="140">in</text>
+
+ <path class="ar" d="M70 60 L70 142"/>
+ <text class="s" x="42" y="166">simple</text>
+ <text class="s" x="42" y="182">O2 , CO2</text>
+
+ <rect class="ch" x="150" y="84" width="26" height="34" rx="4"/>
+ <path class="ar" d="M163 60 L163 142"/>
+ <text class="s" x="134" y="166">channel</text>
+ <text class="s" x="134" y="182">no ATP</text>
+
+ <rect class="car" x="250" y="82" width="34" height="38" rx="8"/>
+ <path class="ar" d="M267 60 L267 142"/>
+ <text class="s" x="236" y="166">carrier</text>
+ <text class="s" x="236" y="182">GLUT</text>
+
+ <rect class="pump" x="360" y="80" width="38" height="42" rx="8"/>
+ <path class="ar" d="M379 142 L379 60"/>
+ <text class="s" x="344" y="166">pump</text>
+ <text class="s" x="344" y="182">ATP</text>
+
+ <rect class="car" x="480" y="80" width="40" height="42" rx="8"/>
+ <path class="ar" d="M492 60 L492 142"/>
+ <path class="ar" d="M510 60 L510 142"/>
+ <text class="s" x="462" y="166">symport</text>
+ <rect class="car" x="556" y="80" width="40" height="42" rx="8"/>
+ <path class="ar" d="M566 60 L566 142"/>
+ <path class="arr" d="M586 142 L586 60"/>
+ <text class="s" x="540" y="166">antiport</text>
+ <text class="s" x="462" y="182">Na gradient</text>
+
+ <text class="p" x="14" y="226">B</text>
+ <path class="ax" d="M70 300 L70 222 M70 300 L300 300"/>
+ <text class="s" x="40" y="222">rate</text>
+ <text class="s" x="240" y="318">[S]</text>
+ <path class="cv" d="M70 300 L290 232"/>
+ <text class="s" x="230" y="246">channel</text>
+ <path class="cv2" d="M70 300 q90 -44 220 -52"/>
+ <text class="s" x="200" y="280">carrier</text>
+ <text class="s" x="110" y="262">saturable</text>
+ <text class="s" x="380" y="240">channel : fast , not saturable</text>
+ <text class="s" x="380" y="262">carrier : slow , Km and Vmax</text>
+ <text class="s" x="380" y="284">threshold from saturation</text>
+</svg>
