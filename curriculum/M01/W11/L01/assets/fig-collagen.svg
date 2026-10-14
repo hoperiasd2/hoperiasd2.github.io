@@ -1,0 +1,56 @@
+<!-- Collagen 구조와 합성 단계. 라벨만 둔다.
+   A Gly-X-Y 반복과 삼중나선.
+   B 소포체 안의 단계와 세포 밖 단계, 각 단계에 대응하는 질환의 위치.
+   캡션에 쓸 내용: 합성 경로의 어느 단계가 망가졌는지가 임상 양상을 정한다는 점.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 340" width="640" height="340" role="img"
+ aria-label="Collagen 그림. A 패널은 Gly-X-Y 반복 서열과 세 가닥이 꼬인 삼중나선을, B 패널은 소포체에서의 hydroxylation과 삼중나선 형성, 분비, 세포 밖에서의 propeptide 절단과 섬유 조립, lysyl oxidase에 의한 교차연결까지의 순서와 각 단계에 대응하는 질환의 자리를 보인다.">
+ <style>
+  .t{font:12px sans-serif;fill:#16191d}
+  .s{font:11px sans-serif;fill:#50585f}
+  .d{font:11px sans-serif;fill:#b3261e}
+  .p{font:700 15px sans-serif;fill:#003c71}
+  .ch{stroke:#1a4f8a;stroke-width:2.6;fill:none}
+  .ch2{stroke:#2e7d32;stroke-width:2.6;fill:none}
+  .ch3{stroke:#c08a00;stroke-width:2.6;fill:none}
+  .box{fill:#dce6f2;stroke:#1a4f8a;stroke-width:2}
+  .mem{fill:#e8eef5;stroke:#1a4f8a;stroke-width:2}
+  .ar{stroke:#003c71;stroke-width:2;fill:none;marker-end:url(#a)}
+ </style>
+ <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker></defs>
+
+ <text class="p" x="14" y="28">A</text>
+ <text class="s" x="40" y="54">Gly - X - Y  repeat</text>
+ <text class="s" x="40" y="74">X : Pro      Y : Hyp</text>
+ <path class="ch" d="M40 110 q22 -16 44 0 q22 16 44 0 q22 -16 44 0 q22 16 44 0 q22 -16 44 0"/>
+ <path class="ch2" d="M40 120 q22 16 44 0 q22 -16 44 0 q22 16 44 0 q22 -16 44 0 q22 16 44 0"/>
+ <path class="ch3" d="M40 130 q22 -16 44 0 q22 16 44 0 q22 -16 44 0 q22 16 44 0 q22 -16 44 0"/>
+ <text class="s" x="40" y="162">triple helix</text>
+ <text class="s" x="170" y="162">Gly at center</text>
+
+ <text class="p" x="360" y="28">B</text>
+ <rect class="mem" x="360" y="44" width="260" height="92" rx="6"/>
+ <text class="s" x="370" y="62">ER</text>
+ <text class="s" x="380" y="84">hydroxylation</text>
+ <text class="d" x="500" y="84">scurvy</text>
+ <text class="s" x="380" y="106">helix formation</text>
+ <text class="d" x="500" y="106">OI , Gly sub</text>
+ <text class="s" x="380" y="128">glycosylation</text>
+ <path class="ar" d="M490 140 L490 162"/>
+ <text class="s" x="360" y="182">secretion</text>
+ <text class="d" x="500" y="182">SEC23A</text>
+ <path class="ar" d="M490 190 L490 212"/>
+ <text class="s" x="360" y="232">propeptide cleavage</text>
+ <text class="d" x="500" y="252">EDS subtypes</text>
+ <path class="ar" d="M490 240 L490 262"/>
+ <text class="s" x="360" y="282">fibril assembly</text>
+ <path class="ar" d="M490 290 L490 312"/>
+ <text class="s" x="360" y="330">lysyl oxidase cross-link</text>
+ <text class="d" x="540" y="330">Menkes</text>
+ <path class="ch" d="M40 220 L300 220"/>
+ <path class="ch" d="M40 234 L300 234"/>
+ <path class="ch" d="M40 248 L300 248"/>
+ <path class="ch3" d="M80 220 L80 248 M160 220 L160 248 M240 220 L240 248"/>
+ <text class="s" x="40" y="272">fibril , staggered</text>
+ <text class="s" x="180" y="272">cross-links</text>
+</svg>

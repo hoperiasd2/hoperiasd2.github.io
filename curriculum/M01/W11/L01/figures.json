@@ -1,4 +1,17 @@
 {
   "lesson_id": "M01-W11-L01",
-  "figures": []
+  "figures": [
+    {
+      "figure_id": "fig-collagen",
+      "lesson_id": "M01-W11-L01",
+      "html_anchor": "#fig-collagen",
+      "caption": "Collagen의 구조와 합성 단계. Gly-X-Y 반복과 삼중나선의 배치, 소포체에서의 hydroxylation과 나선 형성, 세포 밖에서의 propeptide 절단과 섬유 조립, lysyl oxidase에 의한 교차연결, 그리고 각 단계에 대응하는 질환의 위치를 함께 보인다.",
+      "asset_path": "assets/fig-collagen.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    }
+  ]
 }
