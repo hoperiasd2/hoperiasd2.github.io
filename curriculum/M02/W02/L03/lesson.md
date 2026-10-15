@@ -1,46 +1,139 @@
 ---
-title: 효소 억제·조절·진단 활용 [5장]
+title: 효소 억제·조절·진단 활용
 status: 초안
 version: v0.1
 slides: none
 ---
 
-<!-- 이 수업의 본문은 현재 같은 폴더의 index.html 에 있다. 외부에서
-     집필된 HTML을 배치한 상태이며, 아직 이 lesson.md 로 옮기지 않았다.
-     옮긴 뒤에는 build_lesson.py 가 index.html 과 슬라이드를 만든다.
-     그때까지 build_site.py 가 index.html 을 덮어쓰지 않도록
-     본문이 있는 파일은 --force 없이 건드리지 않게 되어 있다. -->
+@obj
+- Reversible inhibition과 irreversible inhibition을 구별한다.
+- Competitive·mixed·pure noncompetitive inhibition의 속도 변화를 설명한다.
+- Phosphorylation과 효소 양의 변화를 구별한다.
+- 혈액의 enzyme activity가 무엇을 측정하는지 설명한다.
+- 검사값과 조직 손상·장기 기능을 혼동하지 않는다.
 
-# M02-W02-L03 효소 억제·조절·진단 활용 [5장]
+@prereq
+- M02-W02-L02의 V_{max}와 K_{m}를 사용한다.
+- V_{max}는 기질이 충분할 때의 속도 한계이고 K_{m}는 반최대 속도의 기질 농도다.
+- 효소의 양, 한 분자의 기능, 기질 공급은 서로 다른 조절 대상이다.
 
-- 구성요소: M02 대사생화학
-- 주차·회차: 2주 3회
-- 상태: 초안
-- 버전: v0.1
+@sec 1. 억제제를 분류할 때에는 결합과 기능 회복을 나누어 본다
+Inhibitor는 효소 반응 속도를 낮추는 물질이다. Reversible inhibitor는 조건에 따라 효소에서 떨어질 수 있고, irreversible inhibition은 효소의 지속적인 불활성화를 만든다. Covalent modification은 후자의 대표 기전이지만 모든 분류를 결합 이름 하나로 판정하지 않는다. 억제제를 제거한 뒤 기능이 회복되는지, 노출 시간에 따라 불활성화가 늘어나는지 확인한다. [T5, PDF 136–143]
 
-## 이 수업이 답하는 질문
+**억제제에 관한 서로 다른 질문**
 
-1. 작성 예정
-2. 작성 예정
-3. 작성 예정
-4. 작성 예정
-5. 작성 예정
-6. 작성 예정
+| 질문 | 확인할 결과 |
+|---|---|
+| 제거하면 회복되는가? | Dilution·제거 뒤의 activity |
+| 기질을 늘리면 극복되는가? | 기질 농도별 속도 |
+| 얼마나 빨리 불활성화되는가? | 노출 시간별 activity |
 
-질문 목록과 각 질문에 대한 한 문장 답을 확정하기 전에 본문을 쓰지 않는다.
+>> “다른 자리에 결합한다”는 구조 정보와 “K_{m}는 그대로다”라는 kinetic 결과는 같은 말이 아니다.
 
-## 학습목표
+@sec 2. Competitive inhibition은 기질이 충분하면 극복할 수 있다
+Competitive inhibition의 단순 model에서는 기질과 억제제가 같은 효소에 동시에 결합할 수 없다. 기질을 늘리면 기질이 효소와 반응할 기회가 늘어 원래 V_{max}에 접근할 수 있다. 그러나 반최대 속도에 도달하려면 더 많은 기질이 필요하므로 apparent K_{m}가 증가한다. [T5, PDF 137–139]
 
-작성 예정.
+**Competitive inhibitor가 있을 때의 비교**
 
-## 절 구성
+| 값 | 변화 | 뜻 |
+|---|---|---|
+| V_{max} | 유지 | 충분한 기질에서 원래 속도 한계에 접근 |
+| Apparent K_{m} | 증가 | 같은 속도를 내려면 더 많은 기질 필요 |
 
-작성 예정.
+Statin이 HMG-CoA reductase를 억제하는 것은 enzyme target을 이용한 약물 작용의 예다. 시험관에서 기질을 매우 많이 넣으면 억제를 극복할 수 있다는 kinetic 결과가 환자에서 약효가 없다는 뜻은 아니다. 실제 기질 농도와 약물 농도, 조직 조건이 다르다.
 
-## 슬라이드 개요
+@sec 3. Pure noncompetitive는 mixed inhibition의 특별한 경우다
+Mixed inhibition에서는 억제제가 free enzyme과 ES complex에 결합할 수 있고 그 결합 정도가 다를 수 있다. V_{max}는 감소하며 apparent K_{m}는 조건에 따라 증가하거나 감소한다. 두 형태에 대한 영향이 같은 특별한 경우를 여기서는 pure noncompetitive inhibition이라고 한다. 이때 K_{m}는 유지되고 V_{max}가 낮아진다. [R1]
 
-작성 예정.
+**단순 kinetic model에서의 변화**
 
-## 검토 결과
+| 유형 | V_{max} | Apparent K_{m} |
+|---|---|---|
+| Competitive | 유지 | 증가 |
+| Pure noncompetitive | 감소 | 유지 |
+| Uncompetitive: ES에 결합 | 감소 | 감소 |
+| Mixed | 감소 | 증가 또는 감소 |
 
-작성 예정.
+>> 모든 allosteric inhibitor를 pure noncompetitive라고 부르지 않는다. Allosteric은 한 부위와 다른 부위 기능의 연결, inhibition type은 속도 자료의 분류다. IUBMB는 noncompetitive라는 말이 여러 뜻으로 쓰이는 점을 지적하므로 model을 명시한다.
+
+@sec 4. 생체 조절은 기존 효소의 기능과 효소의 양을 모두 바꾼다
+기질 공급이 달라지면 효소가 정상이어도 속도가 달라진다. Allosteric effector는 효소의 기능을 빠르게 바꾸고, kinase와 phosphatase는 phosphorylation 상태를 바꾼다. 더 긴 시간에는 합성·분해의 변화로 효소 양도 달라질 수 있다. [T5, PDF 143–146]
+
+**같은 속도 변화에 도달하는 다른 경로**
+
+| 조절 | 직접 바꾸는 것 | 예 |
+|---|---|---|
+| 기질 공급 | 효소가 받는 기질의 양 | 농도 증가에 따른 속도 증가 |
+| Allosteric regulation | 기존 효소의 기능 상태 | 경로 최종 산물의 feedback inhibition |
+| Phosphorylation | Protein의 covalent modification | Glycogen phosphorylase와 glycogen synthase에 반대 효과 |
+| 합성·분해 | 효소 population | 장기적인 V_{max} 변화 |
+
+같은 phosphorylation 신호가 glycogen 분해 효소의 활성을 높이고 합성 효소의 활성을 낮출 수 있다. 따라서 phosphate가 붙으면 효소가 모두 켜진다는 규칙은 성립하지 않는다.
+
+>> 표적 효소와 반응 방향을 함께 적는다.
+
+@sec 5. 경로의 조절은 한 반응만 아니라 물질 흐름을 조정한다
+세포는 필요한 생성물을 만들고 남는 물질을 처리해야 한다. 최종 산물이 쌓였을 때 앞 단계 효소를 억제하는 feedback inhibition은 공급을 줄이는 방법이다. Glycolysis의 phosphofructokinase-1처럼 조절을 받는 효소를 배우면 어느 신호가 어느 방향의 흐름을 바꾸는지 연결한다. [T5, PDF 143–145]
+
+> **학습용 경로 비교** A→B→C→D 경로에서 D가 많이 쌓여 A→B 효소가 억제되었다고 가정한다. D 생성의 감소와 A·B의 변화는 나머지 공급·소비 조건에 달려 있다. “효소가 억제되었으니 모든 앞 물질이 반드시 같은 양으로 쌓인다”는 결론은 피한다.
+
+Rate-limiting step은 해당 조건에서 흐름을 제한하는 조절 지점을 이해하는 표현이다. 경로 전체 속도를 효소 하나의 최대 속도만으로 항상 설명하지는 않는다. Substrate transport, 여러 반응의 조절과 생성물 소비도 중요하다.
+
+~ 탐구 질문: 효소를 늘렸는데 경로의 생성물은 늘지 않았다면? 다른 제한 단계나 공급·소비의 변화를 확인한다.
+
+@sec 6. 혈액의 enzyme activity는 정해진 검사 조건에서 측정한다
+일부 효소는 혈액에서 기능하도록 분비되지만, 많은 세포 내 효소는 세포 turnover나 손상으로 혈액에 나타난다. 검사실에서는 기질·buffer·온도 등을 정해 그 효소의 반응 능력을 측정한다. 혈액에서 수치가 올랐다는 사실은 원래 조직 안의 해당 대사가 빨라졌다는 뜻과 다르다. [T5, PDF 146–151]
+
+**대표적인 enzyme과 해석하는 조직**
+
+| 효소 | 연결하는 조직·질문 | 해석의 한계 |
+|---|---|---|
+| Alanine aminotransferase(ALT) | 간세포 손상 가능성 | 간의 모든 기능을 직접 측정하지 않음 |
+| Aspartate aminotransferase(AST) | 간·근육 등의 손상 | 간에만 존재하지 않음 |
+| Alkaline phosphatase(ALP) | 간담도·뼈 관련 기원 | 조직 기원을 구별할 정보가 필요 |
+| Creatine kinase(CK) | 근육 관련 손상 | 총활성만으로 원인과 위치 확정 불가 |
+| Lactate dehydrogenase(LDH) | 여러 조직·적혈구의 손상 | 조직 특이성이 낮음 |
+
+검사값은 세포에서의 유출, 혈액에서의 제거, 채혈 과정과 검사 조건의 영향을 받는다. 특히 채혈 뒤 hemolysis가 생기면 적혈구 내용물이 검체로 나와 일부 수치가 영향을 받을 수 있다. 조직의 enzyme amount, 환자 혈액의 enzyme activity, 검체의 상태를 나누어 생각한다.
+
+@sec 7. Isoenzyme은 반응이 같아도 조직 분포를 다르게 읽게 한다
+Isoenzyme은 같은 반응을 촉매하지만 protein 구성과 성질이 다른 형태다. LDH의 여러 H/M subunit 조합, CK의 B/M 조합이 예다. 조직마다 조합의 비율이 달라 혈액의 pattern을 해석하는 데 사용할 수 있다. 그러나 특정 형태가 한 조직에 많다는 사실을 그 조직에만 있다고 바꾸어 말하지 않는다. [T5, PDF 148–151]
+
+**같은 반응, 다른 분자 구성**
+
+| 효소 | 구성 | 해석 |
+|---|---|---|
+| LDH | H·M subunit 네 개의 조합 | 총활성에 더해 isoenzyme pattern 정보 |
+| CK | BB, MB, MM의 두 subunit 조합 | 조직별 분포 차이와 clinical context |
+| Cardiac troponin | 수축 조절 protein | 효소가 아닌 myocardial injury marker |
+
+Troponin은 enzyme이라는 이유로 쓰는 표지가 아니다. 수치 상승은 myocardial injury의 정보이며 myocardial infarction의 판단에는 ischemia와 임상적 근거가 필요하다. 하나의 상승 수치만으로 원인을 확정하지 않는다. [C1]
+
+@sec 8. 속도 저하와 검사 수치 상승을 서로 다른 질문으로 읽는다
+> **학습용 두 사례** 사례 A는 정제한 효소에 약물을 넣자 속도가 낮아졌다. 이 경우 기질 농도별 자료로 inhibition을 비교한다. 사례 B는 혈액 ALT가 올랐다. 이 경우 enzyme inhibitor보다 조직 유출과 간세포 손상 가능성, 다른 검사를 함께 해석한다. 두 사례는 같은 enzyme activity라는 말에 연결되어도 질문이 다르다.
+
+~ 탐구 질문: 약물이 enzyme을 억제하며 혈액 enzyme 수치도 올랐다면? Target inhibition과 조직 손상은 별개의 경로일 수 있다. 약물의 직접 assay interference, 세포 독성, 조직 유출을 나누어 확인한다. 어느 지점의 양과 기능을 측정했는지 먼저 쓰면 수치의 방향만으로 mechanism을 선택하는 오류를 줄일 수 있다.
+
+@quiz
+Q: **판단.** Competitive inhibitor를 넣으면 V_{max}도 반드시 낮아지는가?
+A: 단순 model에서는 유지된다. 충분한 기질로 원래 최대 속도에 접근하지만 apparent K_{m}는 증가한다.
+
+Q: **판단.** 기질과 다른 부위에 결합하면 모두 K_{m}가 같은가?
+A: 아니다. Mixed inhibition과 pure noncompetitive 조건을 구별한다. 위치와 kinetic type은 같은 정보가 아니다.
+
+Q: **판단.** Phosphorylation이 늘면 glycogen 합성과 분해가 모두 활성화되는가?
+A: 그런 일반 규칙은 없다. 대표적인 조절에서 phosphorylase와 synthase는 반대 반응을 보인다.
+
+Q: **판단.** 혈액 ALT 상승은 간 안의 amino acid metabolism이 빨라졌다는 직접 증거인가?
+A: 아니다. 혈액으로의 유출과 제거, 검사 조건을 반영한다. 조직 내 대사 흐름과 분리한다.
+
+Q: **설명.** 총 LDH 상승만으로 손상 조직을 확정하기 어려운 이유는?
+A: 여러 조직에 분포하고 검체 hemolysis의 영향도 받을 수 있다. Pattern과 다른 임상 정보가 필요하다.
+
+Q: **통합.** 효소 양을 늘렸는데 경로 생성물이 늘지 않았다면 볼 조건은?
+A: 기질 공급, 다른 제한 단계, 생성물 소비, 기능 효소 fraction을 나누어 살핀다.
+
+@ref
+- T5. Abali EE, Cline SD, Franklin DS, Viselli SM. *Lippincott Illustrated Reviews: Biochemistry*. 8판. Wolters Kluwer; 2022. Chapter 5. 제공 PDF 136–151페이지. Inhibition: VII; regulation: VIII; enzymes in blood: IX. 1-based PDF 파일 페이지이며 인쇄 쪽수가 아니다.
+- R1. IUBMB. Symbolism and Terminology in Enzyme Kinetics: sections 4–6 (https://iubmb.qmul.ac.uk/kinetics/ek4t6.html). Reversible inhibition의 model과 용어. 확인일 2026-10-15.
+- C1. European Society of Cardiology. Fifth Universal Definition of Myocardial Infarction (2026) (https://www.escardio.org/guidelines/clinical-practice-guidelines/all-esc-practice-guidelines/universal-definition-myocardial-infarction/). Myocardial injury와 infarction 구별. 확인일 2026-10-15.

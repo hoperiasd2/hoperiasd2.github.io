@@ -112,6 +112,13 @@ def parse_blocks(lines):
                 flush()
                 mode = "ol"
             buf.append(NUM.sub("", s, count=1).strip())
+        elif s.startswith("@eq "):
+            # 수식 한 줄. 본문 문단과 구별해 상자로 낸다.
+            # 줄을 나누려면 같은 블록 안에서 @eq 를 이어 쓴다.
+            if mode != "eq":
+                flush()
+                mode = "eq"
+            buf.append(s[4:].strip())
         elif s.startswith("@fig "):
             flush()
             parts = s[5:].split(None, 1)
@@ -290,6 +297,8 @@ def render_blocks(blocks):
         elif kind == "ol":
             items = "".join("<li>" + _inline(i) + "</li>" for i in buf)
             out.append(f"<ol class=\"steps\">{items}</ol>")
+        elif kind == "eq":
+            out.append('<p class="equation">' + "<br>".join(_inline(i) for i in buf) + "</p>")
         elif kind == "ul":
             depth, parts = 0, ["<ul>"]
             for lvl, item in buf:
@@ -382,7 +391,8 @@ def lesson_html(row, meta, named, lists, secs, quiz, prev_r, next_r, lesson_dir=
             f'<li><a href="#s{i+1}">{_inline(s.title)}</a></li>'
             for i, s in enumerate(secs))
         label = "실습 구성" if practicum else "강의 구성"
-        body.append(f'  <h2>{label}</h2>\n  <ol class="qlist">{toc}</ol>')
+        body.append(f'  <nav class="contents" aria-label="{label}">'
+                    f'<strong>{label}</strong><ol class="qlist">{toc}</ol></nav>')
 
     if practicum and lists.get("materials"):
         items = "".join(f"<li>{_inline(x)}</li>" for x in lists["materials"])
@@ -838,6 +848,9 @@ def _compose(row, meta, lists, secs, quiz, lesson_dir, pack,
             elif kind == "ol":
                 # 번호 목록도 슬라이드에서는 글머리로 낸다. 번호를 앞에 붙여 순서를 남긴다.
                 text.extend((0, f"{i}. {s}") for i, s in enumerate(buf, 1))
+            elif kind == "eq":
+                # 수식은 슬라이드에서도 한 줄씩 글머리 없이 낸다.
+                text.extend((0, s) for s in buf)
             elif kind == "p":
                 text.append((0, " ".join(buf)))
             elif kind == "table":

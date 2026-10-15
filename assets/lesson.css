@@ -116,7 +116,8 @@
 @media print {
   .quiz details { border: none; }
   .quiz details[open] summary { display: none; }
-  .lesson p.q, .lesson p.a, .box { break-inside: avoid; }
+  .lesson p.q, .lesson p.a, .box, .equation { break-inside: avoid; }
+  .contents { font-size: 13px; background: none; }
 }
 
 /* 그림 */
@@ -195,3 +196,34 @@ h2.has-memo::after{content:"메모";font-size:.58em;font-weight:400;margin-left:
 a.xref{font-variant-numeric:tabular-nums;white-space:nowrap;text-decoration:none;
   border-bottom:1px dotted currentColor}
 a.xref:hover{background:#eaf1f8}
+
+/* ---- 본문 목차 ---- */
+/* 평범한 목록으로 두면 본문과 구별되지 않아 긴 수업에서 지나치기 쉽다. */
+.contents {
+  border: 1px solid var(--line);
+  background: var(--bg);
+  border-radius: var(--radius);
+  padding: 16px 22px;
+  margin: 28px 0 36px;
+}
+.contents strong {
+  display: block;
+  font-size: 13px;
+  letter-spacing: .04em;
+  color: var(--ink-2);
+  margin-bottom: 10px;
+}
+.contents .qlist { margin: 0; }
+.contents .qlist li { margin-bottom: 6px; font-size: 15.5px; }
+
+/* ---- 수식 상자 ---- */
+/* @eq 로 적은 줄. 본문 문단과 섞이면 식의 경계가 보이지 않는다. */
+.equation {
+  background: var(--accent-soft);
+  border-left: 3px solid var(--navy);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  padding: 16px 20px;
+  margin: 22px 0;
+  line-height: 2;
+  overflow-wrap: anywhere;
+}

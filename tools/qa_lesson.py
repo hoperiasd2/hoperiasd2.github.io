@@ -46,6 +46,20 @@ HANGUL = re.compile(r"[가-힣]")
 # 한 수업 안에 모두 들어간다. 분량을 줄여 슬라이드에 맞추지 않는다.
 MIN = {"secs": 8, "chars": 22000, "figs": 1, "quiz": 10, "refs": 6,
        "step": 3, "front": 2}
+
+# 구성요소별 예외. M02는 사용자 지시로 분량 하한을 쓰지 않고 쉬운 설명을
+# 우선한다(2026-10-15). 구조 기준(절·시험·연구 상자)은 그대로 두고, 분량과
+# 그림·문항·출처의 하한만 그 모듈의 현재 수준에 맞춘다. 하한을 없애지 않는
+# 이유는 뒤에 생기는 퇴행을 잡기 위해서다.
+MIN_BY_MODULE = {
+    "M02": {"chars": 4000, "figs": 0, "quiz": 6, "refs": 1},
+}
+
+
+def floors(lesson_id):
+    m = dict(MIN)
+    m.update(MIN_BY_MODULE.get(lesson_id[:3], {}))
+    return m
 SLIDES = (30, 130)      # 두 편으로 나뉘면 합계로 센다
 
 # 그림은 논문 figure처럼 라벨만 둔다. 설명은 캡션과 SVG 주석으로 옮긴다.
@@ -98,7 +112,7 @@ def check(row):
     notes["refs"] = len(re.findall(r"^- ", refs.group(1), re.M)) if refs else 0
     notes["chars"] = len(re.sub(r"\s", "", body))
 
-    for k, lo in MIN.items():
+    for k, lo in floors(lid).items():
         if notes[k] < lo:
             problems.append(f"{k} {notes[k]} < {lo}")
 
@@ -158,7 +172,8 @@ def check(row):
                 problems.append(f"슬라이드 {n}장 (기준 {SLIDES[0]}~{SLIDES[1]})")
         except Exception as e:
             problems.append(f"슬라이드 열기 실패: {e}")
-    else:
+    elif "slides: none" not in text[:400]:
+        # front matter 에 slides: none 이면 슬라이드를 만들지 않기로 한 것이다.
         problems.append("슬라이드 없음")
 
     if fat:
