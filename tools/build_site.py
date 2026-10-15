@@ -27,8 +27,11 @@ CSV_PATH = ROOT / "curriculum.csv"
 
 STATUS_CLASS = {
     "설계": "design", "자료조사": "design", "초안": "draft",
-    "검수": "review", "승인": "done", "완료": "done",
+    "검수": "review", "승인": "done", "완료": "done", "완성": "done",
 }
+
+# 전체 수업 인덱스의 상태 거르기 단추. 값은 STATUS_CLASS의 분류를 쓴다.
+STATUS_FILTERS = [("done", "완성"), ("draft", "집필 중"), ("design", "설계")]
 
 MODULE_EN = {
     "M01": "Human Biology and Cell Biology",
@@ -204,6 +207,10 @@ def build_index(mods):
     filters = "".join(
         f'<button type="button" data-filter="{m}" aria-pressed="false">{m}</button>'
         for m in mods)
+    # 집필 상태로도 거를 수 있게 한다. 완성된 수업만 보고 싶은 경우가 많다.
+    status_filters = "".join(
+        f'<button type="button" data-filter-status="{k}" aria-pressed="false">{label}</button>'
+        for k, label in STATUS_FILTERS)
 
     sections = []
     for mod, rows in mods.items():
@@ -212,7 +219,8 @@ def build_index(mods):
             q = f"{r['lesson_id']} {r['title']} {r['module_title']} {r['group']}"
             grp = f'<span class="lgroup">{esc(r["group"])}</span>' if r["group"] else ""
             lis.append(
-                f'      <li data-q="{esc(q)}" data-module="{mod}">'
+                f'      <li data-q="{esc(q)}" data-module="{mod}"'
+                f' data-status="{STATUS_CLASS.get(r["status"], "design")}">'
                 f'<a href="{r["path"][len("curriculum/"):]}index.html">'
                 f'<span class="lid">{r["lesson_id"]}</span>'
                 f'<span class="ltitle">{esc(r["title"])}</span>{grp}{badge(r["status"])}</a></li>')
@@ -235,6 +243,7 @@ def build_index(mods):
   <label class="visually-hidden" for="q">수업 검색</label>
   <input id="q" class="search" type="search" data-search placeholder="수업 검색 (예: urea cycle, M03, 단일세포, 해부)">
   <div class="filters">{filters}</div>
+  <div class="filters filters--status" aria-label="집필 상태로 거르기">{status_filters}</div>
   <p class="count" data-count>{total}개 수업</p>
 
 {chr(10).join(sections)}
@@ -295,7 +304,8 @@ def build_week(mod, wk, rows, module_title):
     lis = []
     for r in rows:
         grp = f'<span class="lgroup">{esc(r["group"])}</span>' if r["group"] else ""
-        lis.append(f'    <li><a href="L{r["session"]:02d}/index.html">'
+        lis.append(f'    <li data-status="{STATUS_CLASS.get(r["status"], "design")}">'
+                   f'<a href="L{r["session"]:02d}/index.html">'
                    f'<span class="lid">{r["lesson_id"]}</span>'
                    f'<span class="ltitle">{esc(r["title"])}</span>{grp}{badge(r["status"])}</a></li>')
 

@@ -6,9 +6,12 @@
   var items = Array.prototype.slice.call(document.querySelectorAll("[data-q]"));
   var countEl = document.querySelector("[data-count]");
   var buttons = Array.prototype.slice.call(document.querySelectorAll("[data-filter]"));
+  var statusButtons = Array.prototype.slice.call(
+    document.querySelectorAll("[data-filter-status]"));
   if (!items.length) return;
 
   var activeFilter = "";
+  var activeStatus = "";
 
   function apply() {
     var q = box ? box.value.trim().toLowerCase() : "";
@@ -16,9 +19,11 @@
     items.forEach(function (el) {
       var hay = (el.getAttribute("data-q") || "").toLowerCase();
       var mod = el.getAttribute("data-module") || "";
+      var st = el.getAttribute("data-status") || "";
       var okText = !q || hay.indexOf(q) !== -1;
       var okFilter = !activeFilter || mod === activeFilter;
-      var ok = okText && okFilter;
+      var okStatus = !activeStatus || st === activeStatus;
+      var ok = okText && okFilter && okStatus;
       el.hidden = !ok;
       if (ok) shown++;
     });
@@ -41,6 +46,18 @@
       activeFilter = activeFilter === v ? "" : v;
       buttons.forEach(function (o) {
         o.setAttribute("aria-pressed", String(o.getAttribute("data-filter") === activeFilter));
+      });
+      apply();
+    });
+  });
+
+  statusButtons.forEach(function (b) {
+    b.addEventListener("click", function () {
+      var v = b.getAttribute("data-filter-status");
+      activeStatus = activeStatus === v ? "" : v;
+      statusButtons.forEach(function (o) {
+        o.setAttribute(
+          "aria-pressed", String(o.getAttribute("data-filter-status") === activeStatus));
       });
       apply();
     });

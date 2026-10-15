@@ -13,7 +13,9 @@
   --card: #ffffff;
   --accent-soft: #eaf1f8;
   --ok: #1a7f52;
+  --ok-soft: #e7f4ed;
   --warn: #9a6700;
+  --warn-soft: #fdf5e3;
   --radius: 10px;
   --wrap: 1180px;
   --mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
@@ -34,7 +36,9 @@
     --card: #1b1f24;
     --accent-soft: #1e2833;
     --ok: #5dd3a0;
+    --ok-soft: #16271f;
     --warn: #e3b341;
+    --warn-soft: #2a2416;
   }
 }
 :root[data-theme="dark"] {
@@ -206,9 +210,29 @@ a.card:hover { border-color: var(--navy); transform: translateY(-1px); }
   white-space: nowrap;
 }
 .badge--design { color: var(--ink-3); }
-.badge--draft { color: var(--warn); border-color: var(--warn); }
-.badge--review { color: var(--navy); border-color: var(--navy); }
-.badge--done { color: var(--ok); border-color: var(--ok); }
+.badge--draft { color: var(--warn); border-color: var(--warn); background: var(--warn-soft); }
+.badge--review { color: var(--navy); border-color: var(--navy); background: var(--accent-soft); }
+.badge--done {
+  color: var(--ok);
+  border-color: var(--ok);
+  background: var(--ok-soft);
+  font-weight: 600;
+}
+
+/* ---- 목록에서 집필 상태를 한눈에 ---- */
+/* 배지만으로는 276줄을 훑을 때 눈에 들어오지 않아 왼쪽에 색 띠를 둔다. */
+.lessons li[data-status] { border-left: 4px solid var(--line); }
+.lessons li[data-status="done"] { border-left-color: var(--ok); }
+.lessons li[data-status="draft"] { border-left-color: var(--warn); }
+.lessons li[data-status="review"] { border-left-color: var(--navy); }
+.lessons li[data-status="design"] { border-left-color: var(--line); }
+.lessons li[data-status="done"] .ltitle { font-weight: 600; }
+
+.filters--status { margin-top: -4px; }
+.filters--status button[data-filter-status="done"][aria-pressed="true"] {
+  border-color: var(--ok);
+  color: var(--ok);
+}
 
 /* ---- 검색 ---- */
 .search {
