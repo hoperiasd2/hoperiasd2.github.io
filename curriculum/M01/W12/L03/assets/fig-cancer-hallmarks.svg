@@ -1,0 +1,82 @@
+<!-- 암세포가 획득하는 능력. 라벨만 둔다.
+   가운데 원이 암세포. 주위 여덟 상자가 획득 능력.
+   각 상자 아래 작은 글자는 대표 분자. 문장은 쓰지 않는다.
+   아래 띠 둘이 바탕이 되는 조건. 유전체 불안정성과 염증.
+   캡션에 쓸 내용: 각 능력이 어느 분자 기전에 대응하는지가 분명하다는 점,
+   그리고 유전체 불안정성과 염증이 다른 능력의 획득을 가속한다는 점.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 460" width="680" height="460" role="img"
+ aria-label="암세포가 획득하는 능력 그림. 가운데 암세포를 둘러싼 여덟 개의 상자가 지속적 증식 신호, 성장 억제의 회피, 세포사멸의 회피, 무한한 복제 능력, 혈관 신생, 침습과 전이, 대사의 재편, 면역 회피를 각각 보이고 상자마다 대표 분자를 적었으며, 아래의 두 띠가 이 능력들의 획득을 가속하는 바탕 조건으로 유전체 불안정성과 만성 염증을 보인다.">
+ <style>
+  .t{font:12px sans-serif;fill:#16191d}
+  .s{font:10px sans-serif;fill:#50585f}
+  .c{font:700 14px sans-serif;fill:#003c71}
+  .box{fill:#dce6f2;stroke:#1a4f8a;stroke-width:2}
+  .cell{fill:#f7e4e2;stroke:#b3261e;stroke-width:2.5}
+  .base{fill:#f2efe6;stroke:#8a8f96;stroke-width:2}
+  .ln{stroke:#1a4f8a;stroke-width:1.5;fill:none}
+ </style>
+ <rect x="0" y="0" width="680" height="460" fill="#ffffff"/>
+
+ <!-- 바탕 조건 -->
+ <rect class="base" x="60" y="382" width="250" height="30" rx="15"/>
+ <text class="t" x="185" y="402" text-anchor="middle">Genome instability</text>
+ <rect class="base" x="370" y="382" width="250" height="30" rx="15"/>
+ <text class="t" x="495" y="402" text-anchor="middle">Chronic inflammation</text>
+ <text class="s" x="340" y="432" text-anchor="middle">enabling conditions</text>
+
+ <!-- 가운데 세포 -->
+ <ellipse class="cell" cx="340" cy="196" rx="72" ry="52"/>
+ <text class="c" x="340" y="194" text-anchor="middle">Cancer cell</text>
+ <text class="s" x="340" y="212" text-anchor="middle">clonal, evolving</text>
+
+ <!-- 연결선 -->
+ <path class="ln" d="M268 196 H200"/>
+ <path class="ln" d="M412 196 H480"/>
+ <path class="ln" d="M300 150 L270 110"/>
+ <path class="ln" d="M380 150 L410 110"/>
+ <path class="ln" d="M300 242 L270 282"/>
+ <path class="ln" d="M380 242 L410 282"/>
+ <path class="ln" d="M340 144 V116"/>
+ <path class="ln" d="M340 248 V276"/>
+
+ <!-- 위 가운데 -->
+ <rect class="box" x="250" y="60" width="180" height="56" rx="6"/>
+ <text class="t" x="340" y="82" text-anchor="middle">Sustained proliferation</text>
+ <text class="s" x="340" y="100" text-anchor="middle">RTK, RAS, BRAF</text>
+
+ <!-- 위 왼쪽 -->
+ <rect class="box" x="40" y="54" width="180" height="56" rx="6"/>
+ <text class="t" x="130" y="76" text-anchor="middle">Evading growth control</text>
+ <text class="s" x="130" y="94" text-anchor="middle">RB1, CDKN2A, TGF-&#946;</text>
+
+ <!-- 위 오른쪽 -->
+ <rect class="box" x="460" y="54" width="180" height="56" rx="6"/>
+ <text class="t" x="550" y="76" text-anchor="middle">Replicative immortality</text>
+ <text class="s" x="550" y="94" text-anchor="middle">telomerase, TERT</text>
+
+ <!-- 왼쪽 -->
+ <rect class="box" x="20" y="168" width="180" height="56" rx="6"/>
+ <text class="t" x="110" y="190" text-anchor="middle">Resisting cell death</text>
+ <text class="s" x="110" y="208" text-anchor="middle">BCL-2, TP53</text>
+
+ <!-- 오른쪽 -->
+ <rect class="box" x="480" y="168" width="180" height="56" rx="6"/>
+ <text class="t" x="570" y="190" text-anchor="middle">Immune evasion</text>
+ <text class="s" x="570" y="208" text-anchor="middle">MHC-I loss, PD-L1</text>
+
+ <!-- 아래 왼쪽 -->
+ <rect class="box" x="40" y="282" width="180" height="56" rx="6"/>
+ <text class="t" x="130" y="304" text-anchor="middle">Angiogenesis</text>
+ <text class="s" x="130" y="322" text-anchor="middle">VEGF, HIF-1&#945;</text>
+
+ <!-- 아래 오른쪽 -->
+ <rect class="box" x="460" y="282" width="180" height="56" rx="6"/>
+ <text class="t" x="550" y="304" text-anchor="middle">Metabolic reprogramming</text>
+ <text class="s" x="550" y="322" text-anchor="middle">glucose uptake, glutamine</text>
+
+ <!-- 아래 가운데 -->
+ <rect class="box" x="250" y="276" width="180" height="56" rx="6"/>
+ <text class="t" x="340" y="298" text-anchor="middle">Invasion and metastasis</text>
+ <text class="s" x="340" y="316" text-anchor="middle">E-cadherin loss, MMP</text>
+</svg>

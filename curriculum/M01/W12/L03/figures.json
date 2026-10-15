@@ -1,4 +1,17 @@
 {
   "lesson_id": "M01-W12-L03",
-  "figures": []
+  "figures": [
+    {
+      "figure_id": "fig-cancer-hallmarks",
+      "lesson_id": "M01-W12-L03",
+      "html_anchor": "#fig-cancer-hallmarks",
+      "caption": "암세포가 획득하는 능력과 그 분자적 기반. 증식 신호, 성장 억제의 회피, 세포사멸의 회피, 복제 능력, 혈관 신생, 침습과 전이, 대사 재편, 면역 회피의 여덟 항목과 그 바탕이 되는 유전체 불안정성과 염증의 배치를 함께 보인다.",
+      "asset_path": "assets/fig-cancer-hallmarks.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    }
+  ]
 }
