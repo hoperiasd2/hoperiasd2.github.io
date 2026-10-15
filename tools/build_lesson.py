@@ -31,6 +31,7 @@ class Sec:
 
 # 뒤에 한글이 바로 붙는 경우가 많다. \b 는 한글도 단어 문자로 보므로 쓸 수 없다.
 LID = re.compile(r"(?<![0-9A-Za-z])(M\d{2})-(W\d{2})-(L\d{2})(?![0-9A-Za-z])")
+NUM = re.compile(r"^\d{1,2}[.)]\s+")
 HERE = {"lid": ""}          # 지금 만들고 있는 수업. 자기 자신은 연결하지 않는다.
 
 
@@ -105,6 +106,12 @@ def parse_blocks(lines):
                 flush()
                 mode = "ul"
             buf.append((lvl, s.lstrip()[2:].strip()))
+        elif NUM.match(s):
+            # 1. 2. 3. 으로 시작하는 번호 목록. 없으면 한 문단으로 뭉쳐 읽기 어려워진다.
+            if mode != "ol":
+                flush()
+                mode = "ol"
+            buf.append(NUM.sub("", s, count=1).strip())
         elif s.startswith("@fig "):
             flush()
             parts = s[5:].split(None, 1)
@@ -280,6 +287,9 @@ def render_blocks(blocks):
             continue
         if kind == "p":
             out.append("<p>" + _inline(" ".join(buf)) + "</p>")
+        elif kind == "ol":
+            items = "".join("<li>" + _inline(i) + "</li>" for i in buf)
+            out.append(f"<ol class=\"steps\">{items}</ol>")
         elif kind == "ul":
             depth, parts = 0, ["<ul>"]
             for lvl, item in buf:
@@ -825,6 +835,9 @@ def _compose(row, meta, lists, secs, quiz, lesson_dir, pack,
                 pend = []
             if kind == "ul":
                 text.extend(buf)
+            elif kind == "ol":
+                # 번호 목록도 슬라이드에서는 글머리로 낸다. 번호를 앞에 붙여 순서를 남긴다.
+                text.extend((0, f"{i}. {s}") for i, s in enumerate(buf, 1))
             elif kind == "p":
                 text.append((0, " ".join(buf)))
             elif kind == "table":
