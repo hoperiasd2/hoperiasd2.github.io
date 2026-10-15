@@ -412,7 +412,10 @@ def build_lesson(r, prev_r, next_r, force):
 """
     f = d / "index.html"
     # 집필이 시작된 수업은 build_lesson.py가 관리하므로 여기서 건드리지 않는다.
-    if r["status"] == "설계" and (not f.exists() or force or True):
+    # curriculum.csv의 status가 늦게 갱신되는 일이 있어 상태만 보고 덮어쓰면
+    # 이미 집필된 본문이 틀로 되돌아간다. 실제 파일이 본문을 담고 있는지도 본다.
+    written_page = f.exists() and f.stat().st_size > 8000
+    if r["status"] == "설계" and (force or not written_page):
         f.write_text(page(f'{r["lesson_id"]} {r["title"]}', body, 4, r["title"]), encoding="utf-8")
 
     # 설계 원본
