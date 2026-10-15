@@ -19,7 +19,7 @@ version: v1.0
 @prereq
 - M01-W07-L03 단백질 합성: ribosome과 번역의 단계 — ribosome 구조, 개시·신장·종결, polysome
 - M01-W05-L02 생체분자와 막의 구조 — 아미노산의 성질, peptide 결합, 단백질의 1~4차 구조
-- M01-W05-L03 유전정보의 흐름 — central dogma, mRNA 가공
+- M01-W05-L03 유전정보의 흐름: 복제·전사·번역 — central dogma, mRNA 가공
 
 @sec 1. 번역 후 성숙 과정과 접힘 문제
 Ribosome이 만들어 내는 것은 아미노산이 한 줄로 이어진 polypeptide다. 이 사슬은 아직 기능이 없다. 기능을 가진 단백질이 되려면 고유한 3차 구조로 접히고, 많은 경우 일부가 잘려 나가고, 당이나 지질이 붙고, 제 위치로 운반되어야 한다. 이 전체 과정을 **번역 후 가공(post-translational processing)** 또는 단백질 성숙(maturation)이라 한다.

@@ -19,8 +19,8 @@ version: v1.0
 - 호르몬 작용의 세 가지 상호작용 양식을 정의하고 사례를 든다.
 
 @prereq
-- M01-W01-L01 순환계 요약 — RAAS, aldosterone, 혈압 조절
-- M01-W02-L01 신장 요약 — aldosterone과 ADH의 작용 지점, vitamin D 활성화, PTH
+- M01-W01-L01 순환계 요약: 심장·혈관·혈류와 항상성 — RAAS, aldosterone, 혈압 조절
+- M01-W02-L01 신장·비뇨계 요약: 배설·체액·전해질 조절 — aldosterone과 ADH의 작용 지점, vitamin D 활성화, PTH
 - 세포막 수송과 수용체의 기본 개념
 
 @sec 1. 내분비 신호 전달이 해결하는 문제

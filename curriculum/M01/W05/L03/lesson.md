@@ -19,7 +19,7 @@ version: v1.0
 @prereq
 - M01-W05-L02 생체분자와 막의 구조 — nucleotide, phosphodiester 결합, 5′→3′ 방향, 염기쌍
 - M01-W05-L01 세포의 기원·진화와 세포 연구 방법 — prokaryote와 eukaryote의 유전체 차이, 전사와 번역의 공간 분리
-- M01-W05-L03 생체에너지: 자유에너지와 ATP — 효소의 촉매 작용, ATP와 GTP의 가수분해
+- M01-W09-L02 생체에너지: 자유에너지와 ATP — 효소의 촉매 작용, ATP와 GTP의 가수분해
 
 @sec 1. 중심원리를 정확히 진술한다
 DNA가 유전물질이라는 결론에 이른 세 실험(Griffith, Avery, Hershey와 Chase)은 M01-W04-L03에서 다루었다. 여기서는 그 결론 위에 세워진 정보 흐름의 체계를 다룬다.

@@ -1,4 +1,17 @@
 {
   "lesson_id": "M01-W12-L02",
-  "figures": []
+  "figures": [
+    {
+      "figure_id": "fig-apoptosis",
+      "lesson_id": "M01-W12-L02",
+      "html_anchor": "#fig-apoptosis",
+      "caption": "세포사멸의 두 경로. 내재 경로에서 BH3-only 단백질이 BCL-2의 억제를 풀고 BAX·BAK가 바깥막에 구멍을 만들어 cytochrome c가 나와 apoptosome을 이루는 과정, 외재 경로에서 사멸 수용체에 FADD와 caspase-8이 모여 DISC를 만드는 과정, 그리고 BID의 절단으로 두 경로가 만나는 지점을 함께 보인다.",
+      "asset_path": "assets/fig-apoptosis.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    }
+  ]
 }

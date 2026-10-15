@@ -17,7 +17,7 @@ version: v1.0
 
 @prereq
 - M01-W09-L02 생체에너지: 자유에너지와 ATP — 산화환원 전위, 양성자 기울기, 짝반응
-- M01-W09-L03 산화적 이화와 oxidative phosphorylation — 호흡 복합체의 배열과 ATP synthase
+- M01-W09-L03 Glycolysis·oxidative phosphorylation과 광합성 개요 — 호흡 복합체의 배열과 ATP synthase
 - M01-W05-L02 생체분자와 막의 구조 — 인지질 이중층, 막단백질의 배치
 - M01-W09-L01 단백질 표적화와 소포 수송 — 공동 번역 수송과 번역 후 수송의 비교
 

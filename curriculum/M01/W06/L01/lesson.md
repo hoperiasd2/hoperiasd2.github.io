@@ -17,7 +17,7 @@ version: v1.0
 - CRISPR-Cas9의 작동 원리를 세 요소로 설명하고 knockout과 knock-in의 차이를 밝힌다.
 
 @prereq
-- M01-W05-L03 유전정보의 흐름 — DNA 복제, 전사, 번역, 염기쌍 상보성, reverse transcriptase
+- M01-W05-L03 유전정보의 흐름: 복제·전사·번역 — DNA 복제, 전사, 번역, 염기쌍 상보성, reverse transcriptase
 - M01-W05-L01 세포의 기원·진화와 세포 연구 방법 — 세포배양, 모델 생물, 원심분리
 - M01-W05-L02 생체분자와 막의 구조 — nucleic acid와 단백질의 구조
 

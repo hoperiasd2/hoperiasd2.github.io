@@ -1,0 +1,74 @@
+<!-- 세포사멸의 두 경로. 라벨만 둔다.
+   왼쪽 내재 경로. BH3-only 가 BCL-2 의 억제를 풀고 BAX BAK 가 구멍을 만든다.
+   오른쪽 외재 경로. 사멸 수용체에 FADD 와 caspase-8 이 모인다.
+   가운데 아래 수렴. 실행 caspase.
+   캡션에 쓸 내용: 두 경로 모두 caspase 를 모을 발판을 만드는 것이 핵심이고,
+   BID 절단으로 외재 신호가 미토콘드리아를 통해 증폭된다는 점.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" width="640" height="400" role="img"
+ aria-label="세포사멸 두 경로 그림. 왼쪽 내재 경로는 스트레스가 BH3-only 단백질을 유도해 BCL-2의 억제를 풀고 BAX와 BAK가 미토콘드리아 바깥막에 구멍을 만들어 cytochrome c가 나와 Apaf-1과 apoptosome을 이루고 caspase-9을 활성화하는 과정을, 오른쪽 외재 경로는 사멸 수용체에 FADD와 caspase-8이 모여 DISC를 이루는 과정을 보이며, caspase-8이 BID를 잘라 내재 경로로 이어지는 연결과 두 경로가 실행 caspase에서 만나는 지점을 보인다.">
+ <style>
+  .t{font:12px sans-serif;fill:#16191d}
+  .s{font:11px sans-serif;fill:#50585f}
+  .p{font:700 15px sans-serif;fill:#003c71}
+  .mem{fill:#e8eef5;stroke:#1a4f8a;stroke-width:2}
+  .mito{fill:#f7e4e2;stroke:#b3261e;stroke-width:2}
+  .box{fill:#dce6f2;stroke:#1a4f8a;stroke-width:2}
+  .inh{fill:#f2efe6;stroke:#8a8f96;stroke-width:2}
+  .cas{fill:#e3f0e4;stroke:#2e7d32;stroke-width:2}
+  .hot{fill:#fff5d6;stroke:#f2b705;stroke-width:2}
+  .ar{stroke:#003c71;stroke-width:2;fill:none;marker-end:url(#a)}
+  .arr{stroke:#b3261e;stroke-width:2;fill:none;marker-end:url(#r)}
+ </style>
+ <defs>
+  <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker>
+  <marker id="r" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#b3261e"/></marker>
+ </defs>
+
+ <text class="p" x="14" y="26">A</text>
+ <text class="s" x="40" y="26">intrinsic</text>
+ <text class="s" x="40" y="54">stress , DNA damage</text>
+ <path class="ar" d="M70 62 L70 84"/>
+ <rect class="box" x="30" y="90" width="92" height="26" rx="6"/>
+ <text class="s" x="38" y="108">BH3-only</text>
+ <rect class="inh" x="140" y="90" width="80" height="26" rx="6"/>
+ <text class="s" x="148" y="108">BCL-2</text>
+ <path class="arr" d="M126 103 L136 103"/>
+ <rect class="box" x="30" y="140" width="92" height="26" rx="6"/>
+ <text class="s" x="38" y="158">BAX , BAK</text>
+ <path class="ar" d="M76 120 L76 136"/>
+ <path class="mito" d="M30 186 q80 -16 160 0 q16 40 0 72 q-80 16 -160 0 q-16 -40 0 -72 z"/>
+ <text class="t" x="52" y="216">mitochondrion</text>
+ <circle class="hot" cx="150" cy="240" r="9"/>
+ <text class="s" x="60" y="244">cyt c</text>
+ <path class="ar" d="M120 158 L120 182"/>
+ <path class="ar" d="M160 258 L190 286"/>
+ <rect class="cas" x="150" y="296" width="130" height="28" rx="6"/>
+ <text class="s" x="158" y="315">apoptosome</text>
+ <rect class="cas" x="150" y="334" width="130" height="28" rx="6"/>
+ <text class="s" x="158" y="353">caspase-9</text>
+ <path class="ar" d="M215 326 L215 332"/>
+
+ <text class="p" x="380" y="26">B</text>
+ <text class="s" x="406" y="26">extrinsic</text>
+ <circle class="hot" cx="470" cy="50" r="11"/>
+ <text class="s" x="490" y="48">Fas ligand</text>
+ <rect class="mem" x="380" y="80" width="240" height="22"/>
+ <rect class="box" x="458" y="72" width="24" height="38" rx="3"/>
+ <text class="s" x="492" y="96">death receptor</text>
+ <rect class="box" x="420" y="124" width="100" height="26" rx="6"/>
+ <text class="s" x="440" y="142">FADD</text>
+ <path class="ar" d="M470 112 L470 120"/>
+ <rect class="cas" x="420" y="162" width="100" height="26" rx="6"/>
+ <text class="s" x="428" y="180">caspase-8</text>
+ <path class="ar" d="M470 152 L470 158"/>
+ <text class="s" x="528" y="142">DISC</text>
+ <path class="arr" d="M416 176 L300 210"/>
+ <text class="s" x="300" y="186">BID to tBID</text>
+ <path class="ar" d="M470 190 L470 300"/>
+ <rect class="cas" x="330" y="334" width="180" height="28" rx="6"/>
+ <text class="s" x="340" y="353">caspase-3 , -7</text>
+ <path class="ar" d="M286 348 L326 348"/>
+ <path class="ar" d="M470 310 L470 330"/>
+ <text class="s" x="330" y="386">substrate cleavage , irreversible</text>
+</svg>

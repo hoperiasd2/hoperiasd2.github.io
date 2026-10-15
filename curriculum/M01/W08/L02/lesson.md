@@ -18,7 +18,7 @@ version: v1.0
 @prereq
 - M01-W06-L01 재조합 DNA와 분자생물학 실험 기법 — 염기서열 분석의 원리, coverage와 VAF, 발현 측정
 - M01-W06-L02 유전자와 유전체의 구성 — 유전체의 구성 비율, 반복 서열, 참조 서열과 pangenome
-- M01-W05-L03 유전정보의 흐름 — central dogma, mRNA 가공, codon
+- M01-W05-L03 유전정보의 흐름: 복제·전사·번역 — central dogma, mRNA 가공, codon
 - M01-W05-L01 세포의 기원·진화와 세포 연구 방법 — prokaryote와 eukaryote 유전체의 규모 차이, 모델 생물
 - M01-W05-L02 생체분자와 막의 구조 — nucleotide와 아미노산의 화학
 

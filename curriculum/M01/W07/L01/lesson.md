@@ -22,7 +22,7 @@ version: v1.0
 @prereq
 - M01-W06-L02 유전자와 유전체의 구성 — exon과 intron, 유전자 구조
 - M01-W06-L03 DNA 복제·복구와 유전체 재배열 — 주형 의존 중합, polymerase의 작동 방식
-- M01-W05-L02 핵산의 구조 — 당, 염기, 인산diester 결합
+- M01-W05-L02 생체분자와 막의 구조 — 당, 염기, 인산diester 결합
 
 @sec 1. 중심원리 속의 RNA와 RNA의 화학
 유전정보는 DNA에 저장되고 단백질로 발현된다. 그 사이를 잇는 것이 RNA다. 이 흐름을 **중심원리(central dogma)** 라 부르고, DNA에서 RNA를 만드는 단계를 **전사(transcription)**, RNA에서 단백질을 만드는 단계를 **번역(translation)** 이라 한다.
