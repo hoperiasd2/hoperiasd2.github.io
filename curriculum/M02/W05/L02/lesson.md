@@ -1,8 +1,21 @@
+---
+title: Gluconeogenesis의 반응과 조절 [10장]
+status: 초안
+version: v0.1
+slides: none
+---
+
+<!-- 이 수업의 본문은 현재 같은 폴더의 index.html 에 있다. 외부에서
+     집필된 HTML을 배치한 상태이며, 아직 이 lesson.md 로 옮기지 않았다.
+     옮긴 뒤에는 build_lesson.py 가 index.html 과 슬라이드를 만든다.
+     그때까지 build_site.py 가 index.html 을 덮어쓰지 않도록
+     본문이 있는 파일은 --force 없이 건드리지 않게 되어 있다. -->
+
 # M02-W05-L02 당신생의 반응과 조절 [10장]
 
 - 구성요소: M02 대사생화학
 - 주차·회차: 5주 2회
-- 상태: 설계
+- 상태: 초안
 - 버전: v0.1
 
 ## 이 수업이 답하는 질문
