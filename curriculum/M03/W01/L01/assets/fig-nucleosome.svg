@@ -63,5 +63,5 @@
  <path class="ar" d="M330 270 V254"/>
  <text class="s" x="330" y="326" text-anchor="middle">DNA entry / exit site</text>
 
- <text class="s" x="330" y="358" text-anchor="middle">electrostatic, largely sequence-independent</text>
+ <text class="s" x="330" y="358" text-anchor="middle">electrostatic · sequence-independent</text>
 </svg>

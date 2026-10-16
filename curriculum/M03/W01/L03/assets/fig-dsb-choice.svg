@@ -1,0 +1,73 @@
+<!-- 이중가닥 절단 복구의 경로 선택. 라벨만 둔다.
+   위에 절단. 두 갈래로 갈라진다.
+   왼쪽 NHEJ. 말단 보호. 53BP1. Ku DNA-PK LIG4. 결과 삽입 결실.
+   오른쪽 HR. 말단 깎임. BRCA1. MRN RPA RAD51. 결과 서열 보존.
+   세포주기 의존성 표시.
+   캡션에 쓸 내용: 53BP1 과 BRCA1 의 반대 작용이 선택을 정한다는 점.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 460" width="680" height="460" role="img"
+ aria-label="이중가닥 절단 복구의 경로 선택 그림. 위쪽 절단에서 두 갈래로 갈라져 왼쪽은 말단이 보호되어 53BP1과 Ku, DNA-PK, LIG4를 거쳐 비상동 말단 연결로 가고 삽입과 결실이 남으며, 오른쪽은 말단이 깎여 BRCA1과 MRN, RPA, RAD51을 거쳐 상동 재조합으로 가고 서열이 보존되며, 각 경로의 세포주기 의존성을 함께 표시한다.">
+ <style>
+  .t{font:12px sans-serif;fill:#16191d}
+  .s{font:10px sans-serif;fill:#50585f}
+  .h{font:700 13px sans-serif;fill:#003c71}
+  .dna{stroke:#003c71;stroke-width:3.5;fill:none}
+  .sis{stroke:#2e7d32;stroke-width:3.5;fill:none}
+  .boxL{fill:#f2efe6;stroke:#8a8f96;stroke-width:1.8}
+  .boxR{fill:#e7f4ed;stroke:#1a7f52;stroke-width:1.8}
+  .key{fill:#fff5d6;stroke:#f2b705;stroke-width:1.8}
+  .ar{stroke:#727a84;stroke-width:1.6;fill:none;marker-end:url(#a)}
+ </style>
+ <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#727a84"/></marker></defs>
+ <rect width="680" height="460" fill="#ffffff"/>
+ <text class="h" x="340" y="28" text-anchor="middle">Double-strand break repair choice</text>
+
+ <!-- 절단 -->
+ <path class="dna" d="M220 60 H320 M360 60 H460"/>
+ <path class="dna" d="M220 76 H320 M360 76 H460"/>
+ <text class="t" x="340" y="104" text-anchor="middle">break</text>
+
+ <path class="ar" d="M300 112 L190 148"/>
+ <path class="ar" d="M380 112 L490 148"/>
+
+ <!-- 왼쪽 NHEJ -->
+ <ellipse class="key" cx="170" cy="170" rx="54" ry="20"/>
+ <text class="t" x="170" y="175" text-anchor="middle">53BP1</text>
+ <text class="s" x="170" y="206" text-anchor="middle">ends protected</text>
+
+ <rect class="boxL" x="40" y="226" width="260" height="92" rx="6"/>
+ <text class="t" x="170" y="250" text-anchor="middle">NHEJ</text>
+ <text class="s" x="170" y="270" text-anchor="middle">Ku70/80, DNA-PKcs</text>
+ <text class="s" x="170" y="288" text-anchor="middle">LIG4, XRCC4</text>
+ <text class="s" x="170" y="308" text-anchor="middle">all cell-cycle phases</text>
+
+ <rect class="boxL" x="40" y="344" width="260" height="62" rx="6"/>
+ <text class="t" x="170" y="368" text-anchor="middle">indels at junction</text>
+ <text class="s" x="170" y="388" text-anchor="middle">fast, error-prone</text>
+
+ <!-- 오른쪽 HR -->
+ <ellipse class="key" cx="510" cy="170" rx="54" ry="20"/>
+ <text class="t" x="510" y="175" text-anchor="middle">BRCA1</text>
+ <text class="s" x="510" y="206" text-anchor="middle">ends resected</text>
+
+ <rect class="boxR" x="380" y="226" width="260" height="92" rx="6"/>
+ <text class="t" x="510" y="250" text-anchor="middle">HR</text>
+ <text class="s" x="510" y="270" text-anchor="middle">MRN, RPA, BRCA2, RAD51</text>
+ <text class="s" x="510" y="288" text-anchor="middle">sister chromatid as template</text>
+ <text class="s" x="510" y="308" text-anchor="middle">S and G2 only</text>
+
+ <rect class="boxR" x="380" y="344" width="260" height="62" rx="6"/>
+ <text class="t" x="510" y="368" text-anchor="middle">sequence preserved</text>
+ <text class="s" x="510" y="388" text-anchor="middle">slow, accurate</text>
+
+ <path class="ar" d="M170 192 V222"/>
+ <path class="ar" d="M510 192 V222"/>
+ <path class="ar" d="M170 320 V340"/>
+ <path class="ar" d="M510 320 V340"/>
+
+ <!-- 자매 염색체 -->
+ <path class="sis" d="M600 116 H664"/>
+ <text class="s" x="632" y="106" text-anchor="middle">sister</text>
+
+ <text class="s" x="340" y="440" text-anchor="middle">CDK activity · resection</text>
+</svg>

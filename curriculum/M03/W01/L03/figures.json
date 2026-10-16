@@ -1,4 +1,29 @@
 {
   "lesson_id": "M03-W01-L03",
-  "figures": []
+  "figures": [
+    {
+      "figure_id": "fig-repair-pathways",
+      "lesson_id": "M03-W01-L03",
+      "html_anchor": "#fig-repair-pathways",
+      "caption": "손상의 종류와 복구 경로의 대응. 하나의 염기 손상은 base-excision repair, 나선을 뒤트는 큰 부가물은 nucleotide-excision repair, 복제 후 남은 짝 어긋남은 mismatch repair, 이중가닥 절단은 비상동 말단 연결과 상동 재조합, 가닥 간 교차결합은 Fanconi 경로로 이어지는 배치를 보인다.",
+      "asset_path": "assets/fig-repair-pathways.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-dsb-choice",
+      "lesson_id": "M03-W01-L03",
+      "html_anchor": "#fig-dsb-choice",
+      "caption": "이중가닥 절단 복구의 경로 선택. 말단이 보호되어 비상동 말단 연결로 가는 길과, 말단이 깎여 단일가닥 꼬리가 생겨 상동 재조합으로 가는 길을 나란히 두고, 53BP1과 BRCA1의 반대 작용, 세포주기 의존성, 그리고 각 경로의 결과를 표시했다.",
+      "asset_path": "assets/fig-dsb-choice.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    }
+  ]
 }

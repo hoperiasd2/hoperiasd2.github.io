@@ -1,0 +1,69 @@
+<!-- 손상의 종류와 복구 경로의 대응. 라벨만 둔다.
+   왼쪽 열에 손상 다섯 종류. 오른쪽 열에 경로 다섯 개. 선으로 대응.
+   각 경로 아래 핵심 인자. 관련 질환은 캡션으로.
+   캡션에 쓸 내용: 경로 선택이 손상의 화학적 크기와 끊어짐 유무로
+   정해진다는 점.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 440" width="700" height="440" role="img"
+ aria-label="손상의 종류와 복구 경로의 대응 그림. 왼쪽에 하나의 염기 손상, 나선을 뒤트는 큰 부가물, 복제 후 짝 어긋남, 이중가닥 절단, 가닥 간 교차결합의 다섯 손상을 두고 오른쪽에 base-excision repair, nucleotide-excision repair, mismatch repair, 비상동 말단 연결과 상동 재조합, Fanconi 경로를 두어 선으로 대응시키고 각 경로의 핵심 인자를 적었다.">
+ <style>
+  .t{font:12px sans-serif;fill:#16191d}
+  .s{font:10px sans-serif;fill:#50585f}
+  .h{font:700 13px sans-serif;fill:#003c71}
+  .dmg{fill:#f7e4e2;stroke:#b3261e;stroke-width:1.8}
+  .path{fill:#dce6f2;stroke:#1a4f8a;stroke-width:1.8}
+  .ln{stroke:#727a84;stroke-width:1.5;fill:none;marker-end:url(#a)}
+ </style>
+ <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#727a84"/></marker></defs>
+ <rect width="700" height="440" fill="#ffffff"/>
+ <text class="h" x="140" y="30" text-anchor="middle">Damage</text>
+ <text class="h" x="520" y="30" text-anchor="middle">Pathway</text>
+
+ <rect class="dmg" x="20" y="52" width="240" height="46" rx="6"/>
+ <text class="t" x="140" y="72" text-anchor="middle">single altered base</text>
+ <text class="s" x="140" y="89" text-anchor="middle">uracil, 8-oxoG, AP site</text>
+
+ <rect class="dmg" x="20" y="124" width="240" height="46" rx="6"/>
+ <text class="t" x="140" y="144" text-anchor="middle">bulky, helix-distorting</text>
+ <text class="s" x="140" y="161" text-anchor="middle">UV dimer, BaP adduct</text>
+
+ <rect class="dmg" x="20" y="196" width="240" height="46" rx="6"/>
+ <text class="t" x="140" y="216" text-anchor="middle">post-replicative mismatch</text>
+ <text class="s" x="140" y="233" text-anchor="middle">base mispair, slippage loop</text>
+
+ <rect class="dmg" x="20" y="268" width="240" height="46" rx="6"/>
+ <text class="t" x="140" y="288" text-anchor="middle">double-strand break</text>
+ <text class="s" x="140" y="305" text-anchor="middle">IR, TOP2 poison</text>
+
+ <rect class="dmg" x="20" y="340" width="240" height="46" rx="6"/>
+ <text class="t" x="140" y="360" text-anchor="middle">interstrand crosslink</text>
+ <text class="s" x="140" y="377" text-anchor="middle">platinum, aldehyde</text>
+
+ <rect class="path" x="400" y="52" width="280" height="46" rx="6"/>
+ <text class="t" x="540" y="72" text-anchor="middle">base-excision repair</text>
+ <text class="s" x="540" y="89" text-anchor="middle">glycosylase, APE1, Pol β, PARP1</text>
+
+ <rect class="path" x="400" y="124" width="280" height="46" rx="6"/>
+ <text class="t" x="540" y="144" text-anchor="middle">nucleotide-excision repair</text>
+ <text class="s" x="540" y="161" text-anchor="middle">XPC / CSB, TFIIH, XPF, XPG</text>
+
+ <rect class="path" x="400" y="196" width="280" height="46" rx="6"/>
+ <text class="t" x="540" y="216" text-anchor="middle">mismatch repair</text>
+ <text class="s" x="540" y="233" text-anchor="middle">MSH2-MSH6, MLH1-PMS2</text>
+
+ <rect class="path" x="400" y="268" width="280" height="46" rx="6"/>
+ <text class="t" x="540" y="288" text-anchor="middle">NHEJ / HR / MMEJ</text>
+ <text class="s" x="540" y="305" text-anchor="middle">Ku, DNA-PK / BRCA, RAD51 / Pol θ</text>
+
+ <rect class="path" x="400" y="340" width="280" height="46" rx="6"/>
+ <text class="t" x="540" y="360" text-anchor="middle">Fanconi pathway</text>
+ <text class="s" x="540" y="377" text-anchor="middle">FANCD2-FANCI, nuclease, HR</text>
+
+ <path class="ln" d="M262 75 H396"/>
+ <path class="ln" d="M262 147 H396"/>
+ <path class="ln" d="M262 219 H396"/>
+ <path class="ln" d="M262 291 H396"/>
+ <path class="ln" d="M262 363 H396"/>
+
+ <text class="s" x="350" y="420" text-anchor="middle">lesion size · strand breakage</text>
+</svg>
