@@ -1,0 +1,96 @@
+<!-- 복제 분기점의 구조. 라벨만 둔다.
+   왼쪽에서 분기점이 오른쪽으로 진행.
+   CMG helicase, RPA 가 덮은 단일가닥, Pol epsilon 이 leading,
+   PCNA 에 붙은 Pol delta 가 lagging, Pol alpha primase 가 primer,
+   Okazaki 조각, FEN1 과 ligase, 앞쪽에 topoisomerase.
+   캡션에 쓸 내용: 구성 요소의 속도 차이 자체가 ATR 을 켜는 신호가 된다는 점.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 400" width="700" height="400" role="img"
+ aria-label="복제 분기점 구조 그림. 왼쪽에서 오른쪽으로 진행하는 분기점에 CMG helicase, RPA가 덮은 단일가닥, leading 가닥을 합성하는 Pol epsilon, PCNA에 붙어 lagging 가닥을 합성하는 Pol delta, primer를 만드는 Pol alpha-primase, Okazaki 조각과 FEN1 및 DNA ligase I, 그리고 분기점 앞쪽의 topoisomerase를 배치했다.">
+ <style>
+  .t{font:12px sans-serif;fill:#16191d}
+  .s{font:10px sans-serif;fill:#50585f}
+  .h{font:700 13px sans-serif;fill:#003c71}
+  .old{stroke:#003c71;stroke-width:3.5;fill:none}
+  .new{stroke:#2e7d32;stroke-width:3.5;fill:none}
+  .rna{stroke:#b3261e;stroke-width:3.5;fill:none}
+  .cmg{fill:#fff5d6;stroke:#f2b705;stroke-width:2}
+  .pol{fill:#dce6f2;stroke:#1a4f8a;stroke-width:1.8}
+  .pcna{fill:none;stroke:#1a4f8a;stroke-width:3}
+  .rpa{fill:#f2efe6;stroke:#8a8f96;stroke-width:1.5}
+  .topo{fill:#f7e4e2;stroke:#b3261e;stroke-width:1.8}
+  .ar{stroke:#2e7d32;stroke-width:1.6;fill:none;marker-end:url(#g)}
+  .ad{stroke:#16191d;stroke-width:1.4;fill:none;marker-end:url(#k)}
+ </style>
+ <defs>
+  <marker id="g" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#2e7d32"/></marker>
+  <marker id="k" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#16191d"/></marker>
+ </defs>
+ <rect width="700" height="400" fill="#ffffff"/>
+ <text class="h" x="350" y="28" text-anchor="middle">Replication fork</text>
+
+ <!-- 모가닥 (오른쪽, 아직 풀리지 않음) -->
+ <path class="old" d="M470 190 H690"/>
+ <path class="old" d="M470 214 H690"/>
+ <text class="s" x="640" y="176">parental duplex</text>
+
+ <!-- 진행 방향 -->
+ <path class="ad" d="M520 120 H440"/>
+ <text class="t" x="528" y="124">fork direction</text>
+
+ <!-- topoisomerase -->
+ <ellipse class="topo" cx="600" cy="202" rx="26" ry="20"/>
+ <text class="s" x="600" y="206" text-anchor="middle">TOP1</text>
+
+ <!-- CMG -->
+ <polygon class="cmg" points="430,166 470,190 470,214 430,238"/>
+ <text class="t" x="438" y="206" text-anchor="middle">CMG</text>
+ <text class="s" x="430" y="256" text-anchor="middle">helicase</text>
+
+ <!-- leading 가닥 -->
+ <path class="old" d="M60 150 H430"/>
+ <path class="new" d="M110 164 H418"/>
+ <ellipse class="pol" cx="400" cy="152" rx="28" ry="17"/>
+ <text class="s" x="400" y="156" text-anchor="middle">Pol ε</text>
+ <circle class="pcna" cx="362" cy="158" r="12"/>
+ <text class="s" x="362" y="136" text-anchor="middle">PCNA</text>
+ <path class="ar" d="M150 164 H330"/>
+ <text class="t" x="110" y="138">leading strand</text>
+ <text class="s" x="110" y="188">continuous, 5′→3′</text>
+
+ <!-- lagging 가닥 -->
+ <path class="old" d="M60 254 H430"/>
+ <!-- RPA 덮인 단일가닥 구간 -->
+ <g class="rpa">
+  <circle cx="352" cy="268" r="11"/><circle cx="376" cy="268" r="11"/><circle cx="400" cy="268" r="11"/>
+ </g>
+ <text class="s" x="376" y="294" text-anchor="middle">RPA</text>
+
+ <!-- Okazaki 조각들 -->
+ <path class="rna" d="M300 240 H322"/>
+ <path class="new" d="M240 240 H300"/>
+ <path class="rna" d="M190 240 H212"/>
+ <path class="new" d="M130 240 H190"/>
+ <path class="new" d="M70 240 H112"/>
+ <text class="t" x="96" y="222" text-anchor="middle">Okazaki fragments</text>
+ <text class="s" x="311" y="228" text-anchor="middle">RNA primer</text>
+
+ <ellipse class="pol" cx="330" cy="222" rx="30" ry="16"/>
+ <text class="s" x="330" y="226" text-anchor="middle">Pol α</text>
+ <text class="s" x="330" y="204" text-anchor="middle">primase</text>
+
+ <ellipse class="pol" cx="236" cy="258" rx="28" ry="16"/>
+ <text class="s" x="236" y="262" text-anchor="middle">Pol δ</text>
+ <circle class="pcna" cx="272" cy="252" r="12"/>
+
+ <ellipse class="pol" cx="124" cy="262" rx="26" ry="15"/>
+ <text class="s" x="124" y="266" text-anchor="middle">FEN1</text>
+ <ellipse class="pol" cx="64" cy="262" rx="30" ry="15"/>
+ <text class="s" x="64" y="266" text-anchor="middle">Lig I</text>
+
+ <text class="t" x="150" y="320">lagging strand</text>
+ <text class="s" x="150" y="338">discontinuous, 100–200 nt</text>
+
+ <text class="s" x="520" y="340" text-anchor="middle">ssDNA + RPA → ATR signal</text>
+ <text class="s" x="520" y="358" text-anchor="middle">rate ≈ 1–2 kb / min</text>
+</svg>

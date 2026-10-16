@@ -1,4 +1,29 @@
 {
   "lesson_id": "M03-W01-L02",
-  "figures": []
+  "figures": [
+    {
+      "figure_id": "fig-replication-fork",
+      "lesson_id": "M03-W01-L02",
+      "html_anchor": "#fig-replication-fork",
+      "caption": "복제 분기점의 구조와 구성 단백질. CMG helicase, RPA가 덮은 단일가닥, Pol α–primase, Pol ε의 leading 가닥 합성, PCNA에 붙은 Pol δ의 lagging 가닥 합성, Okazaki 조각, 그리고 앞쪽의 topoisomerase를 배치했다.",
+      "asset_path": "assets/fig-replication-fork.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-replication-timing",
+      "lesson_id": "M03-W01-L02",
+      "html_anchor": "#fig-replication-timing",
+      "caption": "복제 시기와 유전체의 성질. S기 안에서 이르게 복제되는 구간과 늦게 복제되는 구간을 A·B 구획, 유전자 밀도, 변이 밀도와 함께 배치해 세 성질이 같은 방향으로 상관하는 양상을 보인다.",
+      "asset_path": "assets/fig-replication-timing.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    }
+  ]
 }

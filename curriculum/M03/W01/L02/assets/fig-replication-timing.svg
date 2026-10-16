@@ -1,0 +1,54 @@
+<!-- 복제 시기와 유전체 성질. 라벨만 둔다.
+   가로축 S기 초기에서 후기. 네 띠를 위아래로 나란히 둔다.
+   복제 시기, A B 구획, 유전자 밀도, 변이 밀도.
+   캡션에 쓸 내용: 세 성질이 같은 방향으로 상관하며
+   늦게 복제되는 구간에 변이가 더 쌓인다는 점.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 360" width="680" height="360" role="img"
+ aria-label="복제 시기와 유전체 성질 그림. 가로축을 S기 초기에서 후기로 두고 네 띠를 나란히 배치해 복제 시기, A와 B 구획, 유전자 밀도, 변이 밀도를 보이며, 이르게 복제되는 구간은 A 구획과 높은 유전자 밀도 및 낮은 변이 밀도, 늦게 복제되는 구간은 B 구획과 낮은 유전자 밀도 및 높은 변이 밀도에 대응함을 나타낸다.">
+ <style>
+  .t{font:12px sans-serif;fill:#16191d}
+  .s{font:10px sans-serif;fill:#50585f}
+  .h{font:700 12px sans-serif;fill:#003c71}
+  .ax{stroke:#727a84;stroke-width:1.4;fill:none;marker-end:url(#a)}
+  .early{fill:#e7f4ed;stroke:#1a7f52;stroke-width:1.6}
+  .late{fill:#f2efe6;stroke:#8a8f96;stroke-width:1.6}
+  .bar{stroke:#1a4f8a;stroke-width:2;fill:none}
+  .barR{stroke:#b3261e;stroke-width:2;fill:none}
+ </style>
+ <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#727a84"/></marker></defs>
+ <rect width="680" height="360" fill="#ffffff"/>
+ <text class="h" x="340" y="26" text-anchor="middle">Replication timing</text>
+
+ <path class="ax" d="M120 330 H620"/>
+ <text class="t" x="140" y="350">early S</text>
+ <text class="t" x="580" y="350">late S</text>
+
+ <!-- 1 복제 시기 띠 -->
+ <text class="t" x="110" y="68" text-anchor="end">timing</text>
+ <rect class="early" x="120" y="52" width="200" height="24"/>
+ <rect class="late" x="320" y="52" width="290" height="24"/>
+ <text class="s" x="220" y="68" text-anchor="middle">early</text>
+ <text class="s" x="465" y="68" text-anchor="middle">late</text>
+
+ <!-- 2 구획 -->
+ <text class="t" x="110" y="112" text-anchor="end">compartment</text>
+ <rect class="early" x="120" y="96" width="200" height="24"/>
+ <rect class="late" x="320" y="96" width="290" height="24"/>
+ <text class="s" x="220" y="112" text-anchor="middle">A</text>
+ <text class="s" x="465" y="112" text-anchor="middle">B</text>
+
+ <!-- 3 유전자 밀도 -->
+ <text class="t" x="110" y="166" text-anchor="end">gene density</text>
+ <path class="bar" d="M120 190 L200 152 L300 162 L400 196 L500 204 L610 210"/>
+ <text class="s" x="200" y="144" text-anchor="middle">high</text>
+ <text class="s" x="580" y="226" text-anchor="middle">low</text>
+
+ <!-- 4 변이 밀도 -->
+ <text class="t" x="110" y="264" text-anchor="end">mutation density</text>
+ <path class="barR" d="M120 258 L220 262 L320 274 L430 290 L520 298 L610 304"/>
+ <text class="s" x="170" y="248" text-anchor="middle">low</text>
+ <text class="s" x="580" y="290" text-anchor="middle">high</text>
+
+ <text class="s" x="340" y="322" text-anchor="middle">repair time and nucleotide supply differ</text>
+</svg>
