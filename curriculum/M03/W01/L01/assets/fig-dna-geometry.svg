@@ -1,0 +1,76 @@
+<!-- B형 이중나선의 치수와 두 홈. 라벨만 둔다.
+   왼쪽 나선 그림에 지름 2 nm, 한 바퀴 3.4 nm, 염기쌍 간격 0.34 nm.
+   major groove 와 minor groove 의 위치를 화살표로 가리킨다.
+   오른쪽 확대에 G-C 염기쌍. 수소결합 3 개. 홈 쪽으로 향하는 작용기 표시.
+   캡션에 쓸 내용: major groove 에서 네 염기쌍을 구별할 수 있어
+   서열 특이적 결합이 그 홈을 쓴다는 점.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 420" width="680" height="420" role="img"
+ aria-label="B형 이중나선의 치수와 두 홈 그림. 왼쪽에 이중나선을 그려 지름 2 나노미터, 한 바퀴 3.4 나노미터, 염기쌍 사이 간격 0.34 나노미터와 major groove 및 minor groove의 위치를 표시하고, 오른쪽에 구아닌과 시토신 염기쌍을 확대해 수소결합 세 개와 major groove 쪽 및 minor groove 쪽으로 향하는 작용기를 보인다.">
+ <style>
+  .t{font:12px sans-serif;fill:#16191d}
+  .s{font:10px sans-serif;fill:#50585f}
+  .h{font:700 13px sans-serif;fill:#003c71}
+  .bb{stroke:#003c71;stroke-width:2.5;fill:none}
+  .bb2{stroke:#b3261e;stroke-width:2.5;fill:none}
+  .rung{stroke:#8a8f96;stroke-width:1.6}
+  .dim{stroke:#16191d;stroke-width:1;fill:none;marker-start:url(#d);marker-end:url(#d)}
+  .ar{stroke:#003c71;stroke-width:1.4;fill:none;marker-end:url(#a)}
+  .base{fill:#eaf1f8;stroke:#1a4f8a;stroke-width:1.8}
+  .hb{stroke:#b3261e;stroke-width:1.6;stroke-dasharray:3 3}
+ </style>
+ <defs>
+  <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker>
+  <marker id="d" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M5 0 V10" stroke="#16191d" stroke-width="2"/></marker>
+ </defs>
+ <rect width="680" height="420" fill="#ffffff"/>
+
+ <text class="h" x="130" y="30" text-anchor="middle">B-DNA</text>
+ <text class="h" x="500" y="30" text-anchor="middle">G–C base pair</text>
+
+ <!-- 나선 두 가닥 -->
+ <path class="bb" d="M80 60 C150 100 150 140 80 180 C10 220 10 260 80 300 C150 340 150 380 80 400"/>
+ <path class="bb2" d="M180 60 C110 100 110 140 180 180 C250 220 250 260 180 300 C110 340 110 380 180 400"/>
+ <g class="rung">
+  <path d="M96 76 H164"/><path d="M110 96 H150"/><path d="M118 116 H142"/>
+  <path d="M110 150 H150"/><path d="M96 170 H164"/>
+  <path d="M74 196 H186"/><path d="M60 216 H200"/><path d="M58 236 H202"/>
+  <path d="M74 256 H186"/><path d="M96 290 H164"/><path d="M110 310 H150"/>
+  <path d="M118 330 H142"/><path d="M110 364 H150"/><path d="M96 384 H164"/>
+ </g>
+
+ <!-- 치수 -->
+ <path class="dim" d="M58 236 H202"/>
+ <text class="t" x="130" y="252" text-anchor="middle">2 nm</text>
+ <path class="dim" d="M236 60 V300"/>
+ <text class="t" x="248" y="182">3.4 nm / turn</text>
+ <text class="s" x="248" y="198">≈ 10.5 bp</text>
+ <path class="dim" d="M236 320 V336"/>
+ <text class="t" x="248" y="332">0.34 nm</text>
+
+ <!-- 홈 표시 -->
+ <path class="ar" d="M12 120 L62 128"/>
+ <text class="t" x="8" y="112" text-anchor="start">minor groove</text>
+ <path class="ar" d="M12 226 L50 230"/>
+ <text class="t" x="8" y="218" text-anchor="start">major groove</text>
+
+ <!-- 염기쌍 확대 -->
+ <polygon class="base" points="390,150 450,130 470,180 430,210 390,195"/>
+ <text class="t" x="424" y="176" text-anchor="middle">G</text>
+ <polygon class="base" points="530,140 585,155 585,200 530,212"/>
+ <text class="t" x="558" y="182" text-anchor="middle">C</text>
+ <g class="hb">
+  <path d="M472 158 H528"/><path d="M474 176 H528"/><path d="M470 194 H530"/>
+ </g>
+ <text class="s" x="500" y="150" text-anchor="middle">3 H-bonds</text>
+
+ <path class="ar" d="M500 120 V96"/>
+ <text class="t" x="500" y="88" text-anchor="middle">major groove edge</text>
+ <text class="s" x="500" y="104" text-anchor="middle">donor / acceptor / methyl</text>
+ <path class="ar" d="M500 222 V248"/>
+ <text class="t" x="500" y="264" text-anchor="middle">minor groove edge</text>
+ <text class="s" x="500" y="280" text-anchor="middle">less discriminating</text>
+
+ <text class="s" x="500" y="330" text-anchor="middle">A–T: 2 H-bonds</text>
+ <text class="s" x="500" y="348" text-anchor="middle">antiparallel strands, 5′→3′</text>
+</svg>

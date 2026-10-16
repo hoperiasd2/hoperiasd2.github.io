@@ -1,0 +1,67 @@
+<!-- Nucleosome 의 구성. 라벨만 둔다.
+   가운데 octamer. H2A H2B H3 H4 각 두 분자.
+   DNA 147 bp 가 1.7 바퀴 감긴 모습. linker DNA. H1 의 자리.
+   octamer 밖으로 나온 꼬리.
+   캡션에 쓸 내용: 결합이 서열을 거의 가리지 않고 정전기적이라는 점,
+   그래서 조절이 접근의 가능성 문제가 된다는 점.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 660 380" width="660" height="380" role="img"
+ aria-label="Nucleosome 구성 그림. 가운데 히스톤 H2A, H2B, H3, H4 각 두 분자로 이루어진 팔량체를 그리고 147 염기쌍의 DNA가 1.7 바퀴 감긴 모습, 양옆의 linker DNA와 DNA가 들어오고 나가는 자리에 붙는 H1, 그리고 팔량체 밖으로 나온 히스톤 꼬리를 표시한다.">
+ <style>
+  .t{font:12px sans-serif;fill:#16191d}
+  .s{font:10px sans-serif;fill:#50585f}
+  .h{font:700 13px sans-serif;fill:#003c71}
+  .dna{stroke:#003c71;stroke-width:5;fill:none;stroke-linecap:round}
+  .oct{fill:#eaf1f8;stroke:#1a4f8a;stroke-width:2}
+  .hA{fill:#dce6f2;stroke:#1a4f8a;stroke-width:1.6}
+  .hB{fill:#f7e4e2;stroke:#b3261e;stroke-width:1.6}
+  .tail{stroke:#8a8f96;stroke-width:1.6;fill:none}
+  .h1{fill:#fff5d6;stroke:#f2b705;stroke-width:2}
+  .ar{stroke:#003c71;stroke-width:1.4;fill:none;marker-end:url(#a)}
+ </style>
+ <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#003c71"/></marker></defs>
+ <rect width="660" height="380" fill="#ffffff"/>
+ <text class="h" x="330" y="30" text-anchor="middle">Nucleosome core particle</text>
+
+ <!-- linker DNA -->
+ <path class="dna" d="M30 230 H150"/>
+ <path class="dna" d="M510 230 H630"/>
+ <text class="t" x="70" y="256">linker DNA</text>
+ <text class="t" x="552" y="256">linker DNA</text>
+
+ <!-- 감긴 DNA 1.7 바퀴 -->
+ <ellipse cx="330" cy="200" rx="150" ry="74" class="dna"/>
+ <ellipse cx="330" cy="212" rx="128" ry="56" class="dna"/>
+ <path class="dna" d="M150 230 C170 230 182 222 196 212"/>
+ <path class="dna" d="M464 212 C478 222 490 230 510 230"/>
+ <text class="t" x="330" y="104" text-anchor="middle">147 bp, ≈1.7 turns</text>
+
+ <!-- octamer -->
+ <ellipse class="oct" cx="330" cy="200" rx="92" ry="48"/>
+ <circle class="hA" cx="292" cy="186" r="19"/><text class="s" x="292" y="190" text-anchor="middle">H3</text>
+ <circle class="hA" cx="368" cy="186" r="19"/><text class="s" x="368" y="190" text-anchor="middle">H3</text>
+ <circle class="hA" cx="292" cy="220" r="19"/><text class="s" x="292" y="224" text-anchor="middle">H4</text>
+ <circle class="hA" cx="368" cy="220" r="19"/><text class="s" x="368" y="224" text-anchor="middle">H4</text>
+ <circle class="hB" cx="254" cy="203" r="18"/><text class="s" x="254" y="207" text-anchor="middle">H2A</text>
+ <circle class="hB" cx="406" cy="203" r="18"/><text class="s" x="406" y="207" text-anchor="middle">H2A</text>
+ <circle class="hB" cx="330" cy="172" r="18"/><text class="s" x="330" y="176" text-anchor="middle">H2B</text>
+ <circle class="hB" cx="330" cy="234" r="18"/><text class="s" x="330" y="238" text-anchor="middle">H2B</text>
+
+ <!-- 꼬리 -->
+ <g class="tail">
+  <path d="M242 174 C224 160 214 150 200 146"/>
+  <path d="M418 174 C436 160 446 150 460 146"/>
+  <path d="M250 236 C232 252 222 262 208 268"/>
+  <path d="M410 236 C428 252 438 262 452 268"/>
+ </g>
+ <text class="t" x="196" y="138" text-anchor="middle">histone tails</text>
+ <text class="s" x="452" y="288" text-anchor="middle">Lys / Arg rich</text>
+
+ <!-- H1 -->
+ <ellipse class="h1" cx="330" cy="288" rx="40" ry="18"/>
+ <text class="t" x="330" y="293" text-anchor="middle">H1</text>
+ <path class="ar" d="M330 270 V254"/>
+ <text class="s" x="330" y="326" text-anchor="middle">DNA entry / exit site</text>
+
+ <text class="s" x="330" y="358" text-anchor="middle">electrostatic, largely sequence-independent</text>
+</svg>

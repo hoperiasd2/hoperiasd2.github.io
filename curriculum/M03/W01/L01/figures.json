@@ -1,4 +1,41 @@
 {
   "lesson_id": "M03-W01-L01",
-  "figures": []
+  "figures": [
+    {
+      "figure_id": "fig-dna-geometry",
+      "lesson_id": "M03-W01-L01",
+      "html_anchor": "#fig-dna-geometry",
+      "caption": "B형 이중나선의 치수와 두 홈. 지름 2 nm, 한 바퀴 3.4 nm, 염기쌍 간격 0.34 nm와 major groove·minor groove의 위치를 표시했다. 염기쌍 한 쌍을 확대해 수소결합의 수와 홈 쪽으로 향하는 작용기를 함께 보인다.",
+      "asset_path": "assets/fig-dna-geometry.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-nucleosome",
+      "lesson_id": "M03-W01-L01",
+      "html_anchor": "#fig-nucleosome",
+      "caption": "Nucleosome의 구성. Histone H2A·H2B·H3·H4 각 두 분자로 이루어진 octamer, 147 염기쌍의 DNA가 1.7 바퀴 감긴 배치, linker DNA와 H1의 위치, 그리고 octamer 밖으로 나온 histone 꼬리를 표시했다.",
+      "asset_path": "assets/fig-nucleosome.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    },
+    {
+      "figure_id": "fig-chromatin-levels",
+      "lesson_id": "M03-W01-L01",
+      "html_anchor": "#fig-chromatin-levels",
+      "caption": "Chromatin의 포장 단계. 이중나선에서 nucleosome, nucleosome 사슬의 불규칙한 뭉침, cohesin과 CTCF가 만드는 고리, TAD, 그리고 A·B 구획과 염색체 영역까지의 크기 규모를 함께 표시했다.",
+      "asset_path": "assets/fig-chromatin-levels.svg",
+      "source_id": "",
+      "rights_status": "자체 제작",
+      "status": "확정",
+      "replacement_requirements": "",
+      "review_result": ""
+    }
+  ]
 }

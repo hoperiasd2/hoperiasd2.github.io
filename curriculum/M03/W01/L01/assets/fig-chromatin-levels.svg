@@ -1,0 +1,95 @@
+<!-- Chromatin 포장 단계. 라벨만 둔다.
+   왼쪽부터 이중나선, nucleosome, 불규칙한 뭉침, cohesin 과 CTCF 고리,
+   TAD, A B 구획, 염색체. 각 단계 아래 크기 규모.
+   캡션에 쓸 내용: 30 nm 섬유가 세포 안에서 일반적이라는 증거는 약하고,
+   현재 그림은 불규칙한 뭉침과 그 위에 겹친 고리라는 점.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 400" width="700" height="400" role="img"
+ aria-label="Chromatin 포장 단계 그림. 왼쪽부터 이중나선, nucleosome 사슬, 불규칙하게 뭉친 nucleosome 덩어리, cohesin과 CTCF가 만드는 고리, TAD, A와 B 구획, 그리고 염색체 영역을 차례로 그리고 각 단계의 크기 규모를 2 나노미터에서 마이크로미터까지 함께 표시한다.">
+ <style>
+  .t{font:11px sans-serif;fill:#16191d}
+  .s{font:10px sans-serif;fill:#50585f}
+  .h{font:700 12px sans-serif;fill:#003c71}
+  .dna{stroke:#003c71;stroke-width:2;fill:none}
+  .nuc{fill:#dce6f2;stroke:#1a4f8a;stroke-width:1.4}
+  .blob{fill:#eaf1f8;stroke:#1a4f8a;stroke-width:1.6}
+  .coh{fill:none;stroke:#2e7d32;stroke-width:2.4}
+  .ctcf{fill:#fff5d6;stroke:#f2b705;stroke-width:1.8}
+  .tadA{fill:#e7f4ed;stroke:#1a7f52;stroke-width:1.8}
+  .tadB{fill:#f2efe6;stroke:#8a8f96;stroke-width:1.8}
+  .chr{fill:#f7e4e2;stroke:#b3261e;stroke-width:2}
+  .ar{stroke:#727a84;stroke-width:1.4;fill:none;marker-end:url(#a)}
+ </style>
+ <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#727a84"/></marker></defs>
+ <rect width="700" height="400" fill="#ffffff"/>
+
+ <!-- 1 이중나선 -->
+ <text class="h" x="58" y="40" text-anchor="middle">double helix</text>
+ <path class="dna" d="M40 60 C70 80 70 100 40 120 C10 140 10 160 40 180"/>
+ <path class="dna" d="M76 60 C46 80 46 100 76 120 C106 140 106 160 76 180"/>
+ <text class="t" x="58" y="204" text-anchor="middle">2 nm</text>
+
+ <!-- 2 nucleosome 사슬 -->
+ <text class="h" x="190" y="40" text-anchor="middle">nucleosome</text>
+ <path class="dna" d="M140 70 H240 M140 110 H240 M140 150 H240"/>
+ <g class="nuc">
+  <circle cx="160" cy="70" r="12"/><circle cx="196" cy="70" r="12"/><circle cx="232" cy="70" r="12"/>
+  <circle cx="160" cy="110" r="12"/><circle cx="196" cy="110" r="12"/><circle cx="232" cy="110" r="12"/>
+  <circle cx="160" cy="150" r="12"/><circle cx="196" cy="150" r="12"/><circle cx="232" cy="150" r="12"/>
+ </g>
+ <text class="t" x="190" y="204" text-anchor="middle">11 nm, 147 bp each</text>
+
+ <!-- 3 불규칙 뭉침 -->
+ <text class="h" x="324" y="40" text-anchor="middle">irregular clutch</text>
+ <ellipse class="blob" cx="324" cy="110" rx="52" ry="50"/>
+ <g class="nuc">
+  <circle cx="304" cy="88" r="10"/><circle cx="338" cy="92" r="10"/><circle cx="312" cy="116" r="10"/>
+  <circle cx="344" cy="124" r="10"/><circle cx="320" cy="142" r="10"/><circle cx="294" cy="122" r="10"/>
+ </g>
+ <text class="t" x="324" y="204" text-anchor="middle">tens of nm</text>
+ <text class="s" x="324" y="220" text-anchor="middle">no regular 30 nm fiber</text>
+
+ <!-- 4 loop + cohesin + CTCF -->
+ <text class="h" x="470" y="40" text-anchor="middle">loop extrusion</text>
+ <path class="dna" d="M412 150 H532"/>
+ <path class="coh" d="M436 150 C446 86 500 86 510 150"/>
+ <circle class="coh" cx="473" cy="104" r="13"/>
+ <text class="s" x="473" y="90" text-anchor="middle">cohesin</text>
+ <polygon class="ctcf" points="428,150 444,150 436,136"/>
+ <polygon class="ctcf" points="502,150 518,150 510,136"/>
+ <text class="t" x="436" y="170" text-anchor="middle">CTCF</text>
+ <text class="t" x="510" y="170" text-anchor="middle">CTCF</text>
+ <text class="t" x="470" y="204" text-anchor="middle">10 kb – 1 Mb</text>
+
+ <!-- 5 TAD -->
+ <text class="h" x="612" y="40" text-anchor="middle">TAD</text>
+ <rect class="tadA" x="576" y="64" width="40" height="40"/>
+ <rect class="tadB" x="616" y="104" width="52" height="52"/>
+ <text class="s" x="596" y="88" text-anchor="middle">A</text>
+ <text class="s" x="642" y="134" text-anchor="middle">B</text>
+ <text class="t" x="612" y="204" text-anchor="middle">0.1 – 5 Mb</text>
+
+ <!-- 아래: 구획과 염색체 -->
+ <path class="ar" d="M96 120 H132"/>
+ <path class="ar" d="M250 110 H268"/>
+ <path class="ar" d="M382 115 H406"/>
+ <path class="ar" d="M540 130 H570"/>
+
+ <text class="h" x="200" y="266" text-anchor="middle">A / B compartments</text>
+ <ellipse cx="200" cy="320" rx="96" ry="52" fill="#ffffff" stroke="#727a84" stroke-width="1.6"/>
+ <circle class="tadA" cx="166" cy="306" r="18"/>
+ <circle class="tadA" cx="200" cy="330" r="16"/>
+ <circle class="tadB" cx="246" cy="300" r="20"/>
+ <circle class="tadB" cx="250" cy="344" r="16"/>
+ <text class="s" x="180" y="310" text-anchor="middle">A</text>
+ <text class="s" x="246" y="304" text-anchor="middle">B</text>
+ <text class="t" x="200" y="388" text-anchor="middle">tens of Mb</text>
+
+ <text class="h" x="480" y="266" text-anchor="middle">chromosome territory</text>
+ <ellipse cx="480" cy="320" rx="110" ry="54" fill="#ffffff" stroke="#727a84" stroke-width="1.6"/>
+ <ellipse class="chr" cx="438" cy="312" rx="36" ry="28"/>
+ <ellipse class="chr" cx="516" cy="330" rx="40" ry="30"/>
+ <text class="s" x="438" y="316" text-anchor="middle">chr A</text>
+ <text class="s" x="516" y="334" text-anchor="middle">chr B</text>
+ <text class="t" x="480" y="388" text-anchor="middle">µm scale</text>
+</svg>
