@@ -39,6 +39,7 @@ for f in sorted(glob.glob(PAT)):
             abrupt+=1; bad.append(head.strip()[:38])
     if bad: rows.append((lid,len(parts),len(bad),bad))
 rows.sort(key=lambda r:-r[2])
-print(f"전체 절 {tot}개 중 앞과 잇는 표현이 없는 절 {abrupt}개 ({abrupt/tot*100:.0f}%)\n")
+print(f"전체 절 {tot}개 중 앞과 잇는 표현이 없는 절 {abrupt}개"
+      + (f" ({abrupt/tot*100:.0f}%)" if tot else " — 대상 없음") + "\n")
 for lid,n,b,bad in rows[:18]:
     print(f"{lid}  {b}/{n}절  → {' / '.join(bad[:4])}")
