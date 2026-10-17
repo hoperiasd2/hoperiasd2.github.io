@@ -62,6 +62,8 @@ Type I–IV의 기능은 서로 교환 가능한 목록이 아니다. Bone에서
 같은 이유로 세 가닥 사이를 묶는 수소결합도 구조를 요구한다. 사슬이 일정한 각도로 꼬여 있어야 결합할 짝이 매번 같은 간격으로 만나므로, 아무 서열이나 이 구조를 만들지 못한다. **반복되는 규칙적 서열만이 규칙적 구조를 만든다**는 원리가 여기서 드러나며, 다음 절의 Gly–X–Y 반복이 바로 그 규칙이다.
 
 @sec 3. Gly–X–Y 반복과 collagen triple helix
+앞 절에서 조직마다 필요한 기계적 성질이 다르고 그것을 서로 다른 분자가 맡는다는 것을 보았다. 그러면 **collagen은 어떤 구조이길래 당겨도 늘어나지 않는가.** 답은 세 가닥이 서로 꼬인 구조에 있고, 그 구조가 서열에 조건을 건다.
+
 **Collagen에는 왜 매 세 번째 자리에 glycine이 반복되는가?** 세 polypeptide α-chain이 함께 만든 triple helix의 좁은 중심에서 작은 side chain이 필요하다. Glycine의 side chain은 hydrogen이어서 이 공간을 채울 수 있다. 반복 sequence의 X에는 proline, Y에는 hydroxyproline이 자주 존재하며 chain conformation과 triple-helix stability에 기여한다. 여기서 collagen α-chain이라는 이름은 그 사슬이 일반적인 α-helix라는 뜻이 아니다. [T4, PDF 105–106]
 
 Hydroxyproline과 hydroxylysine은 먼저 표준 proline·lysine residue가 polypeptide에 편입된 뒤 효소 작용으로 생성되는 modified residue다. 별도의 표준 codon이 hydroxyproline을 직접 삽입한다는 설명을 쓰지 않는다. Hydroxylation의 정도와 위치는 folding과 matrix maturation에 영향을 주므로 DNA sequence의 정상 여부만으로 mature collagen의 정상성을 보장할 수 없다.
@@ -77,6 +79,8 @@ Hydroxyproline과 hydroxylysine은 먼저 표준 proline·lysine residue가 poly
 >> Glycine 치환, hydroxylation 결손, extracellular cross-link 결손은 서로 다른 지점의 장애다. 세 경우 모두 connective tissue의 integrity를 낮출 수 있지만 원인 효소와 보충해야 할 요소가 같지는 않다.
 
 @sec 4. Rough ER에서 procollagen이 만들어지는 과정
+앞 절에서 collagen의 구조와 그 구조가 요구하는 서열 규칙을 보았다. 그런데 그런 구조가 저절로 생기지는 않는다. 세 가닥이 제대로 꼬이려면 정해진 순서로 여러 처리를 거쳐야 하고, 그 처리의 상당 부분이 **세포 안에서** 끝나야 한다. 이 절은 그 세포 안 과정을 따라간다. 뒤에서 볼 질환의 대부분이 이 과정의 어느 단계가 막혀 생긴다.
+
 **Collagen은 처음부터 세포 밖에서 조립되는가?** Prepro-α-chain의 signal sequence는 nascent chain을 rough endoplasmic reticulum(rough ER)로 향하게 하고, signal peptide가 제거되면 pro-α-chain이 된다. Rough ER lumen에서 특정 proline·lysine의 hydroxylation과 hydroxylysine의 glycosylation이 이루어지며, 세 chain이 alignment된 뒤 triple-helical procollagen을 형성한다. Procollagen은 terminal propeptide를 유지한 precursor다. [T4, PDF 106–110]
 
 **Intracellular collagen processing의 단계와 위치**
@@ -92,6 +96,8 @@ Hydroxyproline과 hydroxylysine은 먼저 표준 proline·lysine residue가 poly
 Hydroxylation은 α-ketoglutarate-dependent oxygenase chemistry와 연결되며 ascorbate는 iron이 catalytic cycle에서 기능할 상태를 유지하는 데 기여한다. Collagen의 α-chain을 직접 공급하는 역할은 아니다. 위 단계 순서는 precursor formation과 folding을 이해하기 위한 설명이며 실제 세포에서는 chain synthesis·modification·quality control이 시간적으로 연결된다. 기능하는 collagen을 만들려면 충분한 전사뿐 아니라 이 processing과 transport가 필요하다.
 
 @sec 5. Extracellular cleavage와 copper-dependent cross-linking
+앞 절에서 세포 안의 과정이 끝나 procollagen이 분비되는 데까지 왔다. 그런데 분비된 것은 아직 완성품이 아니다. 완성된 섬유를 세포 안에서 만들면 세포 자신이 터지므로, 세포는 **일부러 미완성 상태로 내보내고 밖에서 완성한다.** 이 절은 세포 밖에서 일어나는 마무리 두 단계를 다룬다.
+
 **Procollagen이 분비되면 곧바로 성숙한 collagen fiber인가?** Fibrillar collagen의 precursor는 세포 밖에서 terminal propeptide가 절단되어 fibril assembly가 가능한 형태가 된다. 분자들은 staggered arrangement로 배치되고, lysyl oxidase가 일부 lysine·hydroxylysine을 reactive aldehyde로 바꾼다. 이 aldehyde와 인접 residue 사이의 reaction이 covalent cross-link를 형성하여 조직의 tensile integrity에 기여한다. [T4, PDF 110–111]
 
 **이름이 비슷한 두 효소의 구별**
@@ -106,6 +112,8 @@ Hydroxylation은 α-ketoglutarate-dependent oxygenase chemistry와 연결되며 
 >> Vitamin C와 copper는 모두 connective tissue에 관련되지만 같은 반응의 같은 cofactor가 아니다. Scurvy는 ascorbate 부족으로 hydroxylation과 정상 collagen maturation이 손상되는 과정으로 설명한다. Copper handling 이상에서 lysyl oxidase function이 저하되는 경우에는 extracellular cross-linking을 별도로 본다. 이미 분비된 양과 형성된 fiber의 질을 구별하면 정상 protein abundance가 정상 기계적 성질을 보장하지 않는 이유가 드러난다.
 
 @sec 6. Collagen 손상이 조직별 소견으로 나타나는 이유
+앞의 세 절에서 collagen이 만들어지는 전 과정을 단계별로 따라갔다. 이제 그 지도를 질환에 대 볼 차례다. **어느 단계가 막혔는지가 어떤 증상으로 나타나는지를 정한다.** 병 이름을 외우는 대신 단계와 증상을 연결하면 처음 보는 질환도 추론할 수 있다.
+
 **서로 다른 collagen 질환을 증상 이름만으로 구별해도 되는가?** Scurvy, osteogenesis imperfecta(OI), Ehlers–Danlos syndrome(EDS), Alport syndrome은 손상 지점과 조직 architecture를 연결해 비교한다. OI의 대표적 기전은 type I collagen의 양 또는 구조 이상이며, 일부 glycine substitution은 triple helix의 공간적 조건을 교란한다. EDS는 여러 유전자·processing 단계의 이상을 포함하는 이질적인 질환군이다. 모든 EDS를 하나의 효소 결손으로 정의하지 않는다. [T4, PDF 112–113]
 
 **원인에서 조직 소견까지의 연결**
@@ -122,6 +130,8 @@ Alport syndrome은 *COL4A5* 관련 X-linked 형태와 *COL4A3*/*COL4A4* 관련 a
 ~ 탐구 질문: Collagen의 총량은 정상인데 조직 강도가 낮다면 무엇을 비교할 것인가? Chain modification, fibril organization, cross-link의 양과 위치, turnover를 나누어 측정하면 abundance와 material property를 구별할 수 있다.
 
 @sec 7. Elastin network와 fibrillin의 서로 다른 역할
+여기까지는 당겨도 늘어나지 않는 쪽, 즉 collagen만 보았다. 들어가며에서 말한 두 번째 성질인 **늘어났다가 되돌아오는 성질**은 아직 다루지 않았다. 이 절부터 그쪽으로 넘어간다. 두 단백질을 비교하며 읽으면 구조의 차이가 왜 성질의 차이를 만드는지가 분명해진다.
+
 **Elastin은 collagen의 triple helix를 더 느슨하게 만든 형태인가?** 아니다. Soluble tropoelastin이 extracellular space에 분비되어 glycoprotein microfibril과 연결되고, lysyl oxidase-dependent aldehyde formation과 desmosine 같은 cross-link로 network를 형성한다. Elastin에는 small nonpolar residue와 proline·lysine이 풍부하며 collagen과 같은 Gly–X–Y triple helix를 기능의 기본으로 삼지 않는다. Fibrillin은 microfibril organization에 기여하는 별도 protein이다. [T4, PDF 113–115]
 
 **Elastin과 fibrillin에서의 결손을 나누기**
@@ -135,6 +145,8 @@ Alport syndrome은 *COL4A5* 관련 X-linked 형태와 *COL4A3*/*COL4A4* 관련 a
 Marfan syndrome을 “Elastin gene mutation”으로 자동 설명하면 protein을 잘못 연결한다. 대표적인 분자 연관은 fibrillin-1이며, 조직의 elastic architecture와 signaling 환경이 함께 관련될 수 있다. 같은 arterial wall 손상이라도 collagen의 인장 지지, elastin의 recoil, microfibril의 organization을 구별해서 비교한다.
 
 @sec 8. α1-Antitrypsin과 protease–antiprotease balance
+앞 절까지는 기질을 **만드는** 쪽이었다. 그런데 조직이 건강하려면 만드는 일만으로는 부족하다. 기질은 끊임없이 분해되고 다시 만들어지며, 그 둘의 균형이 유지되어야 한다. 분해 쪽이 과해지면 정상적으로 만든 기질도 무너진다. 이 절은 그 균형을 지키는 장치와 그것이 깨졌을 때의 결과를 다룬다.
+
 **정상적으로 생성된 matrix도 분해 조절이 깨지면 손상되는가?** Neutrophil elastase는 extracellular protein을 분해할 수 있으며, α1-antitrypsin(AAT)은 그 activity를 억제하는 protease inhibitor다. AAT는 주로 간에서 합성되어 분비되므로 간의 protein handling이 폐의 보호 능력에 영향을 준다. 중요한 것은 matrix synthesis만 아니라 degradation과 inhibition의 balance다. [T4, PDF 115–118]
 
 일부 AAT variant는 hepatocyte rough ER에서 misfolding·polymerization·retention을 일으킨다. 이 경우 간에서는 retained abnormal protein의 축적이 문제이고, 혈액과 폐에서는 functional secreted inhibitor가 부족한 것이 문제다. 하나의 변이가 두 장기에 서로 다른 중간 경로로 손상을 줄 수 있다. “모든 장기에서 AAT가 부족해서 손상된다”는 설명은 간내 accumulation을 놓친다.
@@ -149,6 +161,8 @@ Marfan syndrome을 “Elastin gene mutation”으로 자동 설명하면 protein
 >> 간내 retention은 toxic accumulation, 폐의 inhibitor 부족은 loss of protection으로 나눠 설명한다. Smoking과 환경 노출은 위험을 더할 수 있다. 일부 heterozygote도 smoking에 따라 lung disease risk가 높아질 수 있으므로 heterozygote는 언제나 완전히 보호된다는 일반화를 피한다. [C2] 유전형·단백질 농도·기능·노출은 서로 다른 정보다.
 
 @sec 9. Matrix의 합성·성숙·분해를 분리하는 증례 해석
+앞 절들에서 기질의 합성, 성숙, 분해를 각각 보았다. 마지막으로 그 셋을 한자리에 놓고 **증례에서 어느 단계의 문제인지 가려내는 연습**을 한다. 실제 진료에서 주어지는 것은 단계의 이름이 아니라 검사 수치와 소견이므로, 그것을 단계로 되돌리는 훈련이 필요하다.
+
 > **교육용 증례** 환자 기록이 아닌 비교 연습이다. 사례 A는 제한적인 식사와 잇몸 출혈·상처 회복 저하, 사례 B는 어린 시절부터 반복된 fracture, 사례 C는 emphysema와 간내 AAT polymer의 관찰을 가진다고 가정한다. A에서는 cofactor-dependent collagen processing, B에서는 collagen I의 양·구조, C에서는 AAT secretion·retention과 elastase inhibition을 각각 우선 연결한다. 증상만으로 확정 진단을 내리는 것이 아니라 경쟁 기전을 비교하는 연습이다.
 
 진단 설명은 낮은 plasma protein과 높은 enzyme activity의 의미도 구별해야 한다. AAT plasma concentration은 secretion과 clearance의 영향을 받고, 정상 concentration에서도 inhibitor function이 충분한지는 별도 질문이다. Collagen의 총량도 hydroxylation·cross-linking·fiber organization을 대신 측정하지 않는다. Assay가 어떤 분자 상태를 반영하는지 확인해야 정상값으로 보이는 결과 뒤의 기능 손상을 읽을 수 있다.
