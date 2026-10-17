@@ -1,16 +1,551 @@
 <!DOCTYPE html>
-<html lang="ko">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>식이지질의 소화·흡수·운반 · M02-W07-L01</title>
-<meta name="description" content="식이지질의 소화·흡수·운반">
-<link rel="stylesheet" href="../../../../assets/site.css">
-<link rel="stylesheet" href="../../../../assets/lesson.css">
-</head>
-<body>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>M02-W07-L01 식이지질의 소화·흡수·운반 [15장]</title><meta name="description" content="식이지질의 소화·흡수·운반 [15장]: 구조에서 생리 기능과 질환까지"><style data-source="site.css + lesson.css snapshot 2026-10-17">/* 의생명과학 교육과정 — 공통 스타일
+   색은 :root 토큰으로만 쓰고 다크 모드에서 재정의한다. */
 
-<header class="masthead">
+:root {
+  --navy: #003c71;
+  --navy-700: #00294e;
+  --chrome: #f2b705;
+  --ink: #16191d;
+  --ink-2: #4a5159;
+  --ink-3: #727a84;
+  --line: #dde2e8;
+  --bg: #f6f8fa;
+  --card: #ffffff;
+  --accent-soft: #eaf1f8;
+  --ok: #1a7f52;
+  --ok-soft: #e7f4ed;
+  --warn: #9a6700;
+  --warn-soft: #fdf5e3;
+  --radius: 10px;
+  --wrap: 1180px;
+  --mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+  --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo",
+    "Noto Sans KR", "Malgun Gothic", sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --navy: #8fc3f5;
+    --navy-700: #b9d9fb;
+    --chrome: #f2b705;
+    --ink: #e7eaee;
+    --ink-2: #b2bac4;
+    --ink-3: #868f9a;
+    --line: #2b3138;
+    --bg: #14171b;
+    --card: #1b1f24;
+    --accent-soft: #1e2833;
+    --ok: #5dd3a0;
+    --ok-soft: #16271f;
+    --warn: #e3b341;
+    --warn-soft: #2a2416;
+  }
+}
+:root[data-theme="dark"] {
+  --navy: #8fc3f5;
+  --navy-700: #b9d9fb;
+  --ink: #e7eaee;
+  --ink-2: #b2bac4;
+  --ink-3: #868f9a;
+  --line: #2b3138;
+  --bg: #14171b;
+  --card: #1b1f24;
+  --accent-soft: #1e2833;
+  --ok: #5dd3a0;
+  --warn: #e3b341;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.75;
+  -webkit-text-size-adjust: 100%;
+}
+
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 16px; }
+.wrap--narrow { max-width: 860px; }
+
+a { color: var(--navy); }
+a:hover { color: var(--navy-700); }
+
+/* ---- 머리글 ---- */
+.masthead {
+  background: #003c71;
+  border-bottom: 3px solid var(--chrome);
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+.masthead .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 52px;
+}
+.masthead a.brand {
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  letter-spacing: .01em;
+}
+.masthead nav { display: flex; gap: 16px; flex-wrap: wrap; }
+.masthead nav a { color: #cfe0f0; text-decoration: none; font-size: 14px; }
+.masthead nav a:hover { color: #fff; }
+
+/* ---- 이동 경로 ---- */
+.crumb {
+  font-size: 13px;
+  color: var(--ink-3);
+  padding: 14px 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+}
+.crumb a { color: var(--ink-2); text-decoration: none; }
+.crumb a:hover { color: var(--navy); text-decoration: underline; }
+.crumb span[aria-hidden] { color: var(--ink-3); }
+
+/* ---- 표제 ---- */
+.hero {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-left: 5px solid var(--navy);
+  border-radius: var(--radius);
+  padding: 26px 28px;
+  margin: 16px 0 24px;
+}
+.hero .eyebrow {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  margin: 0 0 8px;
+}
+.hero h1 { margin: 0 0 10px; font-size: 27px; line-height: 1.35; }
+.hero .en { color: var(--ink-3); font-size: 14px; margin: 0 0 12px; }
+.hero p.lede { margin: 0; color: var(--ink-2); max-width: 70ch; }
+
+h2 {
+  font-size: 20px;
+  margin: 34px 0 14px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--line);
+}
+h3 { font-size: 17px; margin: 24px 0 10px; }
+
+/* ---- 카드 격자 ---- */
+.grid { display: grid; gap: 14px; }
+.grid--modules { grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); }
+.grid--weeks { grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); }
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 18px 20px;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  transition: border-color .12s, transform .12s;
+}
+a.card:hover { border-color: var(--navy); transform: translateY(-1px); }
+.card__no {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--chrome);
+  font-weight: 700;
+  letter-spacing: .08em;
+}
+.card__title { font-weight: 700; margin: 4px 0 2px; }
+.card__en { font-size: 13px; color: var(--ink-3); }
+.card__meta { font-size: 13px; color: var(--ink-2); margin-top: 10px; }
+
+/* ---- 진행 막대 ---- */
+.bar { height: 5px; background: var(--line); border-radius: 3px; overflow: hidden; margin-top: 10px; }
+.bar > i { display: block; height: 100%; background: var(--navy); }
+
+/* ---- 수업 목록 ---- */
+.lessons { list-style: none; margin: 0; padding: 0; }
+.lessons li {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--card);
+  margin-bottom: 8px;
+}
+.lessons a {
+  display: flex;
+  gap: 14px;
+  align-items: baseline;
+  padding: 13px 16px;
+  text-decoration: none;
+  color: inherit;
+}
+.lessons a:hover { background: var(--accent-soft); }
+.lessons .lid {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--ink-3);
+  white-space: nowrap;
+}
+.lessons .ltitle { flex: 1; min-width: 0; }
+.lessons .lgroup { font-size: 12px; color: var(--ink-3); }
+
+/* ---- 상태 배지 ---- */
+.badge {
+  font-size: 11px;
+  font-family: var(--mono);
+  padding: 2px 8px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  color: var(--ink-2);
+  background: var(--bg);
+  white-space: nowrap;
+}
+.badge--design { color: var(--ink-3); }
+.badge--draft { color: var(--warn); border-color: var(--warn); background: var(--warn-soft); }
+.badge--review { color: var(--navy); border-color: var(--navy); background: var(--accent-soft); }
+.badge--done {
+  color: var(--ok);
+  border-color: var(--ok);
+  background: var(--ok-soft);
+  font-weight: 600;
+}
+
+/* ---- 목록에서 집필 상태를 한눈에 ---- */
+/* 배지만으로는 276줄을 훑을 때 눈에 들어오지 않아 왼쪽에 색 띠를 둔다. */
+.lessons li[data-status] { border-left: 4px solid var(--line); }
+.lessons li[data-status="done"] { border-left-color: var(--ok); }
+.lessons li[data-status="draft"] { border-left-color: var(--warn); }
+.lessons li[data-status="review"] { border-left-color: var(--navy); }
+.lessons li[data-status="design"] { border-left-color: var(--line); }
+.lessons li[data-status="done"] .ltitle { font-weight: 600; }
+
+.filters--status { margin-top: -4px; }
+.filters--status button[data-filter-status="done"][aria-pressed="true"] {
+  border-color: var(--ok);
+  color: var(--ok);
+}
+
+/* ---- 검색 ---- */
+.search {
+  width: 100%;
+  padding: 12px 14px;
+  font-size: 15px;
+  font-family: inherit;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--card);
+  color: var(--ink);
+}
+.search:focus { outline: 2px solid var(--navy); outline-offset: 1px; }
+.filters { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 18px; }
+.filters button {
+  font: inherit;
+  font-size: 13px;
+  padding: 6px 13px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: var(--card);
+  color: var(--ink-2);
+  cursor: pointer;
+}
+.filters button[aria-pressed="true"] { background: var(--navy); color: #fff; border-color: var(--navy); }
+.count { font-size: 13px; color: var(--ink-3); margin: 0 0 12px; }
+
+/* ---- 안내 상자 ---- */
+.callout {
+  background: var(--accent-soft);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--navy);
+  border-radius: var(--radius);
+  padding: 14px 18px;
+  margin: 18px 0;
+  font-size: 15px;
+}
+.callout--warn { border-left-color: var(--chrome); }
+
+/* ---- 이전·다음 ---- */
+.pager {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 36px 0 12px;
+  border-top: 1px solid var(--line);
+  padding-top: 16px;
+  font-size: 14px;
+}
+.pager a { text-decoration: none; }
+.pager span { color: var(--ink-3); }
+
+/* ---- 표 ---- */
+table { border-collapse: collapse; width: 100%; margin: 14px 0; font-size: 15px; }
+th, td { border: 1px solid var(--line); padding: 8px 11px; text-align: left; vertical-align: top; }
+th { background: var(--accent-soft); font-weight: 700; }
+
+/* ---- 꼬리말 ---- */
+.foot {
+  margin-top: 56px;
+  padding: 22px 16px 40px;
+  border-top: 1px solid var(--line);
+  color: var(--ink-3);
+  font-size: 13px;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 640px) {
+  .hero { padding: 20px; }
+  .hero h1 { font-size: 22px; }
+  .lessons a { flex-wrap: wrap; gap: 6px 12px; }
+}
+
+@media print {
+  .masthead, .filters, .search, .pager, .foot { display: none; }
+  body { background: #fff; font-size: 11pt; }
+  .card, .hero { border: 1px solid #ccc; break-inside: avoid; }
+}
+
+/* 수업 본문 전용 스타일. site.css의 토큰을 그대로 쓴다. */
+
+.lesson { font-size: 16.5px; }
+.lesson p { margin: 0 0 14px; }
+.lesson ul, .lesson ol { margin: 0 0 16px; padding-left: 22px; }
+.lesson li { margin-bottom: 7px; }
+.lesson li > ul { margin: 7px 0 4px; }
+.lesson code {
+  font-family: var(--mono);
+  font-size: .9em;
+  background: var(--accent-soft);
+  padding: 1px 5px;
+  border-radius: 4px;
+}
+.lesson section { scroll-margin-top: 70px; }
+
+/* 슬라이드 내려받기 */
+.dl { margin: 0 0 24px; }
+.dlbtn {
+  display: inline-block;
+  padding: 9px 18px;
+  border: 1px solid var(--navy);
+  border-radius: var(--radius);
+  color: var(--navy);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 700;
+}
+.dlbtn:hover { background: var(--navy); color: #fff; }
+
+/* 질문과 답 */
+.lesson p.q, .lesson p.a {
+  border-radius: var(--radius);
+  padding: 13px 17px;
+  margin: 0 0 12px;
+}
+.lesson p.q {
+  background: var(--accent-soft);
+  border-left: 4px solid var(--navy);
+}
+.lesson p.a {
+  background: rgba(242, 183, 5, .13);
+  border-left: 4px solid var(--chrome);
+  font-weight: 600;
+}
+.lesson p.q > span, .lesson p.a > span {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: .1em;
+  margin-right: 10px;
+  vertical-align: 1px;
+  font-weight: 700;
+}
+.lesson p.q > span { color: var(--navy); }
+.lesson p.a > span { color: var(--warn); }
+
+/* 질문 목록 */
+.qlist { margin: 0 0 24px; }
+.qlist li { margin-bottom: 9px; }
+.qlist a { text-decoration: none; }
+.qlist a:hover { text-decoration: underline; }
+
+/* 조건·한계 / 귀결 / 안전 상자 */
+.box {
+  border-radius: var(--radius);
+  padding: 14px 18px;
+  margin: 16px 0;
+  font-size: 15.5px;
+  border: 1px solid var(--line);
+}
+.box > b {
+  display: block;
+  font-size: 11px;
+  font-family: var(--mono);
+  letter-spacing: .1em;
+  margin-bottom: 5px;
+}
+.box--limit { background: var(--accent-soft); border-left: 4px solid var(--navy); }
+.box--limit > b { color: var(--navy); }
+.box--result { background: rgba(242, 183, 5, .1); border-left: 4px solid var(--chrome); }
+.box--result > b { color: var(--warn); }
+.box--safety { background: rgba(242, 183, 5, .14); border-left: 5px solid var(--chrome); }
+.box--safety > b { color: var(--warn); font-size: 12px; }
+.box--safety ul { margin: 6px 0 0; }
+
+/* 표 */
+.tw { overflow-x: auto; margin: 16px 0; }
+.lesson table { font-size: 14.5px; min-width: 520px; }
+.lesson th { white-space: nowrap; }
+
+/* 확인 문항 */
+.quiz { counter-reset: none; }
+.quiz > li { margin-bottom: 18px; }
+.quiz .qq { font-weight: 600; margin-bottom: 8px; }
+.quiz details {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--card);
+  padding: 0 14px;
+}
+.quiz details[open] { padding-bottom: 6px; }
+.quiz summary {
+  cursor: pointer;
+  padding: 9px 0;
+  font-size: 14px;
+  color: var(--navy);
+  font-weight: 700;
+}
+.quiz details p { margin: 4px 0 8px; font-size: 15.5px; }
+
+/* 참고문헌 */
+.ref { font-size: 14.5px; color: var(--ink-2); }
+.ref li { margin-bottom: 8px; }
+
+@media print {
+  .quiz details { border: none; }
+  .quiz details[open] summary { display: none; }
+  .lesson p.q, .lesson p.a, .box, .equation { break-inside: avoid; }
+  .contents { font-size: 13px; background: none; }
+}
+
+/* 그림 */
+.fig { margin: 20px 0; text-align: center; }
+.fig img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: #fff;
+}
+.fig figcaption {
+  font-size: 14px;
+  color: var(--ink-2);
+  margin-top: 9px;
+  text-align: left;
+  line-height: 1.6;
+}
+.fig figcaption > b { color: var(--navy); margin-right: 6px; }
+.fig .credit { color: var(--ink-3); font-size: 13px; }
+
+/* 보강 입력 상자와 외부 링크 그림 */
+.box--notes{border-left:4px solid #f2b705;background:#fffaec}
+.fig--ext img{outline:2px dashed #f2b705;outline-offset:3px}
+.fig .credit{font-size:.82em;color:#8a6300}
+
+/* 페이지에서 직접 고치는 기능 */
+.editbar{position:fixed;right:16px;bottom:16px;z-index:60;display:flex;gap:6px;
+  align-items:center;flex-wrap:wrap;justify-content:flex-end;max-width:min(94vw,520px);
+  padding:8px;border-radius:10px;background:#ffffffee;border:1px solid #c6d2dd;
+  box-shadow:0 2px 12px rgba(0,0,0,.14)}
+.editbar.is-on{background:#fffaecf2;border-color:#f2b705}
+.editbtn{font:inherit;font-size:.86rem;padding:6px 11px;border-radius:7px;cursor:pointer;
+  border:1px solid #003c71;background:#fff;color:#003c71}
+.editbtn:hover{background:#eaf1f8}
+.editbtn--main{background:#003c71;color:#fff;font-weight:700}
+.editbtn--main:hover{background:#00529c}
+.editbtn--warn{border-color:#b3261e;color:#b3261e}
+.editbtn--warn:hover{background:#fbeceb}
+.editcount{font-size:.82rem;color:#8a6300;font-weight:700}
+.editgrp{display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end}
+.editnote{position:fixed;left:16px;bottom:16px;z-index:60;max-width:min(92vw,460px);
+  padding:10px 13px;border-radius:9px;border-left:4px solid #f2b705;background:#16191df2;
+  color:#fff;font-size:.86rem;line-height:1.5;opacity:0;transform:translateY(8px);
+  transition:opacity .18s,transform .18s;pointer-events:none}
+.editnote.is-on{opacity:1;transform:none}
+.editdump{position:fixed;left:16px;bottom:72px;z-index:60;width:min(92vw,560px);height:40vh;
+  font:12px/1.5 monospace;padding:10px;border:2px solid #f2b705;border-radius:8px;background:#fff}
+body.editing [contenteditable]{outline:1px dashed #9fb3c4;outline-offset:3px;border-radius:3px}
+body.editing [contenteditable]:focus{outline:2px solid #003c71;background:#f7fbff}
+body.editing h2{position:relative}
+.memobtn{font:inherit;font-size:.62em;font-weight:400;margin-left:10px;padding:2px 8px;
+  border-radius:6px;cursor:pointer;border:1px dashed #8a6300;background:#fffaec;color:#8a6300;
+  vertical-align:middle}
+.memobtn:hover{background:#f2b705;color:#16191d}
+h2.has-memo::after{content:"메모";font-size:.58em;font-weight:400;margin-left:10px;
+  padding:2px 8px;border-radius:6px;background:#f2b705;color:#16191d;vertical-align:middle}
+.is-edited{background:#fffaec;box-shadow:inset 3px 0 0 #f2b705;padding-left:9px}
+@media print{.editbar,.editnote,.editdump,.memobtn{display:none}}
+.editmodal{position:fixed;inset:0;z-index:70;display:flex;align-items:center;
+  justify-content:center;padding:16px;background:#16191dbf}
+.editmodal__box{width:min(96vw,560px);background:#fff;border-radius:12px;padding:18px 20px;
+  box-shadow:0 8px 32px rgba(0,0,0,.3)}
+.editmodal__box h3{margin:0 0 6px;font-size:1.02rem;color:#003c71}
+.editmodal__box p{margin:0 0 12px;font-size:.84rem;color:#4a5159}
+.editmodal__box textarea{width:100%;font:inherit;font-size:.9rem;line-height:1.55;padding:10px;
+  border:1px solid #c6d2dd;border-radius:8px;resize:vertical;box-sizing:border-box}
+.editmodal__box textarea:focus{outline:2px solid #003c71;border-color:#003c71}
+.editmodal__row{display:flex;gap:8px;justify-content:flex-end;margin-top:12px}
+
+/* 깊이 층위 상자와 수업 사이 연결 */
+.box--step{border-left:4px solid #2e7d32;background:#ecf6ec}
+.box--step>b{color:#1e6b2c}
+.box--front{border-left:4px solid #6b4fa0;background:#f3eff9}
+.box--front>b{color:#5b3a8a}
+a.xref{font-variant-numeric:tabular-nums;white-space:nowrap;text-decoration:none;
+  border-bottom:1px dotted currentColor}
+a.xref:hover{background:#eaf1f8}
+
+/* ---- 본문 목차 ---- */
+/* 평범한 목록으로 두면 본문과 구별되지 않아 긴 수업에서 지나치기 쉽다. */
+.contents {
+  border: 1px solid var(--line);
+  background: var(--bg);
+  border-radius: var(--radius);
+  padding: 16px 22px;
+  margin: 28px 0 36px;
+}
+.contents strong {
+  display: block;
+  font-size: 13px;
+  letter-spacing: .04em;
+  color: var(--ink-2);
+  margin-bottom: 10px;
+}
+.contents .qlist { margin: 0; }
+.contents .qlist li { margin-bottom: 6px; font-size: 15.5px; }
+
+/* ---- 수식 상자 ---- */
+/* @eq 로 적은 줄. 본문 문단과 섞이면 식의 경계가 보이지 않는다. */
+.equation {
+  background: var(--accent-soft);
+  border-left: 3px solid var(--navy);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  padding: 16px 20px;
+  margin: 22px 0;
+  line-height: 2;
+  overflow-wrap: anywhere;
+}
+</style><link rel="stylesheet" href="../../../../assets/site.css"><link rel="stylesheet" href="../../../../assets/lesson.css"></head><body><header class="masthead">
   <div class="wrap">
     <a class="brand" href="../../../../index.html">의생명과학 교육과정</a>
     <nav>
@@ -21,114 +556,26 @@
   </div>
 </header>
 
-<main class="wrap wrap--narrow lesson" data-lesson="M02-W07-L01">
-<nav class="crumb" aria-label="이동 경로"><a href="../../../../index.html">대문</a><span aria-hidden="true">›</span><a href="../../../../curriculum/index.html">전체 수업</a><span aria-hidden="true">›</span><a href="../../index.html">M02</a><span aria-hidden="true">›</span><a href="../index.html">7주차</a><span aria-hidden="true">›</span><span>M02-W07-L01</span></nav>
+<main class="wrap wrap--narrow lesson" data-lesson-id="M02-W07-L01" data-lesson="M02-W07-L01"><nav class="crumb" aria-label="이동 경로"><a href="../../../../index.html">대문</a><span aria-hidden="true">›</span><a href="../../../index.html">전체 수업</a><span aria-hidden="true">›</span><a href="../../index.html">M02</a><span aria-hidden="true">›</span><a href="../index.html">7주차</a><span aria-hidden="true">›</span><span>M02-W07-L01</span></nav><section class="hero"><p class="eyebrow">M02-W07-L01 · 대사생화학 · 지질대사</p><h1>식이지질의 소화·흡수·운반</h1><p class="en"></p></section><section aria-labelledby="objectives"><h2 id="objectives">학습목표</h2><ul><li>중성지방의 구조를 소화 산물과 연결한다.</li><li>유화·가수분해·미셀 형성의 역할을 구별한다.</li><li>장 상피세포에서 재합성과 킬로미크론 형성이 필요한 이유를 설명한다.</li><li>식이지질의 림프·혈액 운반과 조직 이용을 추적한다.</li><li>지방변의 원인을 소화·흡수·운반 단계로 나누어 설명한다.</li></ul></section>
 
-  <section class="hero">
-    <p class="eyebrow">M02-W07-L01 · 대사생화학 · 지질대사</p>
-    <h1>식이지질의 소화·흡수·운반</h1>
-    <p class="en">Digestion, Absorption and Transport of Dietary Lipids</p>
-  </section>
-  <p class="dl"><a class="dlbtn" href="slides.pptx">슬라이드 내려받기 (PPTX)</a></p>
-  <h2>학습목표</h2>
-  <ul><li>지방산을 사슬 길이와 포화도로 분류하고 delta·omega 표기법을 서로 변환한다.</li><li>Triacylglycerol의 구조와 ester 결합의 위치별 성질을 설명한다.</li><li>담즙산염에 의한 emulsification과 mixed micelle 형성이 왜 흡수의 전제 조건인지 설명한다.</li><li>Pancreatic lipase와 colipase의 협동 기전과 내강 소화 산물을 제시한다.</li><li>장 상피세포에서의 재합성과 chylomicron 조립·분비 과정을 순서대로 설명한다.</li><li>지질 소화·흡수 장애의 발생 지점을 구분하고 abetalipoproteinemia와 지용성 비타민 결핍을 기전으로 설명한다.</li></ul>
-  <h2>선수지식</h2>
-  <ul><li><a class="xref" href="../../../../curriculum/M01/W03/L02/index.html">M01-W03-L02</a> 생체막의 구조 — 소수성 상호작용과 amphipathic 분자의 배열</li><li><a class="xref" href="../../../../curriculum/M02/W09/L02/index.html">M02-W09-L02</a> Cholesterol, 담즙산과 steroid 대사 — 담즙산의 합성과 장간 순환</li><li><a class="xref" href="../../../../curriculum/M01/W05/L01/index.html">M01-W05-L01</a> 효소의 작용 — 보조단백질에 의한 효소 활성화</li></ul>
-  <nav class="contents" aria-label="강의 구성"><strong>강의 구성</strong><ol class="qlist"><li><a href="#s1">1. 식이지질의 구성과 소화의 과제</a></li><li><a href="#s2">2. 지방산의 구조와 분류</a></li><li><a href="#s3">3. Triacylglycerol과 그 밖의 식이지질의 구조</a></li><li><a href="#s4">4. 담즙산염에 의한 emulsification과 mixed micelle</a></li><li><a href="#s5">5. Pancreatic lipase와 colipase</a></li><li><a href="#s6">6. 장 상피세포에서의 흡수와 재합성</a></li><li><a href="#s7">7. Chylomicron의 조립, 분비와 혈중 대사</a></li><li><a href="#s8">8. 지질 소화·흡수 장애와 임상적 해석</a></li></ol></nav>
-  <section id="s1">
-  <h2>1. 식이지질의 구성과 소화의 과제</h2>
-  <p>사람이 하루에 먹는 지질은 성인 기준 약 60~150 g이고, 그 가운데 약 90%가 <strong>triacylglycerol</strong>이다. 나머지는 phospholipid, cholesterol과 cholesteryl ester, 그리고 지용성 비타민 A·D·E·K다. 총 섭취 열량의 25~40%가 지질에서 온다.</p>
-  <p>지질은 두 가지 이유로 몸에 필요하다. 첫째, 질량당 에너지 밀도가 가장 높다. Triacylglycerol은 1 g당 약 9 kcal을 내는데, 이는 탄수화물이나 단백질의 약 4 kcal의 두 배가 넘는다. 수화되지 않은 상태로 저장되므로 같은 에너지를 glycogen으로 저장할 때보다 훨씬 가볍다. 둘째, 지질은 에너지원이 아닌 역할도 한다. 세포막의 phospholipid, 신호 전달에 쓰이는 eicosanoid, 그리고 지용성 비타민의 운반체가 모두 식이지질에서 유래한다.</p>
-  <p>문제는 <strong>용해도</strong>다. 소화기관의 내강은 물로 차 있고 소화효소는 물에 녹은 상태로 작동한다. 그런데 triacylglycerol은 전하가 없고 거의 완전히 소수성이어서 물과 섞이지 않고 큰 덩어리로 뭉친다. 큰 덩어리는 표면적이 작으므로 효소가 접근할 수 있는 ester 결합의 수도 적다. 흡수 단계에서도 같은 문제가 반복된다. 장 상피 표면에는 물이 거의 흐르지 않는 <strong>unstirred water layer</strong>가 있어 소수성 분자는 이 층을 통과하지 못한다.</p>
-  <p>그래서 지질 소화·흡수는 다음 네 과제를 차례로 해결하는 과정으로 정리된다.</p>
-  <ul><li>덩어리를 작은 입자로 쪼개 표면적을 늘린다 — <strong>emulsification</strong></li><li>수용성 효소가 계면에서 작동하게 한다 — <strong>pancreatic lipase와 colipase</strong></li><li>소수성 산물을 수용액에 분산시켜 상피 표면까지 나른다 — <strong>mixed micelle</strong></li><li>흡수된 산물을 혈액으로 내보낼 수 있는 입자로 다시 포장한다 — <strong>chylomicron</strong></li></ul>
-  <div class="box box--result"><b>핵심 정리</b> <strong>핵심 정리</strong> 지질 소화의 모든 단계는 하나의 물리화학적 제약에서 나온다. 소수성 물질을 수용성 환경에서 처리해야 한다는 제약이다. 효소 반응보다 계면과 분산 상태를 만드는 과정이 속도를 결정한다.</div>
-  </section>
-  <section id="s2">
-  <h2>2. 지방산의 구조와 분류</h2>
-  <p>지방산은 한쪽 끝에 carboxyl기(-COOH)를 가진 탄화수소 사슬이다. 사람의 지방산은 대부분 탄소 수가 짝수이고, 이는 탄소 두 개 단위로 합성되고 분해되기 때문이다.</p>
-  <p><strong>사슬 길이</strong>에 따라 네 가지로 나눈다. 이 구분은 뒤에서 흡수 경로와 미토콘드리아 진입 방식을 가른다.</p>
-  <div class="tw"><table><thead><tr><th>구분</th><th>탄소 수</th><th>예</th><th>특징</th></tr></thead><tbody><tr><td>Short-chain</td><td>2~4</td><td>acetate, butyrate</td><td>대장 세균의 발효 산물</td></tr><tr><td>Medium-chain</td><td>6~12</td><td>caprylic acid (8:0)</td><td>micelle과 chylomicron 없이 흡수된다</td></tr><tr><td>Long-chain</td><td>14~20</td><td>palmitic acid (16:0), oleic acid (18:1)</td><td>식이지질의 대부분</td></tr><tr><td>Very-long-chain</td><td>20 초과</td><td>lignoceric acid (24:0)</td><td>peroxisome에서 산화된다</td></tr></tbody></table></div>
-  <p><strong>포화도</strong>에 따라서는 이중결합이 없는 <strong>saturated</strong>, 하나인 <strong>monounsaturated</strong>, 둘 이상인 <strong>polyunsaturated</strong>로 나눈다. 표기는 <code>탄소수:이중결합수</code>로 쓴다. Palmitic acid는 16:0, oleic acid는 18:1이다.</p>
-  <p>이중결합의 위치를 적는 방법이 두 가지 있고, 둘을 혼동하지 않아야 한다.</p>
-  <ul><li><strong>Delta 표기</strong>: carboxyl 탄소를 C1로 두고 센다. Oleic acid는 18:1(9)이다.</li><li><strong>Omega(n) 표기</strong>: 사슬 끝의 methyl 탄소에서 센다. Oleic acid는 18:1 n-9이다.</li></ul>
-  <p>같은 분자를 두 방식으로 적은 것이므로 탄소 수를 알면 변환된다. Linoleic acid는 delta 표기로 18:2(9,12)이고 omega 표기로 18:2 n-6이다. 18 − 12 = 6이기 때문이다.</p>
-  <figure class="fig" id="fig-fa-classes"><img src="assets/fig-fa-classes.svg" alt="지방산의 명명과 분류. Delta 표기는 carboxyl 탄소에서, omega 표기는 methyl 말단에서 센다. 사람은 C9보다 methyl 쪽에 이중결합을 넣지 못하므로 n-6과 n-3 계열이 필수지방산이 된다." loading="lazy"><figcaption><b>그림 1</b> 지방산의 명명과 분류. Delta 표기는 carboxyl 탄소에서, omega 표기는 methyl 말단에서 센다. 사람은 C9보다 methyl 쪽에 이중결합을 넣지 못하므로 n-6과 n-3 계열이 필수지방산이 된다.</figcaption></figure>
-  <p><strong>필수지방산</strong>이 생기는 이유는 효소의 한계에 있다. 사람의 desaturase는 carboxyl 쪽에서 C9까지만 이중결합을 넣을 수 있다. 따라서 n-6 위치나 n-3 위치에 이중결합을 가진 지방산은 몸에서 만들 수 없고 식사로 섭취해야 한다.</p>
-  <ul><li><strong>Linoleic acid</strong> (18:2 n-6) — arachidonic acid(20:4 n-6)의 전구체이고, arachidonic acid는 prostaglandin·thromboxane·leukotriene의 재료다.</li><li><strong>alpha-Linolenic acid</strong> (18:3 n-3) — EPA(20:5 n-3)와 DHA(22:6 n-3)의 전구체다.</li></ul>
-  <p>필수지방산이 결핍되면 피부의 비늘 모양 병변, 상처 치유 지연, 성장 지연이 나타난다. 지방을 거의 포함하지 않은 정맥영양을 장기간 받는 환자에서 나타날 수 있어, 필요 열량의 1~2% 이상을 linoleic acid로 공급한다.</p>
-  <p><strong>이중결합의 기하 구조</strong>도 성질을 바꾼다. 천연 불포화지방산의 이중결합은 거의 모두 <strong>cis</strong>형이고, cis 결합은 사슬을 약 30도 꺾는다. 꺾인 사슬은 서로 밀착하지 못하므로 녹는점이 낮아져 상온에서 액체가 된다. 반대로 부분 수소화 과정에서 생기는 <strong>trans</strong> 지방산은 사슬이 다시 곧아져 포화지방산처럼 거동하고, 혈중 LDL을 올리고 HDL을 낮춘다.</p>
-  </section>
-  <section id="s3">
-  <h2>3. Triacylglycerol과 그 밖의 식이지질의 구조</h2>
-  <p><strong>Triacylglycerol</strong>은 glycerol의 hydroxyl기 세 개에 지방산 세 개가 ester 결합으로 붙은 분자다. Glycerol의 탄소에는 입체화학을 고려한 번호인 sn-1, sn-2, sn-3이 붙는다. 세 자리의 지방산은 보통 서로 다르다.</p>
-  <p>중요한 점은 세 ester 결합이 효소에 대해 동등하지 않다는 것이다. <strong>Pancreatic lipase는 sn-1과 sn-3만 끊고 sn-2는 끊지 못한다.</strong> 그래서 내강 소화의 주된 산물이 2-monoacylglycerol이 된다. 이 사실 하나가 뒤의 흡수 과정과 상피세포 안에서의 재합성 경로를 결정한다.</p>
-  <figure class="fig" id="fig-tag-structure"><img src="assets/fig-tag-structure.svg" alt="Triacylglycerol의 구조와 단계적 가수분해. sn-2의 ester 결합은 pancreatic lipase에 저항하므로 내강 소화 산물은 2-monoacylglycerol과 유리지방산 두 분자다." loading="lazy"><figcaption><b>그림 2</b> Triacylglycerol의 구조와 단계적 가수분해. sn-2의 ester 결합은 pancreatic lipase에 저항하므로 내강 소화 산물은 2-monoacylglycerol과 유리지방산 두 분자다.</figcaption></figure>
-  <p>나머지 식이지질도 짧게 정리한다.</p>
-  <ul><li><strong>Phospholipid</strong>: glycerol의 sn-3에 인산과 염기(choline 등)가 붙어 있다. 머리 부분이 전하를 띠어 <strong>amphipathic</strong>이고, 그 때문에 micelle과 lipoprotein의 표면을 이룬다. 하루 섭취량은 2~10 g 정도이고 담즙으로 분비되는 양이 더 많다.</li><li><strong>Cholesterol과 cholesteryl ester</strong>: 식사로 하루 약 300~500 mg을 섭취한다. Ester 형태는 흡수되지 않으므로 먼저 가수분해되어 유리 cholesterol이 되어야 한다.</li><li><strong>지용성 비타민 A·D·E·K</strong>: 자체로는 소화되지 않지만 지방 상(phase)에 녹아 있어 지방이 분산되고 micelle이 만들어질 때 함께 옮겨진다. 따라서 <strong>지방 흡수가 실패하면 비타민 흡수도 함께 실패한다.</strong></li></ul>
-  </section>
-  <section id="s4">
-  <h2>4. 담즙산염에 의한 emulsification과 mixed micelle</h2>
-  <p>위에서 lingual lipase와 gastric lipase가 일부 triacylglycerol을 분해하지만, 두 효소는 산성에서 작동하고 주로 짧은 사슬과 중간 사슬을 기질로 삼아 전체 소화량에서 차지하는 비중은 10~20%에 그친다. 본격적인 소화는 십이지장에서 시작한다.</p>
-  <p>음식의 지방과 아미노산이 십이지장 점막을 자극하면 <strong>cholecystokinin(CCK)</strong>이 분비된다. CCK는 담낭을 수축시켜 담즙을 내보내고 췌장의 소화효소 분비를 촉진하며 위 배출을 늦춘다. 동시에 산성 내용물은 <strong>secretin</strong>을 분비시켜 췌장에서 bicarbonate를 내보내게 하고, 그 결과 내강 pH가 약 6~8로 올라가 pancreatic lipase의 최적 pH에 맞춰진다.</p>
-  <p>담즙에 들어 있는 <strong>담즙산염(bile salt)</strong>이 첫 번째 과제를 해결한다. 담즙산염은 steroid 핵의 한쪽 면에 hydroxyl기가 몰려 있어 평면의 한쪽은 친수성, 다른 쪽은 소수성인 amphipathic 분자다. 이 분자가 지방 덩어리 표면에 붙으면 표면 장력이 떨어지고, 위와 장의 운동으로 생기는 힘에 의해 덩어리가 작은 입자로 쪼개진다. 이것이 <strong>emulsification</strong>이다. 쪼개진 입자는 표면이 담즙산염으로 덮여 있어 다시 뭉치지 않는다.</p>
-  <figure class="fig" id="fig-micelle"><img src="assets/fig-micelle.svg" alt="담즙산염의 두 가지 작용. 큰 지방 덩어리를 작은 입자로 쪼개 계면의 면적을 늘리고(emulsification), 소화 산물을 mixed micelle에 담아 unstirred water layer를 통과시킨다." loading="lazy"><figcaption><b>그림 3</b> 담즙산염의 두 가지 작용. 큰 지방 덩어리를 작은 입자로 쪼개 계면의 면적을 늘리고(emulsification), 소화 산물을 mixed micelle에 담아 unstirred water layer를 통과시킨다.</figcaption></figure>
-  <p>소화가 진행되면 담즙산염은 두 번째 과제를 해결한다. 담즙산염의 농도가 <strong>critical micellar concentration</strong>(약 1~2 mmol/L)을 넘으면 분자들이 모여 <strong>micelle</strong>을 만든다. 식후 십이지장의 담즙산염 농도는 약 5~15 mmol/L여서 이 조건이 쉽게 충족된다. 여기에 소화 산물이 섞여 들어간 것을 <strong>mixed micelle</strong>이라고 한다.</p>
-  <ul><li>겉면: 담즙산염의 친수성 면과 phospholipid의 머리 부분</li><li>안쪽: 2-monoacylglycerol, 유리지방산, cholesterol, lysophospholipid, 지용성 비타민</li></ul>
-  <p>Mixed micelle의 지름은 4~6 nm로 emulsion 입자보다 훨씬 작고, 수용액에 투명하게 분산된다. 그래서 unstirred water layer를 확산으로 통과해 상피 표면까지 소화 산물을 실어 나를 수 있다. <strong>Micelle 형성은 화학 반응이 아니라 용해 상태를 바꾸는 과정</strong>이고, 이 단계가 없으면 소화가 끝난 산물도 흡수되지 않는다.</p>
-  </section>
-  <section id="s5">
-  <h2>5. Pancreatic lipase와 colipase</h2>
-  <p>췌장에서 분비되는 <strong>pancreatic lipase</strong>는 triacylglycerol의 sn-1과 sn-3 ester를 가수분해한다. 능력은 충분하다. 췌장은 하루 소화해야 할 양의 몇 배에 해당하는 lipase를 분비하므로, 분비량이 정상의 10% 이하로 떨어질 때까지는 지방 소화 장애가 나타나지 않는다.</p>
-  <p>문제는 접근이다. Lipase는 물에 녹아 있고 기질은 지방 입자 안에 있으므로 반응은 <strong>계면에서만</strong> 일어난다. 그런데 계면은 이미 담즙산염으로 덮여 있고, 담즙산염은 lipase를 계면에서 밀어낸다.</p>
-  <p>이 모순을 <strong>colipase</strong>가 해결한다. Colipase는 췌장이 procolipase로 분비한 뒤 십이지장에서 trypsin이 잘라 활성화하는 작은 단백질이다. Colipase는 담즙산염으로 덮인 계면에 결합하고, 동시에 lipase와 1:1로 결합한다. 그 결과 lipase가 계면에 고정되어 ester 결합에 접근한다. <strong>Colipase가 없으면 lipase는 활성이 있어도 기질에 도달하지 못한다.</strong></p>
-  <figure class="fig" id="fig-lipase"><img src="assets/fig-lipase.svg" alt="Colipase가 담즙산염으로 덮인 계면에 lipase를 고정한다. 내강 지질 소화에 참여하는 효소들과 그 산물을 함께 정리했다." loading="lazy"><figcaption><b>그림 4</b> Colipase가 담즙산염으로 덮인 계면에 lipase를 고정한다. 내강 지질 소화에 참여하는 효소들과 그 산물을 함께 정리했다.</figcaption></figure>
-  <p>내강에서 작동하는 다른 효소들도 각자의 기질을 처리한다.</p>
-  <div class="tw"><table><thead><tr><th>효소</th><th>기질</th><th>산물</th><th>비고</th></tr></thead><tbody><tr><td>Pancreatic lipase + colipase</td><td>Triacylglycerol의 sn-1, sn-3</td><td>2-monoacylglycerol + 유리지방산 2개</td><td>Colipase 필수</td></tr><tr><td>Cholesterol esterase</td><td>Cholesteryl ester, 2-MAG, 지용성 비타민 ester</td><td>유리 cholesterol + 지방산</td><td>기질 특이성이 넓다</td></tr><tr><td>Phospholipase A2</td><td>Phospholipid의 sn-2</td><td>Lysophospholipid + 지방산</td><td>Trypsin이 활성화, Ca<sup>2+</sup> 필요</td></tr></tbody></table></div>
-  <div class="box box--limit"><b>임상 연계</b> <strong>임상 연계</strong> 체중 감량 약물 <strong>orlistat</strong>은 gastric lipase와 pancreatic lipase를 비가역적으로 억제해 식이지방의 약 30%를 흡수되지 않게 한다. 치료 효과와 부작용이 같은 기전에서 나온다. 흡수되지 않은 지방이 대장으로 넘어가 지방변, 복부 팽만, 대변 급박감을 일으키고, 같은 이유로 지용성 비타민의 흡수가 줄어 보충이 권고된다. 췌장 효소를 억제하면 어떤 일이 생기는지를 약으로 재현한 예다.</div>
-  </section>
-  <section id="s6">
-  <h2>6. 장 상피세포에서의 흡수와 재합성</h2>
-  <p>Mixed micelle이 상피 표면에 닿으면 내용물이 방출되어 세포 안으로 들어간다. 이때 <strong>담즙산염은 흡수되지 않고 내강에 남는다.</strong> 담즙산염은 회장 말단에서 수송체 ASBT를 통해 따로 재흡수되므로, 소화 작용을 끝까지 수행한 뒤에야 회수된다.</p>
-  <p>흡수 방식은 분자에 따라 다르다. 유리지방산과 2-monoacylglycerol은 농도 기울기에 따른 확산으로 들어오며 수송체가 이를 돕는다. Cholesterol은 <strong>NPC1L1</strong>이라는 상피 수송체를 통해 들어오는데, 이 단백질이 약물 ezetimibe의 표적이다. Cholesterol의 흡수율은 식이량의 약 30~50%에 그치고, 식물 sterol은 ABCG5/G8에 의해 다시 내강으로 퍼내어져 거의 흡수되지 않는다.</p>
-  <p>세포 안으로 들어온 유리지방산과 2-monoacylglycerol은 그대로 두면 다시 밖으로 확산해 나간다. 그래서 상피세포는 이들을 즉시 <strong>triacylglycerol로 재합성</strong>한다. 반응은 smooth ER에서 두 단계로 진행된다.</p>
-  <ol class="steps"><li>유리지방산이 acyl-CoA synthetase에 의해 <strong>fatty acyl-CoA</strong>로 활성화된다(ATP 소비).</li><li><strong>MGAT</strong>(monoacylglycerol acyltransferase)가 2-monoacylglycerol에 acyl기를 붙여 diacylglycerol을 만들고, <strong>DGAT</strong>(diacylglycerol acyltransferase)가 한 번 더 붙여 triacylglycerol을 완성한다.</li></ol>
-  <p>이 경로를 <strong>monoacylglycerol pathway</strong>라고 하며, 소장 상피세포가 식후에 쓰는 주 경로다. 간과 지방조직은 glycerol 3-phosphate에서 출발하는 다른 경로를 쓴다. 들어온 cholesterol도 대부분 <strong>ACAT</strong>에 의해 cholesteryl ester로 바뀌어 저장 가능한 형태가 된다.</p>
-  <p><strong>사슬 길이에 따른 예외</strong>가 여기서 중요하다. Short-chain과 medium-chain 지방산은 물에 어느 정도 녹으므로 micelle을 필요로 하지 않고, 상피세포에서 재합성되지도 않는다. 이들은 알부민에 결합한 상태로 <strong>문맥을 통해 곧바로 간으로</strong> 간다. 이 때문에 지질 흡수 장애 환자에게 medium-chain triacylglycerol(MCT)을 투여하면 담즙산염이나 chylomicron 경로를 우회해 열량을 공급할 수 있다.</p>
-  </section>
-  <section id="s7">
-  <h2>7. Chylomicron의 조립, 분비와 혈중 대사</h2>
-  <p>재합성된 triacylglycerol은 세포 안에 쌓아 둘 수 없으므로 혈액으로 내보내야 한다. 그러나 지질 덩어리를 그대로 혈액에 내보낼 수는 없으므로 단백질과 phospholipid로 표면을 감싼 입자, 즉 <strong>lipoprotein</strong>으로 포장한다. 소장이 만드는 lipoprotein이 <strong>chylomicron</strong>이다.</p>
-  <p>조립은 소포체에서 일어나고 두 요소가 반드시 필요하다.</p>
-  <ul><li><strong>apoB-48</strong>: chylomicron의 구조 단백질이다. <em>APOB</em> 유전자는 간과 소장에서 같은 전사체로 전사되지만, 소장에서는 RNA editing으로 정지 코돈이 만들어져 전장 apoB-100의 48%에 해당하는 짧은 단백질이 만들어진다. 이 때문에 apoB-48에는 LDL receptor가 인식하는 부위가 없다.</li><li><strong>MTP</strong>(microsomal triglyceride transfer protein): 소포체 내강에서 apoB-48에 지질을 옮겨 붙여 입자의 중심을 채운다.</li></ul>
-  <p>완성된 입자는 지름 75~1,200 nm로 모든 lipoprotein 가운데 가장 크고 밀도가 낮으며, 질량의 약 85%가 triacylglycerol이다. Golgi를 거친 뒤 기저측면으로 exocytosis되는데, <strong>크기가 커서 모세혈관 벽을 통과하지 못하므로 림프관(lacteal)으로 들어간다.</strong> 림프는 흉관을 거쳐 왼쪽 쇄골하정맥에서 혈액에 합류한다. 즉 chylomicron은 문맥과 간을 거치지 않고 전신 순환에 먼저 도달한다.</p>
-  <figure class="fig" id="fig-chylomicron"><img src="assets/fig-chylomicron.svg" alt="장 상피세포에서의 재합성과 chylomicron의 조립·분비. apoB-48과 MTP가 조립에 필수이고, 입자는 림프를 거쳐 혈액으로 들어간 뒤 apoC-II를 받아 lipoprotein lipase의 기질이 된다. 짧은·중간 사슬 지방산은 이 경로를 우회한다." loading="lazy"><figcaption><b>그림 5</b> 장 상피세포에서의 재합성과 chylomicron의 조립·분비. apoB-48과 MTP가 조립에 필수이고, 입자는 림프를 거쳐 혈액으로 들어간 뒤 apoC-II를 받아 lipoprotein lipase의 기질이 된다. 짧은·중간 사슬 지방산은 이 경로를 우회한다.</figcaption></figure>
-  <p>혈액에 들어간 chylomicron은 HDL로부터 <strong>apoC-II</strong>와 <strong>apoE</strong>를 받아 성숙한다. apoC-II는 모세혈관 내피 표면의 <strong>lipoprotein lipase(LPL)</strong>를 활성화하고, LPL이 중심부의 triacylglycerol을 가수분해해 지방산을 근육과 지방조직에 내준다. 지질을 잃은 입자는 <strong>chylomicron remnant</strong>가 되고, apoE를 리간드로 간에서 제거된다. Chylomicron의 혈중 반감기는 1시간 미만이므로 <strong>정상적인 공복 혈액에는 chylomicron이 없다.</strong> 공복 검사에서 유백색 혈청이 보이면 이 제거 경로의 장애를 의심한다.</p>
-  <div class="box box--limit"><b>임상 연계</b> <strong>임상 연계</strong> <strong>Familial chylomicronemia syndrome</strong>은 LPL 또는 그 보조인자(apoC-II, GPIHBP1, LMF1, apoA-V)의 결함으로 chylomicron이 제거되지 않는 질환이다. 공복 triacylglycerol이 흔히 1,000 mg/dL을 넘고 11 mmol/L(약 1,000 mg/dL) 이상에서 급성 췌장염의 위험이 급격히 올라간다. 피부에 eruptive xanthoma가 생기고 혈청이 유백색을 띤다. Statin은 효과가 없고, 치료의 중심은 지방 섭취를 총 열량의 10~15% 이하로 제한하면서 담즙산염과 chylomicron 경로를 우회하는 MCT로 열량을 보충하는 것이다. 작용 지점을 알면 왜 식이 제한이 일차 치료인지가 설명된다.</div>
-  </section>
-  <section id="s8">
-  <h2>8. 지질 소화·흡수 장애와 임상적 해석</h2>
-  <p>지방변(steatorrhea)은 대변 지방 배출이 하루 7 g을 넘는 상태로 정의한다. 원인은 앞 절들에서 다룬 네 단계 중 어디가 막혔는지로 분류하면 명확해진다.</p>
-  <div class="tw"><table><thead><tr><th>막힌 단계</th><th>대표 원인</th><th>특징</th></tr></thead><tbody><tr><td>담즙산염 공급</td><td>폐쇄성 담도질환, 심한 간질환, 회장 절제 후 담즙산 풀 고갈</td><td>Micelle 형성 실패, 지용성 비타민 결핍이 두드러진다</td></tr><tr><td>췌장 효소</td><td>만성 췌장염, cystic fibrosis, 췌장암에 의한 췌관 폐쇄</td><td>효소 보충으로 교정된다</td></tr><tr><td>상피 흡수면</td><td>Celiac disease, 열대성 흡수불량, 광범위 소장 절제</td><td>지질 외에 다른 영양소 흡수도 함께 떨어진다</td></tr><tr><td>입자 조립·배출</td><td>Abetalipoproteinemia, chylomicron retention disease</td><td>상피세포 안에 지질이 쌓이고 혈중 지질이 낮다</td></tr></tbody></table></div>
-  <p><strong>Abetalipoproteinemia</strong>가 조립 단계 장애의 전형이다. 원인 유전자는 *MTTP*로 MTP를 만들며, 상염색체 열성으로 유전된다. MTP가 없으면 apoB에 지질이 실리지 않으므로 소장은 chylomicron을, 간은 VLDL을 만들 수 없다.</p>
-  <p>결과는 두 방향에서 나타난다. <strong>축적</strong> 측면에서는 소장 상피세포 안에 지질이 쌓여 조직검사에서 상피가 지질로 채워진 모습을 보이고, 흡수되지 못한 지방이 지방변을 만든다. <strong>결핍</strong> 측면에서는 혈중 triacylglycerol과 cholesterol이 매우 낮고 apoB를 가진 lipoprotein(chylomicron, VLDL, LDL)이 혈액에서 사실상 검출되지 않는다.</p>
-  <p>가장 중요한 임상 결과는 <strong>vitamin E 결핍</strong>이다. Vitamin E는 lipoprotein의 중심부에 실려 운반되므로 운반체가 없으면 조직에 도달하지 못한다. 그 결과 적혈구막이 산화 손상을 받아 가장자리가 톱니처럼 변한 <strong>acanthocyte</strong>가 나타나고, 신경 축삭이 손상되어 소아기부터 척수소뇌성 보행 장애와 심부 감각 소실이 진행한다. 망막에서는 <strong>retinitis pigmentosa</strong>가 생긴다. 치료는 지방 섭취 제한과 함께 <strong>고용량 지용성 비타민, 특히 vitamin E를 대량 경구 투여</strong>하는 것이다. 운반체가 없어도 농도 기울기를 크게 만들면 일부가 수동적으로 흡수되기 때문이다.</p>
-  <div class="box box--limit"><b>임상 연계</b> <strong>임상 연계</strong> <strong>Cystic fibrosis</strong>에서는 <em>CFTR</em> 결함으로 췌관의 분비물이 점성이 높아져 췌관이 막히고 췌장 외분비 기능이 떨어진다. 효소와 bicarbonate가 모두 부족하므로 지방 소화가 두 가지 이유로 실패한다. 효소 자체가 적고, 내강 pH가 낮아 남은 lipase마저 변성된다. 치료는 식사와 함께 복용하는 췌장 효소 제제인데, 산에 녹지 않는 코팅을 하고 위산 분비 억제제를 함께 쓰는 이유가 여기에 있다. 지용성 비타민은 수용성 제형으로 보충한다.</div>
-  <p>마지막으로 검사 해석의 요점을 정리한다. 대변 지방 정량은 민감하지만 번거롭고, 대변 elastase는 췌장 외분비 기능에 특이적이다. 혈중 지질이 <strong>낮은</strong> 지방변 환자는 흡수나 조립 단계의 장애를, 혈중 triacylglycerol이 <strong>매우 높은</strong> 환자는 chylomicron 제거 단계의 장애를 가리킨다. 같은 증상도 경로의 어느 지점이 막혔는지에 따라 검사 소견이 반대 방향으로 나타난다.</p>
-  <div class="box box--result"><b>핵심 정리</b> <strong>핵심 정리</strong> 식이지질은 emulsification, 내강 가수분해, micelle을 통한 운반, chylomicron으로의 재포장이라는 네 단계를 거친다. 각 단계에 담즙산염, pancreatic lipase와 colipase, mixed micelle, apoB-48과 MTP가 대응하므로, 어느 단계가 막혔는지 알면 어떤 물질이 쌓이고 어떤 물질이 모자라는지도 정해진다.</div>
-  </section>
-  <h2>확인 문항</h2>
-  <ol class="quiz"><li><p class="qq">Pancreatic lipase는 활성이 충분한데도 colipase가 없으면 지방을 소화하지 못한다. 그 이유를 계면의 성질로 설명하라.</p><details><summary>해설</summary><p>Triacylglycerol은 물에 녹지 않으므로 lipase 반응은 지방 입자와 수용액이 만나는 계면에서만 일어난다. 그런데 그 계면은 emulsification을 수행한 담즙산염으로 이미 덮여 있고, 담즙산염은 lipase를 계면에서 밀어낸다. Colipase는 담즙산염으로 덮인 계면에 결합하는 동시에 lipase와 1:1 복합체를 이루어 lipase를 계면에 고정한다. 즉 colipase가 해결하는 것은 효소의 촉매 능력이 아니라 기질에 대한 접근이다.</p></details></li><li><p class="qq">담즙산염은 소화 산물을 상피세포까지 나른 뒤 함께 흡수되지 않는다. 이 사실이 지질 소화에서 가지는 의미를 설명하라.</p><details><summary>해설</summary><p>담즙산염은 접합되어 거의 완전히 이온화된 상태이므로 막을 수동확산으로 통과하지 못하고 장 내강에 머문다. 그 결과 micelle이 내용물을 상피 표면에 내려놓은 뒤에도 담즙산염은 내강에 남아 다음 지방 입자의 emulsification과 micelle 형성에 반복해서 쓰인다. 회수는 회장 말단의 능동수송체 ASBT를 통해 소화가 끝난 뒤에 이루어지므로, 담즙산 풀이 작아도 하루 분량의 지방을 처리할 수 있다. 회장을 절제하면 이 회수가 끊겨 풀이 고갈되고 지방변이 생긴다.</p></details></li><li><p class="qq">Medium-chain triacylglycerol이 담즙산 결핍이나 abetalipoproteinemia 환자의 열량 공급에 쓰이는 생화학적 근거를 설명하라.</p><details><summary>해설</summary><p>Medium-chain 지방산(C6~C12)은 긴 사슬 지방산보다 물에 잘 녹으므로 mixed micelle에 실리지 않아도 unstirred water layer를 통과해 흡수된다. 또 상피세포 안에서 triacylglycerol로 재합성되지 않으므로 chylomicron 조립을 필요로 하지 않고, 알부민에 결합한 상태로 문맥을 통해 곧바로 간으로 간다. 따라서 담즙산염 공급 장애와 apoB-48·MTP 결함이라는 두 병목을 모두 우회한다. 다만 필수지방산은 긴 사슬이므로 MCT만으로는 공급되지 않아 별도로 보충해야 한다.</p></details></li><li><p class="qq">Abetalipoproteinemia 환자에게 vitamin E를 일반 용량이 아니라 대량으로 투여하는 이유를 기전으로 설명하라.</p><details><summary>해설</summary><p>Vitamin E는 소수성이어서 lipoprotein의 중심부에 실려 조직으로 운반된다. MTP가 없으면 chylomicron과 VLDL이 만들어지지 않으므로 운반체 자체가 없고, 흡수된 소량도 조직에 도달하지 못한다. 능동적인 운반 경로를 복원할 수 없으므로, 내강의 농도를 아주 높게 만들어 수동적인 확산으로 넘어가는 양을 늘리는 전략을 쓴다. 이것이 대량 투여의 근거이며, vitamin E 보충이 적혈구의 acanthocyte 형성과 척수소뇌성 신경 증상의 진행을 늦춘다.</p></details></li><li><p class="qq">Linoleic acid를 delta 표기와 omega 표기로 각각 적고, 사람이 이 지방산을 합성하지 못하는 이유를 설명하라.</p><details><summary>해설</summary><p>Linoleic acid는 탄소 18개에 이중결합 두 개를 가지며, delta 표기로 18:2(9,12), omega 표기로 18:2 n-6이다. 두 표기는 같은 분자를 세는 기준점이 다른 것이고, 18 − 12 = 6이므로 서로 변환된다. 사람의 desaturase는 carboxyl 탄소에서 세어 C9까지만 이중결합을 넣을 수 있으므로 C12에 이중결합을 만들 수 없다. 그래서 linoleic acid는 식사로 섭취해야 하는 필수지방산이고, 이것이 부족하면 하류 산물인 arachidonic acid와 그로부터 만들어지는 eicosanoid도 함께 부족해진다.</p></details></li><li><p class="qq">공복 혈액을 채취했는데 혈청이 유백색이었다. 이 소견이 가리키는 대사 지점과 그 근거를 설명하라.</p><details><summary>해설</summary><p>혈청의 유백색은 큰 입자인 triacylglycerol 풍부 lipoprotein이 빛을 산란해 생긴다. Chylomicron의 혈중 반감기는 1시간 미만이므로 정상적인 공복 혈액에는 chylomicron이 거의 없다. 따라서 공복 상태의 유백색 혈청은 chylomicron의 제거 단계, 즉 lipoprotein lipase와 그 보조인자(apoC-II, GPIHBP1, LMF1, apoA-V)의 장애를 가리킨다. 조립 단계의 장애인 abetalipoproteinemia는 반대로 혈중 지질이 매우 낮으므로 이 소견과 구분된다. Triacylglycerol이 1,000 mg/dL을 넘으면 급성 췌장염의 위험이 커지므로 즉시 지방 섭취 제한이 필요하다.</p></details></li></ol>
-  <h2>참고문헌</h2>
-  <ol class="ref"><li>Ferrier DR (ed). <em>Lippincott Illustrated Reviews: Biochemistry</em>. Chapter 15, Dietary Lipid Metabolism.</li><li>Iqbal J, Hussain MM. Intestinal lipid absorption. <em>Am J Physiol Endocrinol Metab</em> 2009;296:E1183–E1194.</li><li>Lowe ME. The triglyceride lipases of the pancreas. <em>J Lipid Res</em> 2002;43:2007–2016.</li><li>Hussain MM. Intestinal lipid absorption and lipoprotein formation. <em>Curr Opin Lipidol</em> 2014;25:200–206.</li><li>Burnett JR, Hooper AJ, Hegele RA. Abetalipoproteinemia. In: Adam MP et al., eds. <em>GeneReviews</em>. University of Washington, Seattle.</li><li>Hegele RA et al. The polygenic nature of hypertriglyceridaemia. <em>Lancet Diabetes Endocrinol</em> 2014;2:655–666.</li></ol>
-  <nav class="pager"><a href="../../../M02/W06/L03/index.html">← M02-W06-L03</a><a href="../../../M02/W07/L02/index.html">M02-W07-L02 →</a></nav>
-</main>
+<section aria-labelledby="prerequisites"><h2 id="prerequisites">선수지식</h2><p>소수성 물질은 물에 잘 섞이지 않는다. 양친매성 분자는 물과 접하는 부분과 소수성 부분을 함께 가진다. 소장의 장내강과 상피세포 안, 혈액은 서로 다른 공간이다. 지질이 어느 공간에 있는지 확인하면서 읽으면 담즙산·소화효소·지단백질의 역할을 구별하기 쉽다.</p></section>
 
-<footer class="foot wrap">
+<nav class="contents" aria-label="강의 구성"><strong>강의 구성</strong><ol class="qlist"><li><a href="#s1">1. 식이지질은 구조에 따라 서로 다른 소화 산물을 만든다</a></li><li><a href="#s2">2. 위에서 시작한 소화는 소장에서 담즙과 췌장액을 만나 본격화된다</a></li><li><a href="#s3">3. 유화는 지방 방울의 표면을 늘리고 효소는 결합을 자른다</a></li><li><a href="#s4">4. 혼합 미셀은 지질을 장세포 표면 가까이 전달한다</a></li><li><a href="#s5">5. 흡수된 장쇄 지질은 장세포 안에서 다시 조립된다</a></li><li><a href="#s6">6. 킬로미크론은 장세포가 만든 혈액 운반 입자다</a></li><li><a href="#s7">7. 혈액에서는 LPL이 지방산을 꺼내 조직에 공급한다</a></li><li><a href="#s8">8. 지방변은 어느 단계가 실패했는지부터 추적한다</a></li></ol></nav><section aria-label="본문"><section id="s1" class="lesson-section"><h2>1. 식이지질은 구조에 따라 서로 다른 소화 산물을 만든다</h2><p>식사로 섭취하는 지질의 대부분은 중성지방(triacylglycerol, TAG)이다. 글리세롤의 세 수산기에 지방산이 하나씩 에스터 결합한 구조다. 콜레스테롤, 콜레스테릴 에스터, 인지질도 함께 섭취한다. 이들은 모두 지질이지만 구조가 다르므로 같은 효소 하나가 모두 같은 산물로 바꾸지는 않는다. <a href="#ref-t15">[T15, I–II, PDF 365–369]</a></p><p>지방산은 긴 탄화수소 사슬 끝에 카르복실기를 가진다. 긴 사슬은 소수성이 강하다. TAG에서는 지방산의 카르복실기가 글리세롤과 결합해 있고, 전체 분자는 물에 거의 녹지 않는다. 따라서 지방을 섭취한 뒤에는 먼저 효소가 접근할 표면을 확보하고, 분해된 지질을 장세포까지 운반해야 한다. 단백질이나 전분을 소화할 때와 비교하면 물과 접촉하는 문제가 더 두드러진다.</p><p><strong>구조에서 예상하는 분해 산물</strong></p><div class="tw"><table aria-label="구조에서 예상하는 분해 산물"><thead><tr><th>식이지질</th><th>기본 구조</th><th>주요 소화 산물</th></tr></thead><tbody><tr><th>TAG</th><td>글리세롤 + 지방산 3개</td><td>2-monoacylglycerol과 지방산</td></tr><tr><th>콜레스테릴 에스터</th><td>콜레스테롤 + 지방산</td><td>비에스터화 콜레스테롤과 지방산</td></tr><tr><th>인지질</th><td>지방산 사슬과 인산을 포함한 머리 부분</td><td>리소인지질과 지방산 등</td></tr></tbody></table></div></section>
+<section id="s2" class="lesson-section"><h2>2. 위에서 시작한 소화는 소장에서 담즙과 췌장액을 만나 본격화된다</h2><p>혀의 샘에서 분비되는 lingual lipase와 위점막에서 분비되는 gastric lipase는 산성 환경에서도 작동하며 TAG를 일부 분해한다. 우유 지방을 주요 에너지원으로 사용하는 영아나 췌장 기능이 저하된 경우에 이 경로의 기여가 중요할 수 있다. 성인의 전체 식이지질 처리는 주로 소장에서 이루어진다.</p><p>십이지장에 지방과 부분적으로 소화된 단백질이 들어오면 장의 I 세포가 cholecystokinin(CCK)을 분비한다. CCK는 담낭 수축과 췌장 소화효소 분비를 촉진하고 위 배출을 늦춘다. 위에서 내려온 산성 내용물에 반응하는 S 세포는 secretin을 분비한다. Secretin은 중탄산염이 풍부한 췌장액 분비를 촉진하여 산을 중화하고, 췌장 효소가 작동하기에 적절한 환경을 만든다. <a href="#ref-t15">[T15, II.A·D.4, PDF 367, 369–371]</a></p><p><strong>두 호르몬의 입력과 반응</strong></p><div class="tw"><table aria-label="두 호르몬의 입력과 반응"><thead><tr><th>호르몬</th><th>대표 자극</th><th>이 강의에서 중요한 반응</th></tr></thead><tbody><tr><th>CCK</th><td>지방·단백질 소화 산물</td><td>담낭 수축, 췌장 소화효소 분비</td></tr><tr><th>Secretin</th><td>십이지장의 산성 내용물</td><td>중탄산염 분비와 중화</td></tr></tbody></table></div><p>효소의 양과 효소가 일할 환경은 별개다. 효소가 분비되어도 장 내용물이 지나치게 산성이면 소화가 충분히 진행되지 않을 수 있다.</p></section>
+<section id="s3" class="lesson-section"><h2>3. 유화는 지방 방울의 표면을 늘리고 효소는 결합을 자른다</h2><p>담즙산염은 간에서 콜레스테롤을 재료로 만들어져 담즙에 포함된다. 친수성 부분과 소수성 부분을 함께 가져 지방과 물의 경계에 자리할 수 있다. 장의 기계적 혼합과 함께 큰 지방 방울을 작은 방울로 분산시키고, 다시 합쳐지는 것을 줄인다. 이를 유화라고 한다. 같은 양의 지방도 작은 방울로 나누면 물과 접하는 표면적이 커진다. <a href="#ref-t15">[T15, II.C–D, PDF 368–369]</a></p><div class="box box--step"><b>시험에서 가려내는 지점</b> 담즙산염의 유화는 결합 절단이 아니다. TAG의 에스터 결합을 자르는 것은 lipase다.</div><p><strong>서로 대신할 수 없는 작용</strong></p><div class="tw"><table aria-label="서로 대신할 수 없는 작용"><thead><tr><th>요소</th><th>작용</th><th>부족할 때의 문제</th></tr></thead><tbody><tr><th>담즙산염·장 운동</th><td>지방 방울 분산과 표면 확보</td><td>효소 접근과 이후 지질 운반에 불리</td></tr><tr><th>췌장 lipase</th><td>TAG 에스터 결합 절단</td><td>흡수 가능한 소화 산물 부족</td></tr><tr><th>Colipase</th><td>Lipase의 표면 결합 보조</td><td>담즙산염 존재하에서 lipase 작용 저하</td></tr></tbody></table></div><p>TAG가 반드시 글리세롤과 지방산 세 개로 완전히 분해되어야 흡수되는 것은 아니다. 2-MAG도 주요 흡수 산물이다.</p></section>
+<section id="s4" class="lesson-section"><h2>4. 혼합 미셀은 지질을 장세포 표면 가까이 전달한다</h2><p>소화로 생긴 장쇄 지방산, 2-MAG, 콜레스테롤과 지용성 비타민은 담즙산염 등과 혼합 미셀을 이룬다. 미셀은 소수성 성분을 안쪽에 모으고 물과 접할 수 있는 표면을 갖는 작은 집합체다. 장내강의 물 환경을 지나 소장 상피세포의 미세융모 표면 가까이 지질을 전달한다. 소화 전에 보이는 큰 지방 방울과 소화 산물을 포함한 미셀은 같은 구조가 아니다. <a href="#ref-t15">[T15, II.E, PDF 371–372]</a></p><p>미셀 전체가 하나의 입자로 장세포 안에 들어가는 것은 아니다. 지질 성분이 미셀에서 나와 세포막을 통과하고, 담즙산염은 장내강에 남아 다른 지질의 전달에 참여한다. 대부분의 담즙산은 이후 말단 회장에서 재흡수되어 문맥을 거쳐 간으로 돌아간다. 이는 담즙산의 장간순환이며, 지방의 림프 운반과 구별한다.</p><p>콜레스테롤 흡수에는 장내강 쪽 막의 Niemann-Pick C1-like 1(NPC1L1) 단백질이 관여한다. 흡수 단계는 단순히 지질이 물에 녹았다는 사실만으로 끝나지 않는다. 미셀에 실리는 과정과 상피세포 막을 통과하는 과정이 모두 필요하다. 상대적으로 물과 잘 섞이는 단쇄·중쇄 지방산은 장쇄 지방산보다 미셀 의존성이 낮다.</p><div class="box box--limit"><b>임상 연계</b><h3>학습용 상황: 담즙이 장으로 충분히 나오지 않는다</h3><p>췌장 효소가 있어도 혼합 미셀 형성이 부족하면 장쇄 지질과 지용성 비타민 흡수가 떨어질 수 있다. 이 상황을 lipase 결핍이라고 바꾸어 부르지 않는다. 막힌 지점이 다르므로 같은 지방변도 발생 기전이 다를 수 있다.</p></div><div class="box box--front"><b>연구 전선</b> 담즙산이 주로 흡수되는 장소와 대부분의 식이지질이 흡수되는 장소가 다른 것이, 담즙산의 반복 사용에 어떤 도움이 될까?</div></section>
+<section id="s5" class="lesson-section"><h2>5. 흡수된 장쇄 지질은 장세포 안에서 다시 조립된다</h2><p>장세포로 들어온 장쇄 지방산은 fatty acyl-CoA synthetase에 의해 조효소 A와 연결된 fatty acyl-CoA로 활성화된다. 이 과정은 ATP를 AMP와 pyrophosphate로 바꾸므로 ATP 한 분자를 소비하지만 고에너지 인산결합 두 개에 해당하는 비용이 든다. 활성화된 지방산은 2-MAG에 차례로 붙어 diacylglycerol을 거쳐 TAG가 된다. <a href="#ref-t15">[T15, II.F, PDF 371–372]</a></p><p>왜 잘라서 흡수한 것을 다시 만드는가? 장내강에서는 막을 통과하기에 적합한 소화 산물이 필요하지만, 세포 밖으로 많은 장쇄 지질을 내보낼 때에는 운반 입자에 담을 형태가 필요하기 때문이다. 콜레스테롤 일부도 에스터화되고, 리소인지질은 다시 인지질로 조립된다. 이 재합성은 소화효소의 반응을 그대로 거꾸로 돌리는 과정이 아니라 별도 효소와 활성화된 기질을 이용한다.</p><p><strong>공간에 따라 달라지는 지질의 형태</strong></p><div class="tw"><table aria-label="공간에 따라 달라지는 지질의 형태"><thead><tr><th>위치</th><th>대표 형태</th><th>다음 단계에 필요한 일</th></tr></thead><tbody><tr><th>장내강</th><td>2-MAG·지방산·콜레스테롤</td><td>장세포 표면으로 이동하고 흡수</td></tr><tr><th>장세포 소포체</th><td>재합성된 TAG·콜레스테릴 에스터</td><td>운반 입자로 조립</td></tr><tr><th>림프·혈액</th><td>킬로미크론 안의 지질</td><td>말초 조직에 지방산 전달</td></tr></tbody></table></div></section>
+<section id="s6" class="lesson-section"><h2>6. 킬로미크론은 장세포가 만든 혈액 운반 입자다</h2><p>킬로미크론(chylomicron)은 장세포에서 만들어지는 지단백질이다. 소수성 TAG와 콜레스테릴 에스터를 중심에 담고, 인지질·비에스터화 콜레스테롤·아포지단백질이 표면을 이룬다. Apolipoprotein B-48(apo B-48)은 입자의 중요한 구조 성분이며, microsomal triglyceride transfer protein(MTP)은 소포체에서 지질을 apo B에 실어 입자를 조립하는 데 필요하다. <a href="#ref-t15">[T15, II.G, PDF 373]</a></p><p>킬로미크론은 장 융모의 림프관으로 분비된 뒤 흉관을 통해 정맥혈로 들어간다. 따라서 장쇄 식이지질의 대표 경로는 장세포 → 림프 → 전신 혈액이다. 모든 흡수 영양소가 처음부터 문맥으로 간에 들어가는 것은 아니다. 단쇄·중쇄 지방산은 상대적으로 문맥으로 직접 이동하는 비중이 크다. 다만 사슬 길이를 경계로 모든 분자가 완전히 두 경로로 나뉜다고 단정하지는 않는다.</p><p><strong>혼합 미셀과 킬로미크론 비교</strong></p><div class="tw"><table aria-label="혼합 미셀과 킬로미크론 비교"><thead><tr><th>특징</th><th>혼합 미셀</th><th>킬로미크론</th></tr></thead><tbody><tr><th>주요 위치</th><td>장내강</td><td>장세포에서 형성 후 림프·혈액</td></tr><tr><th>주요 역할</th><td>소화 산물을 상피 표면에 전달</td><td>재합성된 식이지질을 조직에 전달</td></tr><tr><th>핵심 구성</th><td>담즙산염과 소화된 지질</td><td>TAG가 많은 중심과 apo B-48 포함 표면</td></tr></tbody></table></div><div class="box box--step"><b>시험에서 가려내는 지점</b> 미셀이 혈액 속 킬로미크론으로 이름만 바뀌는 것이 아니다. 흡수·재합성·새 입자 조립을 거친다.</div></section>
+<section id="s7" class="lesson-section"><h2>7. 혈액에서는 LPL이 지방산을 꺼내 조직에 공급한다</h2><p>킬로미크론이 혈액에 들어온 뒤 apo C-II와 apo E 등을 얻으면 조직 이용과 간 회수에 필요한 기능을 갖춘다. 근육과 지방조직 등의 모세혈관 내강 쪽 표면에는 lipoprotein lipase(LPL)가 있다. LPL은 지단백질 속 TAG를 분해하고, apo C-II는 그 작용을 돕는 보조인자다. LPL은 장내강의 췌장 lipase와 위치·기질 환경·역할이 다르다. <a href="#ref-t15">[T15, II.I, PDF 375]</a></p><p>방출된 지방산은 주변 근육에서 산화 연료로 이용되거나 지방세포에서 다시 TAG로 저장된다. 혈액 속 비에스터화 지방산은 albumin과 결합해 이동할 수도 있다. 글리세롤은 주로 간에서 glycerol 3-phosphate로 바뀌어 대사에 들어간다. TAG를 많이 잃은 킬로미크론 잔여물은 apo E를 인식하는 간의 수용체 경로로 회수된다.</p><p><strong>같은 지방 분해라도 장소와 목적이 다르다</strong></p><div class="tw"><table aria-label="같은 지방 분해라도 장소와 목적이 다르다"><thead><tr><th>효소·과정</th><th>장소</th><th>목적</th></tr></thead><tbody><tr><th>췌장 lipase</th><td>장내강</td><td>식이지방을 흡수 가능한 형태로 분해</td></tr><tr><th>LPL</th><td>모세혈관 내강 쪽 표면</td><td>혈중 지단백질의 지방산을 조직에 전달</td></tr><tr><th>지방세포 내 지방분해</th><td>세포 안의 지방방울</td><td>저장 에너지 동원; 다음 주차에서 학습</td></tr></tbody></table></div><div class="box box--front"><b>연구 전선</b> LPL 작용이 크게 떨어진 경우 지방변보다 혈중 TAG 축적이 두드러질 수 있는 이유를, 이미 흡수가 끝난 지점이라는 사실과 연결해 보자.</div></section>
+<section id="s8" class="lesson-section"><h2>8. 지방변은 어느 단계가 실패했는지부터 추적한다</h2><p>지방변(steatorrhea)은 대변으로 배출되는 지방이 증가한 상태다. 췌장 소화효소 부족, 담즙산 공급·순환 장애, 소장 점막 손상이나 흡수 면적 감소 등 서로 다른 원인으로 발생할 수 있다. 오래 지속되면 에너지와 필수지방산, 비타민 A·D·E·K의 흡수에 영향을 줄 수 있다. 지방변이라는 결과만으로 원인 질환 하나를 확정하지 않는다. <a href="#ref-t15">[T15, II.B·H, PDF 367–368, 374]</a></p><p>낭성섬유증에서는 cystic fibrosis transmembrane conductance regulator(CFTR) 기능 이상으로 췌장 분비와 관의 환경이 변하고, 관 폐쇄와 췌장 외분비 기능 저하가 지질 소화 장애에 기여할 수 있다. 여기서 중요한 것은 장에 도착하는 소화효소가 부족해지는 연결이다. 반면 장세포의 지단백질 조립 장애는 소화가 진행되어도 흡수된 장쇄 지질을 제대로 내보내지 못하는 문제다. 같은 영양 부족도 장애의 위치를 구별해야 한다.</p><div class="box box--limit"><b>임상 연계</b><h3>학습용 비교: 장내강 문제와 혈중 처리 문제</h3><p>상황 A에서는 췌장 효소 공급이 심하게 줄고 대변 지방이 증가했다. 상황 B에서는 지방 흡수는 되지만 LPL 작용이 심하게 줄어 혈중 킬로미크론이 축적되었다. A는 조직으로 보내기 전의 소화 문제, B는 혈액에 도착한 뒤 조직에 전달하는 문제다. 실제 환자의 진단은 병력·검사 등을 종합하지만, 경로를 이용하면 먼저 확인할 위치를 정할 수 있다.</p></div><div class="box box--step"><b>시험에서 가려내는 지점</b> 지질 섭취 → 유화·소화 → 미셀을 통한 전달 → 장세포 재합성 → 킬로미크론 분비 → LPL 작용 → 간의 잔여물 회수 순서로 장애 위치를 찾는다.</div></section>
+</section>
+
+<section aria-labelledby="questions"><h2 id="questions">확인 문항과 해설</h2><ol class="quiz"><li><p class="qq"><strong>판단.</strong> 담즙산염은 TAG의 에스터 결합을 직접 가수분해하는 효소다.</p><details><summary>해설</summary><p>아니다. 담즙산염은 유화와 혼합 미셀 형성에 관여한다. 결합을 자르는 일은 lipase 등의 효소가 담당한다.</p></details></li><li><p class="qq"><strong>판단.</strong> TAG는 글리세롤까지 완전히 분해되어야만 흡수될 수 있다.</p><details><summary>해설</summary><p>아니다. 췌장 lipase의 주요 산물에는 2-MAG가 있으며, 이것도 흡수되어 재합성에 이용된다.</p></details></li><li><p class="qq"><strong>판단.</strong> 혼합 미셀 전체가 장세포로 들어간 뒤 혈액에서 킬로미크론이 된다.</p><details><summary>해설</summary><p>아니다. 지질 성분이 미셀에서 나와 흡수되고, 장세포가 이를 재합성한 뒤 apo B-48 등을 포함하는 새로운 입자를 만든다.</p></details></li><li><p class="qq"><strong>판단.</strong> 장쇄 식이지질을 운반하는 킬로미크론은 주로 림프를 거쳐 혈액에 들어간다.</p><details><summary>해설</summary><p>맞다. 담즙산의 회장 재흡수 후 문맥 경로나 단쇄·중쇄 지방산의 대표 운반 경로와 구별한다.</p></details></li><li><p class="qq">췌장 lipase와 LPL이 각각 부족할 때 예상되는 문제의 위치를 비교하라.</p><details><summary>해설</summary><p>췌장 lipase 부족은 장내강에서 TAG 소화를 방해한다. LPL 부족은 이미 혈액에 들어온 지단백질의 TAG 처리를 방해하여 혈중 축적을 유발할 수 있다.</p></details></li><li><p class="qq">담즙산 공급 저하에서 지용성 비타민 흡수도 영향을 받는 이유는?</p><details><summary>해설</summary><p>지용성 비타민도 다른 소수성 지질과 함께 혼합 미셀에 실려 장세포 표면으로 전달된다. 따라서 TAG 분해 여부만으로 비타민 흡수가 정상이라고 판단할 수 없다.</p></details></li></ol></section>
+
+<section aria-labelledby="references"><h2 id="references">참고문헌</h2><ol class="ref"><li id="ref-t15">Abali EE, Cline SD, Franklin DS, Viselli SM. <cite>Lippincott Illustrated Reviews: Biochemistry.</cite> 8판. Wolters Kluwer; 2022. 15장 Dietary Lipid Metabolism, 제공 PDF 365–379쪽. 본문 근거는 365–375쪽. 페이지는 PDF 파일 순서이며 인쇄 쪽수가 아니다. 단쇄·중쇄 지방산의 운반은 대표 경향으로 기술하고 절대적인 이분법은 피했다.</li></ol></section>
+<nav class="pager" aria-label="이전·다음 수업"><a href="../../W06/L03/index.html">← 오탄당인산경로·NADPH·G6PD [13장]</a><a href="../../W07/L02/index.html">지방산 합성과 조절 [16장] →</a></nav></main><footer class="foot wrap">
   <span>© 2026 Kim Jintae · Hanyang University</span>
   <a href="https://github.com/hoperiasd2/hoperiasd2.github.io">GitHub 저장소</a>
 </footer>
 
-<script src="../../../../assets/edit.js" defer></script>
-</body>
-</html>
+<script src="../../../../assets/edit.js" defer></script></body></html>

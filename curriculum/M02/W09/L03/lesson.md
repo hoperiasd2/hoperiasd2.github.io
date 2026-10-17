@@ -1,8 +1,18 @@
+---
+title: Lipoprotein 대사와 이상지질혈증
+status: 초안
+version: v0.1
+slides: none
+---
+
+<!-- 이 수업의 본문은 현재 같은 폴더의 index.html 에 있다. 외부에서
+     집필된 HTML을 배치한 상태이며, 아직 이 lesson.md 로 옮기지 않았다. -->
+
 # M02-W09-L03 Cholesterol·담즙산·steroid [18장]
 
 - 구성요소: M02 대사생화학
 - 주차·회차: 9주 3회
-- 상태: 설계
+- 상태: 초안
 - 버전: v0.1
 
 ## 이 수업이 답하는 질문

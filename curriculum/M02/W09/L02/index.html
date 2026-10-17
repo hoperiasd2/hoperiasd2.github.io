@@ -1,16 +1,551 @@
 <!DOCTYPE html>
-<html lang="ko">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Cholesterol, 담즙산과 steroid 대사 · M02-W09-L02</title>
-<meta name="description" content="Cholesterol, 담즙산과 steroid 대사">
-<link rel="stylesheet" href="../../../../assets/site.css">
-<link rel="stylesheet" href="../../../../assets/lesson.css">
-</head>
-<body>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>M02-W09-L02 Cholesterol, 담즙산과 steroid 대사 [18장]</title><meta name="description" content="Cholesterol, 담즙산과 steroid 대사 [18장]: 구조에서 생리 기능과 질환까지"><style data-source="site.css + lesson.css snapshot 2026-10-17">/* 의생명과학 교육과정 — 공통 스타일
+   색은 :root 토큰으로만 쓰고 다크 모드에서 재정의한다. */
 
-<header class="masthead">
+:root {
+  --navy: #003c71;
+  --navy-700: #00294e;
+  --chrome: #f2b705;
+  --ink: #16191d;
+  --ink-2: #4a5159;
+  --ink-3: #727a84;
+  --line: #dde2e8;
+  --bg: #f6f8fa;
+  --card: #ffffff;
+  --accent-soft: #eaf1f8;
+  --ok: #1a7f52;
+  --ok-soft: #e7f4ed;
+  --warn: #9a6700;
+  --warn-soft: #fdf5e3;
+  --radius: 10px;
+  --wrap: 1180px;
+  --mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+  --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo",
+    "Noto Sans KR", "Malgun Gothic", sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --navy: #8fc3f5;
+    --navy-700: #b9d9fb;
+    --chrome: #f2b705;
+    --ink: #e7eaee;
+    --ink-2: #b2bac4;
+    --ink-3: #868f9a;
+    --line: #2b3138;
+    --bg: #14171b;
+    --card: #1b1f24;
+    --accent-soft: #1e2833;
+    --ok: #5dd3a0;
+    --ok-soft: #16271f;
+    --warn: #e3b341;
+    --warn-soft: #2a2416;
+  }
+}
+:root[data-theme="dark"] {
+  --navy: #8fc3f5;
+  --navy-700: #b9d9fb;
+  --ink: #e7eaee;
+  --ink-2: #b2bac4;
+  --ink-3: #868f9a;
+  --line: #2b3138;
+  --bg: #14171b;
+  --card: #1b1f24;
+  --accent-soft: #1e2833;
+  --ok: #5dd3a0;
+  --warn: #e3b341;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.75;
+  -webkit-text-size-adjust: 100%;
+}
+
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 16px; }
+.wrap--narrow { max-width: 860px; }
+
+a { color: var(--navy); }
+a:hover { color: var(--navy-700); }
+
+/* ---- 머리글 ---- */
+.masthead {
+  background: #003c71;
+  border-bottom: 3px solid var(--chrome);
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+.masthead .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 52px;
+}
+.masthead a.brand {
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  letter-spacing: .01em;
+}
+.masthead nav { display: flex; gap: 16px; flex-wrap: wrap; }
+.masthead nav a { color: #cfe0f0; text-decoration: none; font-size: 14px; }
+.masthead nav a:hover { color: #fff; }
+
+/* ---- 이동 경로 ---- */
+.crumb {
+  font-size: 13px;
+  color: var(--ink-3);
+  padding: 14px 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+}
+.crumb a { color: var(--ink-2); text-decoration: none; }
+.crumb a:hover { color: var(--navy); text-decoration: underline; }
+.crumb span[aria-hidden] { color: var(--ink-3); }
+
+/* ---- 표제 ---- */
+.hero {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-left: 5px solid var(--navy);
+  border-radius: var(--radius);
+  padding: 26px 28px;
+  margin: 16px 0 24px;
+}
+.hero .eyebrow {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  margin: 0 0 8px;
+}
+.hero h1 { margin: 0 0 10px; font-size: 27px; line-height: 1.35; }
+.hero .en { color: var(--ink-3); font-size: 14px; margin: 0 0 12px; }
+.hero p.lede { margin: 0; color: var(--ink-2); max-width: 70ch; }
+
+h2 {
+  font-size: 20px;
+  margin: 34px 0 14px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--line);
+}
+h3 { font-size: 17px; margin: 24px 0 10px; }
+
+/* ---- 카드 격자 ---- */
+.grid { display: grid; gap: 14px; }
+.grid--modules { grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); }
+.grid--weeks { grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); }
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 18px 20px;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  transition: border-color .12s, transform .12s;
+}
+a.card:hover { border-color: var(--navy); transform: translateY(-1px); }
+.card__no {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--chrome);
+  font-weight: 700;
+  letter-spacing: .08em;
+}
+.card__title { font-weight: 700; margin: 4px 0 2px; }
+.card__en { font-size: 13px; color: var(--ink-3); }
+.card__meta { font-size: 13px; color: var(--ink-2); margin-top: 10px; }
+
+/* ---- 진행 막대 ---- */
+.bar { height: 5px; background: var(--line); border-radius: 3px; overflow: hidden; margin-top: 10px; }
+.bar > i { display: block; height: 100%; background: var(--navy); }
+
+/* ---- 수업 목록 ---- */
+.lessons { list-style: none; margin: 0; padding: 0; }
+.lessons li {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--card);
+  margin-bottom: 8px;
+}
+.lessons a {
+  display: flex;
+  gap: 14px;
+  align-items: baseline;
+  padding: 13px 16px;
+  text-decoration: none;
+  color: inherit;
+}
+.lessons a:hover { background: var(--accent-soft); }
+.lessons .lid {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--ink-3);
+  white-space: nowrap;
+}
+.lessons .ltitle { flex: 1; min-width: 0; }
+.lessons .lgroup { font-size: 12px; color: var(--ink-3); }
+
+/* ---- 상태 배지 ---- */
+.badge {
+  font-size: 11px;
+  font-family: var(--mono);
+  padding: 2px 8px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  color: var(--ink-2);
+  background: var(--bg);
+  white-space: nowrap;
+}
+.badge--design { color: var(--ink-3); }
+.badge--draft { color: var(--warn); border-color: var(--warn); background: var(--warn-soft); }
+.badge--review { color: var(--navy); border-color: var(--navy); background: var(--accent-soft); }
+.badge--done {
+  color: var(--ok);
+  border-color: var(--ok);
+  background: var(--ok-soft);
+  font-weight: 600;
+}
+
+/* ---- 목록에서 집필 상태를 한눈에 ---- */
+/* 배지만으로는 276줄을 훑을 때 눈에 들어오지 않아 왼쪽에 색 띠를 둔다. */
+.lessons li[data-status] { border-left: 4px solid var(--line); }
+.lessons li[data-status="done"] { border-left-color: var(--ok); }
+.lessons li[data-status="draft"] { border-left-color: var(--warn); }
+.lessons li[data-status="review"] { border-left-color: var(--navy); }
+.lessons li[data-status="design"] { border-left-color: var(--line); }
+.lessons li[data-status="done"] .ltitle { font-weight: 600; }
+
+.filters--status { margin-top: -4px; }
+.filters--status button[data-filter-status="done"][aria-pressed="true"] {
+  border-color: var(--ok);
+  color: var(--ok);
+}
+
+/* ---- 검색 ---- */
+.search {
+  width: 100%;
+  padding: 12px 14px;
+  font-size: 15px;
+  font-family: inherit;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--card);
+  color: var(--ink);
+}
+.search:focus { outline: 2px solid var(--navy); outline-offset: 1px; }
+.filters { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 18px; }
+.filters button {
+  font: inherit;
+  font-size: 13px;
+  padding: 6px 13px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: var(--card);
+  color: var(--ink-2);
+  cursor: pointer;
+}
+.filters button[aria-pressed="true"] { background: var(--navy); color: #fff; border-color: var(--navy); }
+.count { font-size: 13px; color: var(--ink-3); margin: 0 0 12px; }
+
+/* ---- 안내 상자 ---- */
+.callout {
+  background: var(--accent-soft);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--navy);
+  border-radius: var(--radius);
+  padding: 14px 18px;
+  margin: 18px 0;
+  font-size: 15px;
+}
+.callout--warn { border-left-color: var(--chrome); }
+
+/* ---- 이전·다음 ---- */
+.pager {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 36px 0 12px;
+  border-top: 1px solid var(--line);
+  padding-top: 16px;
+  font-size: 14px;
+}
+.pager a { text-decoration: none; }
+.pager span { color: var(--ink-3); }
+
+/* ---- 표 ---- */
+table { border-collapse: collapse; width: 100%; margin: 14px 0; font-size: 15px; }
+th, td { border: 1px solid var(--line); padding: 8px 11px; text-align: left; vertical-align: top; }
+th { background: var(--accent-soft); font-weight: 700; }
+
+/* ---- 꼬리말 ---- */
+.foot {
+  margin-top: 56px;
+  padding: 22px 16px 40px;
+  border-top: 1px solid var(--line);
+  color: var(--ink-3);
+  font-size: 13px;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 640px) {
+  .hero { padding: 20px; }
+  .hero h1 { font-size: 22px; }
+  .lessons a { flex-wrap: wrap; gap: 6px 12px; }
+}
+
+@media print {
+  .masthead, .filters, .search, .pager, .foot { display: none; }
+  body { background: #fff; font-size: 11pt; }
+  .card, .hero { border: 1px solid #ccc; break-inside: avoid; }
+}
+
+/* 수업 본문 전용 스타일. site.css의 토큰을 그대로 쓴다. */
+
+.lesson { font-size: 16.5px; }
+.lesson p { margin: 0 0 14px; }
+.lesson ul, .lesson ol { margin: 0 0 16px; padding-left: 22px; }
+.lesson li { margin-bottom: 7px; }
+.lesson li > ul { margin: 7px 0 4px; }
+.lesson code {
+  font-family: var(--mono);
+  font-size: .9em;
+  background: var(--accent-soft);
+  padding: 1px 5px;
+  border-radius: 4px;
+}
+.lesson section { scroll-margin-top: 70px; }
+
+/* 슬라이드 내려받기 */
+.dl { margin: 0 0 24px; }
+.dlbtn {
+  display: inline-block;
+  padding: 9px 18px;
+  border: 1px solid var(--navy);
+  border-radius: var(--radius);
+  color: var(--navy);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 700;
+}
+.dlbtn:hover { background: var(--navy); color: #fff; }
+
+/* 질문과 답 */
+.lesson p.q, .lesson p.a {
+  border-radius: var(--radius);
+  padding: 13px 17px;
+  margin: 0 0 12px;
+}
+.lesson p.q {
+  background: var(--accent-soft);
+  border-left: 4px solid var(--navy);
+}
+.lesson p.a {
+  background: rgba(242, 183, 5, .13);
+  border-left: 4px solid var(--chrome);
+  font-weight: 600;
+}
+.lesson p.q > span, .lesson p.a > span {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: .1em;
+  margin-right: 10px;
+  vertical-align: 1px;
+  font-weight: 700;
+}
+.lesson p.q > span { color: var(--navy); }
+.lesson p.a > span { color: var(--warn); }
+
+/* 질문 목록 */
+.qlist { margin: 0 0 24px; }
+.qlist li { margin-bottom: 9px; }
+.qlist a { text-decoration: none; }
+.qlist a:hover { text-decoration: underline; }
+
+/* 조건·한계 / 귀결 / 안전 상자 */
+.box {
+  border-radius: var(--radius);
+  padding: 14px 18px;
+  margin: 16px 0;
+  font-size: 15.5px;
+  border: 1px solid var(--line);
+}
+.box > b {
+  display: block;
+  font-size: 11px;
+  font-family: var(--mono);
+  letter-spacing: .1em;
+  margin-bottom: 5px;
+}
+.box--limit { background: var(--accent-soft); border-left: 4px solid var(--navy); }
+.box--limit > b { color: var(--navy); }
+.box--result { background: rgba(242, 183, 5, .1); border-left: 4px solid var(--chrome); }
+.box--result > b { color: var(--warn); }
+.box--safety { background: rgba(242, 183, 5, .14); border-left: 5px solid var(--chrome); }
+.box--safety > b { color: var(--warn); font-size: 12px; }
+.box--safety ul { margin: 6px 0 0; }
+
+/* 표 */
+.tw { overflow-x: auto; margin: 16px 0; }
+.lesson table { font-size: 14.5px; min-width: 520px; }
+.lesson th { white-space: nowrap; }
+
+/* 확인 문항 */
+.quiz { counter-reset: none; }
+.quiz > li { margin-bottom: 18px; }
+.quiz .qq { font-weight: 600; margin-bottom: 8px; }
+.quiz details {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--card);
+  padding: 0 14px;
+}
+.quiz details[open] { padding-bottom: 6px; }
+.quiz summary {
+  cursor: pointer;
+  padding: 9px 0;
+  font-size: 14px;
+  color: var(--navy);
+  font-weight: 700;
+}
+.quiz details p { margin: 4px 0 8px; font-size: 15.5px; }
+
+/* 참고문헌 */
+.ref { font-size: 14.5px; color: var(--ink-2); }
+.ref li { margin-bottom: 8px; }
+
+@media print {
+  .quiz details { border: none; }
+  .quiz details[open] summary { display: none; }
+  .lesson p.q, .lesson p.a, .box, .equation { break-inside: avoid; }
+  .contents { font-size: 13px; background: none; }
+}
+
+/* 그림 */
+.fig { margin: 20px 0; text-align: center; }
+.fig img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: #fff;
+}
+.fig figcaption {
+  font-size: 14px;
+  color: var(--ink-2);
+  margin-top: 9px;
+  text-align: left;
+  line-height: 1.6;
+}
+.fig figcaption > b { color: var(--navy); margin-right: 6px; }
+.fig .credit { color: var(--ink-3); font-size: 13px; }
+
+/* 보강 입력 상자와 외부 링크 그림 */
+.box--notes{border-left:4px solid #f2b705;background:#fffaec}
+.fig--ext img{outline:2px dashed #f2b705;outline-offset:3px}
+.fig .credit{font-size:.82em;color:#8a6300}
+
+/* 페이지에서 직접 고치는 기능 */
+.editbar{position:fixed;right:16px;bottom:16px;z-index:60;display:flex;gap:6px;
+  align-items:center;flex-wrap:wrap;justify-content:flex-end;max-width:min(94vw,520px);
+  padding:8px;border-radius:10px;background:#ffffffee;border:1px solid #c6d2dd;
+  box-shadow:0 2px 12px rgba(0,0,0,.14)}
+.editbar.is-on{background:#fffaecf2;border-color:#f2b705}
+.editbtn{font:inherit;font-size:.86rem;padding:6px 11px;border-radius:7px;cursor:pointer;
+  border:1px solid #003c71;background:#fff;color:#003c71}
+.editbtn:hover{background:#eaf1f8}
+.editbtn--main{background:#003c71;color:#fff;font-weight:700}
+.editbtn--main:hover{background:#00529c}
+.editbtn--warn{border-color:#b3261e;color:#b3261e}
+.editbtn--warn:hover{background:#fbeceb}
+.editcount{font-size:.82rem;color:#8a6300;font-weight:700}
+.editgrp{display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end}
+.editnote{position:fixed;left:16px;bottom:16px;z-index:60;max-width:min(92vw,460px);
+  padding:10px 13px;border-radius:9px;border-left:4px solid #f2b705;background:#16191df2;
+  color:#fff;font-size:.86rem;line-height:1.5;opacity:0;transform:translateY(8px);
+  transition:opacity .18s,transform .18s;pointer-events:none}
+.editnote.is-on{opacity:1;transform:none}
+.editdump{position:fixed;left:16px;bottom:72px;z-index:60;width:min(92vw,560px);height:40vh;
+  font:12px/1.5 monospace;padding:10px;border:2px solid #f2b705;border-radius:8px;background:#fff}
+body.editing [contenteditable]{outline:1px dashed #9fb3c4;outline-offset:3px;border-radius:3px}
+body.editing [contenteditable]:focus{outline:2px solid #003c71;background:#f7fbff}
+body.editing h2{position:relative}
+.memobtn{font:inherit;font-size:.62em;font-weight:400;margin-left:10px;padding:2px 8px;
+  border-radius:6px;cursor:pointer;border:1px dashed #8a6300;background:#fffaec;color:#8a6300;
+  vertical-align:middle}
+.memobtn:hover{background:#f2b705;color:#16191d}
+h2.has-memo::after{content:"메모";font-size:.58em;font-weight:400;margin-left:10px;
+  padding:2px 8px;border-radius:6px;background:#f2b705;color:#16191d;vertical-align:middle}
+.is-edited{background:#fffaec;box-shadow:inset 3px 0 0 #f2b705;padding-left:9px}
+@media print{.editbar,.editnote,.editdump,.memobtn{display:none}}
+.editmodal{position:fixed;inset:0;z-index:70;display:flex;align-items:center;
+  justify-content:center;padding:16px;background:#16191dbf}
+.editmodal__box{width:min(96vw,560px);background:#fff;border-radius:12px;padding:18px 20px;
+  box-shadow:0 8px 32px rgba(0,0,0,.3)}
+.editmodal__box h3{margin:0 0 6px;font-size:1.02rem;color:#003c71}
+.editmodal__box p{margin:0 0 12px;font-size:.84rem;color:#4a5159}
+.editmodal__box textarea{width:100%;font:inherit;font-size:.9rem;line-height:1.55;padding:10px;
+  border:1px solid #c6d2dd;border-radius:8px;resize:vertical;box-sizing:border-box}
+.editmodal__box textarea:focus{outline:2px solid #003c71;border-color:#003c71}
+.editmodal__row{display:flex;gap:8px;justify-content:flex-end;margin-top:12px}
+
+/* 깊이 층위 상자와 수업 사이 연결 */
+.box--step{border-left:4px solid #2e7d32;background:#ecf6ec}
+.box--step>b{color:#1e6b2c}
+.box--front{border-left:4px solid #6b4fa0;background:#f3eff9}
+.box--front>b{color:#5b3a8a}
+a.xref{font-variant-numeric:tabular-nums;white-space:nowrap;text-decoration:none;
+  border-bottom:1px dotted currentColor}
+a.xref:hover{background:#eaf1f8}
+
+/* ---- 본문 목차 ---- */
+/* 평범한 목록으로 두면 본문과 구별되지 않아 긴 수업에서 지나치기 쉽다. */
+.contents {
+  border: 1px solid var(--line);
+  background: var(--bg);
+  border-radius: var(--radius);
+  padding: 16px 22px;
+  margin: 28px 0 36px;
+}
+.contents strong {
+  display: block;
+  font-size: 13px;
+  letter-spacing: .04em;
+  color: var(--ink-2);
+  margin-bottom: 10px;
+}
+.contents .qlist { margin: 0; }
+.contents .qlist li { margin-bottom: 6px; font-size: 15.5px; }
+
+/* ---- 수식 상자 ---- */
+/* @eq 로 적은 줄. 본문 문단과 섞이면 식의 경계가 보이지 않는다. */
+.equation {
+  background: var(--accent-soft);
+  border-left: 3px solid var(--navy);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  padding: 16px 20px;
+  margin: 22px 0;
+  line-height: 2;
+  overflow-wrap: anywhere;
+}
+</style><link rel="stylesheet" href="../../../../assets/site.css"><link rel="stylesheet" href="../../../../assets/lesson.css"></head><body><header class="masthead">
   <div class="wrap">
     <a class="brand" href="../../../../index.html">의생명과학 교육과정</a>
     <nav>
@@ -21,138 +556,33 @@
   </div>
 </header>
 
-<main class="wrap wrap--narrow lesson" data-lesson="M02-W09-L02">
-<nav class="crumb" aria-label="이동 경로"><a href="../../../../index.html">대문</a><span aria-hidden="true">›</span><a href="../../../../curriculum/index.html">전체 수업</a><span aria-hidden="true">›</span><a href="../../index.html">M02</a><span aria-hidden="true">›</span><a href="../index.html">9주차</a><span aria-hidden="true">›</span><span>M02-W09-L02</span></nav>
+<main class="wrap wrap--narrow lesson" data-lesson-id="M02-W09-L02" data-lesson="M02-W09-L02"><nav class="crumb" aria-label="이동 경로"><a href="../../../../index.html">대문</a><span aria-hidden="true">›</span><a href="../../../index.html">전체 수업</a><span aria-hidden="true">›</span><a href="../../index.html">M02</a><span aria-hidden="true">›</span><a href="../index.html">9주차</a><span aria-hidden="true">›</span><span>M02-W09-L02</span></nav><section class="hero"><p class="eyebrow">M02-W09-L02 · 대사생화학 · 지질대사</p><h1>Cholesterol, 담즙산과 steroid 대사</h1><p class="en"></p></section><section aria-labelledby="objectives"><h2 id="objectives">학습목표</h2><ul><li>콜레스테롤의 정상 기능과 cholesteryl ester의 역할을 구별한다.</li><li>HMG-CoA reductase와 SREBP-2를 합성·흡수 조절에 연결한다.</li><li>담즙산 생성과 장간순환을 콜레스테롤 배출에 연결한다.</li><li>콜레스테롤에서 steroid hormone이 만들어지는 공통 단계를 설명한다.</li><li>호르몬 합성 장애를 부족한 산물·쌓인 전구체·되먹임으로 해석한다.</li></ul></section>
 
-  <section class="hero">
-    <p class="eyebrow">M02-W09-L02 · 대사생화학 · 지질대사</p>
-    <h1>Cholesterol, 담즙산과 steroid 대사</h1>
-    <p class="en">Cholesterol, Bile Acid and Steroid Metabolism</p>
-  </section>
-  <p class="dl"><a class="dlbtn" href="slides.pptx">슬라이드 내려받기 (PPTX)</a></p>
-  <h2>학습목표</h2>
-  <ul><li>Cholesterol의 화학 구조와 세포막·전구체로서의 역할을 설명한다.</li><li>Acetyl-CoA에서 cholesterol에 이르는 생합성 경로를 네 단계로 나누어 설명한다.</li><li>HMG-CoA reductase가 rate-limiting step인 이유와 전사·분해·인산화에 의한 조절을 설명한다.</li><li>LDL receptor를 통한 cholesterol 수송과 세포 내 되먹임 반응을 설명한다.</li><li>담즙산의 합성·접합·장간 순환과 steroid 호르몬 및 vitamin D 생성 과정을 설명한다.</li><li>고콜레스테롤혈증의 원인과 주요 약물의 작용 지점을 연결한다.</li></ul>
-  <h2>선수지식</h2>
-  <ul><li><a class="xref" href="../../../../curriculum/M02/W07/L01/index.html">M02-W07-L01</a> 식이지질의 소화·흡수·운반 — micelle, chylomicron, lipoprotein의 기본 구성</li><li><a class="xref" href="../../../../curriculum/M02/W08/L03/index.html">M02-W08-L03</a> 케톤체 생성·이용과 ketoacidosis — HMG-CoA가 갈라지는 두 경로의 구분</li><li><a class="xref" href="../../../../curriculum/M02/W06/L03/index.html">M02-W06-L03</a> Pentose phosphate pathway — 환원적 생합성에 쓰이는 NADPH의 공급원</li></ul>
-  <nav class="contents" aria-label="강의 구성"><strong>강의 구성</strong><ol class="qlist"><li><a href="#s1">1. Cholesterol의 구조와 생물학적 역할</a></li><li><a href="#s2">2. Cholesterol의 생합성: 경로 개요</a></li><li><a href="#s3">3. HMG-CoA reductase의 조절</a></li><li><a href="#s4">4. Cholesterol의 수송과 LDL receptor 경로</a></li><li><a href="#s5">5. 담즙산의 합성, 접합과 장간 순환</a></li><li><a href="#s6">6. Steroid 호르몬의 합성</a></li><li><a href="#s7">7. Vitamin D의 생성과 활성화</a></li><li><a href="#s8">8. 고콜레스테롤혈증과 약물 치료</a></li></ol></nav>
-  <section id="s1">
-  <h2>1. Cholesterol의 구조와 생물학적 역할</h2>
-  <p>Cholesterol은 동물 조직에 들어 있는 대표적인 <strong>steroid alcohol</strong>이다. 식물과 세균에는 없고 동물에만 있으므로, 식사로 섭취하는 cholesterol은 모두 동물성 식품에서 온다.</p>
-  <p>몸에서 하는 일이 많아 반드시 일정한 양이 공급되어야 한다. 모든 세포막의 구성 성분이고, 특정 조직에서는 담즙산(bile acid), steroid 호르몬, vitamin D를 만드는 재료가 된다. 그래서 몸은 cholesterol을 만들고, 나르고, 저장하고, 내보내는 여러 체계를 갖추고 있다. 이 장은 그 체계를 순서대로 다룬다.</p>
-  <p><strong>구조</strong>부터 본다. Cholesterol은 탄소 27개로 이루어진 분자다. 중심에는 고리 네 개가 서로 붙어 있는 구조가 있는데, 이것을 <strong>steroid nucleus</strong>(또는 steroid 핵)라고 부른다. 고리에는 A, B, C, D라는 이름이 붙는다. A·B·C는 탄소 여섯 개짜리 고리이고 D는 탄소 다섯 개짜리 고리다.</p>
-  <p>여기에 세 가지 특징이 더해진다. 이 세 가지를 기억하면 cholesterol의 성질이 거의 다 설명된다.</p>
-  <ul><li><strong>C3의 hydroxyl기(-OH)</strong>: A 고리의 3번 탄소에 붙어 있다. 분자에서 유일하게 물과 친한 부분이다.</li><li><strong>C5와 C6 사이의 이중결합</strong>: B 고리에 있다.</li><li><strong>C17의 곁사슬(side chain)</strong>: D 고리의 17번 탄소에 탄소 여덟 개짜리 가지가 붙어 있다.</li></ul>
-  <p><strong>sterol</strong>이라는 이름은 steroid 핵에 hydroxyl기가 붙은 화합물을 가리킨다. Cholesterol은 그중 하나다.</p>
-  <figure class="fig" id="fig-chol-structure"><img src="assets/fig-chol-structure.svg" alt="Cholesterol의 구조. 고리 A~D가 steroid nucleus를 이루고, C3의 hydroxyl기, C5=C6 이중결합, C17의 side chain이 분자의 성질을 결정한다." loading="lazy"><figcaption><b>그림 1</b> Cholesterol의 구조. 고리 A~D가 steroid nucleus를 이루고, C3의 hydroxyl기, C5=C6 이중결합, C17의 side chain이 분자의 성질을 결정한다.</figcaption></figure>
-  <p>이 구조에서 성질이 나온다. 분자의 대부분은 탄화수소(C와 H로만 이루어진 부분)여서 물과 섞이지 않는다. 그런데 C3의 -OH 하나만은 물과 친하다. 이렇게 한 분자 안에 물과 친한 부분과 친하지 않은 부분이 함께 있는 것을 <strong>amphipathic</strong>이라고 한다.</p>
-  <p>그래서 cholesterol이 세포막에 끼어들 때 방향이 정해진다. -OH는 막 표면의 인지질 머리 쪽을 향하고, 고리와 곁사슬은 막 안쪽의 지방산 꼬리 사이에 자리 잡는다.</p>
-  <p><strong>생물학적 역할</strong>은 세 가지로 묶인다.</p>
-  <ul><li><strong>세포막의 구성 성분</strong>: 동물 세포막에서 인지질 사이사이에 끼어 막의 유동성을 조절한다. 온도가 높을 때는 지방산 사슬이 심하게 움직이는 것을 붙잡아 막을 덜 무르게 하고, 온도가 낮을 때는 사슬이 촘촘히 정렬되어 굳는 것을 막는다. 즉 온도가 변해도 막의 성질이 크게 달라지지 않도록 <strong>완충</strong> 역할을 한다.</li><li><strong>다른 분자의 전구체</strong>: 담즙산, 다섯 계열의 steroid 호르몬, vitamin D가 모두 cholesterol에서 만들어진다. 이 장의 뒷부분이 그 각각이다.</li><li><strong>lipid raft의 구성</strong>: sphingolipid와 함께 막의 특정 구역에 모여, 신호를 전달하는 단백질이 자리 잡는 발판을 만든다.</li></ul>
-  <p><strong>저장하거나 운반할 때는 모양을 바꾼다.</strong> C3의 -OH에 지방산을 붙이면 <strong>cholesteryl ester</strong>가 된다. 에스터 결합이란 alcohol의 -OH와 carboxylic acid의 -COOH가 물 한 분자를 잃으면서 연결되는 결합이다. 이렇게 되면 유일하게 물과 친했던 -OH가 가려지므로 분자 전체가 거의 완전히 소수성이 된다. 그만큼 더 빽빽하게 쌓을 수 있어, 세포 안의 lipid droplet이나 lipoprotein 입자의 중심부에 저장 형태로 들어간다.</p>
-  <p>에스터를 만드는 효소는 있는 장소에 따라 다르다.</p>
-  <ul><li>세포 안에서는 <strong>ACAT</strong>(acyl-CoA:cholesterol acyltransferase)이 acyl-CoA에서 지방산을 가져와 붙인다.</li><li>혈장에서는 <strong>LCAT</strong>(lecithin:cholesterol acyltransferase)이 phosphatidylcholine에서 지방산을 가져와 붙인다.</li></ul>
-  <div class="tw"><table><thead><tr><th>구분</th><th>유리 cholesterol</th><th>Cholesteryl ester</th></tr></thead><tbody><tr><td>C3 위치</td><td>-OH가 드러나 있다</td><td>지방산이 에스터 결합으로 붙어 있다</td></tr><tr><td>성질</td><td>amphipathic</td><td>거의 완전한 소수성</td></tr><tr><td>있는 곳</td><td>세포막, lipoprotein 표면</td><td>세포질 lipid droplet, lipoprotein 중심</td></tr><tr><td>만드는 효소</td><td>—</td><td>세포 안 ACAT, 혈장 LCAT</td></tr></tbody></table></div>
-  <p><strong>양적 관계</strong>도 알아둔다. 성인 몸 전체의 cholesterol은 약 140 g이다. 공급은 두 곳에서 온다. 식사로 하루 약 300~500 mg을 먹고, 몸에서 하루 약 700~900 mg을 새로 만든다. 즉 <strong>먹는 것보다 만드는 것이 더 많다.</strong> 식물성 식품에는 cholesterol이 없고 대신 sitosterol 같은 식물 sterol이 들어 있는데, 사람은 이것을 거의 흡수하지 않는다.</p>
-  </section>
-  <section id="s2">
-  <h2>2. Cholesterol의 생합성: 경로 개요</h2>
-  <p>몸은 cholesterol을 어디서부터 만들까. 답은 간단하다. <strong>탄소 27개가 모두 acetyl-CoA에서 온다.</strong></p>
-  <p>Acetyl-CoA는 탄소 두 개짜리 acetyl기가 coenzyme A에 붙어 있는 화합물로, 포도당·지방산·일부 아미노산이 분해될 때 공통으로 생기는 중간체다. 즉 cholesterol은 우리가 먹은 거의 모든 영양소에서 만들어질 수 있다.</p>
-  <p>합성이 일어나는 곳은 간에서 가장 활발하지만 장, 부신피질, 생식샘을 비롯해 거의 모든 조직에서 일어난다. 효소는 세포질과 <strong>smooth endoplasmic reticulum(smooth ER)</strong> 막에 있다.</p>
-  <p>이 경로는 분자를 <strong>만드는</strong> 과정이므로 환원력이 많이 든다. 그 환원력은 <strong>NADPH</strong>가 공급하며, NADPH는 주로 pentose phosphate pathway에서 나온다. 에너지로는 ATP도 소비된다.</p>
-  <p>긴 경로이지만 네 단계로 묶으면 구조가 보인다.</p>
-  <div class="tw"><table><thead><tr><th>단계</th><th>변화</th><th>주요 효소</th><th>비고</th></tr></thead><tbody><tr><td>1</td><td>Acetyl-CoA(C2) ×3 → <strong>HMG-CoA</strong>(C6)</td><td>Thiolase, HMG-CoA synthase</td><td><strong>세포질</strong>에서 일어난다</td></tr><tr><td>2</td><td>HMG-CoA → <strong>Mevalonate</strong>(C6)</td><td><strong>HMG-CoA reductase</strong></td><td>NADPH 2분자 소비, <strong>rate-limiting step · 비가역</strong></td></tr><tr><td>3</td><td>Mevalonate → <strong>Isoprene 단위</strong>(C5) → farnesyl pyrophosphate(C15)</td><td>Kinase 3종, isomerase, prenyltransferase</td><td>ATP 3분자 소비, decarboxylation</td></tr><tr><td>4</td><td>Farnesyl-PP ×2 → <strong>Squalene</strong>(C30) → lanosterol(C30) → <strong>Cholesterol</strong>(C27)</td><td>Squalene synthase, squalene monooxygenase, cyclase 외 약 19단계</td><td>탄소 3개가 떨어져 나간다</td></tr></tbody></table></div>
-  <p><strong>1단계</strong>에서 주의할 점이 있다. HMG-CoA는 케톤체 합성에도 쓰이는 중간체인데, 두 경로는 <strong>세포 내 위치로 구분된다.</strong> Cholesterol 합성용 HMG-CoA는 세포질의 HMG-CoA synthase가 만들고, 케톤체 합성용은 간 미토콘드리아 기질의 동위효소가 만든다. 같은 분자이지만 서로 다른 구획에 있어 섞이지 않는다.</p>
-  <p><strong>2단계</strong>가 경로 전체의 중심이다. HMG-CoA reductase는 소포체 막을 여러 번 관통하는 막단백이며, 활성 부위는 세포질 쪽을 향한다. HMG-CoA의 thioester를 환원해 1차 alcohol인 mevalonate를 만들고 이 과정에서 NADPH 2분자를 쓴다. <strong>생리적 조건에서 비가역이고, 이 지점을 지나면 경로를 되돌릴 수 없다.</strong> 그래서 조절이 여기에 집중된다.</p>
-  <p><strong>3단계</strong>에서 C6의 mevalonate가 ATP 세 분자를 써서 인산화된 뒤 decarboxylation을 거쳐 <strong>C5의 isoprene 단위</strong>가 된다. 이것들이 머리-꼬리로 이어 붙어 C10(geranyl-PP), C15(farnesyl-PP)로 자란다.</p>
-  <p><strong>4단계</strong>에서 farnesyl-PP 두 분자가 꼬리-꼬리로 결합해 C30의 squalene이 되고, 산소와 NADPH를 써서 epoxide가 된 뒤 고리화되어 lanosterol이 된다. 여기서 약 19단계를 더 거치며 탄소 세 개가 떨어져 나가 C27의 cholesterol이 완성된다.</p>
-  <p>핵심은 <strong>3단계에서 갈라지는 가지</strong>다. Farnesyl-PP는 cholesterol로만 가지 않는다. 여기서 <strong>ubiquinone(CoQ10)</strong>, <strong>dolichol</strong>(당단백질 합성에 필요), 그리고 Ras·Rho 같은 단백질을 막에 고정하는 <strong>prenyl기</strong>가 만들어진다. 이 사실은 뒤에 statin의 작용을 이해할 때 다시 쓰인다.</p>
-  <figure class="fig" id="fig-chol-synthesis"><img src="assets/fig-chol-synthesis.svg" alt="Cholesterol 생합성의 네 단계. 탄소 수가 C2에서 C6, C5 단위, C15, C30을 거쳐 C27로 바뀐다. 2단계의 HMG-CoA reductase가 rate-limiting step이고, 3단계의 farnesyl-PP에서 CoQ10·dolichol·prenyl기로 가지가 갈라진다." loading="lazy"><figcaption><b>그림 2</b> Cholesterol 생합성의 네 단계. 탄소 수가 C2에서 C6, C5 단위, C15, C30을 거쳐 C27로 바뀐다. 2단계의 HMG-CoA reductase가 rate-limiting step이고, 3단계의 farnesyl-PP에서 CoQ10·dolichol·prenyl기로 가지가 갈라진다.</figcaption></figure>
-  <div class="box box--limit"><b>임상 연계</b> <strong>임상 연계</strong> Mevalonate 경로의 효소 결손인 <strong>mevalonate kinase deficiency</strong>에서는 mevalonate가 축적되고 하류 isoprenoid 산물이 부족해진다. 환자는 주기적 발열과 염증 발작(hyper-IgD 증후군)을 보이는데, cholesterol 부족이 아니라 <strong>isoprenoid 부족</strong>이 염증 경로를 활성화하기 때문이다. 경로의 가지를 알아야 설명되는 질환이다.</div>
-  </section>
-  <section id="s3">
-  <h2>3. HMG-CoA reductase의 조절</h2>
-  <p>세포가 cholesterol을 얼마나 만들지는 거의 전적으로 HMG-CoA reductase의 양과 활성으로 정해진다. 조절은 세 층위에서 겹쳐 일어나며, 작동 속도가 서로 다르다.</p>
-  <p><strong>(1) 전사 조절 — SREBP-2를 통한 되먹임</strong></p>
-  <p>소포체 막에는 전사인자 전구체인 <strong>SREBP-2</strong>(sterol regulatory element-binding protein 2)가 끼어 있고, 여기에 sterol 감지 단백 <strong>SCAP</strong>이 붙어 있다.</p>
-  <ul><li>소포체 막의 cholesterol이 <strong>충분하면</strong> SCAP의 구조가 바뀌어 막단백 <strong>Insig</strong>에 결합한다. 복합체가 소포체에 붙잡혀 있으므로 SREBP-2는 전구체 상태로 남는다.</li><li>cholesterol이 <strong>부족하면</strong> SCAP이 Insig에서 떨어진다. 복합체가 소포체를 떠나 Golgi로 이동하고, 거기서 두 단백분해효소(S1P, S2P)가 차례로 자른다. 잘려 나온 조각이 핵으로 들어가 표적 유전자의 <strong>sterol regulatory element(SRE)</strong>에 결합한다.</li></ul>
-  <p>표적 유전자의 구성이 중요하다. SREBP-2는 합성 효소인 <strong>HMG-CoA reductase</strong>와 흡수 수용체인 <strong>LDL receptor</strong>를 <strong>함께</strong> 유도한다. 세포가 cholesterol이 모자란다고 판단하면 만들기와 가져오기를 동시에 늘리는 것이다.</p>
-  <p><strong>(2) 효소 분해 조절</strong></p>
-  <p>소포체 막에 sterol이 쌓이면 HMG-CoA reductase 자신의 막 도메인도 Insig에 결합한다. 그러면 ubiquitin이 붙어 분해로 보내진다. 전사를 줄이는 것보다 <strong>빠르게</strong> 효소량을 떨어뜨리는 장치다.</p>
-  <p><strong>(3) 공유결합 변형 — 인산화</strong></p>
-  <p>세포의 에너지가 부족해 AMP가 늘면 <strong>AMPK</strong>가 활성화되어 HMG-CoA reductase를 인산화하고, 인산화된 효소는 활성이 낮아진다. ATP를 많이 쓰는 합성 경로를 에너지 상태에 맞춰 끄는 조절이다. 반대로 insulin은 탈인산화를 촉진해 활성을 높인다.</p>
-  <div class="tw"><table><thead><tr><th>조절 방식</th><th>신호</th><th>방향</th><th>작동 속도</th></tr></thead><tbody><tr><td>전사(SREBP-2)</td><td>세포 내 sterol 감소</td><td>효소 합성 ↑</td><td>수 시간</td></tr><tr><td>분해(Insig-ubiquitin)</td><td>세포 내 sterol 증가</td><td>효소량 ↓</td><td>수십 분~시간</td></tr><tr><td>인산화(AMPK)</td><td>ATP 부족</td><td>활성 ↓</td><td>분</td></tr><tr><td>탈인산화(insulin)</td><td>섭식 상태</td><td>활성 ↑</td><td>분</td></tr></tbody></table></div>
-  <p>Cholesterol 합성에는 <strong>하루 주기 변동</strong>도 있다. 합성은 자정 무렵에 가장 활발하므로, 반감기가 짧은 statin은 저녁에 복용하도록 권한다.</p>
-  <p><strong>Statin</strong>은 이 효소를 겨냥한 약물이다. HMG-CoA와 구조가 비슷해 활성 부위에 경쟁적으로 결합하며, 친화도는 본래 기질보다 1,000배 이상 높다. 다만 statin이 혈중 LDL을 낮추는 실제 경로는 합성을 막는 것 자체가 아니다. 간세포의 cholesterol이 줄면 SREBP-2가 켜지고 <strong>LDL receptor가 늘어 혈중 LDL이 더 빨리 제거되는 것</strong>이 본체다. 다음 절에서 그 수용체를 다룬다.</p>
-  </section>
-  <section id="s4">
-  <h2>4. Cholesterol의 수송과 LDL receptor 경로</h2>
-  <p>Cholesterol은 물에 녹지 않으므로 혈액에서는 반드시 <strong>lipoprotein</strong> 입자에 실려 이동한다. 입자는 표면에 인지질·유리 cholesterol·apolipoprotein이 있고 중심에 triacylglycerol과 cholesteryl ester가 들어 있는 구조다.</p>
-  <div class="tw"><table><thead><tr><th>입자</th><th>주 운반물</th><th>출발지</th><th>주요 apolipoprotein</th></tr></thead><tbody><tr><td>Chylomicron</td><td>식이 triacylglycerol</td><td>장</td><td>apoB-48</td></tr><tr><td>VLDL</td><td>내인성 triacylglycerol</td><td>간</td><td>apoB-100</td></tr><tr><td>IDL</td><td>중간 단계</td><td>VLDL 분해 산물</td><td>apoB-100, apoE</td></tr><tr><td><strong>LDL</strong></td><td><strong>cholesteryl ester</strong></td><td>IDL에서 생성</td><td><strong>apoB-100</strong></td></tr><tr><td>HDL</td><td>말초에서 회수한 cholesterol</td><td>간·장</td><td>apoA-I</td></tr></tbody></table></div>
-  <p>LDL은 <strong>간에서 말초로</strong> cholesterol을 보내는 입자이고, HDL은 <strong>말초에서 간으로</strong> 되돌리는 입자다.</p>
-  <p><strong>LDL receptor를 통한 흡수는 receptor-mediated endocytosis의 교과서적 사례다.</strong> 순서는 다음과 같다.</p>
-  <ol class="steps"><li>세포막의 <strong>clathrin coated pit</strong>에 LDL receptor가 모여 있다.</li><li>수용체가 LDL 입자의 <strong>apoB-100</strong>을 인식해 결합한다(IDL의 apoE도 인식한다).</li><li>coated vesicle이 떨어져 나와 세포 안으로 들어가고 clathrin이 벗겨진다.</li><li><strong>endosome</strong>에서 pH가 낮아지면 수용체와 LDL이 분리된다. 수용체는 세포막으로 <strong>재순환</strong>하고(한 수용체가 수백 회 재사용된다), LDL은 <strong>lysosome</strong>으로 간다.</li><li>Lysosome에서 apoB-100은 아미노산으로 분해되고, cholesteryl ester는 <strong>lysosomal acid lipase</strong>에 의해 유리 cholesterol과 지방산으로 가수분해된다.</li></ol>
-  <p>이렇게 세포질로 들어온 유리 cholesterol은 <strong>세 가지 되먹임</strong>을 일으킨다. 이것이 세포 수준의 cholesterol 항상성이다.</p>
-  <ul><li>HMG-CoA reductase의 발현과 안정성을 낮춘다 → <strong>합성을 줄인다</strong></li><li>LDL receptor의 전사를 낮춘다 → <strong>더 들이지 않는다</strong></li><li><strong>ACAT</strong>을 활성화한다 → 남는 것을 cholesteryl ester로 바꿔 <strong>저장한다</strong></li></ul>
-  <figure class="fig" id="fig-ldl-receptor"><img src="assets/fig-ldl-receptor.svg" alt="LDL receptor 경로. 결합에서 endocytosis, endosome에서의 분리, 수용체 재순환, lysosome 분해까지의 순환과 유리 cholesterol이 일으키는 세 가지 되먹임을 보인다. PCSK9는 수용체를 분해로 돌려 재순환을 막는다." loading="lazy"><figcaption><b>그림 3</b> LDL receptor 경로. 결합에서 endocytosis, endosome에서의 분리, 수용체 재순환, lysosome 분해까지의 순환과 유리 cholesterol이 일으키는 세 가지 되먹임을 보인다. PCSK9는 수용체를 분해로 돌려 재순환을 막는다.</figcaption></figure>
-  <p>여기에 한 가지 조절자가 더 있다. <strong>PCSK9</strong>는 간에서 분비되는 단백분해효소로, 세포 표면에서 LDL receptor에 결합한 뒤 함께 세포 안으로 들어가 수용체가 재순환하지 못하고 lysosome에서 분해되게 만든다. PCSK9가 많으면 수용체 수가 줄어 혈중 LDL이 올라간다.</p>
-  <div class="box box--limit"><b>임상 연계</b> <strong>임상 연계</strong> <strong>가족성 고콜레스테롤혈증(familial hypercholesterolemia, FH)</strong>은 LDL receptor 경로의 결함으로 생긴다. 원인 유전자는 <em>LDLR</em>(수용체 자체), <em>APOB</em>(수용체가 인식하는 리간드), <em>PCSK9</em>(기능 획득 변이로 수용체를 과도하게 분해)다. 이형접합은 약 250명 중 1명으로 드물지 않으며, 치료하지 않으면 LDL-C가 190~400 mg/dL에 이르고 30~50대에 관동맥질환이 나타난다. 동형접합은 약 30만 명 중 1명으로 소아기에 황색종과 관동맥질환이 생긴다. 세 유전자가 모두 <strong>같은 경로의 서로 다른 지점</strong>이라는 점이 이 질환이 LDL receptor 경로를 증명한 이유다.</div>
-  </section>
-  <section id="s5">
-  <h2>5. 담즙산의 합성, 접합과 장간 순환</h2>
-  <p>사람은 cholesterol의 고리 구조를 열어 CO₂와 물로 분해하는 효소를 가지고 있지 않다. 따라서 과잉 cholesterol은 <strong>분해되는 것이 아니라 배출된다.</strong> 정량적으로 가장 중요한 배출 경로가 담즙산으로의 전환이다.</p>
-  <p><strong>합성</strong> 담즙산은 간에서만 만들어진다. 첫 반응이자 rate-limiting step은 <strong>CYP7A1</strong>(cholesterol 7α-hydroxylase)이 cholesterol의 C7에 hydroxyl기를 붙이는 것이다. 이후 고리의 추가 hydroxylation, 이중결합 환원, 곁사슬 단축을 거쳐 탄소 24개의 <strong>1차 담즙산</strong> 두 가지가 만들어진다.</p>
-  <ul><li><strong>Cholic acid</strong> — hydroxyl기 3개(C3, C7, C12)</li><li><strong>Chenodeoxycholic acid</strong> — hydroxyl기 2개(C3, C7)</li></ul>
-  <p><strong>접합</strong> 만들어진 담즙산은 그대로 쓰이지 않는다. 곁사슬의 carboxyl기에 <strong>glycine</strong> 또는 <strong>taurine</strong>이 아미드 결합으로 붙는다. 접합의 의미는 pKa를 낮추는 데 있다. 접합되지 않은 담즙산의 pKa는 약 6이어서 소장의 pH에서 상당 부분이 비이온형으로 존재하지만, 접합하면 pKa가 1~4로 떨어져 <strong>거의 완전히 이온화된 염(bile salt)</strong> 형태가 된다. 이온화된 분자는 계면활성 능력이 크고 막을 그냥 통과하지 못하므로 장 내강에 머물며 지방을 emulsification할 수 있다.</p>
-  <p><strong>2차 담즙산</strong> 회장과 대장의 세균이 접합을 떼어내고(deconjugation) C7의 hydroxyl기를 제거하면(7α-dehydroxylation) <strong>2차 담즙산</strong>이 된다. Cholic acid에서 <strong>deoxycholic acid</strong>가, chenodeoxycholic acid에서 <strong>lithocholic acid</strong>가 생긴다.</p>
-  <p><strong>장간 순환(enterohepatic circulation)</strong> 담즙산은 담낭에서 십이지장으로 분비되어 지방 소화를 돕고, 회장 말단에서 수송체 <strong>ASBT</strong>를 통해 능동적으로 재흡수되어 문맥을 거쳐 간으로 돌아온다. 전체 담즙산 풀은 약 3 g이고 하루 6~10회 순환하므로 하루에 장으로 분비되는 총량은 20~30 g에 이르지만, <strong>대변으로 빠져나가는 양은 하루 0.2~0.6 g에 그친다.</strong> 간은 잃은 만큼만 새로 합성해 풀을 유지한다.</p>
-  <p>합성량 자체도 되먹임으로 조절된다. 담즙산이 간세포로 돌아오면 핵수용체 <strong>FXR</strong>을 활성화하고, FXR은 CYP7A1의 전사를 억제한다. 장에서는 FXR이 <strong>FGF19</strong>를 분비시켜 문맥을 통해 간에 도달한 뒤 역시 CYP7A1을 억제한다.</p>
-  <figure class="fig" id="fig-enterohepatic"><img src="assets/fig-enterohepatic.svg" alt="담즙산의 장간 순환. 간에서 합성·접합된 담즙산이 담즙으로 분비되어 지방 소화를 돕고 회장 말단에서 재흡수되어 돌아온다. 하루 손실분만 새로 합성된다." loading="lazy"><figcaption><b>그림 4</b> 담즙산의 장간 순환. 간에서 합성·접합된 담즙산이 담즙으로 분비되어 지방 소화를 돕고 회장 말단에서 재흡수되어 돌아온다. 하루 손실분만 새로 합성된다.</figcaption></figure>
-  <div class="box box--limit"><b>임상 연계</b> <strong>임상 연계</strong> <strong>담즙산 격리제</strong>(cholestyramine 등)는 장에서 담즙산과 결합해 대변으로 내보낸다. 장간 순환이 끊기면 FXR 신호가 줄어 CYP7A1 억제가 풀리고, 간은 담즙산을 새로 만들기 위해 자신의 cholesterol을 소모한다. 간세포 cholesterol이 줄면 SREBP-2가 켜지고 LDL receptor가 늘어 혈중 LDL이 감소한다. <strong>약은 흡수되지 않고 장에만 머무는데 효과는 간에서 나타난다.</strong> 한편 회장을 절제하면 담즙산이 재흡수되지 않아 대장으로 넘어가 수분 분비를 자극하는 <strong>담즙산 설사</strong>가 생기며, 이때의 치료도 담즙산 격리제다.</div>
-  <div class="box box--result"><b>핵심 정리</b> <strong>핵심 정리</strong> Cholesterol은 분해되지 않으므로 담즙산 전환과 담즙 배출이 유일한 제거 경로다. 장간 순환이 이 배출을 최소화하도록 설계되어 있고, 그 순환을 끊는 것이 곧 혈중 LDL을 낮추는 수단이 된다.</div>
-  </section>
-  <section id="s6">
-  <h2>6. Steroid 호르몬의 합성</h2>
-  <p>Cholesterol은 다섯 계열의 steroid 호르몬의 공통 전구체다. 합성은 부신피질, 난소, 정소, 태반에서 일어나며, 이들 조직은 필요한 양이 자체 합성 능력을 넘기 때문에 혈중 <strong>LDL 흡수에 크게 의존한다.</strong></p>
-  <p><strong>Rate-limiting step은 효소 반응이 아니라 운반이다.</strong> Cholesterol을 미토콘드리아 외막에서 내막으로 옮기는 <strong>StAR</strong>(steroidogenic acute regulatory protein)가 그 역할을 한다. ACTH나 LH 자극은 StAR 발현을 빠르게 올려 합성을 개시한다.</p>
-  <p>내막에 도달한 cholesterol은 <strong>CYP11A1</strong>(side-chain cleavage enzyme)에 의해 side chain이 잘려 탄소 21개의 <strong>pregnenolone</strong>이 된다. <strong>모든 steroid 호르몬은 여기서 갈라진다.</strong></p>
-  <figure class="fig" id="fig-steroidogenesis"><img src="assets/fig-steroidogenesis.svg" alt="Steroid 호르몬의 합성. StAR에 의한 미토콘드리아 내막으로의 이동이 rate-limiting step이고, CYP11A1이 만든 pregnenolone에서 다섯 계열이 갈라진다." loading="lazy"><figcaption><b>그림 5</b> Steroid 호르몬의 합성. StAR에 의한 미토콘드리아 내막으로의 이동이 rate-limiting step이고, CYP11A1이 만든 pregnenolone에서 다섯 계열이 갈라진다.</figcaption></figure>
-  <div class="tw"><table><thead><tr><th>계열</th><th>탄소 수</th><th>대표 호르몬</th><th>생성 조직</th></tr></thead><tbody><tr><td>Progestagen</td><td>C21</td><td>Progesterone</td><td>난소, 태반</td></tr><tr><td>Mineralocorticoid</td><td>C21</td><td>Aldosterone</td><td>부신피질 zona glomerulosa</td></tr><tr><td>Glucocorticoid</td><td>C21</td><td>Cortisol</td><td>부신피질 zona fasciculata</td></tr><tr><td>Androgen</td><td>C19</td><td>Testosterone</td><td>정소, 부신피질 zona reticularis</td></tr><tr><td>Estrogen</td><td>C18</td><td>Estradiol</td><td>난소</td></tr></tbody></table></div>
-  <p>부신피질은 세 층으로 나뉘고 각 층이 서로 다른 효소를 발현해 다른 산물을 만든다. 바깥에서부터 <strong>zona glomerulosa</strong>(aldosterone), <strong>zona fasciculata</strong>(cortisol), <strong>zona reticularis</strong>(androgen 전구체) 순이다.</p>
-  <div class="box box--limit"><b>임상 연계</b> <strong>임상 연계</strong> <strong>선천성 부신과형성(congenital adrenal hyperplasia)</strong>의 90~95%는 <strong>21-hydroxylase(CYP21A2)</strong> 결손이다. 이 효소는 cortisol과 aldosterone 합성 경로에 모두 필요하므로 두 호르몬이 부족해진다. Cortisol이 부족하면 ACTH 억제가 풀려 부신이 계속 자극받고, 막힌 지점 위쪽의 전구체인 <strong>17-hydroxyprogesterone</strong>이 크게 축적된다. 축적된 전구체는 막히지 않은 androgen 경로로 흘러 androgen이 과다 생성되고, 그 결과 46,XX 여아에서 외성기 남성화가 나타난다. <strong>즉 증상은 결핍(cortisol·aldosterone)과 축적·우회(androgen)가 함께 만든 결과다.</strong> 신생아 선별검사에서 17-hydroxyprogesterone을 측정하는 근거가 여기에 있다.</div>
-  </section>
-  <section id="s7">
-  <h2>7. Vitamin D의 생성과 활성화</h2>
-  <p>Vitamin D도 cholesterol 대사의 산물이다. 엄밀히 말하면 비타민이라기보다 체내에서 만들어지는 <strong>호르몬</strong>에 가깝다.</p>
-  <p>출발 물질은 cholesterol 합성 경로의 마지막 직전 중간체인 <strong>7-dehydrocholesterol</strong>이다. 피부에서 이 분자가 <strong>자외선(UVB)</strong>을 받으면 B 고리가 열려 <strong>cholecalciferol(vitamin D₃)</strong>이 된다. 식사로 섭취하는 vitamin D₂(ergocalciferol, 식물·효모 유래)와 D₃도 같은 경로로 합류한다.</p>
-  <p>활성화는 두 번의 hydroxylation으로 완성되며, 두 기관이 나누어 맡는다.</p>
-  <ol class="steps"><li><strong>간</strong>에서 C25가 hydroxylation되어 <strong>25-hydroxycholecalciferol(25-OH-D)</strong>이 된다. 혈중 농도가 가장 높고 반감기가 길어 <strong>vitamin D 영양 상태를 평가하는 검사 지표</strong>로 쓰인다.</li><li><strong>신장</strong>에서 <strong>1α-hydroxylase(CYP27B1)</strong>가 C1을 hydroxylation해 <strong>1,25-dihydroxycholecalciferol(calcitriol)</strong>을 만든다. 이것이 활성형이다. 이 효소는 <strong>PTH와 저인산혈증에 의해 활성화</strong>되고 FGF23에 의해 억제되므로, 활성형 생성량은 칼슘·인 요구에 따라 조절된다.</li></ol>
-  <p>Calcitriol은 핵수용체에 결합해 작용한다. 소장에서 칼슘과 인의 흡수를 늘리고, 뼈에서 재형성을 조절하며, 신장에서 칼슘 재흡수를 늘린다.</p>
-  <div class="box box--limit"><b>임상 연계</b> <strong>임상 연계</strong> 활성화가 두 기관에서 일어나므로 결핍의 원인도 나뉜다. 햇빛 노출 부족이나 섭취 부족은 25-OH-D를 낮춘다. <strong>만성 신질환</strong>에서는 1α-hydroxylase 활성이 떨어져 25-OH-D가 정상이어도 calcitriol이 부족해지고, 그 결과 저칼슘혈증과 이차성 부갑상선기능항진증이 생긴다. 이때는 일반 vitamin D가 아니라 <strong>활성형 유사체</strong>를 투여해야 한다. 소아에서 결핍은 성장판의 무기질화 장애인 <strong>구루병</strong>으로, 성인에서는 <strong>골연화증</strong>으로 나타난다.</div>
-  </section>
-  <section id="s8">
-  <h2>8. 고콜레스테롤혈증과 약물 치료</h2>
-  <p>혈중 LDL-C가 높을수록 죽상경화와 관동맥질환의 위험이 올라간다. 원인은 일차성과 이차성으로 나뉜다.</p>
-  <ul><li><strong>일차성</strong>: 가족성 고콜레스테롤혈증(앞 절), 다유전자성 고콜레스테롤혈증, 가족성 복합 고지혈증</li><li><strong>이차성</strong>: 갑상선기능저하증, 신증후군, 폐색성 간담도질환, 당뇨병, 일부 약물(thiazide, 일부 corticosteroid)</li></ul>
-  <p>이차성 원인은 교정하면 지질이 돌아오므로, <strong>약을 늘리기 전에 먼저 배제</strong>한다.</p>
-  <p>주요 약물은 앞서 배운 경로의 서로 다른 지점에 작용하며, 결국 <strong>간세포의 cholesterol을 줄여 LDL receptor를 늘린다</strong>는 공통 결과로 수렴한다.</p>
-  <div class="tw"><table><thead><tr><th>약물</th><th>작용 지점</th><th>기전</th><th>LDL-C 감소</th></tr></thead><tbody><tr><td><strong>Statin</strong></td><td>HMG-CoA reductase</td><td>경쟁적 억제 → 간 cholesterol ↓ → LDL receptor ↑</td><td>25~55%</td></tr><tr><td><strong>Ezetimibe</strong></td><td>장 상피의 NPC1L1</td><td>식이·담즙 cholesterol 흡수 억제</td><td>15~20%</td></tr><tr><td><strong>담즙산 격리제</strong></td><td>장 내강의 담즙산</td><td>장간 순환 차단 → 간 cholesterol 소모</td><td>15~25%</td></tr><tr><td><strong>PCSK9 억제제</strong></td><td>분비된 PCSK9</td><td>LDL receptor 분해 차단 → 수용체 수 유지</td><td>50~60%</td></tr><tr><td>Fibrate</td><td>PPARα</td><td>주로 triacylglycerol 감소</td><td>작음</td></tr><tr><td>Niacin</td><td>지방 분해 억제</td><td>VLDL 생산 감소</td><td>중간</td></tr></tbody></table></div>
-  <p><strong>병용의 근거</strong>도 경로로 설명된다. Statin은 LDL receptor를 늘리지만 같은 SREBP-2 프로그램이 PCSK9도 함께 올려 수용체 증가를 일부 상쇄한다. 그래서 PCSK9 억제제를 더하면 단순한 덧셈 이상의 효과가 난다. Ezetimibe는 작용 지점이 장이지만 간의 cholesterol을 줄이므로 statin과 다른 경로로 같은 결과를 만든다.</p>
-  <p>주요 부작용도 기전에서 나온다. Statin의 근육 증상과 간효소 상승은 mevalonate 경로 하류의 isoprenoid(CoQ10 등) 감소와 관련이 있다고 설명되며, 담즙산 격리제는 장에만 머물러 전신 부작용은 적은 대신 지용성 비타민과 다른 약물의 흡수를 방해한다.</p>
-  <div class="box box--result"><b>핵심 정리</b> <strong>핵심 정리</strong> 이 장의 모든 내용은 하나의 축으로 이어진다. Cholesterol은 acetyl-CoA에서 만들어지고, HMG-CoA reductase가 그 속도를 정하며, 세포 내 cholesterol 농도가 SREBP-2를 통해 합성과 흡수를 함께 조절한다. 분해되지 않으므로 담즙산으로 바꾸어 내보내고, 남은 것은 담즙산·steroid 호르몬·vitamin D라는 필수 분자의 재료가 된다. 약물은 이 축의 어느 지점에 작용하든 결국 간의 LDL receptor를 늘리는 쪽으로 수렴한다.</div>
-  </section>
-  <h2>확인 문항</h2>
-  <ol class="quiz"><li><p class="qq">Cholesterol 합성 경로에서 HMG-CoA reductase가 rate-limiting step으로 작동하는 이유를 반응의 성질과 조절 방식 두 측면에서 설명하라.</p><details><summary>해설</summary><p>반응의 성질 측면에서, HMG-CoA를 mevalonate로 환원하는 반응은 NADPH 두 분자를 쓰며 생리적 조건에서 비가역적이다. 이 지점을 지나면 되돌아갈 수 없는 committed step이므로 경로 전체의 유입량을 결정한다. 조절 측면에서는 세 가지가 겹친다. 세포 내 sterol이 줄면 SREBP-2가 전사를 늘리고, sterol이 쌓이면 Insig이 효소에 결합해 ubiquitin 매개 분해를 유도하며, ATP가 부족하면 AMPK가 인산화해 활성을 낮춘다. 한 효소에 세 층위의 조절이 모이므로 여기가 경로의 제어점이 된다.</p></details></li><li><p class="qq">케톤체 합성과 cholesterol 합성은 둘 다 HMG-CoA를 중간체로 쓴다. 두 경로가 섞이지 않는 이유는 무엇인가.</p><details><summary>해설</summary><p>세포 내 위치가 다르기 때문이다. Cholesterol 합성용 HMG-CoA는 세포질의 HMG-CoA synthase가 만들고 세포질과 소포체에서 처리되며, 케톤체 합성용 HMG-CoA는 간 미토콘드리아 기질의 동위효소가 만들고 거기서 HMG-CoA lyase에 의해 acetoacetate로 분해된다. 같은 화합물이라도 서로 다른 구획에 존재하므로 각 경로의 효소만 접근할 수 있다. 구획화가 대사 경로를 분리하는 대표적인 예다.</p></details></li><li><p class="qq">담즙산이 glycine이나 taurine과 접합되는 과정의 생화학적 의미를 설명하라.</p><details><summary>해설</summary><p>접합은 담즙산의 pKa를 낮춘다. 접합되지 않은 담즙산의 pKa는 약 6이어서 소장의 pH에서 상당 부분이 비이온형으로 존재하지만, 접합하면 pKa가 1~4로 떨어져 장 내강에서 거의 완전히 이온화된 염 형태가 된다. 이온화된 분자는 계면활성 능력이 커서 지방을 효과적으로 emulsification하고, 동시에 막을 수동확산으로 통과하지 못해 장 내강에 머문다. 그 결과 소화 작용을 끝까지 수행한 뒤 회장 말단의 능동수송체를 통해서만 재흡수된다.</p></details></li><li><p class="qq">가족성 고콜레스테롤혈증의 원인 유전자가 <em>LDLR</em>, <em>APOB</em>, <em>PCSK9</em> 세 가지인 이유를 LDL receptor 경로로 설명하라.</p><details><summary>해설</summary><p>세 유전자가 모두 같은 경로의 서로 다른 지점에 해당하기 때문이다. <em>LDLR</em> 변이는 수용체 자체의 수나 기능을 떨어뜨린다. <em>APOB</em> 변이는 LDL 입자 표면에서 수용체가 인식하는 리간드인 apoB-100을 바꾸어 결합을 방해한다. *PCSK9*의 기능 획득 변이는 LDL receptor의 분해를 과도하게 촉진해 세포 표면의 수용체 수를 줄인다. 어느 지점이 망가지든 결과는 같다. 간의 LDL 제거가 느려져 혈중 LDL-C가 올라간다.</p></details></li><li><p class="qq">만성 신질환 환자에서 혈중 25-hydroxyvitamin D가 정상인데도 저칼슘혈증이 생길 수 있다. 그 기전과 적절한 치료를 설명하라.</p><details><summary>해설</summary><p>Vitamin D의 활성화는 간의 간의 25-hydroxylation과 신장의 1α-hydroxylation 두 단계로 이루어진다. 만성 신질환에서는 신장의 1α-hydroxylase(CYP27B1) 활성이 떨어져 25-OH-D가 정상이어도 활성형인 1,25-dihydroxyvitamin D가 부족해진다. 활성형이 부족하면 소장의 칼슘 흡수가 줄어 저칼슘혈증이 생기고, 이것이 PTH 분비를 자극해 이차성 부갑상선기능항진증으로 이어진다. 따라서 일반 vitamin D 보충으로는 교정되지 않으며 calcitriol 같은 활성형 유사체를 투여해야 한다.</p></details></li><li><p class="qq">21-hydroxylase 결손 환자에서 cortisol과 aldosterone이 부족한 것은 효소가 막혔기 때문이다. 그런데 왜 androgen은 오히려 과다해지는가.</p><details><summary>해설</summary><p>막힌 지점 위쪽의 전구체가 쌓이고, 그 전구체가 막히지 않은 다른 경로로 흘러가기 때문이다. 21-hydroxylase가 작동하지 않으면 기질인 17-hydroxyprogesterone이 축적된다. 동시에 cortisol이 부족해 ACTH에 대한 음성 되먹임이 풀리므로 부신이 계속 자극을 받아 전구체가 더 많이 만들어진다. 축적된 17-hydroxyprogesterone은 androgen 합성 경로로 전환되어 androstenedione과 testosterone을 과다 생성하고, 태아기 노출로 46,XX 여아에서 외성기 남성화가 나타난다.</p></details></li></ol>
-  <h2>참고문헌</h2>
-  <ol class="ref"><li>Ferrier DR (ed). <em>Lippincott Illustrated Reviews: Biochemistry</em>. Chapter 18, Cholesterol, Lipoprotein, and Steroid Metabolism.</li><li>Brown MS, Goldstein JL. The SREBP pathway: regulation of cholesterol metabolism by proteolysis of a membrane-bound transcription factor. <em>Cell</em> 1997;89:331–340.</li><li>Goldstein JL, Brown MS. The LDL receptor. <em>Arterioscler Thromb Vasc Biol</em> 2009;29:431–438.</li><li>Chiang JYL. Bile acid metabolism and signaling. <em>Compr Physiol</em> 2013;3:1191–1212.</li><li>Miller WL, Auchus RJ. The molecular biology, biochemistry, and physiology of human steroidogenesis and its disorders. <em>Endocr Rev</em> 2011;32:81–151.</li><li>Nordestgaard BG et al. Familial hypercholesterolaemia is underdiagnosed and undertreated in the general population: EAS consensus statement. <em>Eur Heart J</em> 2013;34:3478–3490.</li></ol>
-  <nav class="pager"><a href="../../../M02/W09/L01/index.html">← M02-W09-L01</a><a href="../../../M02/W09/L03/index.html">M02-W09-L03 →</a></nav>
-</main>
+<section aria-labelledby="prerequisites"><h2 id="prerequisites">선수지식</h2><p>지방산과 콜레스테롤은 모두 지질이지만 구조와 분해 방식이 다르다. NADPH는 여러 합성 반응에 환원력을 제공한다. HMG-CoA라는 중간산물은 케톤체 생성에서도 등장하지만 세포 내 위치와 뒤의 효소가 다르다. 이번에는 혈중 운반보다 콜레스테롤의 합성·변환·배출을 먼저 살펴본다.</p></section>
 
-<footer class="foot wrap">
+<nav class="contents" aria-label="강의 구성"><strong>강의 구성</strong><ol class="qlist"><li><a href="#s1">1. 콜레스테롤은 정상 세포에도 필요한 재료이다</a></li><li><a href="#s2">2. 합성의 중요한 조절점은 HMG-CoA에서 mevalonate로 가는 반응이다</a></li><li><a href="#s3">3. 세포는 콜레스테롤이 부족하면 만들고 들여오는 능력을 함께 늘린다</a></li><li><a href="#s4">4. 사람은 콜레스테롤 고리를 지방산처럼 완전히 산화하지 못한다</a></li><li><a href="#s5">5. 담즙산은 소화를 돕고 대부분 다시 회수된다</a></li><li><a href="#s6">6. Steroid hormone 합성은 콜레스테롤을 미토콘드리아 안쪽으로 보내는 데서 시작한다</a></li><li><a href="#s7">7. 호르몬의 이름보다 만들어지는 반응과 되먹임을 연결한다</a></li><li><a href="#s8">8. 효소 결손은 산물 부족뿐 아니라 전구체와 다른 경로도 바꾼다</a></li></ol></nav><section aria-label="본문"><section id="s1" class="lesson-section"><h2>1. 콜레스테롤은 정상 세포에도 필요한 재료이다</h2><p>콜레스테롤은 네 개의 고리가 이어진 steroid 골격과 곁사슬, 수산기를 가진 sterol이다. 세포막의 성질을 조절하고 담즙산, steroid hormone, vitamin D 관련 경로의 재료가 된다. 그러므로 콜레스테롤 자체를 몸에 필요 없는 노폐물로 설명하면 안 된다. 문제는 공급·합성·저장·배출의 균형과 어느 장소에 얼마나 축적되는가이다. <a href="#ref-t18">[T18, I–II, PDF 456–459]</a></p><p>유리 콜레스테롤의 수산기에 지방산이 붙으면 cholesteryl ester가 된다. 이 형태는 더 소수성이 커서 세포 안 지방방울이나 지단백질 중심에 저장·운반하기에 적합하다. 세포막에 들어가는 대표 형태는 유리 콜레스테롤이다. ‘유리’는 지방산과 에스터 결합하지 않았다는 뜻이며 혈액에서 혼자 잘 녹는다는 뜻은 아니다.</p><p><strong>형태와 위치를 연결하기</strong></p><div class="tw"><table aria-label="형태와 위치를 연결하기"><thead><tr><th>형태</th><th>구조상 특징</th><th>대표 위치</th></tr></thead><tbody><tr><th>유리 콜레스테롤</th><td>수산기가 남아 있음</td><td>세포막·지단백질 표면</td></tr><tr><th>Cholesteryl ester</th><td>수산기에 지방산 결합</td><td>지방방울·지단백질 중심</td></tr></tbody></table></div><p>음식에서 흡수한 것과 몸에서 합성한 것이 모두 콜레스테롤 공급에 기여한다. 간뿐 아니라 여러 조직이 합성 능력을 가지므로 섭취량과 혈중 농도를 일대일로 연결하지 않는다.</p></section>
+<section id="s2" class="lesson-section"><h2>2. 합성의 중요한 조절점은 HMG-CoA에서 mevalonate로 가는 반응이다</h2><p>콜레스테롤의 탄소는 acetyl-CoA에서 출발하고, 합성에는 ATP와 NADPH가 필요하다. Acetyl-CoA들이 결합하여 HMG-CoA가 된 뒤 HMG-CoA reductase가 이를 mevalonate로 환원한다. 이 효소는 소포체 막에 있으나 촉매 부위가 세포질을 향한다. Mevalonate 생성은 주요 조절 단계이며 NADPH 두 분자를 사용한다. <a href="#ref-t18">[T18, III.A–C, PDF 459–462]</a></p><p>그 뒤 탄소 다섯 개의 isoprene 단위들이 만들어지고, 서로 연결되어 탄소 30개의 squalene이 된다. 고리화와 추가 변형을 거쳐 탄소 27개의 콜레스테롤이 완성된다. 모든 중간 효소를 외우기 전에 작은 탄소 단위가 연결되고 고리 구조로 바뀐다는 흐름을 이해한다.</p><p><strong>HMG-CoA라는 이름이 같아도 경로는 다르다</strong></p><div class="tw"><table aria-label="HMG-CoA라는 이름이 같아도 경로는 다르다"><thead><tr><th>구분</th><th>콜레스테롤 합성</th><th>케톤체 생성</th></tr></thead><tbody><tr><th>주된 구획</th><td>세포질·소포체</td><td>간 미토콘드리아</td></tr><tr><th>HMG-CoA 다음 효소</th><td>Reductase</td><td>Lyase</td></tr><tr><th>바로 이어지는 산물</th><td>Mevalonate</td><td>Acetoacetate와 acetyl-CoA</td></tr></tbody></table></div><div class="box box--step"><b>시험에서 가려내는 지점</b> HMG-CoA reductase는 콜레스테롤 합성 경로의 효소다. 케톤체 생성의 HMG-CoA lyase와 구별한다.</div><p>Isoprene 중간산물은 콜레스테롤뿐 아니라 ubiquinone과 dolichol, 일부 단백질의 지질 수식에도 연결된다. 따라서 이 합성망은 세포막 재료 한 종류만 만드는 경로가 아니다.</p></section>
+<section id="s3" class="lesson-section"><h2>3. 세포는 콜레스테롤이 부족하면 만들고 들여오는 능력을 함께 늘린다</h2><p>소포체의 sterol이 낮아지면 SREBP-2–SCAP 복합체가 Golgi로 이동할 수 있다. SREBP-2가 절단되어 나온 부분은 핵에 들어가 전사인자로 작용한다. HMG-CoA reductase 같은 합성 효소와 LDL receptor의 발현이 증가하여, 세포가 스스로 만드는 양과 혈액에서 받아들이는 능력이 함께 늘어난다. Sterol이 충분하면 복합체가 소포체에 머물러 이 반응이 줄어든다. <a href="#ref-t18">[T18, III.E 및 VI.D, PDF 463–465, 480]</a></p><p>조절은 유전자 발현에만 의존하지 않는다. Sterol이 많으면 reductase의 분해가 촉진될 수 있다. 에너지 부족 때 활성화되는 AMPK는 reductase를 인산화하여 활성을 낮춘다. 많은 에너지를 쓰는 합성을 현재 에너지 사정에 맞추는 것이다.</p><p><strong>시간 규모가 다른 조절 방식</strong></p><div class="tw"><table aria-label="시간 규모가 다른 조절 방식"><thead><tr><th>방식</th><th>핵심 변화</th></tr></thead><tbody><tr><th>SREBP-2</th><td>합성 효소·수용체 발현 조절</td></tr><tr><th>효소 분해</th><td>이미 존재하는 reductase 양 조절</td></tr><tr><th>AMPK 인산화</th><td>효소 활성 억제와 에너지 절약</td></tr></tbody></table></div><p>Statin은 HMG-CoA reductase를 억제한다. 간세포의 콜레스테롤 감소에 대한 반응으로 LDL receptor가 늘면 혈중 LDL 제거가 증가한다. 따라서 혈중 LDL 감소를 ‘콜레스테롤을 덜 만들었기 때문’에서 멈추지 말고 수용체를 통한 회수 증가까지 연결한다.</p><div class="box box--front"><b>연구 전선</b> 같은 합성 억제가 일어나도 LDL receptor 기능이 크게 손상되어 있다면 혈중 LDL을 회수하는 반응은 왜 달라질까?</div></section>
+<section id="s4" class="lesson-section"><h2>4. 사람은 콜레스테롤 고리를 지방산처럼 완전히 산화하지 못한다</h2><p>사람은 콜레스테롤의 steroid 고리를 지방산 β-산화처럼 이산화탄소와 물까지 분해하여 처리하지 못한다. 중요한 배출 경로는 콜레스테롤 자체를 담즙으로 내보내거나 담즙산으로 바꾸어 장으로 보내는 것이다. 장에서 재흡수되지 않고 대변으로 나가야 몸 전체에서 순손실이 생긴다. 혈액에서 간으로 이동한 것만으로 배출이 끝난 것은 아니다. <a href="#ref-t18">[T18, IV–V, PDF 466–470]</a></p><p>간에서 만드는 대표적인 일차 담즙산은 cholic acid와 chenodeoxycholic acid이다. 고리에 수산기가 추가되고 곁사슬이 짧아져 물과 접하는 면과 소수성 면을 함께 갖게 된다. 고전적 담즙산 합성 경로의 중요한 조절 효소는 cholesterol 7α-hydroxylase(CYP7A1)이다. 담즙산 공급이 충분하면 합성을 억제하는 되먹임이 작동한다.</p><p><strong>이동과 배출을 구별하기</strong></p><div class="tw"><table aria-label="이동과 배출을 구별하기"><thead><tr><th>관찰</th><th>몸 전체 콜레스테롤에 대한 의미</th></tr></thead><tbody><tr><th>말초에서 간으로 이동</th><td>위치가 바뀜; 아직 체외 배출은 아님</td></tr><tr><th>담즙으로 분비</th><td>장으로 이동; 재흡수 가능</td></tr><tr><th>대변으로 손실</th><td>몸 전체에서 순배출</td></tr></tbody></table></div><div class="box box--step"><b>시험에서 가려내는 지점</b> 콜레스테롤을 간으로 회수하는 것과 몸 밖으로 배출하는 것은 다른 단계다. 순배출에는 장에서 재흡수되지 않는 손실이 필요하다.</div></section>
+<section id="s5" class="lesson-section"><h2>5. 담즙산은 소화를 돕고 대부분 다시 회수된다</h2><p>간은 담즙산에 glycine이나 taurine을 결합시킨다. 이 포합은 장내 환경에서 이온화와 물에 대한 친화성을 높여 지질 소화·흡수에 적합하게 한다. 담즙산염과 인지질은 소수성 지질이 물속에서 분산되고 미셀에 실리도록 돕는다. 담즙산은 소화효소처럼 TAG의 에스터 결합을 직접 자르는 물질이 아니다. <a href="#ref-t18">[T18, V.C–F, PDF 468–471]</a></p><p>분비된 담즙산의 대부분은 회장 말단 등에서 재흡수되어 문맥을 통해 간으로 돌아온다. 이를 장간순환이라 한다. 일부는 장내 미생물에 의해 탈포합·탈수산화되어 이차 담즙산이 된다. 회장 기능이 크게 손상되면 재흡수가 줄고, 대장으로 들어간 담즙산에 의한 설사나 담즙산 풀 감소에 따른 지방 흡수 장애가 나타날 수 있다. 결과는 손상 범위와 남은 재흡수 능력에 달려 있다.</p><div class="box box--limit"><b>임상 연계</b><h3>학습용 상황: 담즙에 콜레스테롤을 더 내보내면 항상 좋은가?</h3><p>담즙산염과 phosphatidylcholine이 녹여 둘 수 있는 양보다 콜레스테롤이 많아지면 결정이 생길 수 있다. 담낭의 정체 등도 더해지면 콜레스테롤 담석 형성이 쉬워진다. 혈중 콜레스테롤을 줄이는 문제와 담즙 안에서 용해도를 유지하는 문제는 서로 다른 장소의 문제다. 모든 담석이 콜레스테롤 담석인 것도 아니다.</p></div><p>담즙산 결합 수지는 장에서 재흡수를 줄여 대변 손실을 늘린다. 간이 손실분을 보충하려고 콜레스테롤을 담즙산 합성에 더 사용하면 혈중 LDL 회수에도 영향을 준다. 이는 약물의 기본 원리이며 개인별 사용 여부나 용량을 결정하는 설명은 아니다.</p></section>
+<section id="s6" class="lesson-section"><h2>6. Steroid hormone 합성은 콜레스테롤을 미토콘드리아 안쪽으로 보내는 데서 시작한다</h2><p>부신피질과 생식샘 등의 세포는 콜레스테롤을 호르몬 합성에 사용한다. StAR(steroidogenic acute regulatory protein)은 콜레스테롤이 미토콘드리아 외막에서 내막으로 이동하는 과정에 중요하다. 내막의 CYP11A1, 즉 cholesterol side-chain cleavage enzyme이 곁사슬을 절단하여 탄소 21개의 pregnenolone을 만든다. NADPH와 산소가 필요한 반응이다. <a href="#ref-t18">[T18, VII.A, PDF 487–488]</a></p><p>Pregnenolone 이후에는 세포가 가진 효소에 따라 cortisol, aldosterone, androgen, estrogen, progesterone 계열로 갈라진다. 모든 steroid 생성 세포가 모든 호르몬을 똑같이 만들지는 않는다. 부신의 층과 생식샘 세포마다 효소 구성이 다른 것이 산물 차이의 중요한 이유다.</p><p><strong>공통 출발점과 조직별 산물</strong></p><div class="tw"><table aria-label="공통 출발점과 조직별 산물"><thead><tr><th>조직·구역</th><th>대표 산물</th><th>주요 조절 맥락</th></tr></thead><tbody><tr><th>부신 사구대</th><td>Aldosterone</td><td>Angiotensin II·혈중 K⁺ 증가</td></tr><tr><th>부신 속상대</th><td>Cortisol</td><td>ACTH</td></tr><tr><th>부신 망상대</th><td>부신 androgen</td><td>ACTH 등</td></tr><tr><th>생식샘</th><td>성호르몬</td><td>LH·FSH와 세포 간 협력</td></tr></tbody></table></div><p>부신 수질의 catecholamine은 다른 합성 계열이다. 같은 부신에 있다는 이유로 콜레스테롤에서 만들어지는 steroid라고 분류하지 않는다.</p></section>
+<section id="s7" class="lesson-section"><h2>7. 호르몬의 이름보다 만들어지는 반응과 되먹임을 연결한다</h2><p>Cortisol은 시상하부 CRH → 뇌하수체 ACTH → 부신피질의 축으로 조절된다. Cortisol이 증가하면 CRH와 ACTH 분비를 억제하는 음성 되먹임이 작동한다. Cortisol은 스트레스 상황에서 연료 공급과 면역·염증 반응을 조절한다. Aldosterone은 주로 renin–angiotensin계와 혈중 K⁺ 증가에 반응하며, 신장에서 Na⁺ 재흡수와 K⁺ 배설을 촉진한다. 두 호르몬을 모두 ACTH만으로 조절된다고 설명하지 않는다. <a href="#ref-t18">[T18, VII.B–D, PDF 490–493]</a></p><p>Aromatase(CYP19A1)는 androgen의 고리 구조를 바꾸어 estrogen을 만드는 효소다. Testosterone은 estradiol로, androstenedione은 estrone으로 전환된다. Aromatase가 androgen을 testosterone으로 만든다는 설명은 잘못이다. Testosterone에서 더 강력한 androgen인 dihydrotestosterone으로 가는 것은 5α-reductase 반응이다. <a href="#ref-endo">[C1]</a></p><p><strong>혼동하기 쉬운 전환</strong></p><div class="tw"><table aria-label="혼동하기 쉬운 전환"><thead><tr><th>반응</th><th>효소</th></tr></thead><tbody><tr><th>Testosterone → estradiol</th><td>Aromatase</td></tr><tr><th>Androstenedione → estrone</th><td>Aromatase</td></tr><tr><th>Testosterone → dihydrotestosterone</th><td>5α-Reductase</td></tr></tbody></table></div><div class="box box--step"><b>시험에서 가려내는 지점</b> Aromatase는 androgen을 estrogen으로 전환한다. 호르몬 이름과 효소 이름을 반응 화살표로 연결한다.</div><p>Steroid hormone은 혈액에서 운반 단백질과 결합하여 이동하고, 표적 세포의 세포질·핵 수용체를 통해 유전자 발현을 조절하는 작용이 중요하다. 합성 세포가 호르몬을 만들게 하는 ACTH의 막 수용체와, 표적 세포가 cortisol을 받아 반응하는 수용체를 혼동하지 않는다.</p></section>
+<section id="s8" class="lesson-section"><h2>8. 효소 결손은 산물 부족뿐 아니라 전구체와 다른 경로도 바꾼다</h2><p>호르몬 합성의 한 단계가 막히면 그 뒤 산물이 줄어드는 동시에 앞의 전구체가 쌓이거나 다른 경로로 흐른다. Cortisol이 감소하면 ACTH에 대한 억제가 줄어 부신을 더 자극할 수 있다. 선천성 부신과형성의 여러 유형을 이해하는 공통 원리다. 다만 결손 효소가 다르면 mineralocorticoid와 androgen의 변화 방향도 달라지므로 모든 유형의 혈압·칼륨·성호르몬 소견이 같지는 않다. <a href="#ref-t18">[T18, VII.A 및 그림 18.26, PDF 488–491]</a></p><div class="box box--limit"><b>임상 연계</b><h3>학습용 사례: 21-hydroxylase 결핍의 흐름</h3><p>21-hydroxylase 활성이 낮으면 cortisol 합성이 제한되고 ACTH 자극이 증가할 수 있다. 전구체는 androgen 합성 쪽으로 더 흐를 수 있다. 심한 형태에서는 aldosterone 생성도 부족하여 염분 손실이 생길 수 있지만, 모든 형태가 같은 정도의 염분 손실을 보이지는 않는다. ‘막힌 뒤’, ‘막힌 앞’, ‘되먹임’의 세 방향으로 설명한다.</p></div><div class="box box--front"><b>연구 전선</b> Cortisol이 부족한 두 질환에서 한쪽은 aldosterone도 부족하고 다른 쪽은 혈압을 올리는 전구체가 많아질 수 있다. 왜 cortisol 수치 하나만으로 혈압과 K⁺를 예측할 수 없을까?</div><p>호르몬은 작용 후 간 등에서 변환되고 glucuronide나 sulfate와 포합되어 소변·담즙 배출에 적합한 형태가 된다. 이 소량의 호르몬 대사와 몸 전체 콜레스테롤의 주된 배출 경로를 같은 규모로 취급하지 않는다. 다음 강의에서는 혈액 속 콜레스테롤이 어떤 입자에 실리고 어떻게 회수되는지 살펴본다.</p></section>
+</section>
+
+<section aria-labelledby="questions"><h2 id="questions">확인 문항과 해설</h2><ol class="quiz">
+<li><p class="qq"><strong>판단.</strong> Cholesteryl ester는 세포막의 대표적인 콜레스테롤 형태이다.</p><details><summary>해설</summary><p>틀리다. 막에는 주로 유리 콜레스테롤이 있고, ester는 지방방울과 지단백질 중심의 저장·운반 형태로 중요하다.</p></details></li>
+<li><p class="qq"><strong>판단.</strong> Statin이 간의 콜레스테롤 합성을 줄이면 LDL receptor를 통한 회수 증가가 혈중 LDL 감소에 기여할 수 있다.</p><details><summary>해설</summary><p>맞다. 세포 내 공급 감소에 대한 SREBP-2 조절과 수용체 증가를 연결한다.</p></details></li>
+<li><p class="qq"><strong>판단.</strong> 간에 돌아온 담즙산은 모두 새로 합성된 담즙산이므로 장에서 재활용되는 양은 무시할 수 있다.</p><details><summary>해설</summary><p>틀리다. 대부분은 장간순환으로 재사용되고, 대변으로 손실된 양을 새 합성이 보충한다.</p></details></li>
+<li><p class="qq"><strong>판단.</strong> Aromatase는 testosterone을 estradiol로 전환한다.</p><details><summary>해설</summary><p>맞다. Testosterone을 DHT로 바꾸는 효소는 5α-reductase이다.</p></details></li>
+<li><p class="qq"><strong>설명.</strong> 콜레스테롤 합성과 케톤체 생성에서 HMG-CoA의 위치와 다음 효소를 비교하라.</p><details><summary>해설</summary><p>콜레스테롤 경로는 세포질·소포체에서 reductase를 통해 mevalonate로 간다. 케톤체 경로는 간 미토콘드리아에서 lyase를 통해 acetoacetate를 만든다.</p></details></li>
+<li><p class="qq"><strong>적용.</strong> Cortisol 합성 효소가 부족하면 왜 부신 자극과 다른 호르몬 경로까지 달라지는가?</p><details><summary>해설</summary><p>Cortisol 감소로 ACTH 음성 되먹임이 약해지고, 쌓인 전구체가 다른 경로로 흐를 수 있기 때문이다. 결과는 막힌 효소 위치에 따라 달라진다.</p></details></li>
+</ol></section>
+
+<section aria-labelledby="references"><h2 id="references">참고문헌</h2><ol class="ref"><li id="ref-t18">Abali EE, Cline SD, Franklin DS, Viselli SM. Lippincott Illustrated Reviews: Biochemistry. 8th ed. Wolters Kluwer; 2022. Chapter 18, I–V 및 VII. 제공 PDF 456–471, 487–495쪽(파일 기준). 원문에서 모순되는 조절 설명과 aromatase 전환 표기는 보완했다.</li><li id="ref-endo"><a href="https://www.ncbi.nlm.nih.gov/books/NBK278933/">Estrogens, Male Reproduction and Beyond. Endotext.</a> Aromatase의 androgen→estrogen 전환. <a href="https://www.ncbi.nlm.nih.gov/books/NBK279000/">Androgen Physiology, Pharmacology, Use and Misuse. Endotext.</a> Testosterone의 estradiol·DHT 전환.</li></ol></section>
+<nav class="pager" aria-label="이전·다음 수업"><a href="../../W09/L01/index.html">← Eicosanoid와 지질 신호 [17장]</a><a href="../../W09/L03/index.html">Lipoprotein 대사와 이상지질혈증 [18장] →</a></nav></main><footer class="foot wrap">
   <span>© 2026 Kim Jintae · Hanyang University</span>
   <a href="https://github.com/hoperiasd2/hoperiasd2.github.io">GitHub 저장소</a>
 </footer>
 
-<script src="../../../../assets/edit.js" defer></script>
-</body>
-</html>
+<script src="../../../../assets/edit.js" defer></script></body></html>

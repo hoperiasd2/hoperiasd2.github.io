@@ -1,16 +1,551 @@
 <!DOCTYPE html>
-<html lang="ko">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Triacylglycerol 대사와 지방 동원 · M02-W08-L01</title>
-<meta name="description" content="Triacylglycerol 대사와 지방 동원">
-<link rel="stylesheet" href="../../../../assets/site.css">
-<link rel="stylesheet" href="../../../../assets/lesson.css">
-</head>
-<body>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>M02-W08-L01 Triacylglycerol 대사와 지방 동원 [16장]</title><meta name="description" content="Triacylglycerol 대사와 지방 동원 [16장]: 구조에서 생리 기능과 질환까지"><style data-source="site.css + lesson.css snapshot 2026-10-17">/* 의생명과학 교육과정 — 공통 스타일
+   색은 :root 토큰으로만 쓰고 다크 모드에서 재정의한다. */
 
-<header class="masthead">
+:root {
+  --navy: #003c71;
+  --navy-700: #00294e;
+  --chrome: #f2b705;
+  --ink: #16191d;
+  --ink-2: #4a5159;
+  --ink-3: #727a84;
+  --line: #dde2e8;
+  --bg: #f6f8fa;
+  --card: #ffffff;
+  --accent-soft: #eaf1f8;
+  --ok: #1a7f52;
+  --ok-soft: #e7f4ed;
+  --warn: #9a6700;
+  --warn-soft: #fdf5e3;
+  --radius: 10px;
+  --wrap: 1180px;
+  --mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+  --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo",
+    "Noto Sans KR", "Malgun Gothic", sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --navy: #8fc3f5;
+    --navy-700: #b9d9fb;
+    --chrome: #f2b705;
+    --ink: #e7eaee;
+    --ink-2: #b2bac4;
+    --ink-3: #868f9a;
+    --line: #2b3138;
+    --bg: #14171b;
+    --card: #1b1f24;
+    --accent-soft: #1e2833;
+    --ok: #5dd3a0;
+    --ok-soft: #16271f;
+    --warn: #e3b341;
+    --warn-soft: #2a2416;
+  }
+}
+:root[data-theme="dark"] {
+  --navy: #8fc3f5;
+  --navy-700: #b9d9fb;
+  --ink: #e7eaee;
+  --ink-2: #b2bac4;
+  --ink-3: #868f9a;
+  --line: #2b3138;
+  --bg: #14171b;
+  --card: #1b1f24;
+  --accent-soft: #1e2833;
+  --ok: #5dd3a0;
+  --warn: #e3b341;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.75;
+  -webkit-text-size-adjust: 100%;
+}
+
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 16px; }
+.wrap--narrow { max-width: 860px; }
+
+a { color: var(--navy); }
+a:hover { color: var(--navy-700); }
+
+/* ---- 머리글 ---- */
+.masthead {
+  background: #003c71;
+  border-bottom: 3px solid var(--chrome);
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+.masthead .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 52px;
+}
+.masthead a.brand {
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  letter-spacing: .01em;
+}
+.masthead nav { display: flex; gap: 16px; flex-wrap: wrap; }
+.masthead nav a { color: #cfe0f0; text-decoration: none; font-size: 14px; }
+.masthead nav a:hover { color: #fff; }
+
+/* ---- 이동 경로 ---- */
+.crumb {
+  font-size: 13px;
+  color: var(--ink-3);
+  padding: 14px 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+}
+.crumb a { color: var(--ink-2); text-decoration: none; }
+.crumb a:hover { color: var(--navy); text-decoration: underline; }
+.crumb span[aria-hidden] { color: var(--ink-3); }
+
+/* ---- 표제 ---- */
+.hero {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-left: 5px solid var(--navy);
+  border-radius: var(--radius);
+  padding: 26px 28px;
+  margin: 16px 0 24px;
+}
+.hero .eyebrow {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  margin: 0 0 8px;
+}
+.hero h1 { margin: 0 0 10px; font-size: 27px; line-height: 1.35; }
+.hero .en { color: var(--ink-3); font-size: 14px; margin: 0 0 12px; }
+.hero p.lede { margin: 0; color: var(--ink-2); max-width: 70ch; }
+
+h2 {
+  font-size: 20px;
+  margin: 34px 0 14px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--line);
+}
+h3 { font-size: 17px; margin: 24px 0 10px; }
+
+/* ---- 카드 격자 ---- */
+.grid { display: grid; gap: 14px; }
+.grid--modules { grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); }
+.grid--weeks { grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); }
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 18px 20px;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  transition: border-color .12s, transform .12s;
+}
+a.card:hover { border-color: var(--navy); transform: translateY(-1px); }
+.card__no {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--chrome);
+  font-weight: 700;
+  letter-spacing: .08em;
+}
+.card__title { font-weight: 700; margin: 4px 0 2px; }
+.card__en { font-size: 13px; color: var(--ink-3); }
+.card__meta { font-size: 13px; color: var(--ink-2); margin-top: 10px; }
+
+/* ---- 진행 막대 ---- */
+.bar { height: 5px; background: var(--line); border-radius: 3px; overflow: hidden; margin-top: 10px; }
+.bar > i { display: block; height: 100%; background: var(--navy); }
+
+/* ---- 수업 목록 ---- */
+.lessons { list-style: none; margin: 0; padding: 0; }
+.lessons li {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--card);
+  margin-bottom: 8px;
+}
+.lessons a {
+  display: flex;
+  gap: 14px;
+  align-items: baseline;
+  padding: 13px 16px;
+  text-decoration: none;
+  color: inherit;
+}
+.lessons a:hover { background: var(--accent-soft); }
+.lessons .lid {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--ink-3);
+  white-space: nowrap;
+}
+.lessons .ltitle { flex: 1; min-width: 0; }
+.lessons .lgroup { font-size: 12px; color: var(--ink-3); }
+
+/* ---- 상태 배지 ---- */
+.badge {
+  font-size: 11px;
+  font-family: var(--mono);
+  padding: 2px 8px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  color: var(--ink-2);
+  background: var(--bg);
+  white-space: nowrap;
+}
+.badge--design { color: var(--ink-3); }
+.badge--draft { color: var(--warn); border-color: var(--warn); background: var(--warn-soft); }
+.badge--review { color: var(--navy); border-color: var(--navy); background: var(--accent-soft); }
+.badge--done {
+  color: var(--ok);
+  border-color: var(--ok);
+  background: var(--ok-soft);
+  font-weight: 600;
+}
+
+/* ---- 목록에서 집필 상태를 한눈에 ---- */
+/* 배지만으로는 276줄을 훑을 때 눈에 들어오지 않아 왼쪽에 색 띠를 둔다. */
+.lessons li[data-status] { border-left: 4px solid var(--line); }
+.lessons li[data-status="done"] { border-left-color: var(--ok); }
+.lessons li[data-status="draft"] { border-left-color: var(--warn); }
+.lessons li[data-status="review"] { border-left-color: var(--navy); }
+.lessons li[data-status="design"] { border-left-color: var(--line); }
+.lessons li[data-status="done"] .ltitle { font-weight: 600; }
+
+.filters--status { margin-top: -4px; }
+.filters--status button[data-filter-status="done"][aria-pressed="true"] {
+  border-color: var(--ok);
+  color: var(--ok);
+}
+
+/* ---- 검색 ---- */
+.search {
+  width: 100%;
+  padding: 12px 14px;
+  font-size: 15px;
+  font-family: inherit;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--card);
+  color: var(--ink);
+}
+.search:focus { outline: 2px solid var(--navy); outline-offset: 1px; }
+.filters { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 18px; }
+.filters button {
+  font: inherit;
+  font-size: 13px;
+  padding: 6px 13px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: var(--card);
+  color: var(--ink-2);
+  cursor: pointer;
+}
+.filters button[aria-pressed="true"] { background: var(--navy); color: #fff; border-color: var(--navy); }
+.count { font-size: 13px; color: var(--ink-3); margin: 0 0 12px; }
+
+/* ---- 안내 상자 ---- */
+.callout {
+  background: var(--accent-soft);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--navy);
+  border-radius: var(--radius);
+  padding: 14px 18px;
+  margin: 18px 0;
+  font-size: 15px;
+}
+.callout--warn { border-left-color: var(--chrome); }
+
+/* ---- 이전·다음 ---- */
+.pager {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 36px 0 12px;
+  border-top: 1px solid var(--line);
+  padding-top: 16px;
+  font-size: 14px;
+}
+.pager a { text-decoration: none; }
+.pager span { color: var(--ink-3); }
+
+/* ---- 표 ---- */
+table { border-collapse: collapse; width: 100%; margin: 14px 0; font-size: 15px; }
+th, td { border: 1px solid var(--line); padding: 8px 11px; text-align: left; vertical-align: top; }
+th { background: var(--accent-soft); font-weight: 700; }
+
+/* ---- 꼬리말 ---- */
+.foot {
+  margin-top: 56px;
+  padding: 22px 16px 40px;
+  border-top: 1px solid var(--line);
+  color: var(--ink-3);
+  font-size: 13px;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 640px) {
+  .hero { padding: 20px; }
+  .hero h1 { font-size: 22px; }
+  .lessons a { flex-wrap: wrap; gap: 6px 12px; }
+}
+
+@media print {
+  .masthead, .filters, .search, .pager, .foot { display: none; }
+  body { background: #fff; font-size: 11pt; }
+  .card, .hero { border: 1px solid #ccc; break-inside: avoid; }
+}
+
+/* 수업 본문 전용 스타일. site.css의 토큰을 그대로 쓴다. */
+
+.lesson { font-size: 16.5px; }
+.lesson p { margin: 0 0 14px; }
+.lesson ul, .lesson ol { margin: 0 0 16px; padding-left: 22px; }
+.lesson li { margin-bottom: 7px; }
+.lesson li > ul { margin: 7px 0 4px; }
+.lesson code {
+  font-family: var(--mono);
+  font-size: .9em;
+  background: var(--accent-soft);
+  padding: 1px 5px;
+  border-radius: 4px;
+}
+.lesson section { scroll-margin-top: 70px; }
+
+/* 슬라이드 내려받기 */
+.dl { margin: 0 0 24px; }
+.dlbtn {
+  display: inline-block;
+  padding: 9px 18px;
+  border: 1px solid var(--navy);
+  border-radius: var(--radius);
+  color: var(--navy);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 700;
+}
+.dlbtn:hover { background: var(--navy); color: #fff; }
+
+/* 질문과 답 */
+.lesson p.q, .lesson p.a {
+  border-radius: var(--radius);
+  padding: 13px 17px;
+  margin: 0 0 12px;
+}
+.lesson p.q {
+  background: var(--accent-soft);
+  border-left: 4px solid var(--navy);
+}
+.lesson p.a {
+  background: rgba(242, 183, 5, .13);
+  border-left: 4px solid var(--chrome);
+  font-weight: 600;
+}
+.lesson p.q > span, .lesson p.a > span {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: .1em;
+  margin-right: 10px;
+  vertical-align: 1px;
+  font-weight: 700;
+}
+.lesson p.q > span { color: var(--navy); }
+.lesson p.a > span { color: var(--warn); }
+
+/* 질문 목록 */
+.qlist { margin: 0 0 24px; }
+.qlist li { margin-bottom: 9px; }
+.qlist a { text-decoration: none; }
+.qlist a:hover { text-decoration: underline; }
+
+/* 조건·한계 / 귀결 / 안전 상자 */
+.box {
+  border-radius: var(--radius);
+  padding: 14px 18px;
+  margin: 16px 0;
+  font-size: 15.5px;
+  border: 1px solid var(--line);
+}
+.box > b {
+  display: block;
+  font-size: 11px;
+  font-family: var(--mono);
+  letter-spacing: .1em;
+  margin-bottom: 5px;
+}
+.box--limit { background: var(--accent-soft); border-left: 4px solid var(--navy); }
+.box--limit > b { color: var(--navy); }
+.box--result { background: rgba(242, 183, 5, .1); border-left: 4px solid var(--chrome); }
+.box--result > b { color: var(--warn); }
+.box--safety { background: rgba(242, 183, 5, .14); border-left: 5px solid var(--chrome); }
+.box--safety > b { color: var(--warn); font-size: 12px; }
+.box--safety ul { margin: 6px 0 0; }
+
+/* 표 */
+.tw { overflow-x: auto; margin: 16px 0; }
+.lesson table { font-size: 14.5px; min-width: 520px; }
+.lesson th { white-space: nowrap; }
+
+/* 확인 문항 */
+.quiz { counter-reset: none; }
+.quiz > li { margin-bottom: 18px; }
+.quiz .qq { font-weight: 600; margin-bottom: 8px; }
+.quiz details {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--card);
+  padding: 0 14px;
+}
+.quiz details[open] { padding-bottom: 6px; }
+.quiz summary {
+  cursor: pointer;
+  padding: 9px 0;
+  font-size: 14px;
+  color: var(--navy);
+  font-weight: 700;
+}
+.quiz details p { margin: 4px 0 8px; font-size: 15.5px; }
+
+/* 참고문헌 */
+.ref { font-size: 14.5px; color: var(--ink-2); }
+.ref li { margin-bottom: 8px; }
+
+@media print {
+  .quiz details { border: none; }
+  .quiz details[open] summary { display: none; }
+  .lesson p.q, .lesson p.a, .box, .equation { break-inside: avoid; }
+  .contents { font-size: 13px; background: none; }
+}
+
+/* 그림 */
+.fig { margin: 20px 0; text-align: center; }
+.fig img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: #fff;
+}
+.fig figcaption {
+  font-size: 14px;
+  color: var(--ink-2);
+  margin-top: 9px;
+  text-align: left;
+  line-height: 1.6;
+}
+.fig figcaption > b { color: var(--navy); margin-right: 6px; }
+.fig .credit { color: var(--ink-3); font-size: 13px; }
+
+/* 보강 입력 상자와 외부 링크 그림 */
+.box--notes{border-left:4px solid #f2b705;background:#fffaec}
+.fig--ext img{outline:2px dashed #f2b705;outline-offset:3px}
+.fig .credit{font-size:.82em;color:#8a6300}
+
+/* 페이지에서 직접 고치는 기능 */
+.editbar{position:fixed;right:16px;bottom:16px;z-index:60;display:flex;gap:6px;
+  align-items:center;flex-wrap:wrap;justify-content:flex-end;max-width:min(94vw,520px);
+  padding:8px;border-radius:10px;background:#ffffffee;border:1px solid #c6d2dd;
+  box-shadow:0 2px 12px rgba(0,0,0,.14)}
+.editbar.is-on{background:#fffaecf2;border-color:#f2b705}
+.editbtn{font:inherit;font-size:.86rem;padding:6px 11px;border-radius:7px;cursor:pointer;
+  border:1px solid #003c71;background:#fff;color:#003c71}
+.editbtn:hover{background:#eaf1f8}
+.editbtn--main{background:#003c71;color:#fff;font-weight:700}
+.editbtn--main:hover{background:#00529c}
+.editbtn--warn{border-color:#b3261e;color:#b3261e}
+.editbtn--warn:hover{background:#fbeceb}
+.editcount{font-size:.82rem;color:#8a6300;font-weight:700}
+.editgrp{display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end}
+.editnote{position:fixed;left:16px;bottom:16px;z-index:60;max-width:min(92vw,460px);
+  padding:10px 13px;border-radius:9px;border-left:4px solid #f2b705;background:#16191df2;
+  color:#fff;font-size:.86rem;line-height:1.5;opacity:0;transform:translateY(8px);
+  transition:opacity .18s,transform .18s;pointer-events:none}
+.editnote.is-on{opacity:1;transform:none}
+.editdump{position:fixed;left:16px;bottom:72px;z-index:60;width:min(92vw,560px);height:40vh;
+  font:12px/1.5 monospace;padding:10px;border:2px solid #f2b705;border-radius:8px;background:#fff}
+body.editing [contenteditable]{outline:1px dashed #9fb3c4;outline-offset:3px;border-radius:3px}
+body.editing [contenteditable]:focus{outline:2px solid #003c71;background:#f7fbff}
+body.editing h2{position:relative}
+.memobtn{font:inherit;font-size:.62em;font-weight:400;margin-left:10px;padding:2px 8px;
+  border-radius:6px;cursor:pointer;border:1px dashed #8a6300;background:#fffaec;color:#8a6300;
+  vertical-align:middle}
+.memobtn:hover{background:#f2b705;color:#16191d}
+h2.has-memo::after{content:"메모";font-size:.58em;font-weight:400;margin-left:10px;
+  padding:2px 8px;border-radius:6px;background:#f2b705;color:#16191d;vertical-align:middle}
+.is-edited{background:#fffaec;box-shadow:inset 3px 0 0 #f2b705;padding-left:9px}
+@media print{.editbar,.editnote,.editdump,.memobtn{display:none}}
+.editmodal{position:fixed;inset:0;z-index:70;display:flex;align-items:center;
+  justify-content:center;padding:16px;background:#16191dbf}
+.editmodal__box{width:min(96vw,560px);background:#fff;border-radius:12px;padding:18px 20px;
+  box-shadow:0 8px 32px rgba(0,0,0,.3)}
+.editmodal__box h3{margin:0 0 6px;font-size:1.02rem;color:#003c71}
+.editmodal__box p{margin:0 0 12px;font-size:.84rem;color:#4a5159}
+.editmodal__box textarea{width:100%;font:inherit;font-size:.9rem;line-height:1.55;padding:10px;
+  border:1px solid #c6d2dd;border-radius:8px;resize:vertical;box-sizing:border-box}
+.editmodal__box textarea:focus{outline:2px solid #003c71;border-color:#003c71}
+.editmodal__row{display:flex;gap:8px;justify-content:flex-end;margin-top:12px}
+
+/* 깊이 층위 상자와 수업 사이 연결 */
+.box--step{border-left:4px solid #2e7d32;background:#ecf6ec}
+.box--step>b{color:#1e6b2c}
+.box--front{border-left:4px solid #6b4fa0;background:#f3eff9}
+.box--front>b{color:#5b3a8a}
+a.xref{font-variant-numeric:tabular-nums;white-space:nowrap;text-decoration:none;
+  border-bottom:1px dotted currentColor}
+a.xref:hover{background:#eaf1f8}
+
+/* ---- 본문 목차 ---- */
+/* 평범한 목록으로 두면 본문과 구별되지 않아 긴 수업에서 지나치기 쉽다. */
+.contents {
+  border: 1px solid var(--line);
+  background: var(--bg);
+  border-radius: var(--radius);
+  padding: 16px 22px;
+  margin: 28px 0 36px;
+}
+.contents strong {
+  display: block;
+  font-size: 13px;
+  letter-spacing: .04em;
+  color: var(--ink-2);
+  margin-bottom: 10px;
+}
+.contents .qlist { margin: 0; }
+.contents .qlist li { margin-bottom: 6px; font-size: 15.5px; }
+
+/* ---- 수식 상자 ---- */
+/* @eq 로 적은 줄. 본문 문단과 섞이면 식의 경계가 보이지 않는다. */
+.equation {
+  background: var(--accent-soft);
+  border-left: 3px solid var(--navy);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  padding: 16px 20px;
+  margin: 22px 0;
+  line-height: 2;
+  overflow-wrap: anywhere;
+}
+</style><link rel="stylesheet" href="../../../../assets/site.css"><link rel="stylesheet" href="../../../../assets/lesson.css"></head><body><header class="masthead">
   <div class="wrap">
     <a class="brand" href="../../../../index.html">의생명과학 교육과정</a>
     <nav>
@@ -21,117 +556,33 @@
   </div>
 </header>
 
-<main class="wrap wrap--narrow lesson" data-lesson="M02-W08-L01">
-<nav class="crumb" aria-label="이동 경로"><a href="../../../../index.html">대문</a><span aria-hidden="true">›</span><a href="../../../../curriculum/index.html">전체 수업</a><span aria-hidden="true">›</span><a href="../../index.html">M02</a><span aria-hidden="true">›</span><a href="../index.html">8주차</a><span aria-hidden="true">›</span><span>M02-W08-L01</span></nav>
+<main class="wrap wrap--narrow lesson" data-lesson-id="M02-W08-L01" data-lesson="M02-W08-L01"><nav class="crumb" aria-label="이동 경로"><a href="../../../../index.html">대문</a><span aria-hidden="true">›</span><a href="../../../index.html">전체 수업</a><span aria-hidden="true">›</span><a href="../../index.html">M02</a><span aria-hidden="true">›</span><a href="../index.html">8주차</a><span aria-hidden="true">›</span><span>M02-W08-L01</span></nav><section class="hero"><p class="eyebrow">M02-W08-L01 · 대사생화학 · 지질대사</p><h1>Triacylglycerol 대사와 지방 동원</h1><p class="en"></p></section><section aria-labelledby="objectives"><h2 id="objectives">학습목표</h2><ul><li>중성지방 합성에 필요한 지방산과 글리세롤 골격의 출처를 설명한다.</li><li>지방세포의 지방분해와 혈중 LPL 작용을 구별한다.</li><li>ATGL·HSL·MGL의 순차 작용을 설명한다.</li><li>인슐린과 카테콜아민이 지방산 방출에 미치는 영향을 예측한다.</li><li>재에스터화와 지방조직의 저장 능력을 임상 상황에 연결한다.</li></ul></section>
 
-  <section class="hero">
-    <p class="eyebrow">M02-W08-L01 · 대사생화학 · 지질대사</p>
-    <h1>Triacylglycerol 대사와 지방 동원</h1>
-    <p class="en">Triacylglycerol Metabolism and Fat Mobilisation</p>
-  </section>
-  <p class="dl"><a class="dlbtn" href="slides.pptx">슬라이드 내려받기 (PPTX)</a></p>
-  <h2>학습목표</h2>
-  <ul><li>Triacylglycerol 저장의 생리적 의의를 glycogen 저장과 비교해 설명한다.</li><li>Glycerol 3-phosphate 경로와 monoacylglycerol 경로를 조직별로 구분해 설명한다.</li><li>Lipoprotein lipase와 hormone-sensitive lipase의 위치·기질·조절 차이를 대조해 설명한다.</li><li>Perilipin과 ATGL·HSL·MGL의 순차적 작용으로 지방 분해 조절을 설명한다.</li><li>유리지방산의 알부민 운반과 glycerol의 운명을 조직별로 설명한다.</li><li>지방 동원의 호르몬 조절과 insulin 저항성에서 이 조절이 깨지는 양상을 설명한다.</li></ul>
-  <h2>선수지식</h2>
-  <ul><li><a class="xref" href="../../../../curriculum/M02/W07/L01/index.html">M02-W07-L01</a> 식이지질의 소화·흡수·운반 — chylomicron과 apoC-II</li><li><a class="xref" href="../../../../curriculum/M02/W07/L02/index.html">M02-W07-L02</a> 지방산 합성과 조절 — acyl-CoA의 생성</li><li><a class="xref" href="../../../../curriculum/M02/W07/L03/index.html">M02-W07-L03</a> 지방산 산화와 관련 대사 이상 — 유리지방산의 조직별 이용</li></ul>
-  <nav class="contents" aria-label="강의 구성"><strong>강의 구성</strong><ol class="qlist"><li><a href="#s1">1. Triacylglycerol 저장의 생리적 의의</a></li><li><a href="#s2">2. Triacylglycerol의 합성: 두 경로</a></li><li><a href="#s3">3. Lipoprotein lipase: 혈중 입자에서 조직으로</a></li><li><a href="#s4">4. 지방 분해: lipid droplet과 세 가지 lipase</a></li><li><a href="#s5">5. Lipoprotein lipase와 hormone-sensitive lipase의 대조</a></li><li><a href="#s6">6. 유리지방산과 glycerol의 운명</a></li><li><a href="#s7">7. 지방조직과 간의 triacylglycerol 회전</a></li><li><a href="#s8">8. 지방 동원 조절의 이상</a></li></ol></nav>
-  <section id="s1">
-  <h2>1. Triacylglycerol 저장의 생리적 의의</h2>
-  <p>사람의 에너지 저장은 두 형태로 나뉜다. Glycogen과 triacylglycerol이다. 두 저장고의 규모가 크게 다르다.</p>
-  <div class="tw"><table><thead><tr><th>저장 형태</th><th>위치</th><th>양(70 kg 성인)</th><th>열량</th><th>지속 시간</th></tr></thead><tbody><tr><td>Glycogen</td><td>간 약 100 g, 근육 약 300~400 g</td><td>400~500 g</td><td>약 1,600~2,000 kcal</td><td>1일 미만</td></tr><tr><td>Triacylglycerol</td><td>지방조직</td><td>10~15 kg</td><td>약 90,000~135,000 kcal</td><td>수 주</td></tr></tbody></table></div>
-  <p>차이의 이유는 두 가지다. 첫째, triacylglycerol은 1 g당 약 9 kcal을 내는데 glycogen은 약 4 kcal이다. 둘째, glycogen은 수화되어 저장되므로 자신의 무게의 약 두 배에 해당하는 물을 함께 지닌다. Triacylglycerol은 거의 무수 상태로 저장된다. 두 효과를 합치면 같은 에너지를 저장할 때 glycogen은 triacylglycerol의 약 다섯 배에서 여섯 배의 무게를 차지한다.</p>
-  <p>다만 glycogen에는 triacylglycerol이 할 수 없는 일이 있다. Glycogen은 분해되면 포도당을 직접 공급하고 산소 없이도 ATP를 만들 수 있다. 짝수 사슬 지방산은 분해되어 acetyl-CoA가 되므로 포도당으로 전환되지 않고, 산화에는 산소가 반드시 필요하다. 그래서 두 저장고는 서로를 대체하지 않고 역할을 나눈다.</p>
-  <p>저장과 동원은 언제나 <strong>동시에 진행</strong>된다. 저장고의 크기가 변하지 않는 상태에서도 triacylglycerol은 계속 합성되고 분해되고 있으며, 식사 상태에 따라 균형이 어느 쪽으로 기우는지가 달라진다. 이 수업은 그 회전(turnover)과 그것을 조절하는 장치를 다룬다.</p>
-  </section>
-  <section id="s2">
-  <h2>2. Triacylglycerol의 합성: 두 경로</h2>
-  <p>Triacylglycerol을 만들려면 glycerol 골격과 활성화된 지방산(acyl-CoA)이 필요하다. 골격을 어디서 얻는지에 따라 경로가 둘로 나뉜다.</p>
-  <p><strong>(1) Glycerol 3-phosphate 경로 — 간과 지방조직</strong></p>
-  <p>출발 물질은 <strong>glycerol 3-phosphate</strong>이고, 그 공급원이 조직에 따라 다르다.</p>
-  <ul><li><strong>간과 신장</strong>: <strong>glycerol kinase</strong>가 혈중 glycerol을 직접 인산화할 수 있다.</li><li><strong>지방조직</strong>: <strong>glycerol kinase가 없다.</strong> 따라서 glycolysis의 중간체인 dihydroxyacetone phosphate(DHAP)가 glycerol 3-phosphate dehydrogenase에 의해 환원되어 공급된다.</li></ul>
-  <p>이 차이가 중요한 결과를 낳는다. <strong>지방조직은 포도당 없이 지방을 저장할 수 없다.</strong> Glycerol 골격이 glycolysis에서 오기 때문이다. Insulin이 GLUT4를 통해 포도당 흡수를 늘리는 것이 지방 저장의 전제 조건이 되는 이유가 여기에 있다. 또 지방조직이 자기 분해에서 내놓은 glycerol을 재사용하지 못하고 간으로 보내야 하는 이유도 같다.</p>
-  <p>이후 반응은 네 단계다.</p>
-  <ol class="steps"><li><strong>GPAT</strong>가 glycerol 3-phosphate의 sn-1에 acyl기를 붙여 lysophosphatidate를 만든다.</li><li><strong>AGPAT</strong>가 sn-2에 붙여 <strong>phosphatidate</strong>(diacylglycerol 3-phosphate)를 만든다.</li><li><strong>Phosphatidate phosphatase(lipin)</strong>가 인산을 떼어 <strong>diacylglycerol</strong>을 만든다.</li><li><strong>DGAT</strong>가 sn-3에 세 번째 acyl기를 붙여 <strong>triacylglycerol</strong>을 완성한다.</li></ol>
-  <p><strong>(2) Monoacylglycerol 경로 — 소장 상피세포</strong></p>
-  <p>식후 상피세포는 내강에서 2-monoacylglycerol을 그대로 받아들이므로 골격을 새로 만들 필요가 없다. <strong>MGAT</strong>가 acyl기를 붙여 diacylglycerol을, <strong>DGAT</strong>가 한 번 더 붙여 triacylglycerol을 만든다.</p>
-  <figure class="fig" id="fig-tag-synthesis"><img src="assets/fig-tag-synthesis.svg" alt="Triacylglycerol 합성의 두 경로. 간과 지방조직은 glycerol 3-phosphate에서 출발하고, 소장 상피세포는 2-monoacylglycerol에서 출발한다. DGAT가 두 경로가 공유하는 마지막 committed step이다." loading="lazy"><figcaption><b>그림 1</b> Triacylglycerol 합성의 두 경로. 간과 지방조직은 glycerol 3-phosphate에서 출발하고, 소장 상피세포는 2-monoacylglycerol에서 출발한다. DGAT가 두 경로가 공유하는 마지막 committed step이다.</figcaption></figure>
-  <p>두 경로에서 <strong>phosphatidate와 diacylglycerol이 분기점</strong>이라는 점을 기억해 둔다. Phosphatidate는 CDP-diacylglycerol을 거쳐 산성 phospholipid로, diacylglycerol은 CDP-choline 경로를 거쳐 phosphatidylcholine으로 갈 수 있다. 저장 지질과 막 지질이 같은 중간체에서 갈라진다.</p>
-  </section>
-  <section id="s3">
-  <h2>3. Lipoprotein lipase: 혈중 입자에서 조직으로</h2>
-  <p>지방조직이 저장할 지방산은 자체 합성만으로 오지 않는다. 대부분은 혈액의 triacylglycerol 풍부 lipoprotein, 즉 <strong>chylomicron과 VLDL</strong>에서 온다. 그런데 이 입자의 중심에 있는 triacylglycerol은 세포 안으로 들어갈 수 없다. 지방산 형태로 잘라 내야 한다.</p>
-  <p>이 일을 <strong>lipoprotein lipase(LPL)</strong>가 한다. LPL의 특징은 위치다. LPL은 세포 안이 아니라 <strong>모세혈관 내피세포의 바깥 표면</strong>에 붙어 있으며, <strong>GPIHBP1</strong>이라는 단백질이 LPL을 내피세포에 고정하고 혈액 쪽으로 제시한다. 작용에는 입자가 HDL에서 받아 온 <strong>apoC-II</strong>가 보조인자로 필요하다.</p>
-  <p>LPL이 중심부 triacylglycerol을 가수분해하면 유리지방산과 glycerol이 나오고, 지방산은 그 모세혈관이 지나는 조직으로 들어간다. 즉 <strong>어느 조직의 LPL이 작동하는지가 지방산의 배분을 결정한다.</strong></p>
-  <p>배분은 조직별 LPL의 성질과 발현량으로 조절된다.</p>
-  <ul><li><strong>지방조직 LPL</strong>은 K<sub>m</sub>이 높아 혈중 triacylglycerol이 많을 때, 즉 식후에만 효율적으로 작동한다. Insulin이 발현을 올린다.</li><li><strong>심장과 골격근 LPL</strong>은 K<sub>m</sub>이 낮아 농도가 낮은 공복에서도 계속 작동한다. 공복에서 근육 LPL은 오히려 올라간다.</li></ul>
-  <p>따라서 식후에는 지방산이 지방조직으로, 공복에는 근육과 심장으로 간다. 같은 효소가 발현 조절만으로 연료의 방향을 바꾼다.</p>
-  <div class="box box--limit"><b>임상 연계</b> <strong>임상 연계</strong> LPL 경로의 결함은 공복 혈중 triacylglycerol의 극단적 상승으로 나타난다. 원인 유전자는 <em>LPL</em> 자체, 보조인자인 <em>APOC2</em>, 고정 단백인 <em>GPIHBP1</em>, 성숙 인자인 <em>LMF1</em>, 활성화 인자인 *APOA5*로 모두 같은 경로의 다른 지점이다. 반대로 LPL을 억제하는 <strong>ANGPTL3</strong>와 <strong>apoC-III</strong>는 치료 표적이 된다. 이들을 억제하면 LPL 활성이 올라가 triacylglycerol이 떨어지므로, antisense oligonucleotide와 단클론항체가 중증 고중성지방혈증에 쓰인다. 한 효소의 양쪽 조절자가 모두 임상에 연결된 예다.</div>
-  </section>
-  <section id="s4">
-  <h2>4. 지방 분해: lipid droplet과 세 가지 lipase</h2>
-  <p>지방세포 안의 triacylglycerol은 <strong>lipid droplet</strong> 안에 저장된다. Droplet의 표면은 phospholipid 단층과 그 위에 붙은 단백질로 덮여 있는데, 그중 가장 중요한 것이 <strong>perilipin</strong>이다.</p>
-  <p>분해는 세 효소가 순서대로 수행한다.</p>
-  <ol class="steps"><li><strong>ATGL</strong>(adipose triglyceride lipase): triacylglycerol → diacylglycerol + 유리지방산. 보조활성인자 <strong>CGI-58</strong>이 필요하다. 첫 반응이며 전체 속도에 가장 크게 기여한다.</li><li><strong>HSL</strong>(hormone-sensitive lipase): diacylglycerol → monoacylglycerol + 유리지방산. <strong>호르몬 조절을 받는 단계</strong>다.</li><li><strong>MGL</strong>(monoacylglycerol lipase): monoacylglycerol → glycerol + 유리지방산. 항상 작동하며 호르몬 조절을 받지 않는다.</li></ol>
-  <p>조절의 핵심은 효소 자체가 아니라 <strong>접근</strong>이다. 인산화되지 않은 perilipin은 droplet 표면을 덮어 lipase가 기질에 닿지 못하게 하고, 동시에 CGI-58을 붙잡아 ATGL에서 떨어져 있게 한다.</p>
-  <p><strong>Epinephrine</strong>이나 <strong>glucagon</strong>이 수용체에 결합하면 cAMP가 올라가고 <strong>protein kinase A(PKA)</strong>가 활성화된다. PKA는 두 곳을 인산화한다.</p>
-  <ul><li><strong>Perilipin</strong>을 인산화하면 구조가 바뀌어 CGI-58이 풀려나 ATGL을 활성화하고, 표면이 열려 lipase가 접근한다.</li><li><strong>HSL</strong>을 인산화하면 효소 자체의 활성이 올라가고 droplet 표면으로 이동한다.</li></ul>
-  <figure class="fig" id="fig-lipid-droplet"><img src="assets/fig-lipid-droplet.svg" alt="Lipid droplet 표면의 perilipin과 세 lipase의 순차적 작용. PKA가 perilipin과 HSL을 함께 인산화하므로, 조절의 1차 관문은 효소 활성이 아니라 기질에 대한 접근이다." loading="lazy"><figcaption><b>그림 2</b> Lipid droplet 표면의 perilipin과 세 lipase의 순차적 작용. PKA가 perilipin과 HSL을 함께 인산화하므로, 조절의 1차 관문은 효소 활성이 아니라 기질에 대한 접근이다.</figcaption></figure>
-  <p><strong>Insulin</strong>은 반대로 작동한다. Insulin은 phosphodiesterase를 활성화해 cAMP를 분해하고 protein phosphatase를 통해 HSL과 perilipin을 탈인산화한다. 그래서 식후에는 분해가 거의 멈춘다. Insulin은 지방 분해를 억제하는 가장 강력한 호르몬이며, 매우 낮은 농도에서도 작동한다.</p>
-  <p>지방 분해를 올리는 호르몬은 여럿이다. Epinephrine과 norepinephrine이 beta-adrenergic 수용체를 통해 작용하고, glucagon, ACTH, cortisol, growth hormone, thyroid hormone이 더한다. 여러 신호가 같은 방향으로 모이지만 끄는 신호는 insulin 하나가 지배한다.</p>
-  </section>
-  <section id="s5">
-  <h2>5. Lipoprotein lipase와 hormone-sensitive lipase의 대조</h2>
-  <p>두 효소는 모두 triacylglycerol의 ester 결합을 끊어 유리지방산을 내놓지만, 하는 일의 의미가 정반대다.</p>
-  <figure class="fig" id="fig-lpl-hsl"><img src="assets/fig-lpl-hsl.svg" alt="Lipoprotein lipase와 hormone-sensitive lipase의 대조. 위치, 기질, 보조인자, insulin에 대한 반응 방향이 모두 다르다." loading="lazy"><figcaption><b>그림 3</b> Lipoprotein lipase와 hormone-sensitive lipase의 대조. 위치, 기질, 보조인자, insulin에 대한 반응 방향이 모두 다르다.</figcaption></figure>
-  <div class="tw"><table><thead><tr><th>항목</th><th>Lipoprotein lipase</th><th>Hormone-sensitive lipase</th></tr></thead><tbody><tr><td>위치</td><td>모세혈관 내피 표면, 세포 밖</td><td>지방세포 안, droplet 표면</td></tr><tr><td>기질</td><td>Chylomicron·VLDL 중심의 triacylglycerol</td><td>저장된 droplet의 diacylglycerol</td></tr><tr><td>보조 요소</td><td>입자의 apoC-II, 내피의 GPIHBP1</td><td>인산화된 perilipin, PKA</td></tr><tr><td>Insulin</td><td>지방조직 LPL을 <strong>올린다</strong>(저장)</td><td><strong>억제한다</strong>(동원 중단)</td></tr><tr><td>공복</td><td>지방조직 LPL은 내려가고 근육 LPL은 올라간다</td><td>인산화되어 활성화된다</td></tr><tr><td>지방산의 행방</td><td>그 모세혈관이 지나는 조직으로 <strong>들어간다</strong></td><td>세포에서 혈액으로 <strong>나간다</strong></td></tr></tbody></table></div>
-  <p>핵심은 <strong>insulin에 대한 반응 방향이 반대</strong>라는 점이다. Insulin은 LPL을 통해 들여오고 HSL을 억제해 내보내지 않으므로, 식후에는 두 조절이 모두 저장 쪽으로 작동한다. 공복에는 두 조절이 모두 동원 쪽으로 돌아간다. 하나의 호르몬이 두 효소를 반대로 조절해 저장고의 방향을 바꾼다.</p>
-  <div class="box box--result"><b>핵심 정리</b> <strong>핵심 정리</strong> LPL과 HSL을 혼동하지 않는 기준은 "어디에 있고 어느 방향으로 지방산을 보내는가"다. LPL은 세포 밖에서 혈중 입자를 열어 조직으로 들여보내고, HSL은 세포 안에서 저장고를 열어 혈액으로 내보낸다.</div>
-  </section>
-  <section id="s6">
-  <h2>6. 유리지방산과 glycerol의 운명</h2>
-  <p>Triacylglycerol 한 분자가 완전히 분해되면 유리지방산 세 개와 glycerol 한 개가 나온다. 두 산물은 성질이 달라 서로 다른 길을 간다.</p>
-  <p><strong>유리지방산</strong>은 물에 거의 녹지 않으므로 혈액에서 <strong>알부민</strong>에 결합해 운반된다. 알부민 한 분자는 보통 두세 개의 지방산을 싣고, 지방 분해가 최대일 때는 일곱 개까지 싣는다. 공복 혈중 유리지방산 농도는 대략 0.3~0.6 mmol/L이다.</p>
-  <p>알부민 결합에는 두 가지 의미가 있다.</p>
-  <ul><li><strong>보호</strong>: 유리지방산은 계면활성 성질이 있어 농도가 높으면 막을 손상한다. 알부민에 결합해 있으면 유리 상태의 농도가 낮게 유지된다.</li><li><strong>제약</strong>: 알부민-지방산 복합체는 혈액뇌장벽을 넘지 못한다. 그래서 뇌는 지방산을 연료로 쓸 수 없고, 장기 공복에서 케톤체가 필요해진다.</li></ul>
-  <p>조직에 도달한 유리지방산은 근육과 심장에서 산화되고, 간에서는 세 가지 운명 가운데 하나를 따른다. 산화되거나, 케톤체로 전환되거나, 다시 triacylglycerol로 합성되어 <strong>VLDL</strong>에 실려 나간다.</p>
-  <p><strong>Glycerol</strong>은 물에 녹으므로 운반체 없이 혈액을 돈다. 지방세포는 glycerol kinase가 없어 자신이 내놓은 glycerol을 재사용하지 못하므로, glycerol은 <strong>간과 신장</strong>으로 간다. 거기서 glycerol kinase가 인산화해 glycerol 3-phosphate로 만들고, 이것은 <strong>gluconeogenesis의 기질</strong>이 되거나 triacylglycerol 합성에 다시 쓰인다. 혈중 glycerol 농도는 지방 분해 속도의 지표로 쓸 수 있다.</p>
-  <figure class="fig" id="fig-ffa-transport"><img src="assets/fig-ffa-transport.svg" alt="지방 분해 산물의 운명. 유리지방산은 알부민에 결합해 근육·심장·간으로, glycerol은 유리 상태로 간으로 가서 gluconeogenesis에 쓰인다." loading="lazy"><figcaption><b>그림 4</b> 지방 분해 산물의 운명. 유리지방산은 알부민에 결합해 근육·심장·간으로, glycerol은 유리 상태로 간으로 가서 gluconeogenesis에 쓰인다.</figcaption></figure>
-  </section>
-  <section id="s7">
-  <h2>7. 지방조직과 간의 triacylglycerol 회전</h2>
-  <p>저장과 동원은 교대로 일어나는 것이 아니라 항상 동시에 진행되며, 균형만 이동한다.</p>
-  <p><strong>식후</strong> insulin이 세 가지를 동시에 한다. 지방조직 LPL을 올려 입자에서 지방산을 끌어오고, GLUT4를 통해 포도당 흡수를 늘려 glycerol 3-phosphate를 공급하고, HSL과 perilipin을 탈인산화해 분해를 끈다. 세 작용이 모두 저장 쪽을 향한다.</p>
-  <p><strong>공복</strong> glucagon과 catecholamine이 PKA를 통해 분해를 켠다. 유리지방산이 혈액으로 나가 근육과 심장의 연료가 되고, 간에서는 산화와 ketogenesis, 그리고 VLDL 합성에 쓰인다. 공복이 길어지면 간의 VLDL 생산보다 산화와 ketogenesis가 우세해진다.</p>
-  <figure class="fig" id="fig-tag-turnover"><img src="assets/fig-tag-turnover.svg" alt="식후와 공복의 triacylglycerol 회전. 식후에는 LPL·GLUT4·HSL 억제가 모두 저장 쪽으로 작동하고, 공복에는 분해 산물이 조직으로 분배되며 일부는 지방세포 안에서 다시 ester화된다." loading="lazy"><figcaption><b>그림 5</b> 식후와 공복의 triacylglycerol 회전. 식후에는 LPL·GLUT4·HSL 억제가 모두 저장 쪽으로 작동하고, 공복에는 분해 산물이 조직으로 분배되며 일부는 지방세포 안에서 다시 ester화된다.</figcaption></figure>
-  <p>여기에 <strong>무익한 순환(futile cycle)</strong>이 끼어 있다. 분해로 생긴 유리지방산 가운데 30~40%는 세포를 떠나지 못하고 같은 지방세포 안에서 다시 ester화된다. 활성화에 ATP가 들어가므로 순수한 에너지 손실이다. 다만 이 순환은 방향 전환을 빠르게 만든다. 두 방향의 반응이 항상 돌고 있으면, 호르몬 신호가 바뀔 때 새로 효소를 만들 필요 없이 균형만 기울여 즉시 방향을 바꿀 수 있다.</p>
-  <p>간의 triacylglycerol 회전도 같은 논리를 따른다. 간은 지방을 장기 저장하는 기관이 아니므로, 들어온 지방산을 태우거나 VLDL로 내보낸다. <strong>유입이 처리 능력을 넘으면 간에 쌓인다.</strong> 유입을 늘리는 요인(지방 분해 과다, 고지방·고fructose 식사), 산화를 줄이는 요인(insulin 신호에 의한 malonyl-CoA 상승), 배출을 줄이는 요인(apoB 또는 MTP 기능 저하, 알코올)이 겹칠 때 지방간이 생긴다.</p>
-  </section>
-  <section id="s8">
-  <h2>8. 지방 동원 조절의 이상</h2>
-  <p><strong>(1) Insulin 저항성과 지방조직</strong></p>
-  <p>지방조직의 insulin 저항성에서 가장 먼저 깨지는 것이 <strong>HSL 억제</strong>다. Insulin이 분해를 억제하지 못하므로 식후에도 유리지방산이 혈액으로 계속 흘러나온다. 이것이 세 가지 연쇄 결과를 만든다.</p>
-  <ul><li>간으로 들어오는 지방산이 늘어 <strong>VLDL 생산이 증가</strong>하고 혈중 triacylglycerol이 올라간다. 간에 지방이 쌓여 지방간이 된다.</li><li>근육에서 지방산이 과잉 공급되면 포도당 이용이 더 떨어져 <strong>insulin 저항성이 심해진다.</strong></li><li>HDL이 감소하고 small dense LDL이 늘어나는 <strong>이상지질혈증 삼중 양상</strong>이 나타난다.</li></ul>
-  <p>즉 혈중 유리지방산의 상승은 결과이면서 동시에 원인이다.</p>
-  <p><strong>(2) 조절 단백질의 유전적 결함</strong></p>
-  <div class="tw"><table><thead><tr><th>결함</th><th>유전자</th><th>양상</th></tr></thead><tbody><tr><td>ATGL 결핍</td><td><em>PNPLA2</em></td><td>Neutral lipid storage disease with myopathy. 근육·심장·간에 triacylglycerol이 쌓인다</td></tr><tr><td>CGI-58 결핍</td><td><em>ABHD5</em></td><td>Chanarin-Dorfman syndrome. 어린선과 함께 지질 축적이 나타난다</td></tr><tr><td>Perilipin 결핍</td><td><em>PLIN1</em></td><td>부분 지방이상증, 심한 insulin 저항성과 고중성지방혈증</td></tr><tr><td>Lipodystrophy(전신)</td><td><em>AGPAT2</em>, <em>BSCL2</em> 등</td><td>지방조직 자체가 없어 지질을 저장할 곳이 없다</td></tr></tbody></table></div>
-  <p><strong>Lipodystrophy</strong>는 역설적으로 보이는 질환이다. 지방이 적은데 심한 insulin 저항성, 고중성지방혈증, 지방간이 나타난다. 이유는 저장 공간이 없어 지질이 간과 근육에 쌓이기 때문이다. 치료로 leptin 유사체(metreleptin)를 쓰면 식욕과 간의 지방 축적이 개선된다. <strong>지방조직이 과도한 것과 없는 것이 비슷한 대사 결과를 만든다</strong>는 점은 지방조직이 단순한 저장고가 아니라 지질을 안전하게 격리하는 기관임을 보여 준다.</p>
-  <p><strong>(3) 지방 분해를 표적으로 하는 약물</strong></p>
-  <ul><li><strong>Beta-blocker</strong>는 catecholamine의 지방 분해 자극을 줄인다. 저혈당 증상을 가리는 효과도 같은 경로에서 온다.</li><li><strong>Niacin</strong>은 지방세포의 수용체(HCA2)를 통해 cAMP를 낮춰 지방 분해를 억제하고, 간으로 들어오는 지방산을 줄여 VLDL 생산을 낮춘다. 이것이 niacin의 지질 개선 기전이다.</li><li><strong>Thiazolidinedione</strong>은 PPARγ를 활성화해 지방조직의 저장 능력을 늘린다. 지질을 간과 근육에서 지방조직으로 되돌려 insulin 저항성을 개선한다는 설명이 여기서 나온다.</li></ul>
-  <div class="box box--limit"><b>임상 연계</b> <strong>임상 연계</strong> 과도한 catecholamine 상태인 <strong>pheochromocytoma</strong>에서는 지방 분해가 지속적으로 자극되어 혈중 유리지방산과 glycerol이 올라가고, 체중 감소와 대사율 증가가 나타난다. 반대로 <strong>insulinoma</strong>에서는 insulin 과다로 지방 분해가 억제되어 저혈당에서도 유리지방산과 케톤체가 낮게 유지된다. 저혈당 환자에서 유리지방산과 케톤체를 함께 측정하는 것은 이 때문이다. 둘 다 낮으면 insulin 과다를, 유리지방산은 높은데 케톤체가 낮으면 지방산 산화 결핍을, 둘 다 높으면 정상적인 공복 반응을 가리킨다.</div>
-  <div class="box box--result"><b>핵심 정리</b> <strong>핵심 정리</strong> Triacylglycerol 대사는 LPL과 HSL이라는 두 lipase의 방향 조절로 요약된다. LPL은 혈중 입자를 열어 조직으로 지방산을 들이고 insulin이 이를 돕는다. HSL은 저장고를 열어 혈액으로 지방산을 내보내고 insulin이 이를 막는다. 조절의 1차 관문은 perilipin의 인산화이고, 분해 산물인 glycerol은 지방조직이 재사용하지 못해 간으로 가서 gluconeogenesis에 쓰인다.</div>
-  </section>
-  <h2>확인 문항</h2>
-  <ol class="quiz"><li><p class="qq">지방조직은 포도당 공급이 없으면 지방을 저장하지 못한다. 그 생화학적 이유를 설명하고, 같은 사실이 왜 glycerol의 재사용을 불가능하게 하는지 설명하라.</p><details><summary>해설</summary><p>Triacylglycerol 합성에는 glycerol 3-phosphate 골격이 필요하다. 간과 신장은 glycerol kinase를 가지고 있어 혈중 glycerol을 직접 인산화할 수 있지만, 지방조직에는 glycerol kinase가 없다. 따라서 지방조직의 glycerol 3-phosphate는 glycolysis 중간체인 dihydroxyacetone phosphate가 환원되어 만들어지며, 포도당 유입에 전적으로 의존한다. 같은 이유로 지방조직은 자신의 분해에서 나온 glycerol을 다시 인산화할 수 없으므로 그 glycerol은 혈액으로 나가 간으로 가야 한다. 간에서는 glycerol 3-phosphate가 되어 gluconeogenesis의 기질로 쓰인다.</p></details></li><li><p class="qq">Lipoprotein lipase와 hormone-sensitive lipase는 모두 triacylglycerol을 가수분해한다. 두 효소를 혼동하지 않기 위한 네 가지 구분 기준을 제시하라.</p><details><summary>해설</summary><p>첫째, 위치가 다르다. LPL은 모세혈관 내피세포의 바깥 표면에 있어 세포 밖에서 작동하고, HSL은 지방세포 안에서 droplet 표면에 작용한다. 둘째, 기질이 다르다. LPL은 chylomicron과 VLDL 중심의 triacylglycerol을, HSL은 저장된 droplet의 diacylglycerol을 분해한다. 셋째, 보조 요소가 다르다. LPL은 입자의 apoC-II와 내피의 GPIHBP1을 필요로 하고, HSL은 PKA에 의한 인산화와 인산화된 perilipin을 필요로 한다. 넷째, insulin에 대한 반응이 반대다. Insulin은 지방조직 LPL의 발현을 올려 지방산을 들여오고, HSL을 억제해 내보내지 않는다. 결과적으로 LPL은 조직으로 들이는 방향, HSL은 혈액으로 내보내는 방향으로 작동한다.</p></details></li><li><p class="qq">지방 분해의 호르몬 조절에서 효소 자체의 활성화보다 perilipin의 인산화가 먼저 논의되는 이유를 설명하라.</p><details><summary>해설</summary><p>ATGL과 HSL이 활성 상태여도 기질에 닿지 못하면 분해가 일어나지 않는다. 인산화되지 않은 perilipin은 droplet 표면을 덮어 lipase의 접근을 막고, 동시에 ATGL의 보조활성인자 CGI-58을 붙잡아 ATGL에서 떨어져 있게 한다. PKA가 perilipin을 인산화하면 CGI-58이 풀려 ATGL이 활성화되고 표면이 열려 HSL이 접근한다. PKA는 HSL 자체도 인산화하지만, 접근이 열리지 않으면 그 활성화는 의미가 없다. 그래서 조절의 1차 관문은 효소 활성이 아니라 기질에 대한 접근이다. ATGL 또는 CGI-58의 유전적 결함에서 조직에 triacylglycerol이 쌓이는 것도 같은 논리로 설명된다.</p></details></li><li><p class="qq">저혈당 환자에서 혈중 유리지방산과 케톤체를 함께 측정하는 이유를 세 가지 패턴으로 설명하라.</p><details><summary>해설</summary><p>두 지표의 조합이 저혈당의 원인을 갈라 준다. 첫째, 유리지방산과 케톤체가 모두 낮으면 지방 동원 자체가 억제된 상태이므로 insulin 과다(insulinoma, insulin 또는 sulfonylurea 투여)를 가리킨다. Insulin은 HSL을 억제하는 가장 강력한 신호이기 때문이다. 둘째, 유리지방산은 높은데 케톤체가 낮으면 동원은 되지만 산화나 ketogenesis가 막힌 것이므로 지방산 산화 결핍을 가리킨다. 셋째, 둘 다 높으면 공복에 대한 정상적인 대사 반응이 일어난 상태이므로 glycogen 저장병이나 호르몬 결핍처럼 포도당 공급 쪽의 문제를 본다.</p></details></li><li><p class="qq">전신 lipodystrophy 환자는 지방조직이 거의 없는데도 심한 insulin 저항성, 고중성지방혈증, 지방간을 보인다. 이 역설을 설명하라.</p><details><summary>해설</summary><p>지방조직의 기능은 단순한 저장이 아니라 지질을 대사적으로 활성이 없는 형태로 격리하는 것이다. 저장 공간이 없으면 식이와 간에서 유래한 triacylglycerol을 안전하게 둘 곳이 없어 간, 근육, 심장 등에 쌓인다. 간에 쌓이면 지방간과 VLDL 과다 생산이 생겨 혈중 triacylglycerol이 올라가고, 근육에 쌓이면 포도당 이용이 떨어져 insulin 저항성이 심해진다. 또 지방조직이 분비하는 leptin과 adiponectin이 부족해 식욕 조절과 지질 산화 신호도 함께 깨진다. 그래서 치료에 leptin 유사체가 쓰인다. 비만과 lipodystrophy가 비슷한 대사 결과를 만드는 것은 양쪽 모두 지방조직의 안전한 저장 능력이 수요에 못 미치기 때문이다.</p></details></li><li><p class="qq">지방세포에서 분해된 유리지방산의 30~40%가 같은 세포 안에서 다시 ester화된다. ATP를 소비하는 이 순환이 유지되는 이유를 설명하라.</p><details><summary>해설</summary><p>재ester화에는 지방산 활성화에 ATP 두 개 상당이 들어가므로 순수한 에너지 손실이다. 그러나 합성과 분해가 동시에 낮은 수준으로 계속 돌고 있으면, 호르몬 신호가 바뀔 때 새로 효소를 합성하거나 경로를 켜는 시간 없이 두 방향의 상대적 속도만 바꾸어 즉시 방향을 전환할 수 있다. 운동 시작이나 식사 직후처럼 수십 초 단위로 연료 흐름을 바꾸어야 하는 상황에서 이 민감도가 필요하다. 또 이 순환은 세포 안의 유리지방산 농도를 낮게 유지해 지방산의 계면활성 성질에 의한 막 손상을 막는 역할도 한다.</p></details></li></ol>
-  <h2>참고문헌</h2>
-  <ol class="ref"><li>Ferrier DR (ed). <em>Lippincott Illustrated Reviews: Biochemistry</em>. Chapter 16, Fatty Acid, Ketone Body, and Triacylglycerol Metabolism.</li><li>Zechner R et al. FAT SIGNALS: lipases and lipolysis in lipid metabolism and signaling. <em>Cell Metab</em> 2012;15:279–291.</li><li>Young SG, Zechner R. Biochemistry and pathophysiology of intravascular and intracellular lipolysis. <em>Genes Dev</em> 2013;27:459–484.</li><li>Coleman RA, Mashek DG. Mammalian triacylglycerol metabolism: synthesis, lipolysis, and signaling. <em>Chem Rev</em> 2011;111:6359–6386.</li><li>Brasaemle DL. Thematic review series: adipocyte biology. The perilipin family of structural lipid droplet proteins. <em>J Lipid Res</em> 2007;48:2547–2559.</li><li>Garg A. Clinical review: lipodystrophies — genetic and acquired body fat disorders. <em>J Clin Endocrinol Metab</em> 2011;96:3313–3325.</li></ol>
-  <nav class="pager"><a href="../../../M02/W07/L03/index.html">← M02-W07-L03</a><a href="../../../M02/W08/L02/index.html">M02-W08-L02 →</a></nav>
-</main>
+<section aria-labelledby="prerequisites"><h2 id="prerequisites">선수지식</h2><p>Triacylglycerol(TAG, 중성지방)은 글리세롤에 지방산 세 개가 에스터 결합한 물질이다. 지방산은 산화되면 에너지를 제공하지만, TAG 자체가 바로 미토콘드리아에서 산화되는 것은 아니다. 7주차의 LPL, acyl-CoA, β-산화를 복습하고 이번에는 지방산이 저장과 이용 사이를 어떻게 오가는지 살펴본다.</p></section>
 
-<footer class="foot wrap">
+<nav class="contents" aria-label="강의 구성"><strong>강의 구성</strong><ol class="qlist"><li><a href="#s1">1. 지방조직은 식후의 에너지를 저장하고 공복에 공급한다</a></li><li><a href="#s2">2. TAG를 만들려면 지방산뿐 아니라 글리세롤 골격도 필요하다</a></li><li><a href="#s3">3. Phosphatidic acid는 저장 지질과 막 지질의 공통 출발점이다</a></li><li><a href="#s4">4. 간과 지방세포는 만든 TAG를 다르게 처리한다</a></li><li><a href="#s5">5. 저장 지방은 세 단계로 분해된다</a></li><li><a href="#s6">6. 카테콜아민은 동원을 촉진하고 인슐린은 방출을 억제한다</a></li><li><a href="#s7">7. 분해된 지방산이 모두 혈액으로 나가지는 않는다</a></li><li><a href="#s8">8. 지방 저장 능력이 부족해도 다른 장기에 지방이 쌓일 수 있다</a></li></ol></nav><section aria-label="본문"><section id="s1" class="lesson-section"><h2>1. 지방조직은 식후의 에너지를 저장하고 공복에 공급한다</h2><p>식사 직후에는 장에서 흡수한 영양소가 계속 들어온다. 그러나 밤사이에는 음식으로 들어오는 에너지가 끊긴다. 지방조직은 이 시간 차이를 메운다. 식후에는 지방산을 TAG로 묶어 저장하고, 공복이나 운동 중에는 저장 TAG를 분해하여 다른 조직에 지방산을 공급한다. 따라서 지방조직은 에너지의 양뿐 아니라 공급 시점도 조절한다. <a href="#ref-t16">[T16, III.G–H, PDF 395–399]</a></p><p>TAG는 소수성이 커서 물을 거의 동반하지 않은 채 밀집해 저장될 수 있다. 지방산 탄소가 많이 환원되어 있다는 점도 높은 에너지 저장 효율에 기여한다. 지방세포 안의 TAG는 지방방울(lipid droplet)에 모여 있고, 표면에는 인지질 단층과 perilipin 같은 단백질이 있다. 이 표면은 효소가 저장 지방에 접근하는 정도를 조절한다. 지방방울을 단순히 반응이 일어나지 않는 덩어리로 생각하면 호르몬 조절을 이해하기 어렵다.</p><p><strong>지방 저장과 동원을 구별하는 첫 질문</strong></p><div class="tw"><table aria-label="지방 저장과 동원을 구별하는 첫 질문"><thead><tr><th>상태</th><th>주된 순변화</th><th>몸 전체에서의 역할</th></tr></thead><tbody><tr><th>식후</th><td>지방산 유입·TAG 합성이 상대적으로 우세</td><td>남는 에너지를 나중에 사용하도록 보관</td></tr><tr><th>공복</th><td>저장 TAG 분해·지방산 방출이 증가</td><td>근육·간 등에 산화 연료 공급</td></tr></tbody></table></div><p>두 상태에서 합성과 분해 중 하나가 완전히 꺼지는 것은 아니다. 실제 저장량은 두 방향의 흐름을 합한 결과다.</p></section>
+<section id="s2" class="lesson-section"><h2>2. TAG를 만들려면 지방산뿐 아니라 글리세롤 골격도 필요하다</h2><p>지방산이 풍부해도 결합할 골격이 없으면 TAG를 충분히 만들 수 없다. 간과 지방세포에서 중요한 골격은 glycerol 3-phosphate이다. 해당과정의 중간산물인 dihydroxyacetone phosphate(DHAP)가 NADH를 이용해 환원되면 이 물질이 된다. 탄수화물 대사와 지방 저장이 여기에서 직접 연결된다. <a href="#ref-t16">[T16, III.G.1, PDF 395–396]</a></p><p>간은 glycerol kinase를 이용하여 유리 글리세롤을 glycerol 3-phosphate로 바꿀 수도 있다. 지방세포에서는 이 효소의 활성이 낮아 유리 글리세롤을 직접 재사용하는 능력이 제한적이다. 따라서 DHAP를 통한 골격 공급이 특히 중요하다. 인슐린은 지방세포의 GLUT4를 통한 포도당 유입을 늘려 이 경로를 돕는다. 다만 이것을 ‘공복에는 지방세포가 TAG를 전혀 만들 수 없다’는 뜻으로 확대하면 안 된다. 뒤에서 볼 glyceroneogenesis도 골격을 공급한다.</p><p><strong>TAG의 두 재료가 준비되는 방식</strong></p><div class="tw"><table aria-label="TAG의 두 재료가 준비되는 방식"><thead><tr><th>재료</th><th>준비 과정</th><th>주요 의미</th></tr></thead><tbody><tr><th>지방산</th><td>Acyl-CoA synthetase가 지방산을 acyl-CoA로 활성화</td><td>에스터 결합 형성에 사용할 형태 준비</td></tr><tr><th>글리세롤 골격</th><td>DHAP → glycerol 3-phosphate</td><td>당 대사 중간산물과 지방 저장 연결</td></tr><tr><th>간의 추가 경로</th><td>글리세롤 → glycerol 3-phosphate</td><td>지방조직에서 나온 글리세롤을 회수</td></tr></tbody></table></div><p>지방산 활성화에서는 ATP가 AMP와 pyrophosphate로 바뀐다. 따라서 ATP 한 분자가 반응에 들어가도 에너지 비용은 고에너지 인산 결합 두 개에 해당한다.</p></section>
+<section id="s3" class="lesson-section"><h2>3. Phosphatidic acid는 저장 지질과 막 지질의 공통 출발점이다</h2><p>Glycerol 3-phosphate에 지방산 두 개가 차례로 붙으면 phosphatidic acid(PA)가 된다. 이때에는 지방산 두 개와 인산기가 남아 있다. PA에서 인산기를 제거하면 diacylglycerol(DAG), 여기에 지방산 하나를 더 붙이면 TAG가 된다. 마지막 반응을 담당하는 효소가 diacylglycerol acyltransferase(DGAT)이다. 지방산을 붙이는 단계마다 활성화된 acyl-CoA가 사용된다. <a href="#ref-t16">[T16, III.G.2, PDF 396]</a></p><p>PA는 TAG만을 위한 중간산물이 아니다. 인지질 합성으로도 이어진다. 세포가 에너지를 저장할 때와 세포막을 만들 때 일부 재료와 경로를 공유하는 것이다. 다만 ‘PA에 무엇을 붙이면 모든 인지질이 바로 만들어진다’고 외우지 말자. 인지질 종류에 따라 활성화 단계와 머리 부분을 붙이는 방식이 다르며, 이는 3강에서 다룬다.</p><p><strong>지방산 수와 인산기의 변화</strong></p><div class="tw"><table aria-label="지방산 수와 인산기의 변화"><thead><tr><th>물질</th><th>지방산 수</th><th>이 경로에서의 인산기</th></tr></thead><tbody><tr><th>Glycerol 3-phosphate</th><td>0</td><td>있음</td></tr><tr><th>Phosphatidic acid</th><td>2</td><td>있음</td></tr><tr><th>DAG</th><td>2</td><td>없음</td></tr><tr><th>TAG</th><td>3</td><td>없음</td></tr></tbody></table></div><div class="box box--step"><b>시험에서 가려내는 지점</b> TAG 합성에는 지방산 세 개와 글리세롤 골격이 모두 필요하다. 지방산 합성과 TAG 합성은 서로 다른 과정이다.</div></section>
+<section id="s4" class="lesson-section"><h2>4. 간과 지방세포는 만든 TAG를 다르게 처리한다</h2><p>지방세포는 TAG를 지방방울에 저장하는 데 특화되어 있다. 간도 TAG를 만들지만, 일부는 very-low-density lipoprotein(VLDL)에 담아 혈액으로 내보낸다. 그러면 말초조직 모세혈관의 lipoprotein lipase(LPL)가 VLDL의 TAG를 분해하여 지방산을 조직에 제공한다. 식이지방을 운반하는 킬로미크론과 간에서 나온 VLDL은 출발점이 다르지만, 혈중 TAG를 말초에 전달한다는 기능을 공유한다. <a href="#ref-t16">[T16, III.G.3–4, PDF 396–398]</a></p><p>간에 TAG가 쌓였다는 것은 들어오거나 새로 만들어지는 지방산의 양에 비해 산화와 수출이 충분하지 않았다는 뜻이다. 어느 한 효소만으로 모든 지방간을 설명할 수는 없다. 지방조직에서 간으로 유입되는 지방산, 간의 지방산 합성, β-산화, VLDL 수출을 함께 보아야 한다.</p><div class="box box--limit"><b>임상 연계</b><h3>학습용 상황: 같은 TAG라도 위치가 다르다</h3><p>혈중 TAG가 높다는 검사 결과와 간세포에 TAG가 축적되었다는 소견은 같은 측정이 아니다. 전자는 혈액 속 지단백질의 운반 상태를, 후자는 간세포 안의 저장 상태를 반영한다. 두 소견은 함께 나타날 수 있지만 하나만으로 다른 하나의 정도를 바로 계산할 수 없다.</p></div><div class="box box--front"><b>연구 전선</b> 간의 TAG 수출이 늘면 간 안의 지방은 줄 수 있지만 혈중 TAG는 어떻게 달라질까? ‘한 조직의 개선’과 ‘전신의 변화’를 구분해 보자.</div></section>
+<section id="s5" class="lesson-section"><h2>5. 저장 지방은 세 단계로 분해된다</h2><p>지방세포 안의 지방분해(lipolysis)는 TAG에서 지방산을 차례로 떼는 가수분해 과정이다. 주된 순서는 adipose triglyceride lipase(ATGL)가 TAG를 DAG로, hormone-sensitive lipase(HSL)가 DAG를 monoacylglycerol(MAG)로, monoacylglycerol lipase(MGL)가 MAG를 글리세롤로 바꾸는 것이다. 각 단계에서 지방산 한 개가 나온다. HSL은 여러 기질에 작용할 수 있지만, 저장 TAG 분해에서 특히 중요한 기질은 DAG이다. <a href="#ref-t16">[T16, III.H.1, PDF 398–399]</a></p><p><strong>같은 ‘지방 분해’라는 말 안의 서로 다른 반응</strong></p><div class="tw"><table aria-label="같은 ‘지방 분해’라는 말 안의 서로 다른 반응"><thead><tr><th>과정</th><th>주된 장소·기질</th><th>산물 또는 목적</th></tr></thead><tbody><tr><th>LPL 작용</th><td>모세혈관 내강 쪽의 지단백질 TAG</td><td>혈중 지방산을 조직에 전달</td></tr><tr><th>ATGL → HSL → MGL</th><td>세포 안 저장 TAG</td><td>지방산과 글리세롤 동원</td></tr><tr><th>β-산화</th><td>주로 미토콘드리아의 지방 acyl-CoA</td><td>Acetyl-CoA와 환원 당량 생성</td></tr></tbody></table></div><div class="box box--step"><b>시험에서 가려내는 지점</b> 지방분해는 저장 TAG에서 지방산을 꺼내는 과정이다. β-산화는 꺼낸 지방산을 산화하여 에너지 생산으로 연결하는 과정이다.</div><p>따라서 지방분해가 증가했다고 모든 조직의 β-산화가 같은 정도로 증가하는 것은 아니다. 방출된 지방산의 운반, 세포 유입, 미토콘드리아 진입, 해당 조직의 에너지 수요가 뒤따라 결정한다.</p></section>
+<section id="s6" class="lesson-section"><h2>6. 카테콜아민은 동원을 촉진하고 인슐린은 방출을 억제한다</h2><p>에피네프린 같은 카테콜아민이 지방세포의 β-아드레날린 수용체를 자극하면 adenylyl cyclase를 거쳐 cAMP가 증가한다. cAMP는 protein kinase A(PKA)를 활성화한다. PKA에 의한 perilipin과 HSL의 인산화는 지방방울 표면의 효소 접근과 HSL의 이동을 바꾸어 지방분해를 촉진한다. 즉 호르몬은 세포 밖에서 신호를 주고, 세포 안에서는 효소가 저장 지질에 접근하는 방식이 바뀐다. <a href="#ref-t16">[T16, III.H.1, PDF 398–399]</a></p><p>인슐린은 cAMP 신호를 낮추는 방향으로 작용하고 지방분해를 억제한다. 동시에 포도당 유입과 TAG 저장을 돕는다. 공복에 인슐린이 낮아지면 지방분해에 대한 억제가 줄어든다. 사람의 지방세포를 설명할 때에는 글루카곤을 카테콜아민과 똑같은 직접 지방분해 자극으로 일반화하지 않는 것이 좋다. 글루카곤의 중요한 대사 작용 장소는 간이며, 사람 지방조직에서는 인슐린 감소와 카테콜아민 신호가 핵심 설명이다.</p><p><strong>호르몬 신호의 방향</strong></p><div class="tw"><table aria-label="호르몬 신호의 방향"><thead><tr><th>변화</th><th>지방세포에서의 결과</th></tr></thead><tbody><tr><th>β-아드레날린 신호 증가</th><td>cAMP–PKA 경로를 통해 지방 동원 촉진</td></tr><tr><th>인슐린 작용 증가</th><td>지방분해 억제, 포도당 이용과 저장 촉진</td></tr><tr><th>인슐린 결핍</th><td>지방산 방출 억제가 풀려 간으로의 공급 증가 가능</td></tr></tbody></table></div><p>이 표는 주된 방향을 설명한다. 실제 반응은 수용체 종류, 지방조직 부위, 운동 강도와 영양 상태 등에 따라 달라질 수 있다.</p></section>
+<section id="s7" class="lesson-section"><h2>7. 분해된 지방산이 모두 혈액으로 나가지는 않는다</h2><p>방출되는 비에스터화 지방산은 혈액에서 주로 albumin에 결합해 운반된다. ‘유리 지방산’이라는 표현은 TAG 등에 에스터 결합되어 있지 않다는 뜻이지, 혈액에서 모두 단백질 없이 떠다닌다는 뜻이 아니다. 근육은 이를 산화 연료로 사용할 수 있고, 간은 산화하거나 다시 TAG로 만들며 공복에는 케톤체 생성에도 이용한다. 글리세롤은 주로 간에서 glycerol 3-phosphate와 DHAP로 바뀌어 당 대사에 들어간다. <a href="#ref-t16">[T16, III.H.2–3, PDF 399]</a></p><p>지방세포 안에서는 분해로 나온 지방산의 일부가 다시 TAG가 된다. 이것이 재에스터화이다. 공복에도 이를 위한 glycerol 3-phosphate가 필요하다. Glyceroneogenesis는 pyruvate 등에서 oxaloacetate와 phosphoenolpyruvate를 거쳐 DHAP를 만들고, 이를 glycerol 3-phosphate로 연결하는 경로다. 포도당신생합성의 일부 반응을 이용하지만 목적은 지방세포에서 포도당을 혈액으로 내보내는 것이 아니라 TAG의 골격을 공급하는 데 있다.</p><p><strong>분해와 실제 방출량이 다른 이유</strong></p><div class="tw"><table aria-label="분해와 실제 방출량이 다른 이유"><thead><tr><th>측정하려는 것</th><th>뜻</th></tr></thead><tbody><tr><th>총 지방분해</th><td>저장 TAG에서 지방산이 떨어져 나온 전체 흐름</td></tr><tr><th>재에스터화</th><td>지방산이 다시 TAG에 들어가는 흐름</td></tr><tr><th>순 지방산 방출</th><td>분해·재사용 및 유입 등 여러 흐름의 결과</td></tr></tbody></table></div><div class="box box--step"><b>시험에서 가려내는 지점</b> 지방분해 속도와 혈액으로 나오는 지방산의 양은 같지 않다. 재에스터화가 그 차이를 만든다.</div><div class="box box--front"><b>연구 전선</b> 지방분해 효소의 활성이 같아도 glycerol 3-phosphate 공급이 줄면 지방산 방출은 어떻게 달라질 수 있을까?</div></section>
+<section id="s8" class="lesson-section"><h2>8. 지방 저장 능력이 부족해도 다른 장기에 지방이 쌓일 수 있다</h2><p>지방조직은 단순히 많으면 나쁜 조직이 아니다. 적절한 위치에 에너지를 저장하여 간과 근육으로 지방산이 과도하게 흘러가는 것을 줄인다. 인슐린이 지방분해를 충분히 억제하지 못하면 간으로 유입되는 지방산이 증가할 수 있다. 반대로 지방조직 자체가 부족하거나 기능이 크게 떨어진 지방이영양증에서는 저장할 공간과 기능이 모자라 간과 근육 등에 지질이 축적될 수 있다. <a href="#ref-lipodystrophy">[C1]</a></p><p>세포에 지질이 많다는 사실만으로 모든 손상을 TAG 자체의 독성으로 설명하지는 않는다. TAG로 저장되는 과정은 반응성이 더 큰 지방산이나 일부 지질 중간산물의 양을 줄이는 역할도 한다. 어느 물질이 어느 세포 내 위치에서 늘었는지, 에너지 과잉과 염증이 동반되는지를 함께 보아야 한다. 이 내용은 뒤의 인슐린 저항성과 지방간 강의에서 확장한다. TAG 합성의 보호 효과는 세포 실험에서도 관찰되었으며, 이를 모든 상황에서 TAG 축적이 무해하다는 뜻으로 확대하지 않는다. <a href="#ref-lipotoxicity">[R1]</a></p><div class="box box--limit"><b>임상 연계</b><h3>학습용 통합 사례</h3><p>지방조직이 매우 적은 환자에게 지방간과 고중성지방혈증이 있다고 하자. ‘몸에 지방이 적으니 간에도 지방이 적어야 한다’는 예상은 저장 장소와 운반 경로를 놓친 것이다. 지방조직의 저장 능력 저하 → 다른 조직으로 지방산 유입 증가 → 간의 재합성·수출 부담 증가라는 순서로 설명해 볼 수 있다. 이 기전만으로 개별 환자의 원인을 확진하지는 않는다.</p></div><p>이번 강의의 핵심은 식후에 들어온 지방산이 어느 곳에 저장되고, 공복에 어느 형태로 나오는지를 추적하는 것이다. 다음 강의에서는 간에 도착한 지방산이 어떻게 다른 장기가 사용할 케톤체로 바뀌는지 살펴본다.</p></section>
+</section>
+
+<section aria-labelledby="questions"><h2 id="questions">확인 문항과 해설</h2><ol class="quiz">
+<li><p class="qq"><strong>판단.</strong> 지방산 합성이 증가하면 글리세롤 골격 공급과 관계없이 TAG 합성이 반드시 같은 비율로 증가한다.</p><details><summary>해설</summary><p>틀리다. TAG 합성에는 활성화된 지방산과 glycerol 3-phosphate가 모두 필요하다. 효소 활성과 저장·수출 상태도 영향을 준다.</p></details></li>
+<li><p class="qq"><strong>판단.</strong> 지방세포의 HSL은 혈중 킬로미크론 TAG를 분해하는 대표 효소이다.</p><details><summary>해설</summary><p>틀리다. 그 역할은 모세혈관 내강 쪽 LPL이 한다. HSL은 세포 안 저장 지질 동원에 관여하고 이 과정에서 DAG를 주요 기질로 삼는다.</p></details></li>
+<li><p class="qq"><strong>판단.</strong> 지방분해가 증가해도 재에스터화가 함께 증가하면 순 지방산 방출 증가폭은 작아질 수 있다.</p><details><summary>해설</summary><p>맞다. 분해된 지방산 일부가 다시 TAG가 되므로 총 분해와 순 방출을 구별해야 한다.</p></details></li>
+<li><p class="qq"><strong>판단.</strong> 혈중 유리 지방산은 대부분 albumin과 결합하지 않은 상태로 운반된다.</p><details><summary>해설</summary><p>틀리다. 유리라는 말은 비에스터화 상태를 뜻한다. 혈액에서는 주로 albumin에 결합한다.</p></details></li>
+<li><p class="qq"><strong>설명.</strong> 인슐린 결핍이 간으로의 지방산 공급을 증가시키는 과정을 설명하라.</p><details><summary>해설</summary><p>인슐린의 항지방분해 작용이 줄면 저장 TAG 동원이 증가한다. 방출된 비에스터화 지방산은 albumin과 함께 이동하여 간으로 들어가며 산화·TAG 재합성·케톤체 생성의 재료가 될 수 있다.</p></details></li>
+<li><p class="qq"><strong>적용.</strong> 공복 지방세포가 glyceroneogenesis를 하는 이유는 무엇인가?</p><details><summary>해설</summary><p>DHAP와 glycerol 3-phosphate를 마련하여 지방산을 재에스터화하기 위해서다. 지방분해와 동시에 일부 지방산을 재저장함으로써 순 방출을 조절한다.</p></details></li>
+</ol></section>
+
+<section aria-labelledby="references"><h2 id="references">참고문헌</h2><ol class="ref"><li id="ref-t16">Abali EE, Cline SD, Franklin DS, Viselli SM. Lippincott Illustrated Reviews: Biochemistry. 8th ed. Wolters Kluwer; 2022. Chapter 16, III.G–H. 제공 PDF 395–399쪽(파일 기준 1부터 센 페이지). 원문의 개념을 바탕으로 새로 구성한 한국어 설명이며 임상 사례는 학습용으로 작성했다.</li><li id="ref-lipodystrophy">Brown RJ, et al. The Diagnosis and Management of Lipodystrophy Syndromes: A Multi-Society Practice Guideline. JCEM. 2016. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5155679/">지방조직 부족과 이소성 지질 저장의 기전</a>.</li><li id="ref-lipotoxicity">Mantzaris MD, Tsianos EV, Galaris D. Interruption of triacylglycerol synthesis in the endoplasmic reticulum is the initiating event for saturated fatty acid-induced lipotoxicity in liver cells. FEBS J. 2011. <a href="https://doi.org/10.1111/j.1742-4658.2010.07972.x">간세포 실험 원저</a>.</li></ol></section>
+<nav class="pager" aria-label="이전·다음 수업"><a href="../../W07/L03/index.html">← 지방산 산화와 관련 대사 이상 [16장]</a><a href="../../W08/L02/index.html">케톤체 생성·이용과 ketoacidosis [16장] →</a></nav></main><footer class="foot wrap">
   <span>© 2026 Kim Jintae · Hanyang University</span>
   <a href="https://github.com/hoperiasd2/hoperiasd2.github.io">GitHub 저장소</a>
 </footer>
 
-<script src="../../../../assets/edit.js" defer></script>
-</body>
-</html>
+<script src="../../../../assets/edit.js" defer></script></body></html>
