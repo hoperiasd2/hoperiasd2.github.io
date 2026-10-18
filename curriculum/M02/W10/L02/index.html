@@ -1,64 +1,588 @@
 <!DOCTYPE html>
-<html lang="ko">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>M02-W10-L02 Urea cycle 이상과 고암모니아혈증 [19장]</title>
-<meta name="description" content="Urea cycle 이상과 고암모니아혈증 [19장]">
-<link rel="stylesheet" href="../../../../assets/site.css">
-</head>
-<body>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>M02-W10-L02 Urea cycle 이상과 고암모니아혈증 [19장]</title><meta name="description" content="Urea cycle 이상과 고암모니아혈증 [19장]: 구조에서 생리 기능과 질환까지"><style data-source="site.css + lesson.css snapshot 2026-10-17">/* 의생명과학 교육과정 — 공통 스타일
+   색은 :root 토큰으로만 쓰고 다크 모드에서 재정의한다. */
 
-<header class="masthead">
+:root {
+  --navy: #003c71;
+  --navy-700: #00294e;
+  --chrome: #f2b705;
+  --ink: #16191d;
+  --ink-2: #4a5159;
+  --ink-3: #727a84;
+  --line: #dde2e8;
+  --bg: #f6f8fa;
+  --card: #ffffff;
+  --accent-soft: #eaf1f8;
+  --ok: #1a7f52;
+  --ok-soft: #e7f4ed;
+  --warn: #9a6700;
+  --warn-soft: #fdf5e3;
+  --radius: 10px;
+  --wrap: 1180px;
+  --mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+  --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo",
+    "Noto Sans KR", "Malgun Gothic", sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --navy: #8fc3f5;
+    --navy-700: #b9d9fb;
+    --chrome: #f2b705;
+    --ink: #e7eaee;
+    --ink-2: #b2bac4;
+    --ink-3: #868f9a;
+    --line: #2b3138;
+    --bg: #14171b;
+    --card: #1b1f24;
+    --accent-soft: #1e2833;
+    --ok: #5dd3a0;
+    --ok-soft: #16271f;
+    --warn: #e3b341;
+    --warn-soft: #2a2416;
+  }
+}
+:root[data-theme="dark"] {
+  --navy: #8fc3f5;
+  --navy-700: #b9d9fb;
+  --ink: #e7eaee;
+  --ink-2: #b2bac4;
+  --ink-3: #868f9a;
+  --line: #2b3138;
+  --bg: #14171b;
+  --card: #1b1f24;
+  --accent-soft: #1e2833;
+  --ok: #5dd3a0;
+  --warn: #e3b341;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.75;
+  -webkit-text-size-adjust: 100%;
+}
+
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 16px; }
+.wrap--narrow { max-width: 860px; }
+
+a { color: var(--navy); }
+a:hover { color: var(--navy-700); }
+
+/* ---- 머리글 ---- */
+.masthead {
+  background: #003c71;
+  border-bottom: 3px solid var(--chrome);
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+.masthead .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 52px;
+}
+.masthead a.brand {
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  letter-spacing: .01em;
+}
+.masthead nav { display: flex; gap: 16px; flex-wrap: wrap; }
+.masthead nav a { color: #cfe0f0; text-decoration: none; font-size: 14px; }
+.masthead nav a:hover { color: #fff; }
+
+/* ---- 이동 경로 ---- */
+.crumb {
+  font-size: 13px;
+  color: var(--ink-3);
+  padding: 14px 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+}
+.crumb a { color: var(--ink-2); text-decoration: none; }
+.crumb a:hover { color: var(--navy); text-decoration: underline; }
+.crumb span[aria-hidden] { color: var(--ink-3); }
+
+/* ---- 표제 ---- */
+.hero {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-left: 5px solid var(--navy);
+  border-radius: var(--radius);
+  padding: 26px 28px;
+  margin: 16px 0 24px;
+}
+.hero .eyebrow {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  margin: 0 0 8px;
+}
+.hero h1 { margin: 0 0 10px; font-size: 27px; line-height: 1.35; }
+.hero .en { color: var(--ink-3); font-size: 14px; margin: 0 0 12px; }
+.hero p.lede { margin: 0; color: var(--ink-2); max-width: 70ch; }
+
+h2 {
+  font-size: 20px;
+  margin: 34px 0 14px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--line);
+}
+h3 { font-size: 17px; margin: 24px 0 10px; }
+
+/* ---- 카드 격자 ---- */
+.grid { display: grid; gap: 14px; }
+.grid--modules { grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); }
+.grid--weeks { grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); }
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 18px 20px;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  transition: border-color .12s, transform .12s;
+}
+a.card:hover { border-color: var(--navy); transform: translateY(-1px); }
+.card__no {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--chrome);
+  font-weight: 700;
+  letter-spacing: .08em;
+}
+.card__title { font-weight: 700; margin: 4px 0 2px; }
+.card__en { font-size: 13px; color: var(--ink-3); }
+.card__meta { font-size: 13px; color: var(--ink-2); margin-top: 10px; }
+
+/* ---- 진행 막대 ---- */
+.bar { height: 5px; background: var(--line); border-radius: 3px; overflow: hidden; margin-top: 10px; }
+.bar > i { display: block; height: 100%; background: var(--navy); }
+
+/* ---- 수업 목록 ---- */
+.lessons { list-style: none; margin: 0; padding: 0; }
+.lessons li {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--card);
+  margin-bottom: 8px;
+}
+.lessons a {
+  display: flex;
+  gap: 14px;
+  align-items: baseline;
+  padding: 13px 16px;
+  text-decoration: none;
+  color: inherit;
+}
+.lessons a:hover { background: var(--accent-soft); }
+.lessons .lid {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--ink-3);
+  white-space: nowrap;
+}
+.lessons .ltitle { flex: 1; min-width: 0; }
+.lessons .lgroup { font-size: 12px; color: var(--ink-3); }
+
+/* ---- 상태 배지 ---- */
+.badge {
+  font-size: 11px;
+  font-family: var(--mono);
+  padding: 2px 8px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  color: var(--ink-2);
+  background: var(--bg);
+  white-space: nowrap;
+}
+.badge--design { color: var(--ink-3); }
+.badge--draft { color: var(--warn); border-color: var(--warn); background: var(--warn-soft); }
+.badge--review { color: var(--navy); border-color: var(--navy); background: var(--accent-soft); }
+.badge--done {
+  color: var(--ok);
+  border-color: var(--ok);
+  background: var(--ok-soft);
+  font-weight: 600;
+}
+
+/* ---- 목록에서 집필 상태를 한눈에 ---- */
+/* 배지만으로는 276줄을 훑을 때 눈에 들어오지 않아 왼쪽에 색 띠를 둔다. */
+.lessons li[data-status] { border-left: 4px solid var(--line); }
+.lessons li[data-status="done"] { border-left-color: var(--ok); }
+.lessons li[data-status="draft"] { border-left-color: var(--warn); }
+.lessons li[data-status="review"] { border-left-color: var(--navy); }
+.lessons li[data-status="design"] { border-left-color: var(--line); }
+.lessons li[data-status="done"] .ltitle { font-weight: 600; }
+
+.filters--status { margin-top: -4px; }
+.filters--status button[data-filter-status="done"][aria-pressed="true"] {
+  border-color: var(--ok);
+  color: var(--ok);
+}
+
+/* ---- 검색 ---- */
+.search {
+  width: 100%;
+  padding: 12px 14px;
+  font-size: 15px;
+  font-family: inherit;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--card);
+  color: var(--ink);
+}
+.search:focus { outline: 2px solid var(--navy); outline-offset: 1px; }
+.filters { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 18px; }
+.filters button {
+  font: inherit;
+  font-size: 13px;
+  padding: 6px 13px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: var(--card);
+  color: var(--ink-2);
+  cursor: pointer;
+}
+.filters button[aria-pressed="true"] { background: var(--navy); color: #fff; border-color: var(--navy); }
+.count { font-size: 13px; color: var(--ink-3); margin: 0 0 12px; }
+
+/* ---- 안내 상자 ---- */
+.callout {
+  background: var(--accent-soft);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--navy);
+  border-radius: var(--radius);
+  padding: 14px 18px;
+  margin: 18px 0;
+  font-size: 15px;
+}
+.callout--warn { border-left-color: var(--chrome); }
+
+/* ---- 이전·다음 ---- */
+.pager {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 36px 0 12px;
+  border-top: 1px solid var(--line);
+  padding-top: 16px;
+  font-size: 14px;
+}
+.pager a { text-decoration: none; }
+.pager span { color: var(--ink-3); }
+
+/* ---- 표 ---- */
+table { border-collapse: collapse; width: 100%; margin: 14px 0; font-size: 15px; }
+th, td { border: 1px solid var(--line); padding: 8px 11px; text-align: left; vertical-align: top; }
+th { background: var(--accent-soft); font-weight: 700; }
+
+/* ---- 꼬리말 ---- */
+.foot {
+  margin-top: 56px;
+  padding: 22px 16px 40px;
+  border-top: 1px solid var(--line);
+  color: var(--ink-3);
+  font-size: 13px;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 640px) {
+  .hero { padding: 20px; }
+  .hero h1 { font-size: 22px; }
+  .lessons a { flex-wrap: wrap; gap: 6px 12px; }
+}
+
+@media print {
+  .masthead, .filters, .search, .pager, .foot { display: none; }
+  body { background: #fff; font-size: 11pt; }
+  .card, .hero { border: 1px solid #ccc; break-inside: avoid; }
+}
+
+/* 수업 본문 전용 스타일. site.css의 토큰을 그대로 쓴다. */
+
+.lesson { font-size: 16.5px; }
+.lesson p { margin: 0 0 14px; }
+.lesson ul, .lesson ol { margin: 0 0 16px; padding-left: 22px; }
+.lesson li { margin-bottom: 7px; }
+.lesson li > ul { margin: 7px 0 4px; }
+.lesson code {
+  font-family: var(--mono);
+  font-size: .9em;
+  background: var(--accent-soft);
+  padding: 1px 5px;
+  border-radius: 4px;
+}
+.lesson section { scroll-margin-top: 70px; }
+
+/* 슬라이드 내려받기 */
+.dl { margin: 0 0 24px; }
+.dlbtn {
+  display: inline-block;
+  padding: 9px 18px;
+  border: 1px solid var(--navy);
+  border-radius: var(--radius);
+  color: var(--navy);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 700;
+}
+.dlbtn:hover { background: var(--navy); color: #fff; }
+
+/* 질문과 답 */
+.lesson p.q, .lesson p.a {
+  border-radius: var(--radius);
+  padding: 13px 17px;
+  margin: 0 0 12px;
+}
+.lesson p.q {
+  background: var(--accent-soft);
+  border-left: 4px solid var(--navy);
+}
+.lesson p.a {
+  background: rgba(242, 183, 5, .13);
+  border-left: 4px solid var(--chrome);
+  font-weight: 600;
+}
+.lesson p.q > span, .lesson p.a > span {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: .1em;
+  margin-right: 10px;
+  vertical-align: 1px;
+  font-weight: 700;
+}
+.lesson p.q > span { color: var(--navy); }
+.lesson p.a > span { color: var(--warn); }
+
+/* 질문 목록 */
+.qlist { margin: 0 0 24px; }
+.qlist li { margin-bottom: 9px; }
+.qlist a { text-decoration: none; }
+.qlist a:hover { text-decoration: underline; }
+
+/* 조건·한계 / 귀결 / 안전 상자 */
+.box {
+  border-radius: var(--radius);
+  padding: 14px 18px;
+  margin: 16px 0;
+  font-size: 15.5px;
+  border: 1px solid var(--line);
+}
+.box > b {
+  display: block;
+  font-size: 11px;
+  font-family: var(--mono);
+  letter-spacing: .1em;
+  margin-bottom: 5px;
+}
+.box--limit { background: var(--accent-soft); border-left: 4px solid var(--navy); }
+.box--limit > b { color: var(--navy); }
+.box--result { background: rgba(242, 183, 5, .1); border-left: 4px solid var(--chrome); }
+.box--result > b { color: var(--warn); }
+.box--safety { background: rgba(242, 183, 5, .14); border-left: 5px solid var(--chrome); }
+.box--safety > b { color: var(--warn); font-size: 12px; }
+.box--safety ul { margin: 6px 0 0; }
+
+/* 표 */
+.tw { overflow-x: auto; margin: 16px 0; }
+.lesson table { font-size: 14.5px; min-width: 520px; }
+.lesson th { white-space: nowrap; }
+
+/* 확인 문항 */
+.quiz { counter-reset: none; }
+.quiz > li { margin-bottom: 18px; }
+.quiz .qq { font-weight: 600; margin-bottom: 8px; }
+.quiz details {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--card);
+  padding: 0 14px;
+}
+.quiz details[open] { padding-bottom: 6px; }
+.quiz summary {
+  cursor: pointer;
+  padding: 9px 0;
+  font-size: 14px;
+  color: var(--navy);
+  font-weight: 700;
+}
+.quiz details p { margin: 4px 0 8px; font-size: 15.5px; }
+
+/* 참고문헌 */
+.ref { font-size: 14.5px; color: var(--ink-2); }
+.ref li { margin-bottom: 8px; }
+
+@media print {
+  .quiz details { border: none; }
+  .quiz details[open] summary { display: none; }
+  .lesson p.q, .lesson p.a, .box, .equation { break-inside: avoid; }
+  .contents { font-size: 13px; background: none; }
+}
+
+/* 그림 */
+.fig { margin: 20px 0; text-align: center; }
+.fig img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: #fff;
+}
+.fig figcaption {
+  font-size: 14px;
+  color: var(--ink-2);
+  margin-top: 9px;
+  text-align: left;
+  line-height: 1.6;
+}
+.fig figcaption > b { color: var(--navy); margin-right: 6px; }
+.fig .credit { color: var(--ink-3); font-size: 13px; }
+
+/* 보강 입력 상자와 외부 링크 그림 */
+.box--notes{border-left:4px solid #f2b705;background:#fffaec}
+.fig--ext img{outline:2px dashed #f2b705;outline-offset:3px}
+.fig .credit{font-size:.82em;color:#8a6300}
+
+/* 페이지에서 직접 고치는 기능 */
+.editbar{position:fixed;right:16px;bottom:16px;z-index:60;display:flex;gap:6px;
+  align-items:center;flex-wrap:wrap;justify-content:flex-end;max-width:min(94vw,520px);
+  padding:8px;border-radius:10px;background:#ffffffee;border:1px solid #c6d2dd;
+  box-shadow:0 2px 12px rgba(0,0,0,.14)}
+.editbar.is-on{background:#fffaecf2;border-color:#f2b705}
+.editbtn{font:inherit;font-size:.86rem;padding:6px 11px;border-radius:7px;cursor:pointer;
+  border:1px solid #003c71;background:#fff;color:#003c71}
+.editbtn:hover{background:#eaf1f8}
+.editbtn--main{background:#003c71;color:#fff;font-weight:700}
+.editbtn--main:hover{background:#00529c}
+.editbtn--warn{border-color:#b3261e;color:#b3261e}
+.editbtn--warn:hover{background:#fbeceb}
+.editcount{font-size:.82rem;color:#8a6300;font-weight:700}
+.editgrp{display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end}
+.editnote{position:fixed;left:16px;bottom:16px;z-index:60;max-width:min(92vw,460px);
+  padding:10px 13px;border-radius:9px;border-left:4px solid #f2b705;background:#16191df2;
+  color:#fff;font-size:.86rem;line-height:1.5;opacity:0;transform:translateY(8px);
+  transition:opacity .18s,transform .18s;pointer-events:none}
+.editnote.is-on{opacity:1;transform:none}
+.editdump{position:fixed;left:16px;bottom:72px;z-index:60;width:min(92vw,560px);height:40vh;
+  font:12px/1.5 monospace;padding:10px;border:2px solid #f2b705;border-radius:8px;background:#fff}
+body.editing [contenteditable]{outline:1px dashed #9fb3c4;outline-offset:3px;border-radius:3px}
+body.editing [contenteditable]:focus{outline:2px solid #003c71;background:#f7fbff}
+body.editing h2{position:relative}
+.memobtn{font:inherit;font-size:.62em;font-weight:400;margin-left:10px;padding:2px 8px;
+  border-radius:6px;cursor:pointer;border:1px dashed #8a6300;background:#fffaec;color:#8a6300;
+  vertical-align:middle}
+.memobtn:hover{background:#f2b705;color:#16191d}
+h2.has-memo::after{content:"메모";font-size:.58em;font-weight:400;margin-left:10px;
+  padding:2px 8px;border-radius:6px;background:#f2b705;color:#16191d;vertical-align:middle}
+.is-edited{background:#fffaec;box-shadow:inset 3px 0 0 #f2b705;padding-left:9px}
+@media print{.editbar,.editnote,.editdump,.memobtn{display:none}}
+.editmodal{position:fixed;inset:0;z-index:70;display:flex;align-items:center;
+  justify-content:center;padding:16px;background:#16191dbf}
+.editmodal__box{width:min(96vw,560px);background:#fff;border-radius:12px;padding:18px 20px;
+  box-shadow:0 8px 32px rgba(0,0,0,.3)}
+.editmodal__box h3{margin:0 0 6px;font-size:1.02rem;color:#003c71}
+.editmodal__box p{margin:0 0 12px;font-size:.84rem;color:#4a5159}
+.editmodal__box textarea{width:100%;font:inherit;font-size:.9rem;line-height:1.55;padding:10px;
+  border:1px solid #c6d2dd;border-radius:8px;resize:vertical;box-sizing:border-box}
+.editmodal__box textarea:focus{outline:2px solid #003c71;border-color:#003c71}
+.editmodal__row{display:flex;gap:8px;justify-content:flex-end;margin-top:12px}
+
+/* 깊이 층위 상자와 수업 사이 연결 */
+.box--step{border-left:4px solid #2e7d32;background:#ecf6ec}
+.box--step>b{color:#1e6b2c}
+.box--front{border-left:4px solid #6b4fa0;background:#f3eff9}
+.box--front>b{color:#5b3a8a}
+a.xref{font-variant-numeric:tabular-nums;white-space:nowrap;text-decoration:none;
+  border-bottom:1px dotted currentColor}
+a.xref:hover{background:#eaf1f8}
+
+/* ---- 본문 목차 ---- */
+/* 평범한 목록으로 두면 본문과 구별되지 않아 긴 수업에서 지나치기 쉽다. */
+.contents {
+  border: 1px solid var(--line);
+  background: var(--bg);
+  border-radius: var(--radius);
+  padding: 16px 22px;
+  margin: 28px 0 36px;
+}
+.contents strong {
+  display: block;
+  font-size: 13px;
+  letter-spacing: .04em;
+  color: var(--ink-2);
+  margin-bottom: 10px;
+}
+.contents .qlist { margin: 0; }
+.contents .qlist li { margin-bottom: 6px; font-size: 15.5px; }
+
+/* ---- 수식 상자 ---- */
+/* @eq 로 적은 줄. 본문 문단과 섞이면 식의 경계가 보이지 않는다. */
+.equation {
+  background: var(--accent-soft);
+  border-left: 3px solid var(--navy);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  padding: 16px 20px;
+  margin: 22px 0;
+  line-height: 2;
+  overflow-wrap: anywhere;
+}
+</style><link rel="stylesheet" href="../../../../assets/site.css"><link rel="stylesheet" href="../../../../assets/lesson.css"></head><body><header class="masthead">
   <div class="wrap">
     <a class="brand" href="../../../../index.html">의생명과학 교육과정</a>
     <nav>
       <a href="../../../../curriculum/index.html">전체 수업</a>
       <a href="../../../../curriculum/materials.html">자료 내려받기</a>
-      <a href="../../../../curriculum/M07/index.html">실습</a>
       <a href="../../../../archive/index.html">아카이브</a>
     </nav>
   </div>
 </header>
 
-<main class="wrap">
-<nav class="crumb" aria-label="이동 경로"><a href="../../../../index.html">대문</a><span aria-hidden="true">›</span><a href="../../../index.html">전체 수업</a><span aria-hidden="true">›</span><a href="../../index.html">M02</a><span aria-hidden="true">›</span><a href="../index.html">10주차</a><span aria-hidden="true">›</span><span>M02-W10-L02</span></nav>
+<main class="wrap wrap--narrow lesson" data-lesson-id="M02-W10-L02" data-lesson="M02-W10-L02"><nav class="crumb" aria-label="이동 경로"><a href="../../../../index.html">대문</a><span aria-hidden="true">›</span><a href="../../../index.html">전체 수업</a><span aria-hidden="true">›</span><a href="../../index.html">M02</a><span aria-hidden="true">›</span><a href="../index.html">10주차</a><span aria-hidden="true">›</span><span>M02-W10-L02</span></nav><section class="hero"><p class="eyebrow">M02-W10-L02 · 대사생화학 · 아미노산대사</p><h1>Urea cycle 이상과 고암모니아혈증</h1><p class="en"></p></section><section aria-labelledby="objectives"><h2 id="objectives">학습목표</h2><ul><li>고암모니아혈증이 뇌 기능을 해치는 과정을 설명한다.</li><li>간 기능 저하·문맥전신단락과 선천 요소회로 이상을 구분한다.</li><li>Citrulline, argininosuccinate, arginine 및 소변 orotic acid의 조합으로 막힌 단계를 추론한다.</li><li>질소 유입 감소, 이화 억제, 대체 배설, 혈액 정화의 목적을 구별한다.</li></ul></section>
 
-  <section class="hero">
-    <p class="eyebrow">M02-W10-L02 · 대사생화학 · 질소대사</p>
-    <h1>Urea cycle 이상과 고암모니아혈증 [19장]</h1>
-    <p class="lede">강의 수업 · 상태 <span class="badge badge--design">설계</span></p>
-  </section>
+<section aria-labelledby="prerequisites"><h2 id="prerequisites">선수지식</h2><p>앞 강의의 carbamoyl phosphate synthetase 1(CPS1), ornithine transcarbamylase(OTC), argininosuccinate synthetase(ASS1), argininosuccinate lyase(ASL), arginase 1(ARG1) 순서와 glutamine·alanine의 질소 운반을 복습한다. 여기서는 효소 이름을 더 외우기보다, 반응 앞의 물질과 뒤의 물질이 어떻게 달라지는지 살펴본다.</p></section>
 
-  
-  <div class="callout">이 수업은 아직 집필 전이다. 제작 기준은
-  <a href="../../../../PROJECT.md">PROJECT.md</a>의 집필 원칙과 산출물 규격을 따른다.</div>
+<nav class="contents" aria-label="강의 구성"><strong>강의 구성</strong><ol class="qlist"><li><a href="#s1">1. 고암모니아혈증은 생성과 처리의 균형이 무너진 상태이다</a></li><li><a href="#s2">2. 뇌에서 glutamine을 만드는 반응은 왜 문제가 될 수 있을까?</a></li><li><a href="#s3">3. 선천 질환도 성인이 된 뒤 처음 나타날 수 있다</a></li><li><a href="#s4">4. 회로 입구가 막혔을 때: citrulline과 orotic acid를 함께 본다</a></li><li><a href="#s5">5. 회로 뒤쪽이 막히면 막힌 반응 앞의 물질이 단서가 된다</a></li><li><a href="#s6">6. 암모니아 수치는 임상 상황과 함께 해석한다</a></li><li><a href="#s7">7. 치료의 원리는 질소 부담을 줄이고 다른 배출구를 확보하는 것이다</a></li><li><a href="#s8">8. 증례를 읽는 순서: 위급성 → 큰 원인 → 막힌 단계</a></li></ol></nav><section aria-label="본문"><section id="s1" class="lesson-section"><h2>1. 고암모니아혈증은 생성과 처리의 균형이 무너진 상태이다</h2><p>아미노산을 분해하는 정상적인 몸에서도 암모니아는 계속 생긴다. 장에서 만들어진 암모니아는 문맥을 통해 간으로 들어오고, 여러 조직의 질소는 glutamine과 alanine 등에 실려 이동한다. 간은 들어온 질소의 많은 부분을 요소로 바꾸어 신장이 배출할 수 있게 한다. 따라서 문제는 암모니아가 조금이라도 만들어진다는 사실이 아니라, 생성 속도에 비해 처리 능력이 부족해져 혈액과 조직에 쌓이는 데 있다.</p><p>처리 능력이 낮아지는 상황도 서로 다르다. 요소회로 효소가 부족할 수 있고, 간세포가 심하게 손상될 수도 있으며, 문맥 혈액이 간을 충분히 거치지 않고 전신으로 우회할 수도 있다. 여기에 감염·금식 등으로 몸의 단백질 분해가 증가하면 질소 부담이 더해진다. 단백질을 최근 많이 먹었는지만으로 원인을 판단하면 중요한 경우를 놓친다. <a href="#ref-t19">[T19, VI, PDF 530–535]</a></p><p><strong>암모니아 균형을 흔드는 세 방향</strong></p><div class="tw"><table aria-label="암모니아 균형을 흔드는 세 방향"><thead><tr><th>변화</th><th>대표 상황</th><th>생각할 점</th></tr></thead><tbody><tr><td>질소 생성 증가</td><td>이화 스트레스, 위장관 출혈 등</td><td>내 몸의 단백질과 장내 혈액도 질소 공급원이다</td></tr><tr><td>간의 처리 감소</td><td>요소회로 이상, 심한 간 기능 저하</td><td>효소 기능과 간세포 기능을 살핀다</td></tr><tr><td>간을 우회</td><td>문맥전신단락</td><td>간세포에 처리 능력이 있어도 혈액이 충분히 도달하지 않는다</td></tr></tbody></table></div></section>
+<section id="s2" class="lesson-section"><h2>2. 뇌에서 glutamine을 만드는 반응은 왜 문제가 될 수 있을까?</h2><p>성상세포는 glutamate에 암모니아를 붙여 glutamine을 만든다. 이 반응은 평소 질소를 처리하고 신경전달물질을 재활용하는 데 도움이 된다. 그러나 암모니아가 급격하게 많아지면 glutamine 축적과 삼투 부담, 미토콘드리아 기능 변화, 신경전달 이상이 함께 생긴다. 특히 급성의 심한 고암모니아혈증에서는 뇌부종과 의식 저하가 중요한 문제가 된다.</p><p>이를 ‘α-ketoglutarate를 다 써서 TCA 회로가 멈춘다’는 한 문장으로 끝내면 충분하지 않다. 에너지 대사의 교란은 설명의 일부이며, 세포 종류와 노출 시간에 따른 변화도 중요하다. 만성 간질환에서는 뇌가 삼투 환경에 적응하는 변화가 있고 염증 등 다른 요인도 작용하므로, 혈중 암모니아 수치와 증상의 정도가 항상 일대일로 대응하지 않는다. <a href="#ref-t19">[T19, VI.B, PDF 532–534]</a></p><div class="box box--limit"><b>임상 연계</b><h3>학습용 사례: 간 수치가 크게 높지 않은 영아의 의식 저하</h3><p>수유를 시작한 뒤 잘 먹지 못하고 처지며 호흡이 빨라지는 영아가 있다. 이런 증상은 여러 질환에서 나타나지만, 높은 암모니아가 확인되었다면 간 효소 상승이 작다는 이유로 요소회로 이상을 배제할 수 없다. 간세포 손상을 나타내는 검사와 질소 처리 능력을 나타내는 검사는 같은 질문에 답하지 않는다.</p></div><div class="box box--front"><b>연구 전선</b> 암모니아의 신경독성 연구는 혈중 농도뿐 아니라 성상세포의 대사, 염증, 세포 부피 조절을 함께 다룬다. 어떤 물질이 축적되는지와 그 축적이 실제 신경 손상을 일으키는 경로를 구분해서 읽자.</div></section>
+<section id="s3" class="lesson-section"><h2>3. 선천 질환도 성인이 된 뒤 처음 나타날 수 있다</h2><p>효소 활성이 거의 없는 중증 요소회로 이상은 신생아기에 나타날 수 있다. 반면 잔여 활성이 있으면 평소에는 감당하다가 감염, 장기간의 금식, 수술이나 출산 후처럼 이화 부담이 커질 때 증상이 드러날 수 있다. ‘어릴 때 아무 문제가 없었다’는 말은 선천 대사 이상을 완전히 제외하는 근거가 아니다.</p><p>OTC 결핍은 X 염색체와 관련된다. 여성도 X 염색체 불활성화 양상 등에 따라 증상이 생길 수 있어 단순히 ‘남자만 아프고 여자는 보인자’라고 외우면 틀린다. 다른 주요 요소회로 효소 결핍은 대체로 상염색체 열성이다. 수송체 이상도 회로 작동을 방해할 수 있지만, 이 강의에서는 먼저 효소 단계의 흐름을 잡는다. <a href="#ref-otc">[R2]</a></p><p><strong>발현 시기를 결정하는 것은 나이만이 아니다</strong></p><div class="tw"><table aria-label="발현 시기를 결정하는 것은 나이만이 아니다"><thead><tr><th>평소 처리 여유</th><th>질소 부담</th><th>가능한 결과</th></tr></thead><tbody><tr><td>매우 작음</td><td>수유와 정상 단백질 회전</td><td>신생아기부터 증상 가능</td></tr><tr><td>일부 남아 있음</td><td>평소의 부담</td><td>증상이 뚜렷하지 않을 수 있음</td></tr><tr><td>일부 남아 있음</td><td>감염·금식 등으로 급증</td><td>소아 또는 성인에서 첫 위기 가능</td></tr></tbody></table></div><div class="box box--step"><b>시험에서 가려내는 지점</b> 선천 질환이라는 말은 출생 직후 반드시 증상이 나타난다는 뜻이 아니다. 잔여 효소 활성과 현재의 이화 부담을 함께 생각한다.</div></section>
+<section id="s4" class="lesson-section"><h2>4. 회로 입구가 막혔을 때: citrulline과 orotic acid를 함께 본다</h2><p>CPS1은 암모니아를 이용해 carbamoyl phosphate를 만들고, OTC는 이를 ornithine과 결합시켜 citrulline을 만든다. CPS1이 작동하지 않거나 활성화에 필요한 N-acetylglutamate가 부족하면 회로로 들어가는 양 자체가 줄어든다. OTC가 부족하면 carbamoyl phosphate를 만들 수 있어도 다음 반응에서 충분히 사용하지 못한다. 두 경우 모두 citrulline이 낮을 수 있어 citrulline 하나만으로 구별하기 어렵다.</p><p>OTC 결핍에서는 쌓인 carbamoyl phosphate의 일부가 세포질의 pyrimidine 합성 경로로 흘러들어 소변 orotic acid가 증가할 수 있다. 반면 CPS1 또는 N-acetylglutamate synthase(NAGS) 결핍에서는 보통 이런 증가가 두드러지지 않는다. 이 비교는 경로에 근거한 단서이며, 실제 진단은 여러 검사와 유전학적 평가를 합쳐 내린다. Orotic acid 증가는 OTC 결핍만의 표지가 아니다. <a href="#ref-t19">[T19, VI.B.2, PDF 534–535]</a> <a href="#ref-ucd">[R1]</a></p><p><strong>입구 단계 장애의 대표적인 생화학 양상</strong></p><div class="tw"><table aria-label="입구 단계 장애의 대표적인 생화학 양상"><thead><tr><th>문제 단계</th><th>Citrulline</th><th>소변 orotic acid</th><th>이유</th></tr></thead><tbody><tr><td>NAGS 또는 CPS1</td><td>낮음</td><td>대개 정상 또는 낮음</td><td>Carbamoyl phosphate 형성 자체가 부족</td></tr><tr><td>OTC</td><td>낮음</td><td>증가 가능</td><td>남는 carbamoyl phosphate가 다른 합성 경로로 이동</td></tr></tbody></table></div><div class="box box--step"><b>시험에서 가려내는 지점</b> 고암모니아혈증 + 낮은 citrulline + 증가한 소변 orotic acid는 OTC 결핍을 생각하게 한다. ‘Orotic acid 증가 = OTC 확진’으로 바꾸어 외우지는 않는다.</div></section>
+<section id="s5" class="lesson-section"><h2>5. 회로 뒤쪽이 막히면 막힌 반응 앞의 물질이 단서가 된다</h2><p>ASS1은 citrulline과 aspartate를 연결해 argininosuccinate를 만든다. 따라서 ASS1 결핍에서는 citrulline이 크게 증가할 수 있다. ASL 결핍에서는 그다음 반응이 막히므로 argininosuccinate 증가가 중요한 단서다. ARG1 결핍에서는 arginine을 요소와 ornithine으로 바꾸는 단계가 제한되어 arginine이 높아진다.</p><p>이때도 모든 질환이 같은 모습으로 나타나지는 않는다. 특히 ARG1 결핍은 신생아기의 심한 고암모니아혈증만으로 대표하기보다, 성장하면서 진행하는 경직과 신경학적 이상을 함께 생각해야 한다. 검사값을 외우기 전에 반응식을 그려 보면 ‘왜 그 물질을 측정하는지’가 분명해진다. <a href="#ref-ucd">[R1]</a></p><p><strong>반응 순서로 읽는 뒤쪽 단계의 단서</strong></p><div class="tw"><table aria-label="반응 순서로 읽는 뒤쪽 단계의 단서"><thead><tr><th>부족한 효소</th><th>주요 축적 단서</th><th>막힌 전환</th></tr></thead><tbody><tr><td>ASS1</td><td>Citrulline</td><td>Citrulline + aspartate → argininosuccinate</td></tr><tr><td>ASL</td><td>Argininosuccinate</td><td>Argininosuccinate → arginine + fumarate</td></tr><tr><td>ARG1</td><td>Arginine</td><td>Arginine → urea + ornithine</td></tr></tbody></table></div><p>이 표는 대표 양상을 설명한다. 식사, 치료, 채혈 시점과 잔여 활성에 따라 수치는 달라질 수 있으며, ‘앞 물질은 언제나 높고 뒤 물질은 언제나 0’이라는 뜻은 아니다.</p></section>
+<section id="s6" class="lesson-section"><h2>6. 암모니아 수치는 임상 상황과 함께 해석한다</h2><p>고암모니아혈증이 의심되는 급성 의식 변화는 신속한 평가가 필요한 상황이다. 다만 채혈·운반·분석 과정도 결과에 영향을 줄 수 있어 검사실의 검체 처리 지침을 지켜야 한다. 정상 범위는 나이와 검사실에 따라 다르므로 하나의 숫자를 모든 사람에게 적용하지 않는다. 검사 오류 가능성을 생각하는 것과 위급한 환자의 평가를 늦추는 것은 다른 문제다.</p><p>요소회로 이상에서는 암모니아 상승에 비해 혈중 요소질소가 낮고, 과호흡에 따른 호흡성 알칼리증이 단서가 될 수 있다. 이것만으로 확진되지는 않는다. 반대로 뚜렷한 고음이온차 대사성 산증이 있다면 유기산 대사 이상 등 다른 원인도 함께 고려해야 한다. 만성 간질환의 간성뇌증은 임상적으로 판단하며, 암모니아 수치 하나로 진단하거나 중증도를 정하지 않는다. <a href="#ref-ucd">[R1]</a> <a href="#ref-aasld">[R3]</a></p><div class="box box--limit"><b>임상 연계</b><h3>학습용 비교: 같은 orotic acid 증가, 다른 경로</h3><p>한 환자는 고암모니아혈증과 낮은 citrulline을, 다른 환자는 거대적아구성 빈혈을 보인다. 뒤의 경우 pyrimidine 합성의 Uridine monophosphate synthase(UMPS) 결핍에 의한 유전성 orotic aciduria도 고려한다. UMPS 결핍에서는 원발성 고암모니아혈증이 전형적이지 않다. 같은 소변 물질의 증가도 함께 변한 지표에 따라 의미가 달라진다.</p></div></section>
+<section id="s7" class="lesson-section"><h2>7. 치료의 원리는 질소 부담을 줄이고 다른 배출구를 확보하는 것이다</h2><p>급성 위기에서 단백질 공급을 조절하는 목적은 새 질소 유입을 줄이는 것이다. 그러나 에너지까지 부족하게 만들면 몸이 자체 단백질을 분해하므로 오히려 질소 부담이 커질 수 있다. 충분한 비단백질 에너지로 이화를 억제하는 원리가 함께 필요하다. 장기적으로 단백질을 무조건 0으로 만드는 것은 성장과 조직 유지에 필요한 아미노산 공급을 해친다. 구체적인 영양 조절은 전문 진료에서 정한다.</p><p>질소 제거 약물은 요소회로 밖의 배출 경로를 이용한다. Benzoate는 glycine과 결합해 hippurate로 배설되어 결합한 glycine의 질소 하나를 제거한다. Phenylbutyrate에서 만들어지는 phenylacetate는 glutamine과 결합해 phenylacetylglutamine으로 배설되어 glutamine의 질소 두 개를 제거한다. 회로를 직접 정상화하는 것과 별도의 출구로 질소를 내보내는 것은 서로 다른 전략이다. <a href="#ref-t19">[T19, VI.B.2, PDF 535]</a></p><p><strong>치료 방법이 겨냥하는 문제</strong></p><div class="tw"><table aria-label="치료 방법이 겨냥하는 문제"><thead><tr><th>원리</th><th>목적</th><th>구별할 점</th></tr></thead><tbody><tr><td>에너지 공급·단백질 조절</td><td>내인성 및 외인성 질소 부담 감소</td><td>단백질을 영구적으로 없애는 것이 아니다</td></tr><tr><td>대체 질소 배설</td><td>요소회로를 우회해 질소 제거</td><td>효소 결함 자체를 교정하는 것은 아니다</td></tr><tr><td>결핍 단계에 맞춘 치료</td><td>가능한 회로 기능 보조</td><td>NAGS 결핍의 NAG 유사체 치료를 모든 결함에 일반화하지 않는다</td></tr><tr><td>필요 시 혈액 정화</td><td>심하게 축적된 암모니아를 빠르게 제거</td><td>장기적 대사 관리도 별도로 필요하다</td></tr></tbody></table></div><div class="box box--step"><b>시험에서 가려내는 지점</b> 단백질 공급 감소만 생각하고 에너지 부족에 따른 근육 단백질 분해를 놓치지 말자. 질소 부담은 식사와 몸의 이화 양쪽에서 온다.</div></section>
+<section id="s8" class="lesson-section"><h2>8. 증례를 읽는 순서: 위급성 → 큰 원인 → 막힌 단계</h2><p>증례에서는 먼저 의식과 신경학적 상태, 암모니아 상승을 확인해 위급성을 판단한다. 다음으로 간질환이나 혈류 우회, 이화 스트레스 등 큰 맥락을 살핀다. 그다음 혈장 아미노산과 소변 지표를 회로 순서에 대입한다. ‘특정 검사 하나가 높다’는 이유로 모든 정보를 생략하는 방식보다 이 순서가 안정적이다.</p><p>고암모니아혈증의 원인은 요소회로 이상에만 한정되지 않는다. 일부 유기산 대사 이상이나 약물 관련 상황도 원인이 될 수 있다. 따라서 기본 경로는 진단 후보를 정리하는 도구이지, 모든 환자를 몇 가지 효소 결핍 중 하나로 강제로 분류하는 틀이 아니다. 이 강의의 목표는 치료 지시가 아니라 검사 소견의 생화학적 이유를 설명하는 데 있다.</p><div class="box box--limit"><b>임상 연계</b><h3>학습용 종합 사례</h3><p>감염 뒤 구토와 의식 변화가 생긴 청소년에게 높은 암모니아, 낮은 citrulline, 증가한 소변 orotic acid가 확인되었다. 먼저 급성 고암모니아혈증의 평가와 처치가 필요하다. 생화학적으로는 OTC 단계의 장애를 우선 생각할 수 있다. 이전에 건강했다는 사실은 부분 결핍 가능성을 배제하지 않는다. 최종 진단에는 추가 검사와 전문 평가가 필요하다.</p></div><div class="box box--front"><b>연구 전선</b> 요소회로 질환의 새로운 치료를 읽을 때는 ‘암모니아 수치가 낮아졌는가’, ‘급성 위기가 줄었는가’, ‘신경 발달과 생활이 나아졌는가’를 나누어 보자. 생화학 지표 개선이 모든 장기 결과의 회복을 자동으로 뜻하지는 않는다.</div></section>
+</section>
 
-  <h2>학습목표</h2>
-  <p>작성 예정. 이 수업이 답하는 질문 6~9개를 먼저 확정한 뒤 측정 가능한 학습목표로 옮긴다.</p>
+<section aria-labelledby="questions"><h2 id="questions">확인 문항과 해설</h2><ol class="quiz">
+<li><p class="qq"><strong>판단.</strong> 요소회로 이상은 선천 질환이므로 성인에서 처음 증상이 나타나면 배제할 수 있다.</p><details><summary>해설</summary><p>틀리다. 잔여 활성이 있으면 평소에는 견디다가 감염·금식 등으로 질소 부담이 증가했을 때 처음 드러날 수 있다.</p></details></li>
+<li><p class="qq"><strong>판단.</strong> OTC 결핍에서 소변 orotic acid가 증가할 수 있는 이유는 남는 carbamoyl phosphate가 pyrimidine 합성 경로로 들어가기 때문이다.</p><details><summary>해설</summary><p>맞다. 다만 orotic acid 증가가 OTC 결핍에만 나타나는 것은 아니므로 암모니아·citrulline 등과 함께 해석한다.</p></details></li>
+<li><p class="qq"><strong>판단.</strong> 만성 간질환 환자의 간성뇌증은 암모니아 수치 하나로 확진하고 중증도를 결정한다.</p><details><summary>해설</summary><p>틀리다. 간성뇌증은 임상적으로 판단한다. 수치와 증상이 항상 나란히 움직이지 않으며 다른 의식 변화 원인도 평가한다.</p></details></li>
+<li><p class="qq"><strong>판단.</strong> 질소 유입을 줄이려고 에너지 공급까지 부족하게 만들면 자체 단백질 분해가 증가해 질소 부담이 커질 수 있다.</p><details><summary>해설</summary><p>맞다. 영양 조절은 새 질소 유입과 이화 억제를 함께 고려해야 한다. 장기적인 무단백 식사는 적절한 해법이 아니다.</p></details></li>
+<li><p class="qq">Argininosuccinate가 증가한다면 ASS1과 ASL 중 어느 단계의 장애를 먼저 생각하는가?</p><details><summary>해설</summary><p>ASL이다. ASS1이 만든 argininosuccinate를 arginine과 fumarate로 분해하는 반응이 막혀 앞 물질이 쌓인다.</p></details></li>
+<li><p class="qq">Benzoate와 phenylacetate 경로가 각각 제거하는 결합 아미노산과 질소 수를 설명하라.</p><details><summary>해설</summary><p>Benzoate는 glycine과 결합해 hippurate로 질소 하나를, phenylacetate는 glutamine과 결합해 phenylacetylglutamine으로 질소 두 개를 배설한다. 이는 요소회로 밖의 대체 배설 경로다.</p></details></li>
+</ol></section>
 
-  <h2>선수지식</h2>
-  <p>작성 예정.</p>
-
-  <h2>본문</h2>
-  <p>작성 예정. 각 절은 하나의 질문에 답하는 단위로 쓰고
-  질문 → 답 → 근거 → 조건과 한계 → 귀결의 순서로 전개한다.</p>
-
-  <h2>확인 문항</h2>
-  <p>작성 예정. 5개 이상, 절반 이상은 판단을 묻는 문항으로 한다.</p>
-
-  <h2>참고문헌</h2>
-  <p>작성 예정.</p>
-
-  <nav class="pager"><a href="../../../M02/W10/L01/index.html">← M02-W10-L01 아미노산 질소 처리와 urea cycle</a><a href="../../../M02/W10/L03/index.html">M02-W10-L03 아미노산 분해 경로와 탄소 골격의 운명 [20장] →</a></nav>
-
-</main>
-
-<footer class="foot wrap">
+<section aria-labelledby="references"><h2 id="references">참고문헌</h2><ol class="ref"><li id="ref-t19">[T19] Abali EE, Cline SD, Franklin DS, Viselli SM. Lippincott Illustrated Reviews: Biochemistry. 8e. Wolters Kluwer; 2022. Chapter 19, VI. 제공 PDF 파일 530–535쪽. 페이지는 인쇄 쪽수가 아닌 파일 기준이다.</li><li id="ref-ucd">[R1] <a href="https://www.ncbi.nlm.nih.gov/books/NBK1217/">GeneReviews: Urea Cycle Disorders Overview</a>. 진단 양상과 감별의 보충 자료.</li><li id="ref-otc">[R2] <a href="https://www.ncbi.nlm.nih.gov/books/NBK154378/">GeneReviews: Ornithine Transcarbamylase Deficiency</a>. 발현 시기, 이화 유발 요인 및 여성의 증상 가능성.</li><li id="ref-aasld">[R3] <a href="https://www.aasld.org/liver-fellow-network/core-series/why-series/why-shouldnt-ammonia-be-used-diagnosis-and-management">AASLD: Why shouldn’t ammonia be used in the diagnosis and management of hepatic encephalopathy?</a> 만성 간질환에서 암모니아 검사 해석의 한계.</li></ol></section>
+<nav class="pager" aria-label="이전·다음 수업"><a href="../../W10/L01/index.html">← 아미노산 질소 처리와 urea cycle [19장]</a><a href="../../W10/L03/index.html">아미노산 분해 경로와 탄소 골격의 운명 [20장] →</a></nav></main><footer class="foot wrap">
   <span>© 2026 Kim Jintae · Hanyang University</span>
   <a href="https://github.com/hoperiasd2/hoperiasd2.github.io">GitHub 저장소</a>
 </footer>
 
-<script src="../../../../assets/site.js"></script>
-</body>
-</html>
+<script src="../../../../assets/edit.js" defer></script></body></html>

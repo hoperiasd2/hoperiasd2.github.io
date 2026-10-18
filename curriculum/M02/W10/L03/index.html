@@ -1,64 +1,588 @@
 <!DOCTYPE html>
-<html lang="ko">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>M02-W10-L03 아미노산 분해 경로와 탄소 골격의 운명 [20장]</title>
-<meta name="description" content="아미노산 분해 경로와 탄소 골격의 운명 [20장]">
-<link rel="stylesheet" href="../../../../assets/site.css">
-</head>
-<body>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>M02-W10-L03 아미노산 분해 경로와 탄소 골격의 운명 [20장]</title><meta name="description" content="아미노산 분해 경로와 탄소 골격의 운명 [20장]: 구조에서 생리 기능과 질환까지"><style data-source="site.css + lesson.css snapshot 2026-10-17">/* 의생명과학 교육과정 — 공통 스타일
+   색은 :root 토큰으로만 쓰고 다크 모드에서 재정의한다. */
 
-<header class="masthead">
+:root {
+  --navy: #003c71;
+  --navy-700: #00294e;
+  --chrome: #f2b705;
+  --ink: #16191d;
+  --ink-2: #4a5159;
+  --ink-3: #727a84;
+  --line: #dde2e8;
+  --bg: #f6f8fa;
+  --card: #ffffff;
+  --accent-soft: #eaf1f8;
+  --ok: #1a7f52;
+  --ok-soft: #e7f4ed;
+  --warn: #9a6700;
+  --warn-soft: #fdf5e3;
+  --radius: 10px;
+  --wrap: 1180px;
+  --mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+  --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo",
+    "Noto Sans KR", "Malgun Gothic", sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --navy: #8fc3f5;
+    --navy-700: #b9d9fb;
+    --chrome: #f2b705;
+    --ink: #e7eaee;
+    --ink-2: #b2bac4;
+    --ink-3: #868f9a;
+    --line: #2b3138;
+    --bg: #14171b;
+    --card: #1b1f24;
+    --accent-soft: #1e2833;
+    --ok: #5dd3a0;
+    --ok-soft: #16271f;
+    --warn: #e3b341;
+    --warn-soft: #2a2416;
+  }
+}
+:root[data-theme="dark"] {
+  --navy: #8fc3f5;
+  --navy-700: #b9d9fb;
+  --ink: #e7eaee;
+  --ink-2: #b2bac4;
+  --ink-3: #868f9a;
+  --line: #2b3138;
+  --bg: #14171b;
+  --card: #1b1f24;
+  --accent-soft: #1e2833;
+  --ok: #5dd3a0;
+  --warn: #e3b341;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.75;
+  -webkit-text-size-adjust: 100%;
+}
+
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 16px; }
+.wrap--narrow { max-width: 860px; }
+
+a { color: var(--navy); }
+a:hover { color: var(--navy-700); }
+
+/* ---- 머리글 ---- */
+.masthead {
+  background: #003c71;
+  border-bottom: 3px solid var(--chrome);
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+.masthead .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 52px;
+}
+.masthead a.brand {
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  letter-spacing: .01em;
+}
+.masthead nav { display: flex; gap: 16px; flex-wrap: wrap; }
+.masthead nav a { color: #cfe0f0; text-decoration: none; font-size: 14px; }
+.masthead nav a:hover { color: #fff; }
+
+/* ---- 이동 경로 ---- */
+.crumb {
+  font-size: 13px;
+  color: var(--ink-3);
+  padding: 14px 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+}
+.crumb a { color: var(--ink-2); text-decoration: none; }
+.crumb a:hover { color: var(--navy); text-decoration: underline; }
+.crumb span[aria-hidden] { color: var(--ink-3); }
+
+/* ---- 표제 ---- */
+.hero {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-left: 5px solid var(--navy);
+  border-radius: var(--radius);
+  padding: 26px 28px;
+  margin: 16px 0 24px;
+}
+.hero .eyebrow {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  margin: 0 0 8px;
+}
+.hero h1 { margin: 0 0 10px; font-size: 27px; line-height: 1.35; }
+.hero .en { color: var(--ink-3); font-size: 14px; margin: 0 0 12px; }
+.hero p.lede { margin: 0; color: var(--ink-2); max-width: 70ch; }
+
+h2 {
+  font-size: 20px;
+  margin: 34px 0 14px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--line);
+}
+h3 { font-size: 17px; margin: 24px 0 10px; }
+
+/* ---- 카드 격자 ---- */
+.grid { display: grid; gap: 14px; }
+.grid--modules { grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); }
+.grid--weeks { grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); }
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 18px 20px;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  transition: border-color .12s, transform .12s;
+}
+a.card:hover { border-color: var(--navy); transform: translateY(-1px); }
+.card__no {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--chrome);
+  font-weight: 700;
+  letter-spacing: .08em;
+}
+.card__title { font-weight: 700; margin: 4px 0 2px; }
+.card__en { font-size: 13px; color: var(--ink-3); }
+.card__meta { font-size: 13px; color: var(--ink-2); margin-top: 10px; }
+
+/* ---- 진행 막대 ---- */
+.bar { height: 5px; background: var(--line); border-radius: 3px; overflow: hidden; margin-top: 10px; }
+.bar > i { display: block; height: 100%; background: var(--navy); }
+
+/* ---- 수업 목록 ---- */
+.lessons { list-style: none; margin: 0; padding: 0; }
+.lessons li {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--card);
+  margin-bottom: 8px;
+}
+.lessons a {
+  display: flex;
+  gap: 14px;
+  align-items: baseline;
+  padding: 13px 16px;
+  text-decoration: none;
+  color: inherit;
+}
+.lessons a:hover { background: var(--accent-soft); }
+.lessons .lid {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--ink-3);
+  white-space: nowrap;
+}
+.lessons .ltitle { flex: 1; min-width: 0; }
+.lessons .lgroup { font-size: 12px; color: var(--ink-3); }
+
+/* ---- 상태 배지 ---- */
+.badge {
+  font-size: 11px;
+  font-family: var(--mono);
+  padding: 2px 8px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  color: var(--ink-2);
+  background: var(--bg);
+  white-space: nowrap;
+}
+.badge--design { color: var(--ink-3); }
+.badge--draft { color: var(--warn); border-color: var(--warn); background: var(--warn-soft); }
+.badge--review { color: var(--navy); border-color: var(--navy); background: var(--accent-soft); }
+.badge--done {
+  color: var(--ok);
+  border-color: var(--ok);
+  background: var(--ok-soft);
+  font-weight: 600;
+}
+
+/* ---- 목록에서 집필 상태를 한눈에 ---- */
+/* 배지만으로는 276줄을 훑을 때 눈에 들어오지 않아 왼쪽에 색 띠를 둔다. */
+.lessons li[data-status] { border-left: 4px solid var(--line); }
+.lessons li[data-status="done"] { border-left-color: var(--ok); }
+.lessons li[data-status="draft"] { border-left-color: var(--warn); }
+.lessons li[data-status="review"] { border-left-color: var(--navy); }
+.lessons li[data-status="design"] { border-left-color: var(--line); }
+.lessons li[data-status="done"] .ltitle { font-weight: 600; }
+
+.filters--status { margin-top: -4px; }
+.filters--status button[data-filter-status="done"][aria-pressed="true"] {
+  border-color: var(--ok);
+  color: var(--ok);
+}
+
+/* ---- 검색 ---- */
+.search {
+  width: 100%;
+  padding: 12px 14px;
+  font-size: 15px;
+  font-family: inherit;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--card);
+  color: var(--ink);
+}
+.search:focus { outline: 2px solid var(--navy); outline-offset: 1px; }
+.filters { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 18px; }
+.filters button {
+  font: inherit;
+  font-size: 13px;
+  padding: 6px 13px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: var(--card);
+  color: var(--ink-2);
+  cursor: pointer;
+}
+.filters button[aria-pressed="true"] { background: var(--navy); color: #fff; border-color: var(--navy); }
+.count { font-size: 13px; color: var(--ink-3); margin: 0 0 12px; }
+
+/* ---- 안내 상자 ---- */
+.callout {
+  background: var(--accent-soft);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--navy);
+  border-radius: var(--radius);
+  padding: 14px 18px;
+  margin: 18px 0;
+  font-size: 15px;
+}
+.callout--warn { border-left-color: var(--chrome); }
+
+/* ---- 이전·다음 ---- */
+.pager {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 36px 0 12px;
+  border-top: 1px solid var(--line);
+  padding-top: 16px;
+  font-size: 14px;
+}
+.pager a { text-decoration: none; }
+.pager span { color: var(--ink-3); }
+
+/* ---- 표 ---- */
+table { border-collapse: collapse; width: 100%; margin: 14px 0; font-size: 15px; }
+th, td { border: 1px solid var(--line); padding: 8px 11px; text-align: left; vertical-align: top; }
+th { background: var(--accent-soft); font-weight: 700; }
+
+/* ---- 꼬리말 ---- */
+.foot {
+  margin-top: 56px;
+  padding: 22px 16px 40px;
+  border-top: 1px solid var(--line);
+  color: var(--ink-3);
+  font-size: 13px;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 640px) {
+  .hero { padding: 20px; }
+  .hero h1 { font-size: 22px; }
+  .lessons a { flex-wrap: wrap; gap: 6px 12px; }
+}
+
+@media print {
+  .masthead, .filters, .search, .pager, .foot { display: none; }
+  body { background: #fff; font-size: 11pt; }
+  .card, .hero { border: 1px solid #ccc; break-inside: avoid; }
+}
+
+/* 수업 본문 전용 스타일. site.css의 토큰을 그대로 쓴다. */
+
+.lesson { font-size: 16.5px; }
+.lesson p { margin: 0 0 14px; }
+.lesson ul, .lesson ol { margin: 0 0 16px; padding-left: 22px; }
+.lesson li { margin-bottom: 7px; }
+.lesson li > ul { margin: 7px 0 4px; }
+.lesson code {
+  font-family: var(--mono);
+  font-size: .9em;
+  background: var(--accent-soft);
+  padding: 1px 5px;
+  border-radius: 4px;
+}
+.lesson section { scroll-margin-top: 70px; }
+
+/* 슬라이드 내려받기 */
+.dl { margin: 0 0 24px; }
+.dlbtn {
+  display: inline-block;
+  padding: 9px 18px;
+  border: 1px solid var(--navy);
+  border-radius: var(--radius);
+  color: var(--navy);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 700;
+}
+.dlbtn:hover { background: var(--navy); color: #fff; }
+
+/* 질문과 답 */
+.lesson p.q, .lesson p.a {
+  border-radius: var(--radius);
+  padding: 13px 17px;
+  margin: 0 0 12px;
+}
+.lesson p.q {
+  background: var(--accent-soft);
+  border-left: 4px solid var(--navy);
+}
+.lesson p.a {
+  background: rgba(242, 183, 5, .13);
+  border-left: 4px solid var(--chrome);
+  font-weight: 600;
+}
+.lesson p.q > span, .lesson p.a > span {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: .1em;
+  margin-right: 10px;
+  vertical-align: 1px;
+  font-weight: 700;
+}
+.lesson p.q > span { color: var(--navy); }
+.lesson p.a > span { color: var(--warn); }
+
+/* 질문 목록 */
+.qlist { margin: 0 0 24px; }
+.qlist li { margin-bottom: 9px; }
+.qlist a { text-decoration: none; }
+.qlist a:hover { text-decoration: underline; }
+
+/* 조건·한계 / 귀결 / 안전 상자 */
+.box {
+  border-radius: var(--radius);
+  padding: 14px 18px;
+  margin: 16px 0;
+  font-size: 15.5px;
+  border: 1px solid var(--line);
+}
+.box > b {
+  display: block;
+  font-size: 11px;
+  font-family: var(--mono);
+  letter-spacing: .1em;
+  margin-bottom: 5px;
+}
+.box--limit { background: var(--accent-soft); border-left: 4px solid var(--navy); }
+.box--limit > b { color: var(--navy); }
+.box--result { background: rgba(242, 183, 5, .1); border-left: 4px solid var(--chrome); }
+.box--result > b { color: var(--warn); }
+.box--safety { background: rgba(242, 183, 5, .14); border-left: 5px solid var(--chrome); }
+.box--safety > b { color: var(--warn); font-size: 12px; }
+.box--safety ul { margin: 6px 0 0; }
+
+/* 표 */
+.tw { overflow-x: auto; margin: 16px 0; }
+.lesson table { font-size: 14.5px; min-width: 520px; }
+.lesson th { white-space: nowrap; }
+
+/* 확인 문항 */
+.quiz { counter-reset: none; }
+.quiz > li { margin-bottom: 18px; }
+.quiz .qq { font-weight: 600; margin-bottom: 8px; }
+.quiz details {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--card);
+  padding: 0 14px;
+}
+.quiz details[open] { padding-bottom: 6px; }
+.quiz summary {
+  cursor: pointer;
+  padding: 9px 0;
+  font-size: 14px;
+  color: var(--navy);
+  font-weight: 700;
+}
+.quiz details p { margin: 4px 0 8px; font-size: 15.5px; }
+
+/* 참고문헌 */
+.ref { font-size: 14.5px; color: var(--ink-2); }
+.ref li { margin-bottom: 8px; }
+
+@media print {
+  .quiz details { border: none; }
+  .quiz details[open] summary { display: none; }
+  .lesson p.q, .lesson p.a, .box, .equation { break-inside: avoid; }
+  .contents { font-size: 13px; background: none; }
+}
+
+/* 그림 */
+.fig { margin: 20px 0; text-align: center; }
+.fig img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: #fff;
+}
+.fig figcaption {
+  font-size: 14px;
+  color: var(--ink-2);
+  margin-top: 9px;
+  text-align: left;
+  line-height: 1.6;
+}
+.fig figcaption > b { color: var(--navy); margin-right: 6px; }
+.fig .credit { color: var(--ink-3); font-size: 13px; }
+
+/* 보강 입력 상자와 외부 링크 그림 */
+.box--notes{border-left:4px solid #f2b705;background:#fffaec}
+.fig--ext img{outline:2px dashed #f2b705;outline-offset:3px}
+.fig .credit{font-size:.82em;color:#8a6300}
+
+/* 페이지에서 직접 고치는 기능 */
+.editbar{position:fixed;right:16px;bottom:16px;z-index:60;display:flex;gap:6px;
+  align-items:center;flex-wrap:wrap;justify-content:flex-end;max-width:min(94vw,520px);
+  padding:8px;border-radius:10px;background:#ffffffee;border:1px solid #c6d2dd;
+  box-shadow:0 2px 12px rgba(0,0,0,.14)}
+.editbar.is-on{background:#fffaecf2;border-color:#f2b705}
+.editbtn{font:inherit;font-size:.86rem;padding:6px 11px;border-radius:7px;cursor:pointer;
+  border:1px solid #003c71;background:#fff;color:#003c71}
+.editbtn:hover{background:#eaf1f8}
+.editbtn--main{background:#003c71;color:#fff;font-weight:700}
+.editbtn--main:hover{background:#00529c}
+.editbtn--warn{border-color:#b3261e;color:#b3261e}
+.editbtn--warn:hover{background:#fbeceb}
+.editcount{font-size:.82rem;color:#8a6300;font-weight:700}
+.editgrp{display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end}
+.editnote{position:fixed;left:16px;bottom:16px;z-index:60;max-width:min(92vw,460px);
+  padding:10px 13px;border-radius:9px;border-left:4px solid #f2b705;background:#16191df2;
+  color:#fff;font-size:.86rem;line-height:1.5;opacity:0;transform:translateY(8px);
+  transition:opacity .18s,transform .18s;pointer-events:none}
+.editnote.is-on{opacity:1;transform:none}
+.editdump{position:fixed;left:16px;bottom:72px;z-index:60;width:min(92vw,560px);height:40vh;
+  font:12px/1.5 monospace;padding:10px;border:2px solid #f2b705;border-radius:8px;background:#fff}
+body.editing [contenteditable]{outline:1px dashed #9fb3c4;outline-offset:3px;border-radius:3px}
+body.editing [contenteditable]:focus{outline:2px solid #003c71;background:#f7fbff}
+body.editing h2{position:relative}
+.memobtn{font:inherit;font-size:.62em;font-weight:400;margin-left:10px;padding:2px 8px;
+  border-radius:6px;cursor:pointer;border:1px dashed #8a6300;background:#fffaec;color:#8a6300;
+  vertical-align:middle}
+.memobtn:hover{background:#f2b705;color:#16191d}
+h2.has-memo::after{content:"메모";font-size:.58em;font-weight:400;margin-left:10px;
+  padding:2px 8px;border-radius:6px;background:#f2b705;color:#16191d;vertical-align:middle}
+.is-edited{background:#fffaec;box-shadow:inset 3px 0 0 #f2b705;padding-left:9px}
+@media print{.editbar,.editnote,.editdump,.memobtn{display:none}}
+.editmodal{position:fixed;inset:0;z-index:70;display:flex;align-items:center;
+  justify-content:center;padding:16px;background:#16191dbf}
+.editmodal__box{width:min(96vw,560px);background:#fff;border-radius:12px;padding:18px 20px;
+  box-shadow:0 8px 32px rgba(0,0,0,.3)}
+.editmodal__box h3{margin:0 0 6px;font-size:1.02rem;color:#003c71}
+.editmodal__box p{margin:0 0 12px;font-size:.84rem;color:#4a5159}
+.editmodal__box textarea{width:100%;font:inherit;font-size:.9rem;line-height:1.55;padding:10px;
+  border:1px solid #c6d2dd;border-radius:8px;resize:vertical;box-sizing:border-box}
+.editmodal__box textarea:focus{outline:2px solid #003c71;border-color:#003c71}
+.editmodal__row{display:flex;gap:8px;justify-content:flex-end;margin-top:12px}
+
+/* 깊이 층위 상자와 수업 사이 연결 */
+.box--step{border-left:4px solid #2e7d32;background:#ecf6ec}
+.box--step>b{color:#1e6b2c}
+.box--front{border-left:4px solid #6b4fa0;background:#f3eff9}
+.box--front>b{color:#5b3a8a}
+a.xref{font-variant-numeric:tabular-nums;white-space:nowrap;text-decoration:none;
+  border-bottom:1px dotted currentColor}
+a.xref:hover{background:#eaf1f8}
+
+/* ---- 본문 목차 ---- */
+/* 평범한 목록으로 두면 본문과 구별되지 않아 긴 수업에서 지나치기 쉽다. */
+.contents {
+  border: 1px solid var(--line);
+  background: var(--bg);
+  border-radius: var(--radius);
+  padding: 16px 22px;
+  margin: 28px 0 36px;
+}
+.contents strong {
+  display: block;
+  font-size: 13px;
+  letter-spacing: .04em;
+  color: var(--ink-2);
+  margin-bottom: 10px;
+}
+.contents .qlist { margin: 0; }
+.contents .qlist li { margin-bottom: 6px; font-size: 15.5px; }
+
+/* ---- 수식 상자 ---- */
+/* @eq 로 적은 줄. 본문 문단과 섞이면 식의 경계가 보이지 않는다. */
+.equation {
+  background: var(--accent-soft);
+  border-left: 3px solid var(--navy);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  padding: 16px 20px;
+  margin: 22px 0;
+  line-height: 2;
+  overflow-wrap: anywhere;
+}
+</style><link rel="stylesheet" href="../../../../assets/site.css"><link rel="stylesheet" href="../../../../assets/lesson.css"></head><body><header class="masthead">
   <div class="wrap">
     <a class="brand" href="../../../../index.html">의생명과학 교육과정</a>
     <nav>
       <a href="../../../../curriculum/index.html">전체 수업</a>
       <a href="../../../../curriculum/materials.html">자료 내려받기</a>
-      <a href="../../../../curriculum/M07/index.html">실습</a>
       <a href="../../../../archive/index.html">아카이브</a>
     </nav>
   </div>
 </header>
 
-<main class="wrap">
-<nav class="crumb" aria-label="이동 경로"><a href="../../../../index.html">대문</a><span aria-hidden="true">›</span><a href="../../../index.html">전체 수업</a><span aria-hidden="true">›</span><a href="../../index.html">M02</a><span aria-hidden="true">›</span><a href="../index.html">10주차</a><span aria-hidden="true">›</span><span>M02-W10-L03</span></nav>
+<main class="wrap wrap--narrow lesson" data-lesson-id="M02-W10-L03" data-lesson="M02-W10-L03"><nav class="crumb" aria-label="이동 경로"><a href="../../../../index.html">대문</a><span aria-hidden="true">›</span><a href="../../../index.html">전체 수업</a><span aria-hidden="true">›</span><a href="../../index.html">M02</a><span aria-hidden="true">›</span><a href="../index.html">10주차</a><span aria-hidden="true">›</span><span>M02-W10-L03</span></nav><section class="hero"><p class="eyebrow">M02-W10-L03 · 대사생화학 · 아미노산대사</p><h1>아미노산 분해 경로와 탄소 골격의 운명</h1><p class="en"></p></section><section aria-labelledby="objectives"><h2 id="objectives">학습목표</h2><ul><li>질소 제거와 탄소 골격 이용이 서로 연결된 별개의 문제임을 설명한다.</li><li>당생성·케톤생성 아미노산을 최종 유입 지점으로 구분한다.</li><li>주요 아미노산의 탄소가 pyruvate와 TCA 중간체로 들어가는 경로를 설명한다.</li><li>BCAA 분해 및 methionine 대사를 보조인자와 연결한다.</li></ul></section>
 
-  <section class="hero">
-    <p class="eyebrow">M02-W10-L03 · 대사생화학 · 질소대사</p>
-    <h1>아미노산 분해 경로와 탄소 골격의 운명 [20장]</h1>
-    <p class="lede">강의 수업 · 상태 <span class="badge badge--design">설계</span></p>
-  </section>
+<section aria-labelledby="prerequisites"><h2 id="prerequisites">선수지식</h2><p>아미노기 전이, PDH 반응의 비가역성, TCA 회로의 탄소 수지, 포도당신생합성, propionyl-CoA의 대사를 복습한다. 이번에는 아미노산에서 질소를 처리하고 남은 탄소가 어디로 가는지 추적한다.</p></section>
 
-  
-  <div class="callout">이 수업은 아직 집필 전이다. 제작 기준은
-  <a href="../../../../PROJECT.md">PROJECT.md</a>의 집필 원칙과 산출물 규격을 따른다.</div>
+<nav class="contents" aria-label="강의 구성"><strong>강의 구성</strong><ol class="qlist"><li><a href="#s1">1. 아미노산 분해에는 질소와 탄소라는 두 가지 과제가 있다</a></li><li><a href="#s2">2. 당생성과 케톤생성은 ‘어디로 들어갈 수 있는가’의 구분이다</a></li><li><a href="#s3">3. Pyruvate와 oxaloacetate로 들어오는 경로는 비교적 가까운 연결이다</a></li><li><a href="#s4">4. Glutamate는 질소를 모으면서 탄소를 TCA에 연결한다</a></li><li><a href="#s5">5. Succinyl-CoA 경로에서는 biotin과 vitamin B12가 다른 일을 한다</a></li><li><a href="#s6">6. BCAA는 시작 반응을 공유하지만 끝나는 곳은 다르다</a></li><li><a href="#s7">7. 방향족 아미노산과 methionine은 다른 합성 경로로도 이어진다</a></li><li><a href="#s8">8. 분류표는 탄소의 가능성을 말하고, 실제 사용은 몸의 상태가 결정한다</a></li></ol></nav><section aria-label="본문"><section id="s1" class="lesson-section"><h2>1. 아미노산 분해에는 질소와 탄소라는 두 가지 과제가 있다</h2><p>Alanine을 예로 들어 보자. Alanine aminotransferase(ALT) 반응에서 alanine의 아미노기는 α-ketoglutarate로 옮겨가 glutamate가 되고, alanine의 탄소 세 개는 pyruvate로 남는다. 질소는 glutamate를 거쳐 요소 합성에 기여할 수 있고, pyruvate는 에너지 생성이나 포도당신생합성에 사용될 수 있다. 하나의 분해 반응에서 나온 두 부분의 목적지가 다른 것이다.</p><p>모든 아미노산이 alanine처럼 한 단계로 정리되는 것은 아니다. 곁사슬의 구조에 따라 여러 반응이 필요하지만, 탄소 골격의 주요 도착지는 몇 가지 공통 대사물로 모인다. 개별 경로를 처음부터 모두 외우기보다 ‘어떤 공통 대사물로 들어오는가’를 먼저 잡으면 당대사와 지질대사 지식에 연결하기 쉽다. <a href="#ref-t20">[T20, I–III, PDF 540–541]</a></p><p><strong>Alanine 한 분자를 두 부분으로 나누어 추적하기</strong></p><div class="tw"><table aria-label="Alanine 한 분자를 두 부분으로 나누어 추적하기"><thead><tr><th>추적하는 부분</th><th>ALT 반응 뒤</th><th>이후 가능한 흐름</th></tr></thead><tbody><tr><td>아미노기 질소</td><td>Glutamate</td><td>암모니아 또는 aspartate를 거쳐 요소 질소로 처리</td></tr><tr><td>탄소 골격</td><td>Pyruvate</td><td>산화, 포도당신생합성 등 대사 상태에 맞게 이용</td></tr></tbody></table></div></section>
+<section id="s2" class="lesson-section"><h2>2. 당생성과 케톤생성은 ‘어디로 들어갈 수 있는가’의 구분이다</h2><p>탄소 골격이 pyruvate, oxaloacetate, α-ketoglutarate, succinyl-CoA 또는 fumarate로 들어오면 포도당신생합성에 탄소를 제공할 수 있다. 이 때문에 당생성 아미노산이라고 부른다. 여기서 ‘할 수 있다’가 중요하다. 같은 탄소가 현재의 에너지 필요에 따라 산화될 수도 있으며, 당생성이라는 분류가 식후에도 반드시 포도당으로 바뀐다는 뜻은 아니다.</p><p>Acetyl-CoA나 acetoacetate를 만드는 부분은 케톤생성으로 분류한다. 사람에서 acetyl-CoA 탄소만으로 포도당을 순수하게 새로 늘릴 수는 없다. PDH 반응을 거꾸로 돌려 pyruvate를 만들 수 없고, TCA 회로도 acetyl-CoA를 받아들이는 만큼의 탄소를 순증가한 oxaloacetate로 남기는 회로가 아니기 때문이다. 탄소 표지가 다른 분자에서 발견되는 문제와 순수한 탄소 공급량의 문제는 구분해야 한다.</p><p><strong>일곱 도착 지점을 기능으로 묶기</strong></p><div class="tw"><table aria-label="일곱 도착 지점을 기능으로 묶기"><thead><tr><th>도착 지점</th><th>분류</th><th>대표 예</th></tr></thead><tbody><tr><td>Pyruvate, oxaloacetate</td><td>당생성</td><td>Alanine, aspartate</td></tr><tr><td>α-Ketoglutarate, succinyl-CoA, fumarate</td><td>당생성</td><td>Glutamate, valine, phenylalanine 탄소의 일부</td></tr><tr><td>Acetyl-CoA, acetoacetate</td><td>케톤생성</td><td>Leucine, lysine 및 혼합형 아미노산의 일부 탄소</td></tr></tbody></table></div><div class="box box--step"><b>시험에서 가려내는 지점</b> Leucine과 lysine은 순수 케톤생성 아미노산이다. ‘Acetyl-CoA가 TCA에 들어간다’와 ‘그 탄소로 포도당을 순생성한다’는 같은 말이 아니다.</div></section>
+<section id="s3" class="lesson-section"><h2>3. Pyruvate와 oxaloacetate로 들어오는 경로는 비교적 가까운 연결이다</h2><p>Alanine은 ALT 반응으로 pyruvate와 연결된다. Serine도 분해되어 pyruvate를 만들 수 있다. Glycine은 serine으로 전환될 수도 있고 glycine 절단계에서 처리될 수도 있으므로, 모든 glycine이 반드시 pyruvate가 된다고 말하면 안 된다. Glycine과 serine 사이의 전환은 뒤에서 배울 folate의 한 탄소 단위 대사와도 연결된다.</p><p>Aspartate는 Aspartate aminotransferase(AST) 반응을 통해 oxaloacetate가 된다. Asparagine은 먼저 곁사슬의 amide 질소를 제거해 aspartate가 된 뒤 같은 경로로 들어갈 수 있다. 이름이 비슷한 asparagine과 aspartate의 차이는 단순 철자가 아니라 곁사슬 질소 하나의 차이다. Asparagine의 amide 질소를 떼는 반응과 aspartate의 α-아미노기를 옮기는 반응은 구분하자. <a href="#ref-t20">[T20, III.A·C, PDF 542–544]</a></p><p><strong>가까운 유입 경로에서 먼저 확인할 반응</strong></p><div class="tw"><table aria-label="가까운 유입 경로에서 먼저 확인할 반응"><thead><tr><th>아미노산</th><th>중간 연결</th><th>탄소의 도착지</th></tr></thead><tbody><tr><td>Alanine</td><td>아미노기 전이</td><td>Pyruvate</td></tr><tr><td>Serine</td><td>분해 경로 중 하나</td><td>Pyruvate</td></tr><tr><td>Asparagine</td><td>Amide 질소 제거 → aspartate</td><td>Oxaloacetate</td></tr><tr><td>Aspartate</td><td>아미노기 전이</td><td>Oxaloacetate</td></tr></tbody></table></div></section>
+<section id="s4" class="lesson-section"><h2>4. Glutamate는 질소를 모으면서 탄소를 TCA에 연결한다</h2><p>Glutamate는 아미노기 전이에서 여러 아미노산의 질소를 받는 물질이었다. 동시에 자신의 아미노기를 다른 분자에 넘기거나 Glutamate dehydrogenase(GDH) 반응으로 제거하면 α-ketoglutarate가 되어 TCA 회로에 연결된다. 따라서 glutamate를 ‘질소만 운반하는 분자’로 보면 탄소 대사의 역할을 놓친다.</p><p>Glutamine은 glutaminase에 의해 amide 질소를 내놓고 glutamate가 된다. Proline, arginine, histidine도 여러 단계를 거쳐 glutamate 쪽으로 연결된다. Histidine 분해 중에는 FIGLU라는 중간체가 생기며, 그 formimino기를 tetrahydrofolate에 전달하는 단계가 있다. 이 예는 아미노산 탄소 골격의 분해가 한 탄소 단위 운반과도 연결된다는 것을 보여 준다. <a href="#ref-t20">[T20, III.B, PDF 542–543]</a></p><div class="box box--limit"><b>임상 연계</b><h3>학습용 연결: 신장에서 glutamine을 사용하면</h3><p>Glutamine의 질소 처리로 NH4+ 배설에 기여하면서 탄소 골격도 대사에 이용할 수 있다. 신장의 glutamine 대사를 볼 때 질소 배설과 탄소 이용 중 하나만 고르면 전체 기능을 설명하기 어렵다. 어느 조직에서 어떤 생리적 필요에 따라 경로를 쓰는지 함께 살펴본다.</p></div><div class="box box--front"><b>연구 전선</b> 대사체의 농도가 높다는 관찰만으로 그 분해 속도가 빠르다고 결론 내릴 수는 없다. 생성 증가와 이용 감소가 모두 농도를 높일 수 있다. 탄소의 이동 속도를 알고 싶다면 동위원소 추적 등 흐름을 측정하는 접근이 필요하다.</div></section>
+<section id="s5" class="lesson-section"><h2>5. Succinyl-CoA 경로에서는 biotin과 vitamin B12가 다른 일을 한다</h2><p>Valine, isoleucine, methionine과 threonine의 분해는 propionyl-CoA를 거쳐 succinyl-CoA로 연결될 수 있다. Propionyl-CoA는 먼저 carboxylase에 의해 탄소 하나를 받아 methylmalonyl-CoA가 된다. 이 반응에는 ATP와 biotin이 필요하다. 입체 형태가 바뀐 다음에는 vitamin B12를 사용하는 mutase가 탄소 배열을 바꾸어 succinyl-CoA를 만든다. B12가 CO2를 붙이는 것은 아니다.</p><p>이 경로는 홀수 탄소 지방산에서 마지막에 남는 propionyl-CoA의 처리와도 겹친다. 출발 재료가 달라도 공통 중간체에 도착하면 같은 효소를 이용하는 것이다. B12 관련 단계가 원활하지 않으면 methylmalonate 증가가 나타날 수 있지만, 검사 결과는 임상 맥락과 다른 원인을 함께 고려한다. 여기서는 먼저 보조인자별 반응의 차이를 기억하자. <a href="#ref-t20">[T20, III.E, PDF 546–550]</a></p><p><strong>Propionyl-CoA에서 succinyl-CoA까지</strong></p><div class="tw"><table aria-label="Propionyl-CoA에서 succinyl-CoA까지"><thead><tr><th>순서</th><th>일어나는 변화</th><th>핵심 요소</th></tr></thead><tbody><tr><td>Carboxylation</td><td>Propionyl-CoA에 탄소 하나 추가</td><td>Biotin, ATP, bicarbonate</td></tr><tr><td>Epimerization</td><td>Methylmalonyl-CoA의 입체 형태 변경</td><td>다음 효소가 사용할 형태 마련</td></tr><tr><td>Rearrangement</td><td>Succinyl-CoA로 탄소 골격 재배열</td><td>Adenosylcobalamin, vitamin B12</td></tr></tbody></table></div><div class="box box--step"><b>시험에서 가려내는 지점</b> Biotin은 탄소를 붙이는 carboxylase 단계, B12는 methylmalonyl-CoA를 succinyl-CoA로 재배열하는 mutase 단계에 필요하다. 두 비타민의 역할을 맞바꾸지 않는다.</div></section>
+<section id="s6" class="lesson-section"><h2>6. BCAA는 시작 반응을 공유하지만 끝나는 곳은 다르다</h2><p>Branched-chain amino acids, 즉 BCAA는 leucine, isoleucine, valine이다. 첫 아미노기 전이는 주로 근육을 비롯한 간 외 조직에서 활발하다. 간의 초기 BCAA 아미노기 전이 능력이 낮다는 말은 간이 이후의 모든 BCAA 유래 대사물을 전혀 처리하지 못한다는 뜻은 아니다.</p><p>아미노기가 제거된 가지사슬 α-keto acid는 Branched-chain α-keto acid dehydrogenase(BCKDH) 복합체에서 산화적 탈탄산을 거친다. 이 복합체는 PDH와 닮아 Thiamine pyrophosphate(TPP), lipoate, coenzyme A(CoA), flavin adenine dinucleotide(FAD), nicotinamide adenine dinucleotide(NAD+)를 이용한다. 공통 시작 단계를 지난 뒤 경로가 갈라지며, valine은 succinyl-CoA, leucine은 acetyl-CoA와 acetoacetate, isoleucine은 acetyl-CoA와 succinyl-CoA를 만든다. 그래서 같은 BCAA라도 당생성·케톤생성 분류가 서로 다르다. <a href="#ref-t20">[T20, III.H, PDF 552–553]</a></p><p><strong>BCAA의 공통 출발과 서로 다른 종착점</strong></p><div class="tw"><table aria-label="BCAA의 공통 출발과 서로 다른 종착점"><thead><tr><th>BCAA</th><th>주요 최종 유입 물질</th><th>분류</th></tr></thead><tbody><tr><td>Valine</td><td>Succinyl-CoA</td><td>당생성</td></tr><tr><td>Leucine</td><td>Acetyl-CoA, acetoacetate</td><td>케톤생성</td></tr><tr><td>Isoleucine</td><td>Acetyl-CoA, succinyl-CoA</td><td>둘 다</td></tr></tbody></table></div><p>BCKDH 기능 이상은 다음 주차의 maple syrup urine disease와 연결된다. 그 질환을 이해할 때도 공통 단계가 막히면 여러 BCAA와 해당 keto acid에 영향을 준다는 점부터 생각하면 된다.</p></section>
+<section id="s7" class="lesson-section"><h2>7. 방향족 아미노산과 methionine은 다른 합성 경로로도 이어진다</h2><p>Phenylalanine은 Tetrahydrobiopterin(BH4)을 사용하는 phenylalanine hydroxylase에 의해 tyrosine이 된다. 분해가 계속되면 fumarate와 acetoacetate를 만들므로 phenylalanine과 tyrosine은 당생성·케톤생성 양쪽으로 분류된다. Tryptophan도 분해 탄소의 일부가 alanine을 거쳐 pyruvate로, 다른 일부가 케톤생성 쪽으로 연결된다. Lysine은 leucine과 함께 순수 케톤생성으로 기억한다.</p><p>Methionine은 S-Adenosylmethionine(SAM)이 되어 methyl기를 전달한 뒤 homocysteine으로 연결된다. Homocysteine은 B12와 methyl-tetrahydrofolate(methyl-THF)가 관여하는 재메틸화로 methionine으로 돌아갈 수도 있고, serine과 결합하는 transsulfuration 경로로 가서 cysteine 생성에 기여할 수도 있다. 이때 cysteine의 황은 methionine에서, 탄소 골격은 serine에서 온다. 남는 methionine 쪽 탄소는 α-ketobutyrate를 거쳐 propionyl-CoA 경로로 연결된다. <a href="#ref-t20">[T20, III.D–G, PDF 545–551]</a></p><p><strong>분해 경로와 다른 기능의 접점</strong></p><div class="tw"><table aria-label="분해 경로와 다른 기능의 접점"><thead><tr><th>물질</th><th>연결되는 기능</th><th>주의할 구별</th></tr></thead><tbody><tr><td>Phenylalanine → tyrosine</td><td>방향족 아미노산 대사</td><td>Tyrosine 합성은 phenylalanine 공급과 전환 능력에 의존</td></tr><tr><td>Methionine → SAM</td><td>Methyl기 전달</td><td>단순 에너지 산화 외의 역할도 있다</td></tr><tr><td>Homocysteine → cysteine</td><td>황의 전달</td><td>Cysteine의 탄소는 serine에서 온다</td></tr></tbody></table></div><div class="box box--step"><b>시험에서 가려내는 지점</b> ‘비필수 아미노산’은 필요 없다는 뜻이 아니라 정상 조건에서 몸이 합성할 수 있다는 뜻이다. 전구체 공급이나 합성 능력이 제한되면 조건이 달라질 수 있다.</div></section>
+<section id="s8" class="lesson-section"><h2>8. 분류표는 탄소의 가능성을 말하고, 실제 사용은 몸의 상태가 결정한다</h2><p>금식 중 근육에서 나온 alanine이 간으로 가면 질소는 요소로 처리되고 탄소는 혈당 유지에 기여할 수 있다. 같은 alanine 탄소라도 에너지가 필요한 조직에서는 산화될 수 있다. 아미노산이 당생성이라는 이유만으로 ‘항상 혈당을 올리는 물질’이라고 단정할 수 없는 이유다. 아미노산을 많이 공급하면 반드시 근육이 늘어난다는 결론도 이 경로만으로 나오지 않는다.</p><p>분류표를 비교할 때 threonine은 주의가 필요하다. 일부 고전적 도식은 여러 종의 경로를 묶어 당생성과 케톤생성 양쪽으로 표시하지만, 사람의 주요 분해를 설명할 때는 α-ketobutyrate → propionyl-CoA → succinyl-CoA 연결을 우선 이해한다. 이 강의에서는 분류표 한 칸보다 실제 사람에서 작동하는 경로를 중심으로 학습한다. <a href="#ref-tdh">[R1]</a></p><div class="box box--limit"><b>임상 연계</b><h3>학습용 종합 사례: 금식 중 alanine의 이동</h3><p>근육의 alanine이 간에 도착했다. 첫 질문은 ‘질소를 어느 분자에 넘기는가?’이고 답은 ALT 반응의 glutamate다. 다음 질문은 ‘탄소는 무엇이 되는가?’이고 답은 pyruvate다. 이후 질소는 요소 합성과 연결되고, 탄소는 필요에 따라 포도당신생합성에 쓰인다. 질소와 탄소를 따로 추적한 뒤 다시 장기 간 흐름으로 연결해 설명해 보자.</p></div><div class="box box--front"><b>연구 전선</b> 사람의 대사를 설명하는 도식인지, 다른 동물이나 세포의 경로를 포함한 도식인지 확인하자. 유전자 존재, 효소 활성, 실제 생체 내 기여도는 서로 다른 수준의 증거다. 경로가 가능하다는 사실만으로 그 경로가 사람에서 주된 흐름이라고 단정하지 않는다.</div></section>
+</section>
 
-  <h2>학습목표</h2>
-  <p>작성 예정. 이 수업이 답하는 질문 6~9개를 먼저 확정한 뒤 측정 가능한 학습목표로 옮긴다.</p>
+<section aria-labelledby="questions"><h2 id="questions">확인 문항과 해설</h2><ol class="quiz">
+<li><p class="qq"><strong>판단.</strong> Alanine의 아미노기와 탄소 골격은 ALT 반응 뒤 각각 glutamate와 pyruvate 쪽으로 나뉜다.</p><details><summary>해설</summary><p>맞다. α-Ketoglutarate가 아미노기를 받아 glutamate가 되고 alanine의 탄소 세 개는 pyruvate로 남는다.</p></details></li>
+<li><p class="qq"><strong>판단.</strong> Acetyl-CoA는 TCA 회로에 들어갈 수 있으므로 사람에서 그 탄소만으로 포도당을 순생성할 수 있다.</p><details><summary>해설</summary><p>틀리다. PDH는 비가역적이며 TCA 회로는 acetyl-CoA 유입으로 oxaloacetate 탄소를 순증가시키지 않는다. 회로에 들어가는 것과 포도당 탄소를 순공급하는 것은 다르다.</p></details></li>
+<li><p class="qq"><strong>판단.</strong> Leucine, isoleucine, valine은 공통 초기 분해 반응을 사용하므로 모두 순수 케톤생성이다.</p><details><summary>해설</summary><p>틀리다. Leucine은 케톤생성, valine은 당생성, isoleucine은 둘 다다. 공통 시작 뒤 최종 탄소 도착지가 달라진다.</p></details></li>
+<li><p class="qq"><strong>판단.</strong> 비필수 아미노산은 신체 기능에 필요하지 않으므로 합성에 장애가 생겨도 문제가 없다.</p><details><summary>해설</summary><p>틀리다. 비필수는 정상 조건에서 체내 합성이 가능하다는 영양학적 표현이다. 합성 능력이나 전구체가 부족하면 공급 조건이 달라진다.</p></details></li>
+<li><p class="qq">Propionyl-CoA에서 succinyl-CoA로 가는 동안 biotin과 B12는 각각 어떤 변화를 돕는가?</p><details><summary>해설</summary><p>Biotin은 propionyl-CoA carboxylase의 탄소 추가 반응에, B12는 methylmalonyl-CoA mutase의 탄소 골격 재배열에 필요하다.</p></details></li>
+<li><p class="qq">Methionine의 transsulfuration을 통해 cysteine을 만들 때 황과 탄소 골격의 공급원을 구분하라.</p><details><summary>해설</summary><p>황은 methionine을 거친 homocysteine에서, cysteine의 탄소 골격은 serine에서 온다. Methionine의 탄소 전체가 그대로 cysteine이 되는 것은 아니다.</p></details></li>
+</ol></section>
 
-  <h2>선수지식</h2>
-  <p>작성 예정.</p>
-
-  <h2>본문</h2>
-  <p>작성 예정. 각 절은 하나의 질문에 답하는 단위로 쓰고
-  질문 → 답 → 근거 → 조건과 한계 → 귀결의 순서로 전개한다.</p>
-
-  <h2>확인 문항</h2>
-  <p>작성 예정. 5개 이상, 절반 이상은 판단을 묻는 문항으로 한다.</p>
-
-  <h2>참고문헌</h2>
-  <p>작성 예정.</p>
-
-  <nav class="pager"><a href="../../../M02/W10/L02/index.html">← M02-W10-L02 Urea cycle 이상과 고암모니아혈증 [19장]</a><a href="../../../M02/W11/L01/index.html">M02-W11-L01 선천성 아미노산 대사질환의 진단과 관리 [20장] →</a></nav>
-
-</main>
-
-<footer class="foot wrap">
+<section aria-labelledby="references"><h2 id="references">참고문헌</h2><ol class="ref"><li id="ref-t20">[T20] Abali EE, Cline SD, Franklin DS, Viselli SM. Lippincott Illustrated Reviews: Biochemistry. 8e. Wolters Kluwer; 2022. Chapter 20, I–IV. 제공 PDF 파일 540–555쪽. 페이지는 인쇄 쪽수가 아닌 파일 기준이다.</li><li id="ref-tdh">[R1] Edgar AJ. The human L-threonine 3-dehydrogenase gene is an expressed pseudogene. BMC Genetics. 2002;3:18. <a href="https://doi.org/10.1186/1471-2156-3-18">doi:10.1186/1471-2156-3-18</a>. 사람의 threonine 분해 경로 설명에 사용한 종 차이 보충 근거.</li></ol></section>
+<nav class="pager" aria-label="이전·다음 수업"><a href="../../W10/L02/index.html">← Urea cycle 이상과 고암모니아혈증 [19장]</a><a href="../../W11/L01/index.html">M02-W11-L01 아미노산 대사 이상 →</a></nav></main><footer class="foot wrap">
   <span>© 2026 Kim Jintae · Hanyang University</span>
   <a href="https://github.com/hoperiasd2/hoperiasd2.github.io">GitHub 저장소</a>
 </footer>
 
-<script src="../../../../assets/site.js"></script>
-</body>
-</html>
+<script src="../../../../assets/edit.js" defer></script></body></html>

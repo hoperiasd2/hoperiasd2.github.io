@@ -1,110 +1,34 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Electron transport chain과 산화적 인산화 · M02-W03-L02</title>
-<meta name="description" content="Electron transport chain과 산화적 인산화">
-<link rel="stylesheet" href="../../../../assets/site.css">
-<link rel="stylesheet" href="../../../../assets/lesson.css">
-</head>
-<body>
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>M02-W03-L02 전자전달계와 산화적 인산화 [6장]</title><meta name="description" content="전자전달계와 산화적 인산화 [6장]: 구조에서 생리 기능과 질환까지"><link rel="stylesheet" href="../../../../assets/site.css"><style>
+:root {color-scheme:light dark;--paper:#faf9f6;--ink:#242927;--muted:#5e6862;--line:#d7ddd5;--accent:#245842;--box:#f1f4ee}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.85 system-ui,-apple-system,"Malgun Gothic",sans-serif}a{color:var(--accent);text-underline-offset:.18em}a:focus-visible,summary:focus-visible{outline:3px solid #c48b25;outline-offset:4px}.wrap{max-width:1080px;margin:auto;padding:0 28px}.masthead{border-bottom:1px solid var(--line);padding:20px 0}.masthead .wrap{display:flex;gap:24px;align-items:center;justify-content:space-between}.brand{font-weight:750;text-decoration:none}.masthead nav{display:flex;gap:18px;flex-wrap:wrap;font-size:14px}.crumb{display:flex;gap:9px;flex-wrap:wrap;font-size:13px;padding:24px 0;color:var(--muted)}.hero{padding:24px 0 36px;border-bottom:1px solid var(--line);margin-bottom:36px}.eyebrow{font-size:12px;letter-spacing:.08em;color:var(--muted)}h1{font-size:clamp(26px,4vw,40px);line-height:1.4;letter-spacing:-.035em;margin:14px 0}h2{font-size:25px;margin:44px 0 20px;border-bottom:1px solid var(--line);padding-bottom:12px}h3{font-size:21px;line-height:1.6;margin:36px 0 18px}h4{font-size:17px;margin:0 0 12px}.lede{color:var(--muted)}.badge{font-size:12px;padding:3px 8px;border:1px solid var(--line);border-radius:3px}.lesson-section{margin:32px 0 48px;scroll-margin-top:24px}p{margin:17px 0;word-break:keep-all;overflow-wrap:anywhere}li{margin:10px 0}main>section{margin-bottom:38px}.contents{border:1px solid var(--line);background:var(--box);padding:18px 24px;margin:28px 0}.contents ol{margin:8px 0;padding-left:0;list-style:none}.contents a{font-size:15px}.table-scroll{overflow-x:auto;margin:24px 0}table{width:100%;border-collapse:collapse;font-size:14px;line-height:1.75;min-width:560px}caption{text-align:left;color:var(--muted);font-size:13px;padding:0 0 10px;font-weight:600}th,td{border:1px solid var(--line);padding:12px 14px;vertical-align:top;word-break:keep-all}thead th{background:var(--box);text-align:left}tbody th{text-align:left;font-weight:600;width:18%}.case,.equation{background:var(--box);border-left:3px solid var(--accent);padding:18px 22px;margin:24px 0}.equation{font-family:system-ui,sans-serif;overflow-wrap:anywhere}.case p{margin:12px 0}.exam{font-weight:700}.research{font-weight:600}.questions>li{margin:26px 0}.questions details{border:1px solid var(--line);padding:12px 18px;border-radius:3px}.questions summary{cursor:pointer;font-weight:600}.questions details p{margin:14px 0 5px}.references{font-size:14px;overflow-wrap:anywhere}.pager{border-top:1px solid var(--line);padding:28px 0;display:flex;gap:24px;justify-content:space-between;align-items:baseline;font-size:14px}.foot{border-top:1px solid var(--line);padding-top:24px;padding-bottom:32px;display:flex;justify-content:space-between;gap:16px;color:var(--muted);font-size:12px}.skip{position:absolute;left:-10000px}.skip:focus{left:20px;top:12px;background:var(--paper);padding:10px;z-index:2}sup,sub{line-height:0}
+@media(max-width:640px){body{font-size:16px}.wrap{padding:0 18px}.masthead .wrap{display:block}.masthead nav{margin-top:14px;gap:12px}.hero{padding-top:10px}h2{font-size:23px}h3{font-size:19px}.case,.equation{padding:16px}.pager,.foot{display:block}.pager>*{display:block;margin:10px 0}.foot>*{display:block;margin:8px 0}}
+@media(prefers-color-scheme:dark){:root{--paper:#171c19;--ink:#e7ece7;--muted:#b4beb6;--line:#3b4940;--accent:#a0d3b7;--box:#232d26}}
+@media print{:root{color-scheme:light;--paper:#fff;--ink:#111;--muted:#444;--line:#aaa;--accent:#111;--box:#f6f6f6}body{font-size:10.5pt;line-height:1.7}.wrap{max-width:none;padding:0}.masthead,.crumb,.pager,.foot,.skip{display:none}.hero{padding-top:0}h2,h3,h4{break-after:avoid}table{font-size:8.5pt;min-width:0}tr{break-inside:avoid}.case{break-inside:avoid}.contents{font-size:9pt}.table-scroll{overflow:visible}details{display:block}details>*{display:block!important}summary{list-style:none}a{color:#111}.references a{word-break:break-all}}
+</style></head><body><a class="skip" href="#objectives">본문으로 이동</a><header class="masthead"><div class="wrap"><a class="brand" href="../../../../index.html">의생명과학 교육과정</a><nav aria-label="주 탐색"><a href="../../../index.html">전체 수업</a><a href="../../../materials.html">자료 내려받기</a><a href="../../../M07/index.html">실습</a><a href="../../../../archive/index.html">아카이브</a></nav></div></header>
+<main class="wrap" data-lesson-id="M02-W03-L02"><nav class="crumb" aria-label="이동 경로"><a href="../../../../index.html">대문</a><span aria-hidden="true">›</span><a href="../../../index.html">전체 수업</a><span aria-hidden="true">›</span><a href="../../index.html">M02</a><span aria-hidden="true">›</span><a href="../index.html">3주차</a><span aria-hidden="true">›</span><span>M02-W03-L02</span></nav><section class="hero"><p class="eyebrow">M02-W03-L02 · 대사생화학 · 기본대사</p><h1>전자전달계와 산화적 인산화 [6장]</h1><p class="lede">강의 수업 · <span class="badge">학습 자료</span></p></section><nav class="contents" aria-label="본문 목차"><strong>본문 목차</strong><ol><li><a href="#s1">1. 미토콘드리아 내막은 전자 전달과 ATP 합성이 연결되는 장소다</a></li><li><a href="#s2">2. 전자는 NADH에서 산소까지 순서대로 전달된다</a></li><li><a href="#s3">3. 산소는 마지막에 전자를 받아 물이 된다</a></li><li><a href="#s4">4. 양성자 기울기는 농도 차이와 전위 차이를 함께 가진다</a></li><li><a href="#s5">5. ATP 수율은 진입 지점과 막을 가로지르는 운반에 따라 달라진다</a></li><li><a href="#s6">6. ATP 수요가 늘면 호흡도 빨라질 수 있다</a></li><li><a href="#s7">7. 전자전달 억제와 탈결합은 산소 소비 양상이 다르다</a></li><li><a href="#s8">8. 열 생산과 세포 손상은 조절 여부까지 보아야 한다</a></li></ol></nav><section aria-labelledby="objectives"><h2 id="objectives">학습목표</h2><ol><li>전자전달계의 위치와 전자 이동 순서를 설명한다.</li><li>양성자 기울기와 ATP 합성의 관계를 설명한다.</li><li>산소 소비와 ATP 생성이 항상 함께 변하지 않는 이유를 설명한다.</li><li>전자전달 억제·ATP 합성 억제·탈결합을 구별한다.</li><li>NADH의 전자전달계 진입 방식에 따른 ATP 환산 차이를 설명한다.</li></ol></section>
 
-<header class="masthead">
-  <div class="wrap">
-    <a class="brand" href="../../../../index.html">의생명과학 교육과정</a>
-    <nav>
-      <a href="../../../../curriculum/index.html">전체 수업</a>
-      <a href="../../../../curriculum/materials.html">자료 내려받기</a>
-      <a href="../../../../archive/index.html">아카이브</a>
-    </nav>
-  </div>
-</header>
+<section aria-labelledby="prerequisites"><h2 id="prerequisites">선수지식</h2><p>NADH는 전자를 내놓으면 NAD⁺가 된다. 산화환원 반응에서 나온 에너지는 다른 일에 이용될 수 있다. ATP 합성은 ADP와 무기인산을 ATP로 만드는 과정이며 에너지가 필요하다. 이 강의에서는 전자의 이동, H⁺의 이동, ATP 합성을 순서대로 연결한다.</p></section>
 
-<main class="wrap wrap--narrow lesson" data-lesson="M02-W03-L02">
-<nav class="crumb" aria-label="이동 경로"><a href="../../../../index.html">대문</a><span aria-hidden="true">›</span><a href="../../../../curriculum/index.html">전체 수업</a><span aria-hidden="true">›</span><a href="../../index.html">M02</a><span aria-hidden="true">›</span><a href="../index.html">3주차</a><span aria-hidden="true">›</span><span>M02-W03-L02</span></nav>
+<section aria-labelledby="body"><h2 id="body">본문</h2>
+<section id="s1" class="lesson-section"><h3>1. 미토콘드리아 내막은 전자 전달과 ATP 합성이 연결되는 장소다</h3><p>미토콘드리아에는 바깥막과 안쪽막이 있다. 안쪽막을 내막이라 하고, 그 안쪽 공간을 기질이라 한다. 두 막 사이에는 막사이공간이 있다. 전자전달계의 여러 복합체와 ATP 합성효소는 내막에 자리한다. 내막은 이온이 자유롭게 통과하는 막이 아니므로 양쪽에 서로 다른 전기적·화학적 상태를 만들 수 있다. <a href="#ref-t6">[T6, IV, PDF 166–177]</a></p><p>영양소 대사에서 만들어진 NADH의 전자는 내막의 전자전달계를 거쳐 산소로 이동한다. 이 과정에서 얻는 에너지가 H⁺, 즉 양성자를 기질에서 막사이공간 쪽으로 옮기는 데 쓰인다. 이어 H⁺가 ATP 합성효소를 통해 기질로 돌아오면서 ATP 합성이 진행된다. 산화적 인산화란 이처럼 전자 전달에 따른 산화와 ATP 합성을 연결하는 과정이다.</p><div class="table-scroll"><table><caption>세 구획을 먼저 구별하기</caption><thead><tr><th>위치</th><th>관련 과정</th><th>의미</th></tr></thead><tbody><tr><th>기질</th><td>TCA 회로의 대부분, NADH 생성</td><td>전자전달계에 전자를 제공한다</td></tr><tr><th>내막</th><td>전자전달 복합체·ATP 합성효소</td><td>전자의 에너지를 H⁺ 기울기와 연결한다</td></tr><tr><th>막사이공간</th><td>H⁺가 상대적으로 모이는 쪽</td><td>기질과의 전기화학적 차이가 생긴다</td></tr></tbody></table></div></section>
+<section id="s2" class="lesson-section"><h3>2. 전자는 NADH에서 산소까지 순서대로 전달된다</h3><p>NADH의 전자는 복합체 I에 들어가고, 이어 조효소 Q, 복합체 III, 시토크롬 c, 복합체 IV를 거쳐 산소에 전달된다. 조효소 Q는 내막 안에서 이동하는 지용성 운반체이며, 시토크롬 c는 내막의 막사이공간 쪽 표면에서 전자를 전달하는 작은 단백질이다. 복합체 I부터 IV까지의 번호가 단순한 일렬 순서라는 뜻은 아니다. 복합체 II는 별도의 진입점이다.</p><p>복합체 II는 TCA 회로의 숙신산 탈수소효소다. 숙신산이 푸마르산으로 바뀔 때 효소에 결합한 FAD를 거쳐 전자가 조효소 Q로 전달된다. 이 전자는 복합체 I을 거치지 않는다. <strong class="exam">&gt;&gt; NADH의 전자는 I에서 들어가고, 숙신산에서 나온 전자는 II를 통해 Q로 들어간다. 두 경로의 전자는 Q에서 합류한 뒤 III와 IV를 거친다.</strong></p><div class="table-scroll"><table><caption>주요 복합체의 입출력</caption><thead><tr><th>복합체</th><th>전자 흐름</th><th>H⁺ 펌프</th></tr></thead><tbody><tr><th>I</th><td>NADH → Q</td><td>작동한다</td></tr><tr><th>II</th><td>숙신산의 전자 → Q</td><td>작동하지 않는다</td></tr><tr><th>III</th><td>환원된 Q → 시토크롬 c</td><td>순 H⁺ 이동에 기여한다</td></tr><tr><th>IV</th><td>시토크롬 c → 산소</td><td>작동하며 산소를 물로 환원한다</td></tr></tbody></table></div></section>
+<section id="s3" class="lesson-section"><h3>3. 산소는 마지막에 전자를 받아 물이 된다</h3><p>산소는 복합체 IV에서 최종 전자 수용체로 작용한다. 전자와 기질의 H⁺를 받아 물로 환원된다. 산소가 전자전달계의 모든 단계에서 직접 ATP를 만드는 것은 아니다. 끝에서 전자를 받아 주기 때문에 앞 운반체들이 다시 전자를 받아 전달할 수 있다.</p><p>산소가 부족하거나 복합체 IV가 막히면 전자를 내보내는 길이 제한된다. NADH를 NAD⁺로 산화하는 속도가 줄고, NAD⁺를 필요로 하는 여러 산화 반응도 느려진다. TCA 회로가 산소를 직접 반응물로 쓰는 단계가 없어도 산소 공급에 의존하는 이유다. 성숙 적혈구는 미토콘드리아가 없어 이 경로를 사용하지 않는다.</p><aside class="case"><h4>학습용 상황: 포도당은 있지만 산소가 부족하다</h4><p>산소 공급이 급격히 줄어든 세포에서 포도당 공급만 늘린다고 전자전달계가 정상화되지는 않는다. 해당과정에서 일부 ATP를 만들고 젖산 생성으로 세포질 NAD⁺를 재생할 수 있지만, 미토콘드리아의 산소 의존적 전자 흐름을 대신하는 것은 아니다. 연료와 최종 전자 수용체는 서로 다른 조건이다.</p></aside></section>
+<section id="s4" class="lesson-section"><h3>4. 양성자 기울기는 농도 차이와 전위 차이를 함께 가진다</h3><p>전자 전달의 에너지는 H⁺를 기질에서 막사이공간 쪽으로 이동시키는 데 쓰인다. 그 결과 막사이공간 쪽은 상대적으로 H⁺가 많고 전기적으로 더 양성이다. H⁺는 농도가 낮고 전기적으로 더 음성인 기질 쪽으로 돌아가려는 힘을 받는다. 이 전기적 차이와 농도 차이를 합친 것이 양성자의 전기화학적 기울기다. <a href="#ref-t6">[T6, V.A, PDF 178–181]</a></p><p>ATP 합성효소는 이 기울기를 이용한다. 막 속의 F₀ 부분으로 H⁺가 이동하면 회전 운동이 생기고, 기질 쪽 F₁ 부분의 구조가 순서대로 변하여 ADP와 Pi로부터 ATP가 만들어진다. 전자전달계가 ATP의 인산결합을 직접 하나씩 붙이는 방식과는 구별해야 한다. 내막이 H⁺를 쉽게 새게 한다면 전자 전달이 있어도 이 연결의 효율이 떨어진다.</p><div class="table-scroll"><table><caption>전자에서 ATP까지의 세 단계</caption><thead><tr><th>단계</th><th>이용하는 것</th><th>만드는 것</th></tr></thead><tbody><tr><th>전자 전달</th><td>NADH 등에서 나온 전자</td><td>H⁺를 옮길 에너지</td></tr><tr><th>H⁺ 펌프 작동</th><td>전자 전달의 에너지</td><td>내막 양쪽의 전기화학적 기울기</td></tr><tr><th>ATP 합성효소 작동</th><td>H⁺가 돌아오는 흐름</td><td>ATP</td></tr></tbody></table></div></section>
+<section id="s5" class="lesson-section"><h3>5. ATP 수율은 진입 지점과 막을 가로지르는 운반에 따라 달라진다</h3><p>NADH의 전자 한 쌍이 I·III·IV를 통과하면 기질 밖으로 이동하는 H⁺는 통상 약 10개로 정리한다. 숙신산에서 Q로 들어오는 경로는 I을 거치지 않으므로 약 6개다. ATP 합성뿐 아니라 ADP·ATP와 Pi의 운반 등에도 에너지 비용이 연관된다. 따라서 H⁺ 개수를 ATP 개수로 단순히 같게 놓을 수 없다.</p><p>이 강의와 뒤 강의의 교육용 환산에는 미토콘드리아 NADH 1개당 약 2.5 ATP, 숙신산을 통한 FADH₂ 상당량의 전자당 약 1.5 ATP를 사용한다. 이는 조건에 따른 근삿값이다. 제공 교재의 일부 도식에 쓰인 3과 2는 이전의 단순화된 값이므로 계산 기준을 혼용하지 않는다. <strong class="exam">&gt;&gt; NADH·FADH₂의 실제 생성 개수를 먼저 세고, ATP 환산은 사용한 기준을 밝힌다.</strong> <a href="#ref-hinkle">[보충 1]</a></p><p>세포질 NADH 자체는 내막을 자유롭게 통과하지 못한다. 대신 전자를 다른 대사물질에 옮기는 셔틀이 작동한다. 말산–아스파르트산 셔틀은 기질의 NADH로 전자를 이어 주고, 글리세롤 3-인산 셔틀은 Q 쪽으로 전자를 전달한다. 따라서 세포질 NADH를 무조건 미토콘드리아 NADH와 같은 ATP로 계산하면 안 된다.</p><div class="table-scroll"><table><caption>교육용 ATP 환산의 범위</caption><thead><tr><th>전자 공급 방식</th><th>전자전달계 진입</th><th>근사 ATP</th></tr></thead><tbody><tr><th>기질 NADH</th><td>I</td><td>약 2.5</td></tr><tr><th>숙신산 산화</th><td>II → Q</td><td>약 1.5</td></tr><tr><th>세포질 NADH</th><td>셔틀에 따라 다름</td><td>사용 셔틀을 확인한다</td></tr></tbody></table></div><p><span class="research">~ 전자의 최종 도착지가 산소로 같아도 ATP 수율이 다른 이유를 ‘건너뛴 복합체’와 연결해 설명해 보자.</span></p></section>
+<section id="s6" class="lesson-section"><h3>6. ATP 수요가 늘면 호흡도 빨라질 수 있다</h3><p>세포가 ATP를 소비하면 ADP와 Pi가 늘어난다. 산소와 연료 공급이 충분한 상태에서는 ATP 합성효소를 통한 H⁺의 귀환이 증가하고, 전자전달계도 계속 H⁺를 밖으로 옮길 수 있다. 그 결과 산소 소비가 증가할 수 있다. 이를 ATP 수요에 따른 호흡 조절로 이해할 수 있다. 조절에는 기질 공급과 여러 효소의 상태도 관여한다.</p><p>반대로 ATP 소비가 적어 ADP가 부족하면 ATP 합성이 느려진다. H⁺ 기울기가 커지면 전자전달계가 그 기울기에 거슬러 H⁺를 더 옮기기 어려워져 호흡도 제한된다. 미토콘드리아는 산소가 있다는 이유만으로 가능한 최대 속도로 계속 ATP를 만들지 않는다.</p><aside class="case"><h4>학습용 실험: ADP를 추가한다</h4><p>산소·연료·Pi가 충분하고 내막이 온전한 분리 미토콘드리아에 ADP를 추가했다고 가정한다. ATP 합성과 산소 소비가 함께 증가할 수 있다. 이 결과를 ‘ADP가 전자 공급원이다’라고 해석하면 틀린다. ADP는 ATP 합성의 기질이며 전자는 NADH 등의 산화에서 공급된다.</p></aside></section>
+<section id="s7" class="lesson-section"><h3>7. 전자전달 억제와 탈결합은 산소 소비 양상이 다르다</h3><p>전자전달 억제는 전자가 이동하는 단계 자체를 막는다. 예를 들어 시안화물은 복합체 IV의 작동을 방해하므로 산소로의 전자 전달과 ATP 생성이 함께 감소한다. ATP 합성 억제제인 올리고마이신은 ATP 합성효소의 H⁺ 이동을 막는다. 기울기가 높아지면서 전자 전달과 산소 소비도 제한된다. <a href="#ref-t6">[T6, IV.E–V.C, PDF 174–182]</a></p><p>탈결합은 전자 전달로 만든 H⁺ 기울기가 ATP 합성에 충분히 연결되지 않는 상태다. H⁺가 ATP 합성효소를 우회해 돌아오면 ATP 수율이 낮아지고 더 많은 에너지가 열로 소실된다. 전자전달계와 연료 공급이 온전한 조건에서는 산소 소비가 증가할 수 있다. ATP 감소만 보고 전자전달 억제와 탈결합을 같은 것으로 판단하면 안 된다.</p><div class="table-scroll"><table><caption>온전한 연료 공급을 가정한 기전 비교</caption><thead><tr><th>장애</th><th>주로 막히거나 새는 곳</th><th>ATP·호흡의 경향</th></tr></thead><tbody><tr><th>전자전달 억제</th><td>전자 이동</td><td>ATP↓, 산소 소비↓</td></tr><tr><th>ATP 합성효소 억제</th><td>효소를 통한 H⁺ 귀환</td><td>ATP↓, 기울기 증가로 산소 소비도 제한</td></tr><tr><th>탈결합</th><td>H⁺가 다른 길로 귀환</td><td>ATP 수율↓, 열↑, 산소 소비는 증가 가능</td></tr></tbody></table></div><p><strong class="exam">&gt;&gt; ‘산소 소비가 많다’와 ‘ATP를 효율적으로 만든다’는 같은 말이 아니다.</strong></p></section>
+<section id="s8" class="lesson-section"><h3>8. 열 생산과 세포 손상은 조절 여부까지 보아야 한다</h3><p>갈색 지방의 탈결합 단백질 UCP1은 H⁺가 ATP 합성효소를 우회해 돌아오는 데 관여한다. 조절된 열 생산은 추위에 대한 생리적 반응의 일부다. 반면 광범위한 비조절성 탈결합은 ATP 부족과 과도한 열 생산을 일으킬 수 있다. 같은 ‘기울기 소실’이라도 조직·정도·조절 상태가 결과를 좌우한다.</p><p>미토콘드리아 기능 이상은 에너지 수요가 큰 신경계·근육 등에 영향을 줄 수 있다. 관련 단백질은 미토콘드리아 DNA와 핵 DNA 양쪽에 의해 암호화되므로 모든 미토콘드리아 질환을 모계 유전으로 설명할 수 없다. 또 시토크롬 c가 미토콘드리아 밖 세포질로 방출되면 세포사멸 신호에 참여한다. 정상적인 막사이공간의 전자 전달 기능과 방출 후의 신호 기능을 구별해야 한다.</p><aside class="case"><h4>원인 추론 연습</h4><p>ATP 생성이 줄고 열 생산과 산소 소비가 증가했다는 학습용 결과를 보았다. 이 조합은 탈결합을 생각하게 하지만, 세 자료만으로 환자의 원인 질환을 확정할 수는 없다. 먼저 전자전달 장치가 작동하는지와 H⁺ 기울기가 유지되는지를 확인하는 실험 가설을 세운다.</p></aside><p><span class="research">~ UCP1이 늘어난 조직에서 산소 소비량만 측정한다면 ATP 생성량을 과대평가할 수 있는 이유는 무엇일까?</span></p></section>
+</section>
 
-  <section class="hero">
-    <p class="eyebrow">M02-W03-L02 · 대사생화학 · 기본대사</p>
-    <h1>Electron transport chain과 산화적 인산화</h1>
-    <p class="en"></p>
-  </section>
-  <h2>학습목표</h2>
-  <ul><li>Electron transport chain의 위치와 전자 이동 순서를 설명한다.</li><li>양성자 기울기와 ATP 합성의 관계를 설명한다.</li><li>산소 소비와 ATP 생성이 항상 함께 변하지 않는 이유를 설명한다.</li><li>전자전달 억제·ATP 합성 억제·탈결합을 구별한다.</li><li>NADH의 electron transport chain 진입 방식에 따른 ATP 환산 차이를 설명한다.</li></ul>
-  <h2>선수지식</h2>
-  <ul><li>NADH는 전자를 내놓으면 NAD⁺가 된다.</li><li>산화환원 반응에서 나온 에너지는 다른 일에 이용될 수 있다.</li><li>ATP 합성은 ADP와 무기인산을 ATP로 만드는 과정이며 에너지가 필요하다.</li><li>이 강의에서는 전자의 이동, H⁺의 이동, ATP 합성을 순서대로 연결한다.</li></ul>
-  <nav class="contents" aria-label="강의 구성"><strong>강의 구성</strong><ol class="qlist"><li><a href="#s1">1. 미토콘드리아 내막은 전자 전달과 ATP 합성이 연결되는 장소다</a></li><li><a href="#s2">2. 전자는 NADH에서 산소까지 순서대로 전달된다</a></li><li><a href="#s3">3. 산소는 마지막에 전자를 받아 물이 된다</a></li><li><a href="#s4">4. 양성자 기울기는 농도 차이와 전위 차이를 함께 가진다</a></li><li><a href="#s5">5. ATP 수율은 진입 지점과 막을 가로지르는 운반에 따라 달라진다</a></li><li><a href="#s6">6. ATP 수요가 늘면 호흡도 빨라질 수 있다</a></li><li><a href="#s7">7. 전자전달 억제와 탈결합은 산소 소비 양상이 다르다</a></li><li><a href="#s8">8. 열 생산과 세포 손상은 조절 여부까지 보아야 한다</a></li></ol></nav>
-  <section id="s1">
-  <h2>1. 미토콘드리아 내막은 전자 전달과 ATP 합성이 연결되는 장소다</h2>
-  <p>미토콘드리아에는 바깥막과 안쪽막이 있다. 안쪽막을 내막이라 하고, 그 안쪽 공간을 기질이라 한다. 두 막 사이에는 막사이공간이 있다. Electron transport chain의 여러 복합체와 ATP 합성효소는 내막에 자리한다. 내막은 이온이 자유롭게 통과하는 막이 아니므로 양쪽에 서로 다른 전기적·화학적 상태를 만들 수 있다. [T6, IV, PDF 166–177]</p>
-  <p>영양소 대사에서 만들어진 NADH의 전자는 내막의 electron transport chain을 거쳐 산소로 이동한다. 이 과정에서 얻는 에너지가 H⁺, 즉 양성자를 기질에서 막사이공간 쪽으로 옮기는 데 쓰인다. 이어 H⁺가 ATP 합성효소를 통해 기질로 돌아오면서 ATP 합성이 진행된다. 산화적 인산화란 이처럼 전자 전달에 따른 산화와 ATP 합성을 연결하는 과정이다.</p>
-  <p><strong>세 구획을 먼저 구별하기</strong></p>
-  <div class="tw"><table><thead><tr><th>위치</th><th>관련 과정</th><th>의미</th></tr></thead><tbody><tr><td>기질</td><td>TCA 회로의 대부분, NADH 생성</td><td>electron transport chain에 전자를 제공한다</td></tr><tr><td>내막</td><td>전자전달 복합체·ATP 합성효소</td><td>전자의 에너지를 H⁺ 기울기와 연결한다</td></tr><tr><td>막사이공간</td><td>H⁺가 상대적으로 모이는 쪽</td><td>기질과의 전기화학적 차이가 생긴다</td></tr></tbody></table></div>
-  </section>
-  <section id="s2">
-  <h2>2. 전자는 NADH에서 산소까지 순서대로 전달된다</h2>
-  <p>NADH의 전자는 복합체 I에 들어가고, 이어 조효소 Q, 복합체 III, 시토크롬 c, 복합체 IV를 거쳐 산소에 전달된다. 조효소 Q는 내막 안에서 이동하는 지용성 운반체이며, 시토크롬 c는 내막의 막사이공간 쪽 표면에서 전자를 전달하는 작은 단백질이다. 복합체 I부터 IV까지의 번호가 단순한 일렬 순서라는 뜻은 아니다. 복합체 II는 별도의 진입점이다.</p>
-  <p>복합체 II는 TCA 회로의 숙신산 탈수소효소다. 숙신산이 푸마르산으로 바뀔 때 효소에 결합한 FAD를 거쳐 전자가 조효소 Q로 전달된다. 이 전자는 복합체 I을 거치지 않는다.</p>
-  <div class="box box--step"><b>시험에서 가려내는 지점</b> NADH의 전자는 I에서 들어가고, 숙신산에서 나온 전자는 II를 통해 Q로 들어간다. 두 경로의 전자는 Q에서 합류한 뒤 III와 IV를 거친다.</div>
-  <p><strong>주요 복합체의 입출력</strong></p>
-  <div class="tw"><table><thead><tr><th>복합체</th><th>전자 흐름</th><th>H⁺ 펌프</th></tr></thead><tbody><tr><td>I</td><td>NADH → Q</td><td>작동한다</td></tr><tr><td>II</td><td>숙신산의 전자 → Q</td><td>작동하지 않는다</td></tr><tr><td>III</td><td>환원된 Q → 시토크롬 c</td><td>순 H⁺ 이동에 기여한다</td></tr><tr><td>IV</td><td>시토크롬 c → 산소</td><td>작동하며 산소를 물로 환원한다</td></tr></tbody></table></div>
-  </section>
-  <section id="s3">
-  <h2>3. 산소는 마지막에 전자를 받아 물이 된다</h2>
-  <p>산소는 복합체 IV에서 최종 전자 수용체로 작용한다. 전자와 기질의 H⁺를 받아 물로 환원된다. 산소가 electron transport chain의 모든 단계에서 직접 ATP를 만드는 것은 아니다. 끝에서 전자를 받아 주기 때문에 앞 운반체들이 다시 전자를 받아 전달할 수 있다.</p>
-  <p>산소가 부족하거나 복합체 IV가 막히면 전자를 내보내는 길이 제한된다. NADH를 NAD⁺로 산화하는 속도가 줄고, NAD⁺를 필요로 하는 여러 산화 반응도 느려진다. TCA 회로가 산소를 직접 반응물로 쓰는 단계가 없어도 산소 공급에 의존하는 이유다. 성숙 적혈구는 미토콘드리아가 없어 이 경로를 사용하지 않는다.</p>
-  <div class="box box--limit"><b>임상 연계</b> <strong>학습용 상황: 포도당은 있지만 산소가 부족하다</strong> 산소 공급이 급격히 줄어든 세포에서 포도당 공급만 늘린다고 electron transport chain이 정상화되지는 않는다. Glycolysis에서 일부 ATP를 만들고 젖산 생성으로 세포질 NAD⁺를 재생할 수 있지만, 미토콘드리아의 산소 의존적 전자 흐름을 대신하는 것은 아니다. 연료와 최종 전자 수용체는 서로 다른 조건이다.</div>
-  </section>
-  <section id="s4">
-  <h2>4. 양성자 기울기는 농도 차이와 전위 차이를 함께 가진다</h2>
-  <p>전자 전달의 에너지는 H⁺를 기질에서 막사이공간 쪽으로 이동시키는 데 쓰인다. 그 결과 막사이공간 쪽은 상대적으로 H⁺가 많고 전기적으로 더 양성이다. H⁺는 농도가 낮고 전기적으로 더 음성인 기질 쪽으로 돌아가려는 힘을 받는다. 이 전기적 차이와 농도 차이를 합친 것이 양성자의 전기화학적 기울기다. [T6, V.A, PDF 178–181]</p>
-  <p>ATP 합성효소는 이 기울기를 이용한다. 막 속의 F₀ 부분으로 H⁺가 이동하면 회전 운동이 생기고, 기질 쪽 F₁ 부분의 구조가 순서대로 변하여 ADP와 Pi로부터 ATP가 만들어진다. Electron transport chain이 ATP의 인산결합을 직접 하나씩 붙이는 방식과는 구별해야 한다. 내막이 H⁺를 쉽게 새게 한다면 전자 전달이 있어도 이 연결의 효율이 떨어진다.</p>
-  <p><strong>전자에서 ATP까지의 세 단계</strong></p>
-  <div class="tw"><table><thead><tr><th>단계</th><th>이용하는 것</th><th>만드는 것</th></tr></thead><tbody><tr><td>전자 전달</td><td>NADH 등에서 나온 전자</td><td>H⁺를 옮길 에너지</td></tr><tr><td>H⁺ 펌프 작동</td><td>전자 전달의 에너지</td><td>내막 양쪽의 전기화학적 기울기</td></tr><tr><td>ATP 합성효소 작동</td><td>H⁺가 돌아오는 흐름</td><td>ATP</td></tr></tbody></table></div>
-  </section>
-  <section id="s5">
-  <h2>5. ATP 수율은 진입 지점과 막을 가로지르는 운반에 따라 달라진다</h2>
-  <p>NADH의 전자 한 쌍이 I·III·IV를 통과하면 기질 밖으로 이동하는 H⁺는 통상 약 10개로 정리한다. 숙신산에서 Q로 들어오는 경로는 I을 거치지 않으므로 약 6개다. ATP 합성뿐 아니라 ADP·ATP와 Pi의 운반 등에도 에너지 비용이 연관된다. 따라서 H⁺ 개수를 ATP 개수로 단순히 같게 놓을 수 없다.</p>
-  <p>이 강의와 뒤 강의의 교육용 환산에는 미토콘드리아 NADH 1개당 약 2.5 ATP, 숙신산을 통한 FADH₂ 상당량의 전자당 약 1.5 ATP를 사용한다. 이는 조건에 따른 근삿값이다. 제공 교재의 일부 도식에 쓰인 3과 2는 이전의 단순화된 값이므로 계산 기준을 혼용하지 않는다.</p>
-  <div class="box box--step"><b>시험에서 가려내는 지점</b> NADH·FADH₂의 실제 생성 개수를 먼저 세고, ATP 환산은 사용한 기준을 밝힌다. [보충 1]</div>
-  <p>세포질 NADH 자체는 내막을 자유롭게 통과하지 못한다. 대신 전자를 다른 대사물질에 옮기는 셔틀이 작동한다. 말산–아스파르트산 셔틀은 기질의 NADH로 전자를 이어 주고, 글리세롤 3-인산 셔틀은 Q 쪽으로 전자를 전달한다. 따라서 세포질 NADH를 무조건 미토콘드리아 NADH와 같은 ATP로 계산하면 안 된다.</p>
-  <p><strong>교육용 ATP 환산의 범위</strong></p>
-  <div class="tw"><table><thead><tr><th>전자 공급 방식</th><th>electron transport chain 진입</th><th>근사 ATP</th></tr></thead><tbody><tr><td>기질 NADH</td><td>I</td><td>약 2.5</td></tr><tr><td>숙신산 산화</td><td>II → Q</td><td>약 1.5</td></tr><tr><td>세포질 NADH</td><td>셔틀에 따라 다름</td><td>사용 셔틀을 확인한다</td></tr></tbody></table></div>
-  <div class="box box--front"><b>연구 전선</b> 전자의 최종 도착지가 산소로 같아도 ATP 수율이 다른 이유를 ‘건너뛴 복합체’와 연결해 설명해 보자.</div>
-  </section>
-  <section id="s6">
-  <h2>6. ATP 수요가 늘면 호흡도 빨라질 수 있다</h2>
-  <p>세포가 ATP를 소비하면 ADP와 Pi가 늘어난다. 산소와 연료 공급이 충분한 상태에서는 ATP 합성효소를 통한 H⁺의 귀환이 증가하고, electron transport chain도 계속 H⁺를 밖으로 옮길 수 있다. 그 결과 산소 소비가 증가할 수 있다. 이를 ATP 수요에 따른 호흡 조절로 이해할 수 있다. 조절에는 기질 공급과 여러 효소의 상태도 관여한다.</p>
-  <p>반대로 ATP 소비가 적어 ADP가 부족하면 ATP 합성이 느려진다. H⁺ 기울기가 커지면 electron transport chain이 그 기울기에 거슬러 H⁺를 더 옮기기 어려워져 호흡도 제한된다. 미토콘드리아는 산소가 있다는 이유만으로 가능한 최대 속도로 계속 ATP를 만들지 않는다.</p>
-  <div class="box box--limit"><b>임상 연계</b> <strong>학습용 실험: ADP를 추가한다</strong> 산소·연료·Pi가 충분하고 내막이 온전한 분리 미토콘드리아에 ADP를 추가했다고 가정한다. ATP 합성과 산소 소비가 함께 증가할 수 있다. 이 결과를 ‘ADP가 전자 공급원이다’라고 해석하면 틀린다. ADP는 ATP 합성의 기질이며 전자는 NADH 등의 산화에서 공급된다.</div>
-  </section>
-  <section id="s7">
-  <h2>7. 전자전달 억제와 탈결합은 산소 소비 양상이 다르다</h2>
-  <p>전자전달 억제는 전자가 이동하는 단계 자체를 막는다. 예를 들어 시안화물은 복합체 IV의 작동을 방해하므로 산소로의 전자 전달과 ATP 생성이 함께 감소한다. ATP 합성 억제제인 올리고마이신은 ATP 합성효소의 H⁺ 이동을 막는다. 기울기가 높아지면서 전자 전달과 산소 소비도 제한된다. [T6, IV.E–V.C, PDF 174–182]</p>
-  <p>탈결합은 전자 전달로 만든 H⁺ 기울기가 ATP 합성에 충분히 연결되지 않는 상태다. H⁺가 ATP 합성효소를 우회해 돌아오면 ATP 수율이 낮아지고 더 많은 에너지가 열로 소실된다. Electron transport chain과 연료 공급이 온전한 조건에서는 산소 소비가 증가할 수 있다. ATP 감소만 보고 전자전달 억제와 탈결합을 같은 것으로 판단하면 안 된다.</p>
-  <p><strong>온전한 연료 공급을 가정한 기전 비교</strong></p>
-  <div class="tw"><table><thead><tr><th>장애</th><th>주로 막히거나 새는 곳</th><th>ATP·호흡의 경향</th></tr></thead><tbody><tr><td>전자전달 억제</td><td>전자 이동</td><td>ATP↓, 산소 소비↓</td></tr><tr><td>ATP 합성효소 억제</td><td>효소를 통한 H⁺ 귀환</td><td>ATP↓, 기울기 증가로 산소 소비도 제한</td></tr><tr><td>탈결합</td><td>H⁺가 다른 길로 귀환</td><td>ATP 수율↓, 열↑, 산소 소비는 증가 가능</td></tr></tbody></table></div>
-  <div class="box box--step"><b>시험에서 가려내는 지점</b> ‘산소 소비가 많다’와 ‘ATP를 효율적으로 만든다’는 같은 말이 아니다.</div>
-  </section>
-  <section id="s8">
-  <h2>8. 열 생산과 세포 손상은 조절 여부까지 보아야 한다</h2>
-  <p>갈색 지방의 탈결합 단백질 UCP1은 H⁺가 ATP 합성효소를 우회해 돌아오는 데 관여한다. 조절된 열 생산은 추위에 대한 생리적 반응의 일부다. 반면 광범위한 비조절성 탈결합은 ATP 부족과 과도한 열 생산을 일으킬 수 있다. 같은 ‘기울기 소실’이라도 조직·정도·조절 상태가 결과를 좌우한다.</p>
-  <p>미토콘드리아 기능 이상은 에너지 수요가 큰 신경계·근육 등에 영향을 줄 수 있다. 관련 단백질은 미토콘드리아 DNA와 핵 DNA 양쪽에 의해 암호화되므로 모든 미토콘드리아 질환을 모계 유전으로 설명할 수 없다. 또 시토크롬 c가 미토콘드리아 밖 세포질로 방출되면 세포사멸 신호에 참여한다. 정상적인 막사이공간의 전자 전달 기능과 방출 후의 신호 기능을 구별해야 한다.</p>
-  <div class="box box--limit"><b>임상 연계</b> <strong>원인 추론 연습</strong> ATP 생성이 줄고 열 생산과 산소 소비가 증가했다는 학습용 결과를 보았다. 이 조합은 탈결합을 생각하게 하지만, 세 자료만으로 환자의 원인 질환을 확정할 수는 없다. 먼저 전자전달 장치가 작동하는지와 H⁺ 기울기가 유지되는지를 확인하는 실험 가설을 세운다.</div>
-  <div class="box box--front"><b>연구 전선</b> UCP1이 늘어난 조직에서 산소 소비량만 측정한다면 ATP 생성량을 과대평가할 수 있는 이유는 무엇일까?</div>
-  </section>
-  <h2>확인 문항</h2>
-  <ol class="quiz"><li><p class="qq"><strong>판단.</strong> 복합체 II는 NADH 전자를 받아 H⁺를 밖으로 옮긴다.</p><details><summary>해설</summary><p>틀리다. NADH의 주요 진입점은 I이다. II는 숙신산 산화의 전자를 Q로 전달하며 H⁺ 펌프로 작동하지 않는다.</p></details></li><li><p class="qq"><strong>판단.</strong> 산소는 electron transport chain의 마지막에서 전자를 받아 물로 환원된다.</p><details><summary>해설</summary><p>맞다. 산소 공급이 제한되면 앞 전자 운반체의 재산화도 영향을 받는다.</p></details></li><li><p class="qq"><strong>판단.</strong> electron transport chain이 전자를 운반하면 내막이 손상되어도 ATP 수율은 유지된다.</p><details><summary>해설</summary><p>틀리다. 내막을 사이에 둔 전기화학적 기울기가 유지되어야 ATP 합성과 효율적으로 연결된다.</p></details></li><li><p class="qq"><strong>판단.</strong> 탈결합 상태에서는 ATP 수율이 낮으면서 산소 소비가 증가할 수 있다.</p><details><summary>해설</summary><p>맞다. 기울기가 새면 전자 전달의 제약이 줄어 호흡이 빨라질 수 있지만, 그 에너지가 ATP로 충분히 보존되지 않는다. 연료·산소 공급과 electron transport chain 상태에 따른 조건부 설명이다.</p></details></li><li><p class="qq">말산–아스파르트산 셔틀과 글리세롤 3-인산 셔틀의 ATP 환산이 다른 핵심 이유는?</p><details><summary>해설</summary><p>전자가 미토콘드리아 내에서 들어가는 위치가 다르다. 전자는 각각 기질 NADH의 I 진입 또는 Q 쪽 진입으로 이어져 H⁺ 이동량과 ATP 환산이 달라진다.</p></details></li><li><p class="qq">올리고마이신과 전자전달 억제제가 모두 산소 소비를 줄일 수 있다. 기전은 어떻게 다른가?</p><details><summary>해설</summary><p>올리고마이신은 ATP 합성효소를 통한 H⁺ 귀환을 막아 기울기를 높이고, 그 결과 전자 전달을 제한한다. 전자전달 억제제는 전자 이동 단계 자체를 직접 막는다.</p></details></li></ol>
-  <h2>참고문헌</h2>
-  <ol class="ref"><li>Abali EE, Cline SD, Franklin DS, Viselli SM. <em>Lippincott Illustrated Reviews: Biochemistry.</em> 8판. Wolters Kluwer; 2022. 6장. 제공 PDF 157–189쪽, 특히 166–185쪽. PDF 파일 페이지 기준. ATP 수율은 아래 보충 문헌의 근삿값으로 정리했다.</li><li>Hinkle PC. P/O ratios of mitochondrial oxidative phosphorylation. <em>Biochim Biophys Acta.</em> 2005;1706:1–11. doi:10.1016/j.bbabio.2004.09.004. PubMed (https://pubmed.ncbi.nlm.nih.gov/15620362/). NADH·숙신산 연결 산화의 약 2.5·1.5 ATP 환산과 조건 의존성에 대한 보충.</li></ol>
-  <nav class="pager"><a href="../../../M02/W03/L01/index.html">← M02-W03-L01</a><a href="../../../M02/W03/L03/index.html">M02-W03-L03 →</a></nav>
-</main>
+<section aria-labelledby="questions"><h2 id="questions">확인 문항과 해설</h2><ol class="questions">
+<li><p><strong>판단.</strong> 복합체 II는 NADH 전자를 받아 H⁺를 밖으로 옮긴다.</p><details><summary>해설 보기</summary><p>틀리다. NADH의 주요 진입점은 I이다. II는 숙신산 산화의 전자를 Q로 전달하며 H⁺ 펌프로 작동하지 않는다.</p></details></li>
+<li><p><strong>판단.</strong> 산소는 전자전달계의 마지막에서 전자를 받아 물로 환원된다.</p><details><summary>해설 보기</summary><p>맞다. 산소 공급이 제한되면 앞 전자 운반체의 재산화도 영향을 받는다.</p></details></li>
+<li><p><strong>판단.</strong> 전자전달계가 전자를 운반하면 내막이 손상되어도 ATP 수율은 유지된다.</p><details><summary>해설 보기</summary><p>틀리다. 내막을 사이에 둔 전기화학적 기울기가 유지되어야 ATP 합성과 효율적으로 연결된다.</p></details></li>
+<li><p><strong>판단.</strong> 탈결합 상태에서는 ATP 수율이 낮으면서 산소 소비가 증가할 수 있다.</p><details><summary>해설 보기</summary><p>맞다. 기울기가 새면 전자 전달의 제약이 줄어 호흡이 빨라질 수 있지만, 그 에너지가 ATP로 충분히 보존되지 않는다. 연료·산소 공급과 전자전달계 상태에 따른 조건부 설명이다.</p></details></li>
+<li><p>말산–아스파르트산 셔틀과 글리세롤 3-인산 셔틀의 ATP 환산이 다른 핵심 이유는?</p><details><summary>해설 보기</summary><p>전자가 미토콘드리아 내에서 들어가는 위치가 다르다. 전자는 각각 기질 NADH의 I 진입 또는 Q 쪽 진입으로 이어져 H⁺ 이동량과 ATP 환산이 달라진다.</p></details></li>
+<li><p>올리고마이신과 전자전달 억제제가 모두 산소 소비를 줄일 수 있다. 기전은 어떻게 다른가?</p><details><summary>해설 보기</summary><p>올리고마이신은 ATP 합성효소를 통한 H⁺ 귀환을 막아 기울기를 높이고, 그 결과 전자 전달을 제한한다. 전자전달 억제제는 전자 이동 단계 자체를 직접 막는다.</p></details></li>
+</ol></section>
 
-<footer class="foot wrap">
-  <span>© 2026 Kim Jintae · Hanyang University</span>
-  <a href="https://github.com/hoperiasd2/hoperiasd2.github.io">GitHub 저장소</a>
-</footer>
-
-<script src="../../../../assets/edit.js" defer></script>
-</body>
-</html>
+<section aria-labelledby="references"><h2 id="references">참고문헌</h2><ol class="references"><li id="ref-t6">Abali EE, Cline SD, Franklin DS, Viselli SM. <cite>Lippincott Illustrated Reviews: Biochemistry.</cite> 8판. Wolters Kluwer; 2022. 6장. 제공 PDF 157–189쪽, 특히 166–185쪽. PDF 파일 페이지 기준. ATP 수율은 아래 보충 문헌의 근삿값으로 정리했다.</li><li id="ref-hinkle">Hinkle PC. P/O ratios of mitochondrial oxidative phosphorylation. <cite>Biochim Biophys Acta.</cite> 2005;1706:1–11. doi:10.1016/j.bbabio.2004.09.004. <a href="https://pubmed.ncbi.nlm.nih.gov/15620362/">PubMed</a>. NADH·숙신산 연결 산화의 약 2.5·1.5 ATP 환산과 조건 의존성에 대한 보충.</li></ol></section>
+<nav class="pager" aria-label="이전·다음 수업"><a href="../../W03/L01/index.html">← 생체에너지·ATP·산화환원 [6장]</a><a href="../../W03/L03/index.html">탄수화물 구조·GAG·프로테오글리칸·당단백질 [7·14장] →</a></nav></main><footer class="foot wrap"><span>의생명과학 교육과정 · M02 대사생화학</span><a href="https://github.com/hoperiasd2/hoperiasd2.github.io">GitHub 저장소</a></footer>
+<script src="../../../../assets/site.js"></script></body></html>
