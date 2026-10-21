@@ -1,64 +1,623 @@
 <!DOCTYPE html>
-<html lang="ko">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>M02-W13-L03 당뇨병의 생화학과 급성 대사 합병증 [25장]</title>
-<meta name="description" content="당뇨병의 생화학과 급성 대사 합병증 [25장]">
-<link rel="stylesheet" href="../../../../assets/site.css">
-</head>
-<body>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>M02-W13-L03 당뇨병의 생화학과 급성 대사 합병증 [25장]</title><meta name="description" content="당뇨병의 생화학과 급성 대사 합병증 [25장]: 구조에서 생리 기능과 질환까지"><style data-source="site.css + lesson.css snapshot 2026-10-17">/* 의생명과학 교육과정 — 공통 스타일
+   색은 :root 토큰으로만 쓰고 다크 모드에서 재정의한다. */
 
-<header class="masthead">
+:root {
+  --navy: #003c71;
+  --navy-700: #00294e;
+  --chrome: #f2b705;
+  --ink: #16191d;
+  --ink-2: #4a5159;
+  --ink-3: #727a84;
+  --line: #dde2e8;
+  --bg: #f6f8fa;
+  --card: #ffffff;
+  --accent-soft: #eaf1f8;
+  --ok: #1a7f52;
+  --ok-soft: #e7f4ed;
+  --warn: #9a6700;
+  --warn-soft: #fdf5e3;
+  --radius: 10px;
+  --wrap: 1180px;
+  --mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+  --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo",
+    "Noto Sans KR", "Malgun Gothic", sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --navy: #8fc3f5;
+    --navy-700: #b9d9fb;
+    --chrome: #f2b705;
+    --ink: #e7eaee;
+    --ink-2: #b2bac4;
+    --ink-3: #868f9a;
+    --line: #2b3138;
+    --bg: #14171b;
+    --card: #1b1f24;
+    --accent-soft: #1e2833;
+    --ok: #5dd3a0;
+    --ok-soft: #16271f;
+    --warn: #e3b341;
+    --warn-soft: #2a2416;
+  }
+}
+:root[data-theme="dark"] {
+  --navy: #8fc3f5;
+  --navy-700: #b9d9fb;
+  --ink: #e7eaee;
+  --ink-2: #b2bac4;
+  --ink-3: #868f9a;
+  --line: #2b3138;
+  --bg: #14171b;
+  --card: #1b1f24;
+  --accent-soft: #1e2833;
+  --ok: #5dd3a0;
+  --warn: #e3b341;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.75;
+  -webkit-text-size-adjust: 100%;
+}
+
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 16px; }
+.wrap--narrow { max-width: 860px; }
+
+a { color: var(--navy); }
+a:hover { color: var(--navy-700); }
+
+/* ---- 머리글 ---- */
+.masthead {
+  background: #003c71;
+  border-bottom: 3px solid var(--chrome);
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+.masthead .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 52px;
+}
+.masthead a.brand {
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  letter-spacing: .01em;
+}
+.masthead nav { display: flex; gap: 16px; flex-wrap: wrap; }
+.masthead nav a { color: #cfe0f0; text-decoration: none; font-size: 14px; }
+.masthead nav a:hover { color: #fff; }
+
+/* ---- 이동 경로 ---- */
+.crumb {
+  font-size: 13px;
+  color: var(--ink-3);
+  padding: 14px 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+}
+.crumb a { color: var(--ink-2); text-decoration: none; }
+.crumb a:hover { color: var(--navy); text-decoration: underline; }
+.crumb span[aria-hidden] { color: var(--ink-3); }
+
+/* ---- 표제 ---- */
+.hero {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-left: 5px solid var(--navy);
+  border-radius: var(--radius);
+  padding: 26px 28px;
+  margin: 16px 0 24px;
+}
+.hero .eyebrow {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  margin: 0 0 8px;
+}
+.hero h1 { margin: 0 0 10px; font-size: 27px; line-height: 1.35; }
+.hero .en { color: var(--ink-3); font-size: 14px; margin: 0 0 12px; }
+.hero p.lede { margin: 0; color: var(--ink-2); max-width: 70ch; }
+
+h2 {
+  font-size: 20px;
+  margin: 34px 0 14px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--line);
+}
+h3 { font-size: 17px; margin: 24px 0 10px; }
+
+/* ---- 카드 격자 ---- */
+.grid { display: grid; gap: 14px; }
+.grid--modules { grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); }
+.grid--weeks { grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); }
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 18px 20px;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  transition: border-color .12s, transform .12s;
+}
+a.card:hover { border-color: var(--navy); transform: translateY(-1px); }
+.card__no {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--chrome);
+  font-weight: 700;
+  letter-spacing: .08em;
+}
+.card__title { font-weight: 700; margin: 4px 0 2px; }
+.card__en { font-size: 13px; color: var(--ink-3); }
+.card__meta { font-size: 13px; color: var(--ink-2); margin-top: 10px; }
+
+/* ---- 진행 막대 ---- */
+.bar { height: 5px; background: var(--line); border-radius: 3px; overflow: hidden; margin-top: 10px; }
+.bar > i { display: block; height: 100%; background: var(--navy); }
+
+/* ---- 수업 목록 ---- */
+.lessons { list-style: none; margin: 0; padding: 0; }
+.lessons li {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--card);
+  margin-bottom: 8px;
+}
+.lessons a {
+  display: flex;
+  gap: 14px;
+  align-items: baseline;
+  padding: 13px 16px;
+  text-decoration: none;
+  color: inherit;
+}
+.lessons a:hover { background: var(--accent-soft); }
+.lessons .lid {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--ink-3);
+  white-space: nowrap;
+}
+.lessons .ltitle { flex: 1; min-width: 0; }
+.lessons .lgroup { font-size: 12px; color: var(--ink-3); }
+
+/* ---- 상태 배지 ---- */
+.badge {
+  font-size: 11px;
+  font-family: var(--mono);
+  padding: 2px 8px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  color: var(--ink-2);
+  background: var(--bg);
+  white-space: nowrap;
+}
+.badge--design { color: var(--ink-3); }
+.badge--draft { color: var(--warn); border-color: var(--warn); background: var(--warn-soft); }
+.badge--review { color: var(--navy); border-color: var(--navy); background: var(--accent-soft); }
+.badge--done {
+  color: var(--ok);
+  border-color: var(--ok);
+  background: var(--ok-soft);
+  font-weight: 600;
+}
+
+/* ---- 목록에서 집필 상태를 한눈에 ---- */
+/* 배지만으로는 276줄을 훑을 때 눈에 들어오지 않아 왼쪽에 색 띠를 둔다. */
+.lessons li[data-status] { border-left: 4px solid var(--line); }
+.lessons li[data-status="done"] { border-left-color: var(--ok); }
+.lessons li[data-status="draft"] { border-left-color: var(--warn); }
+.lessons li[data-status="review"] { border-left-color: var(--navy); }
+.lessons li[data-status="design"] { border-left-color: var(--line); }
+.lessons li[data-status="done"] .ltitle { font-weight: 600; }
+
+.filters--status { margin-top: -4px; }
+.filters--status button[data-filter-status="done"][aria-pressed="true"] {
+  border-color: var(--ok);
+  color: var(--ok);
+}
+
+/* ---- 검색 ---- */
+.search {
+  width: 100%;
+  padding: 12px 14px;
+  font-size: 15px;
+  font-family: inherit;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--card);
+  color: var(--ink);
+}
+.search:focus { outline: 2px solid var(--navy); outline-offset: 1px; }
+.filters { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 18px; }
+.filters button {
+  font: inherit;
+  font-size: 13px;
+  padding: 6px 13px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: var(--card);
+  color: var(--ink-2);
+  cursor: pointer;
+}
+.filters button[aria-pressed="true"] { background: var(--navy); color: #fff; border-color: var(--navy); }
+.count { font-size: 13px; color: var(--ink-3); margin: 0 0 12px; }
+
+/* ---- 안내 상자 ---- */
+.callout {
+  background: var(--accent-soft);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--navy);
+  border-radius: var(--radius);
+  padding: 14px 18px;
+  margin: 18px 0;
+  font-size: 15px;
+}
+.callout--warn { border-left-color: var(--chrome); }
+
+/* ---- 이전·다음 ---- */
+.pager {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 36px 0 12px;
+  border-top: 1px solid var(--line);
+  padding-top: 16px;
+  font-size: 14px;
+}
+.pager a { text-decoration: none; }
+.pager span { color: var(--ink-3); }
+
+/* ---- 표 ---- */
+table { border-collapse: collapse; width: 100%; margin: 14px 0; font-size: 15px; }
+th, td { border: 1px solid var(--line); padding: 8px 11px; text-align: left; vertical-align: top; }
+th { background: var(--accent-soft); font-weight: 700; }
+
+/* ---- 꼬리말 ---- */
+.foot {
+  margin-top: 56px;
+  padding: 22px 16px 40px;
+  border-top: 1px solid var(--line);
+  color: var(--ink-3);
+  font-size: 13px;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 640px) {
+  .hero { padding: 20px; }
+  .hero h1 { font-size: 22px; }
+  .lessons a { flex-wrap: wrap; gap: 6px 12px; }
+}
+
+@media print {
+  .masthead, .filters, .search, .pager, .foot { display: none; }
+  body { background: #fff; font-size: 11pt; }
+  .card, .hero { border: 1px solid #ccc; break-inside: avoid; }
+}
+
+/* 수업 본문 전용 스타일. site.css의 토큰을 그대로 쓴다. */
+
+.lesson { font-size: 16.5px; }
+.lesson p { margin: 0 0 14px; }
+.lesson ul, .lesson ol { margin: 0 0 16px; padding-left: 22px; }
+.lesson li { margin-bottom: 7px; }
+.lesson li > ul { margin: 7px 0 4px; }
+.lesson code {
+  font-family: var(--mono);
+  font-size: .9em;
+  background: var(--accent-soft);
+  padding: 1px 5px;
+  border-radius: 4px;
+}
+.lesson section { scroll-margin-top: 70px; }
+
+/* 슬라이드 내려받기 */
+.dl { margin: 0 0 24px; }
+.dlbtn {
+  display: inline-block;
+  padding: 9px 18px;
+  border: 1px solid var(--navy);
+  border-radius: var(--radius);
+  color: var(--navy);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 700;
+}
+.dlbtn:hover { background: var(--navy); color: #fff; }
+
+/* 질문과 답 */
+.lesson p.q, .lesson p.a {
+  border-radius: var(--radius);
+  padding: 13px 17px;
+  margin: 0 0 12px;
+}
+.lesson p.q {
+  background: var(--accent-soft);
+  border-left: 4px solid var(--navy);
+}
+.lesson p.a {
+  background: rgba(242, 183, 5, .13);
+  border-left: 4px solid var(--chrome);
+  font-weight: 600;
+}
+.lesson p.q > span, .lesson p.a > span {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: .1em;
+  margin-right: 10px;
+  vertical-align: 1px;
+  font-weight: 700;
+}
+.lesson p.q > span { color: var(--navy); }
+.lesson p.a > span { color: var(--warn); }
+
+/* 질문 목록 */
+.qlist { margin: 0 0 24px; }
+.qlist li { margin-bottom: 9px; }
+.qlist a { text-decoration: none; }
+.qlist a:hover { text-decoration: underline; }
+
+/* 조건·한계 / 귀결 / 안전 상자 */
+.box {
+  border-radius: var(--radius);
+  padding: 14px 18px;
+  margin: 16px 0;
+  font-size: 15.5px;
+  border: 1px solid var(--line);
+}
+.box > b {
+  display: block;
+  font-size: 11px;
+  font-family: var(--mono);
+  letter-spacing: .1em;
+  margin-bottom: 5px;
+}
+.box--limit { background: var(--accent-soft); border-left: 4px solid var(--navy); }
+.box--limit > b { color: var(--navy); }
+.box--result { background: rgba(242, 183, 5, .1); border-left: 4px solid var(--chrome); }
+.box--result > b { color: var(--warn); }
+.box--safety { background: rgba(242, 183, 5, .14); border-left: 5px solid var(--chrome); }
+.box--safety > b { color: var(--warn); font-size: 12px; }
+.box--safety ul { margin: 6px 0 0; }
+
+/* 표 */
+.tw { overflow-x: auto; margin: 16px 0; }
+.lesson table { font-size: 14.5px; min-width: 520px; }
+.lesson th { white-space: nowrap; }
+
+/* 확인 문항 */
+.quiz { counter-reset: none; }
+.quiz > li { margin-bottom: 18px; }
+.quiz .qq { font-weight: 600; margin-bottom: 8px; }
+.quiz details {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--card);
+  padding: 0 14px;
+}
+.quiz details[open] { padding-bottom: 6px; }
+.quiz summary {
+  cursor: pointer;
+  padding: 9px 0;
+  font-size: 14px;
+  color: var(--navy);
+  font-weight: 700;
+}
+.quiz details p { margin: 4px 0 8px; font-size: 15.5px; }
+
+/* 참고문헌 */
+.ref { font-size: 14.5px; color: var(--ink-2); }
+.ref li { margin-bottom: 8px; }
+
+@media print {
+  .quiz details { border: none; }
+  .quiz details[open] summary { display: none; }
+  .lesson p.q, .lesson p.a, .box, .equation { break-inside: avoid; }
+  .contents { font-size: 13px; background: none; }
+}
+
+/* 그림 */
+.fig { margin: 20px 0; text-align: center; }
+.fig img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: #fff;
+}
+.fig figcaption {
+  font-size: 14px;
+  color: var(--ink-2);
+  margin-top: 9px;
+  text-align: left;
+  line-height: 1.6;
+}
+.fig figcaption > b { color: var(--navy); margin-right: 6px; }
+.fig .credit { color: var(--ink-3); font-size: 13px; }
+
+/* 보강 입력 상자와 외부 링크 그림 */
+.box--notes{border-left:4px solid #f2b705;background:#fffaec}
+.fig--ext img{outline:2px dashed #f2b705;outline-offset:3px}
+.fig .credit{font-size:.82em;color:#8a6300}
+
+/* 페이지에서 직접 고치는 기능 */
+.editbar{position:fixed;right:16px;bottom:16px;z-index:60;display:flex;gap:6px;
+  align-items:center;flex-wrap:wrap;justify-content:flex-end;max-width:min(94vw,520px);
+  padding:8px;border-radius:10px;background:#ffffffee;border:1px solid #c6d2dd;
+  box-shadow:0 2px 12px rgba(0,0,0,.14)}
+.editbar.is-on{background:#fffaecf2;border-color:#f2b705}
+.editbtn{font:inherit;font-size:.86rem;padding:6px 11px;border-radius:7px;cursor:pointer;
+  border:1px solid #003c71;background:#fff;color:#003c71}
+.editbtn:hover{background:#eaf1f8}
+.editbtn--main{background:#003c71;color:#fff;font-weight:700}
+.editbtn--main:hover{background:#00529c}
+.editbtn--warn{border-color:#b3261e;color:#b3261e}
+.editbtn--warn:hover{background:#fbeceb}
+.editcount{font-size:.82rem;color:#8a6300;font-weight:700}
+.editgrp{display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end}
+.editnote{position:fixed;left:16px;bottom:16px;z-index:60;max-width:min(92vw,460px);
+  padding:10px 13px;border-radius:9px;border-left:4px solid #f2b705;background:#16191df2;
+  color:#fff;font-size:.86rem;line-height:1.5;opacity:0;transform:translateY(8px);
+  transition:opacity .18s,transform .18s;pointer-events:none}
+.editnote.is-on{opacity:1;transform:none}
+.editdump{position:fixed;left:16px;bottom:72px;z-index:60;width:min(92vw,560px);height:40vh;
+  font:12px/1.5 monospace;padding:10px;border:2px solid #f2b705;border-radius:8px;background:#fff}
+body.editing [contenteditable]{outline:1px dashed #9fb3c4;outline-offset:3px;border-radius:3px}
+body.editing [contenteditable]:focus{outline:2px solid #003c71;background:#f7fbff}
+body.editing h2{position:relative}
+.memobtn{font:inherit;font-size:.62em;font-weight:400;margin-left:10px;padding:2px 8px;
+  border-radius:6px;cursor:pointer;border:1px dashed #8a6300;background:#fffaec;color:#8a6300;
+  vertical-align:middle}
+.memobtn:hover{background:#f2b705;color:#16191d}
+h2.has-memo::after{content:"메모";font-size:.58em;font-weight:400;margin-left:10px;
+  padding:2px 8px;border-radius:6px;background:#f2b705;color:#16191d;vertical-align:middle}
+.is-edited{background:#fffaec;box-shadow:inset 3px 0 0 #f2b705;padding-left:9px}
+@media print{.editbar,.editnote,.editdump,.memobtn{display:none}}
+.editmodal{position:fixed;inset:0;z-index:70;display:flex;align-items:center;
+  justify-content:center;padding:16px;background:#16191dbf}
+.editmodal__box{width:min(96vw,560px);background:#fff;border-radius:12px;padding:18px 20px;
+  box-shadow:0 8px 32px rgba(0,0,0,.3)}
+.editmodal__box h3{margin:0 0 6px;font-size:1.02rem;color:#003c71}
+.editmodal__box p{margin:0 0 12px;font-size:.84rem;color:#4a5159}
+.editmodal__box textarea{width:100%;font:inherit;font-size:.9rem;line-height:1.55;padding:10px;
+  border:1px solid #c6d2dd;border-radius:8px;resize:vertical;box-sizing:border-box}
+.editmodal__box textarea:focus{outline:2px solid #003c71;border-color:#003c71}
+.editmodal__row{display:flex;gap:8px;justify-content:flex-end;margin-top:12px}
+
+/* 깊이 층위 상자와 수업 사이 연결 */
+.box--step{border-left:4px solid #2e7d32;background:#ecf6ec}
+.box--step>b{color:#1e6b2c}
+.box--front{border-left:4px solid #6b4fa0;background:#f3eff9}
+.box--front>b{color:#5b3a8a}
+a.xref{font-variant-numeric:tabular-nums;white-space:nowrap;text-decoration:none;
+  border-bottom:1px dotted currentColor}
+a.xref:hover{background:#eaf1f8}
+
+/* ---- 본문 목차 ---- */
+/* 평범한 목록으로 두면 본문과 구별되지 않아 긴 수업에서 지나치기 쉽다. */
+.contents {
+  border: 1px solid var(--line);
+  background: var(--bg);
+  border-radius: var(--radius);
+  padding: 16px 22px;
+  margin: 28px 0 36px;
+}
+.contents strong {
+  display: block;
+  font-size: 13px;
+  letter-spacing: .04em;
+  color: var(--ink-2);
+  margin-bottom: 10px;
+}
+.contents .qlist { margin: 0; }
+.contents .qlist li { margin-bottom: 6px; font-size: 15.5px; }
+
+/* ---- 수식 상자 ---- */
+/* @eq 로 적은 줄. 본문 문단과 섞이면 식의 경계가 보이지 않는다. */
+.equation {
+  background: var(--accent-soft);
+  border-left: 3px solid var(--navy);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  padding: 16px 20px;
+  margin: 22px 0;
+  line-height: 2;
+  overflow-wrap: anywhere;
+}
+</style><link rel="stylesheet" href="../../../../assets/site.css"><link rel="stylesheet" href="../../../../assets/lesson.css"></head><body><header class="masthead">
   <div class="wrap">
     <a class="brand" href="../../../../index.html">의생명과학 교육과정</a>
     <nav>
       <a href="../../../../curriculum/index.html">전체 수업</a>
       <a href="../../../../curriculum/materials.html">자료 내려받기</a>
-      <a href="../../../../curriculum/M07/index.html">실습</a>
       <a href="../../../../archive/index.html">아카이브</a>
     </nav>
   </div>
 </header>
 
-<main class="wrap">
-<nav class="crumb" aria-label="이동 경로"><a href="../../../../index.html">대문</a><span aria-hidden="true">›</span><a href="../../../index.html">전체 수업</a><span aria-hidden="true">›</span><a href="../../index.html">M02</a><span aria-hidden="true">›</span><a href="../index.html">13주차</a><span aria-hidden="true">›</span><span>M02-W13-L03</span></nav>
+<main class="wrap wrap--narrow lesson" data-lesson-id="M02-W13-L03" data-lesson="M02-W13-L03"><nav class="crumb" aria-label="이동 경로"><a href="../../../../index.html">대문</a><span aria-hidden="true">›</span><a href="../../../index.html">전체 수업</a><span aria-hidden="true">›</span><a href="../../index.html">M02</a><span aria-hidden="true">›</span><a href="../index.html">13주차</a><span aria-hidden="true">›</span><span>M02-W13-L03</span></nav><section class="hero"><p class="eyebrow">M02-W13-L03 · 대사생화학 · 대사조절과 질환</p><h1>당뇨병의 생화학과 급성 대사 합병증</h1><p class="en"></p></section><section aria-labelledby="objectives"><h2 id="objectives">학습목표</h2><ul><li>당뇨병의 고혈당을 간의 생산과 말초의 이용으로 설명한다.</li><li>심한 인슐린 결핍에서 지방분해와 케톤체 생성이 증가하는 과정을 연결한다.</li><li>삼투성 이뇨가 탈수와 전해질 손실을 만드는 이유를 설명한다.</li><li>당뇨병성 케톤산증과 고삼투압 고혈당 상태의 차이 및 겹침을 이해한다.</li></ul></section>
 
-  <section class="hero">
-    <p class="eyebrow">M02-W13-L03 · 대사생화학 · 대사조절과 질환</p>
-    <h1>당뇨병의 생화학과 급성 대사 합병증 [25장]</h1>
-    <p class="lede">강의 수업 · 상태 <span class="badge badge--design">설계</span></p>
-  </section>
+<section aria-labelledby="prerequisites"><h2 id="prerequisites">선수지식</h2><p>포도당신생합성, 지방산 β산화, 케톤체 생성, 인슐린의 조직별 작용을 복습한다. 산증은 혈액을 산성 쪽으로 변화시키는 과정이며, 대사성 산증에서는 대사성 산의 증가나 중탄산 감소 등이 중요하다. 이 강의는 급성 합병증의 생화학을 설명하며 치료 용량과 처방 절차는 다루지 않는다.</p></section>
 
-  
-  <div class="callout">이 수업은 아직 집필 전이다. 제작 기준은
-  <a href="../../../../PROJECT.md">PROJECT.md</a>의 집필 원칙과 산출물 규격을 따른다.</div>
+<nav class="contents" aria-label="강의 구성"><strong>강의 구성</strong><ol class="qlist"><li><a href="#s1">1. 당뇨병은 고혈당이라는 결과를 공유하는 여러 상태이다</a></li><li><a href="#s2">2. 혈당이 높은데도 저장 연료가 분해되는 이유</a></li><li><a href="#s3">3. 지방산 공급이 케톤체 생성으로 이어진다</a></li><li><a href="#s4">4. 포도당이 소변에 남으면 물도 함께 빠져나간다</a></li><li><a href="#s5">5. DKA와 HHS는 지배적인 대사 문제가 다르다</a></li><li><a href="#s6">6. 검사마다 실제로 측정하는 물질이 다르다</a></li><li><a href="#s7">7. 혈중 칼륨 농도와 몸 전체 칼륨량은 다르다</a></li><li><a href="#s8">8. 회복은 혈당 하나의 정상화로 끝나지 않는다</a></li></ol></nav><section aria-label="본문"><section id="s1" class="lesson-section"><h2>1. 당뇨병은 고혈당이라는 결과를 공유하는 여러 상태이다</h2>
+<p>혈당은 장에서 흡수한 포도당, 간과 신장의 포도당 공급, 조직의 사용과 신장의 배설이 함께 결정한다. 당뇨병에서는 인슐린 분비나 작용의 이상으로 이 균형이 깨져 고혈당이 지속된다. 식사로 당을 많이 먹었다는 설명만으로는 공복 고혈당이나 심한 대사 이상을 설명할 수 없다.</p>
+<p>제1형 당뇨병의 대표적인 기전은 면역 반응에 의한 β세포 파괴와 심한 인슐린 결핍이다. 제2형에서는 인슐린 저항성과 그 요구를 충족하지 못하는 분비 기능이 함께 중요하다. 두 유형 모두 다양한 연령에서 나타날 수 있으므로 “소아형”과 “성인형”이라는 이름만으로 분류하지 않는다. 췌장 질환, 약물, 단일 유전자 이상 등 다른 원인도 있다. <a href="#ref-t25">[T25]</a></p>
+<p><strong>인슐린 부족을 두 관점에서 읽기</strong></p><div class="tw"><table aria-label="인슐린 부족을 두 관점에서 읽기"><thead><tr><th>상태</th><th>의미</th><th>혈중 인슐린 해석</th></tr></thead><tbody><tr><td>심한 절대적 부족</td><td>분비 능력 자체가 크게 감소</td><td>대사 유지에 필요한 인슐린이 매우 부족</td></tr><tr><td>상대적 부족</td><td>저항성과 혈당 수준에 비해 분비가 불충분</td><td>측정값이 높아도 요구량에 못 미칠 수 있음</td></tr></tbody></table>
+</div><p>HbA1c는 적혈구의 헤모글로빈에 포도당이 비효소적으로 결합한 결과를 반영한다. 최근 수개월의 혈당 노출을 평가하는 데 유용하지만 적혈구 수명과 수혈 등에도 영향을 받는다. 한 시점의 급성 산증이나 탈수 정도를 HbA1c만으로 판단하지 않는다.</p>
+</section>
+<section id="s2" class="lesson-section"><h2>2. 혈당이 높은데도 저장 연료가 분해되는 이유</h2>
+<p>심한 인슐린 결핍에서는 근육과 지방세포의 인슐린 의존성 포도당 흡수가 감소하고, 간에서는 포도당 생산을 억제하는 작용이 약해진다. 글루카곤을 비롯한 대항 호르몬의 영향도 더해져 간의 글리코젠 분해와 포도당신생합성이 증가한다. 따라서 이미 혈당이 높은데 간이 포도당을 더 내보내는 상황이 가능하다.</p>
+<p>동시에 지방조직의 지방분해와 근육의 단백질 분해가 증가할 수 있다. 글리세롤과 아미노산은 포도당 합성 재료를 공급한다. 체중 감소는 소변으로 에너지가 빠져나가는 현상뿐 아니라 탈수와 저장 조직의 분해도 반영한다. 이를 “몸의 모든 세포가 포도당을 전혀 못 쓰기 때문”이라고 말하면 부정확하다. 뇌와 적혈구 등은 인슐린 비의존성 수송체로 포도당을 받아들인다.</p>
+<p><strong>고혈당을 만드는 두 방향</strong></p><div class="tw"><table aria-label="고혈당을 만드는 두 방향"><thead><tr><th>변화</th><th>대표 조직</th><th>혈당에 미치는 영향</th></tr></thead><tbody><tr><td>포도당 생산 억제 감소</td><td>간</td><td>혈중 유입 증가</td></tr><tr><td>인슐린 자극하 흡수 감소</td><td>근육 등</td><td>혈중 제거 감소</td></tr><tr><td>분해 기질 공급 증가</td><td>지방조직·근육</td><td>간의 생산을 추가로 지원</td></tr></tbody></table>
+</div><div class="box box--step"><b>시험에서 가려내는 지점</b> 고혈당은 말초의 흡수 감소만으로 설명하지 않는다. 간의 포도당 생산 증가와, 그 생산을 돕는 다른 조직의 기질 공급도 함께 설명한다.</div></section>
+<section id="s3" class="lesson-section"><h2>3. 지방산 공급이 케톤체 생성으로 이어진다</h2>
+<p>지방조직에서 방출한 지방산은 간으로 이동하여 β산화된다. 이때 생기는 acetyl-CoA와 환원당량이 많아지고, 공복 방향의 호르몬 환경에서는 케톤체 생성이 증가한다. 간은 acetoacetate와 β-hydroxybutyrate를 혈액으로 내보낸다. β-hydroxybutyrate는 화학적으로 ketone기는 없지만 대사상 케톤체에 포함된다.</p>
+<p>케톤체는 원래 다른 조직이 사용할 수 있는 연료이다. 문제는 생성이 이용과 제거를 크게 초과할 때이다. 산성 케톤체가 축적되면 중탄산 완충계가 소모되고 대사성 산증으로 이어질 수 있다. 혈당이 높다는 사실과 산증은 연결되어 있지만 같은 현상은 아니다. 고혈당은 포도당 균형의 문제, 케톤산증은 지방 동원과 케톤체 균형 및 산·염기 상태의 문제이다.</p>
+<p><strong>케톤체를 종류별로 읽는다</strong></p><div class="tw"><table aria-label="케톤체를 종류별로 읽는다"><thead><tr><th>물질</th><th>특징</th></tr></thead><tbody><tr><td>Acetoacetate</td><td>산성 케톤체, β-hydroxybutyrate와 상호 전환</td></tr><tr><td>β-Hydroxybutyrate</td><td>간 미토콘드리아의 환원 상태에 따라 비율이 증가 가능</td></tr><tr><td>Acetone</td><td>휘발성 물질, 호흡 냄새와 관련되지만 주된 산증 원인은 아님</td></tr></tbody></table>
+</div><p>단순 공복의 케톤체 증가와 당뇨병성 케톤산증을 동일시하지 않는다. 정상적인 공복에서는 남아 있는 인슐린 작용과 여러 조절 과정이 지방 동원과 케톤체 생성을 제한한다. 다만 공복이라는 정보만으로 모든 케톤산증을 안전하다고 판단할 수도 없다. 임상에서는 산·염기 상태와 동반 상황을 확인한다. <a href="#ref-t25">[T25]</a></p>
+</section>
+<section id="s4" class="lesson-section"><h2>4. 포도당이 소변에 남으면 물도 함께 빠져나간다</h2>
+<p>신장은 여과된 포도당을 대부분 재흡수한다. 그러나 여과되는 양이 재흡수 능력을 넘으면 포도당이 소변에 남는다. 세뇨관 속 포도당은 물의 재흡수를 방해하여 소변량을 늘린다. 이것이 삼투성 이뇨이다. 혈당이 올라 운반체가 갑자기 고장 난다는 뜻이 아니라, 운반할 수 있는 양에 한계가 있다는 뜻이다.</p>
+<p>이뇨가 지속되면 수분과 전해질이 손실되고 갈증이 생긴다. 물을 충분히 마시지 못하거나 구토가 겹치면 탈수가 심해질 수 있다. 신장 관류가 감소하면 포도당과 대사산물 제거도 악화될 수 있어 상태가 더 나빠진다. 높은 혈당과 탈수가 서로 악화시키는 관계를 이해해야 한다.</p>
+<div class="box box--limit"><b>임상 연계</b><h3>학습용 사례: 물을 마시는데도 소변이 많고 체중이 줄어든다</h3><p>많이 마셔서 소변이 늘었다고만 생각하지 않는다. 먼저 포도당 배설이 물 손실을 유발하고, 그 손실에 대한 반응으로 갈증이 증가한 것일 수 있다. 원인과 보상 반응의 순서를 구별한다.</p></div>
+<p>포도당이 소변에 나타나는 혈당 수준은 개인과 신장 상태, 약물에 따라 다를 수 있다. 특정 혈당 수치를 모든 사람의 고정된 신장 역치로 외우지 않는다. SGLT2 억제제는 재흡수를 줄여 포도당 배설을 증가시키는 약물이므로 소변 당 자체를 곧바로 조절 실패로 해석할 수도 없다.</p>
+</section>
+<section id="s5" class="lesson-section"><h2>5. DKA와 HHS는 지배적인 대사 문제가 다르다</h2>
+<p>당뇨병성 케톤산증은 DKA, 고삼투압 고혈당 상태는 HHS라고 부른다. DKA에서는 심한 인슐린 부족에 따른 케톤체 증가와 대사성 산증이 중심이다. HHS에서는 현저한 고혈당, 고삼투압과 탈수가 중심이다. HHS에서는 케톤 생성을 어느 정도 제한하는 인슐린 작용이 남아 있을 수 있지만, 포도당 균형을 유지하기에는 충분하지 않다.</p>
+<p><strong>두 상태의 중심 문제 비교</strong></p><div class="tw"><table aria-label="두 상태의 중심 문제 비교"><thead><tr><th>항목</th><th>DKA</th><th>HHS</th></tr></thead><tbody><tr><td>중심 문제</td><td>케톤체 증가와 산증</td><td>심한 고혈당·고삼투압·탈수</td></tr><tr><td>생화학적 연결</td><td>지방분해 → 간 케톤 생성</td><td>포도당 축적 → 삼투성 이뇨</td></tr><tr><td>구분의 한계</td><td colspan="2">실제 환자에서는 두 상태가 겹칠 수 있음</td></tr></tbody></table>
+</div><p>DKA를 제1형에만, HHS를 제2형에만 대응시키지 않는다. 유형은 위험을 이해하는 단서이지만 급성 상태는 실제 검사와 증상으로 평가한다. 감염, 급성 질환, 필요한 인슐린을 충분히 공급받지 못한 상황 등이 악화 요인이 될 수 있다. 인슐린 공급 문제에는 비용·접근성·기기 문제도 포함되므로 환자의 의지만으로 설명하지 않는다. <a href="#ref-c1">[C1]</a></p>
+<div class="box box--step"><b>시험에서 가려내는 지점</b> 케톤산증 여부를 혈당의 높이 하나로 판단하지 않는다. 혈당, 케톤체, 산·염기 상태는 서로 다른 정보를 준다.</div></section>
+<section id="s6" class="lesson-section"><h2>6. 검사마다 실제로 측정하는 물질이 다르다</h2>
+<p>케톤 검사는 이름이 같아도 검출 물질이 다를 수 있다. 흔한 nitroprusside 소변 검사는 주로 acetoacetate를 반영하며 β-hydroxybutyrate를 직접 측정하지 않는다. 따라서 DKA 초기와 회복기의 실제 케톤체 변화가 소변 검사 강도와 일치하지 않을 수 있다. 혈중 β-hydroxybutyrate 직접 측정은 이 차이를 줄이는 데 도움이 된다. <a href="#ref-c1">[C1]</a></p>
+<p>SGLT2 억제제 사용 등에서는 혈당이 아주 높지 않은 케톤산증이 나타날 수 있다. 소변으로 포도당이 빠져나가는 것과 케톤체 생성이 억제되는 것은 같은 일이 아니기 때문이다. “혈당이 예상만큼 높지 않으니 케톤산증이 아니다”라는 결론은 위험하다. <a href="#ref-fda">[F1]</a></p>
+<p><strong>측정 대상에 맞게 질문한다</strong></p><div class="tw"><table aria-label="측정 대상에 맞게 질문한다"><thead><tr><th>검사</th><th>답하는 질문</th></tr></thead><tbody><tr><td>혈당</td><td>현재 포도당 농도는 얼마인가</td></tr><tr><td>혈중 β-hydroxybutyrate</td><td>이 케톤체가 얼마나 축적되어 있는가</td></tr><tr><td>pH·중탄산</td><td>산·염기 상태는 어떠한가</td></tr><tr><td>전해질·삼투압 관련 평가</td><td>수분과 이온의 균형은 어떠한가</td></tr></tbody></table>
+</div><div class="box box--front"><b>연구 전선</b> 치료 중 소변 케톤 반응이 더 강해졌는데 혈중 β-hydroxybutyrate는 감소했다면 어떤 전환을 생각할 수 있을까? 검사법이 보는 분자와 전체 대사 상태를 나누어 해석해 보자.</div></section>
+<section id="s7" class="lesson-section"><h2>7. 혈중 칼륨 농도와 몸 전체 칼륨량은 다르다</h2>
+<p>칼륨의 대부분은 세포 안에 있다. 따라서 혈중 농도는 몸 전체 저장량뿐 아니라 세포 안팎의 분포에도 크게 영향을 받는다. 인슐린은 칼륨이 세포 안으로 이동하는 작용을 돕는다. 심한 인슐린 결핍에서는 이 작용이 약해지고, 고삼투압 등도 세포 안팎의 이동에 영향을 준다.</p>
+<p>한편 삼투성 이뇨와 구토 등으로 칼륨은 몸 밖으로 손실될 수 있다. 그래서 초기 혈중 칼륨이 정상 또는 높아 보여도 전체 칼륨량은 부족할 수 있다. 치료로 분포가 바뀌면 혈중 칼륨이 빠르게 낮아질 수 있어, 혈당과 별도로 반복 평가해야 한다. 환자의 신장 기능에 따라 상황은 달라질 수 있다. <a href="#ref-c1">[C1]</a></p>
+<div class="box box--limit"><b>임상 연계</b><h3>학습용 사례: “칼륨이 높으니 저장량도 충분하다”는 해석</h3><p>세포 밖 혈액은 전체 칼륨의 작은 일부를 보여 준다. 세포 밖으로 이동한 양이 많으면 전체 손실이 가려질 수 있다. 농도를 총량과 혼동하는 오류이며, 앞 강의에서 배운 혈중 농도와 흐름의 구별을 전해질에도 적용한 사례이다.</p></div>
+<div class="box box--step"><b>시험에서 가려내는 지점</b> DKA의 혈중 칼륨을 몸 전체 칼륨량과 동일시하지 않는다. 인슐린 작용 회복으로 분포가 바뀌는 것과 소변을 통한 실제 손실을 함께 고려한다.</div></section>
+<section id="s8" class="lesson-section"><h2>8. 회복은 혈당 하나의 정상화로 끝나지 않는다</h2>
+<p>인슐린은 포도당 이용을 돕는 동시에 지방분해와 케톤체 생성을 억제한다. 수액은 순환과 신장 관류 회복을 돕고, 전해질 관리는 세포 기능과 심장 전기 활동을 유지하는 데 필요하다. 감염 등 악화 요인도 함께 해결해야 한다. 서로 다른 생리 문제를 다루므로 한 조치가 나머지를 전부 대신할 수 없다.</p>
+<p>혈당이 먼저 내려가도 케톤체와 산·염기 이상은 남을 수 있다. 반대로 수치의 변화가 치료 과정에서 생긴 다른 산·염기 변화의 영향을 받을 수도 있다. 따라서 급성 대사 상태의 회복은 여러 지표와 임상 상태를 함께 보아야 한다. 이 수업에서는 개별 환자의 치료 종료 기준이나 주입 속도를 정하는 대신, 왜 여러 지표가 필요한지를 이해한다.</p>
+<p><strong>개입과 생화학적 목적</strong></p><div class="tw"><table aria-label="개입과 생화학적 목적"><thead><tr><th>개입 범주</th><th>목적</th></tr></thead><tbody><tr><td>인슐린 작용 회복</td><td>포도당 대사 조절과 케톤 생성 억제</td></tr><tr><td>수분·순환 회복</td><td>탈수와 관류 저하 개선</td></tr><tr><td>전해질 평가·교정</td><td>손실과 분포 변화에 따른 기능 이상 예방</td></tr><tr><td>악화 요인 해결</td><td>지속되는 대사 스트레스 감소</td></tr></tbody></table>
+</div><p>인슐린이 필요 이상으로 작용하거나 섭취와 운동량이 예상과 달라지면 저혈당도 생길 수 있다. 뇌의 포도당 공급이 부족해지는 문제는 고혈당과 별도로 중요하다. 따라서 당뇨병 관리는 혈당을 무조건 낮추는 일이 아니라 안전하게 적절한 범위를 유지하는 일이다. <a href="#ref-t25">[T25]</a></p>
+<div class="box box--front"><b>연구 전선</b> 혈당은 비슷하지만 탈수와 케톤체가 다른 두 환자를 가정해 보자. 같은 혈당 수치가 같은 대사 상태를 뜻하지 않는 이유를, 연료 흐름과 수분 균형의 두 문장으로 설명해 보자.</div></section></section>
 
-  <h2>학습목표</h2>
-  <p>작성 예정. 이 수업이 답하는 질문 6~9개를 먼저 확정한 뒤 측정 가능한 학습목표로 옮긴다.</p>
+<section aria-labelledby="questions"><h2 id="questions">확인 문항과 해설</h2><ol class="quiz">
+<li><p class="qq"><strong>판단.</strong> 인슐린이 부족하면 뇌와 적혈구를 포함한 모든 세포가 포도당을 전혀 받아들이지 못한다.</p><details><summary>해설</summary><p>틀리다. 조직마다 수송체가 다르다. 근육·지방의 인슐린 자극하 흡수 감소를 모든 조직의 완전한 수송 중단으로 일반화하지 않는다.</p></details></li>
+<li><p class="qq"><strong>판단.</strong> 삼투성 이뇨에서는 소변에 남은 포도당이 물 손실을 늘리고, 갈증은 그 결과에 대한 반응일 수 있다.</p><details><summary>해설</summary><p>맞다. 포도당 배설, 물 손실, 갈증이라는 연결을 이해한다. 탈수와 관류 저하가 더해지면 대사물 제거가 악화될 수 있다.</p></details></li>
+<li><p class="qq"><strong>판단.</strong> 혈당이 아주 높지 않으면 케톤산증을 배제할 수 있다.</p><details><summary>해설</summary><p>틀리다. SGLT2 억제제 관련 상황 등이 반례이다. 케톤체와 산·염기 상태를 함께 평가해야 한다.</p></details></li>
+<li><p class="qq"><strong>판단.</strong> DKA에서 초기 혈중 칼륨이 높아도 몸 전체 칼륨은 부족할 수 있다.</p><details><summary>해설</summary><p>맞다. 세포 안팎의 분포 변화와 실제 소실은 서로 다른 과정이다. 치료 중 분포가 바뀌면 혈중 농도가 감소할 수 있다.</p></details></li>
+<li><p class="qq">심한 인슐린 결핍에서 지방조직과 간을 연결하여 케톤체가 증가하는 경로를 설명하라.</p><details><summary>해설</summary><p>지방분해 억제가 약해져 지방산이 방출되고 간으로 이동한다. 간 β산화로 생긴 acetyl-CoA가 케톤체 생성에 사용된다. 생성이 이용과 제거를 초과하면 축적되고 산증으로 이어질 수 있다.</p></details></li>
+<li><p class="qq">HbA1c, 혈당, 케톤체 검사가 서로 대체되지 않는 이유를 설명하라.</p><details><summary>해설</summary><p>HbA1c는 적혈구 특성과 최근 수개월의 포도당 노출, 혈당은 현재 포도당 농도, 케톤 검사는 특정 케톤체의 축적을 반영한다. 시간 범위와 측정 대상이 서로 다르다.</p></details></li>
+</ol></section>
 
-  <h2>선수지식</h2>
-  <p>작성 예정.</p>
-
-  <h2>본문</h2>
-  <p>작성 예정. 각 절은 하나의 질문에 답하는 단위로 쓰고
-  질문 → 답 → 근거 → 조건과 한계 → 귀결의 순서로 전개한다.</p>
-
-  <h2>확인 문항</h2>
-  <p>작성 예정. 5개 이상, 절반 이상은 판단을 묻는 문항으로 한다.</p>
-
-  <h2>참고문헌</h2>
-  <p>작성 예정.</p>
-
-  <nav class="pager"><a href="../../../M02/W13/L02/index.html">← M02-W13-L02 인슐린 저항성의 분자 기전</a><a href="../../../M02/W14/L01/index.html">M02-W14-L01 비만의 에너지 균형과 지방조직 내분비 [26장] →</a></nav>
-
-</main>
-
-<footer class="foot wrap">
+<section aria-labelledby="references"><h2 id="references">참고문헌</h2><ol class="ref"><li id="ref-t25">[T25] Abali EE et al. Lippincott Illustrated Reviews: Biochemistry. 8판. 2022. 25장, 제공 PDF 파일 690–703쪽. 당뇨병의 조직별 대사 변화와 저혈당. 오래된 치료 방식·고정 연령 제한·유병률 수치는 옮기지 않았다.</li><li id="ref-c1">[C1] Umpierrez GE et al. Hyperglycemic Crises in Adults With Diabetes: A Consensus Report. Diabetes Care. 2024;47:1257–1275. <a href="https://diabetesjournals.org/care/article/47/8/1257/156808/Hyperglycemic-Crises-in-Adults-With-Diabetes-A">학회 합의 보고서</a>. DKA/HHS의 겹침, 케톤 검사와 칼륨 해석 보충. 치료 절차의 직접 적용을 위한 강의는 아니다.</li><li id="ref-fda">[F1] FDA. SGLT2 억제제의 케톤산증 관련 안전성 안내. <a href="https://www.fda.gov/media/94822/download">FDA 문서</a>. 혈당이 높지 않은 경우에도 케톤산증이 가능함을 확인.</li></ol></section>
+<nav class="pager" aria-label="이전·다음 수업"><a href="../../W13/L02/index.html">← 인슐린 저항성의 분자 기전: 지질 중간체·염증·소포체 스트레스</a><a href="../../W14/L01/index.html">M02-W14-L01 비만의 생화학 →</a></nav></main><footer class="foot wrap">
   <span>© 2026 Kim Jintae · Hanyang University</span>
   <a href="https://github.com/hoperiasd2/hoperiasd2.github.io">GitHub 저장소</a>
 </footer>
 
-<script src="../../../../assets/site.js"></script>
-</body>
-</html>
+<script src="../../../../assets/edit.js" defer></script></body></html>

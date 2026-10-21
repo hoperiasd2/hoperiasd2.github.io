@@ -1,64 +1,580 @@
 <!DOCTYPE html>
-<html lang="ko">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>M02-W14-L01 비만의 에너지 균형과 지방조직 내분비 [26장]</title>
-<meta name="description" content="비만의 에너지 균형과 지방조직 내분비 [26장]">
-<link rel="stylesheet" href="../../../../assets/site.css">
-</head>
-<body>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>M02-W14-L01 비만의 에너지 균형과 지방조직 내분비 [26장]</title><meta name="description" content="비만의 에너지 균형과 지방조직 내분비 [26장]: 구조에서 생리 기능과 질환까지"><style data-source="site.css + lesson.css snapshot 2026-10-17">/* 의생명과학 교육과정 — 공통 스타일
+   색은 :root 토큰으로만 쓰고 다크 모드에서 재정의한다. */
 
-<header class="masthead">
+:root {
+  --navy: #003c71;
+  --navy-700: #00294e;
+  --chrome: #f2b705;
+  --ink: #16191d;
+  --ink-2: #4a5159;
+  --ink-3: #727a84;
+  --line: #dde2e8;
+  --bg: #f6f8fa;
+  --card: #ffffff;
+  --accent-soft: #eaf1f8;
+  --ok: #1a7f52;
+  --ok-soft: #e7f4ed;
+  --warn: #9a6700;
+  --warn-soft: #fdf5e3;
+  --radius: 10px;
+  --wrap: 1180px;
+  --mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+  --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo",
+    "Noto Sans KR", "Malgun Gothic", sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --navy: #8fc3f5;
+    --navy-700: #b9d9fb;
+    --chrome: #f2b705;
+    --ink: #e7eaee;
+    --ink-2: #b2bac4;
+    --ink-3: #868f9a;
+    --line: #2b3138;
+    --bg: #14171b;
+    --card: #1b1f24;
+    --accent-soft: #1e2833;
+    --ok: #5dd3a0;
+    --ok-soft: #16271f;
+    --warn: #e3b341;
+    --warn-soft: #2a2416;
+  }
+}
+:root[data-theme="dark"] {
+  --navy: #8fc3f5;
+  --navy-700: #b9d9fb;
+  --ink: #e7eaee;
+  --ink-2: #b2bac4;
+  --ink-3: #868f9a;
+  --line: #2b3138;
+  --bg: #14171b;
+  --card: #1b1f24;
+  --accent-soft: #1e2833;
+  --ok: #5dd3a0;
+  --warn: #e3b341;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.75;
+  -webkit-text-size-adjust: 100%;
+}
+
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 16px; }
+.wrap--narrow { max-width: 860px; }
+
+a { color: var(--navy); }
+a:hover { color: var(--navy-700); }
+
+/* ---- 머리글 ---- */
+.masthead {
+  background: #003c71;
+  border-bottom: 3px solid var(--chrome);
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+.masthead .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 52px;
+}
+.masthead a.brand {
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  letter-spacing: .01em;
+}
+.masthead nav { display: flex; gap: 16px; flex-wrap: wrap; }
+.masthead nav a { color: #cfe0f0; text-decoration: none; font-size: 14px; }
+.masthead nav a:hover { color: #fff; }
+
+/* ---- 이동 경로 ---- */
+.crumb {
+  font-size: 13px;
+  color: var(--ink-3);
+  padding: 14px 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+}
+.crumb a { color: var(--ink-2); text-decoration: none; }
+.crumb a:hover { color: var(--navy); text-decoration: underline; }
+.crumb span[aria-hidden] { color: var(--ink-3); }
+
+/* ---- 표제 ---- */
+.hero {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-left: 5px solid var(--navy);
+  border-radius: var(--radius);
+  padding: 26px 28px;
+  margin: 16px 0 24px;
+}
+.hero .eyebrow {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  margin: 0 0 8px;
+}
+.hero h1 { margin: 0 0 10px; font-size: 27px; line-height: 1.35; }
+.hero .en { color: var(--ink-3); font-size: 14px; margin: 0 0 12px; }
+.hero p.lede { margin: 0; color: var(--ink-2); max-width: 70ch; }
+
+h2 {
+  font-size: 20px;
+  margin: 34px 0 14px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--line);
+}
+h3 { font-size: 17px; margin: 24px 0 10px; }
+
+/* ---- 카드 격자 ---- */
+.grid { display: grid; gap: 14px; }
+.grid--modules { grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); }
+.grid--weeks { grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); }
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 18px 20px;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  transition: border-color .12s, transform .12s;
+}
+a.card:hover { border-color: var(--navy); transform: translateY(-1px); }
+.card__no {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--chrome);
+  font-weight: 700;
+  letter-spacing: .08em;
+}
+.card__title { font-weight: 700; margin: 4px 0 2px; }
+.card__en { font-size: 13px; color: var(--ink-3); }
+.card__meta { font-size: 13px; color: var(--ink-2); margin-top: 10px; }
+
+/* ---- 진행 막대 ---- */
+.bar { height: 5px; background: var(--line); border-radius: 3px; overflow: hidden; margin-top: 10px; }
+.bar > i { display: block; height: 100%; background: var(--navy); }
+
+/* ---- 수업 목록 ---- */
+.lessons { list-style: none; margin: 0; padding: 0; }
+.lessons li {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--card);
+  margin-bottom: 8px;
+}
+.lessons a {
+  display: flex;
+  gap: 14px;
+  align-items: baseline;
+  padding: 13px 16px;
+  text-decoration: none;
+  color: inherit;
+}
+.lessons a:hover { background: var(--accent-soft); }
+.lessons .lid {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--ink-3);
+  white-space: nowrap;
+}
+.lessons .ltitle { flex: 1; min-width: 0; }
+.lessons .lgroup { font-size: 12px; color: var(--ink-3); }
+
+/* ---- 상태 배지 ---- */
+.badge {
+  font-size: 11px;
+  font-family: var(--mono);
+  padding: 2px 8px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  color: var(--ink-2);
+  background: var(--bg);
+  white-space: nowrap;
+}
+.badge--design { color: var(--ink-3); }
+.badge--draft { color: var(--warn); border-color: var(--warn); background: var(--warn-soft); }
+.badge--review { color: var(--navy); border-color: var(--navy); background: var(--accent-soft); }
+.badge--done {
+  color: var(--ok);
+  border-color: var(--ok);
+  background: var(--ok-soft);
+  font-weight: 600;
+}
+
+/* ---- 목록에서 집필 상태를 한눈에 ---- */
+/* 배지만으로는 276줄을 훑을 때 눈에 들어오지 않아 왼쪽에 색 띠를 둔다. */
+.lessons li[data-status] { border-left: 4px solid var(--line); }
+.lessons li[data-status="done"] { border-left-color: var(--ok); }
+.lessons li[data-status="draft"] { border-left-color: var(--warn); }
+.lessons li[data-status="review"] { border-left-color: var(--navy); }
+.lessons li[data-status="design"] { border-left-color: var(--line); }
+.lessons li[data-status="done"] .ltitle { font-weight: 600; }
+
+.filters--status { margin-top: -4px; }
+.filters--status button[data-filter-status="done"][aria-pressed="true"] {
+  border-color: var(--ok);
+  color: var(--ok);
+}
+
+/* ---- 검색 ---- */
+.search {
+  width: 100%;
+  padding: 12px 14px;
+  font-size: 15px;
+  font-family: inherit;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--card);
+  color: var(--ink);
+}
+.search:focus { outline: 2px solid var(--navy); outline-offset: 1px; }
+.filters { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 18px; }
+.filters button {
+  font: inherit;
+  font-size: 13px;
+  padding: 6px 13px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: var(--card);
+  color: var(--ink-2);
+  cursor: pointer;
+}
+.filters button[aria-pressed="true"] { background: var(--navy); color: #fff; border-color: var(--navy); }
+.count { font-size: 13px; color: var(--ink-3); margin: 0 0 12px; }
+
+/* ---- 안내 상자 ---- */
+.callout {
+  background: var(--accent-soft);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--navy);
+  border-radius: var(--radius);
+  padding: 14px 18px;
+  margin: 18px 0;
+  font-size: 15px;
+}
+.callout--warn { border-left-color: var(--chrome); }
+
+/* ---- 이전·다음 ---- */
+.pager {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 36px 0 12px;
+  border-top: 1px solid var(--line);
+  padding-top: 16px;
+  font-size: 14px;
+}
+.pager a { text-decoration: none; }
+.pager span { color: var(--ink-3); }
+
+/* ---- 표 ---- */
+table { border-collapse: collapse; width: 100%; margin: 14px 0; font-size: 15px; }
+th, td { border: 1px solid var(--line); padding: 8px 11px; text-align: left; vertical-align: top; }
+th { background: var(--accent-soft); font-weight: 700; }
+
+/* ---- 꼬리말 ---- */
+.foot {
+  margin-top: 56px;
+  padding: 22px 16px 40px;
+  border-top: 1px solid var(--line);
+  color: var(--ink-3);
+  font-size: 13px;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 640px) {
+  .hero { padding: 20px; }
+  .hero h1 { font-size: 22px; }
+  .lessons a { flex-wrap: wrap; gap: 6px 12px; }
+}
+
+@media print {
+  .masthead, .filters, .search, .pager, .foot { display: none; }
+  body { background: #fff; font-size: 11pt; }
+  .card, .hero { border: 1px solid #ccc; break-inside: avoid; }
+}
+
+/* 수업 본문 전용 스타일. site.css의 토큰을 그대로 쓴다. */
+
+.lesson { font-size: 16.5px; }
+.lesson p { margin: 0 0 14px; }
+.lesson ul, .lesson ol { margin: 0 0 16px; padding-left: 22px; }
+.lesson li { margin-bottom: 7px; }
+.lesson li > ul { margin: 7px 0 4px; }
+.lesson code {
+  font-family: var(--mono);
+  font-size: .9em;
+  background: var(--accent-soft);
+  padding: 1px 5px;
+  border-radius: 4px;
+}
+.lesson section { scroll-margin-top: 70px; }
+
+/* 슬라이드 내려받기 */
+.dl { margin: 0 0 24px; }
+.dlbtn {
+  display: inline-block;
+  padding: 9px 18px;
+  border: 1px solid var(--navy);
+  border-radius: var(--radius);
+  color: var(--navy);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 700;
+}
+.dlbtn:hover { background: var(--navy); color: #fff; }
+
+/* 질문과 답 */
+.lesson p.q, .lesson p.a {
+  border-radius: var(--radius);
+  padding: 13px 17px;
+  margin: 0 0 12px;
+}
+.lesson p.q {
+  background: var(--accent-soft);
+  border-left: 4px solid var(--navy);
+}
+.lesson p.a {
+  background: rgba(242, 183, 5, .13);
+  border-left: 4px solid var(--chrome);
+  font-weight: 600;
+}
+.lesson p.q > span, .lesson p.a > span {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: .1em;
+  margin-right: 10px;
+  vertical-align: 1px;
+  font-weight: 700;
+}
+.lesson p.q > span { color: var(--navy); }
+.lesson p.a > span { color: var(--warn); }
+
+/* 질문 목록 */
+.qlist { margin: 0 0 24px; }
+.qlist li { margin-bottom: 9px; }
+.qlist a { text-decoration: none; }
+.qlist a:hover { text-decoration: underline; }
+
+/* 조건·한계 / 귀결 / 안전 상자 */
+.box {
+  border-radius: var(--radius);
+  padding: 14px 18px;
+  margin: 16px 0;
+  font-size: 15.5px;
+  border: 1px solid var(--line);
+}
+.box > b {
+  display: block;
+  font-size: 11px;
+  font-family: var(--mono);
+  letter-spacing: .1em;
+  margin-bottom: 5px;
+}
+.box--limit { background: var(--accent-soft); border-left: 4px solid var(--navy); }
+.box--limit > b { color: var(--navy); }
+.box--result { background: rgba(242, 183, 5, .1); border-left: 4px solid var(--chrome); }
+.box--result > b { color: var(--warn); }
+.box--safety { background: rgba(242, 183, 5, .14); border-left: 5px solid var(--chrome); }
+.box--safety > b { color: var(--warn); font-size: 12px; }
+.box--safety ul { margin: 6px 0 0; }
+
+/* 표 */
+.tw { overflow-x: auto; margin: 16px 0; }
+.lesson table { font-size: 14.5px; min-width: 520px; }
+.lesson th { white-space: nowrap; }
+
+/* 확인 문항 */
+.quiz { counter-reset: none; }
+.quiz > li { margin-bottom: 18px; }
+.quiz .qq { font-weight: 600; margin-bottom: 8px; }
+.quiz details {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--card);
+  padding: 0 14px;
+}
+.quiz details[open] { padding-bottom: 6px; }
+.quiz summary {
+  cursor: pointer;
+  padding: 9px 0;
+  font-size: 14px;
+  color: var(--navy);
+  font-weight: 700;
+}
+.quiz details p { margin: 4px 0 8px; font-size: 15.5px; }
+
+/* 참고문헌 */
+.ref { font-size: 14.5px; color: var(--ink-2); }
+.ref li { margin-bottom: 8px; }
+
+@media print {
+  .quiz details { border: none; }
+  .quiz details[open] summary { display: none; }
+  .lesson p.q, .lesson p.a, .box, .equation { break-inside: avoid; }
+  .contents { font-size: 13px; background: none; }
+}
+
+/* 그림 */
+.fig { margin: 20px 0; text-align: center; }
+.fig img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: #fff;
+}
+.fig figcaption {
+  font-size: 14px;
+  color: var(--ink-2);
+  margin-top: 9px;
+  text-align: left;
+  line-height: 1.6;
+}
+.fig figcaption > b { color: var(--navy); margin-right: 6px; }
+.fig .credit { color: var(--ink-3); font-size: 13px; }
+
+/* 보강 입력 상자와 외부 링크 그림 */
+.box--notes{border-left:4px solid #f2b705;background:#fffaec}
+.fig--ext img{outline:2px dashed #f2b705;outline-offset:3px}
+.fig .credit{font-size:.82em;color:#8a6300}
+
+/* 페이지에서 직접 고치는 기능 */
+.editbar{position:fixed;right:16px;bottom:16px;z-index:60;display:flex;gap:6px;
+  align-items:center;flex-wrap:wrap;justify-content:flex-end;max-width:min(94vw,520px);
+  padding:8px;border-radius:10px;background:#ffffffee;border:1px solid #c6d2dd;
+  box-shadow:0 2px 12px rgba(0,0,0,.14)}
+.editbar.is-on{background:#fffaecf2;border-color:#f2b705}
+.editbtn{font:inherit;font-size:.86rem;padding:6px 11px;border-radius:7px;cursor:pointer;
+  border:1px solid #003c71;background:#fff;color:#003c71}
+.editbtn:hover{background:#eaf1f8}
+.editbtn--main{background:#003c71;color:#fff;font-weight:700}
+.editbtn--main:hover{background:#00529c}
+.editbtn--warn{border-color:#b3261e;color:#b3261e}
+.editbtn--warn:hover{background:#fbeceb}
+.editcount{font-size:.82rem;color:#8a6300;font-weight:700}
+.editgrp{display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end}
+.editnote{position:fixed;left:16px;bottom:16px;z-index:60;max-width:min(92vw,460px);
+  padding:10px 13px;border-radius:9px;border-left:4px solid #f2b705;background:#16191df2;
+  color:#fff;font-size:.86rem;line-height:1.5;opacity:0;transform:translateY(8px);
+  transition:opacity .18s,transform .18s;pointer-events:none}
+.editnote.is-on{opacity:1;transform:none}
+.editdump{position:fixed;left:16px;bottom:72px;z-index:60;width:min(92vw,560px);height:40vh;
+  font:12px/1.5 monospace;padding:10px;border:2px solid #f2b705;border-radius:8px;background:#fff}
+body.editing [contenteditable]{outline:1px dashed #9fb3c4;outline-offset:3px;border-radius:3px}
+body.editing [contenteditable]:focus{outline:2px solid #003c71;background:#f7fbff}
+body.editing h2{position:relative}
+.memobtn{font:inherit;font-size:.62em;font-weight:400;margin-left:10px;padding:2px 8px;
+  border-radius:6px;cursor:pointer;border:1px dashed #8a6300;background:#fffaec;color:#8a6300;
+  vertical-align:middle}
+.memobtn:hover{background:#f2b705;color:#16191d}
+h2.has-memo::after{content:"메모";font-size:.58em;font-weight:400;margin-left:10px;
+  padding:2px 8px;border-radius:6px;background:#f2b705;color:#16191d;vertical-align:middle}
+.is-edited{background:#fffaec;box-shadow:inset 3px 0 0 #f2b705;padding-left:9px}
+@media print{.editbar,.editnote,.editdump,.memobtn{display:none}}
+.editmodal{position:fixed;inset:0;z-index:70;display:flex;align-items:center;
+  justify-content:center;padding:16px;background:#16191dbf}
+.editmodal__box{width:min(96vw,560px);background:#fff;border-radius:12px;padding:18px 20px;
+  box-shadow:0 8px 32px rgba(0,0,0,.3)}
+.editmodal__box h3{margin:0 0 6px;font-size:1.02rem;color:#003c71}
+.editmodal__box p{margin:0 0 12px;font-size:.84rem;color:#4a5159}
+.editmodal__box textarea{width:100%;font:inherit;font-size:.9rem;line-height:1.55;padding:10px;
+  border:1px solid #c6d2dd;border-radius:8px;resize:vertical;box-sizing:border-box}
+.editmodal__box textarea:focus{outline:2px solid #003c71;border-color:#003c71}
+.editmodal__row{display:flex;gap:8px;justify-content:flex-end;margin-top:12px}
+
+/* 깊이 층위 상자와 수업 사이 연결 */
+.box--step{border-left:4px solid #2e7d32;background:#ecf6ec}
+.box--step>b{color:#1e6b2c}
+.box--front{border-left:4px solid #6b4fa0;background:#f3eff9}
+.box--front>b{color:#5b3a8a}
+a.xref{font-variant-numeric:tabular-nums;white-space:nowrap;text-decoration:none;
+  border-bottom:1px dotted currentColor}
+a.xref:hover{background:#eaf1f8}
+
+/* ---- 본문 목차 ---- */
+/* 평범한 목록으로 두면 본문과 구별되지 않아 긴 수업에서 지나치기 쉽다. */
+.contents {
+  border: 1px solid var(--line);
+  background: var(--bg);
+  border-radius: var(--radius);
+  padding: 16px 22px;
+  margin: 28px 0 36px;
+}
+.contents strong {
+  display: block;
+  font-size: 13px;
+  letter-spacing: .04em;
+  color: var(--ink-2);
+  margin-bottom: 10px;
+}
+.contents .qlist { margin: 0; }
+.contents .qlist li { margin-bottom: 6px; font-size: 15.5px; }
+
+/* ---- 수식 상자 ---- */
+/* @eq 로 적은 줄. 본문 문단과 섞이면 식의 경계가 보이지 않는다. */
+.equation {
+  background: var(--accent-soft);
+  border-left: 3px solid var(--navy);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  padding: 16px 20px;
+  margin: 22px 0;
+  line-height: 2;
+  overflow-wrap: anywhere;
+}
+</style><link rel="stylesheet" href="../../../../assets/site.css"><link rel="stylesheet" href="../../../../assets/lesson.css"></head><body><header class="masthead">
   <div class="wrap">
     <a class="brand" href="../../../../index.html">의생명과학 교육과정</a>
     <nav>
       <a href="../../../../curriculum/index.html">전체 수업</a>
       <a href="../../../../curriculum/materials.html">자료 내려받기</a>
-      <a href="../../../../curriculum/M07/index.html">실습</a>
       <a href="../../../../archive/index.html">아카이브</a>
     </nav>
   </div>
 </header>
 
-<main class="wrap">
-<nav class="crumb" aria-label="이동 경로"><a href="../../../../index.html">대문</a><span aria-hidden="true">›</span><a href="../../../index.html">전체 수업</a><span aria-hidden="true">›</span><a href="../../index.html">M02</a><span aria-hidden="true">›</span><a href="../index.html">14주차</a><span aria-hidden="true">›</span><span>M02-W14-L01</span></nav>
+<main class="wrap wrap--narrow lesson" data-lesson-id="M02-W14-L01" data-lesson="M02-W14-L01"><nav class="crumb" aria-label="이동 경로"><a href="../../../../index.html">대문</a><span aria-hidden="true">›</span><a href="../../../index.html">전체 수업</a><span aria-hidden="true">›</span><a href="../../index.html">M02</a><span aria-hidden="true">›</span><a href="../index.html">14주차</a><span aria-hidden="true">›</span><span>M02-W14-L01</span></nav><section class="hero"><p class="eyebrow">M02-W14-L01 · 대사생화학 · 대사조절과 질환</p><h1>비만의 에너지 균형과 지방조직 내분비</h1><p class="en"></p></section><section aria-labelledby="objectives"><h2 id="objectives">학습목표</h2><ul><li>에너지 균형과 체중 변화의 관계를 설명한다.</li><li>지방조직의 저장 위치와 기능을 체지방 총량과 구별한다.</li><li>렙틴과 장 유래 신호가 섭취 조절에 참여하는 과정을 설명한다.</li><li>감량 후 생리적 적응과 장기 유지의 어려움을 이해한다.</li></ul></section>
 
-  <section class="hero">
-    <p class="eyebrow">M02-W14-L01 · 대사생화학 · 대사조절과 질환</p>
-    <h1>비만의 에너지 균형과 지방조직 내분비 [26장]</h1>
-    <p class="lede">강의 수업 · 상태 <span class="badge badge--design">설계</span></p>
-  </section>
+<section aria-labelledby="prerequisites"><h2 id="prerequisites">선수지식</h2><p>중성지방의 저장과 분해, 인슐린 작용, 13주차의 장기 간 신호를 복습한다. 이번 강의의 질문은 “몸에 남는 에너지는 어떻게 결정되며, 왜 같은 식사 환경에서도 반응이 다른가?”이다.</p></section>
 
-  
-  <div class="callout">이 수업은 아직 집필 전이다. 제작 기준은
-  <a href="../../../../PROJECT.md">PROJECT.md</a>의 집필 원칙과 산출물 규격을 따른다.</div>
+<nav class="contents" aria-label="강의 구성"><strong>강의 구성</strong><ol class="qlist"><li><a href="#s1">1. 에너지 균형은 결과를 설명하지만 원인을 모두 설명하지는 않는다</a></li><li><a href="#s2">2. 체중은 지방량과 같은 숫자가 아니다</a></li><li><a href="#s3">3. 지방조직은 지방산을 안전하게 저장하는 기능을 한다</a></li><li><a href="#s4">4. 지방의 위치가 간과 근육에 전달되는 부담을 바꾼다</a></li><li><a href="#s5">5. 렙틴은 저장 상태를 뇌에 전달한다</a></li><li><a href="#s6">6. 장의 신호와 지방조직의 신호는 서로 보완한다</a></li><li><a href="#s7">7. 감량 후에는 다시 먹도록 유도하는 반응이 생길 수 있다</a></li><li><a href="#s8">8. 개입의 결과는 체중 외의 변화도 함께 본다</a></li></ol></nav><section aria-label="본문"><section id="s1" class="lesson-section"><h2>1. 에너지 균형은 결과를 설명하지만 원인을 모두 설명하지는 않는다</h2><p>장기간 몸에 흡수한 에너지가 소비한 에너지보다 많으면 저장 에너지가 늘어난다. 이는 에너지 보존 법칙에 따른 관계이다. 그러나 왜 섭취가 증가하고 소비가 감소하는지는 별도의 질문이다. 식욕, 포만감, 유전적 요인, 수면, 약물, 활동 환경과 음식 접근성이 함께 영향을 준다. 따라서 비만을 의지 하나의 문제로 설명하면 생리적 조절을 놓친다.</p><p>에너지 소비에는 안정 상태의 장기 기능, 신체 활동, 음식의 소화·흡수·대사에 쓰이는 부분이 포함된다. 운동 시간 외에 서 있기나 이동 같은 일상 활동도 기여한다. 몸의 크기와 구성, 질환 상태가 달라지면 소비량도 달라지므로 “매일 같은 열량을 줄이면 체중이 영원히 같은 속도로 감소한다”는 계산은 성립하지 않는다.</p><p><strong>에너지 균형의 구성</strong></p><div class="tw"><table aria-label="에너지 균형의 구성"><thead><tr><th>항목</th><th>예</th><th>함께 볼 점</th></tr></thead><tbody><tr><td>흡수한 에너지</td><td>식품의 탄수화물·지방·단백질</td><td>섭취량과 실제 흡수량은 구별</td></tr><tr><td>안정 시 소비</td><td>장기 기능·체온 유지</td><td>체격과 제지방량 등의 영향</td></tr><tr><td>활동·식사 관련 소비</td><td>운동·일상 움직임·식이성 열발생</td><td>생활과 영양 상태에 따라 변화</td></tr></tbody></table></div><div class="box box--step"><b>시험에서 가려내는 지점</b> 양의 에너지 균형은 저장이 늘어나는 조건이다. 그것만으로 섭취와 소비가 변한 생물학적·환경적 원인까지 설명한 것은 아니다.</div></section>
+<section id="s2" class="lesson-section"><h2>2. 체중은 지방량과 같은 숫자가 아니다</h2><p>체중에는 지방, 근육과 장기, 뼈, 체액 등이 모두 포함된다. 탄수화물 섭취가 줄어 글리코젠과 함께 저장된 물이 감소하면 초기 체중이 빠르게 줄 수 있다. 이 감소분을 모두 지방 산화로 계산하면 과대평가하게 된다. 반대로 근력 운동으로 근육량을 유지하거나 늘리는 동안 체중이 크게 변하지 않아도 몸의 구성이 달라질 수 있다.</p><p>체질량지수 BMI는 체중을 키의 제곱으로 나눈 값이다. 계산이 간단하지만 지방량을 직접 측정하지 않으며 지방의 위치도 알려 주지 않는다. 해석에는 연령과 집단에 맞는 기준, 허리둘레, 체성분과 대사 상태 등이 필요하다. 교재의 미국 성인 기준을 한국의 모든 연령에 그대로 적용하지 않는다.</p><div class="box box--limit"><b>임상 연계</b><h3>학습용 사례: 같은 BMI, 다른 체성분</h3><p>근육량이 많은 사람과 근육량이 적고 복부 지방이 많은 사람의 BMI가 같을 수 있다. 이 숫자 하나로 두 사람의 체지방 분포와 기능을 같다고 판단할 수 없다. BMI는 출발점이며 전체 대사 상태의 대용물이 아니다.</p></div><p>체중 변화의 원인을 묻는다면 측정 기간도 중요하다. 하루 사이의 변화는 수분과 장 내용물의 영향을 많이 받는다. 지방량 변화와 일시적 체중 변화를 구별해야 식사·운동 개입을 제대로 해석할 수 있다.</p></section>
+<section id="s3" class="lesson-section"><h2>3. 지방조직은 지방산을 안전하게 저장하는 기능을 한다</h2><p>중성지방은 같은 무게로 많은 에너지를 저장할 수 있는 형태이다. 지방세포는 들어온 지방산을 중성지방으로 묶어 지방방울에 보관한다. 필요할 때는 지방분해로 연료를 내보낸다. 따라서 지방조직은 제거해야 할 불필요한 조직이 아니라 에너지의 유입과 필요를 조절하는 조직이다.</p><p>지방조직이 커지는 과정에는 지방세포의 크기 증가와 새로운 지방세포 형성이 모두 관여할 수 있다. 세포 크기만 늘어나는지, 혈관 공급과 조직 재구성이 잘 이루어지는지도 기능에 영향을 준다. 저장 능력과 공급 사이의 불균형이 커지면 간·근육 등에 이소성 지방이 축적될 수 있다.</p><p><strong>지방 저장을 평가하는 세 질문</strong></p><div class="tw"><table aria-label="지방 저장을 평가하는 세 질문"><thead><tr><th>질문</th><th>의미</th></tr></thead><tbody><tr><td>얼마나 저장되는가?</td><td>체지방의 총량</td></tr><tr><td>어디에 저장되는가?</td><td>피하·내장·간·근육 등의 분포</td></tr><tr><td>저장과 방출이 조절되는가?</td><td>식후 지방분해 억제와 공복 동원 능력</td></tr></tbody></table></div><p>감량 때 지방세포는 저장 중성지방이 줄어 작아질 수 있다. 그렇다고 단기간에 지방세포 수까지 같은 비율로 줄어드는 것은 아니다. 장기적인 조직 변화와 단기적인 저장량 변화를 구별한다. <a href="#ref-t26">[T26]</a></p></section>
+<section id="s4" class="lesson-section"><h2>4. 지방의 위치가 간과 근육에 전달되는 부담을 바꾼다</h2><p>복부 지방 축적은 여러 대사 위험과 연관된다. 일부 내장 지방에서 나온 물질은 문맥을 통해 간에 직접 도달하므로 간의 기질 공급과 신호에 영향을 줄 수 있다. 그러나 간으로 오는 지방산이 모두 내장 지방에서만 유래하는 것은 아니다. 전신 피하 지방의 기여, 식이 지방, 간 자체의 합성도 함께 고려해야 한다.</p><p>아래쪽 피하 지방과 내장 지방은 평균적인 저장·동원 특성이 다르지만, 이를 개인에게 절대적인 좋음과 나쁨으로 적용하지 않는다. 지방의 위치와 기능, 혈당과 지질, 혈압 등 실제 상태를 함께 읽는 것이 중요하다.</p><div class="box box--limit"><b>임상 연계</b><h3>학습용 비교: 체지방이 적어도 간에 지방이 쌓일 수 있다</h3><p>지방이영양증처럼 지방조직의 저장 기능이 부족하면 간과 근육의 지방 축적과 인슐린 저항성이 나타날 수 있다. 이 반례는 체지방 총량만으로 대사 건강을 판단하기 어렵다는 점을 보여 준다. 13주차의 장기 간 기질 이동과 연결해 설명해 보자.</p></div><div class="box box--step"><b>시험에서 가려내는 지점</b> 체지방의 양, 저장 위치, 지방조직의 기능을 각각 구별한다. 같은 체중이 같은 지방 분포나 인슐린 감수성을 뜻하지 않는다.</div></section>
+<section id="s5" class="lesson-section"><h2>5. 렙틴은 저장 상태를 뇌에 전달한다</h2><p>지방세포에서 분비하는 렙틴은 뇌가 에너지 저장 상태를 파악하는 데 참여한다. 영양 부족과 지방량 감소에 따른 렙틴 신호 감소는 섭취를 늘리고 에너지를 보존하는 방향의 반응과 연결된다. 렙틴은 단순히 한 끼를 먹은 직후 잠깐 분비되는 포만 호르몬으로 이해하기보다 장기 저장 상태와 영양 가용성을 알리는 신호로 이해한다.</p><p>시상하부의 POMC 계열 신호는 α-MSH와 melanocortin 수용체 경로를 통해 섭취 억제에 관여한다. NPY·AgRP 계열은 섭취 촉진 방향에 참여한다. 이들은 여러 뇌 회로와 연결되어 있으며 하나의 신호가 행동 전체를 결정하지 않는다. 세부 회로 이름보다 저장 상태의 정보가 섭취와 소비를 조절한다는 관계가 먼저이다.</p><p><strong>렙틴 농도와 효과를 나누어 해석한다</strong></p><div class="tw"><table aria-label="렙틴 농도와 효과를 나누어 해석한다"><thead><tr><th>상황</th><th>중심 해석</th></tr></thead><tbody><tr><td>드문 선천성 렙틴 결핍</td><td>신호 물질의 부족이 심한 식욕 증가와 비만에 기여</td></tr><tr><td>흔한 비만</td><td>렙틴이 높아도 기대한 만큼의 반응이 나타나지 않을 수 있음</td></tr><tr><td>감량 후</td><td>저장·영양 상태의 변화가 식욕 조절에 영향</td></tr></tbody></table></div><p>그러므로 흔한 비만을 모두 렙틴 부족으로 설명하거나 렙틴을 늘리면 누구나 감량한다고 추론하지 않는다. 농도와 조직의 반응은 다른 정보이다.</p></section>
+<section id="s6" class="lesson-section"><h2>6. 장의 신호와 지방조직의 신호는 서로 보완한다</h2><p>위와 장은 음식이 들어오고 지나가는 정보를 전달한다. Ghrelin은 공복의 식욕 촉진에, CCK와 PYY 등은 식사에 따른 섭취 조절에 참여한다. GLP-1과 GIP는 영양 섭취에 따른 인슐린 반응을 돕는 incretin이다. 같은 장 유래 신호라도 분비 위치와 표적, 작용은 모두 같지 않다.</p><p>지방조직은 렙틴뿐 아니라 아디포넥틴 등 여러 단백질을 분비한다. 아디포넥틴은 지방산 이용과 인슐린 감수성 조절에 관련되며 비만에서는 감소하는 경향이 있다. 또한 지방조직에는 면역세포가 있어 염증성 신호에 기여한다. 지방조직에서 검출되는 모든 단백질을 지방세포가 직접 분비한다고 가정하지 않는다.</p><p><strong>정보의 종류를 중심으로 묶어 본다</strong></p><div class="tw"><table aria-label="정보의 종류를 중심으로 묶어 본다"><thead><tr><th>정보</th><th>예시</th><th>연결되는 반응</th></tr></thead><tbody><tr><td>에너지 저장·영양 상태</td><td>렙틴</td><td>뇌의 섭취·소비 조절</td></tr><tr><td>식사의 유입</td><td>장 호르몬</td><td>포만감·위장관 기능·췌장 반응</td></tr><tr><td>지방조직의 기능 상태</td><td>아디포넥틴·염증성 신호</td><td>조직의 연료 이용과 호르몬 반응</td></tr></tbody></table></div><div class="box box--front"><b>연구 전선</b> 동일한 식사를 했는데 포만감이 다른 두 사람을 비교하려면 장 호르몬 하나 외에 어떤 정보가 필요할까? 식사 속도, 수면, 약물, 음식의 형태와 기존 영양 상태를 함께 생각해 보자.</div></section>
+<section id="s7" class="lesson-section"><h2>7. 감량 후에는 다시 먹도록 유도하는 반응이 생길 수 있다</h2><p>체중이 줄면 몸이 작아진 만큼 에너지 소비가 줄 수 있다. 여기에 식욕 조절과 에너지 보존 방향의 적응이 더해질 수 있다. 따라서 처음 효과가 있었던 섭취량이 시간이 지나면 같은 정도의 에너지 적자를 만들지 않을 수 있다. 체중 감소가 느려졌다는 사실만으로 당사자가 노력을 중단했다고 판단하면 안 된다.</p><p>사람 대상 연구에서는 식이 감량 뒤 일부 식욕 관련 호르몬과 배고픔의 변화가 장기간 남는 현상이 관찰되었다. 이 결과는 감량 유지가 별도의 생리적 과제임을 뒷받침한다. 모든 사람이 동일하게 반응하거나 반드시 체중을 되찾는다는 뜻은 아니다. <a href="#ref-r1">[R1]</a></p><div class="box box--limit"><b>임상 연계</b><h3>학습용 사례: 같은 계획인데 감소 속도가 느려졌다</h3><p>체격 감소에 따른 소비 변화, 배고픔, 일상 활동 변화와 수분 상태를 먼저 구별한다. 초기 체중 감소의 일부가 수분이었다면 이후 지방량 감소와 속도가 다르게 보일 수 있다. 고정된 열량을 고정된 체중 감소로 바꾸는 단순 계산에는 한계가 있다.</p></div><div class="box box--step"><b>시험에서 가려내는 지점</b> 감량과 감량 유지는 같은 조건의 반복이 아니다. 몸의 크기와 호르몬·행동 반응이 달라지므로 장기적인 지원과 재평가가 필요하다.</div></section>
+<section id="s8" class="lesson-section"><h2>8. 개입의 결과는 체중 외의 변화도 함께 본다</h2><p>신체 활동은 에너지를 소비하는 동시에 근육의 기능과 포도당 처리, 심폐 능력에 영향을 준다. 따라서 체중 감소가 작다는 이유만으로 운동의 효과가 없다고 판단할 수 없다. 식사의 구성은 섭취 지속 가능성, 포만감, 혈당과 지질에 영향을 줄 수 있어 열량 숫자만으로 모든 식사를 같다고 취급하지 않는다.</p><p>비만을 평가할 때는 기능 저하와 동반 질환을 함께 보고, 치료 결과도 여러 지표로 확인한다. 체중, 허리둘레, 혈당과 지질, 신체 기능은 서로 다른 면을 보여 준다. 특정 호르몬의 변화가 곧바로 장기적인 임상 이득을 의미하지는 않는다.</p><p><strong>개입 뒤 무엇이 변했는가</strong></p><div class="tw"><table aria-label="개입 뒤 무엇이 변했는가"><thead><tr><th>지표</th><th>알 수 있는 것</th></tr></thead><tbody><tr><td>체중·체성분</td><td>몸의 양적 구성 변화</td></tr><tr><td>혈당·지질</td><td>대사 조절 변화</td></tr><tr><td>근력·심폐 능력</td><td>기능 변화</td></tr><tr><td>장기 임상 결과</td><td>질환 발생·악화 등의 실제 효과</td></tr></tbody></table></div><div class="box box--front"><b>연구 전선</b> 체중은 비슷하게 감소했지만 근육량과 운동 능력이 다르게 변한 두 중재를 비교해 보자. 성공을 체중 하나로 정의하면 어떤 결과를 놓치게 될까?</div><p>다음 강의에서는 이러한 에너지 저장 문제가 간의 지방 유입·합성·산화·수출과 어떻게 연결되는지 살펴본다. 이번 강의의 기초 내용은 교재 26장에 근거한다. <a href="#ref-t26">[T26]</a></p></section></section>
 
-  <h2>학습목표</h2>
-  <p>작성 예정. 이 수업이 답하는 질문 6~9개를 먼저 확정한 뒤 측정 가능한 학습목표로 옮긴다.</p>
+<section aria-labelledby="questions"><h2 id="questions">확인 문항과 해설</h2><ol class="quiz"><li><p class="qq"><strong>판단.</strong> 양의 에너지 균형은 비만의 생물학적·환경적 원인을 모두 설명한다.</p><details><summary>해설</summary><p>틀리다. 저장이 증가하는 관계를 설명하지만 섭취와 소비가 변한 원인은 별도로 살펴야 한다.</p></details></li><li><p class="qq"><strong>판단.</strong> 초기 체중 감소에는 글리코젠과 함께 저장된 물의 감소가 포함될 수 있다.</p><details><summary>해설</summary><p>맞다. 체중 감소를 전부 지방량 감소로 계산하지 않는다.</p></details></li><li><p class="qq"><strong>판단.</strong> 같은 BMI이면 지방 분포와 대사 상태도 같다.</p><details><summary>해설</summary><p>틀리다. BMI는 체성분과 저장 위치를 직접 측정하지 않는다.</p></details></li><li><p class="qq"><strong>판단.</strong> 흔한 비만에서 렙틴이 높아도 섭취 억제 반응이 충분하지 않을 수 있다.</p><details><summary>해설</summary><p>맞다. 호르몬 농도와 표적의 반응을 구별한다.</p></details></li><li><p class="qq">감량 후 같은 섭취량으로도 체중 감소 속도가 달라지는 이유를 설명하라.</p><details><summary>해설</summary><p>몸의 크기 감소와 생리적 적응으로 소비가 달라지고, 활동과 식욕도 변할 수 있다. 초기 수분 변화도 속도 비교에 영향을 준다.</p></details></li><li><p class="qq">체중 변화가 작아도 운동 개입의 효과를 평가할 수 있는 지표를 제시하라.</p><details><summary>해설</summary><p>심폐 능력, 근력, 체성분, 포도당 조절 등을 본다. 각 지표가 다른 기능을 반영한다.</p></details></li></ol></section>
 
-  <h2>선수지식</h2>
-  <p>작성 예정.</p>
-
-  <h2>본문</h2>
-  <p>작성 예정. 각 절은 하나의 질문에 답하는 단위로 쓰고
-  질문 → 답 → 근거 → 조건과 한계 → 귀결의 순서로 전개한다.</p>
-
-  <h2>확인 문항</h2>
-  <p>작성 예정. 5개 이상, 절반 이상은 판단을 묻는 문항으로 한다.</p>
-
-  <h2>참고문헌</h2>
-  <p>작성 예정.</p>
-
-  <nav class="pager"><a href="../../../M02/W13/L03/index.html">← M02-W13-L03 당뇨병의 생화학과 급성 대사 합병증 [25장]</a><a href="../../../M02/W14/L02/index.html">M02-W14-L02 대사이상 지방간질환과 간 지질 흐름 →</a></nav>
-
-</main>
-
-<footer class="foot wrap">
+<section aria-labelledby="references"><h2 id="references">참고문헌</h2><ol class="ref"><li id="ref-t26">[T26] Abali EE et al. Lippincott Illustrated Reviews: Biochemistry. 8판. 2022. 26장, 제공 PDF 파일 712–726쪽. 에너지 균형·지방조직·섭취 조절.</li><li id="ref-r1">[R1] Sumithran P et al. Long-Term Persistence of Hormonal Adaptations to Weight Loss. N Engl J Med. 2011. <a href="https://doi.org/10.1056/NEJMoa1105816">원저</a>.</li></ol></section>
+<nav class="pager" aria-label="이전·다음 수업"><a href="../../W13/L03/index.html">← 당뇨병의 생화학과 급성 대사 합병증 [25장]</a><a href="../../W14/L02/index.html">대사이상 지방간질환과 간 지질 흐름 →</a></nav></main><footer class="foot wrap">
   <span>© 2026 Kim Jintae · Hanyang University</span>
   <a href="https://github.com/hoperiasd2/hoperiasd2.github.io">GitHub 저장소</a>
 </footer>
 
-<script src="../../../../assets/site.js"></script>
-</body>
-</html>
+<script src="../../../../assets/edit.js" defer></script></body></html>

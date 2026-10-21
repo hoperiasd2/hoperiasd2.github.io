@@ -1,64 +1,580 @@
 <!DOCTYPE html>
-<html lang="ko">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>M02-W14-L02 대사이상 지방간질환과 간 지질 흐름</title>
-<meta name="description" content="대사이상 지방간질환과 간 지질 흐름">
-<link rel="stylesheet" href="../../../../assets/site.css">
-</head>
-<body>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>M02-W14-L02 대사이상 지방간질환과 간 지질 흐름</title><meta name="description" content="대사이상 지방간질환과 간 지질 흐름: 구조에서 생리 기능과 질환까지"><style data-source="site.css + lesson.css snapshot 2026-10-17">/* 의생명과학 교육과정 — 공통 스타일
+   색은 :root 토큰으로만 쓰고 다크 모드에서 재정의한다. */
 
-<header class="masthead">
+:root {
+  --navy: #003c71;
+  --navy-700: #00294e;
+  --chrome: #f2b705;
+  --ink: #16191d;
+  --ink-2: #4a5159;
+  --ink-3: #727a84;
+  --line: #dde2e8;
+  --bg: #f6f8fa;
+  --card: #ffffff;
+  --accent-soft: #eaf1f8;
+  --ok: #1a7f52;
+  --ok-soft: #e7f4ed;
+  --warn: #9a6700;
+  --warn-soft: #fdf5e3;
+  --radius: 10px;
+  --wrap: 1180px;
+  --mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+  --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo",
+    "Noto Sans KR", "Malgun Gothic", sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --navy: #8fc3f5;
+    --navy-700: #b9d9fb;
+    --chrome: #f2b705;
+    --ink: #e7eaee;
+    --ink-2: #b2bac4;
+    --ink-3: #868f9a;
+    --line: #2b3138;
+    --bg: #14171b;
+    --card: #1b1f24;
+    --accent-soft: #1e2833;
+    --ok: #5dd3a0;
+    --ok-soft: #16271f;
+    --warn: #e3b341;
+    --warn-soft: #2a2416;
+  }
+}
+:root[data-theme="dark"] {
+  --navy: #8fc3f5;
+  --navy-700: #b9d9fb;
+  --ink: #e7eaee;
+  --ink-2: #b2bac4;
+  --ink-3: #868f9a;
+  --line: #2b3138;
+  --bg: #14171b;
+  --card: #1b1f24;
+  --accent-soft: #1e2833;
+  --ok: #5dd3a0;
+  --warn: #e3b341;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.75;
+  -webkit-text-size-adjust: 100%;
+}
+
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 16px; }
+.wrap--narrow { max-width: 860px; }
+
+a { color: var(--navy); }
+a:hover { color: var(--navy-700); }
+
+/* ---- 머리글 ---- */
+.masthead {
+  background: #003c71;
+  border-bottom: 3px solid var(--chrome);
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+.masthead .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 52px;
+}
+.masthead a.brand {
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  letter-spacing: .01em;
+}
+.masthead nav { display: flex; gap: 16px; flex-wrap: wrap; }
+.masthead nav a { color: #cfe0f0; text-decoration: none; font-size: 14px; }
+.masthead nav a:hover { color: #fff; }
+
+/* ---- 이동 경로 ---- */
+.crumb {
+  font-size: 13px;
+  color: var(--ink-3);
+  padding: 14px 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+}
+.crumb a { color: var(--ink-2); text-decoration: none; }
+.crumb a:hover { color: var(--navy); text-decoration: underline; }
+.crumb span[aria-hidden] { color: var(--ink-3); }
+
+/* ---- 표제 ---- */
+.hero {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-left: 5px solid var(--navy);
+  border-radius: var(--radius);
+  padding: 26px 28px;
+  margin: 16px 0 24px;
+}
+.hero .eyebrow {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  margin: 0 0 8px;
+}
+.hero h1 { margin: 0 0 10px; font-size: 27px; line-height: 1.35; }
+.hero .en { color: var(--ink-3); font-size: 14px; margin: 0 0 12px; }
+.hero p.lede { margin: 0; color: var(--ink-2); max-width: 70ch; }
+
+h2 {
+  font-size: 20px;
+  margin: 34px 0 14px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--line);
+}
+h3 { font-size: 17px; margin: 24px 0 10px; }
+
+/* ---- 카드 격자 ---- */
+.grid { display: grid; gap: 14px; }
+.grid--modules { grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); }
+.grid--weeks { grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); }
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 18px 20px;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  transition: border-color .12s, transform .12s;
+}
+a.card:hover { border-color: var(--navy); transform: translateY(-1px); }
+.card__no {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--chrome);
+  font-weight: 700;
+  letter-spacing: .08em;
+}
+.card__title { font-weight: 700; margin: 4px 0 2px; }
+.card__en { font-size: 13px; color: var(--ink-3); }
+.card__meta { font-size: 13px; color: var(--ink-2); margin-top: 10px; }
+
+/* ---- 진행 막대 ---- */
+.bar { height: 5px; background: var(--line); border-radius: 3px; overflow: hidden; margin-top: 10px; }
+.bar > i { display: block; height: 100%; background: var(--navy); }
+
+/* ---- 수업 목록 ---- */
+.lessons { list-style: none; margin: 0; padding: 0; }
+.lessons li {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--card);
+  margin-bottom: 8px;
+}
+.lessons a {
+  display: flex;
+  gap: 14px;
+  align-items: baseline;
+  padding: 13px 16px;
+  text-decoration: none;
+  color: inherit;
+}
+.lessons a:hover { background: var(--accent-soft); }
+.lessons .lid {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--ink-3);
+  white-space: nowrap;
+}
+.lessons .ltitle { flex: 1; min-width: 0; }
+.lessons .lgroup { font-size: 12px; color: var(--ink-3); }
+
+/* ---- 상태 배지 ---- */
+.badge {
+  font-size: 11px;
+  font-family: var(--mono);
+  padding: 2px 8px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  color: var(--ink-2);
+  background: var(--bg);
+  white-space: nowrap;
+}
+.badge--design { color: var(--ink-3); }
+.badge--draft { color: var(--warn); border-color: var(--warn); background: var(--warn-soft); }
+.badge--review { color: var(--navy); border-color: var(--navy); background: var(--accent-soft); }
+.badge--done {
+  color: var(--ok);
+  border-color: var(--ok);
+  background: var(--ok-soft);
+  font-weight: 600;
+}
+
+/* ---- 목록에서 집필 상태를 한눈에 ---- */
+/* 배지만으로는 276줄을 훑을 때 눈에 들어오지 않아 왼쪽에 색 띠를 둔다. */
+.lessons li[data-status] { border-left: 4px solid var(--line); }
+.lessons li[data-status="done"] { border-left-color: var(--ok); }
+.lessons li[data-status="draft"] { border-left-color: var(--warn); }
+.lessons li[data-status="review"] { border-left-color: var(--navy); }
+.lessons li[data-status="design"] { border-left-color: var(--line); }
+.lessons li[data-status="done"] .ltitle { font-weight: 600; }
+
+.filters--status { margin-top: -4px; }
+.filters--status button[data-filter-status="done"][aria-pressed="true"] {
+  border-color: var(--ok);
+  color: var(--ok);
+}
+
+/* ---- 검색 ---- */
+.search {
+  width: 100%;
+  padding: 12px 14px;
+  font-size: 15px;
+  font-family: inherit;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--card);
+  color: var(--ink);
+}
+.search:focus { outline: 2px solid var(--navy); outline-offset: 1px; }
+.filters { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 18px; }
+.filters button {
+  font: inherit;
+  font-size: 13px;
+  padding: 6px 13px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: var(--card);
+  color: var(--ink-2);
+  cursor: pointer;
+}
+.filters button[aria-pressed="true"] { background: var(--navy); color: #fff; border-color: var(--navy); }
+.count { font-size: 13px; color: var(--ink-3); margin: 0 0 12px; }
+
+/* ---- 안내 상자 ---- */
+.callout {
+  background: var(--accent-soft);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--navy);
+  border-radius: var(--radius);
+  padding: 14px 18px;
+  margin: 18px 0;
+  font-size: 15px;
+}
+.callout--warn { border-left-color: var(--chrome); }
+
+/* ---- 이전·다음 ---- */
+.pager {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 36px 0 12px;
+  border-top: 1px solid var(--line);
+  padding-top: 16px;
+  font-size: 14px;
+}
+.pager a { text-decoration: none; }
+.pager span { color: var(--ink-3); }
+
+/* ---- 표 ---- */
+table { border-collapse: collapse; width: 100%; margin: 14px 0; font-size: 15px; }
+th, td { border: 1px solid var(--line); padding: 8px 11px; text-align: left; vertical-align: top; }
+th { background: var(--accent-soft); font-weight: 700; }
+
+/* ---- 꼬리말 ---- */
+.foot {
+  margin-top: 56px;
+  padding: 22px 16px 40px;
+  border-top: 1px solid var(--line);
+  color: var(--ink-3);
+  font-size: 13px;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 640px) {
+  .hero { padding: 20px; }
+  .hero h1 { font-size: 22px; }
+  .lessons a { flex-wrap: wrap; gap: 6px 12px; }
+}
+
+@media print {
+  .masthead, .filters, .search, .pager, .foot { display: none; }
+  body { background: #fff; font-size: 11pt; }
+  .card, .hero { border: 1px solid #ccc; break-inside: avoid; }
+}
+
+/* 수업 본문 전용 스타일. site.css의 토큰을 그대로 쓴다. */
+
+.lesson { font-size: 16.5px; }
+.lesson p { margin: 0 0 14px; }
+.lesson ul, .lesson ol { margin: 0 0 16px; padding-left: 22px; }
+.lesson li { margin-bottom: 7px; }
+.lesson li > ul { margin: 7px 0 4px; }
+.lesson code {
+  font-family: var(--mono);
+  font-size: .9em;
+  background: var(--accent-soft);
+  padding: 1px 5px;
+  border-radius: 4px;
+}
+.lesson section { scroll-margin-top: 70px; }
+
+/* 슬라이드 내려받기 */
+.dl { margin: 0 0 24px; }
+.dlbtn {
+  display: inline-block;
+  padding: 9px 18px;
+  border: 1px solid var(--navy);
+  border-radius: var(--radius);
+  color: var(--navy);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 700;
+}
+.dlbtn:hover { background: var(--navy); color: #fff; }
+
+/* 질문과 답 */
+.lesson p.q, .lesson p.a {
+  border-radius: var(--radius);
+  padding: 13px 17px;
+  margin: 0 0 12px;
+}
+.lesson p.q {
+  background: var(--accent-soft);
+  border-left: 4px solid var(--navy);
+}
+.lesson p.a {
+  background: rgba(242, 183, 5, .13);
+  border-left: 4px solid var(--chrome);
+  font-weight: 600;
+}
+.lesson p.q > span, .lesson p.a > span {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: .1em;
+  margin-right: 10px;
+  vertical-align: 1px;
+  font-weight: 700;
+}
+.lesson p.q > span { color: var(--navy); }
+.lesson p.a > span { color: var(--warn); }
+
+/* 질문 목록 */
+.qlist { margin: 0 0 24px; }
+.qlist li { margin-bottom: 9px; }
+.qlist a { text-decoration: none; }
+.qlist a:hover { text-decoration: underline; }
+
+/* 조건·한계 / 귀결 / 안전 상자 */
+.box {
+  border-radius: var(--radius);
+  padding: 14px 18px;
+  margin: 16px 0;
+  font-size: 15.5px;
+  border: 1px solid var(--line);
+}
+.box > b {
+  display: block;
+  font-size: 11px;
+  font-family: var(--mono);
+  letter-spacing: .1em;
+  margin-bottom: 5px;
+}
+.box--limit { background: var(--accent-soft); border-left: 4px solid var(--navy); }
+.box--limit > b { color: var(--navy); }
+.box--result { background: rgba(242, 183, 5, .1); border-left: 4px solid var(--chrome); }
+.box--result > b { color: var(--warn); }
+.box--safety { background: rgba(242, 183, 5, .14); border-left: 5px solid var(--chrome); }
+.box--safety > b { color: var(--warn); font-size: 12px; }
+.box--safety ul { margin: 6px 0 0; }
+
+/* 표 */
+.tw { overflow-x: auto; margin: 16px 0; }
+.lesson table { font-size: 14.5px; min-width: 520px; }
+.lesson th { white-space: nowrap; }
+
+/* 확인 문항 */
+.quiz { counter-reset: none; }
+.quiz > li { margin-bottom: 18px; }
+.quiz .qq { font-weight: 600; margin-bottom: 8px; }
+.quiz details {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--card);
+  padding: 0 14px;
+}
+.quiz details[open] { padding-bottom: 6px; }
+.quiz summary {
+  cursor: pointer;
+  padding: 9px 0;
+  font-size: 14px;
+  color: var(--navy);
+  font-weight: 700;
+}
+.quiz details p { margin: 4px 0 8px; font-size: 15.5px; }
+
+/* 참고문헌 */
+.ref { font-size: 14.5px; color: var(--ink-2); }
+.ref li { margin-bottom: 8px; }
+
+@media print {
+  .quiz details { border: none; }
+  .quiz details[open] summary { display: none; }
+  .lesson p.q, .lesson p.a, .box, .equation { break-inside: avoid; }
+  .contents { font-size: 13px; background: none; }
+}
+
+/* 그림 */
+.fig { margin: 20px 0; text-align: center; }
+.fig img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: #fff;
+}
+.fig figcaption {
+  font-size: 14px;
+  color: var(--ink-2);
+  margin-top: 9px;
+  text-align: left;
+  line-height: 1.6;
+}
+.fig figcaption > b { color: var(--navy); margin-right: 6px; }
+.fig .credit { color: var(--ink-3); font-size: 13px; }
+
+/* 보강 입력 상자와 외부 링크 그림 */
+.box--notes{border-left:4px solid #f2b705;background:#fffaec}
+.fig--ext img{outline:2px dashed #f2b705;outline-offset:3px}
+.fig .credit{font-size:.82em;color:#8a6300}
+
+/* 페이지에서 직접 고치는 기능 */
+.editbar{position:fixed;right:16px;bottom:16px;z-index:60;display:flex;gap:6px;
+  align-items:center;flex-wrap:wrap;justify-content:flex-end;max-width:min(94vw,520px);
+  padding:8px;border-radius:10px;background:#ffffffee;border:1px solid #c6d2dd;
+  box-shadow:0 2px 12px rgba(0,0,0,.14)}
+.editbar.is-on{background:#fffaecf2;border-color:#f2b705}
+.editbtn{font:inherit;font-size:.86rem;padding:6px 11px;border-radius:7px;cursor:pointer;
+  border:1px solid #003c71;background:#fff;color:#003c71}
+.editbtn:hover{background:#eaf1f8}
+.editbtn--main{background:#003c71;color:#fff;font-weight:700}
+.editbtn--main:hover{background:#00529c}
+.editbtn--warn{border-color:#b3261e;color:#b3261e}
+.editbtn--warn:hover{background:#fbeceb}
+.editcount{font-size:.82rem;color:#8a6300;font-weight:700}
+.editgrp{display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end}
+.editnote{position:fixed;left:16px;bottom:16px;z-index:60;max-width:min(92vw,460px);
+  padding:10px 13px;border-radius:9px;border-left:4px solid #f2b705;background:#16191df2;
+  color:#fff;font-size:.86rem;line-height:1.5;opacity:0;transform:translateY(8px);
+  transition:opacity .18s,transform .18s;pointer-events:none}
+.editnote.is-on{opacity:1;transform:none}
+.editdump{position:fixed;left:16px;bottom:72px;z-index:60;width:min(92vw,560px);height:40vh;
+  font:12px/1.5 monospace;padding:10px;border:2px solid #f2b705;border-radius:8px;background:#fff}
+body.editing [contenteditable]{outline:1px dashed #9fb3c4;outline-offset:3px;border-radius:3px}
+body.editing [contenteditable]:focus{outline:2px solid #003c71;background:#f7fbff}
+body.editing h2{position:relative}
+.memobtn{font:inherit;font-size:.62em;font-weight:400;margin-left:10px;padding:2px 8px;
+  border-radius:6px;cursor:pointer;border:1px dashed #8a6300;background:#fffaec;color:#8a6300;
+  vertical-align:middle}
+.memobtn:hover{background:#f2b705;color:#16191d}
+h2.has-memo::after{content:"메모";font-size:.58em;font-weight:400;margin-left:10px;
+  padding:2px 8px;border-radius:6px;background:#f2b705;color:#16191d;vertical-align:middle}
+.is-edited{background:#fffaec;box-shadow:inset 3px 0 0 #f2b705;padding-left:9px}
+@media print{.editbar,.editnote,.editdump,.memobtn{display:none}}
+.editmodal{position:fixed;inset:0;z-index:70;display:flex;align-items:center;
+  justify-content:center;padding:16px;background:#16191dbf}
+.editmodal__box{width:min(96vw,560px);background:#fff;border-radius:12px;padding:18px 20px;
+  box-shadow:0 8px 32px rgba(0,0,0,.3)}
+.editmodal__box h3{margin:0 0 6px;font-size:1.02rem;color:#003c71}
+.editmodal__box p{margin:0 0 12px;font-size:.84rem;color:#4a5159}
+.editmodal__box textarea{width:100%;font:inherit;font-size:.9rem;line-height:1.55;padding:10px;
+  border:1px solid #c6d2dd;border-radius:8px;resize:vertical;box-sizing:border-box}
+.editmodal__box textarea:focus{outline:2px solid #003c71;border-color:#003c71}
+.editmodal__row{display:flex;gap:8px;justify-content:flex-end;margin-top:12px}
+
+/* 깊이 층위 상자와 수업 사이 연결 */
+.box--step{border-left:4px solid #2e7d32;background:#ecf6ec}
+.box--step>b{color:#1e6b2c}
+.box--front{border-left:4px solid #6b4fa0;background:#f3eff9}
+.box--front>b{color:#5b3a8a}
+a.xref{font-variant-numeric:tabular-nums;white-space:nowrap;text-decoration:none;
+  border-bottom:1px dotted currentColor}
+a.xref:hover{background:#eaf1f8}
+
+/* ---- 본문 목차 ---- */
+/* 평범한 목록으로 두면 본문과 구별되지 않아 긴 수업에서 지나치기 쉽다. */
+.contents {
+  border: 1px solid var(--line);
+  background: var(--bg);
+  border-radius: var(--radius);
+  padding: 16px 22px;
+  margin: 28px 0 36px;
+}
+.contents strong {
+  display: block;
+  font-size: 13px;
+  letter-spacing: .04em;
+  color: var(--ink-2);
+  margin-bottom: 10px;
+}
+.contents .qlist { margin: 0; }
+.contents .qlist li { margin-bottom: 6px; font-size: 15.5px; }
+
+/* ---- 수식 상자 ---- */
+/* @eq 로 적은 줄. 본문 문단과 섞이면 식의 경계가 보이지 않는다. */
+.equation {
+  background: var(--accent-soft);
+  border-left: 3px solid var(--navy);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  padding: 16px 20px;
+  margin: 22px 0;
+  line-height: 2;
+  overflow-wrap: anywhere;
+}
+</style><link rel="stylesheet" href="../../../../assets/site.css"><link rel="stylesheet" href="../../../../assets/lesson.css"></head><body><header class="masthead">
   <div class="wrap">
     <a class="brand" href="../../../../index.html">의생명과학 교육과정</a>
     <nav>
       <a href="../../../../curriculum/index.html">전체 수업</a>
       <a href="../../../../curriculum/materials.html">자료 내려받기</a>
-      <a href="../../../../curriculum/M07/index.html">실습</a>
       <a href="../../../../archive/index.html">아카이브</a>
     </nav>
   </div>
 </header>
 
-<main class="wrap">
-<nav class="crumb" aria-label="이동 경로"><a href="../../../../index.html">대문</a><span aria-hidden="true">›</span><a href="../../../index.html">전체 수업</a><span aria-hidden="true">›</span><a href="../../index.html">M02</a><span aria-hidden="true">›</span><a href="../index.html">14주차</a><span aria-hidden="true">›</span><span>M02-W14-L02</span></nav>
+<main class="wrap wrap--narrow lesson" data-lesson-id="M02-W14-L02" data-lesson="M02-W14-L02"><nav class="crumb" aria-label="이동 경로"><a href="../../../../index.html">대문</a><span aria-hidden="true">›</span><a href="../../../index.html">전체 수업</a><span aria-hidden="true">›</span><a href="../../index.html">M02</a><span aria-hidden="true">›</span><a href="../index.html">14주차</a><span aria-hidden="true">›</span><span>M02-W14-L02</span></nav><section class="hero"><p class="eyebrow">M02-W14-L02 · 대사생화학 · 대사조절과 질환</p><h1>대사이상 지방간질환과 간 지질 흐름</h1><p class="en"></p></section><section aria-labelledby="objectives"><h2 id="objectives">학습목표</h2><ul><li>MASLD와 MASH의 명칭을 지방증·염증·섬유화와 연결한다.</li><li>간 지방의 유입·합성·산화·수출을 구별한다.</li><li>간 지방 축적과 세포 손상 사이의 관계를 설명한다.</li><li>간 효소 수치와 지방량만으로 질환의 단계를 단정하지 않는다.</li></ul></section>
 
-  <section class="hero">
-    <p class="eyebrow">M02-W14-L02 · 대사생화학 · 대사조절과 질환</p>
-    <h1>대사이상 지방간질환과 간 지질 흐름</h1>
-    <p class="lede">강의 수업 · 상태 <span class="badge badge--design">설계</span></p>
-  </section>
+<section aria-labelledby="prerequisites"><h2 id="prerequisites">선수지식</h2><p>지방산 합성과 β산화, 중성지방과 VLDL, 13주차의 인슐린 저항성을 복습한다. 간에 보이는 지방방울은 여러 유입·처리 과정이 누적된 결과이다. 한 가지 음식이나 효소만으로 모든 지방간을 설명하지 않는다.</p></section>
 
-  
-  <div class="callout">이 수업은 아직 집필 전이다. 제작 기준은
-  <a href="../../../../PROJECT.md">PROJECT.md</a>의 집필 원칙과 산출물 규격을 따른다.</div>
+<nav class="contents" aria-label="강의 구성"><strong>강의 구성</strong><ol class="qlist"><li><a href="#s1">1. 지방증과 지방간염은 같은 말이 아니다</a></li><li><a href="#s2">2. 간의 지방량은 네 가지 흐름의 균형이다</a></li><li><a href="#s3">3. 간에 쌓인 지방산은 여러 곳에서 온다</a></li><li><a href="#s4">4. 인슐린 저항성과 지방 합성이 함께 나타날 수 있다</a></li><li><a href="#s5">5. 산화와 VLDL 수출은 처리 경로이며 무한한 출구는 아니다</a></li><li><a href="#s6">6. 저장된 중성지방의 양과 세포 손상은 일대일 대응이 아니다</a></li><li><a href="#s7">7. 검사마다 지방·손상·섬유화 중 다른 면을 본다</a></li><li><a href="#s8">8. 치료의 목적도 지방 감소와 임상 결과를 구분한다</a></li></ol></nav><section aria-label="본문"><section id="s1" class="lesson-section"><h2>1. 지방증과 지방간염은 같은 말이 아니다</h2><p>간세포에 지방이 축적된 상태를 간 지방증이라고 한다. MASLD는 대사이상 관련 지방간질환을 가리키며, 간 지방증과 심대사 위험 인자의 조합을 바탕으로 분류한다. 교재의 NAFLD는 이전 명칭이다. 이름을 바꿀 때는 단어만 치환하기보다 현재 분류의 기준과 다른 원인에 대한 평가도 함께 이해해야 한다. <a href="#ref-n">[N]</a></p><p>MASH는 대사이상 관련 지방간염을 뜻한다. 지방 축적에 염증과 간세포 손상이 동반되는 상태이며, 섬유화는 손상과 회복 과정에서 세포외기질이 축적되는 별도의 변화이다. 지방증, 지방간염, 섬유화는 서로 관련되지만 같은 지표는 아니다.</p><p><strong>구별해야 할 세 변화</strong></p><div class="tw"><table aria-label="구별해야 할 세 변화"><thead><tr><th>변화</th><th>핵심 의미</th></tr></thead><tbody><tr><td>지방증</td><td>간세포의 지방 축적</td></tr><tr><td>지방간염</td><td>지방 축적에 염증과 간세포 손상이 동반</td></tr><tr><td>섬유화</td><td>세포외기질 축적과 조직 구조 변화</td></tr></tbody></table></div><p>음주, 약물, 유전·대사 질환 등도 간 지방증과 관계될 수 있다. 대사 위험 인자가 있다는 이유로 다른 원인을 확인할 필요가 없어지는 것은 아니다. 음주와 대사 요인이 함께 기여하는 분류도 있다.</p></section>
+<section id="s2" class="lesson-section"><h2>2. 간의 지방량은 네 가지 흐름의 균형이다</h2><p>간으로 지방산이 들어오는 양과 간 안에서 새로 합성하는 양이, 산화하거나 밖으로 내보내는 양보다 많으면 저장 지방이 늘어난다. 이것은 저장량을 이해하는 기본적인 수지 관계이다. 실제로는 지방방울의 합성과 분해가 계속 일어나므로 각 경로의 순효과를 보아야 한다.</p><p>지방증이 있다는 사실만으로 지방산 산화가 반드시 감소했다고 단정할 수 없다. 산화가 증가해도 유입과 합성이 더 크게 증가하면 지방이 쌓일 수 있다. 마찬가지로 VLDL 분비가 증가해도 들어오는 양을 다 처리하지 못하면 간 지방이 증가한다.</p><p><strong>간 지방을 결정하는 네 방향</strong></p><div class="tw"><table aria-label="간 지방을 결정하는 네 방향"><thead><tr><th>방향</th><th>주요 과정</th></tr></thead><tbody><tr><td>유입</td><td>혈중 비에스테르화 지방산·지단백 유래 지방</td></tr><tr><td>합성</td><td>탄수화물 등에서 새 지방산 합성</td></tr><tr><td>산화</td><td>β산화와 이후 에너지 대사</td></tr><tr><td>수출</td><td>중성지방을 VLDL에 실어 방출</td></tr></tbody></table></div><div class="box box--step"><b>시험에서 가려내는 지점</b> 간 지방량 증가와 지방산 산화 감소는 동의어가 아니다. 유입·합성·산화·수출의 상대적인 크기로 설명한다.</div><p>이 수지 관계는 교재의 지방 합성·산화·지단백 대사를 질환에 적용한 것이다. <a href="#ref-t">[T]</a></p></section>
+<section id="s3" class="lesson-section"><h2>3. 간에 쌓인 지방산은 여러 곳에서 온다</h2><p>지방조직에서 나온 비에스테르화 지방산은 알부민과 결합해 간으로 운반된다. 식사 뒤에도 지방분해 억제가 충분하지 않으면 이 공급이 많아질 수 있다. 식이지방은 킬로미크론과 그 잔여물 등의 경로를 통해 간에 기여한다. 간 자체의 de novo lipogenesis, 즉 새 지방산 합성도 공급원이다.</p><p>사람의 안정동위원소 연구에서는 지방조직 유래, 식이 유래, 새 합성 유래 지방산을 구별하여 간 중성지방과 분비 지단백에 기여하는 양을 추정했다. 핵심은 간 지방이 먹은 지방만으로 구성되지 않는다는 점이다. 특정 연구에서 얻은 기여 비율을 모든 환자와 모든 식사 상태에 고정된 비율로 적용하지 않는다. <a href="#ref-r1">[R1]</a></p><div class="box box--limit"><b>임상 연계</b><h3>학습용 사례: “지방을 적게 먹는데 왜 간에 지방이 있나요?”</h3><p>식이지방 외에 지방조직에서 이동한 지방산과 간에서 새로 합성한 지방산도 고려한다. 최근 식사 한 끼와 장기간의 저장량을 직접 연결하지 않는다. 기질의 출처를 나누면 이 질문을 특정 영양소의 선악 문제로 바꾸지 않고 설명할 수 있다.</p></div><p>중성지방의 glycerol 골격과 지방산 부분도 출처가 같을 필요는 없다. 어떤 동위원소가 분자의 어느 부분에 들어갔는지를 알아야 실험 결과를 정확히 해석할 수 있다.</p></section>
+<section id="s4" class="lesson-section"><h2>4. 인슐린 저항성과 지방 합성이 함께 나타날 수 있다</h2><p>간의 포도당 생산 억제가 충분하지 않은데도 지방 합성과 저장이 증가할 수 있다. 인슐린 저항성은 모든 경로가 완전히 꺼지는 상태가 아니기 때문이다. 높은 인슐린 농도, 탄수화물 유입과 지방산 공급이 서로 다른 경로를 통해 간 대사에 영향을 준다.</p><p>SREBP-1c는 인슐린과 영양 상태에 반응하여 지방 합성 관련 유전자 조절에 참여한다. ChREBP는 탄수화물 대사와 연결된 전사 조절에 참여한다. 이들의 신호는 acetyl-CoA, ATP, NADPH 같은 실제 합성 재료와 에너지 공급이 있어야 대사 흐름으로 이어진다. 전사인자 이름 하나가 모든 지방 축적을 설명하는 것은 아니다.</p><p><strong>지방 합성을 설명하는 두 수준</strong></p><div class="tw"><table aria-label="지방 합성을 설명하는 두 수준"><thead><tr><th>수준</th><th>확인할 내용</th></tr></thead><tbody><tr><td>조절 정보</td><td>호르몬·전사인자·효소 활성</td></tr><tr><td>실제 반응 조건</td><td>탄소 기질·ATP·NADPH의 공급</td></tr></tbody></table></div><p>지방 합성의 중간체 malonyl-CoA는 CPT1을 억제하여 장쇄 지방산의 미토콘드리아 진입을 조절한다. 합성과 산화가 서로 조절된다는 뜻이지, 간 전체에서 어느 순간 둘 중 하나만 완전히 작동한다는 뜻은 아니다. <a href="#ref-t">[T]</a></p><div class="box box--front"><b>연구 전선</b> 지방 합성 유전자의 발현량이 증가한 결과만으로 실제 합성 속도가 증가했다고 말할 수 있을까? 기질 공급과 동위원소를 이용한 흐름 측정을 함께 생각해 보자.</div></section>
+<section id="s5" class="lesson-section"><h2>5. 산화와 VLDL 수출은 처리 경로이며 무한한 출구는 아니다</h2><p>β산화는 지방산을 acetyl-CoA로 바꾸고 환원당량을 만든다. 이 과정은 전자전달계와 에너지 요구에 연결된다. 기질이 많다고 미토콘드리아가 무한히 처리할 수 있는 것은 아니다. 산화 과정의 증가와 손상은 질환의 단계에 따라 다르게 나타날 수 있으므로, 지방증에서 산화가 항상 같은 방향으로 변한다고 외우지 않는다.</p><p>간은 중성지방을 apoB를 포함한 VLDL에 실어 혈액으로 보낸다. 입자 조립과 분비에도 필요한 단백질과 세포 내 과정이 있다. 간의 지방을 밖으로 보낸다고 몸 전체의 지방이 사라지는 것은 아니다. 이후 말초의 이용과 저장, 입자의 제거가 이루어져야 한다.</p><div class="box box--limit"><b>임상 연계</b><h3>학습용 비교: 혈중 중성지방과 간 지방</h3><p>VLDL 분비가 많고 제거가 느리면 혈중 중성지방이 높을 수 있다. 반대로 간의 수출에 문제가 있으면 간에 지방이 축적되어도 혈중 수치가 같은 정도로 높지 않을 수 있다. 저장량과 수출량은 구별해야 한다.</p></div><div class="box box--step"><b>시험에서 가려내는 지점</b> VLDL 수출은 간에서 다른 조직으로 지방을 이동시키는 과정이다. 지방을 분해해 에너지를 소비한 것과 동일하지 않다.</div></section>
+<section id="s6" class="lesson-section"><h2>6. 저장된 중성지방의 양과 세포 손상은 일대일 대응이 아니다</h2><p>지방산을 중성지방으로 묶어 저장하는 것은 일부 상황에서 반응성이 큰 지방산과 중간체의 노출을 줄이는 역할도 한다. 따라서 지방방울이 보인다는 사실만으로 그 중성지방 자체가 모든 독성의 원인이라고 할 수 없다. 지방의 종류, 세포 내 위치, 처리 능력이 중요하다.</p><p>13주차에서 다룬 DAG·ceramide, 소포체 스트레스, 미토콘드리아의 부담과 염증성 신호는 서로 연결될 수 있다. 손상된 간세포와 면역세포 사이의 신호는 염증을 지속시키고, 간성상세포의 활성화는 콜라겐 등 기질 축적에 기여한다. 이처럼 지방 축적에서 섬유화까지는 여러 세포의 상호작용이 관여한다.</p><p><strong>서로 다른 평가 대상</strong></p><div class="tw"><table aria-label="서로 다른 평가 대상"><thead><tr><th>대상</th><th>질문</th></tr></thead><tbody><tr><td>지방방울</td><td>얼마나 저장되어 있는가</td></tr><tr><td>간세포·면역세포</td><td>손상과 염증이 있는가</td></tr><tr><td>간성상세포·세포외기질</td><td>섬유화와 구조 변화가 있는가</td></tr></tbody></table></div><p>모든 지방증이 정해진 순서와 속도로 간경변으로 진행하는 것은 아니다. 대사 상태와 음주, 유전 요인, 질환 단계 등이 경과에 영향을 준다. 위험을 과장하거나 반대로 단순한 지방 저장이라며 무시하지 않는다. <a href="#ref-g">[G]</a></p></section>
+<section id="s7" class="lesson-section"><h2>7. 검사마다 지방·손상·섬유화 중 다른 면을 본다</h2><p>ALT와 AST는 주로 세포 손상에 따른 효소의 혈중 유출을 반영한다. 간의 모든 기능을 직접 측정하는 지표가 아니며, 정상 수치만으로 의미 있는 섬유화를 배제할 수 없다. 영상에서 지방이 보이는 것 역시 지방간염과 섬유화의 정도를 모두 알려 주지는 않는다. <a href="#ref-a">[A]</a></p><p>FIB-4 같은 점수는 여러 임상 정보를 조합하여 섬유화 위험을 분류하는 데 쓰인다. 탄성도 검사 등은 다른 방법으로 조직 특성을 평가한다. 각각 적용 대상과 한계가 있으므로 단일 검사 결과를 조직 전체의 확정 진단으로 바꾸어 읽지 않는다. 이 강의에서는 점수의 임상 절단값보다 측정 대상의 차이를 이해한다.</p><p><strong>검사와 질문의 대응</strong></p><div class="tw"><table aria-label="검사와 질문의 대응"><thead><tr><th>정보</th><th>주된 질문</th></tr></thead><tbody><tr><td>간 효소</td><td>세포 손상의 단서가 있는가</td></tr><tr><td>지방 관련 영상</td><td>지방 축적이 있는가</td></tr><tr><td>섬유화 위험 점수·탄성도</td><td>진행된 섬유화 가능성을 어떻게 평가할 것인가</td></tr></tbody></table></div><div class="box box--step"><b>시험에서 가려내는 지점</b> 정상 ALT, 적은 지방량, 낮은 섬유화 위험은 서로 같은 말이 아니다. 각 검사가 답하는 질문을 먼저 구별한다.</div></section>
+<section id="s8" class="lesson-section"><h2>8. 치료의 목적도 지방 감소와 임상 결과를 구분한다</h2><p>섭취와 신체 활동의 변화는 지방조직에서 간으로 오는 기질, 간의 합성, 전신 인슐린 감수성에 영향을 줄 수 있다. 따라서 지방간을 간 안의 효소 하나만의 질환으로 다루기보다 전신 대사와 연결하여 이해한다. 당뇨병과 혈압·지질 등 동반 위험도 함께 중요하다.</p><p>어떤 중재 뒤 간 지방이 감소했다면 저장 수지가 변했다는 근거이다. 지방간염이 개선되거나 섬유화가 줄었다는 결과는 다른 수준의 근거이다. 장기적인 간 관련 사건이나 심혈관 사건 감소는 다시 별도의 임상 결과이다. 한 단계의 개선만으로 나머지를 모두 입증했다고 말하지 않는다.</p><div class="box box--limit"><b>임상 연계</b><h3>학습용 논문 읽기: 지방량이 줄었다는 결과</h3><p>대상자는 누구였고 얼마나 오래 관찰했는지, 비교군이 있었는지, 측정한 결과가 영상 지방량인지 조직 염증인지 섬유화인지 확인한다. 생화학적 타당성과 실제 임상 이득은 연결되지만 같은 증거는 아니다.</p></div><div class="box box--front"><b>연구 전선</b> 간 지방량을 낮추는 중재 두 가지가 섬유화에는 다른 결과를 보였다면 어떤 이유를 검토할까? 작용 표적, 시작 단계, 관찰 기간과 지방량 외의 손상 경로를 비교해 보자.</div><p>다음 강의에서는 절식과 운동, incretin 및 SGLT2 표적이 연료 흐름을 어디서 바꾸는지 비교한다. 개별 약물의 허가 범위와 치료 선택은 별도의 최신 임상 판단이 필요하며 여기서는 기전과 근거 해석에 집중한다.</p></section></section>
 
-  <h2>학습목표</h2>
-  <p>작성 예정. 이 수업이 답하는 질문 6~9개를 먼저 확정한 뒤 측정 가능한 학습목표로 옮긴다.</p>
+<section aria-labelledby="questions"><h2 id="questions">확인 문항과 해설</h2><ol class="quiz"><li><p class="qq"><strong>판단.</strong> 간 지방이 증가했다면 지방산 산화가 반드시 감소했다.</p><details><summary>해설</summary><p>틀리다. 산화가 늘어도 유입과 합성이 더 크게 늘면 저장량이 증가한다.</p></details></li><li><p class="qq"><strong>판단.</strong> 간 중성지방의 지방산은 식이지방 외에도 지방조직과 새 합성에서 올 수 있다.</p><details><summary>해설</summary><p>맞다. 출처를 나누어야 기질 흐름을 설명할 수 있다.</p></details></li><li><p class="qq"><strong>판단.</strong> VLDL 분비는 간 지방을 몸 밖으로 제거하는 과정이다.</p><details><summary>해설</summary><p>틀리다. 혈액을 통해 다른 조직으로 옮기는 과정이다. 산화나 배설과 구별한다.</p></details></li><li><p class="qq"><strong>판단.</strong> ALT가 정상이라면 의미 있는 간 섬유화를 배제할 수 있다.</p><details><summary>해설</summary><p>틀리다. 효소 수치와 섬유화는 다른 정보를 반영하며 위험에 맞는 평가가 필요하다.</p></details></li><li><p class="qq">지방증·지방간염·섬유화를 각각 한 문장으로 구별하라.</p><details><summary>해설</summary><p>지방증은 지방 축적, 지방간염은 염증과 간세포 손상이 동반된 상태, 섬유화는 기질 축적과 조직 구조 변화이다.</p></details></li><li><p class="qq">간 지방 감소만으로 장기 임상 사건 감소를 단정할 수 없는 이유를 설명하라.</p><details><summary>해설</summary><p>지방량은 중간 지표이며 손상·섬유화와 장기 사건은 별도로 평가해야 한다. 대상과 관찰 기간도 다를 수 있다.</p></details></li></ol></section>
 
-  <h2>선수지식</h2>
-  <p>작성 예정.</p>
-
-  <h2>본문</h2>
-  <p>작성 예정. 각 절은 하나의 질문에 답하는 단위로 쓰고
-  질문 → 답 → 근거 → 조건과 한계 → 귀결의 순서로 전개한다.</p>
-
-  <h2>확인 문항</h2>
-  <p>작성 예정. 5개 이상, 절반 이상은 판단을 묻는 문항으로 한다.</p>
-
-  <h2>참고문헌</h2>
-  <p>작성 예정.</p>
-
-  <nav class="pager"><a href="../../../M02/W14/L01/index.html">← M02-W14-L01 비만의 에너지 균형과 지방조직 내분비 [26장]</a><a href="../../../M02/W14/L03/index.html">M02-W14-L03 대사 중재의 생화학 →</a></nav>
-
-</main>
-
-<footer class="foot wrap">
+<section aria-labelledby="references"><h2 id="references">참고문헌</h2><ol class="ref"><li id="ref-t">[T] Abali EE et al. Lippincott Illustrated Reviews: Biochemistry. 8판. 2022. 16·18장 지방 합성·산화·VLDL, 25장 PDF 698–703쪽, 26장 716–724쪽. 앞선 지질대사 강의와 함께 참조.</li><li id="ref-n">[N] AASLD. <a href="https://www.aasld.org/new-masld-nomenclature">새 MASLD 명칭과 분류</a>.</li><li id="ref-r1">[R1] Donnelly KL et al. Sources of fatty acids stored in liver and secreted via lipoproteins in patients with nonalcoholic fatty liver disease. J Clin Invest. 2005;115:1343–1351. <a href="https://www.jci.org/articles/view/23621">원저</a>.</li><li id="ref-g">[G] EASL–EASD–EASO. Clinical Practice Guidelines on MASLD. 2024. <a href="https://pubmed.ncbi.nlm.nih.gov/38852583/">가이드라인</a>.</li><li id="ref-a">[A] AASLD. Practice Guidance on the clinical assessment and management of NAFLD. 2023. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10735173/">가이드라인</a>. 간 효소와 섬유화 평가의 한계에 한정하여 참조.</li></ol></section>
+<nav class="pager" aria-label="이전·다음 수업"><a href="../../W14/L01/index.html">← 비만의 에너지 균형과 지방조직 내분비 [26장]</a><a href="../../W14/L03/index.html">대사 중재의 생화학: 절식·운동과 incretin·SGLT2 표적 →</a></nav></main><footer class="foot wrap">
   <span>© 2026 Kim Jintae · Hanyang University</span>
   <a href="https://github.com/hoperiasd2/hoperiasd2.github.io">GitHub 저장소</a>
 </footer>
 
-<script src="../../../../assets/site.js"></script>
-</body>
-</html>
+<script src="../../../../assets/edit.js" defer></script></body></html>

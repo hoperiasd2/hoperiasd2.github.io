@@ -1,64 +1,581 @@
 <!DOCTYPE html>
-<html lang="ko">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>M02-W12-L02 섭식·공복 주기의 장기별 대사 통합 [24장]</title>
-<meta name="description" content="섭식·공복 주기의 장기별 대사 통합 [24장]">
-<link rel="stylesheet" href="../../../../assets/site.css">
-</head>
-<body>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>M02-W12-L02 섭식·공복 주기의 장기별 대사 통합 [24장]</title><meta name="description" content="섭식·공복 주기의 장기별 대사 통합 [24장]: 구조에서 생리 기능과 질환까지"><style data-source="site.css + lesson.css snapshot 2026-10-17">/* 의생명과학 교육과정 — 공통 스타일
+   색은 :root 토큰으로만 쓰고 다크 모드에서 재정의한다. */
 
-<header class="masthead">
+:root {
+  --navy: #003c71;
+  --navy-700: #00294e;
+  --chrome: #f2b705;
+  --ink: #16191d;
+  --ink-2: #4a5159;
+  --ink-3: #727a84;
+  --line: #dde2e8;
+  --bg: #f6f8fa;
+  --card: #ffffff;
+  --accent-soft: #eaf1f8;
+  --ok: #1a7f52;
+  --ok-soft: #e7f4ed;
+  --warn: #9a6700;
+  --warn-soft: #fdf5e3;
+  --radius: 10px;
+  --wrap: 1180px;
+  --mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+  --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo",
+    "Noto Sans KR", "Malgun Gothic", sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --navy: #8fc3f5;
+    --navy-700: #b9d9fb;
+    --chrome: #f2b705;
+    --ink: #e7eaee;
+    --ink-2: #b2bac4;
+    --ink-3: #868f9a;
+    --line: #2b3138;
+    --bg: #14171b;
+    --card: #1b1f24;
+    --accent-soft: #1e2833;
+    --ok: #5dd3a0;
+    --ok-soft: #16271f;
+    --warn: #e3b341;
+    --warn-soft: #2a2416;
+  }
+}
+:root[data-theme="dark"] {
+  --navy: #8fc3f5;
+  --navy-700: #b9d9fb;
+  --ink: #e7eaee;
+  --ink-2: #b2bac4;
+  --ink-3: #868f9a;
+  --line: #2b3138;
+  --bg: #14171b;
+  --card: #1b1f24;
+  --accent-soft: #1e2833;
+  --ok: #5dd3a0;
+  --warn: #e3b341;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.75;
+  -webkit-text-size-adjust: 100%;
+}
+
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 16px; }
+.wrap--narrow { max-width: 860px; }
+
+a { color: var(--navy); }
+a:hover { color: var(--navy-700); }
+
+/* ---- 머리글 ---- */
+.masthead {
+  background: #003c71;
+  border-bottom: 3px solid var(--chrome);
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+.masthead .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 52px;
+}
+.masthead a.brand {
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  letter-spacing: .01em;
+}
+.masthead nav { display: flex; gap: 16px; flex-wrap: wrap; }
+.masthead nav a { color: #cfe0f0; text-decoration: none; font-size: 14px; }
+.masthead nav a:hover { color: #fff; }
+
+/* ---- 이동 경로 ---- */
+.crumb {
+  font-size: 13px;
+  color: var(--ink-3);
+  padding: 14px 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+}
+.crumb a { color: var(--ink-2); text-decoration: none; }
+.crumb a:hover { color: var(--navy); text-decoration: underline; }
+.crumb span[aria-hidden] { color: var(--ink-3); }
+
+/* ---- 표제 ---- */
+.hero {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-left: 5px solid var(--navy);
+  border-radius: var(--radius);
+  padding: 26px 28px;
+  margin: 16px 0 24px;
+}
+.hero .eyebrow {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  margin: 0 0 8px;
+}
+.hero h1 { margin: 0 0 10px; font-size: 27px; line-height: 1.35; }
+.hero .en { color: var(--ink-3); font-size: 14px; margin: 0 0 12px; }
+.hero p.lede { margin: 0; color: var(--ink-2); max-width: 70ch; }
+
+h2 {
+  font-size: 20px;
+  margin: 34px 0 14px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--line);
+}
+h3 { font-size: 17px; margin: 24px 0 10px; }
+
+/* ---- 카드 격자 ---- */
+.grid { display: grid; gap: 14px; }
+.grid--modules { grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); }
+.grid--weeks { grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); }
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 18px 20px;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  transition: border-color .12s, transform .12s;
+}
+a.card:hover { border-color: var(--navy); transform: translateY(-1px); }
+.card__no {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--chrome);
+  font-weight: 700;
+  letter-spacing: .08em;
+}
+.card__title { font-weight: 700; margin: 4px 0 2px; }
+.card__en { font-size: 13px; color: var(--ink-3); }
+.card__meta { font-size: 13px; color: var(--ink-2); margin-top: 10px; }
+
+/* ---- 진행 막대 ---- */
+.bar { height: 5px; background: var(--line); border-radius: 3px; overflow: hidden; margin-top: 10px; }
+.bar > i { display: block; height: 100%; background: var(--navy); }
+
+/* ---- 수업 목록 ---- */
+.lessons { list-style: none; margin: 0; padding: 0; }
+.lessons li {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--card);
+  margin-bottom: 8px;
+}
+.lessons a {
+  display: flex;
+  gap: 14px;
+  align-items: baseline;
+  padding: 13px 16px;
+  text-decoration: none;
+  color: inherit;
+}
+.lessons a:hover { background: var(--accent-soft); }
+.lessons .lid {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--ink-3);
+  white-space: nowrap;
+}
+.lessons .ltitle { flex: 1; min-width: 0; }
+.lessons .lgroup { font-size: 12px; color: var(--ink-3); }
+
+/* ---- 상태 배지 ---- */
+.badge {
+  font-size: 11px;
+  font-family: var(--mono);
+  padding: 2px 8px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  color: var(--ink-2);
+  background: var(--bg);
+  white-space: nowrap;
+}
+.badge--design { color: var(--ink-3); }
+.badge--draft { color: var(--warn); border-color: var(--warn); background: var(--warn-soft); }
+.badge--review { color: var(--navy); border-color: var(--navy); background: var(--accent-soft); }
+.badge--done {
+  color: var(--ok);
+  border-color: var(--ok);
+  background: var(--ok-soft);
+  font-weight: 600;
+}
+
+/* ---- 목록에서 집필 상태를 한눈에 ---- */
+/* 배지만으로는 276줄을 훑을 때 눈에 들어오지 않아 왼쪽에 색 띠를 둔다. */
+.lessons li[data-status] { border-left: 4px solid var(--line); }
+.lessons li[data-status="done"] { border-left-color: var(--ok); }
+.lessons li[data-status="draft"] { border-left-color: var(--warn); }
+.lessons li[data-status="review"] { border-left-color: var(--navy); }
+.lessons li[data-status="design"] { border-left-color: var(--line); }
+.lessons li[data-status="done"] .ltitle { font-weight: 600; }
+
+.filters--status { margin-top: -4px; }
+.filters--status button[data-filter-status="done"][aria-pressed="true"] {
+  border-color: var(--ok);
+  color: var(--ok);
+}
+
+/* ---- 검색 ---- */
+.search {
+  width: 100%;
+  padding: 12px 14px;
+  font-size: 15px;
+  font-family: inherit;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--card);
+  color: var(--ink);
+}
+.search:focus { outline: 2px solid var(--navy); outline-offset: 1px; }
+.filters { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 18px; }
+.filters button {
+  font: inherit;
+  font-size: 13px;
+  padding: 6px 13px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: var(--card);
+  color: var(--ink-2);
+  cursor: pointer;
+}
+.filters button[aria-pressed="true"] { background: var(--navy); color: #fff; border-color: var(--navy); }
+.count { font-size: 13px; color: var(--ink-3); margin: 0 0 12px; }
+
+/* ---- 안내 상자 ---- */
+.callout {
+  background: var(--accent-soft);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--navy);
+  border-radius: var(--radius);
+  padding: 14px 18px;
+  margin: 18px 0;
+  font-size: 15px;
+}
+.callout--warn { border-left-color: var(--chrome); }
+
+/* ---- 이전·다음 ---- */
+.pager {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 36px 0 12px;
+  border-top: 1px solid var(--line);
+  padding-top: 16px;
+  font-size: 14px;
+}
+.pager a { text-decoration: none; }
+.pager span { color: var(--ink-3); }
+
+/* ---- 표 ---- */
+table { border-collapse: collapse; width: 100%; margin: 14px 0; font-size: 15px; }
+th, td { border: 1px solid var(--line); padding: 8px 11px; text-align: left; vertical-align: top; }
+th { background: var(--accent-soft); font-weight: 700; }
+
+/* ---- 꼬리말 ---- */
+.foot {
+  margin-top: 56px;
+  padding: 22px 16px 40px;
+  border-top: 1px solid var(--line);
+  color: var(--ink-3);
+  font-size: 13px;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 640px) {
+  .hero { padding: 20px; }
+  .hero h1 { font-size: 22px; }
+  .lessons a { flex-wrap: wrap; gap: 6px 12px; }
+}
+
+@media print {
+  .masthead, .filters, .search, .pager, .foot { display: none; }
+  body { background: #fff; font-size: 11pt; }
+  .card, .hero { border: 1px solid #ccc; break-inside: avoid; }
+}
+
+/* 수업 본문 전용 스타일. site.css의 토큰을 그대로 쓴다. */
+
+.lesson { font-size: 16.5px; }
+.lesson p { margin: 0 0 14px; }
+.lesson ul, .lesson ol { margin: 0 0 16px; padding-left: 22px; }
+.lesson li { margin-bottom: 7px; }
+.lesson li > ul { margin: 7px 0 4px; }
+.lesson code {
+  font-family: var(--mono);
+  font-size: .9em;
+  background: var(--accent-soft);
+  padding: 1px 5px;
+  border-radius: 4px;
+}
+.lesson section { scroll-margin-top: 70px; }
+
+/* 슬라이드 내려받기 */
+.dl { margin: 0 0 24px; }
+.dlbtn {
+  display: inline-block;
+  padding: 9px 18px;
+  border: 1px solid var(--navy);
+  border-radius: var(--radius);
+  color: var(--navy);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 700;
+}
+.dlbtn:hover { background: var(--navy); color: #fff; }
+
+/* 질문과 답 */
+.lesson p.q, .lesson p.a {
+  border-radius: var(--radius);
+  padding: 13px 17px;
+  margin: 0 0 12px;
+}
+.lesson p.q {
+  background: var(--accent-soft);
+  border-left: 4px solid var(--navy);
+}
+.lesson p.a {
+  background: rgba(242, 183, 5, .13);
+  border-left: 4px solid var(--chrome);
+  font-weight: 600;
+}
+.lesson p.q > span, .lesson p.a > span {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: .1em;
+  margin-right: 10px;
+  vertical-align: 1px;
+  font-weight: 700;
+}
+.lesson p.q > span { color: var(--navy); }
+.lesson p.a > span { color: var(--warn); }
+
+/* 질문 목록 */
+.qlist { margin: 0 0 24px; }
+.qlist li { margin-bottom: 9px; }
+.qlist a { text-decoration: none; }
+.qlist a:hover { text-decoration: underline; }
+
+/* 조건·한계 / 귀결 / 안전 상자 */
+.box {
+  border-radius: var(--radius);
+  padding: 14px 18px;
+  margin: 16px 0;
+  font-size: 15.5px;
+  border: 1px solid var(--line);
+}
+.box > b {
+  display: block;
+  font-size: 11px;
+  font-family: var(--mono);
+  letter-spacing: .1em;
+  margin-bottom: 5px;
+}
+.box--limit { background: var(--accent-soft); border-left: 4px solid var(--navy); }
+.box--limit > b { color: var(--navy); }
+.box--result { background: rgba(242, 183, 5, .1); border-left: 4px solid var(--chrome); }
+.box--result > b { color: var(--warn); }
+.box--safety { background: rgba(242, 183, 5, .14); border-left: 5px solid var(--chrome); }
+.box--safety > b { color: var(--warn); font-size: 12px; }
+.box--safety ul { margin: 6px 0 0; }
+
+/* 표 */
+.tw { overflow-x: auto; margin: 16px 0; }
+.lesson table { font-size: 14.5px; min-width: 520px; }
+.lesson th { white-space: nowrap; }
+
+/* 확인 문항 */
+.quiz { counter-reset: none; }
+.quiz > li { margin-bottom: 18px; }
+.quiz .qq { font-weight: 600; margin-bottom: 8px; }
+.quiz details {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--card);
+  padding: 0 14px;
+}
+.quiz details[open] { padding-bottom: 6px; }
+.quiz summary {
+  cursor: pointer;
+  padding: 9px 0;
+  font-size: 14px;
+  color: var(--navy);
+  font-weight: 700;
+}
+.quiz details p { margin: 4px 0 8px; font-size: 15.5px; }
+
+/* 참고문헌 */
+.ref { font-size: 14.5px; color: var(--ink-2); }
+.ref li { margin-bottom: 8px; }
+
+@media print {
+  .quiz details { border: none; }
+  .quiz details[open] summary { display: none; }
+  .lesson p.q, .lesson p.a, .box, .equation { break-inside: avoid; }
+  .contents { font-size: 13px; background: none; }
+}
+
+/* 그림 */
+.fig { margin: 20px 0; text-align: center; }
+.fig img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: #fff;
+}
+.fig figcaption {
+  font-size: 14px;
+  color: var(--ink-2);
+  margin-top: 9px;
+  text-align: left;
+  line-height: 1.6;
+}
+.fig figcaption > b { color: var(--navy); margin-right: 6px; }
+.fig .credit { color: var(--ink-3); font-size: 13px; }
+
+/* 보강 입력 상자와 외부 링크 그림 */
+.box--notes{border-left:4px solid #f2b705;background:#fffaec}
+.fig--ext img{outline:2px dashed #f2b705;outline-offset:3px}
+.fig .credit{font-size:.82em;color:#8a6300}
+
+/* 페이지에서 직접 고치는 기능 */
+.editbar{position:fixed;right:16px;bottom:16px;z-index:60;display:flex;gap:6px;
+  align-items:center;flex-wrap:wrap;justify-content:flex-end;max-width:min(94vw,520px);
+  padding:8px;border-radius:10px;background:#ffffffee;border:1px solid #c6d2dd;
+  box-shadow:0 2px 12px rgba(0,0,0,.14)}
+.editbar.is-on{background:#fffaecf2;border-color:#f2b705}
+.editbtn{font:inherit;font-size:.86rem;padding:6px 11px;border-radius:7px;cursor:pointer;
+  border:1px solid #003c71;background:#fff;color:#003c71}
+.editbtn:hover{background:#eaf1f8}
+.editbtn--main{background:#003c71;color:#fff;font-weight:700}
+.editbtn--main:hover{background:#00529c}
+.editbtn--warn{border-color:#b3261e;color:#b3261e}
+.editbtn--warn:hover{background:#fbeceb}
+.editcount{font-size:.82rem;color:#8a6300;font-weight:700}
+.editgrp{display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end}
+.editnote{position:fixed;left:16px;bottom:16px;z-index:60;max-width:min(92vw,460px);
+  padding:10px 13px;border-radius:9px;border-left:4px solid #f2b705;background:#16191df2;
+  color:#fff;font-size:.86rem;line-height:1.5;opacity:0;transform:translateY(8px);
+  transition:opacity .18s,transform .18s;pointer-events:none}
+.editnote.is-on{opacity:1;transform:none}
+.editdump{position:fixed;left:16px;bottom:72px;z-index:60;width:min(92vw,560px);height:40vh;
+  font:12px/1.5 monospace;padding:10px;border:2px solid #f2b705;border-radius:8px;background:#fff}
+body.editing [contenteditable]{outline:1px dashed #9fb3c4;outline-offset:3px;border-radius:3px}
+body.editing [contenteditable]:focus{outline:2px solid #003c71;background:#f7fbff}
+body.editing h2{position:relative}
+.memobtn{font:inherit;font-size:.62em;font-weight:400;margin-left:10px;padding:2px 8px;
+  border-radius:6px;cursor:pointer;border:1px dashed #8a6300;background:#fffaec;color:#8a6300;
+  vertical-align:middle}
+.memobtn:hover{background:#f2b705;color:#16191d}
+h2.has-memo::after{content:"메모";font-size:.58em;font-weight:400;margin-left:10px;
+  padding:2px 8px;border-radius:6px;background:#f2b705;color:#16191d;vertical-align:middle}
+.is-edited{background:#fffaec;box-shadow:inset 3px 0 0 #f2b705;padding-left:9px}
+@media print{.editbar,.editnote,.editdump,.memobtn{display:none}}
+.editmodal{position:fixed;inset:0;z-index:70;display:flex;align-items:center;
+  justify-content:center;padding:16px;background:#16191dbf}
+.editmodal__box{width:min(96vw,560px);background:#fff;border-radius:12px;padding:18px 20px;
+  box-shadow:0 8px 32px rgba(0,0,0,.3)}
+.editmodal__box h3{margin:0 0 6px;font-size:1.02rem;color:#003c71}
+.editmodal__box p{margin:0 0 12px;font-size:.84rem;color:#4a5159}
+.editmodal__box textarea{width:100%;font:inherit;font-size:.9rem;line-height:1.55;padding:10px;
+  border:1px solid #c6d2dd;border-radius:8px;resize:vertical;box-sizing:border-box}
+.editmodal__box textarea:focus{outline:2px solid #003c71;border-color:#003c71}
+.editmodal__row{display:flex;gap:8px;justify-content:flex-end;margin-top:12px}
+
+/* 깊이 층위 상자와 수업 사이 연결 */
+.box--step{border-left:4px solid #2e7d32;background:#ecf6ec}
+.box--step>b{color:#1e6b2c}
+.box--front{border-left:4px solid #6b4fa0;background:#f3eff9}
+.box--front>b{color:#5b3a8a}
+a.xref{font-variant-numeric:tabular-nums;white-space:nowrap;text-decoration:none;
+  border-bottom:1px dotted currentColor}
+a.xref:hover{background:#eaf1f8}
+
+/* ---- 본문 목차 ---- */
+/* 평범한 목록으로 두면 본문과 구별되지 않아 긴 수업에서 지나치기 쉽다. */
+.contents {
+  border: 1px solid var(--line);
+  background: var(--bg);
+  border-radius: var(--radius);
+  padding: 16px 22px;
+  margin: 28px 0 36px;
+}
+.contents strong {
+  display: block;
+  font-size: 13px;
+  letter-spacing: .04em;
+  color: var(--ink-2);
+  margin-bottom: 10px;
+}
+.contents .qlist { margin: 0; }
+.contents .qlist li { margin-bottom: 6px; font-size: 15.5px; }
+
+/* ---- 수식 상자 ---- */
+/* @eq 로 적은 줄. 본문 문단과 섞이면 식의 경계가 보이지 않는다. */
+.equation {
+  background: var(--accent-soft);
+  border-left: 3px solid var(--navy);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  padding: 16px 20px;
+  margin: 22px 0;
+  line-height: 2;
+  overflow-wrap: anywhere;
+}
+</style><link rel="stylesheet" href="../../../../assets/site.css"><link rel="stylesheet" href="../../../../assets/lesson.css"></head><body><header class="masthead">
   <div class="wrap">
     <a class="brand" href="../../../../index.html">의생명과학 교육과정</a>
     <nav>
       <a href="../../../../curriculum/index.html">전체 수업</a>
       <a href="../../../../curriculum/materials.html">자료 내려받기</a>
-      <a href="../../../../curriculum/M07/index.html">실습</a>
       <a href="../../../../archive/index.html">아카이브</a>
     </nav>
   </div>
 </header>
 
-<main class="wrap">
-<nav class="crumb" aria-label="이동 경로"><a href="../../../../index.html">대문</a><span aria-hidden="true">›</span><a href="../../../index.html">전체 수업</a><span aria-hidden="true">›</span><a href="../../index.html">M02</a><span aria-hidden="true">›</span><a href="../index.html">12주차</a><span aria-hidden="true">›</span><span>M02-W12-L02</span></nav>
+<main class="wrap wrap--narrow lesson" data-lesson-id="M02-W12-L02" data-lesson="M02-W12-L02"><nav class="crumb" aria-label="이동 경로"><a href="../../../../index.html">대문</a><span aria-hidden="true">›</span><a href="../../../index.html">전체 수업</a><span aria-hidden="true">›</span><a href="../../index.html">M02</a><span aria-hidden="true">›</span><a href="../index.html">12주차</a><span aria-hidden="true">›</span><span>M02-W12-L02</span></nav><section class="hero"><p class="eyebrow">M02-W12-L02 · 대사생화학 · 대사조절과 질환</p><h1>섭식·공복 주기의 장기별 대사 통합</h1><p class="en"></p></section><section aria-labelledby="objectives"><h2 id="objectives">학습목표</h2><ul><li>식후와 공복의 간·지방조직·근육 역할을 비교한다.</li><li>간의 glucose 생성과 지방산 산화가 함께 증가하는 이유를 설명한다.</li><li>뇌·적혈구·신장의 연료 특성을 구분한다.</li><li>Lactate·alanine·glycerol의 장기 간 이동을 탄소·질소·에너지 수지로 설명한다.</li></ul></section>
 
-  <section class="hero">
-    <p class="eyebrow">M02-W12-L02 · 대사생화학 · 대사조절과 질환</p>
-    <h1>섭식·공복 주기의 장기별 대사 통합 [24장]</h1>
-    <p class="lede">강의 수업 · 상태 <span class="badge badge--design">설계</span></p>
-  </section>
+<section aria-labelledby="prerequisites"><h2 id="prerequisites">선수지식</h2><p>Insulin·glucagon 신호와 glycogen, gluconeogenesis, 지방산 산화, ketone body 대사를 복습한다. 대사 상태는 식후와 공복 두 그림 사이에서 순간적으로 바뀌는 것이 아니라, 섭취량·시간·활동·저장량에 따라 연속적으로 변한다.</p></section>
 
-  
-  <div class="callout">이 수업은 아직 집필 전이다. 제작 기준은
-  <a href="../../../../PROJECT.md">PROJECT.md</a>의 집필 원칙과 산출물 규격을 따른다.</div>
+<nav class="contents" aria-label="강의 구성"><strong>강의 구성</strong><ol class="qlist"><li><a href="#s1">1. 장기마다 같은 연료를 다르게 처리한다</a></li><li><a href="#s2">2. 식후 간은 유입된 영양소를 이용하고 저장·분배한다</a></li><li><a href="#s3">3. 식후 지방조직과 근육은 서로 다른 저장을 한다</a></li><li><a href="#s4">4. 공복의 glucose 공급은 glycogen 분해와 새 합성이 겹쳐 담당한다</a></li><li><a href="#s5">5. 공복 지방조직은 지방산과 glycerol을 서로 다른 용도로 보낸다</a></li><li><a href="#s6">6. 뇌의 ketone body 이용은 적응하면서 증가하지만 glucose 필요가 사라지지는 않는다</a></li><li><a href="#s7">7. 장기 간 탄소 순환은 에너지 비용과 질소 처리도 동반한다</a></li><li><a href="#s8">8. 공복의 적응과 조절이 무너진 질환을 구별한다</a></li></ol></nav><section aria-label="본문"><section id="s1" class="lesson-section"><h2>1. 장기마다 같은 연료를 다르게 처리한다</h2><p>혈액은 여러 장기에 같은 연료를 전달하지만 각 조직이 가진 수송체와 효소가 다르므로 사용 방식은 다르다. 간은 glucose 6-phosphatase를 이용해 glucose를 혈액으로 내보낼 수 있다. 골격근은 glycogen이 많아도 이 기능이 없어 주로 자체 수축에 사용한다. 적혈구는 미토콘드리아가 없으므로 지방산이나 ketone body를 산화하는 대신 glycolysis에 의존한다.</p><p>대사 조절에는 기질 공급, allosteric 조절, 단백질의 인산화, 효소 발현 변화가 함께 작용한다. 따라서 호르몬 하나만으로 모든 흐름을 예측하지 않는다. 식사의 구성과 크기, 간 glycogen 저장량, 운동 여부에 따라 같은 공복 시간에도 실제 흐름은 달라진다. <a href="#ref-t24">[T24, I–II, PDF 661–665]</a></p><p><strong>장기의 역할을 결정하는 대표 차이</strong></p><div class="tw"><table aria-label="장기의 역할을 결정하는 대표 차이"><thead><tr><th>조직</th><th>중요한 특성</th><th>결과</th></tr></thead><tbody><tr><td>간</td><td>Glucose 6-phosphatase</td><td>자유 glucose 공급 가능</td></tr><tr><td>골격근</td><td>이 효소가 없음</td><td>근육 glycogen은 직접 혈당 공급원이 아님</td></tr><tr><td>적혈구</td><td>미토콘드리아 없음</td><td>Glucose를 이용해 lactate 생성</td></tr></tbody></table></div></section>
+<section id="s2" class="lesson-section"><h2>2. 식후 간은 유입된 영양소를 이용하고 저장·분배한다</h2><p>장과 췌장에서 나온 혈액은 문맥을 통해 간으로 들어온다. 탄수화물이 포함된 식사 뒤 간은 glucose와 insulin 증가에 노출되어 glucose의 저장과 이용에 유리한 상태가 된다. Glucokinase가 glucose를 glucose 6-phosphate로 바꾸면 glycogen 합성, glycolysis, 오탄당인산경로로 이어질 수 있다. 간의 glucose 방출이 억제되는 것도 식후 혈당 조절의 중요한 부분이다.</p><p>지방 합성에 필요한 탄소와 환원력이 충분하면 acetyl-CoA와 NADPH가 지방산 합성에 사용된다. Triacylglycerol(TAG)은 very-low-density lipoprotein(VLDL)에 실려 다른 조직으로 이동할 수 있다. 흡수한 아미노산은 단백질과 질소 화합물 합성에 쓰이며, 남는 양은 질소 처리와 탄소 골격 이용으로 연결된다. 아미노산을 전용 저장물로 무한히 쌓는 것은 아니다. <a href="#ref-t24">[T24, III, PDF 665–669]</a></p><p><strong>식후 간에서 glucose 6-phosphate의 갈래</strong></p><div class="tw"><table aria-label="식후 간에서 glucose 6-phosphate의 갈래"><thead><tr><th>갈래</th><th>주된 용도</th></tr></thead><tbody><tr><td>Glycogen 합성</td><td>이후 glucose 공급을 위한 저장</td></tr><tr><td>Glycolysis</td><td>ATP 생성과 탄소 재료 공급</td></tr><tr><td>오탄당인산경로</td><td>NADPH·ribose 공급</td></tr></tbody></table></div><p>식후 glucose가 전부 지방으로 바뀐다고 설명하지 않는다. 저장과 산화, 합성의 상대적인 비중은 영양 상태와 수요에 따라 달라진다.</p></section>
+<section id="s3" class="lesson-section"><h2>3. 식후 지방조직과 근육은 서로 다른 저장을 한다</h2><p>지방조직에서는 lipoprotein lipase(LPL)가 chylomicron과 VLDL의 TAG에서 지방산을 제공한다. Insulin은 GLUT4를 통한 glucose 유입과 저장에 유리한 조건을 만들고 세포 안 lipolysis를 억제한다. Glucose 대사는 glycerol 3-phosphate를 제공하여 지방산을 TAG로 묶는 데 도움을 준다. 혈중 lipoprotein 분해와 지방세포 안 저장지방 분해는 다른 위치의 과정이다.</p><p>근육에서는 glucose 유입과 glycogen 보충이 촉진되고, 식사에서 공급된 아미노산이 단백질 합성에 쓰인다. 단백질 합성은 이전에 분해된 기능성 단백질을 보충하는 의미도 가진다. 근육 단백질을 단순한 에너지 저장고로만 취급하지 않는다. 수축 중인 근육은 식후에도 즉각적인 ATP 수요에 맞춰 연료를 사용한다. <a href="#ref-t24">[T24, IV–V, PDF 669–672]</a></p><p><strong>두 조직의 식후 반응 비교</strong></p><div class="tw"><table aria-label="두 조직의 식후 반응 비교"><thead><tr><th>조직</th><th>주요 저장·이용</th><th>저장물의 의미</th></tr></thead><tbody><tr><td>지방조직</td><td>지방산을 TAG로 저장</td><td>장기적인 에너지 보유</td></tr><tr><td>골격근</td><td>Glycogen 보충·단백질 합성</td><td>수축 연료와 기능성 조직 유지</td></tr></tbody></table></div></section>
+<section id="s4" class="lesson-section"><h2>4. 공복의 glucose 공급은 glycogen 분해와 새 합성이 겹쳐 담당한다</h2><p>장으로부터 glucose 유입이 줄면 insulin 작용이 낮아지고 간의 glucose 방출이 중요해진다. 간 glycogen 분해는 빠른 공급에 기여하며, gluconeogenesis도 함께 일어난다. 공복이 길어져 glycogen 저장량이 줄수록 새 합성의 상대적 비중이 커진다. Glycogen이 완전히 0이 된 순간 처음 gluconeogenesis가 시작되는 것은 아니다.</p><p>새 합성의 재료는 lactate, alanine 등의 당생성 아미노산, glycerol이다. 이 과정에는 ATP와 환원력이 필요하므로, 간은 지방산을 산화해 에너지를 얻으면서 glucose를 다른 조직에 공급할 수 있다. 지방산 산화의 acetyl-CoA는 pyruvate carboxylase를 활성화하고, PDH kinase를 통한 조절 등으로 pyruvate의 산화보다 glucose 생성에 유리한 조건을 만든다. <a href="#ref-t24">[T24, VII–VIII, PDF 674–678]</a></p><p><strong>공복 간의 탄소와 에너지를 구분하기</strong></p><div class="tw"><table aria-label="공복 간의 탄소와 에너지를 구분하기"><thead><tr><th>필요</th><th>대표 공급원</th></tr></thead><tbody><tr><td>Glucose의 탄소</td><td>Lactate·당생성 아미노산·glycerol</td></tr><tr><td>새 합성에 필요한 에너지</td><td>지방산 산화 등</td></tr><tr><td>조절 신호</td><td>Insulin 감소·glucagon 작용, 기질과 acetyl-CoA</td></tr></tbody></table></div><div class="box box--step"><b>시험에서 가려내는 지점</b> 지방산 산화가 glucose 합성을 돕는다고 해서 짝수 탄소 지방산의 acetyl-CoA가 glucose 탄소를 순공급하는 것은 아니다. 에너지 공급과 탄소 공급을 구분한다.</div></section>
+<section id="s5" class="lesson-section"><h2>5. 공복 지방조직은 지방산과 glycerol을 서로 다른 용도로 보낸다</h2><p>Insulin의 항이화 작용이 줄고 catecholamine 신호가 작용하면 저장 TAG의 분해가 증가한다. 방출된 지방산은 albumin에 결합해 간과 근육 등으로 이동하여 산화된다. Glycerol은 간과 신장에서 glucose 합성의 탄소 재료가 될 수 있다. TAG의 두 구성 부분이 서로 다른 역할을 하는 것이다.</p><p>간에서 지방산 산화로 생긴 acetyl-CoA의 일부는 ketone body 생성으로 이어진다. Acetoacetate와 β-hydroxybutyrate는 혈액을 통해 다른 조직에 공급된다. 간은 ketone body 이용에 필요한 succinyl-CoA:3-oxoacid CoA transferase(SCOT)가 없어 이를 자체 연료로 이용하지 못한다. 적혈구 역시 미토콘드리아가 없으므로 ketone body를 사용할 수 없다. <a href="#ref-t24">[T24, VIII.B–IX, PDF 678–681]</a></p><p><strong>TAG 분해 뒤 두 구성 부분의 이동</strong></p><div class="tw"><table aria-label="TAG 분해 뒤 두 구성 부분의 이동"><thead><tr><th>물질</th><th>주요 이용</th><th>혈당과의 관계</th></tr></thead><tbody><tr><td>지방산</td><td>산화·간의 ketone body 생성</td><td>Glucose 이용 부담을 줄이는 데 기여</td></tr><tr><td>Glycerol</td><td>Gluconeogenesis 재료</td><td>Glucose 탄소를 제공 가능</td></tr></tbody></table></div><div class="box box--step"><b>시험에서 가려내는 지점</b> 간은 ketone body를 만들지만 SCOT가 없어 자체 소비하지 않는다. 적혈구가 이용하지 못하는 이유는 미토콘드리아 부재로 서로 다르다.</div></section>
+<section id="s6" class="lesson-section"><h2>6. 뇌의 ketone body 이용은 적응하면서 증가하지만 glucose 필요가 사라지지는 않는다</h2><p>보통의 식후와 짧은 공복에서 뇌의 주된 연료는 glucose다. 공복이 길어져 ketone body 공급과 이용이 증가하면 뇌의 연료에서 ketone body가 차지하는 비중이 커진다. 이는 glucose를 만들기 위한 아미노산 분해 부담을 줄여 몸 단백질을 보존하는 데 기여한다. 다만 특정 날짜에 갑자기 전환되거나 glucose 필요가 완전히 없어지는 것으로 이해하지 않는다.</p><p>적혈구는 공복이 길어져도 glucose를 이용해 lactate를 만든다. 휴식 중 근육은 지방산 이용의 비중을 높일 수 있고, 장기 공복에서는 ketone body 소비를 줄여 뇌에 더 이용될 여지를 남긴다. 그러나 운동 중 근육의 연료 선택은 강도와 지속 시간에 따라 달라지므로 휴식 상태 그림을 그대로 적용하지 않는다. <a href="#ref-t24">[T24, VI·X–XI, PDF 672–674·681–684]</a></p><p><strong>공복 중에도 다른 조직별 요구</strong></p><div class="tw"><table aria-label="공복 중에도 다른 조직별 요구"><thead><tr><th>조직</th><th>적응 방향</th><th>남는 제한</th></tr></thead><tbody><tr><td>뇌</td><td>Ketone body 이용 증가</td><td>Glucose 필요가 완전히 사라지지 않음</td></tr><tr><td>적혈구</td><td>Glucose → lactate 지속</td><td>지방산·ketone 산화 불가</td></tr><tr><td>휴식 골격근</td><td>지방산 이용 증가</td><td>운동 조건에서는 별도 해석</td></tr></tbody></table></div><div class="box box--front"><b>연구 전선</b> 장기 공복 실험의 평균값을 개인의 정확한 전환 시간으로 사용하지 말자. 저장 glycogen, 식사 조성, 활동량과 측정 방법이 결과에 영향을 준다.</div></section>
+<section id="s7" class="lesson-section"><h2>7. 장기 간 탄소 순환은 에너지 비용과 질소 처리도 동반한다</h2><p>Cori cycle에서 말초의 lactate는 간 등에서 glucose로 다시 만들어질 수 있다. 이 과정은 탄소를 재활용하지만 에너지를 공짜로 만드는 순환이 아니다. Glucose 한 분자에 해당하는 두 lactate를 glucose로 되돌리는 데에는 ATP와 GTP를 합쳐 고에너지 인산 결합 여섯 개가 필요하다. 말초가 glucose를 두 lactate로 만들며 얻는 ATP 두 개와 구분한다.</p><p>Glucose–alanine cycle은 탄소뿐 아니라 아미노기 질소도 이동시킨다. 근육의 alanine이 간으로 오면 탄소는 pyruvate를 거쳐 glucose로, 질소는 glutamate와 요소 합성으로 연결될 수 있다. 신장 피질도 gluconeogenesis에 참여하며 공복이 길어지면 그 기여가 커질 수 있다. Glutamine의 질소를 NH4+로 배출하는 기능은 산-염기 조절과 연결된다. 이를 장기 공복에서 요소 합성이 완전히 사라진다는 뜻으로 해석하지 않는다. <a href="#ref-t24">[T24, X.C·XII, PDF 682–685]</a></p><p><strong>이동 물질이 전달하는 정보를 구분하기</strong></p><div class="tw"><table aria-label="이동 물질이 전달하는 정보를 구분하기"><thead><tr><th>이동 물질</th><th>주요 전달 내용</th></tr></thead><tbody><tr><td>Lactate</td><td>재활용할 탄소</td></tr><tr><td>Alanine</td><td>탄소와 아미노기 질소</td></tr><tr><td>Glutamine</td><td>탄소·질소와 신장 산 배출의 재료</td></tr></tbody></table></div><div class="box box--step"><b>시험에서 가려내는 지점</b> Cori cycle은 탄소 재활용, glucose–alanine cycle은 탄소와 질소 이동을 함께 연결한다. 두 순환 모두 전체 에너지 비용을 고려해야 한다.</div></section>
+<section id="s8" class="lesson-section"><h2>8. 공복의 적응과 조절이 무너진 질환을 구별한다</h2><p>정상 공복에서는 insulin이 낮아지더라도 완전히 사라지지 않으며 연료 동원이 조절된다. 심한 insulin 결핍에서는 lipolysis와 ketone body 생성이 과도해지고 glucose 생성도 증가하여 고혈당·ketoacidosis로 이어질 수 있다. 따라서 ‘공복과 당뇨병은 둘 다 지방을 쓰므로 같은 상태’라는 설명은 틀리다.</p><div class="box box--limit"><b>임상 연계</b><h3>학습용 사례: 지방이 충분한데 왜 저혈당이 생길까?</h3><p>지방산 산화에 장애가 있는 사람이 공복에서 저혈당을 보인다면, 저장지방의 양만 확인해서는 이유를 알 수 없다. 간의 glucose 생성에 필요한 에너지와 ketone body 공급이 충분하지 않을 수 있다. 저장 연료의 존재와 그 연료를 이용할 능력은 별개다.</p></div><p>식후·공복 도표를 읽을 때는 각 장기가 무엇을 받아 무엇을 내보내는지 먼저 말해 본다. 다음으로 그 탄소의 출처, ATP 비용, 질소 배출을 추가한다. 이 방식은 저장량이나 혈당 하나만으로 전체 대사를 판단하는 오류를 줄인다.</p><div class="box box--front"><b>연구 전선</b> 혈당이 안정적이라는 관찰은 glucose 생성과 사용이 모두 적다는 뜻이 아니다. 두 흐름이 모두 크면서 서로 맞는 경우도 있으므로 농도와 대사 속도를 구분해 해석한다.</div></section>
+</section>
 
-  <h2>학습목표</h2>
-  <p>작성 예정. 이 수업이 답하는 질문 6~9개를 먼저 확정한 뒤 측정 가능한 학습목표로 옮긴다.</p>
+<section aria-labelledby="questions"><h2 id="questions">확인 문항과 해설</h2><ol class="quiz"><li><p class="qq"><strong>판단.</strong> Gluconeogenesis는 간 glycogen이 완전히 소진된 뒤에만 시작된다.</p><details><summary>해설</summary><p>틀리다. 두 흐름은 겹쳐 기여하며 공복이 길어질수록 상대 비중이 달라진다.</p></details></li><li><p class="qq"><strong>판단.</strong> 짝수 탄소 지방산의 산화가 glucose 합성의 에너지를 제공할 수 있다.</p><details><summary>해설</summary><p>맞다. 다만 acetyl-CoA 탄소가 glucose를 순생성한다는 뜻은 아니다.</p></details></li><li><p class="qq"><strong>판단.</strong> 장기 공복에서 뇌가 ketone body를 사용하면 적혈구도 같은 연료로 전환한다.</p><details><summary>해설</summary><p>틀리다. 적혈구에는 미토콘드리아가 없어 ketone body를 산화하지 못한다.</p></details></li><li><p class="qq"><strong>판단.</strong> 근육 glycogen에서 나온 glucose 6-phosphate를 근육이 직접 자유 glucose로 만들어 혈액에 공급한다.</p><details><summary>해설</summary><p>틀리다. 근육에는 glucose 6-phosphatase가 없다. Lactate나 alanine을 다른 장기에 보내는 간접 연결은 별개다.</p></details></li><li><p class="qq">지방조직 TAG의 지방산과 glycerol이 공복에 하는 역할을 비교하라.</p><details><summary>해설</summary><p>지방산은 산화와 간의 ketone 생성에, glycerol은 gluconeogenesis 탄소 공급에 기여할 수 있다.</p></details></li><li><p class="qq">Cori cycle이 순에너지 생산 과정이 아닌 이유는 무엇인가?</p><details><summary>해설</summary><p>말초 glycolysis가 ATP 두 개를 얻더라도 두 lactate를 glucose로 재합성하는 데 고에너지 결합 여섯 개가 필요하다. 탄소 재활용에는 에너지 비용이 따른다.</p></details></li></ol></section>
 
-  <h2>선수지식</h2>
-  <p>작성 예정.</p>
-
-  <h2>본문</h2>
-  <p>작성 예정. 각 절은 하나의 질문에 답하는 단위로 쓰고
-  질문 → 답 → 근거 → 조건과 한계 → 귀결의 순서로 전개한다.</p>
-
-  <h2>확인 문항</h2>
-  <p>작성 예정. 5개 이상, 절반 이상은 판단을 묻는 문항으로 한다.</p>
-
-  <h2>참고문헌</h2>
-  <p>작성 예정.</p>
-
-  <nav class="pager"><a href="../../../M02/W12/L01/index.html">← M02-W12-L01 Insulin·glucagon의 대사 작용 [23장]</a><a href="../../../M02/W12/L03/index.html">M02-W12-L03 에너지 센서 →</a></nav>
-
-</main>
-
-<footer class="foot wrap">
+<section aria-labelledby="references"><h2 id="references">참고문헌</h2><ol class="ref"><li id="ref-t24">[T24] Abali EE, Cline SD, Franklin DS, Viselli SM. Lippincott Illustrated Reviews: Biochemistry. 8e. Wolters Kluwer; 2022. Chapter 24, 제공 PDF 파일 661–685쪽. Cori cycle 비용은 Chapter 10의 gluconeogenesis 반응 수지와 연결하여 설명했다.</li></ol></section>
+<nav class="pager" aria-label="이전·다음 수업"><a href="../../W12/L01/index.html">← Insulin·glucagon의 대사 작용 [23장]</a><a href="../../W12/L03/index.html">에너지 센서: AMPK·mTORC1·sirtuin과 영양 가용성 →</a></nav></main><footer class="foot wrap">
   <span>© 2026 Kim Jintae · Hanyang University</span>
   <a href="https://github.com/hoperiasd2/hoperiasd2.github.io">GitHub 저장소</a>
 </footer>
 
-<script src="../../../../assets/site.js"></script>
-</body>
-</html>
+<script src="../../../../assets/edit.js" defer></script></body></html>

@@ -1,64 +1,581 @@
 <!DOCTYPE html>
-<html lang="ko">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>M02-W11-L03 Nucleotide 대사: purine·pyrimidine과 관련 질환 [22장]</title>
-<meta name="description" content="Nucleotide 대사: purine·pyrimidine과 관련 질환 [22장]">
-<link rel="stylesheet" href="../../../../assets/site.css">
-</head>
-<body>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>M02-W11-L03 Nucleotide 대사 [22장]</title><meta name="description" content="Nucleotide 대사 [22장]: 구조에서 생리 기능과 질환까지"><style data-source="site.css + lesson.css snapshot 2026-10-17">/* 의생명과학 교육과정 — 공통 스타일
+   색은 :root 토큰으로만 쓰고 다크 모드에서 재정의한다. */
 
-<header class="masthead">
+:root {
+  --navy: #003c71;
+  --navy-700: #00294e;
+  --chrome: #f2b705;
+  --ink: #16191d;
+  --ink-2: #4a5159;
+  --ink-3: #727a84;
+  --line: #dde2e8;
+  --bg: #f6f8fa;
+  --card: #ffffff;
+  --accent-soft: #eaf1f8;
+  --ok: #1a7f52;
+  --ok-soft: #e7f4ed;
+  --warn: #9a6700;
+  --warn-soft: #fdf5e3;
+  --radius: 10px;
+  --wrap: 1180px;
+  --mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+  --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo",
+    "Noto Sans KR", "Malgun Gothic", sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --navy: #8fc3f5;
+    --navy-700: #b9d9fb;
+    --chrome: #f2b705;
+    --ink: #e7eaee;
+    --ink-2: #b2bac4;
+    --ink-3: #868f9a;
+    --line: #2b3138;
+    --bg: #14171b;
+    --card: #1b1f24;
+    --accent-soft: #1e2833;
+    --ok: #5dd3a0;
+    --ok-soft: #16271f;
+    --warn: #e3b341;
+    --warn-soft: #2a2416;
+  }
+}
+:root[data-theme="dark"] {
+  --navy: #8fc3f5;
+  --navy-700: #b9d9fb;
+  --ink: #e7eaee;
+  --ink-2: #b2bac4;
+  --ink-3: #868f9a;
+  --line: #2b3138;
+  --bg: #14171b;
+  --card: #1b1f24;
+  --accent-soft: #1e2833;
+  --ok: #5dd3a0;
+  --warn: #e3b341;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.75;
+  -webkit-text-size-adjust: 100%;
+}
+
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 16px; }
+.wrap--narrow { max-width: 860px; }
+
+a { color: var(--navy); }
+a:hover { color: var(--navy-700); }
+
+/* ---- 머리글 ---- */
+.masthead {
+  background: #003c71;
+  border-bottom: 3px solid var(--chrome);
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+.masthead .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 52px;
+}
+.masthead a.brand {
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  letter-spacing: .01em;
+}
+.masthead nav { display: flex; gap: 16px; flex-wrap: wrap; }
+.masthead nav a { color: #cfe0f0; text-decoration: none; font-size: 14px; }
+.masthead nav a:hover { color: #fff; }
+
+/* ---- 이동 경로 ---- */
+.crumb {
+  font-size: 13px;
+  color: var(--ink-3);
+  padding: 14px 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+}
+.crumb a { color: var(--ink-2); text-decoration: none; }
+.crumb a:hover { color: var(--navy); text-decoration: underline; }
+.crumb span[aria-hidden] { color: var(--ink-3); }
+
+/* ---- 표제 ---- */
+.hero {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-left: 5px solid var(--navy);
+  border-radius: var(--radius);
+  padding: 26px 28px;
+  margin: 16px 0 24px;
+}
+.hero .eyebrow {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  margin: 0 0 8px;
+}
+.hero h1 { margin: 0 0 10px; font-size: 27px; line-height: 1.35; }
+.hero .en { color: var(--ink-3); font-size: 14px; margin: 0 0 12px; }
+.hero p.lede { margin: 0; color: var(--ink-2); max-width: 70ch; }
+
+h2 {
+  font-size: 20px;
+  margin: 34px 0 14px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--line);
+}
+h3 { font-size: 17px; margin: 24px 0 10px; }
+
+/* ---- 카드 격자 ---- */
+.grid { display: grid; gap: 14px; }
+.grid--modules { grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); }
+.grid--weeks { grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); }
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 18px 20px;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  transition: border-color .12s, transform .12s;
+}
+a.card:hover { border-color: var(--navy); transform: translateY(-1px); }
+.card__no {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--chrome);
+  font-weight: 700;
+  letter-spacing: .08em;
+}
+.card__title { font-weight: 700; margin: 4px 0 2px; }
+.card__en { font-size: 13px; color: var(--ink-3); }
+.card__meta { font-size: 13px; color: var(--ink-2); margin-top: 10px; }
+
+/* ---- 진행 막대 ---- */
+.bar { height: 5px; background: var(--line); border-radius: 3px; overflow: hidden; margin-top: 10px; }
+.bar > i { display: block; height: 100%; background: var(--navy); }
+
+/* ---- 수업 목록 ---- */
+.lessons { list-style: none; margin: 0; padding: 0; }
+.lessons li {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--card);
+  margin-bottom: 8px;
+}
+.lessons a {
+  display: flex;
+  gap: 14px;
+  align-items: baseline;
+  padding: 13px 16px;
+  text-decoration: none;
+  color: inherit;
+}
+.lessons a:hover { background: var(--accent-soft); }
+.lessons .lid {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--ink-3);
+  white-space: nowrap;
+}
+.lessons .ltitle { flex: 1; min-width: 0; }
+.lessons .lgroup { font-size: 12px; color: var(--ink-3); }
+
+/* ---- 상태 배지 ---- */
+.badge {
+  font-size: 11px;
+  font-family: var(--mono);
+  padding: 2px 8px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  color: var(--ink-2);
+  background: var(--bg);
+  white-space: nowrap;
+}
+.badge--design { color: var(--ink-3); }
+.badge--draft { color: var(--warn); border-color: var(--warn); background: var(--warn-soft); }
+.badge--review { color: var(--navy); border-color: var(--navy); background: var(--accent-soft); }
+.badge--done {
+  color: var(--ok);
+  border-color: var(--ok);
+  background: var(--ok-soft);
+  font-weight: 600;
+}
+
+/* ---- 목록에서 집필 상태를 한눈에 ---- */
+/* 배지만으로는 276줄을 훑을 때 눈에 들어오지 않아 왼쪽에 색 띠를 둔다. */
+.lessons li[data-status] { border-left: 4px solid var(--line); }
+.lessons li[data-status="done"] { border-left-color: var(--ok); }
+.lessons li[data-status="draft"] { border-left-color: var(--warn); }
+.lessons li[data-status="review"] { border-left-color: var(--navy); }
+.lessons li[data-status="design"] { border-left-color: var(--line); }
+.lessons li[data-status="done"] .ltitle { font-weight: 600; }
+
+.filters--status { margin-top: -4px; }
+.filters--status button[data-filter-status="done"][aria-pressed="true"] {
+  border-color: var(--ok);
+  color: var(--ok);
+}
+
+/* ---- 검색 ---- */
+.search {
+  width: 100%;
+  padding: 12px 14px;
+  font-size: 15px;
+  font-family: inherit;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--card);
+  color: var(--ink);
+}
+.search:focus { outline: 2px solid var(--navy); outline-offset: 1px; }
+.filters { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 18px; }
+.filters button {
+  font: inherit;
+  font-size: 13px;
+  padding: 6px 13px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: var(--card);
+  color: var(--ink-2);
+  cursor: pointer;
+}
+.filters button[aria-pressed="true"] { background: var(--navy); color: #fff; border-color: var(--navy); }
+.count { font-size: 13px; color: var(--ink-3); margin: 0 0 12px; }
+
+/* ---- 안내 상자 ---- */
+.callout {
+  background: var(--accent-soft);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--navy);
+  border-radius: var(--radius);
+  padding: 14px 18px;
+  margin: 18px 0;
+  font-size: 15px;
+}
+.callout--warn { border-left-color: var(--chrome); }
+
+/* ---- 이전·다음 ---- */
+.pager {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 36px 0 12px;
+  border-top: 1px solid var(--line);
+  padding-top: 16px;
+  font-size: 14px;
+}
+.pager a { text-decoration: none; }
+.pager span { color: var(--ink-3); }
+
+/* ---- 표 ---- */
+table { border-collapse: collapse; width: 100%; margin: 14px 0; font-size: 15px; }
+th, td { border: 1px solid var(--line); padding: 8px 11px; text-align: left; vertical-align: top; }
+th { background: var(--accent-soft); font-weight: 700; }
+
+/* ---- 꼬리말 ---- */
+.foot {
+  margin-top: 56px;
+  padding: 22px 16px 40px;
+  border-top: 1px solid var(--line);
+  color: var(--ink-3);
+  font-size: 13px;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 640px) {
+  .hero { padding: 20px; }
+  .hero h1 { font-size: 22px; }
+  .lessons a { flex-wrap: wrap; gap: 6px 12px; }
+}
+
+@media print {
+  .masthead, .filters, .search, .pager, .foot { display: none; }
+  body { background: #fff; font-size: 11pt; }
+  .card, .hero { border: 1px solid #ccc; break-inside: avoid; }
+}
+
+/* 수업 본문 전용 스타일. site.css의 토큰을 그대로 쓴다. */
+
+.lesson { font-size: 16.5px; }
+.lesson p { margin: 0 0 14px; }
+.lesson ul, .lesson ol { margin: 0 0 16px; padding-left: 22px; }
+.lesson li { margin-bottom: 7px; }
+.lesson li > ul { margin: 7px 0 4px; }
+.lesson code {
+  font-family: var(--mono);
+  font-size: .9em;
+  background: var(--accent-soft);
+  padding: 1px 5px;
+  border-radius: 4px;
+}
+.lesson section { scroll-margin-top: 70px; }
+
+/* 슬라이드 내려받기 */
+.dl { margin: 0 0 24px; }
+.dlbtn {
+  display: inline-block;
+  padding: 9px 18px;
+  border: 1px solid var(--navy);
+  border-radius: var(--radius);
+  color: var(--navy);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 700;
+}
+.dlbtn:hover { background: var(--navy); color: #fff; }
+
+/* 질문과 답 */
+.lesson p.q, .lesson p.a {
+  border-radius: var(--radius);
+  padding: 13px 17px;
+  margin: 0 0 12px;
+}
+.lesson p.q {
+  background: var(--accent-soft);
+  border-left: 4px solid var(--navy);
+}
+.lesson p.a {
+  background: rgba(242, 183, 5, .13);
+  border-left: 4px solid var(--chrome);
+  font-weight: 600;
+}
+.lesson p.q > span, .lesson p.a > span {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: .1em;
+  margin-right: 10px;
+  vertical-align: 1px;
+  font-weight: 700;
+}
+.lesson p.q > span { color: var(--navy); }
+.lesson p.a > span { color: var(--warn); }
+
+/* 질문 목록 */
+.qlist { margin: 0 0 24px; }
+.qlist li { margin-bottom: 9px; }
+.qlist a { text-decoration: none; }
+.qlist a:hover { text-decoration: underline; }
+
+/* 조건·한계 / 귀결 / 안전 상자 */
+.box {
+  border-radius: var(--radius);
+  padding: 14px 18px;
+  margin: 16px 0;
+  font-size: 15.5px;
+  border: 1px solid var(--line);
+}
+.box > b {
+  display: block;
+  font-size: 11px;
+  font-family: var(--mono);
+  letter-spacing: .1em;
+  margin-bottom: 5px;
+}
+.box--limit { background: var(--accent-soft); border-left: 4px solid var(--navy); }
+.box--limit > b { color: var(--navy); }
+.box--result { background: rgba(242, 183, 5, .1); border-left: 4px solid var(--chrome); }
+.box--result > b { color: var(--warn); }
+.box--safety { background: rgba(242, 183, 5, .14); border-left: 5px solid var(--chrome); }
+.box--safety > b { color: var(--warn); font-size: 12px; }
+.box--safety ul { margin: 6px 0 0; }
+
+/* 표 */
+.tw { overflow-x: auto; margin: 16px 0; }
+.lesson table { font-size: 14.5px; min-width: 520px; }
+.lesson th { white-space: nowrap; }
+
+/* 확인 문항 */
+.quiz { counter-reset: none; }
+.quiz > li { margin-bottom: 18px; }
+.quiz .qq { font-weight: 600; margin-bottom: 8px; }
+.quiz details {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--card);
+  padding: 0 14px;
+}
+.quiz details[open] { padding-bottom: 6px; }
+.quiz summary {
+  cursor: pointer;
+  padding: 9px 0;
+  font-size: 14px;
+  color: var(--navy);
+  font-weight: 700;
+}
+.quiz details p { margin: 4px 0 8px; font-size: 15.5px; }
+
+/* 참고문헌 */
+.ref { font-size: 14.5px; color: var(--ink-2); }
+.ref li { margin-bottom: 8px; }
+
+@media print {
+  .quiz details { border: none; }
+  .quiz details[open] summary { display: none; }
+  .lesson p.q, .lesson p.a, .box, .equation { break-inside: avoid; }
+  .contents { font-size: 13px; background: none; }
+}
+
+/* 그림 */
+.fig { margin: 20px 0; text-align: center; }
+.fig img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: #fff;
+}
+.fig figcaption {
+  font-size: 14px;
+  color: var(--ink-2);
+  margin-top: 9px;
+  text-align: left;
+  line-height: 1.6;
+}
+.fig figcaption > b { color: var(--navy); margin-right: 6px; }
+.fig .credit { color: var(--ink-3); font-size: 13px; }
+
+/* 보강 입력 상자와 외부 링크 그림 */
+.box--notes{border-left:4px solid #f2b705;background:#fffaec}
+.fig--ext img{outline:2px dashed #f2b705;outline-offset:3px}
+.fig .credit{font-size:.82em;color:#8a6300}
+
+/* 페이지에서 직접 고치는 기능 */
+.editbar{position:fixed;right:16px;bottom:16px;z-index:60;display:flex;gap:6px;
+  align-items:center;flex-wrap:wrap;justify-content:flex-end;max-width:min(94vw,520px);
+  padding:8px;border-radius:10px;background:#ffffffee;border:1px solid #c6d2dd;
+  box-shadow:0 2px 12px rgba(0,0,0,.14)}
+.editbar.is-on{background:#fffaecf2;border-color:#f2b705}
+.editbtn{font:inherit;font-size:.86rem;padding:6px 11px;border-radius:7px;cursor:pointer;
+  border:1px solid #003c71;background:#fff;color:#003c71}
+.editbtn:hover{background:#eaf1f8}
+.editbtn--main{background:#003c71;color:#fff;font-weight:700}
+.editbtn--main:hover{background:#00529c}
+.editbtn--warn{border-color:#b3261e;color:#b3261e}
+.editbtn--warn:hover{background:#fbeceb}
+.editcount{font-size:.82rem;color:#8a6300;font-weight:700}
+.editgrp{display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end}
+.editnote{position:fixed;left:16px;bottom:16px;z-index:60;max-width:min(92vw,460px);
+  padding:10px 13px;border-radius:9px;border-left:4px solid #f2b705;background:#16191df2;
+  color:#fff;font-size:.86rem;line-height:1.5;opacity:0;transform:translateY(8px);
+  transition:opacity .18s,transform .18s;pointer-events:none}
+.editnote.is-on{opacity:1;transform:none}
+.editdump{position:fixed;left:16px;bottom:72px;z-index:60;width:min(92vw,560px);height:40vh;
+  font:12px/1.5 monospace;padding:10px;border:2px solid #f2b705;border-radius:8px;background:#fff}
+body.editing [contenteditable]{outline:1px dashed #9fb3c4;outline-offset:3px;border-radius:3px}
+body.editing [contenteditable]:focus{outline:2px solid #003c71;background:#f7fbff}
+body.editing h2{position:relative}
+.memobtn{font:inherit;font-size:.62em;font-weight:400;margin-left:10px;padding:2px 8px;
+  border-radius:6px;cursor:pointer;border:1px dashed #8a6300;background:#fffaec;color:#8a6300;
+  vertical-align:middle}
+.memobtn:hover{background:#f2b705;color:#16191d}
+h2.has-memo::after{content:"메모";font-size:.58em;font-weight:400;margin-left:10px;
+  padding:2px 8px;border-radius:6px;background:#f2b705;color:#16191d;vertical-align:middle}
+.is-edited{background:#fffaec;box-shadow:inset 3px 0 0 #f2b705;padding-left:9px}
+@media print{.editbar,.editnote,.editdump,.memobtn{display:none}}
+.editmodal{position:fixed;inset:0;z-index:70;display:flex;align-items:center;
+  justify-content:center;padding:16px;background:#16191dbf}
+.editmodal__box{width:min(96vw,560px);background:#fff;border-radius:12px;padding:18px 20px;
+  box-shadow:0 8px 32px rgba(0,0,0,.3)}
+.editmodal__box h3{margin:0 0 6px;font-size:1.02rem;color:#003c71}
+.editmodal__box p{margin:0 0 12px;font-size:.84rem;color:#4a5159}
+.editmodal__box textarea{width:100%;font:inherit;font-size:.9rem;line-height:1.55;padding:10px;
+  border:1px solid #c6d2dd;border-radius:8px;resize:vertical;box-sizing:border-box}
+.editmodal__box textarea:focus{outline:2px solid #003c71;border-color:#003c71}
+.editmodal__row{display:flex;gap:8px;justify-content:flex-end;margin-top:12px}
+
+/* 깊이 층위 상자와 수업 사이 연결 */
+.box--step{border-left:4px solid #2e7d32;background:#ecf6ec}
+.box--step>b{color:#1e6b2c}
+.box--front{border-left:4px solid #6b4fa0;background:#f3eff9}
+.box--front>b{color:#5b3a8a}
+a.xref{font-variant-numeric:tabular-nums;white-space:nowrap;text-decoration:none;
+  border-bottom:1px dotted currentColor}
+a.xref:hover{background:#eaf1f8}
+
+/* ---- 본문 목차 ---- */
+/* 평범한 목록으로 두면 본문과 구별되지 않아 긴 수업에서 지나치기 쉽다. */
+.contents {
+  border: 1px solid var(--line);
+  background: var(--bg);
+  border-radius: var(--radius);
+  padding: 16px 22px;
+  margin: 28px 0 36px;
+}
+.contents strong {
+  display: block;
+  font-size: 13px;
+  letter-spacing: .04em;
+  color: var(--ink-2);
+  margin-bottom: 10px;
+}
+.contents .qlist { margin: 0; }
+.contents .qlist li { margin-bottom: 6px; font-size: 15.5px; }
+
+/* ---- 수식 상자 ---- */
+/* @eq 로 적은 줄. 본문 문단과 섞이면 식의 경계가 보이지 않는다. */
+.equation {
+  background: var(--accent-soft);
+  border-left: 3px solid var(--navy);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  padding: 16px 20px;
+  margin: 22px 0;
+  line-height: 2;
+  overflow-wrap: anywhere;
+}
+</style><link rel="stylesheet" href="../../../../assets/site.css"><link rel="stylesheet" href="../../../../assets/lesson.css"></head><body><header class="masthead">
   <div class="wrap">
     <a class="brand" href="../../../../index.html">의생명과학 교육과정</a>
     <nav>
       <a href="../../../../curriculum/index.html">전체 수업</a>
       <a href="../../../../curriculum/materials.html">자료 내려받기</a>
-      <a href="../../../../curriculum/M07/index.html">실습</a>
       <a href="../../../../archive/index.html">아카이브</a>
     </nav>
   </div>
 </header>
 
-<main class="wrap">
-<nav class="crumb" aria-label="이동 경로"><a href="../../../../index.html">대문</a><span aria-hidden="true">›</span><a href="../../../index.html">전체 수업</a><span aria-hidden="true">›</span><a href="../../index.html">M02</a><span aria-hidden="true">›</span><a href="../index.html">11주차</a><span aria-hidden="true">›</span><span>M02-W11-L03</span></nav>
+<main class="wrap wrap--narrow lesson" data-lesson-id="M02-W11-L03" data-lesson="M02-W11-L03"><nav class="crumb" aria-label="이동 경로"><a href="../../../../index.html">대문</a><span aria-hidden="true">›</span><a href="../../../index.html">전체 수업</a><span aria-hidden="true">›</span><a href="../../index.html">M02</a><span aria-hidden="true">›</span><a href="../index.html">11주차</a><span aria-hidden="true">›</span><span>M02-W11-L03</span></nav><section class="hero"><p class="eyebrow">M02-W11-L03 · 대사생화학 · 아미노산대사</p><h1>Nucleotide 대사</h1><p class="en"></p></section><section aria-labelledby="objectives"><h2 id="objectives">학습목표</h2><ul><li>Base·nucleoside·nucleotide와 purine·pyrimidine을 구분한다.</li><li>새 합성과 salvage의 관계, IMP에서 AMP·GMP로 갈라지는 조절을 설명한다.</li><li>Deoxyribonucleotide와 dTMP 합성을 환원력·folate에 연결한다.</li><li>고요산혈증, HGPRT 결핍, ADA 결핍 및 orotic aciduria를 경로로 해석한다.</li></ul></section>
 
-  <section class="hero">
-    <p class="eyebrow">M02-W11-L03 · 대사생화학 · 질소대사</p>
-    <h1>Nucleotide 대사: purine·pyrimidine과 관련 질환 [22장]</h1>
-    <p class="lede">강의 수업 · 상태 <span class="badge badge--design">설계</span></p>
-  </section>
+<section aria-labelledby="prerequisites"><h2 id="prerequisites">선수지식</h2><p>오탄당인산경로의 ribose 5-phosphate와 NADPH, glutamine·aspartate의 질소 제공, folate의 한 탄소 단위 운반을 복습한다. Nucleotide는 핵산의 재료이면서 ATP와 여러 보조인자의 구성 성분이기도 하다.</p></section>
 
-  
-  <div class="callout">이 수업은 아직 집필 전이다. 제작 기준은
-  <a href="../../../../PROJECT.md">PROJECT.md</a>의 집필 원칙과 산출물 규격을 따른다.</div>
+<nav class="contents" aria-label="강의 구성"><strong>강의 구성</strong><ol class="qlist"><li><a href="#s1">1. Nucleotide는 염기·당·인산으로 구성된다</a></li><li><a href="#s2">2. Purine은 ribose 위에 고리를 조립해 IMP를 만든다</a></li><li><a href="#s3">3. AMP·GMP의 균형과 salvage는 새 합성 부담을 조절한다</a></li><li><a href="#s4">4. Pyrimidine은 고리를 먼저 만든 뒤 PRPP에 붙인다</a></li><li><a href="#s5">5. DNA 재료를 만들려면 당을 환원하고 네 종류의 공급을 맞춰야 한다</a></li><li><a href="#s6">6. dTMP 합성은 folate 대사와 DNA 합성을 직접 연결한다</a></li><li><a href="#s7">7. Purine 분해의 끝은 요산이며 농도는 생성과 배출에 달려 있다</a></li><li><a href="#s8">8. 합성·재활용·분해를 한 흐름으로 읽으면 질환이 연결된다</a></li></ol></nav><section aria-label="본문"><section id="s1" class="lesson-section"><h2>1. Nucleotide는 염기·당·인산으로 구성된다</h2><p>질소를 포함하는 염기(base)에 당이 붙으면 nucleoside, 여기에 인산이 붙으면 nucleotide다. Adenine과 ribose가 결합하면 adenosine이며, 인산 하나가 붙으면 adenosine monophosphate(AMP)가 된다. ADP와 ATP는 인산 수가 다른 같은 계열이다. 따라서 ATP를 에너지 분자로만 알고 핵산 재료와 전혀 별개로 생각하면 이들의 구조적 연결을 놓친다.</p><p>Purine인 adenine·guanine은 두 고리, pyrimidine인 cytosine·uracil·thymine은 한 고리 구조다. RNA에는 ribose, DNA에는 2′-deoxyribose가 들어간다. 이때 deoxy는 염기를 없앴다는 뜻이 아니라 당의 2′ 위치에 hydroxyl기가 없는 구조를 뜻한다. 인산을 더 붙이는 반응과 ribose를 deoxyribose로 바꾸는 반응은 다르다. <a href="#ref-t22">[T22, I–II, PDF 605–608]</a></p><p><strong>비슷한 이름을 구조로 구분하기</strong></p><div class="tw"><table aria-label="비슷한 이름을 구조로 구분하기"><thead><tr><th>이름</th><th>구성</th><th>예</th></tr></thead><tbody><tr><td>Base</td><td>염기</td><td>Adenine</td></tr><tr><td>Nucleoside</td><td>염기 + 당</td><td>Adenosine</td></tr><tr><td>Nucleotide</td><td>염기 + 당 + 인산</td><td>AMP, ADP, ATP</td></tr><tr><td>Deoxyribonucleotide</td><td>당이 2′-deoxyribose인 nucleotide</td><td>dATP</td></tr></tbody></table></div></section>
+<section id="s2" class="lesson-section"><h2>2. Purine은 ribose 위에 고리를 조립해 IMP를 만든다</h2><p>Ribose 5-phosphate는 ATP를 사용해 5-phosphoribosyl-1-pyrophosphate(PRPP)로 활성화된다. PRPP는 purine의 새 합성뿐 아니라 재활용과 pyrimidine 합성에도 쓰이므로, PRPP 형성 자체를 purine만을 위한 committed step이라고 부르지 않는다. 다음 단계에서 glutamine의 amide 질소를 받는 glutamine-PRPP amidotransferase 반응이 purine 새 합성의 committed step이다.</p><p>이후 glycine, glutamine, aspartate, CO2와 N10-formyl-tetrahydrofolate에서 원자를 받아 고리를 만든다. 처음 완성되는 공통 nucleotide는 inosine monophosphate(IMP)이며 염기는 hypoxanthine이다. IMP가 AMP와 GMP의 공통 출발점이므로, 처음부터 adenine과 guanine 고리를 완전히 따로 만드는 것으로 이해하지 않는다. <a href="#ref-t22">[T22, III.A–C, PDF 608–610]</a></p><p><strong>Purine 고리에 들어오는 재료</strong></p><div class="tw"><table aria-label="Purine 고리에 들어오는 재료"><thead><tr><th>공급원</th><th>제공하는 원자·역할</th></tr></thead><tbody><tr><td>Glycine</td><td>탄소와 질소 일부</td></tr><tr><td>Glutamine·aspartate</td><td>질소</td></tr><tr><td>N10-formyl-THF</td><td>한 탄소 단위</td></tr><tr><td>CO2</td><td>탄소 하나</td></tr><tr><td>PRPP</td><td>고리를 조립할 ribose-phosphate 구조</td></tr></tbody></table></div><p>AMP·GMP가 충분하면 amidotransferase에 억제가 걸린다. 반대로 PRPP가 많아지면 합성 흐름을 밀어 줄 수 있다. 최종 산물의 양과 출발 재료의 양을 함께 읽는 조절이다.</p></section>
+<section id="s3" class="lesson-section"><h2>3. AMP·GMP의 균형과 salvage는 새 합성 부담을 조절한다</h2><p>IMP에서 AMP를 만들 때에는 aspartate의 질소와 GTP의 에너지가 필요하다. GMP를 만들 때에는 먼저 IMP dehydrogenase 반응을 거쳐 xanthosine monophosphate가 되고, glutamine의 질소와 ATP를 사용한다. AMP 합성에는 GTP, GMP 합성에는 ATP가 쓰이는 연결과 각 분기의 되먹임 억제가 두 계열의 균형에 기여한다.</p><p>Salvage는 이미 있는 염기를 회수해 nucleotide로 되돌리는 과정이다. Adenine phosphoribosyltransferase(APRT)는 adenine으로 AMP를, hypoxanthine-guanine phosphoribosyltransferase(HGPRT)는 hypoxanthine·guanine으로 각각 IMP·GMP를 만든다. 모두 PRPP를 사용한다. 고리를 처음부터 합성하는 에너지 부담을 줄이면서 PRPP와 산물 농도도 바꾼다. <a href="#ref-t22">[T22, III.E–G, PDF 612–615]</a></p><p><strong>Salvage가 부족하면 새 합성도 증가할 수 있다</strong></p><div class="tw"><table aria-label="Salvage가 부족하면 새 합성도 증가할 수 있다"><thead><tr><th>HGPRT 기능 저하의 영향</th><th>결과</th></tr></thead><tbody><tr><td>Hypoxanthine·guanine 회수 감소</td><td>분해로 향하는 purine 증가</td></tr><tr><td>PRPP 소비 감소</td><td>새 합성의 기질 자극 증가</td></tr><tr><td>IMP·GMP를 통한 억제 감소</td><td>새 합성 억제가 약해짐</td></tr></tbody></table></div><p>심한 HGPRT 결핍의 Lesch–Nyhan syndrome에서는 요산 과생성과 함께 운동·행동 문제가 나타난다. 요산 상승의 기전은 위 표로 설명할 수 있지만, 신경행동 증상 전체가 요산 때문이라고 단정할 수는 없다. 요산을 낮추는 치료가 모든 신경 증상을 교정한다는 뜻도 아니다. <a href="#ref-hprt">[R1]</a></p><div class="box box--step"><b>시험에서 가려내는 지점</b> HGPRT 결핍은 재활용 감소에 그치지 않는다. PRPP 증가와 되먹임 억제 감소가 새 purine 합성을 늘릴 수 있다.</div></section>
+<section id="s4" class="lesson-section"><h2>4. Pyrimidine은 고리를 먼저 만든 뒤 PRPP에 붙인다</h2><p>Purine과 달리 pyrimidine은 고리를 먼저 만든다. 세포질의 carbamoyl phosphate synthetase 2(CPS2)가 glutamine의 질소와 bicarbonate를 이용하고, aspartate가 더해진 뒤 고리가 닫힌다. Dihydroorotate는 미토콘드리아의 dihydroorotate dehydrogenase에서 orotate로 산화된다. 따라서 사람의 이 경로를 모든 반응이 세포질에만 있다고 설명하지 않는다.</p><p>Orotate가 PRPP와 결합하면 orotidine monophosphate(OMP)가 되고, CO2가 떨어져 uridine monophosphate(UMP)가 된다. 두 반응은 UMP synthase(UMPS)의 두 효소 기능이 담당한다. UMP는 UDP·UTP로, UTP는 glutamine의 질소를 받아 CTP로 이어진다. CPS2는 UTP에 의해 억제되고 PRPP에 의해 활성화되어 공급량을 조절한다. <a href="#ref-t22">[T22, VI.A–D, PDF 624–627]</a></p><p><strong>CPS1과 CPS2의 차이를 다시 확인하기</strong></p><div class="tw"><table aria-label="CPS1과 CPS2의 차이를 다시 확인하기"><thead><tr><th>구분</th><th>CPS1</th><th>CPS2</th></tr></thead><tbody><tr><td>위치</td><td>미토콘드리아</td><td>세포질</td></tr><tr><td>직접 질소 공급원</td><td>유리 암모니아</td><td>Glutamine</td></tr><tr><td>경로</td><td>요소 합성</td><td>Pyrimidine 합성</td></tr><tr><td>대표 조절</td><td>N-Acetylglutamate 필요</td><td>UTP 억제·PRPP 활성화</td></tr></tbody></table></div><p>UMPS 결핍에서는 orotate가 쌓이고 UMP 공급이 제한되어 거대적아구성 빈혈 등이 나타날 수 있다. Uridine을 이용한 salvage는 이 막힌 단계를 우회한다. OTC 결핍에서도 소변 orotate가 증가할 수 있지만, 그때는 요소회로의 carbamoyl phosphate가 pyrimidine 경로로 유입되는 문제이며 고암모니아혈증과 함께 해석한다.</p><div class="box box--step"><b>시험에서 가려내는 지점</b> Orotate 증가는 하나의 질환 이름이 아니다. UMPS 결핍의 pyrimidine 공급 부족과 OTC 결핍의 질소 처리 장애를 구분한다.</div></section>
+<section id="s5" class="lesson-section"><h2>5. DNA 재료를 만들려면 당을 환원하고 네 종류의 공급을 맞춰야 한다</h2><p>Ribonucleotide reductase(RNR)는 ADP·GDP·CDP·UDP 같은 ribonucleoside diphosphate를 대응하는 deoxy 형태로 바꾼다. 즉 염기를 교체하는 것이 아니라 당의 2′ 위치를 환원한다. 효소의 환원 상태를 되돌리는 thioredoxin 계통 등을 통해 NADPH의 환원력이 전달된다. 오탄당인산경로는 ribose뿐 아니라 이 환원력 공급에도 연결된다.</p><p>DNA 합성에는 네 종류의 재료가 균형 있게 필요하다. RNR의 전체 활성 조절 부위에서는 ATP가 활성화, 높은 dATP가 억제 방향으로 작용한다. 별도의 기질 특이성 조절 부위는 어느 nucleotide를 더 환원할지 바꾼다. 따라서 dATP가 많다는 상황은 단지 DNA 재료 하나가 풍부한 것이 아니라 전체 재료 공급을 억제할 수도 있다. <a href="#ref-t22">[T22, IV, PDF 615–618]</a></p><p><strong>RNR 조절을 두 질문으로 구분하기</strong></p><div class="tw"><table aria-label="RNR 조절을 두 질문으로 구분하기"><thead><tr><th>조절</th><th>질문</th><th>의미</th></tr></thead><tbody><tr><td>전체 활성</td><td>환원 반응을 얼마나 진행할 것인가?</td><td>ATP 활성화·dATP 억제</td></tr><tr><td>기질 특이성</td><td>어느 재료를 더 만들 것인가?</td><td>Deoxyribonucleotide 간 균형</td></tr></tbody></table></div><p>Adenosine deaminase(ADA)는 adenosine과 deoxyadenosine의 분해에 관여한다. 결핍되면 deoxyadenosine 계열과 dATP가 축적되어 RNR 억제와 다른 독성 작용을 통해 림프구 발달·생존에 영향을 줄 수 있다. 심한 경우 severe combined immunodeficiency(SCID)로 나타난다. ‘분해 효소가 부족하면 재료가 많아져 세포가 잘 자란다’는 단순 추론이 틀리는 예다. <a href="#ref-ada">[R2]</a></p></section>
+<section id="s6" class="lesson-section"><h2>6. dTMP 합성은 folate 대사와 DNA 합성을 직접 연결한다</h2><p>Thymidylate synthase는 dUMP를 dTMP로 바꾼다. N5,N10-methylene-tetrahydrofolate는 한 탄소 단위와 환원력을 제공하고 dihydrofolate(DHF)가 된다. Dihydrofolate reductase(DHFR)가 이를 다시 THF로 환원해야 folate 계통을 계속 이용할 수 있다. Purine 고리에 한 탄소를 제공하는 formyl-THF와 여기서 사용하는 methylene-THF를 구별하자.</p><p>Methotrexate는 DHFR을 억제하여 환원형 folate 공급을 제한하므로 purine 합성과 dTMP 합성에 영향을 준다. 5-Fluorouracil은 세포에서 FdUMP 등으로 전환되며, FdUMP가 thymidylate synthase를 억제하는 것이 중요한 작용 중 하나다. 두 약을 단순히 ‘DNA를 막는 약’으로만 외우기보다 어느 반응의 어떤 재료가 부족해지는지 설명하는 편이 정확하다. <a href="#ref-t22">[T22, VI.E, PDF 627–628]</a></p><p><strong>핵산 합성 약물의 작용 지점을 비교하기</strong></p><div class="tw"><table aria-label="핵산 합성 약물의 작용 지점을 비교하기"><thead><tr><th>물질</th><th>주요 표적</th><th>경로상 결과</th></tr></thead><tbody><tr><td>Methotrexate</td><td>DHFR</td><td>환원형 folate 재생 제한</td></tr><tr><td>5-Fluorouracil의 FdUMP</td><td>Thymidylate synthase</td><td>dTMP 공급 제한</td></tr><tr><td>Hydroxyurea</td><td>RNR</td><td>Deoxyribonucleotide 생성 제한</td></tr></tbody></table></div><p>증식하는 세포는 DNA 재료 수요가 크지만 정상 골수·점막 세포도 같은 경로를 사용한다. 표적이 존재한다는 사실만으로 암세포에만 선택적으로 작용한다고 결론 내릴 수 없다.</p><div class="box box--front"><b>연구 전선</b> 새 합성을 억제한 세포가 salvage로 재료를 보충할 수 있는지에 따라 반응이 달라질 수 있다. 약물 표적 한 개와 세포 전체의 공급 경로를 함께 보는 이유다.</div></section>
+<section id="s7" class="lesson-section"><h2>7. Purine 분해의 끝은 요산이며 농도는 생성과 배출에 달려 있다</h2><p>AMP 계열은 hypoxanthine으로, GMP 계열은 guanine을 거쳐 xanthine으로 이어진다. Xanthine oxidoreductase의 oxidase 형태는 hypoxanthine → xanthine → uric acid 반응을 촉매한다. 사람은 기능적인 uricase가 없어 purine 고리를 allantoin까지 처리하는 다른 동물과 다르다. 생리적 pH에서는 주로 urate 형태로 존재하며 신장과 장을 통한 배출이 농도 조절에 관여한다.</p><p>혈중 요산이 높아지는 이유는 과생산 또는 배출 감소, 혹은 둘의 조합이다. 높은 요산이 monosodium urate 결정의 형성과 염증을 유발하면 통풍과 연결된다. 그러나 무증상 고요산혈증과 통풍을 같은 말로 쓰지 않는다. Pyrimidine은 고리가 열려 더 수용성인 산물로 분해되므로 모두 요산으로 끝나는 것도 아니다. <a href="#ref-t22">[T22, V 및 VI.F, PDF 618–624·628]</a></p><p><strong>통풍 치료의 두 목적을 구분하기</strong></p><div class="tw"><table aria-label="통풍 치료의 두 목적을 구분하기"><thead><tr><th>목적</th><th>대표 원리</th><th>구분할 점</th></tr></thead><tbody><tr><td>발작의 염증 감소</td><td>염증 반응 억제</td><td>요산 생성을 직접 줄이는 것과 다름</td></tr><tr><td>장기적인 urate 부담 감소</td><td>생성 감소 또는 배출 증가</td><td>결정 부담을 줄이는 목적</td></tr></tbody></table></div><p>Allopurinol·febuxostat는 xanthine oxidase를 억제해 요산 생성을 줄인다. 약물의 생화학적 표적이 생성 경로에 있다는 사실과, 임상에서 과생산 환자에게만 쓴다는 주장은 다르다. 실제 약물 선택은 신장 기능 등 여러 조건을 고려한다. <a href="#ref-gout">[R3]</a></p><div class="box box--step"><b>시험에서 가려내는 지점</b> 고요산혈증은 모두 과생산 때문이 아니며, purine 합성과 분해만으로 농도를 설명할 수 없다. 배출도 함께 고려한다.</div></section>
+<section id="s8" class="lesson-section"><h2>8. 합성·재활용·분해를 한 흐름으로 읽으면 질환이 연결된다</h2><p>Nucleotide 대사는 새 합성만의 문제가 아니다. 재활용이 줄면 새 합성이 증가할 수 있고, 분해가 막히면 독성 대사물이 쌓여 DNA 재료 합성까지 억제할 수 있다. 특정 nucleotide가 충분하더라도 다른 종류가 부족하거나 비율이 맞지 않으면 세포의 필요를 충족하지 못한다. ‘많이 만들수록 좋다’가 아니라 필요한 종류를 적절히 공급하는 것이 중요하다.</p><div class="box box--limit"><b>임상 연계</b><h3>학습용 비교 사례</h3><p>환자 A는 심한 HGPRT 기능 저하와 요산 과생성을, 환자 B는 ADA 결핍과 림프구 감소를 보인다. A는 salvage 감소와 새 합성 증가를 연결하고, B는 deoxyadenosine·dATP 축적과 세포 독성을 연결한다. 둘 다 purine 관련 질환이지만 막힌 위치와 문제의 결과가 다르다.</p></div><p>마지막으로 UMPS와 OTC를 비교해 보자. 둘 다 소변 orotate가 증가할 수 있지만 앞에서는 pyrimidine 산물 공급이, 뒤에서는 요소회로 기능이 핵심이다. 검사값 하나가 같아도 다른 대사물과 임상 소견을 더해야 경로를 구분할 수 있다. 이는 앞 강의의 아미노산 대사질환에서도 사용한 추론 방식이다.</p><div class="box box--front"><b>연구 전선</b> 대사체 농도와 합성 속도는 같은 측정값이 아니다. ATP나 특정 nucleotide가 많다는 관찰을 해석할 때 생성·소비·재활용 중 어느 흐름이 변했는지 추가 근거가 필요하다.</div></section>
+</section>
 
-  <h2>학습목표</h2>
-  <p>작성 예정. 이 수업이 답하는 질문 6~9개를 먼저 확정한 뒤 측정 가능한 학습목표로 옮긴다.</p>
+<section aria-labelledby="questions"><h2 id="questions">확인 문항과 해설</h2><ol class="quiz"><li><p class="qq"><strong>판단.</strong> PRPP 합성은 purine만을 위한 committed step이다.</p><details><summary>해설</summary><p>틀리다. PRPP는 salvage와 pyrimidine 합성에도 쓰인다. Purine의 committed step은 glutamine-PRPP amidotransferase 반응이다.</p></details></li><li><p class="qq"><strong>판단.</strong> HGPRT 결핍에서 PRPP 증가와 산물 억제 감소가 새 purine 합성을 늘릴 수 있다.</p><details><summary>해설</summary><p>맞다. 재활용 감소와 새 합성 증가가 함께 요산 부담을 늘릴 수 있다.</p></details></li><li><p class="qq"><strong>판단.</strong> RNR은 ribonucleoside diphosphate의 당을 환원해 deoxy 형태를 만든다.</p><details><summary>해설</summary><p>맞다. 염기를 다른 것으로 교체하거나 인산을 더 붙이는 반응이 아니다.</p></details></li><li><p class="qq"><strong>판단.</strong> 소변 orotate가 증가하면 다른 검사 없이 UMPS 결핍으로 확진한다.</p><details><summary>해설</summary><p>틀리다. OTC 결핍에서도 증가할 수 있다. 고암모니아혈증과 빈혈 등 동반 소견과 추가 검사를 함께 해석한다.</p></details></li><li><p class="qq">AMP와 GMP를 IMP로부터 만들 때 각각 사용하는 에너지와 질소 공급원을 말하라.</p><details><summary>해설</summary><p>AMP는 GTP와 aspartate, GMP는 ATP와 glutamine을 사용한다. 두 분기의 되먹임 조절도 균형에 기여한다.</p></details></li><li><p class="qq">ADA 결핍에서 분해 장애가 왜 DNA 재료 공급의 장애로 이어질 수 있는가?</p><details><summary>해설</summary><p>Deoxyadenosine과 dATP의 축적이 RNR 억제 등 독성 작용을 일으켜 림프구의 발달·생존에 영향을 준다. 분해 장애가 재료의 유용한 증가를 뜻하는 것은 아니다.</p></details></li></ol></section>
 
-  <h2>선수지식</h2>
-  <p>작성 예정.</p>
-
-  <h2>본문</h2>
-  <p>작성 예정. 각 절은 하나의 질문에 답하는 단위로 쓰고
-  질문 → 답 → 근거 → 조건과 한계 → 귀결의 순서로 전개한다.</p>
-
-  <h2>확인 문항</h2>
-  <p>작성 예정. 5개 이상, 절반 이상은 판단을 묻는 문항으로 한다.</p>
-
-  <h2>참고문헌</h2>
-  <p>작성 예정.</p>
-
-  <nav class="pager"><a href="../../../M02/W11/L02/index.html">← M02-W11-L02 아미노산 유래 특수 산물·heme 합성과 porphyria [21장]</a><a href="../../../M02/W12/L01/index.html">M02-W12-L01 Insulin·glucagon의 대사 작용 [23장] →</a></nav>
-
-</main>
-
-<footer class="foot wrap">
+<section aria-labelledby="references"><h2 id="references">참고문헌</h2><ol class="ref"><li id="ref-t22">[T22] Abali EE, Cline SD, Franklin DS, Viselli SM. Lippincott Illustrated Reviews: Biochemistry. 8e. Wolters Kluwer; 2022. Chapter 22, 제공 PDF 파일 605–628쪽.</li><li id="ref-hprt">[R1] <a href="https://www.ncbi.nlm.nih.gov/books/NBK1149/">GeneReviews: HPRT1 Disorders</a>.</li><li id="ref-ada">[R2] <a href="https://www.ncbi.nlm.nih.gov/books/NBK1483/">GeneReviews: Adenosine Deaminase Deficiency</a>.</li><li id="ref-gout">[R3] <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10563586/">2020 American College of Rheumatology Guideline for the Management of Gout</a>. 약물 표적과 임상 적용 범위의 구분을 위한 보충 근거.</li></ol></section>
+<nav class="pager" aria-label="이전·다음 수업"><a href="../../W11/L02/index.html">← 아미노산 유래 특수 산물·heme 합성과 porphyria [21장]</a><a href="../../W12/L01/index.html">M02-W12-L01 Insulin·glucagon의 대사 작용 →</a></nav></main><footer class="foot wrap">
   <span>© 2026 Kim Jintae · Hanyang University</span>
   <a href="https://github.com/hoperiasd2/hoperiasd2.github.io">GitHub 저장소</a>
 </footer>
 
-<script src="../../../../assets/site.js"></script>
-</body>
-</html>
+<script src="../../../../assets/edit.js" defer></script></body></html>

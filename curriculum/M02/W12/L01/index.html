@@ -1,64 +1,581 @@
 <!DOCTYPE html>
-<html lang="ko">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>M02-W12-L01 Insulin·glucagon의 대사 작용 [23장]</title>
-<meta name="description" content="Insulin·glucagon의 대사 작용 [23장]">
-<link rel="stylesheet" href="../../../../assets/site.css">
-</head>
-<body>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>M02-W12-L01 Insulin·glucagon의 대사 작용 [23장]</title><meta name="description" content="Insulin·glucagon의 대사 작용 [23장]: 구조에서 생리 기능과 질환까지"><style data-source="site.css + lesson.css snapshot 2026-10-17">/* 의생명과학 교육과정 — 공통 스타일
+   색은 :root 토큰으로만 쓰고 다크 모드에서 재정의한다. */
 
-<header class="masthead">
+:root {
+  --navy: #003c71;
+  --navy-700: #00294e;
+  --chrome: #f2b705;
+  --ink: #16191d;
+  --ink-2: #4a5159;
+  --ink-3: #727a84;
+  --line: #dde2e8;
+  --bg: #f6f8fa;
+  --card: #ffffff;
+  --accent-soft: #eaf1f8;
+  --ok: #1a7f52;
+  --ok-soft: #e7f4ed;
+  --warn: #9a6700;
+  --warn-soft: #fdf5e3;
+  --radius: 10px;
+  --wrap: 1180px;
+  --mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+  --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo",
+    "Noto Sans KR", "Malgun Gothic", sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --navy: #8fc3f5;
+    --navy-700: #b9d9fb;
+    --chrome: #f2b705;
+    --ink: #e7eaee;
+    --ink-2: #b2bac4;
+    --ink-3: #868f9a;
+    --line: #2b3138;
+    --bg: #14171b;
+    --card: #1b1f24;
+    --accent-soft: #1e2833;
+    --ok: #5dd3a0;
+    --ok-soft: #16271f;
+    --warn: #e3b341;
+    --warn-soft: #2a2416;
+  }
+}
+:root[data-theme="dark"] {
+  --navy: #8fc3f5;
+  --navy-700: #b9d9fb;
+  --ink: #e7eaee;
+  --ink-2: #b2bac4;
+  --ink-3: #868f9a;
+  --line: #2b3138;
+  --bg: #14171b;
+  --card: #1b1f24;
+  --accent-soft: #1e2833;
+  --ok: #5dd3a0;
+  --warn: #e3b341;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.75;
+  -webkit-text-size-adjust: 100%;
+}
+
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 16px; }
+.wrap--narrow { max-width: 860px; }
+
+a { color: var(--navy); }
+a:hover { color: var(--navy-700); }
+
+/* ---- 머리글 ---- */
+.masthead {
+  background: #003c71;
+  border-bottom: 3px solid var(--chrome);
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+.masthead .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 52px;
+}
+.masthead a.brand {
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  letter-spacing: .01em;
+}
+.masthead nav { display: flex; gap: 16px; flex-wrap: wrap; }
+.masthead nav a { color: #cfe0f0; text-decoration: none; font-size: 14px; }
+.masthead nav a:hover { color: #fff; }
+
+/* ---- 이동 경로 ---- */
+.crumb {
+  font-size: 13px;
+  color: var(--ink-3);
+  padding: 14px 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+}
+.crumb a { color: var(--ink-2); text-decoration: none; }
+.crumb a:hover { color: var(--navy); text-decoration: underline; }
+.crumb span[aria-hidden] { color: var(--ink-3); }
+
+/* ---- 표제 ---- */
+.hero {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-left: 5px solid var(--navy);
+  border-radius: var(--radius);
+  padding: 26px 28px;
+  margin: 16px 0 24px;
+}
+.hero .eyebrow {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  margin: 0 0 8px;
+}
+.hero h1 { margin: 0 0 10px; font-size: 27px; line-height: 1.35; }
+.hero .en { color: var(--ink-3); font-size: 14px; margin: 0 0 12px; }
+.hero p.lede { margin: 0; color: var(--ink-2); max-width: 70ch; }
+
+h2 {
+  font-size: 20px;
+  margin: 34px 0 14px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--line);
+}
+h3 { font-size: 17px; margin: 24px 0 10px; }
+
+/* ---- 카드 격자 ---- */
+.grid { display: grid; gap: 14px; }
+.grid--modules { grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); }
+.grid--weeks { grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); }
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 18px 20px;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  transition: border-color .12s, transform .12s;
+}
+a.card:hover { border-color: var(--navy); transform: translateY(-1px); }
+.card__no {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--chrome);
+  font-weight: 700;
+  letter-spacing: .08em;
+}
+.card__title { font-weight: 700; margin: 4px 0 2px; }
+.card__en { font-size: 13px; color: var(--ink-3); }
+.card__meta { font-size: 13px; color: var(--ink-2); margin-top: 10px; }
+
+/* ---- 진행 막대 ---- */
+.bar { height: 5px; background: var(--line); border-radius: 3px; overflow: hidden; margin-top: 10px; }
+.bar > i { display: block; height: 100%; background: var(--navy); }
+
+/* ---- 수업 목록 ---- */
+.lessons { list-style: none; margin: 0; padding: 0; }
+.lessons li {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--card);
+  margin-bottom: 8px;
+}
+.lessons a {
+  display: flex;
+  gap: 14px;
+  align-items: baseline;
+  padding: 13px 16px;
+  text-decoration: none;
+  color: inherit;
+}
+.lessons a:hover { background: var(--accent-soft); }
+.lessons .lid {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--ink-3);
+  white-space: nowrap;
+}
+.lessons .ltitle { flex: 1; min-width: 0; }
+.lessons .lgroup { font-size: 12px; color: var(--ink-3); }
+
+/* ---- 상태 배지 ---- */
+.badge {
+  font-size: 11px;
+  font-family: var(--mono);
+  padding: 2px 8px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  color: var(--ink-2);
+  background: var(--bg);
+  white-space: nowrap;
+}
+.badge--design { color: var(--ink-3); }
+.badge--draft { color: var(--warn); border-color: var(--warn); background: var(--warn-soft); }
+.badge--review { color: var(--navy); border-color: var(--navy); background: var(--accent-soft); }
+.badge--done {
+  color: var(--ok);
+  border-color: var(--ok);
+  background: var(--ok-soft);
+  font-weight: 600;
+}
+
+/* ---- 목록에서 집필 상태를 한눈에 ---- */
+/* 배지만으로는 276줄을 훑을 때 눈에 들어오지 않아 왼쪽에 색 띠를 둔다. */
+.lessons li[data-status] { border-left: 4px solid var(--line); }
+.lessons li[data-status="done"] { border-left-color: var(--ok); }
+.lessons li[data-status="draft"] { border-left-color: var(--warn); }
+.lessons li[data-status="review"] { border-left-color: var(--navy); }
+.lessons li[data-status="design"] { border-left-color: var(--line); }
+.lessons li[data-status="done"] .ltitle { font-weight: 600; }
+
+.filters--status { margin-top: -4px; }
+.filters--status button[data-filter-status="done"][aria-pressed="true"] {
+  border-color: var(--ok);
+  color: var(--ok);
+}
+
+/* ---- 검색 ---- */
+.search {
+  width: 100%;
+  padding: 12px 14px;
+  font-size: 15px;
+  font-family: inherit;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--card);
+  color: var(--ink);
+}
+.search:focus { outline: 2px solid var(--navy); outline-offset: 1px; }
+.filters { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 18px; }
+.filters button {
+  font: inherit;
+  font-size: 13px;
+  padding: 6px 13px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: var(--card);
+  color: var(--ink-2);
+  cursor: pointer;
+}
+.filters button[aria-pressed="true"] { background: var(--navy); color: #fff; border-color: var(--navy); }
+.count { font-size: 13px; color: var(--ink-3); margin: 0 0 12px; }
+
+/* ---- 안내 상자 ---- */
+.callout {
+  background: var(--accent-soft);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--navy);
+  border-radius: var(--radius);
+  padding: 14px 18px;
+  margin: 18px 0;
+  font-size: 15px;
+}
+.callout--warn { border-left-color: var(--chrome); }
+
+/* ---- 이전·다음 ---- */
+.pager {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 36px 0 12px;
+  border-top: 1px solid var(--line);
+  padding-top: 16px;
+  font-size: 14px;
+}
+.pager a { text-decoration: none; }
+.pager span { color: var(--ink-3); }
+
+/* ---- 표 ---- */
+table { border-collapse: collapse; width: 100%; margin: 14px 0; font-size: 15px; }
+th, td { border: 1px solid var(--line); padding: 8px 11px; text-align: left; vertical-align: top; }
+th { background: var(--accent-soft); font-weight: 700; }
+
+/* ---- 꼬리말 ---- */
+.foot {
+  margin-top: 56px;
+  padding: 22px 16px 40px;
+  border-top: 1px solid var(--line);
+  color: var(--ink-3);
+  font-size: 13px;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 640px) {
+  .hero { padding: 20px; }
+  .hero h1 { font-size: 22px; }
+  .lessons a { flex-wrap: wrap; gap: 6px 12px; }
+}
+
+@media print {
+  .masthead, .filters, .search, .pager, .foot { display: none; }
+  body { background: #fff; font-size: 11pt; }
+  .card, .hero { border: 1px solid #ccc; break-inside: avoid; }
+}
+
+/* 수업 본문 전용 스타일. site.css의 토큰을 그대로 쓴다. */
+
+.lesson { font-size: 16.5px; }
+.lesson p { margin: 0 0 14px; }
+.lesson ul, .lesson ol { margin: 0 0 16px; padding-left: 22px; }
+.lesson li { margin-bottom: 7px; }
+.lesson li > ul { margin: 7px 0 4px; }
+.lesson code {
+  font-family: var(--mono);
+  font-size: .9em;
+  background: var(--accent-soft);
+  padding: 1px 5px;
+  border-radius: 4px;
+}
+.lesson section { scroll-margin-top: 70px; }
+
+/* 슬라이드 내려받기 */
+.dl { margin: 0 0 24px; }
+.dlbtn {
+  display: inline-block;
+  padding: 9px 18px;
+  border: 1px solid var(--navy);
+  border-radius: var(--radius);
+  color: var(--navy);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 700;
+}
+.dlbtn:hover { background: var(--navy); color: #fff; }
+
+/* 질문과 답 */
+.lesson p.q, .lesson p.a {
+  border-radius: var(--radius);
+  padding: 13px 17px;
+  margin: 0 0 12px;
+}
+.lesson p.q {
+  background: var(--accent-soft);
+  border-left: 4px solid var(--navy);
+}
+.lesson p.a {
+  background: rgba(242, 183, 5, .13);
+  border-left: 4px solid var(--chrome);
+  font-weight: 600;
+}
+.lesson p.q > span, .lesson p.a > span {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: .1em;
+  margin-right: 10px;
+  vertical-align: 1px;
+  font-weight: 700;
+}
+.lesson p.q > span { color: var(--navy); }
+.lesson p.a > span { color: var(--warn); }
+
+/* 질문 목록 */
+.qlist { margin: 0 0 24px; }
+.qlist li { margin-bottom: 9px; }
+.qlist a { text-decoration: none; }
+.qlist a:hover { text-decoration: underline; }
+
+/* 조건·한계 / 귀결 / 안전 상자 */
+.box {
+  border-radius: var(--radius);
+  padding: 14px 18px;
+  margin: 16px 0;
+  font-size: 15.5px;
+  border: 1px solid var(--line);
+}
+.box > b {
+  display: block;
+  font-size: 11px;
+  font-family: var(--mono);
+  letter-spacing: .1em;
+  margin-bottom: 5px;
+}
+.box--limit { background: var(--accent-soft); border-left: 4px solid var(--navy); }
+.box--limit > b { color: var(--navy); }
+.box--result { background: rgba(242, 183, 5, .1); border-left: 4px solid var(--chrome); }
+.box--result > b { color: var(--warn); }
+.box--safety { background: rgba(242, 183, 5, .14); border-left: 5px solid var(--chrome); }
+.box--safety > b { color: var(--warn); font-size: 12px; }
+.box--safety ul { margin: 6px 0 0; }
+
+/* 표 */
+.tw { overflow-x: auto; margin: 16px 0; }
+.lesson table { font-size: 14.5px; min-width: 520px; }
+.lesson th { white-space: nowrap; }
+
+/* 확인 문항 */
+.quiz { counter-reset: none; }
+.quiz > li { margin-bottom: 18px; }
+.quiz .qq { font-weight: 600; margin-bottom: 8px; }
+.quiz details {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--card);
+  padding: 0 14px;
+}
+.quiz details[open] { padding-bottom: 6px; }
+.quiz summary {
+  cursor: pointer;
+  padding: 9px 0;
+  font-size: 14px;
+  color: var(--navy);
+  font-weight: 700;
+}
+.quiz details p { margin: 4px 0 8px; font-size: 15.5px; }
+
+/* 참고문헌 */
+.ref { font-size: 14.5px; color: var(--ink-2); }
+.ref li { margin-bottom: 8px; }
+
+@media print {
+  .quiz details { border: none; }
+  .quiz details[open] summary { display: none; }
+  .lesson p.q, .lesson p.a, .box, .equation { break-inside: avoid; }
+  .contents { font-size: 13px; background: none; }
+}
+
+/* 그림 */
+.fig { margin: 20px 0; text-align: center; }
+.fig img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: #fff;
+}
+.fig figcaption {
+  font-size: 14px;
+  color: var(--ink-2);
+  margin-top: 9px;
+  text-align: left;
+  line-height: 1.6;
+}
+.fig figcaption > b { color: var(--navy); margin-right: 6px; }
+.fig .credit { color: var(--ink-3); font-size: 13px; }
+
+/* 보강 입력 상자와 외부 링크 그림 */
+.box--notes{border-left:4px solid #f2b705;background:#fffaec}
+.fig--ext img{outline:2px dashed #f2b705;outline-offset:3px}
+.fig .credit{font-size:.82em;color:#8a6300}
+
+/* 페이지에서 직접 고치는 기능 */
+.editbar{position:fixed;right:16px;bottom:16px;z-index:60;display:flex;gap:6px;
+  align-items:center;flex-wrap:wrap;justify-content:flex-end;max-width:min(94vw,520px);
+  padding:8px;border-radius:10px;background:#ffffffee;border:1px solid #c6d2dd;
+  box-shadow:0 2px 12px rgba(0,0,0,.14)}
+.editbar.is-on{background:#fffaecf2;border-color:#f2b705}
+.editbtn{font:inherit;font-size:.86rem;padding:6px 11px;border-radius:7px;cursor:pointer;
+  border:1px solid #003c71;background:#fff;color:#003c71}
+.editbtn:hover{background:#eaf1f8}
+.editbtn--main{background:#003c71;color:#fff;font-weight:700}
+.editbtn--main:hover{background:#00529c}
+.editbtn--warn{border-color:#b3261e;color:#b3261e}
+.editbtn--warn:hover{background:#fbeceb}
+.editcount{font-size:.82rem;color:#8a6300;font-weight:700}
+.editgrp{display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end}
+.editnote{position:fixed;left:16px;bottom:16px;z-index:60;max-width:min(92vw,460px);
+  padding:10px 13px;border-radius:9px;border-left:4px solid #f2b705;background:#16191df2;
+  color:#fff;font-size:.86rem;line-height:1.5;opacity:0;transform:translateY(8px);
+  transition:opacity .18s,transform .18s;pointer-events:none}
+.editnote.is-on{opacity:1;transform:none}
+.editdump{position:fixed;left:16px;bottom:72px;z-index:60;width:min(92vw,560px);height:40vh;
+  font:12px/1.5 monospace;padding:10px;border:2px solid #f2b705;border-radius:8px;background:#fff}
+body.editing [contenteditable]{outline:1px dashed #9fb3c4;outline-offset:3px;border-radius:3px}
+body.editing [contenteditable]:focus{outline:2px solid #003c71;background:#f7fbff}
+body.editing h2{position:relative}
+.memobtn{font:inherit;font-size:.62em;font-weight:400;margin-left:10px;padding:2px 8px;
+  border-radius:6px;cursor:pointer;border:1px dashed #8a6300;background:#fffaec;color:#8a6300;
+  vertical-align:middle}
+.memobtn:hover{background:#f2b705;color:#16191d}
+h2.has-memo::after{content:"메모";font-size:.58em;font-weight:400;margin-left:10px;
+  padding:2px 8px;border-radius:6px;background:#f2b705;color:#16191d;vertical-align:middle}
+.is-edited{background:#fffaec;box-shadow:inset 3px 0 0 #f2b705;padding-left:9px}
+@media print{.editbar,.editnote,.editdump,.memobtn{display:none}}
+.editmodal{position:fixed;inset:0;z-index:70;display:flex;align-items:center;
+  justify-content:center;padding:16px;background:#16191dbf}
+.editmodal__box{width:min(96vw,560px);background:#fff;border-radius:12px;padding:18px 20px;
+  box-shadow:0 8px 32px rgba(0,0,0,.3)}
+.editmodal__box h3{margin:0 0 6px;font-size:1.02rem;color:#003c71}
+.editmodal__box p{margin:0 0 12px;font-size:.84rem;color:#4a5159}
+.editmodal__box textarea{width:100%;font:inherit;font-size:.9rem;line-height:1.55;padding:10px;
+  border:1px solid #c6d2dd;border-radius:8px;resize:vertical;box-sizing:border-box}
+.editmodal__box textarea:focus{outline:2px solid #003c71;border-color:#003c71}
+.editmodal__row{display:flex;gap:8px;justify-content:flex-end;margin-top:12px}
+
+/* 깊이 층위 상자와 수업 사이 연결 */
+.box--step{border-left:4px solid #2e7d32;background:#ecf6ec}
+.box--step>b{color:#1e6b2c}
+.box--front{border-left:4px solid #6b4fa0;background:#f3eff9}
+.box--front>b{color:#5b3a8a}
+a.xref{font-variant-numeric:tabular-nums;white-space:nowrap;text-decoration:none;
+  border-bottom:1px dotted currentColor}
+a.xref:hover{background:#eaf1f8}
+
+/* ---- 본문 목차 ---- */
+/* 평범한 목록으로 두면 본문과 구별되지 않아 긴 수업에서 지나치기 쉽다. */
+.contents {
+  border: 1px solid var(--line);
+  background: var(--bg);
+  border-radius: var(--radius);
+  padding: 16px 22px;
+  margin: 28px 0 36px;
+}
+.contents strong {
+  display: block;
+  font-size: 13px;
+  letter-spacing: .04em;
+  color: var(--ink-2);
+  margin-bottom: 10px;
+}
+.contents .qlist { margin: 0; }
+.contents .qlist li { margin-bottom: 6px; font-size: 15.5px; }
+
+/* ---- 수식 상자 ---- */
+/* @eq 로 적은 줄. 본문 문단과 섞이면 식의 경계가 보이지 않는다. */
+.equation {
+  background: var(--accent-soft);
+  border-left: 3px solid var(--navy);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  padding: 16px 20px;
+  margin: 22px 0;
+  line-height: 2;
+  overflow-wrap: anywhere;
+}
+</style><link rel="stylesheet" href="../../../../assets/site.css"><link rel="stylesheet" href="../../../../assets/lesson.css"></head><body><header class="masthead">
   <div class="wrap">
     <a class="brand" href="../../../../index.html">의생명과학 교육과정</a>
     <nav>
       <a href="../../../../curriculum/index.html">전체 수업</a>
       <a href="../../../../curriculum/materials.html">자료 내려받기</a>
-      <a href="../../../../curriculum/M07/index.html">실습</a>
       <a href="../../../../archive/index.html">아카이브</a>
     </nav>
   </div>
 </header>
 
-<main class="wrap">
-<nav class="crumb" aria-label="이동 경로"><a href="../../../../index.html">대문</a><span aria-hidden="true">›</span><a href="../../../index.html">전체 수업</a><span aria-hidden="true">›</span><a href="../../index.html">M02</a><span aria-hidden="true">›</span><a href="../index.html">12주차</a><span aria-hidden="true">›</span><span>M02-W12-L01</span></nav>
+<main class="wrap wrap--narrow lesson" data-lesson-id="M02-W12-L01" data-lesson="M02-W12-L01"><nav class="crumb" aria-label="이동 경로"><a href="../../../../index.html">대문</a><span aria-hidden="true">›</span><a href="../../../index.html">전체 수업</a><span aria-hidden="true">›</span><a href="../../index.html">M02</a><span aria-hidden="true">›</span><a href="../index.html">12주차</a><span aria-hidden="true">›</span><span>M02-W12-L01</span></nav><section class="hero"><p class="eyebrow">M02-W12-L01 · 대사생화학 · 대사조절과 질환</p><h1>Insulin·glucagon의 대사 작용</h1><p class="en"></p></section><section aria-labelledby="objectives"><h2 id="objectives">학습목표</h2><ul><li>Insulin의 합성·분비를 glucose 대사와 막전위 변화에 연결한다.</li><li>Insulin receptor와 glucagon receptor의 신호 전달을 구분한다.</li><li>간·근육·지방조직에서 두 호르몬의 역할이 다른 이유를 설명한다.</li><li>단백질 식사와 운동에서 호르몬 반응을 단순한 반대 관계로 설명할 수 없는 이유를 이해한다.</li></ul></section>
 
-  <section class="hero">
-    <p class="eyebrow">M02-W12-L01 · 대사생화학 · 대사조절과 질환</p>
-    <h1>Insulin·glucagon의 대사 작용 [23장]</h1>
-    <p class="lede">강의 수업 · 상태 <span class="badge badge--design">설계</span></p>
-  </section>
+<section aria-labelledby="prerequisites"><h2 id="prerequisites">선수지식</h2><p>혈당은 장에서 들어오거나 간·신장에서 만들어지는 glucose와 조직이 사용하는 glucose의 균형으로 결정된다. Glycogen, triacylglycerol(TAG), 아미노산의 대사와 수용체·인산화의 개념을 복습한다. 인산화가 항상 효소를 활성화하는 것은 아니다.</p></section>
 
-  
-  <div class="callout">이 수업은 아직 집필 전이다. 제작 기준은
-  <a href="../../../../PROJECT.md">PROJECT.md</a>의 집필 원칙과 산출물 규격을 따른다.</div>
+<nav class="contents" aria-label="강의 구성"><strong>강의 구성</strong><ol class="qlist"><li><a href="#s1">1. Insulin과 glucagon은 장기 사이의 연료 사용을 조정한다</a></li><li><a href="#s2">2. Insulin과 C-peptide는 같은 전구체에서 분리된다</a></li><li><a href="#s3">3. Glucose 대사가 전기 신호를 거쳐 insulin 분비를 유발한다</a></li><li><a href="#s4">4. Insulin은 수용체의 tyrosine kinase를 통해 대사를 바꾼다</a></li><li><a href="#s5">5. Insulin은 저장을 돕고 저장 연료의 방출을 억제한다</a></li><li><a href="#s6">6. Glucagon은 간의 cAMP–PKA 신호로 glucose 공급을 돕는다</a></li><li><a href="#s7">7. 식사 조성에 따라 insulin과 glucagon이 함께 증가할 수 있다</a></li><li><a href="#s8">8. 혈당 변화는 분비·수용체·기질 공급을 함께 보아야 한다</a></li></ol></nav><section aria-label="본문"><section id="s1" class="lesson-section"><h2>1. Insulin과 glucagon은 장기 사이의 연료 사용을 조정한다</h2><p>췌장 islet의 β세포는 insulin, α세포는 glucagon을 분비한다. Insulin은 식후에 공급된 영양소의 이용과 저장을 돕고 저장 연료의 방출을 억제한다. Glucagon의 대표적인 역할은 간에서 glucose를 혈액으로 공급하도록 하여 공복의 혈당을 유지하는 것이다. 두 호르몬을 ‘혈당을 내리는 것’과 ‘올리는 것’으로만 정의하면 지질·단백질 대사와 조직별 차이가 빠진다.</p><p>수용체를 가진 조직과 신호 뒤에 작동하는 효소가 달라 같은 호르몬도 모든 장기에 같은 결과를 만들지 않는다. 특히 골격근 glycogen을 glucagon이 직접 분해시킨다고 설명해서는 안 된다. 근육은 운동 시 자체 ATP 수요와 catecholamine 신호에 반응하고, 간은 혈액으로 glucose를 공급할 수 있는 효소를 갖는다. <a href="#ref-t23">[T23, I–III, PDF 634–648]</a></p><p><strong>두 호르몬의 대표적인 질문</strong></p><div class="tw"><table aria-label="두 호르몬의 대표적인 질문"><thead><tr><th>호르몬</th><th>주요 분비 세포</th><th>대사적 방향</th></tr></thead><tbody><tr><td>Insulin</td><td>β세포</td><td>영양소 이용·저장 촉진, 저장 연료 방출 억제</td></tr><tr><td>Glucagon</td><td>α세포</td><td>간의 glucose 공급 촉진</td></tr></tbody></table></div></section>
+<section id="s2" class="lesson-section"><h2>2. Insulin과 C-peptide는 같은 전구체에서 분리된다</h2><p>Insulin은 처음부터 A사슬과 B사슬이 따로 만들어져 결합하는 것이 아니다. Preproinsulin이 합성된 뒤 signal peptide가 제거되어 proinsulin이 되고, 접힘과 disulfide 결합 형성 뒤 연결 부분이 절단되어 insulin과 C-peptide가 만들어진다. 저장 과립에는 분비할 준비가 된 호르몬이 들어 있다.</p><p>정상적인 전구체 처리에서는 insulin과 C-peptide가 같은 몰수로 분비된다. 다만 혈중 농도는 제거 속도의 영향을 받으므로 두 농도가 항상 같지는 않다. C-peptide는 내인성 insulin 분비를 평가하는 데 유용하지만 신장 기능과 당시 혈당 등 조건도 함께 해석한다. ‘분비된 양’과 ‘혈액에서 측정된 농도’를 구별하는 예다. <a href="#ref-t23">[T23, II.A–B, PDF 635–638]</a></p><p><strong>합성과 혈중 해석을 나누기</strong></p><div class="tw"><table aria-label="합성과 혈중 해석을 나누기"><thead><tr><th>과정</th><th>주된 의미</th></tr></thead><tbody><tr><td>Preproinsulin → proinsulin</td><td>분비 경로로 들어가 접힐 준비</td></tr><tr><td>Proinsulin → insulin + C-peptide</td><td>전구체의 절단과 성숙</td></tr><tr><td>혈중 농도 측정</td><td>분비뿐 아니라 제거 속도도 반영</td></tr></tbody></table></div></section>
+<section id="s3" class="lesson-section"><h2>3. Glucose 대사가 전기 신호를 거쳐 insulin 분비를 유발한다</h2><p>β세포에 들어온 glucose는 glucokinase에 의해 인산화되고 대사된다. ATP/ADP 비가 증가하면 ATP-sensitive potassium channel(KATP channel)이 닫히고 K+ 유출이 줄어 막이 탈분극한다. 전압 의존성 Ca2+ 통로가 열리면서 세포 내 Ca2+가 증가하고, 이 신호가 insulin 과립의 exocytosis를 유발한다. 영양소 대사와 분비 사이에 막전위 변화가 놓여 있는 것이다.</p><p>교재의 GLUT2 중심 도식은 설치류 β세포 설명과 잘 맞지만 사람 β세포에 그대로 일반화하지 않는다. 사람에서는 GLUT1 등 다른 수송체의 기여가 크며, glucokinase와 대사-전기적 연결을 핵심으로 이해한다. KATP 통로의 닫힘 자체가 분비를 촉진한다는 사실은 이 통로에 작용하는 약물의 원리도 설명한다. <a href="#ref-t23">[T23, II.C, PDF 638–641]</a> <a href="#ref-human">[R1]</a></p><p><strong>분비 자극의 순서를 연결하기</strong></p><div class="tw"><table aria-label="분비 자극의 순서를 연결하기"><thead><tr><th>변화</th><th>다음 결과</th></tr></thead><tbody><tr><td>Glucose 대사 증가</td><td>ATP/ADP 비 증가</td></tr><tr><td>KATP 통로 닫힘</td><td>K+ 유출 감소·탈분극</td></tr><tr><td>전압 의존 Ca2+ 통로 열림</td><td>세포 내 Ca2+ 증가</td></tr><tr><td>Ca2+ 신호</td><td>저장 과립의 분비</td></tr></tbody></table></div><div class="box box--step"><b>시험에서 가려내는 지점</b> ATP 증가 → KATP 통로 닫힘 → 탈분극 → Ca2+ 유입 → insulin 분비의 방향을 확인한다. K+ 통로가 열려서 분비되는 것으로 뒤집지 않는다.</div></section>
+<section id="s4" class="lesson-section"><h2>4. Insulin은 수용체의 tyrosine kinase를 통해 대사를 바꾼다</h2><p>Insulin receptor는 receptor tyrosine kinase다. Insulin 결합 뒤 수용체가 인산화되고 insulin receptor substrate(IRS) 단백질을 거쳐 phosphoinositide 3-kinase(PI3K)와 Akt 등의 신호가 전달된다. 수용체에서 인산화가 시작된다고 해서 모든 최종 대사 효소가 인산화되어 활성화된다는 뜻은 아니다. 신호 전달 단백질과 최종 표적의 조절 방향을 따로 보아야 한다.</p><p>근육과 지방세포에서는 저장 소포의 glucose transporter 4(GLUT4)가 세포막으로 이동하여 glucose 유입이 증가한다. 간의 glucose 수송을 같은 GLUT4 이동으로 설명하면 틀리다. 간에서는 insulin이 glycogen 합성, glucose 생성 억제, 효소 발현 등 대사를 조절한다. 뇌와 적혈구의 주요 glucose 유입도 GLUT4 의존 방식이 아니다. <a href="#ref-t23">[T23, II.D–E, PDF 641–645]</a></p><p><strong>수송과 세포 안 대사 조절의 구별</strong></p><div class="tw"><table aria-label="수송과 세포 안 대사 조절의 구별"><thead><tr><th>조직</th><th>대표 반응</th><th>주의점</th></tr></thead><tbody><tr><td>근육·지방조직</td><td>GLUT4 막 이동 증가</td><td>Glucose 수송을 빠르게 조절</td></tr><tr><td>간</td><td>저장 촉진·glucose 생성 억제</td><td>GLUT4 막 이동으로 설명하지 않음</td></tr><tr><td>뇌·적혈구</td><td>주요 수송은 insulin 비의존</td><td>Insulin 부족이 모든 세포의 glucose 유입을 막는 것은 아님</td></tr></tbody></table></div><div class="box box--step"><b>시험에서 가려내는 지점</b> ‘Glucose 유입이 insulin 비의존’이라는 말은 그 조직이 insulin의 영향을 전혀 받지 않는다는 뜻이 아니다. 수송 방식과 조직 전체 반응을 구분한다.</div></section>
+<section id="s5" class="lesson-section"><h2>5. Insulin은 저장을 돕고 저장 연료의 방출을 억제한다</h2><p>간과 근육에서는 glycogen 합성이 촉진되고, 간의 glucose 방출은 억제된다. 지방조직에서는 glucose로 만든 glycerol 3-phosphate와 유입 지방산을 이용해 TAG 저장이 가능해진다. 동시에 세포 안 lipolysis를 억제하므로 혈액으로 나가는 지방산 공급이 줄어든다. 혈당 변화만 보아서는 이 중요한 항이화 작용을 충분히 설명할 수 없다.</p><p>Lipoprotein lipase(LPL)는 혈중 lipoprotein의 TAG를 처리하는 효소이고, adipose triglyceride lipase(ATGL)·hormone-sensitive lipase(HSL) 등은 세포 안 저장지방의 분해에 관여한다. Insulin이 지방 저장에 유리하게 작용하는 것은 이 서로 다른 위치의 반응을 조절하기 때문이다. Insulin은 단백질 분해를 억제하고 영양소 공급 조건에서 단백질 합성에도 기여하지만, 호르몬 하나만으로 재료와 에너지 없이 합성이 이루어지는 것은 아니다.</p><p><strong>위치가 다른 지방 분해 효소</strong></p><div class="tw"><table aria-label="위치가 다른 지방 분해 효소"><thead><tr><th>효소</th><th>기질의 위치</th><th>저장과의 관계</th></tr></thead><tbody><tr><td>LPL</td><td>혈중 lipoprotein TAG</td><td>조직이 받을 지방산을 공급</td></tr><tr><td>ATGL·HSL 등</td><td>세포 안 lipid droplet</td><td>저장 지방산의 동원에 관여</td></tr></tbody></table></div><div class="box box--front"><b>연구 전선</b> Insulin 작용을 연구할 때 glucose 유입, 간의 glucose 생성, 지방산 방출을 각각 측정하는 이유는 무엇일까? 혈당 하나가 같은 값을 보여도 각 흐름은 서로 다를 수 있다.</div></section>
+<section id="s6" class="lesson-section"><h2>6. Glucagon은 간의 cAMP–PKA 신호로 glucose 공급을 돕는다</h2><p>Glucagon receptor는 G protein-coupled receptor다. 간세포에서 Gs–adenylyl cyclase를 통해 cyclic AMP(cAMP)가 증가하고 protein kinase A(PKA)가 활성화된다. PKA는 phosphorylase kinase를 거쳐 glycogen phosphorylase를 활성화하고 glycogen 합성에는 억제 방향으로 작용한다. 동일한 인산화 신호가 분해 효소와 합성 효소에 반대 결과를 주는 예다.</p><p>간의 PFK2/FBPase2 단백질이 인산화되면 fructose 2,6-bisphosphate가 줄어드는 방향으로 작동한다. 그 결과 glycolysis를 촉진하던 자극과 gluconeogenesis를 억제하던 작용이 약해진다. Glucagon은 효소 발현에도 영향을 준다. 빠른 인산화 변화와 더 느린 유전자 발현 변화가 함께 간의 glucose 공급을 조절한다. <a href="#ref-t23">[T23, III, PDF 645–648]</a></p><p><strong>간에서 glucagon 신호를 읽는 두 시간대</strong></p><div class="tw"><table aria-label="간에서 glucagon 신호를 읽는 두 시간대"><thead><tr><th>반응</th><th>주요 변화</th></tr></thead><tbody><tr><td>기존 단백질의 조절</td><td>cAMP·PKA와 효소 인산화</td></tr><tr><td>효소 양의 조절</td><td>Glucose 생성 관련 유전자 발현 변화</td></tr></tbody></table></div><p>골격근은 glucagon의 대표적인 직접 표적이 아니다. 사람 지방조직의 공복 lipolysis도 glucagon 하나로 설명하지 않고 insulin 감소와 catecholamine 작용을 중요하게 본다.</p></section>
+<section id="s7" class="lesson-section"><h2>7. 식사 조성에 따라 insulin과 glucagon이 함께 증가할 수 있다</h2><p>탄수화물 식사에서는 insulin 증가와 glucagon 감소가 대표적인 방향이다. 그러나 아미노산은 insulin과 glucagon 분비를 모두 자극할 수 있다. 단백질 중심 식사에서 insulin은 아미노산 이용을 돕고 glucagon은 간의 glucose 공급을 지원한다. 두 호르몬이 항상 정확한 반대 방향으로만 움직인다고 외우면 이 반응을 설명하지 못한다.</p><p>장에서는 glucagon-like peptide 1(GLP-1)과 glucose-dependent insulinotropic polypeptide(GIP) 같은 incretin이 영양소 섭취 신호를 β세포에 전달한다. Incretin 효과를 비교할 때는 경구와 정맥 glucose의 혈당 양상을 맞추어 insulin 반응을 비교하는 것이 중요하다. 단순히 같은 g의 glucose를 다른 경로로 주었다는 조건만으로는 흡수 차이와 호르몬 효과를 분리하기 어렵다. <a href="#ref-incretin">[R2]</a></p><p><strong>자극에 따라 달라지는 분비 조합</strong></p><div class="tw"><table aria-label="자극에 따라 달라지는 분비 조합"><thead><tr><th>상황</th><th>대표 반응</th><th>생리적 의미</th></tr></thead><tbody><tr><td>탄수화물 식사</td><td>Insulin 증가, glucagon 억제</td><td>유입 glucose 이용·저장</td></tr><tr><td>아미노산 증가</td><td>두 호르몬 모두 증가 가능</td><td>아미노산 이용과 혈당 유지</td></tr><tr><td>운동·교감신경 자극</td><td>연료 동원 신호 증가</td><td>조직의 급증한 에너지 수요 지원</td></tr></tbody></table></div><div class="box box--step"><b>시험에서 가려내는 지점</b> Insulin과 glucagon은 혈당에서 반대 효과를 낼 수 있지만 분비가 언제나 반대인 것은 아니다. 단백질 식사를 대표 예로 설명할 수 있어야 한다.</div></section>
+<section id="s8" class="lesson-section"><h2>8. 혈당 변화는 분비·수용체·기질 공급을 함께 보아야 한다</h2><p>같은 insulin 농도라도 조직 반응이 다르면 glucose 이용과 생성 억제의 정도가 달라진다. 같은 glucagon 자극도 간의 glycogen 저장량과 gluconeogenesis 재료가 충분한지에 따라 결과가 다르다. 호르몬을 측정했다고 실제 대사 흐름을 모두 알 수 있는 것은 아니다.</p><div class="box box--limit"><b>임상 연계</b><h3>학습용 사례: 공복에 운동하는 근육</h3><p>Insulin이 식후보다 낮더라도 수축하는 근육은 수축 관련 신호를 통해 glucose 유입을 늘릴 수 있다. 따라서 ‘공복이므로 근육에는 glucose가 전혀 들어가지 않는다’는 설명은 틀리다. 근육 수축의 신호와 insulin 신호가 서로 다른 출발점에서 수송 조절에 기여함을 구분한다.</p></div><p>다음 강의에서는 이 원리를 장기별 연료 교환으로 확장한다. 간이 glucose를 내보내면서 지방산을 태우는 이유, 지방조직의 glycerol이 간으로 가는 이유를 연결하면 호르몬의 대사 효과를 단순 암기보다 쉽게 이해할 수 있다.</p><div class="box box--front"><b>연구 전선</b> Insulin 저항성 연구에서 호르몬 농도뿐 아니라 glucose 생성과 조직별 흡수를 따로 측정하는 것은 ‘신호가 얼마나 있는가’와 ‘실제로 얼마나 반응하는가’를 구분하기 위해서다.</div></section>
+</section>
 
-  <h2>학습목표</h2>
-  <p>작성 예정. 이 수업이 답하는 질문 6~9개를 먼저 확정한 뒤 측정 가능한 학습목표로 옮긴다.</p>
+<section aria-labelledby="questions"><h2 id="questions">확인 문항과 해설</h2><ol class="quiz"><li><p class="qq"><strong>판단.</strong> Insulin과 C-peptide는 같은 몰수로 분비되므로 혈중 농도도 항상 같다.</p><details><summary>해설</summary><p>틀리다. 제거 속도가 다르므로 분비 비율과 측정 농도 비율은 다르다.</p></details></li><li><p class="qq"><strong>판단.</strong> β세포에서 ATP/ADP 비가 증가하면 KATP 통로가 닫히고 탈분극에 이어 Ca2+가 유입된다.</p><details><summary>해설</summary><p>맞다. Ca2+ 증가는 insulin 과립의 exocytosis를 촉진한다.</p></details></li><li><p class="qq"><strong>판단.</strong> Insulin은 간에서도 GLUT4를 세포막으로 이동시켜 glucose 유입을 조절한다.</p><details><summary>해설</summary><p>틀리다. 대표적인 GLUT4 이동은 근육·지방조직에서 나타난다. 간에서는 glucose 대사와 생성·저장 조절을 구분해 설명한다.</p></details></li><li><p class="qq"><strong>판단.</strong> 단백질 식사 뒤 insulin과 glucagon이 함께 증가할 수 있다.</p><details><summary>해설</summary><p>맞다. 아미노산 이용을 돕는 insulin과 간의 glucose 공급을 지원하는 glucagon의 작용이 함께 나타날 수 있다.</p></details></li><li><p class="qq">LPL과 ATGL·HSL의 기질 위치를 구별하라.</p><details><summary>해설</summary><p>LPL은 혈중 lipoprotein의 TAG, ATGL·HSL 등은 지방세포 안 저장지방 분해에 관여한다.</p></details></li><li><p class="qq">Glucagon이 간의 glycogen 분해를 촉진하는 신호를 순서대로 설명하라.</p><details><summary>해설</summary><p>수용체–Gs–adenylyl cyclase–cAMP–PKA 신호가 phosphorylase kinase와 glycogen phosphorylase 활성화로 이어진다.</p></details></li></ol></section>
 
-  <h2>선수지식</h2>
-  <p>작성 예정.</p>
-
-  <h2>본문</h2>
-  <p>작성 예정. 각 절은 하나의 질문에 답하는 단위로 쓰고
-  질문 → 답 → 근거 → 조건과 한계 → 귀결의 순서로 전개한다.</p>
-
-  <h2>확인 문항</h2>
-  <p>작성 예정. 5개 이상, 절반 이상은 판단을 묻는 문항으로 한다.</p>
-
-  <h2>참고문헌</h2>
-  <p>작성 예정.</p>
-
-  <nav class="pager"><a href="../../../M02/W11/L03/index.html">← M02-W11-L03 Nucleotide 대사</a><a href="../../../M02/W12/L02/index.html">M02-W12-L02 섭식·공복 주기의 장기별 대사 통합 [24장] →</a></nav>
-
-</main>
-
-<footer class="foot wrap">
+<section aria-labelledby="references"><h2 id="references">참고문헌</h2><ol class="ref"><li id="ref-t23">[T23] Abali EE, Cline SD, Franklin DS, Viselli SM. Lippincott Illustrated Reviews: Biochemistry. 8e. Wolters Kluwer; 2022. Chapter 23, 제공 PDF 파일 634–648쪽.</li><li id="ref-human">[R1] <a href="https://www.jci.org/articles/view/118308">Human and rat beta cells differ in glucose transporter but not in glucokinase gene expression.</a> J Clin Invest. 1995;96:2489–2495. doi:10.1172/JCI118308.</li><li id="ref-incretin">[R2] <a href="https://pubmed.ncbi.nlm.nih.gov/3522621/">Incretin effects of increasing glucose loads in man calculated from venous insulin and C-peptide responses.</a> 경구·정맥 glucose를 같은 혈당 양상에서 비교한 원저.</li></ol></section>
+<nav class="pager" aria-label="이전·다음 수업"><a href="../../W11/L03/index.html">← Nucleotide 대사 [22장]</a><a href="../../W12/L02/index.html">섭식·공복 주기의 장기별 대사 통합 [24장] →</a></nav></main><footer class="foot wrap">
   <span>© 2026 Kim Jintae · Hanyang University</span>
   <a href="https://github.com/hoperiasd2/hoperiasd2.github.io">GitHub 저장소</a>
 </footer>
 
-<script src="../../../../assets/site.js"></script>
-</body>
-</html>
+<script src="../../../../assets/edit.js" defer></script></body></html>

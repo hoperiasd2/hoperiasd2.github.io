@@ -1,8 +1,17 @@
+---
+title: Nucleotide 대사
+status: 초안
+version: v0.1
+slides: none
+---
+
+<!-- 본문은 같은 폴더의 index.html 에 있다. -->
+
 # M02-W11-L03 Insulin·glucagon의 대사 작용 [23장]
 
 - 구성요소: M02 대사생화학
 - 주차·회차: 11주 3회
-- 상태: 설계
+- 상태: 초안
 - 버전: v0.1
 
 ## 이 수업이 답하는 질문

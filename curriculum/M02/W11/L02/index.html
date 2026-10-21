@@ -1,64 +1,581 @@
 <!DOCTYPE html>
-<html lang="ko">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>M02-W11-L02 아미노산 유래 특수 산물·heme 합성과 porphyria [21장]</title>
-<meta name="description" content="아미노산 유래 특수 산물·heme 합성과 porphyria [21장]">
-<link rel="stylesheet" href="../../../../assets/site.css">
-</head>
-<body>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>M02-W11-L02 아미노산 유래 특수 산물·heme 합성과 porphyria [21장]</title><meta name="description" content="아미노산 유래 특수 산물·heme 합성과 porphyria [21장]: 구조에서 생리 기능과 질환까지"><style data-source="site.css + lesson.css snapshot 2026-10-17">/* 의생명과학 교육과정 — 공통 스타일
+   색은 :root 토큰으로만 쓰고 다크 모드에서 재정의한다. */
 
-<header class="masthead">
+:root {
+  --navy: #003c71;
+  --navy-700: #00294e;
+  --chrome: #f2b705;
+  --ink: #16191d;
+  --ink-2: #4a5159;
+  --ink-3: #727a84;
+  --line: #dde2e8;
+  --bg: #f6f8fa;
+  --card: #ffffff;
+  --accent-soft: #eaf1f8;
+  --ok: #1a7f52;
+  --ok-soft: #e7f4ed;
+  --warn: #9a6700;
+  --warn-soft: #fdf5e3;
+  --radius: 10px;
+  --wrap: 1180px;
+  --mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+  --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo",
+    "Noto Sans KR", "Malgun Gothic", sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --navy: #8fc3f5;
+    --navy-700: #b9d9fb;
+    --chrome: #f2b705;
+    --ink: #e7eaee;
+    --ink-2: #b2bac4;
+    --ink-3: #868f9a;
+    --line: #2b3138;
+    --bg: #14171b;
+    --card: #1b1f24;
+    --accent-soft: #1e2833;
+    --ok: #5dd3a0;
+    --ok-soft: #16271f;
+    --warn: #e3b341;
+    --warn-soft: #2a2416;
+  }
+}
+:root[data-theme="dark"] {
+  --navy: #8fc3f5;
+  --navy-700: #b9d9fb;
+  --ink: #e7eaee;
+  --ink-2: #b2bac4;
+  --ink-3: #868f9a;
+  --line: #2b3138;
+  --bg: #14171b;
+  --card: #1b1f24;
+  --accent-soft: #1e2833;
+  --ok: #5dd3a0;
+  --warn: #e3b341;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.75;
+  -webkit-text-size-adjust: 100%;
+}
+
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 16px; }
+.wrap--narrow { max-width: 860px; }
+
+a { color: var(--navy); }
+a:hover { color: var(--navy-700); }
+
+/* ---- 머리글 ---- */
+.masthead {
+  background: #003c71;
+  border-bottom: 3px solid var(--chrome);
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+.masthead .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 52px;
+}
+.masthead a.brand {
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  letter-spacing: .01em;
+}
+.masthead nav { display: flex; gap: 16px; flex-wrap: wrap; }
+.masthead nav a { color: #cfe0f0; text-decoration: none; font-size: 14px; }
+.masthead nav a:hover { color: #fff; }
+
+/* ---- 이동 경로 ---- */
+.crumb {
+  font-size: 13px;
+  color: var(--ink-3);
+  padding: 14px 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+}
+.crumb a { color: var(--ink-2); text-decoration: none; }
+.crumb a:hover { color: var(--navy); text-decoration: underline; }
+.crumb span[aria-hidden] { color: var(--ink-3); }
+
+/* ---- 표제 ---- */
+.hero {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-left: 5px solid var(--navy);
+  border-radius: var(--radius);
+  padding: 26px 28px;
+  margin: 16px 0 24px;
+}
+.hero .eyebrow {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  margin: 0 0 8px;
+}
+.hero h1 { margin: 0 0 10px; font-size: 27px; line-height: 1.35; }
+.hero .en { color: var(--ink-3); font-size: 14px; margin: 0 0 12px; }
+.hero p.lede { margin: 0; color: var(--ink-2); max-width: 70ch; }
+
+h2 {
+  font-size: 20px;
+  margin: 34px 0 14px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--line);
+}
+h3 { font-size: 17px; margin: 24px 0 10px; }
+
+/* ---- 카드 격자 ---- */
+.grid { display: grid; gap: 14px; }
+.grid--modules { grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); }
+.grid--weeks { grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); }
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 18px 20px;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  transition: border-color .12s, transform .12s;
+}
+a.card:hover { border-color: var(--navy); transform: translateY(-1px); }
+.card__no {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--chrome);
+  font-weight: 700;
+  letter-spacing: .08em;
+}
+.card__title { font-weight: 700; margin: 4px 0 2px; }
+.card__en { font-size: 13px; color: var(--ink-3); }
+.card__meta { font-size: 13px; color: var(--ink-2); margin-top: 10px; }
+
+/* ---- 진행 막대 ---- */
+.bar { height: 5px; background: var(--line); border-radius: 3px; overflow: hidden; margin-top: 10px; }
+.bar > i { display: block; height: 100%; background: var(--navy); }
+
+/* ---- 수업 목록 ---- */
+.lessons { list-style: none; margin: 0; padding: 0; }
+.lessons li {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--card);
+  margin-bottom: 8px;
+}
+.lessons a {
+  display: flex;
+  gap: 14px;
+  align-items: baseline;
+  padding: 13px 16px;
+  text-decoration: none;
+  color: inherit;
+}
+.lessons a:hover { background: var(--accent-soft); }
+.lessons .lid {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--ink-3);
+  white-space: nowrap;
+}
+.lessons .ltitle { flex: 1; min-width: 0; }
+.lessons .lgroup { font-size: 12px; color: var(--ink-3); }
+
+/* ---- 상태 배지 ---- */
+.badge {
+  font-size: 11px;
+  font-family: var(--mono);
+  padding: 2px 8px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  color: var(--ink-2);
+  background: var(--bg);
+  white-space: nowrap;
+}
+.badge--design { color: var(--ink-3); }
+.badge--draft { color: var(--warn); border-color: var(--warn); background: var(--warn-soft); }
+.badge--review { color: var(--navy); border-color: var(--navy); background: var(--accent-soft); }
+.badge--done {
+  color: var(--ok);
+  border-color: var(--ok);
+  background: var(--ok-soft);
+  font-weight: 600;
+}
+
+/* ---- 목록에서 집필 상태를 한눈에 ---- */
+/* 배지만으로는 276줄을 훑을 때 눈에 들어오지 않아 왼쪽에 색 띠를 둔다. */
+.lessons li[data-status] { border-left: 4px solid var(--line); }
+.lessons li[data-status="done"] { border-left-color: var(--ok); }
+.lessons li[data-status="draft"] { border-left-color: var(--warn); }
+.lessons li[data-status="review"] { border-left-color: var(--navy); }
+.lessons li[data-status="design"] { border-left-color: var(--line); }
+.lessons li[data-status="done"] .ltitle { font-weight: 600; }
+
+.filters--status { margin-top: -4px; }
+.filters--status button[data-filter-status="done"][aria-pressed="true"] {
+  border-color: var(--ok);
+  color: var(--ok);
+}
+
+/* ---- 검색 ---- */
+.search {
+  width: 100%;
+  padding: 12px 14px;
+  font-size: 15px;
+  font-family: inherit;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--card);
+  color: var(--ink);
+}
+.search:focus { outline: 2px solid var(--navy); outline-offset: 1px; }
+.filters { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 18px; }
+.filters button {
+  font: inherit;
+  font-size: 13px;
+  padding: 6px 13px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: var(--card);
+  color: var(--ink-2);
+  cursor: pointer;
+}
+.filters button[aria-pressed="true"] { background: var(--navy); color: #fff; border-color: var(--navy); }
+.count { font-size: 13px; color: var(--ink-3); margin: 0 0 12px; }
+
+/* ---- 안내 상자 ---- */
+.callout {
+  background: var(--accent-soft);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--navy);
+  border-radius: var(--radius);
+  padding: 14px 18px;
+  margin: 18px 0;
+  font-size: 15px;
+}
+.callout--warn { border-left-color: var(--chrome); }
+
+/* ---- 이전·다음 ---- */
+.pager {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 36px 0 12px;
+  border-top: 1px solid var(--line);
+  padding-top: 16px;
+  font-size: 14px;
+}
+.pager a { text-decoration: none; }
+.pager span { color: var(--ink-3); }
+
+/* ---- 표 ---- */
+table { border-collapse: collapse; width: 100%; margin: 14px 0; font-size: 15px; }
+th, td { border: 1px solid var(--line); padding: 8px 11px; text-align: left; vertical-align: top; }
+th { background: var(--accent-soft); font-weight: 700; }
+
+/* ---- 꼬리말 ---- */
+.foot {
+  margin-top: 56px;
+  padding: 22px 16px 40px;
+  border-top: 1px solid var(--line);
+  color: var(--ink-3);
+  font-size: 13px;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 640px) {
+  .hero { padding: 20px; }
+  .hero h1 { font-size: 22px; }
+  .lessons a { flex-wrap: wrap; gap: 6px 12px; }
+}
+
+@media print {
+  .masthead, .filters, .search, .pager, .foot { display: none; }
+  body { background: #fff; font-size: 11pt; }
+  .card, .hero { border: 1px solid #ccc; break-inside: avoid; }
+}
+
+/* 수업 본문 전용 스타일. site.css의 토큰을 그대로 쓴다. */
+
+.lesson { font-size: 16.5px; }
+.lesson p { margin: 0 0 14px; }
+.lesson ul, .lesson ol { margin: 0 0 16px; padding-left: 22px; }
+.lesson li { margin-bottom: 7px; }
+.lesson li > ul { margin: 7px 0 4px; }
+.lesson code {
+  font-family: var(--mono);
+  font-size: .9em;
+  background: var(--accent-soft);
+  padding: 1px 5px;
+  border-radius: 4px;
+}
+.lesson section { scroll-margin-top: 70px; }
+
+/* 슬라이드 내려받기 */
+.dl { margin: 0 0 24px; }
+.dlbtn {
+  display: inline-block;
+  padding: 9px 18px;
+  border: 1px solid var(--navy);
+  border-radius: var(--radius);
+  color: var(--navy);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 700;
+}
+.dlbtn:hover { background: var(--navy); color: #fff; }
+
+/* 질문과 답 */
+.lesson p.q, .lesson p.a {
+  border-radius: var(--radius);
+  padding: 13px 17px;
+  margin: 0 0 12px;
+}
+.lesson p.q {
+  background: var(--accent-soft);
+  border-left: 4px solid var(--navy);
+}
+.lesson p.a {
+  background: rgba(242, 183, 5, .13);
+  border-left: 4px solid var(--chrome);
+  font-weight: 600;
+}
+.lesson p.q > span, .lesson p.a > span {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: .1em;
+  margin-right: 10px;
+  vertical-align: 1px;
+  font-weight: 700;
+}
+.lesson p.q > span { color: var(--navy); }
+.lesson p.a > span { color: var(--warn); }
+
+/* 질문 목록 */
+.qlist { margin: 0 0 24px; }
+.qlist li { margin-bottom: 9px; }
+.qlist a { text-decoration: none; }
+.qlist a:hover { text-decoration: underline; }
+
+/* 조건·한계 / 귀결 / 안전 상자 */
+.box {
+  border-radius: var(--radius);
+  padding: 14px 18px;
+  margin: 16px 0;
+  font-size: 15.5px;
+  border: 1px solid var(--line);
+}
+.box > b {
+  display: block;
+  font-size: 11px;
+  font-family: var(--mono);
+  letter-spacing: .1em;
+  margin-bottom: 5px;
+}
+.box--limit { background: var(--accent-soft); border-left: 4px solid var(--navy); }
+.box--limit > b { color: var(--navy); }
+.box--result { background: rgba(242, 183, 5, .1); border-left: 4px solid var(--chrome); }
+.box--result > b { color: var(--warn); }
+.box--safety { background: rgba(242, 183, 5, .14); border-left: 5px solid var(--chrome); }
+.box--safety > b { color: var(--warn); font-size: 12px; }
+.box--safety ul { margin: 6px 0 0; }
+
+/* 표 */
+.tw { overflow-x: auto; margin: 16px 0; }
+.lesson table { font-size: 14.5px; min-width: 520px; }
+.lesson th { white-space: nowrap; }
+
+/* 확인 문항 */
+.quiz { counter-reset: none; }
+.quiz > li { margin-bottom: 18px; }
+.quiz .qq { font-weight: 600; margin-bottom: 8px; }
+.quiz details {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--card);
+  padding: 0 14px;
+}
+.quiz details[open] { padding-bottom: 6px; }
+.quiz summary {
+  cursor: pointer;
+  padding: 9px 0;
+  font-size: 14px;
+  color: var(--navy);
+  font-weight: 700;
+}
+.quiz details p { margin: 4px 0 8px; font-size: 15.5px; }
+
+/* 참고문헌 */
+.ref { font-size: 14.5px; color: var(--ink-2); }
+.ref li { margin-bottom: 8px; }
+
+@media print {
+  .quiz details { border: none; }
+  .quiz details[open] summary { display: none; }
+  .lesson p.q, .lesson p.a, .box, .equation { break-inside: avoid; }
+  .contents { font-size: 13px; background: none; }
+}
+
+/* 그림 */
+.fig { margin: 20px 0; text-align: center; }
+.fig img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: #fff;
+}
+.fig figcaption {
+  font-size: 14px;
+  color: var(--ink-2);
+  margin-top: 9px;
+  text-align: left;
+  line-height: 1.6;
+}
+.fig figcaption > b { color: var(--navy); margin-right: 6px; }
+.fig .credit { color: var(--ink-3); font-size: 13px; }
+
+/* 보강 입력 상자와 외부 링크 그림 */
+.box--notes{border-left:4px solid #f2b705;background:#fffaec}
+.fig--ext img{outline:2px dashed #f2b705;outline-offset:3px}
+.fig .credit{font-size:.82em;color:#8a6300}
+
+/* 페이지에서 직접 고치는 기능 */
+.editbar{position:fixed;right:16px;bottom:16px;z-index:60;display:flex;gap:6px;
+  align-items:center;flex-wrap:wrap;justify-content:flex-end;max-width:min(94vw,520px);
+  padding:8px;border-radius:10px;background:#ffffffee;border:1px solid #c6d2dd;
+  box-shadow:0 2px 12px rgba(0,0,0,.14)}
+.editbar.is-on{background:#fffaecf2;border-color:#f2b705}
+.editbtn{font:inherit;font-size:.86rem;padding:6px 11px;border-radius:7px;cursor:pointer;
+  border:1px solid #003c71;background:#fff;color:#003c71}
+.editbtn:hover{background:#eaf1f8}
+.editbtn--main{background:#003c71;color:#fff;font-weight:700}
+.editbtn--main:hover{background:#00529c}
+.editbtn--warn{border-color:#b3261e;color:#b3261e}
+.editbtn--warn:hover{background:#fbeceb}
+.editcount{font-size:.82rem;color:#8a6300;font-weight:700}
+.editgrp{display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end}
+.editnote{position:fixed;left:16px;bottom:16px;z-index:60;max-width:min(92vw,460px);
+  padding:10px 13px;border-radius:9px;border-left:4px solid #f2b705;background:#16191df2;
+  color:#fff;font-size:.86rem;line-height:1.5;opacity:0;transform:translateY(8px);
+  transition:opacity .18s,transform .18s;pointer-events:none}
+.editnote.is-on{opacity:1;transform:none}
+.editdump{position:fixed;left:16px;bottom:72px;z-index:60;width:min(92vw,560px);height:40vh;
+  font:12px/1.5 monospace;padding:10px;border:2px solid #f2b705;border-radius:8px;background:#fff}
+body.editing [contenteditable]{outline:1px dashed #9fb3c4;outline-offset:3px;border-radius:3px}
+body.editing [contenteditable]:focus{outline:2px solid #003c71;background:#f7fbff}
+body.editing h2{position:relative}
+.memobtn{font:inherit;font-size:.62em;font-weight:400;margin-left:10px;padding:2px 8px;
+  border-radius:6px;cursor:pointer;border:1px dashed #8a6300;background:#fffaec;color:#8a6300;
+  vertical-align:middle}
+.memobtn:hover{background:#f2b705;color:#16191d}
+h2.has-memo::after{content:"메모";font-size:.58em;font-weight:400;margin-left:10px;
+  padding:2px 8px;border-radius:6px;background:#f2b705;color:#16191d;vertical-align:middle}
+.is-edited{background:#fffaec;box-shadow:inset 3px 0 0 #f2b705;padding-left:9px}
+@media print{.editbar,.editnote,.editdump,.memobtn{display:none}}
+.editmodal{position:fixed;inset:0;z-index:70;display:flex;align-items:center;
+  justify-content:center;padding:16px;background:#16191dbf}
+.editmodal__box{width:min(96vw,560px);background:#fff;border-radius:12px;padding:18px 20px;
+  box-shadow:0 8px 32px rgba(0,0,0,.3)}
+.editmodal__box h3{margin:0 0 6px;font-size:1.02rem;color:#003c71}
+.editmodal__box p{margin:0 0 12px;font-size:.84rem;color:#4a5159}
+.editmodal__box textarea{width:100%;font:inherit;font-size:.9rem;line-height:1.55;padding:10px;
+  border:1px solid #c6d2dd;border-radius:8px;resize:vertical;box-sizing:border-box}
+.editmodal__box textarea:focus{outline:2px solid #003c71;border-color:#003c71}
+.editmodal__row{display:flex;gap:8px;justify-content:flex-end;margin-top:12px}
+
+/* 깊이 층위 상자와 수업 사이 연결 */
+.box--step{border-left:4px solid #2e7d32;background:#ecf6ec}
+.box--step>b{color:#1e6b2c}
+.box--front{border-left:4px solid #6b4fa0;background:#f3eff9}
+.box--front>b{color:#5b3a8a}
+a.xref{font-variant-numeric:tabular-nums;white-space:nowrap;text-decoration:none;
+  border-bottom:1px dotted currentColor}
+a.xref:hover{background:#eaf1f8}
+
+/* ---- 본문 목차 ---- */
+/* 평범한 목록으로 두면 본문과 구별되지 않아 긴 수업에서 지나치기 쉽다. */
+.contents {
+  border: 1px solid var(--line);
+  background: var(--bg);
+  border-radius: var(--radius);
+  padding: 16px 22px;
+  margin: 28px 0 36px;
+}
+.contents strong {
+  display: block;
+  font-size: 13px;
+  letter-spacing: .04em;
+  color: var(--ink-2);
+  margin-bottom: 10px;
+}
+.contents .qlist { margin: 0; }
+.contents .qlist li { margin-bottom: 6px; font-size: 15.5px; }
+
+/* ---- 수식 상자 ---- */
+/* @eq 로 적은 줄. 본문 문단과 섞이면 식의 경계가 보이지 않는다. */
+.equation {
+  background: var(--accent-soft);
+  border-left: 3px solid var(--navy);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  padding: 16px 20px;
+  margin: 22px 0;
+  line-height: 2;
+  overflow-wrap: anywhere;
+}
+</style><link rel="stylesheet" href="../../../../assets/site.css"><link rel="stylesheet" href="../../../../assets/lesson.css"></head><body><header class="masthead">
   <div class="wrap">
     <a class="brand" href="../../../../index.html">의생명과학 교육과정</a>
     <nav>
       <a href="../../../../curriculum/index.html">전체 수업</a>
       <a href="../../../../curriculum/materials.html">자료 내려받기</a>
-      <a href="../../../../curriculum/M07/index.html">실습</a>
       <a href="../../../../archive/index.html">아카이브</a>
     </nav>
   </div>
 </header>
 
-<main class="wrap">
-<nav class="crumb" aria-label="이동 경로"><a href="../../../../index.html">대문</a><span aria-hidden="true">›</span><a href="../../../index.html">전체 수업</a><span aria-hidden="true">›</span><a href="../../index.html">M02</a><span aria-hidden="true">›</span><a href="../index.html">11주차</a><span aria-hidden="true">›</span><span>M02-W11-L02</span></nav>
+<main class="wrap wrap--narrow lesson" data-lesson-id="M02-W11-L02" data-lesson="M02-W11-L02"><nav class="crumb" aria-label="이동 경로"><a href="../../../../index.html">대문</a><span aria-hidden="true">›</span><a href="../../../index.html">전체 수업</a><span aria-hidden="true">›</span><a href="../../index.html">M02</a><span aria-hidden="true">›</span><a href="../index.html">11주차</a><span aria-hidden="true">›</span><span>M02-W11-L02</span></nav><section class="hero"><p class="eyebrow">M02-W11-L02 · 대사생화학 · 아미노산대사</p><h1>아미노산 유래 특수 산물·heme 합성과 porphyria</h1><p class="en"></p></section><section aria-labelledby="objectives"><h2 id="objectives">학습목표</h2><ul><li>Heme의 구조와 합성 장소, ALAS1·ALAS2 조절을 설명한다.</li><li>Porphyria의 주요 축적물과 신경·피부 증상을 연결한다.</li><li>Bilirubin의 운반·포합·배출과 황달의 검사 양상을 설명한다.</li><li>아미노산 유래 신경전달물질과 creatine의 합성 원리를 구별한다.</li></ul></section>
 
-  <section class="hero">
-    <p class="eyebrow">M02-W11-L02 · 대사생화학 · 질소대사</p>
-    <h1>아미노산 유래 특수 산물·heme 합성과 porphyria [21장]</h1>
-    <p class="lede">강의 수업 · 상태 <span class="badge badge--design">설계</span></p>
-  </section>
+<section aria-labelledby="prerequisites"><h2 id="prerequisites">선수지식</h2><p>아미노산은 단백질과 에너지의 재료일 뿐 아니라 특정 기능을 가진 작은 분자의 재료다. Glycine, tyrosine, tryptophan, histidine, arginine의 이름과 vitamin B6·BH4·SAM의 역할을 복습한다. 이번 강의에서는 합성 경로와 분해·배출 경로를 구분해 읽는다.</p></section>
 
-  
-  <div class="callout">이 수업은 아직 집필 전이다. 제작 기준은
-  <a href="../../../../PROJECT.md">PROJECT.md</a>의 집필 원칙과 산출물 규격을 따른다.</div>
+<nav class="contents" aria-label="강의 구성"><strong>강의 구성</strong><ol class="qlist"><li><a href="#s1">1. Heme는 철과 고리 구조가 함께 이루는 기능 단위이다</a></li><li><a href="#s2">2. Heme 합성은 미토콘드리아에서 시작해 세포질을 거쳐 돌아온다</a></li><li><a href="#s3">3. 간과 적혈구 전구세포는 서로 다른 필요에 맞춰 합성을 조절한다</a></li><li><a href="#s4">4. Porphyria의 증상은 어떤 전구체가 축적되는지와 연결된다</a></li><li><a href="#s5">5. Heme 분해에서는 철을 회수하고 고리는 bilirubin으로 처리한다</a></li><li><a href="#s6">6. 황달은 생성·포합·배출 중 어느 과정이 달라졌는지 묻는다</a></li><li><a href="#s7">7. 신경전달물질 합성에서는 hydroxylation과 decarboxylation을 구분한다</a></li><li><a href="#s8">8. Creatine과 다른 특수 산물도 아미노산의 일부를 새 기능에 사용한다</a></li></ol></nav><section aria-label="본문"><section id="s1" class="lesson-section"><h2>1. Heme는 철과 고리 구조가 함께 이루는 기능 단위이다</h2><p>Heme b는 protoporphyrin IX 고리의 중심에 철이 배위된 구조다. 네 pyrrole을 연결한 고리는 철이 단백질 속에서 특정한 화학 반응에 참여하도록 한다. Hemoglobin·myoglobin에서는 산소 결합에, cytochrome에서는 전자 전달 등에 관여한다. Heme를 단순히 ‘혈액의 붉은 색소’로 정의하면 간과 다른 조직의 역할을 놓친다.</p><p>고리와 철의 공급은 서로 다른 문제다. 철이 충분해도 고리 합성이 제한되면 정상적인 heme 생성이 어렵고, 고리를 만들더라도 철을 넣는 단계가 원활하지 않으면 문제가 된다. Heme 합성의 주요 장소는 골수의 적혈구 전구세포와 간이다. 성숙 적혈구에는 미토콘드리아가 없어 새로운 heme를 합성하지 못한다. <a href="#ref-t21">[T21, II.A–B, PDF 575–578]</a></p><p><strong>Heme 단백질마다 달라지는 기능</strong></p><div class="tw"><table aria-label="Heme 단백질마다 달라지는 기능"><thead><tr><th>대표 단백질</th><th>Heme가 참여하는 기능</th><th>장소를 생각할 때</th></tr></thead><tbody><tr><td>Hemoglobin, myoglobin</td><td>산소 결합</td><td>적혈구·근육</td></tr><tr><td>Cytochrome</td><td>전자 전달</td><td>미토콘드리아 등</td></tr><tr><td>Cytochrome P450</td><td>산화 반응</td><td>간 등의 대사 기능</td></tr><tr><td>Catalase</td><td>과산화수소 처리</td><td>산화 손상 방어</td></tr></tbody></table></div></section>
+<section id="s2" class="lesson-section"><h2>2. Heme 합성은 미토콘드리아에서 시작해 세포질을 거쳐 돌아온다</h2><p>첫 반응은 glycine과 succinyl-CoA로 δ-aminolevulinate(ALA)를 만드는 것이다. ALA synthase(ALAS)는 vitamin B6 유래 pyridoxal phosphate(PLP)를 사용한다. Glycine의 질소와 탄소, TCA 중간체에서 온 탄소가 새로운 고리 합성의 재료가 된다는 점에서 아미노산 대사와 에너지 대사가 만난다.</p><p>ALA는 세포질로 나와 두 분자가 결합해 porphobilinogen(PBG)이 된다. 네 PBG가 선형 tetrapyrrole을 만든 뒤 고리가 닫히고, side chain이 단계적으로 바뀐다. Coproporphyrinogen III부터는 다시 미토콘드리아로 들어가 마지막 반응들이 진행된다. 최종적으로 ferrochelatase가 protoporphyrin IX에 Fe2+를 넣는다. Porphyrinogen은 환원된 중간체이며, 산화된 porphyrin과 성질이 같지 않다. <a href="#ref-t21">[T21, II.B, PDF 577–581]</a></p><p><strong>장소와 구조 변화로 묶은 합성 순서</strong></p><div class="tw"><table aria-label="장소와 구조 변화로 묶은 합성 순서"><thead><tr><th>장소</th><th>반응</th><th>주요 효소</th></tr></thead><tbody><tr><td>미토콘드리아</td><td>Glycine + succinyl-CoA → ALA</td><td>ALAS, PLP 필요</td></tr><tr><td>세포질</td><td>ALA → PBG → 선형 tetrapyrrole</td><td>ALA dehydratase, hydroxymethylbilane synthase</td></tr><tr><td>세포질</td><td>고리 닫기 → coproporphyrinogen III</td><td>Uroporphyrinogen III synthase, uroporphyrinogen decarboxylase</td></tr><tr><td>미토콘드리아</td><td>고리의 side chain 변화·산화 → 철 삽입</td><td>Coproporphyrinogen oxidase, protoporphyrinogen oxidase, ferrochelatase</td></tr></tbody></table></div><div class="box box--step"><b>시험에서 가려내는 지점</b> Heme 합성은 첫 반응과 마지막 세 반응이 미토콘드리아, 중간 반응이 세포질이다. 성숙 적혈구가 이 전체 경로를 수행한다고 설명하지 않는다.</div></section>
+<section id="s3" class="lesson-section"><h2>3. 간과 적혈구 전구세포는 서로 다른 필요에 맞춰 합성을 조절한다</h2><p>ALAS1은 간을 비롯한 여러 조직의 heme 합성 조절에서 중요하다. Heme가 충분하면 ALAS1의 발현과 미토콘드리아 유입 등에 억제가 걸려 새 전구체 생성을 줄인다. 일부 약물에 의해 cytochrome P450의 수요가 증가하면 이용 가능한 heme의 균형이 바뀌어 ALAS1이 유도될 수 있다. 이를 ‘모든 약물은 porphyria를 악화시킨다’로 일반화해서는 안 된다.</p><p>적혈구 계열의 ALAS2는 철 공급에 맞춰 조절된다. 철이 부족할 때는 iron regulatory protein이 ALAS2 mRNA의 iron-responsive element에 결합해 번역을 억제한다. 철을 충분히 넣을 수 없는 상황에서 고리 합성만 과도하게 진행하지 않도록 맞추는 조절이다. ALAS2 기능 소실은 sideroblastic anemia와 연결될 수 있다. <a href="#ref-t21">[T21, II.B.1, PDF 578]</a></p><p><strong>같은 첫 반응, 다른 조절 맥락</strong></p><div class="tw"><table aria-label="같은 첫 반응, 다른 조절 맥락"><thead><tr><th>효소</th><th>중요한 조직·역할</th><th>대표 조절</th></tr></thead><tbody><tr><td>ALAS1</td><td>간 등에서 heme 단백질 수요에 대응</td><td>Heme에 의한 되먹임 억제</td></tr><tr><td>ALAS2</td><td>적혈구 전구세포의 hemoglobin 합성</td><td>철 공급과 번역 조절</td></tr></tbody></table></div><p>납은 ALA dehydratase와 ferrochelatase를 억제하여 heme 합성을 방해할 수 있다. 따라서 빈혈과 ALA 증가가 연결된다. 다만 납의 신경독성 전체를 이 두 효소 억제만으로 설명할 수는 없다. 노출 평가는 heme 대사 검사만으로 대신하지 않는다.</p></section>
+<section id="s4" class="lesson-section"><h2>4. Porphyria의 증상은 어떤 전구체가 축적되는지와 연결된다</h2><p>Porphyria는 heme 합성 경로의 이상으로 특정 전구체나 porphyrin이 축적되는 질환군이다. Acute intermittent porphyria(AIP)는 hydroxymethylbilane synthase 기능 부족과 관련되며, 발작 때 ALA와 PBG가 증가한다. 심한 복통과 자율신경·정신신경 증상이 나타날 수 있지만 피부 광과민은 전형적이지 않다. 급성 증상을 ‘피부가 햇빛에 약한 병’이라는 이미지로만 떠올리면 놓칠 수 있다.</p><p>반면 porphyria cutanea tarda(PCT)는 간의 uroporphyrinogen decarboxylase 기능 저하와 관련되어 피부 취약성과 수포 등 광과민 소견이 나타난다. 모든 환자가 같은 유전 변이를 가진 것은 아니며 철과 간의 환경 요인도 중요하다. Erythropoietic protoporphyria(EPP)는 ferrochelatase 기능 부족과 관련된 protoporphyrin 축적이 대표적이며, 햇빛 노출 후 빠른 통증·화끈거림이 나타날 수 있다. 뚜렷한 수포가 없다고 배제하지 않는다. <a href="#ref-t21">[T21, II.C, PDF 581–584]</a> <a href="#ref-epp">[R2]</a></p><p><strong>대표 질환의 증상과 축적 양상</strong></p><div class="tw"><table aria-label="대표 질환의 증상과 축적 양상"><thead><tr><th>질환</th><th>중요한 축적·장애</th><th>대표 임상 방향</th></tr></thead><tbody><tr><td>AIP</td><td>ALA·PBG 증가</td><td>급성 복통·신경 증상, 전형적으로 피부 광과민 없음</td></tr><tr><td>PCT</td><td>Uroporphyrin 계열 증가</td><td>피부 취약성·수포성 광과민</td></tr><tr><td>EPP</td><td>Protoporphyrin 증가</td><td>빠른 통증성 광과민, 수포가 뚜렷하지 않을 수 있음</td></tr></tbody></table></div><p>급성 간성 porphyria가 의심될 때는 소변 ALA·PBG 등을 creatinine과 함께 측정하는 생화학 평가가 중요하다. Hemin 치료는 간의 ALAS1을 억제해 유해 전구체 생성을 줄이는 원리다. PCT의 철 제거와 같은 치료를 모든 porphyria에 동일하게 적용하지 않는다. 다른 유형인 hereditary coproporphyria나 variegate porphyria에서는 급성 증상과 피부 증상이 함께 나타날 수 있다. <a href="#ref-aga">[R1]</a> <a href="#ref-pct">[R3]</a></p><div class="box box--step"><b>시험에서 가려내는 지점</b> 모든 porphyria가 광과민을 보이거나 같은 소변 검사 양상을 보이는 것은 아니다. ALA·PBG와 고리형 porphyrin의 축적을 구분한다.</div></section>
+<section id="s5" class="lesson-section"><h2>5. Heme 분해에서는 철을 회수하고 고리는 bilirubin으로 처리한다</h2><p>오래된 적혈구 등에서 나온 heme는 대식세포에서 분해된다. Heme oxygenase가 고리를 열면 biliverdin, 철, carbon monoxide가 생긴다. Biliverdin reductase는 biliverdin을 bilirubin으로 바꾼다. 철은 다시 이용될 수 있지만, 고리에서 나온 부분은 bilirubin의 운반과 배출 과정을 거쳐 처리된다.</p><p>처음 만들어진 비포합 bilirubin은 물에 잘 녹지 않아 혈액에서 albumin에 결합해 간으로 이동한다. 간에서는 UDP-glucuronosyltransferase 1A1(UGT1A1)이 glucuronic acid를 붙여 포합 bilirubin을 만든다. 포합은 배출하기 쉬운 성질로 바꾸는 반응이며, 담즙으로 실제 내보내는 수송 단계와는 다르다. 장에 도착한 bilirubin 유래 물질은 세균 작용을 거쳐 urobilinogen과 대변 색소 등으로 이어진다. <a href="#ref-t21">[T21, II.D, PDF 584–587]</a></p><p><strong>Bilirubin이 이동하면서 달라지는 형태</strong></p><div class="tw"><table aria-label="Bilirubin이 이동하면서 달라지는 형태"><thead><tr><th>단계</th><th>형태·처리</th><th>의미</th></tr></thead><tbody><tr><td>혈액 운반</td><td>비포합 bilirubin–albumin</td><td>물에 잘 녹지 않는 물질을 운반</td></tr><tr><td>간의 포합</td><td>Glucuronic acid 결합</td><td>수용성을 높임</td></tr><tr><td>담즙 배출</td><td>포합 bilirubin의 능동 수송</td><td>장으로 보내는 별도 단계</td></tr><tr><td>장내 처리</td><td>Urobilinogen·대변 색소 등</td><td>배설과 일부 재흡수</td></tr></tbody></table></div></section>
+<section id="s6" class="lesson-section"><h2>6. 황달은 생성·포합·배출 중 어느 과정이 달라졌는지 묻는다</h2><p>적혈구 파괴가 증가하면 간으로 들어오는 bilirubin 부담이 증가하여 비포합 bilirubin이 높아질 수 있다. UGT1A1의 기능이 낮아도 비포합 bilirubin이 증가하지만, 이때는 생성 증가가 아니라 포합의 제한이 중심이다. Gilbert syndrome과 Crigler–Najjar syndrome은 이 단계의 기능 차이와 연결된다.</p><p>담즙 배출이 막히면 포합 bilirubin이 혈액으로 증가할 수 있다. 수용성인 포합 bilirubin은 소변에 나타날 수 있어 짙은 소변과 연결된다. Albumin에 결합한 비포합 bilirubin은 일반적으로 소변 bilirubin으로 나오지 않는다. 따라서 용혈에서 소변 색이 변하는 다른 원인이 있을 수 있다는 사실과, 비포합 bilirubin 자체가 소변으로 나오는지를 구분해야 한다. 간세포 손상에서는 여러 단계가 함께 영향을 받아 혼합 양상이 가능하다. <a href="#ref-t21">[T21, II.E, PDF 587–593]</a></p><p><strong>황달을 경로에 대입하기</strong></p><div class="tw"><table aria-label="황달을 경로에 대입하기"><thead><tr><th>대표 상황</th><th>주요 문제</th><th>예상 방향</th></tr></thead><tbody><tr><td>용혈 증가</td><td>Bilirubin 생성 부담 증가</td><td>비포합 증가 중심</td></tr><tr><td>포합 효소 기능 저하</td><td>Glucuronic acid 결합 제한</td><td>비포합 증가 중심</td></tr><tr><td>담즙 배출 장애</td><td>포합 뒤 수송·흐름의 제한</td><td>포합 증가, 소변 bilirubin 가능</td></tr><tr><td>간세포 손상</td><td>여러 처리 단계 영향</td><td>혼합 가능</td></tr></tbody></table></div><p>신생아에서는 bilirubin 처리 능력과 생성 부담을 함께 고려한다. 광선치료는 bilirubin을 배출하기 쉬운 광이성질체로 바꾸는 원리이며, 포합 효소를 직접 보충하는 치료가 아니다. 신생아의 치료 판단은 출생 후 시간과 재태연령 등 조건에 따라 달라지므로 한 가지 농도를 모든 아기에게 적용하지 않는다.</p><div class="box box--step"><b>시험에서 가려내는 지점</b> 비포합 bilirubin의 albumin 운반, 간의 포합, 담즙 배출은 서로 다른 단계다. 소변 bilirubin 양성은 보통 포합 bilirubin의 존재를 반영한다.</div></section>
+<section id="s7" class="lesson-section"><h2>7. 신경전달물질 합성에서는 hydroxylation과 decarboxylation을 구분한다</h2><p>Tyrosine은 tyrosine hydroxylase에 의해 L-DOPA가 된다. 이 조절 단계에는 tetrahydrobiopterin(BH4)이 필요하다. 이어 aromatic L-amino acid decarboxylase가 PLP를 사용해 dopamine을 만든다. Dopamine β-hydroxylase는 vitamin C와 구리를 이용하여 norepinephrine을 만들고, phenylethanolamine N-methyltransferase는 S-adenosylmethionine(SAM)의 methyl기를 이용해 epinephrine을 만든다. 한 경로에 여러 보조인자가 서로 다른 일을 한다.</p><p>Tryptophan은 BH4를 쓰는 hydroxylation과 PLP를 쓰는 decarboxylation을 거쳐 serotonin이 된다. Histidine은 PLP가 필요한 decarboxylation으로 histamine이 된다. Serotonin이 관여하는 생리 기능을 ‘기분을 좋게 만드는 물질’ 하나로 설명하거나, Histamine을 알레르기만의 물질로 설명하면 불충분하다. 조직과 수용체에 따라 작용이 다르다. <a href="#ref-t21">[T21, III.A–C, PDF 593–597]</a></p><p><strong>출발 아미노산과 필요한 반응</strong></p><div class="tw"><table aria-label="출발 아미노산과 필요한 반응"><thead><tr><th>출발</th><th>생성물</th><th>처음 구분할 보조인자</th></tr></thead><tbody><tr><td>Tyrosine</td><td>Dopamine → norepinephrine → epinephrine</td><td>BH4, PLP, vitamin C·구리, SAM</td></tr><tr><td>Tryptophan</td><td>Serotonin</td><td>BH4 뒤 PLP</td></tr><tr><td>Histidine</td><td>Histamine</td><td>PLP</td></tr></tbody></table></div><p>L-DOPA는 뇌로 들어갈 수 있어 dopamine 부족을 보완하는 데 이용된다. Carbidopa는 말초의 decarboxylase를 억제하여 L-DOPA가 뇌에 도달하기 전에 소모되는 양을 줄이는 원리다. 이 예는 어떤 분자를 공급하는지뿐 아니라 반응이 어느 장소에서 일어나는지가 치료 효과에 중요함을 보여 준다.</p><div class="box box--front"><b>연구 전선</b> 혈액에서 측정한 신경전달물질 농도를 뇌의 특정 시냅스 기능과 바로 같다고 볼 수 있을까? 합성 조직, 혈액뇌장벽, 분비와 재흡수의 위치를 구분해 자료를 해석하자.</div></section>
+<section id="s8" class="lesson-section"><h2>8. Creatine과 다른 특수 산물도 아미노산의 일부를 새 기능에 사용한다</h2><p>Creatine 합성에는 glycine, arginine의 guanidino기, SAM의 methyl기가 사용된다. Creatine kinase는 ATP의 인산기를 creatine에 옮겨 phosphocreatine을 만들며 반응은 가역적이다. 에너지 수요가 갑자기 증가할 때 phosphocreatine이 ADP에 인산기를 주어 ATP를 빠르게 재생한다. 새로운 에너지를 공짜로 만드는 반응이 아니라 이전에 확보한 에너지를 다른 형태로 보관했다가 사용하는 것이다.</p><p>Creatine과 phosphocreatine 일부는 비효소적으로 creatinine이 되어 배설된다. 혈중 creatinine은 신장 기능 평가에 쓰이지만 생성량도 근육량 등의 영향을 받는다. 낮은 근육량과 정상처럼 보이는 creatinine을 함께 해석해야 하는 이유다. 그 밖에도 arginine은 nitric oxide, glutamate·cysteine·glycine은 glutathione, tyrosine은 melanin의 재료가 된다. 동일한 아미노산이 조직의 효소 구성에 따라 다른 기능성 산물로 연결된다. <a href="#ref-t21">[T21, III.D–E, PDF 597–600]</a></p><div class="box box--limit"><b>임상 연계</b><h3>학습용 사례: ATP와 phosphocreatine을 구별하기</h3><p>근육의 ATP 소비가 갑자기 빨라졌을 때 phosphocreatine이 ADP에 인산기를 주면 ATP 농도를 잠시 유지하는 데 도움이 된다. 이후 phosphocreatine을 다시 채우려면 대사로 만든 ATP가 필요하다. 따라서 phosphocreatine을 무한한 에너지원으로 설명할 수는 없다.</p></div><div class="box box--front"><b>연구 전선</b> 어떤 산물의 혈중 농도를 해석할 때는 생성량과 제거량을 함께 생각한다. Creatinine은 이 원리를 보여 주며, 농도 하나만으로 생성 조직이나 배설 장기의 상태를 완전히 분리할 수는 없다.</div></section>
+</section>
 
-  <h2>학습목표</h2>
-  <p>작성 예정. 이 수업이 답하는 질문 6~9개를 먼저 확정한 뒤 측정 가능한 학습목표로 옮긴다.</p>
+<section aria-labelledby="questions"><h2 id="questions">확인 문항과 해설</h2><ol class="quiz"><li><p class="qq"><strong>판단.</strong> 성숙 적혈구는 hemoglobin을 많이 포함하므로 미토콘드리아에서 heme를 계속 합성한다.</p><details><summary>해설</summary><p>틀리다. 성숙 적혈구에는 미토콘드리아가 없다. 골수의 적혈구 전구세포에서 합성하는 과정과 구분한다.</p></details></li><li><p class="qq"><strong>판단.</strong> AIP에는 반드시 피부 광과민이 있어야 한다.</p><details><summary>해설</summary><p>틀리다. AIP는 급성 복통·신경 증상과 ALA·PBG 증가가 중요하며 피부 광과민은 전형적이지 않다.</p></details></li><li><p class="qq"><strong>판단.</strong> 포합 bilirubin의 형성과 담즙으로의 배출은 서로 다른 과정이다.</p><details><summary>해설</summary><p>맞다. 포합은 glucuronic acid를 붙이는 반응이고 배출은 수송 단계다. 포합이 가능해도 배출 장애가 생길 수 있다.</p></details></li><li><p class="qq"><strong>판단.</strong> Tyrosine에서 L-DOPA를 만드는 반응과 L-DOPA에서 dopamine을 만드는 반응은 모두 PLP만을 사용한다.</p><details><summary>해설</summary><p>틀리다. 앞 hydroxylation에는 BH4, 뒤 decarboxylation에는 PLP가 필요하다.</p></details></li><li><p class="qq">Hemin이 급성 간성 porphyria에서 유해 전구체 생성을 줄이는 이유를 설명하라.</p><details><summary>해설</summary><p>간의 ALAS1에 억제 방향의 조절을 제공하여 ALA 등 앞쪽 전구체 생성 부담을 줄인다. 결핍 효소 자체를 복구하는 원리는 아니다.</p></details></li><li><p class="qq">Phosphocreatine이 ATP를 재생할 수 있어도 무한한 에너지원이 아닌 이유는 무엇인가?</p><details><summary>해설</summary><p>저장된 인산기를 ADP에 전달하는 것이며 다시 phosphocreatine을 만들려면 ATP가 필요하다. 에너지의 생성과 저장 형태의 전환을 구분한다.</p></details></li></ol></section>
 
-  <h2>선수지식</h2>
-  <p>작성 예정.</p>
-
-  <h2>본문</h2>
-  <p>작성 예정. 각 절은 하나의 질문에 답하는 단위로 쓰고
-  질문 → 답 → 근거 → 조건과 한계 → 귀결의 순서로 전개한다.</p>
-
-  <h2>확인 문항</h2>
-  <p>작성 예정. 5개 이상, 절반 이상은 판단을 묻는 문항으로 한다.</p>
-
-  <h2>참고문헌</h2>
-  <p>작성 예정.</p>
-
-  <nav class="pager"><a href="../../../M02/W11/L01/index.html">← M02-W11-L01 선천성 아미노산 대사질환의 진단과 관리 [20장]</a><a href="../../../M02/W11/L03/index.html">M02-W11-L03 Nucleotide 대사 →</a></nav>
-
-</main>
-
-<footer class="foot wrap">
+<section aria-labelledby="references"><h2 id="references">참고문헌</h2><ol class="ref"><li id="ref-t21">[T21] Abali EE, Cline SD, Franklin DS, Viselli SM. Lippincott Illustrated Reviews: Biochemistry. 8e. Wolters Kluwer; 2022. Chapter 21, 제공 PDF 파일 574–600쪽.</li><li id="ref-aga">[R1] <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10335308/">AGA Clinical Practice Update on Diagnosis and Management of Acute Hepatic Porphyrias</a>. Gastroenterology. 2023. doi:10.1053/j.gastro.2022.11.034.</li><li id="ref-epp">[R2] <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9968824/">Evidence-based consensus guidelines for the diagnosis and management of erythropoietic protoporphyria and X-linked protoporphyria</a>.</li><li id="ref-pct">[R3] <a href="https://www.ncbi.nlm.nih.gov/books/NBK143129/">GeneReviews: Familial Porphyria Cutanea Tarda</a>. 철과 치료 원리 보충.</li></ol></section>
+<nav class="pager" aria-label="이전·다음 수업"><a href="../../W11/L01/index.html">← 선천성 아미노산 대사질환의 진단과 관리 [20장]</a><a href="../../W11/L03/index.html">Nucleotide 대사 [22장] →</a></nav></main><footer class="foot wrap">
   <span>© 2026 Kim Jintae · Hanyang University</span>
   <a href="https://github.com/hoperiasd2/hoperiasd2.github.io">GitHub 저장소</a>
 </footer>
 
-<script src="../../../../assets/site.js"></script>
-</body>
-</html>
+<script src="../../../../assets/edit.js" defer></script></body></html>

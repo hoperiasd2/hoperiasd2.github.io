@@ -1,64 +1,581 @@
 <!DOCTYPE html>
-<html lang="ko">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>M02-W11-L01 선천성 아미노산 대사질환의 진단과 관리 [20장]</title>
-<meta name="description" content="선천성 아미노산 대사질환의 진단과 관리 [20장]">
-<link rel="stylesheet" href="../../../../assets/site.css">
-</head>
-<body>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>M02-W11-L01 선천성 아미노산 대사질환의 진단과 관리 [20장]</title><meta name="description" content="선천성 아미노산 대사질환의 진단과 관리 [20장]: 구조에서 생리 기능과 질환까지"><style data-source="site.css + lesson.css snapshot 2026-10-17">/* 의생명과학 교육과정 — 공통 스타일
+   색은 :root 토큰으로만 쓰고 다크 모드에서 재정의한다. */
 
-<header class="masthead">
+:root {
+  --navy: #003c71;
+  --navy-700: #00294e;
+  --chrome: #f2b705;
+  --ink: #16191d;
+  --ink-2: #4a5159;
+  --ink-3: #727a84;
+  --line: #dde2e8;
+  --bg: #f6f8fa;
+  --card: #ffffff;
+  --accent-soft: #eaf1f8;
+  --ok: #1a7f52;
+  --ok-soft: #e7f4ed;
+  --warn: #9a6700;
+  --warn-soft: #fdf5e3;
+  --radius: 10px;
+  --wrap: 1180px;
+  --mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+  --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo",
+    "Noto Sans KR", "Malgun Gothic", sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --navy: #8fc3f5;
+    --navy-700: #b9d9fb;
+    --chrome: #f2b705;
+    --ink: #e7eaee;
+    --ink-2: #b2bac4;
+    --ink-3: #868f9a;
+    --line: #2b3138;
+    --bg: #14171b;
+    --card: #1b1f24;
+    --accent-soft: #1e2833;
+    --ok: #5dd3a0;
+    --ok-soft: #16271f;
+    --warn: #e3b341;
+    --warn-soft: #2a2416;
+  }
+}
+:root[data-theme="dark"] {
+  --navy: #8fc3f5;
+  --navy-700: #b9d9fb;
+  --ink: #e7eaee;
+  --ink-2: #b2bac4;
+  --ink-3: #868f9a;
+  --line: #2b3138;
+  --bg: #14171b;
+  --card: #1b1f24;
+  --accent-soft: #1e2833;
+  --ok: #5dd3a0;
+  --warn: #e3b341;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.75;
+  -webkit-text-size-adjust: 100%;
+}
+
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 16px; }
+.wrap--narrow { max-width: 860px; }
+
+a { color: var(--navy); }
+a:hover { color: var(--navy-700); }
+
+/* ---- 머리글 ---- */
+.masthead {
+  background: #003c71;
+  border-bottom: 3px solid var(--chrome);
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+.masthead .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 52px;
+}
+.masthead a.brand {
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  letter-spacing: .01em;
+}
+.masthead nav { display: flex; gap: 16px; flex-wrap: wrap; }
+.masthead nav a { color: #cfe0f0; text-decoration: none; font-size: 14px; }
+.masthead nav a:hover { color: #fff; }
+
+/* ---- 이동 경로 ---- */
+.crumb {
+  font-size: 13px;
+  color: var(--ink-3);
+  padding: 14px 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+}
+.crumb a { color: var(--ink-2); text-decoration: none; }
+.crumb a:hover { color: var(--navy); text-decoration: underline; }
+.crumb span[aria-hidden] { color: var(--ink-3); }
+
+/* ---- 표제 ---- */
+.hero {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-left: 5px solid var(--navy);
+  border-radius: var(--radius);
+  padding: 26px 28px;
+  margin: 16px 0 24px;
+}
+.hero .eyebrow {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  margin: 0 0 8px;
+}
+.hero h1 { margin: 0 0 10px; font-size: 27px; line-height: 1.35; }
+.hero .en { color: var(--ink-3); font-size: 14px; margin: 0 0 12px; }
+.hero p.lede { margin: 0; color: var(--ink-2); max-width: 70ch; }
+
+h2 {
+  font-size: 20px;
+  margin: 34px 0 14px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--line);
+}
+h3 { font-size: 17px; margin: 24px 0 10px; }
+
+/* ---- 카드 격자 ---- */
+.grid { display: grid; gap: 14px; }
+.grid--modules { grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); }
+.grid--weeks { grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); }
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 18px 20px;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  transition: border-color .12s, transform .12s;
+}
+a.card:hover { border-color: var(--navy); transform: translateY(-1px); }
+.card__no {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--chrome);
+  font-weight: 700;
+  letter-spacing: .08em;
+}
+.card__title { font-weight: 700; margin: 4px 0 2px; }
+.card__en { font-size: 13px; color: var(--ink-3); }
+.card__meta { font-size: 13px; color: var(--ink-2); margin-top: 10px; }
+
+/* ---- 진행 막대 ---- */
+.bar { height: 5px; background: var(--line); border-radius: 3px; overflow: hidden; margin-top: 10px; }
+.bar > i { display: block; height: 100%; background: var(--navy); }
+
+/* ---- 수업 목록 ---- */
+.lessons { list-style: none; margin: 0; padding: 0; }
+.lessons li {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--card);
+  margin-bottom: 8px;
+}
+.lessons a {
+  display: flex;
+  gap: 14px;
+  align-items: baseline;
+  padding: 13px 16px;
+  text-decoration: none;
+  color: inherit;
+}
+.lessons a:hover { background: var(--accent-soft); }
+.lessons .lid {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--ink-3);
+  white-space: nowrap;
+}
+.lessons .ltitle { flex: 1; min-width: 0; }
+.lessons .lgroup { font-size: 12px; color: var(--ink-3); }
+
+/* ---- 상태 배지 ---- */
+.badge {
+  font-size: 11px;
+  font-family: var(--mono);
+  padding: 2px 8px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  color: var(--ink-2);
+  background: var(--bg);
+  white-space: nowrap;
+}
+.badge--design { color: var(--ink-3); }
+.badge--draft { color: var(--warn); border-color: var(--warn); background: var(--warn-soft); }
+.badge--review { color: var(--navy); border-color: var(--navy); background: var(--accent-soft); }
+.badge--done {
+  color: var(--ok);
+  border-color: var(--ok);
+  background: var(--ok-soft);
+  font-weight: 600;
+}
+
+/* ---- 목록에서 집필 상태를 한눈에 ---- */
+/* 배지만으로는 276줄을 훑을 때 눈에 들어오지 않아 왼쪽에 색 띠를 둔다. */
+.lessons li[data-status] { border-left: 4px solid var(--line); }
+.lessons li[data-status="done"] { border-left-color: var(--ok); }
+.lessons li[data-status="draft"] { border-left-color: var(--warn); }
+.lessons li[data-status="review"] { border-left-color: var(--navy); }
+.lessons li[data-status="design"] { border-left-color: var(--line); }
+.lessons li[data-status="done"] .ltitle { font-weight: 600; }
+
+.filters--status { margin-top: -4px; }
+.filters--status button[data-filter-status="done"][aria-pressed="true"] {
+  border-color: var(--ok);
+  color: var(--ok);
+}
+
+/* ---- 검색 ---- */
+.search {
+  width: 100%;
+  padding: 12px 14px;
+  font-size: 15px;
+  font-family: inherit;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--card);
+  color: var(--ink);
+}
+.search:focus { outline: 2px solid var(--navy); outline-offset: 1px; }
+.filters { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 18px; }
+.filters button {
+  font: inherit;
+  font-size: 13px;
+  padding: 6px 13px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: var(--card);
+  color: var(--ink-2);
+  cursor: pointer;
+}
+.filters button[aria-pressed="true"] { background: var(--navy); color: #fff; border-color: var(--navy); }
+.count { font-size: 13px; color: var(--ink-3); margin: 0 0 12px; }
+
+/* ---- 안내 상자 ---- */
+.callout {
+  background: var(--accent-soft);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--navy);
+  border-radius: var(--radius);
+  padding: 14px 18px;
+  margin: 18px 0;
+  font-size: 15px;
+}
+.callout--warn { border-left-color: var(--chrome); }
+
+/* ---- 이전·다음 ---- */
+.pager {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 36px 0 12px;
+  border-top: 1px solid var(--line);
+  padding-top: 16px;
+  font-size: 14px;
+}
+.pager a { text-decoration: none; }
+.pager span { color: var(--ink-3); }
+
+/* ---- 표 ---- */
+table { border-collapse: collapse; width: 100%; margin: 14px 0; font-size: 15px; }
+th, td { border: 1px solid var(--line); padding: 8px 11px; text-align: left; vertical-align: top; }
+th { background: var(--accent-soft); font-weight: 700; }
+
+/* ---- 꼬리말 ---- */
+.foot {
+  margin-top: 56px;
+  padding: 22px 16px 40px;
+  border-top: 1px solid var(--line);
+  color: var(--ink-3);
+  font-size: 13px;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 640px) {
+  .hero { padding: 20px; }
+  .hero h1 { font-size: 22px; }
+  .lessons a { flex-wrap: wrap; gap: 6px 12px; }
+}
+
+@media print {
+  .masthead, .filters, .search, .pager, .foot { display: none; }
+  body { background: #fff; font-size: 11pt; }
+  .card, .hero { border: 1px solid #ccc; break-inside: avoid; }
+}
+
+/* 수업 본문 전용 스타일. site.css의 토큰을 그대로 쓴다. */
+
+.lesson { font-size: 16.5px; }
+.lesson p { margin: 0 0 14px; }
+.lesson ul, .lesson ol { margin: 0 0 16px; padding-left: 22px; }
+.lesson li { margin-bottom: 7px; }
+.lesson li > ul { margin: 7px 0 4px; }
+.lesson code {
+  font-family: var(--mono);
+  font-size: .9em;
+  background: var(--accent-soft);
+  padding: 1px 5px;
+  border-radius: 4px;
+}
+.lesson section { scroll-margin-top: 70px; }
+
+/* 슬라이드 내려받기 */
+.dl { margin: 0 0 24px; }
+.dlbtn {
+  display: inline-block;
+  padding: 9px 18px;
+  border: 1px solid var(--navy);
+  border-radius: var(--radius);
+  color: var(--navy);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 700;
+}
+.dlbtn:hover { background: var(--navy); color: #fff; }
+
+/* 질문과 답 */
+.lesson p.q, .lesson p.a {
+  border-radius: var(--radius);
+  padding: 13px 17px;
+  margin: 0 0 12px;
+}
+.lesson p.q {
+  background: var(--accent-soft);
+  border-left: 4px solid var(--navy);
+}
+.lesson p.a {
+  background: rgba(242, 183, 5, .13);
+  border-left: 4px solid var(--chrome);
+  font-weight: 600;
+}
+.lesson p.q > span, .lesson p.a > span {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: .1em;
+  margin-right: 10px;
+  vertical-align: 1px;
+  font-weight: 700;
+}
+.lesson p.q > span { color: var(--navy); }
+.lesson p.a > span { color: var(--warn); }
+
+/* 질문 목록 */
+.qlist { margin: 0 0 24px; }
+.qlist li { margin-bottom: 9px; }
+.qlist a { text-decoration: none; }
+.qlist a:hover { text-decoration: underline; }
+
+/* 조건·한계 / 귀결 / 안전 상자 */
+.box {
+  border-radius: var(--radius);
+  padding: 14px 18px;
+  margin: 16px 0;
+  font-size: 15.5px;
+  border: 1px solid var(--line);
+}
+.box > b {
+  display: block;
+  font-size: 11px;
+  font-family: var(--mono);
+  letter-spacing: .1em;
+  margin-bottom: 5px;
+}
+.box--limit { background: var(--accent-soft); border-left: 4px solid var(--navy); }
+.box--limit > b { color: var(--navy); }
+.box--result { background: rgba(242, 183, 5, .1); border-left: 4px solid var(--chrome); }
+.box--result > b { color: var(--warn); }
+.box--safety { background: rgba(242, 183, 5, .14); border-left: 5px solid var(--chrome); }
+.box--safety > b { color: var(--warn); font-size: 12px; }
+.box--safety ul { margin: 6px 0 0; }
+
+/* 표 */
+.tw { overflow-x: auto; margin: 16px 0; }
+.lesson table { font-size: 14.5px; min-width: 520px; }
+.lesson th { white-space: nowrap; }
+
+/* 확인 문항 */
+.quiz { counter-reset: none; }
+.quiz > li { margin-bottom: 18px; }
+.quiz .qq { font-weight: 600; margin-bottom: 8px; }
+.quiz details {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--card);
+  padding: 0 14px;
+}
+.quiz details[open] { padding-bottom: 6px; }
+.quiz summary {
+  cursor: pointer;
+  padding: 9px 0;
+  font-size: 14px;
+  color: var(--navy);
+  font-weight: 700;
+}
+.quiz details p { margin: 4px 0 8px; font-size: 15.5px; }
+
+/* 참고문헌 */
+.ref { font-size: 14.5px; color: var(--ink-2); }
+.ref li { margin-bottom: 8px; }
+
+@media print {
+  .quiz details { border: none; }
+  .quiz details[open] summary { display: none; }
+  .lesson p.q, .lesson p.a, .box, .equation { break-inside: avoid; }
+  .contents { font-size: 13px; background: none; }
+}
+
+/* 그림 */
+.fig { margin: 20px 0; text-align: center; }
+.fig img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: #fff;
+}
+.fig figcaption {
+  font-size: 14px;
+  color: var(--ink-2);
+  margin-top: 9px;
+  text-align: left;
+  line-height: 1.6;
+}
+.fig figcaption > b { color: var(--navy); margin-right: 6px; }
+.fig .credit { color: var(--ink-3); font-size: 13px; }
+
+/* 보강 입력 상자와 외부 링크 그림 */
+.box--notes{border-left:4px solid #f2b705;background:#fffaec}
+.fig--ext img{outline:2px dashed #f2b705;outline-offset:3px}
+.fig .credit{font-size:.82em;color:#8a6300}
+
+/* 페이지에서 직접 고치는 기능 */
+.editbar{position:fixed;right:16px;bottom:16px;z-index:60;display:flex;gap:6px;
+  align-items:center;flex-wrap:wrap;justify-content:flex-end;max-width:min(94vw,520px);
+  padding:8px;border-radius:10px;background:#ffffffee;border:1px solid #c6d2dd;
+  box-shadow:0 2px 12px rgba(0,0,0,.14)}
+.editbar.is-on{background:#fffaecf2;border-color:#f2b705}
+.editbtn{font:inherit;font-size:.86rem;padding:6px 11px;border-radius:7px;cursor:pointer;
+  border:1px solid #003c71;background:#fff;color:#003c71}
+.editbtn:hover{background:#eaf1f8}
+.editbtn--main{background:#003c71;color:#fff;font-weight:700}
+.editbtn--main:hover{background:#00529c}
+.editbtn--warn{border-color:#b3261e;color:#b3261e}
+.editbtn--warn:hover{background:#fbeceb}
+.editcount{font-size:.82rem;color:#8a6300;font-weight:700}
+.editgrp{display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end}
+.editnote{position:fixed;left:16px;bottom:16px;z-index:60;max-width:min(92vw,460px);
+  padding:10px 13px;border-radius:9px;border-left:4px solid #f2b705;background:#16191df2;
+  color:#fff;font-size:.86rem;line-height:1.5;opacity:0;transform:translateY(8px);
+  transition:opacity .18s,transform .18s;pointer-events:none}
+.editnote.is-on{opacity:1;transform:none}
+.editdump{position:fixed;left:16px;bottom:72px;z-index:60;width:min(92vw,560px);height:40vh;
+  font:12px/1.5 monospace;padding:10px;border:2px solid #f2b705;border-radius:8px;background:#fff}
+body.editing [contenteditable]{outline:1px dashed #9fb3c4;outline-offset:3px;border-radius:3px}
+body.editing [contenteditable]:focus{outline:2px solid #003c71;background:#f7fbff}
+body.editing h2{position:relative}
+.memobtn{font:inherit;font-size:.62em;font-weight:400;margin-left:10px;padding:2px 8px;
+  border-radius:6px;cursor:pointer;border:1px dashed #8a6300;background:#fffaec;color:#8a6300;
+  vertical-align:middle}
+.memobtn:hover{background:#f2b705;color:#16191d}
+h2.has-memo::after{content:"메모";font-size:.58em;font-weight:400;margin-left:10px;
+  padding:2px 8px;border-radius:6px;background:#f2b705;color:#16191d;vertical-align:middle}
+.is-edited{background:#fffaec;box-shadow:inset 3px 0 0 #f2b705;padding-left:9px}
+@media print{.editbar,.editnote,.editdump,.memobtn{display:none}}
+.editmodal{position:fixed;inset:0;z-index:70;display:flex;align-items:center;
+  justify-content:center;padding:16px;background:#16191dbf}
+.editmodal__box{width:min(96vw,560px);background:#fff;border-radius:12px;padding:18px 20px;
+  box-shadow:0 8px 32px rgba(0,0,0,.3)}
+.editmodal__box h3{margin:0 0 6px;font-size:1.02rem;color:#003c71}
+.editmodal__box p{margin:0 0 12px;font-size:.84rem;color:#4a5159}
+.editmodal__box textarea{width:100%;font:inherit;font-size:.9rem;line-height:1.55;padding:10px;
+  border:1px solid #c6d2dd;border-radius:8px;resize:vertical;box-sizing:border-box}
+.editmodal__box textarea:focus{outline:2px solid #003c71;border-color:#003c71}
+.editmodal__row{display:flex;gap:8px;justify-content:flex-end;margin-top:12px}
+
+/* 깊이 층위 상자와 수업 사이 연결 */
+.box--step{border-left:4px solid #2e7d32;background:#ecf6ec}
+.box--step>b{color:#1e6b2c}
+.box--front{border-left:4px solid #6b4fa0;background:#f3eff9}
+.box--front>b{color:#5b3a8a}
+a.xref{font-variant-numeric:tabular-nums;white-space:nowrap;text-decoration:none;
+  border-bottom:1px dotted currentColor}
+a.xref:hover{background:#eaf1f8}
+
+/* ---- 본문 목차 ---- */
+/* 평범한 목록으로 두면 본문과 구별되지 않아 긴 수업에서 지나치기 쉽다. */
+.contents {
+  border: 1px solid var(--line);
+  background: var(--bg);
+  border-radius: var(--radius);
+  padding: 16px 22px;
+  margin: 28px 0 36px;
+}
+.contents strong {
+  display: block;
+  font-size: 13px;
+  letter-spacing: .04em;
+  color: var(--ink-2);
+  margin-bottom: 10px;
+}
+.contents .qlist { margin: 0; }
+.contents .qlist li { margin-bottom: 6px; font-size: 15.5px; }
+
+/* ---- 수식 상자 ---- */
+/* @eq 로 적은 줄. 본문 문단과 섞이면 식의 경계가 보이지 않는다. */
+.equation {
+  background: var(--accent-soft);
+  border-left: 3px solid var(--navy);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  padding: 16px 20px;
+  margin: 22px 0;
+  line-height: 2;
+  overflow-wrap: anywhere;
+}
+</style><link rel="stylesheet" href="../../../../assets/site.css"><link rel="stylesheet" href="../../../../assets/lesson.css"></head><body><header class="masthead">
   <div class="wrap">
     <a class="brand" href="../../../../index.html">의생명과학 교육과정</a>
     <nav>
       <a href="../../../../curriculum/index.html">전체 수업</a>
       <a href="../../../../curriculum/materials.html">자료 내려받기</a>
-      <a href="../../../../curriculum/M07/index.html">실습</a>
       <a href="../../../../archive/index.html">아카이브</a>
     </nav>
   </div>
 </header>
 
-<main class="wrap">
-<nav class="crumb" aria-label="이동 경로"><a href="../../../../index.html">대문</a><span aria-hidden="true">›</span><a href="../../../index.html">전체 수업</a><span aria-hidden="true">›</span><a href="../../index.html">M02</a><span aria-hidden="true">›</span><a href="../index.html">11주차</a><span aria-hidden="true">›</span><span>M02-W11-L01</span></nav>
+<main class="wrap wrap--narrow lesson" data-lesson-id="M02-W11-L01" data-lesson="M02-W11-L01"><nav class="crumb" aria-label="이동 경로"><a href="../../../../index.html">대문</a><span aria-hidden="true">›</span><a href="../../../index.html">전체 수업</a><span aria-hidden="true">›</span><a href="../../index.html">M02</a><span aria-hidden="true">›</span><a href="../index.html">11주차</a><span aria-hidden="true">›</span><span>M02-W11-L01</span></nav><section class="hero"><p class="eyebrow">M02-W11-L01 · 대사생화학 · 아미노산대사</p><h1>선천성 아미노산 대사질환의 진단과 관리</h1><p class="en"></p></section><section aria-labelledby="objectives"><h2 id="objectives">학습목표</h2><ul><li>효소 결핍을 기질 축적·산물 부족·우회 대사로 나누어 설명한다.</li><li>Phenylketonuria, maple syrup urine disease, homocystinuria의 검사 소견을 막힌 반응과 연결한다.</li><li>Tyrosine 분해 이상과 methylmalonic acidemia의 주요 감별 지표를 설명한다.</li><li>선별검사와 확진검사, 장기 영양 관리와 급성 이화 억제의 목적을 구별한다.</li></ul></section>
 
-  <section class="hero">
-    <p class="eyebrow">M02-W11-L01 · 대사생화학 · 질소대사</p>
-    <h1>선천성 아미노산 대사질환의 진단과 관리 [20장]</h1>
-    <p class="lede">강의 수업 · 상태 <span class="badge badge--design">설계</span></p>
-  </section>
+<section aria-labelledby="prerequisites"><h2 id="prerequisites">선수지식</h2><p>10주차에서 배운 아미노기 전이와 탄소 골격의 유입 지점을 복습한다. 특히 phenylalanine → tyrosine, 가지사슬 아미노산의 공통 분해 단계, homocysteine의 두 갈래, methylmalonyl-CoA → succinyl-CoA를 떠올린다. 이번에는 각 반응이 충분히 진행되지 않을 때의 결과를 살펴본다.</p></section>
 
-  
-  <div class="callout">이 수업은 아직 집필 전이다. 제작 기준은
-  <a href="../../../../PROJECT.md">PROJECT.md</a>의 집필 원칙과 산출물 규격을 따른다.</div>
+<nav class="contents" aria-label="강의 구성"><strong>강의 구성</strong><ol class="qlist"><li><a href="#s1">1. 효소가 부족하면 앞 물질의 축적과 뒤 기능의 부족을 함께 본다</a></li><li><a href="#s2">2. PKU에서는 phenylalanine 처리와 tyrosine 공급이 함께 달라진다</a></li><li><a href="#s3">3. MSUD는 세 BCAA가 공유하는 분해 단계의 장애이다</a></li><li><a href="#s4">4. Homocysteine이 높을 때는 methionine이 어느 방향으로 변했는지 본다</a></li><li><a href="#s5">5. Tyrosine 관련 질환은 어느 갈래가 막혔는지에 따라 다르다</a></li><li><a href="#s6">6. Methylmalonic acidemia는 아미노산 대사와 유기산 대사가 만나는 예이다</a></li><li><a href="#s7">7. 선별검사 양성은 추가 평가가 필요하다는 뜻이다</a></li><li><a href="#s8">8. 증례를 풀 때는 반응을 먼저 쓰고 증상을 연결한다</a></li></ol></nav><section aria-label="본문"><section id="s1" class="lesson-section"><h2>1. 효소가 부족하면 앞 물질의 축적과 뒤 기능의 부족을 함께 본다</h2><p>선천성 아미노산 대사질환은 아미노산을 처리하는 효소나 관련 기능에 유전적 문제가 있어 생기는 질환군이다. 효소의 활성이 완전히 사라지는 경우도 있지만 일부가 남는 경우도 있다. 따라서 같은 질환명이라도 증상이 시작되는 시기와 심한 정도가 다를 수 있다. 질환을 이해하는 첫 단계는 이름을 증상과 바로 연결하는 것이 아니라 정상 반응을 확인하는 것이다.</p><p>A를 B로 바꾸는 반응이 느려지면 A와 그 앞 물질이 쌓일 수 있고, B를 만드는 능력이 줄 수 있다. 쌓인 A가 평소에는 기여도가 작은 다른 경로로 이동하여 새로운 대사물이 증가하기도 한다. 그러나 모든 질환에서 이 세 변화가 같은 비중으로 나타나지는 않는다. 어떤 질환은 축적물의 독성이 주된 문제이고, 다른 질환은 생리적으로 필요한 산물 부족이 더 두드러진다. <a href="#ref-t20">[T20, VI, PDF 557–568]</a></p><p><strong>반응 장애를 해석하는 세 질문</strong></p><div class="tw"><table aria-label="반응 장애를 해석하는 세 질문"><thead><tr><th>질문</th><th>확인할 변화</th><th>검사·증상과의 연결</th></tr></thead><tbody><tr><td>무엇이 사용되지 못하는가?</td><td>기질 또는 앞 중간체의 축적</td><td>혈장 아미노산·소변 유기산의 증가</td></tr><tr><td>무엇을 충분히 만들지 못하는가?</td><td>산물 공급 감소</td><td>영양 요구와 관련 합성 기능의 변화</td></tr><tr><td>남는 물질이 어디로 가는가?</td><td>다른 경로의 대사물 증가</td><td>질환을 구분하는 추가 표지자</td></tr></tbody></table></div><p>증상이 없던 아이가 감염 뒤 악화될 수 있는 이유도 이 관점에서 이해할 수 있다. 감염과 섭취 감소가 자체 단백질 분해를 늘리면 평소 남아 있던 처리 능력으로 감당하기 어려워진다. 선천 질환이라는 말만으로 증상이 반드시 출생 직후부터 있었다고 가정하지 않는다.</p></section>
+<section id="s2" class="lesson-section"><h2>2. PKU에서는 phenylalanine 처리와 tyrosine 공급이 함께 달라진다</h2><p>Phenylalanine hydroxylase(PAH)는 tetrahydrobiopterin(BH4)과 산소를 이용해 phenylalanine을 tyrosine으로 바꾼다. PAH 결핍에 의한 phenylketonuria(PKU)에서는 phenylalanine이 증가하고 이 반응을 통한 tyrosine 공급은 줄어든다. 남는 phenylalanine 일부는 phenylpyruvate 등으로 바뀐다. 질환명에 소변의 phenylketone이 들어 있지만, 진단과 추적의 중심은 혈중 phenylalanine 등 정량 검사다.</p><p>치료하지 않은 높은 phenylalanine은 발달 중인 뇌에 해롭다. 따라서 증상이 생긴 뒤 기다리는 것보다 선별검사로 발견하여 일찍 관리하는 것이 중요하다. Phenylalanine은 필수 아미노산이므로 공급을 영구히 0으로 만드는 것이 목표는 아니다. 개인의 처리 능력과 성장에 맞춰 섭취량을 조절하면서 필요한 단백질·에너지를 확보하고, 합성이 제한된 tyrosine도 공급한다. <a href="#ref-t20">[T20, VI.A, PDF 558–563]</a></p><p><strong>Phenylalanine 증가에서도 두 원인을 구분한다</strong></p><div class="tw"><table aria-label="Phenylalanine 증가에서도 두 원인을 구분한다"><thead><tr><th>문제</th><th>PAH 반응의 결과</th><th>추가로 생각할 점</th></tr></thead><tbody><tr><td>PAH 자체의 기능 부족</td><td>Phenylalanine → tyrosine 전환 제한</td><td>Phenylalanine 농도와 영양 상태를 함께 관리</td></tr><tr><td>BH4 합성·재생 이상</td><td>보조인자가 부족하여 전환 제한</td><td>일부 유형에서는 catecholamine·serotonin 합성도 영향</td></tr></tbody></table></div><p>BH4는 다른 aromatic amino acid hydroxylase에도 필요하므로, BH4 관련 질환을 단순한 PAH 결핍과 같은 것으로 취급하면 안 된다. 또한 임신한 여성의 높은 phenylalanine은 태아가 PAH 결핍을 물려받지 않았어도 발달에 해를 줄 수 있다. 이것이 maternal PKU syndrome의 핵심이며, 임신 전부터 이어지는 대사 관리가 중요하다. <a href="#ref-pku">[R1]</a></p><div class="box box--step"><b>시험에서 가려내는 지점</b> Maternal PKU의 태아 위험은 태아 자신의 유전형만으로 결정되지 않는다. 모체의 높은 phenylalanine에 노출되는 문제를 별도로 구분한다.</div></section>
+<section id="s3" class="lesson-section"><h2>3. MSUD는 세 BCAA가 공유하는 분해 단계의 장애이다</h2><p>Leucine, isoleucine, valine을 branched-chain amino acids(BCAA)라고 한다. 첫 아미노기 전이 뒤 생긴 가지사슬 α-keto acid는 branched-chain α-keto acid dehydrogenase(BCKDH) 복합체를 거쳐 더 분해된다. Maple syrup urine disease(MSUD)는 이 공통 단계의 기능 부족으로 BCAA와 관련 keto acid가 축적되는 질환이다. 첫 아미노기 전이 효소가 막힌 질환으로 혼동하지 않는다.</p><p>특히 leucine과 그 대사 이상은 뇌 기능 장애와 밀접하게 연결된다. 신생아의 수유 곤란, 처짐, 비정상 근긴장이나 의식 변화가 나타날 수 있으며, 부분 활성이 있는 경우에는 이후 이화 스트레스에서 악화되기도 한다. 특징적인 냄새는 단서이지만 냄새가 날 때까지 진단을 기다려서는 안 된다. 정량 혈장 아미노산 검사에서 BCAA와 alloisoleucine을 확인하고 다른 검사를 종합한다. <a href="#ref-t20">[T20, VI.B, PDF 564–565]</a> <a href="#ref-msud">[R2]</a></p><p><strong>MSUD를 반응과 영양 관리로 연결하기</strong></p><div class="tw"><table aria-label="MSUD를 반응과 영양 관리로 연결하기"><thead><tr><th>관찰</th><th>생화학적 이유</th><th>관리 원리</th></tr></thead><tbody><tr><td>여러 BCAA가 함께 증가</td><td>공통 BCKDH 단계의 제한</td><td>아미노산별 농도를 함께 추적</td></tr><tr><td>감염·금식에서 악화</td><td>몸 단백질 분해로 기질 유입 증가</td><td>이화를 억제하고 에너지 부족을 피함</td></tr><tr><td>일부에서 thiamine 반응</td><td>복합체가 thiamine 유래 보조인자를 사용</td><td>모든 유형에 같은 반응을 기대하지 않음</td></tr></tbody></table></div><p>세 BCAA 모두 성장에 필요하다. 그러므로 ‘BCAA가 쌓이니 평생 모두 없애면 된다’는 설명은 틀리다. Leucine 부담을 조절하면서 필요한 isoleucine·valine과 다른 영양소를 균형 있게 공급하는 전문적 관리가 필요하다. 급성 의식 변화는 일상적인 식단 수정만으로 지켜볼 상황이 아니다.</p></section>
+<section id="s4" class="lesson-section"><h2>4. Homocysteine이 높을 때는 methionine이 어느 방향으로 변했는지 본다</h2><p>Methionine은 S-adenosylmethionine(SAM)이 되어 methyl기를 전달한 뒤 homocysteine으로 이어진다. Homocysteine에는 두 주요 방향이 있다. 하나는 methyl기를 받아 methionine으로 돌아가는 재메틸화이고, 다른 하나는 serine과 결합하여 cystathionine을 거쳐 cysteine으로 가는 transsulfuration이다. Cystathionine β-synthase(CBS)는 두 번째 방향의 첫 반응을 담당하며 vitamin B6 유래 pyridoxal phosphate를 사용한다.</p><p>CBS 결핍에서는 homocysteine이 cystathionine으로 충분히 이동하지 못한다. 혈중 total homocysteine이 높고 methionine도 흔히 높아지는 양상이 나타난다. 수정체 이탈, 긴 팔다리 같은 골격 소견, 발달 문제와 혈전 위험이 연결될 수 있다. 특히 혈전은 이 질환을 단순한 체형의 문제로 볼 수 없게 하는 소견이다. 반면 재메틸화 장애에서는 homocysteine은 높아도 methionine이 낮거나 정상일 수 있다. <a href="#ref-t20">[T20, VI.D, PDF 565–566]</a> <a href="#ref-cbs">[R3]</a></p><p><strong>Homocysteine 증가를 두 갈래로 해석하기</strong></p><div class="tw"><table aria-label="Homocysteine 증가를 두 갈래로 해석하기"><thead><tr><th>막힌 방향</th><th>Total homocysteine</th><th>Methionine의 대표 양상</th></tr></thead><tbody><tr><td>CBS를 통한 transsulfuration</td><td>증가</td><td>증가</td></tr><tr><td>Methionine으로 돌아가는 재메틸화</td><td>증가</td><td>감소 또는 정상</td></tr></tbody></table></div><p>CBS 결핍에서는 B6 반응성을 평가하고, 반응 정도에 따라 영양 조절 등 관리가 달라진다. ‘Homocystinuria’라는 이름이 붙었다고 모두 같은 methionine 소견과 같은 치료를 적용하지 않는다. 검사 해석에서는 소변 이름보다 혈장 total homocysteine과 함께 변한 대사물을 읽는 것이 도움이 된다.</p><div class="box box--step"><b>시험에서 가려내는 지점</b> Homocysteine 증가 + methionine 증가와 homocysteine 증가 + methionine 감소는 같은 반응 장애가 아니다. 재메틸화와 transsulfuration의 방향을 먼저 구분한다.</div></section>
+<section id="s5" class="lesson-section"><h2>5. Tyrosine 관련 질환은 어느 갈래가 막혔는지에 따라 다르다</h2><p>Tyrosine은 분해되면 fumarate와 acetoacetate로 이어지지만, 별도의 합성 경로에서는 melanin 등의 재료가 된다. 따라서 tyrosine이 관련된 질환을 모두 같은 질환군처럼 외우면 혼동하기 쉽다. 예를 들어 tyrosinase 기능이 소실된 oculocutaneous albinism에서는 melanin 생성이 제한되어 색소와 시각 발달의 문제가 생긴다. 모든 albinism이 tyrosinase 결핍인 것은 아니며, 이 예는 합성 갈래의 장애를 설명한다.</p><p>Alkaptonuria는 분해 경로의 homogentisate 1,2-dioxygenase 부족으로 homogentisic acid가 축적되는 질환이다. 소변을 두면 어두워질 수 있고, 시간이 지나며 결합조직의 색소 침착인 ochronosis와 관절 문제가 나타날 수 있다. 소변 색 하나만으로 확진하지 않고 대사물을 측정한다. <a href="#ref-t20">[T20, VI.C·E, PDF 565–567]</a> <a href="#ref-aku">[R4]</a></p><p>Tyrosinemia type I은 분해의 마지막 단계인 fumarylacetoacetate hydrolase(FAH)의 결핍이다. 독성 중간체와 관련 대사물이 생겨 간과 신장을 손상시킬 수 있으며 succinylacetone이 중요한 진단 표지자다. Nitisinone은 결함 효소를 고치는 약이 아니라 앞 단계의 4-hydroxyphenylpyruvate dioxygenase를 억제하여 유해한 뒤쪽 대사물 생성을 줄인다. 그 결과 tyrosine은 높아질 수 있어 식이 관리가 함께 필요하다. <a href="#ref-tyr">[R5]</a></p><p><strong>같은 출발 물질, 서로 다른 병목</strong></p><div class="tw"><table aria-label="같은 출발 물질, 서로 다른 병목"><thead><tr><th>질환 예</th><th>주요 문제</th><th>대표 연결 소견</th></tr></thead><tbody><tr><td>Tyrosinase 결핍 albinism</td><td>Melanin 합성 제한</td><td>색소 감소·시각 문제</td></tr><tr><td>Alkaptonuria</td><td>Homogentisic acid 분해 제한</td><td>소변 변화·ochronosis·관절병</td></tr><tr><td>Tyrosinemia I</td><td>FAH 결핍과 독성 대사물</td><td>간·신장 이상, succinylacetone 증가</td></tr></tbody></table></div><div class="box box--front"><b>연구 전선</b> 경로의 앞 단계를 억제하면 어떤 질환에서는 독성 산물이 줄어든다. 이때 치료 효과만 보지 말고, 새로 증가하는 앞 물질과 줄어드는 정상 산물도 함께 확인해야 한다.</div></section>
+<section id="s6" class="lesson-section"><h2>6. Methylmalonic acidemia는 아미노산 대사와 유기산 대사가 만나는 예이다</h2><p>Valine, isoleucine, methionine, threonine의 일부 탄소는 propionyl-CoA를 거쳐 methylmalonyl-CoA로 들어온다. Methylmalonyl-CoA mutase는 adenosylcobalamin을 보조인자로 사용하여 이를 succinyl-CoA로 바꾼다. 이 효소나 보조인자 처리 기능이 부족하면 methylmalonic acid가 증가할 수 있다. 홀수 탄소 지방산의 분해도 같은 경로로 연결된다.</p><p>유전성 methylmalonic acidemia에서는 수유 곤란·구토·의식 변화와 함께 대사성 산증, 때로 고암모니아혈증이 나타날 수 있다. 따라서 암모니아가 높다는 사실만 보고 원발성 요소회로 결함으로 단정하면 안 된다. 반대로 methylmalonic acid 증가만으로 특정 유전 질환이 확진되는 것도 아니다. 영양성 B12 결핍 등 다른 원인도 평가한다. <a href="#ref-t20">[T20, VI.F, PDF 567–568]</a> <a href="#ref-mma">[R6]</a></p><p><strong>같은 경로에서 효소와 보조인자를 구분하기</strong></p><div class="tw"><table aria-label="같은 경로에서 효소와 보조인자를 구분하기"><thead><tr><th>문제 지점</th><th>가능한 결과</th><th>해석 원칙</th></tr></thead><tbody><tr><td>Mutase 단백질 기능</td><td>Methylmalonyl-CoA 처리 제한</td><td>B12 공급만으로 모두 교정되지 않는다</td></tr><tr><td>Adenosylcobalamin 형성·처리</td><td>보조인자가 필요한 반응 제한</td><td>유형에 따라 B12 반응성이 다르다</td></tr><tr><td>후천적 B12 부족</td><td>Methylmalonic acid 증가 가능</td><td>유전성 질환과 구별해 평가한다</td></tr></tbody></table></div><p>관리 원리는 원인 아미노산의 부담을 조절하면서 성장에 필요한 영양을 유지하고 이화를 억제하는 것이다. 반응성 있는 유형에는 B12 치료가 도움이 될 수 있다. ‘B12가 필요한 효소이므로 모든 환자가 B12로 낫는다’는 추론은 성립하지 않는다.</p></section>
+<section id="s7" class="lesson-section"><h2>7. 선별검사 양성은 추가 평가가 필요하다는 뜻이다</h2><p>신생아 선별검사는 증상이 나타나기 전에 위험한 대사 양상을 찾는 과정이다. 선별검사에서 특정 아미노산이나 관련 표지자가 증가했다면 정량 혈장 아미노산, 소변 유기산, acylcarnitine, 필요한 보조인자 검사와 유전학적 평가 등을 질환에 맞게 조합한다. 한 번의 선별 결과를 확진과 같게 취급해서도, 아기가 멀쩡해 보인다는 이유로 무시해서도 안 된다.</p><p>채혈 시기, 영양 상태와 이미 시작한 치료는 대사물 농도에 영향을 줄 수 있다. 선별검사가 모든 대사질환과 모든 형태를 완벽히 잡는 것도 아니다. 특히 증상이 있는 환자에서는 과거 선별검사가 정상이었다는 정보만으로 현재의 대사 이상 평가를 끝내지 않는다. 검사의 목적과 한계를 알고 결과를 읽어야 한다.</p><p><strong>검사가 답하는 질문을 나누기</strong></p><div class="tw"><table aria-label="검사가 답하는 질문을 나누기"><thead><tr><th>검사 단계</th><th>주된 질문</th><th>주의점</th></tr></thead><tbody><tr><td>선별검사</td><td>추가 평가할 위험 신호가 있는가?</td><td>양성 자체가 확진은 아니다</td></tr><tr><td>정밀 생화학 검사</td><td>어떤 대사물이 어떤 조합으로 변했는가?</td><td>영양·채혈·치료 시점을 고려</td></tr><tr><td>분자유전학적 평가</td><td>소견을 설명하는 유전적 원인이 있는가?</td><td>변이의 해석과 임상 양상의 일치를 확인</td></tr></tbody></table></div><div class="box box--step"><b>시험에서 가려내는 지점</b> 진단은 질환명과 검사값 하나를 연결하는 작업이 아니다. 반응 경로, 대사물의 조합, 임상 상태를 함께 읽는다.</div><p>장기 관리에서는 독성 물질을 낮추는 일과 영양 결핍을 피하는 일을 동시에 해야 한다. 급성 위기에서는 에너지 부족과 자체 단백질 분해를 줄이는 일이 중요하다. 이 두 목적을 구분하면 ‘단백질 제한’이라는 한 문장으로 모든 상황을 설명하는 오류를 피할 수 있다.</p></section>
+<section id="s8" class="lesson-section"><h2>8. 증례를 풀 때는 반응을 먼저 쓰고 증상을 연결한다</h2><p>먼저 가장 직접적인 생화학 소견을 고른다. Phenylalanine 증가라면 tyrosine으로 가는 반응과 BH4를, BCAA와 alloisoleucine 증가라면 공통 BCKDH 단계를 생각한다. Homocysteine 증가라면 methionine 방향을 보고, tyrosine 관련 간·신장 이상이라면 succinylacetone을 확인하는 이유를 설명한다. 이 순서로 접근하면 냄새나 체형 같은 한 가지 특징에 지나치게 의존하지 않게 된다.</p><p>그다음 해당 소견이 환자의 현재 상태를 얼마나 설명하는지 살핀다. 급성 의식 변화와 이화 스트레스가 있는지, 시간이 지나며 장기 손상이 누적되는 양상인지 구분한다. 같은 효소 결핍에서도 잔여 활성과 조기 관리에 따라 경과가 달라질 수 있으므로, 치료하지 않은 전형적 사례를 모든 환자의 미래로 단정하지 않는다.</p><div class="box box--limit"><b>임상 연계</b><h3>학습용 비교 사례</h3><p>환자 A는 total homocysteine과 methionine이 모두 높고 혈전 병력이 있다. 환자 B는 total homocysteine이 높지만 methionine이 낮다. A에서는 CBS를 통한 transsulfuration 장애가, B에서는 재메틸화 장애가 더 잘 맞는 가설이다. 두 사람을 모두 ‘homocysteine이 높으니 같은 질환’이라고 묶으면 후속 검사의 방향을 놓친다. 이것은 진단 가설을 세우는 연습이며 추가 평가를 대신하지 않는다.</p></div><div class="box box--front"><b>연구 전선</b> 새로운 치료 연구에서는 혈중 대사물 감소와 신경 발달·장기 기능·생활 부담의 개선을 나누어 읽자. 검사값의 변화는 중요한 근거지만, 환자에게 의미 있는 모든 결과가 회복되었다는 뜻은 아니다.</div></section>
+</section>
 
-  <h2>학습목표</h2>
-  <p>작성 예정. 이 수업이 답하는 질문 6~9개를 먼저 확정한 뒤 측정 가능한 학습목표로 옮긴다.</p>
+<section aria-labelledby="questions"><h2 id="questions">확인 문항과 해설</h2><ol class="quiz"><li><p class="qq"><strong>판단.</strong> PKU에서 phenylalanine이 높으므로 평생 공급을 0으로 만드는 것이 영양 관리의 목표이다.</p><details><summary>해설</summary><p>틀리다. Phenylalanine은 필수 아미노산이다. 처리 능력과 성장에 맞춰 조절하며 다른 영양소와 tyrosine 공급도 함께 고려한다.</p></details></li><li><p class="qq"><strong>판단.</strong> MSUD의 주요 장애는 BCAA의 첫 아미노기 전이 뒤에 작용하는 공통 BCKDH 단계에 있다.</p><details><summary>해설</summary><p>맞다. 이 단계가 제한되어 BCAA와 관련 keto acid가 축적된다. 첫 아미노기 전이 효소의 결핍과 구별한다.</p></details></li><li><p class="qq"><strong>판단.</strong> Homocysteine이 높으면 원인과 관계없이 methionine도 항상 높다.</p><details><summary>해설</summary><p>틀리다. CBS 결핍에서는 흔히 높지만 재메틸화 장애에서는 낮거나 정상일 수 있다. 두 갈래의 방향을 확인한다.</p></details></li><li><p class="qq"><strong>판단.</strong> 태아가 PAH 결핍을 물려받지 않았어도 모체의 높은 phenylalanine에 의해 영향을 받을 수 있다.</p><details><summary>해설</summary><p>맞다. Maternal PKU syndrome은 모체의 대사 환경에 노출되는 문제이며 태아 자신의 유전적 PAH 결핍과 구별한다.</p></details></li><li><p class="qq">Tyrosinemia I에서 nitisinone이 앞 단계를 억제하는 이유와 함께 관찰해야 할 대사물을 설명하라.</p><details><summary>해설</summary><p>뒤쪽 독성 대사물 생성을 줄이기 위해 앞 단계의 효소를 억제한다. FAH 자체를 복구하는 것은 아니다. Tyrosine이 높아질 수 있어 농도와 영양 관리를 함께 고려한다.</p></details></li><li><p class="qq">Methylmalonic acid가 증가했을 때 바로 특정 유전 질환으로 확진할 수 없는 이유는 무엇인가?</p><details><summary>해설</summary><p>Mutase 기능, 세포 내 cobalamin 처리 이상뿐 아니라 후천적 B12 부족 등도 영향을 줄 수 있다. 임상 양상과 추가 생화학·유전학적 평가가 필요하다.</p></details></li></ol></section>
 
-  <h2>선수지식</h2>
-  <p>작성 예정.</p>
-
-  <h2>본문</h2>
-  <p>작성 예정. 각 절은 하나의 질문에 답하는 단위로 쓰고
-  질문 → 답 → 근거 → 조건과 한계 → 귀결의 순서로 전개한다.</p>
-
-  <h2>확인 문항</h2>
-  <p>작성 예정. 5개 이상, 절반 이상은 판단을 묻는 문항으로 한다.</p>
-
-  <h2>참고문헌</h2>
-  <p>작성 예정.</p>
-
-  <nav class="pager"><a href="../../../M02/W10/L03/index.html">← M02-W10-L03 아미노산 분해 경로와 탄소 골격의 운명</a><a href="../../../M02/W11/L02/index.html">M02-W11-L02 아미노산 유래 특수 산물·heme 합성과 porphyria [21장] →</a></nav>
-
-</main>
-
-<footer class="foot wrap">
+<section aria-labelledby="references"><h2 id="references">참고문헌</h2><ol class="ref"><li id="ref-t20">[T20] Abali EE, Cline SD, Franklin DS, Viselli SM. Lippincott Illustrated Reviews: Biochemistry. 8e. Wolters Kluwer; 2022. Chapter 20, VI, 제공 PDF 파일 557–568쪽. 인쇄 쪽수가 아닌 파일 기준.</li><li id="ref-pku">[R1] <a href="https://www.ncbi.nlm.nih.gov/books/NBK1504/">GeneReviews: Phenylalanine Hydroxylase Deficiency</a>.</li><li id="ref-msud">[R2] <a href="https://www.ncbi.nlm.nih.gov/books/NBK1319/">GeneReviews: Maple Syrup Urine Disease</a>.</li><li id="ref-cbs">[R3] <a href="https://www.ncbi.nlm.nih.gov/books/NBK1524/">GeneReviews: Homocystinuria due to Cystathionine Beta-Synthase Deficiency</a>.</li><li id="ref-aku">[R4] <a href="https://www.ncbi.nlm.nih.gov/books/NBK1454/">GeneReviews: Alkaptonuria</a>.</li><li id="ref-tyr">[R5] <a href="https://www.ncbi.nlm.nih.gov/books/NBK1515/">GeneReviews: Tyrosinemia Type I</a>.</li><li id="ref-mma">[R6] <a href="https://www.ncbi.nlm.nih.gov/books/NBK1231/">GeneReviews: Isolated Methylmalonic Acidemia</a>.</li></ol></section>
+<nav class="pager" aria-label="이전·다음 수업"><a href="../../W10/L03/index.html">← 아미노산 분해 경로와 탄소 골격의 운명 [20장]</a><a href="../../W11/L02/index.html">아미노산 유래 특수 산물·heme 합성과 porphyria [21장] →</a></nav></main><footer class="foot wrap">
   <span>© 2026 Kim Jintae · Hanyang University</span>
   <a href="https://github.com/hoperiasd2/hoperiasd2.github.io">GitHub 저장소</a>
 </footer>
 
-<script src="../../../../assets/site.js"></script>
-</body>
-</html>
+<script src="../../../../assets/edit.js" defer></script></body></html>

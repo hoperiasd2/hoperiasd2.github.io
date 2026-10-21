@@ -1,64 +1,625 @@
 <!DOCTYPE html>
-<html lang="ko">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>M02-W13-L01 장기 간 대사 교신: 간·근육·지방·뇌 축과 기질 흐름</title>
-<meta name="description" content="장기 간 대사 교신: 간·근육·지방·뇌 축과 기질 흐름">
-<link rel="stylesheet" href="../../../../assets/site.css">
-</head>
-<body>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>M02-W13-L01 장기 간 대사 교신: 간·근육·지방·뇌 축과 기질 흐름</title><meta name="description" content="장기 간 대사 교신: 간·근육·지방·뇌 축과 기질 흐름: 구조에서 생리 기능과 질환까지"><style data-source="site.css + lesson.css snapshot 2026-10-17">/* 의생명과학 교육과정 — 공통 스타일
+   색은 :root 토큰으로만 쓰고 다크 모드에서 재정의한다. */
 
-<header class="masthead">
+:root {
+  --navy: #003c71;
+  --navy-700: #00294e;
+  --chrome: #f2b705;
+  --ink: #16191d;
+  --ink-2: #4a5159;
+  --ink-3: #727a84;
+  --line: #dde2e8;
+  --bg: #f6f8fa;
+  --card: #ffffff;
+  --accent-soft: #eaf1f8;
+  --ok: #1a7f52;
+  --ok-soft: #e7f4ed;
+  --warn: #9a6700;
+  --warn-soft: #fdf5e3;
+  --radius: 10px;
+  --wrap: 1180px;
+  --mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+  --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo",
+    "Noto Sans KR", "Malgun Gothic", sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --navy: #8fc3f5;
+    --navy-700: #b9d9fb;
+    --chrome: #f2b705;
+    --ink: #e7eaee;
+    --ink-2: #b2bac4;
+    --ink-3: #868f9a;
+    --line: #2b3138;
+    --bg: #14171b;
+    --card: #1b1f24;
+    --accent-soft: #1e2833;
+    --ok: #5dd3a0;
+    --ok-soft: #16271f;
+    --warn: #e3b341;
+    --warn-soft: #2a2416;
+  }
+}
+:root[data-theme="dark"] {
+  --navy: #8fc3f5;
+  --navy-700: #b9d9fb;
+  --ink: #e7eaee;
+  --ink-2: #b2bac4;
+  --ink-3: #868f9a;
+  --line: #2b3138;
+  --bg: #14171b;
+  --card: #1b1f24;
+  --accent-soft: #1e2833;
+  --ok: #5dd3a0;
+  --warn: #e3b341;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.75;
+  -webkit-text-size-adjust: 100%;
+}
+
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 16px; }
+.wrap--narrow { max-width: 860px; }
+
+a { color: var(--navy); }
+a:hover { color: var(--navy-700); }
+
+/* ---- 머리글 ---- */
+.masthead {
+  background: #003c71;
+  border-bottom: 3px solid var(--chrome);
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+.masthead .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 52px;
+}
+.masthead a.brand {
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  letter-spacing: .01em;
+}
+.masthead nav { display: flex; gap: 16px; flex-wrap: wrap; }
+.masthead nav a { color: #cfe0f0; text-decoration: none; font-size: 14px; }
+.masthead nav a:hover { color: #fff; }
+
+/* ---- 이동 경로 ---- */
+.crumb {
+  font-size: 13px;
+  color: var(--ink-3);
+  padding: 14px 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+}
+.crumb a { color: var(--ink-2); text-decoration: none; }
+.crumb a:hover { color: var(--navy); text-decoration: underline; }
+.crumb span[aria-hidden] { color: var(--ink-3); }
+
+/* ---- 표제 ---- */
+.hero {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-left: 5px solid var(--navy);
+  border-radius: var(--radius);
+  padding: 26px 28px;
+  margin: 16px 0 24px;
+}
+.hero .eyebrow {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  margin: 0 0 8px;
+}
+.hero h1 { margin: 0 0 10px; font-size: 27px; line-height: 1.35; }
+.hero .en { color: var(--ink-3); font-size: 14px; margin: 0 0 12px; }
+.hero p.lede { margin: 0; color: var(--ink-2); max-width: 70ch; }
+
+h2 {
+  font-size: 20px;
+  margin: 34px 0 14px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--line);
+}
+h3 { font-size: 17px; margin: 24px 0 10px; }
+
+/* ---- 카드 격자 ---- */
+.grid { display: grid; gap: 14px; }
+.grid--modules { grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); }
+.grid--weeks { grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); }
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 18px 20px;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  transition: border-color .12s, transform .12s;
+}
+a.card:hover { border-color: var(--navy); transform: translateY(-1px); }
+.card__no {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--chrome);
+  font-weight: 700;
+  letter-spacing: .08em;
+}
+.card__title { font-weight: 700; margin: 4px 0 2px; }
+.card__en { font-size: 13px; color: var(--ink-3); }
+.card__meta { font-size: 13px; color: var(--ink-2); margin-top: 10px; }
+
+/* ---- 진행 막대 ---- */
+.bar { height: 5px; background: var(--line); border-radius: 3px; overflow: hidden; margin-top: 10px; }
+.bar > i { display: block; height: 100%; background: var(--navy); }
+
+/* ---- 수업 목록 ---- */
+.lessons { list-style: none; margin: 0; padding: 0; }
+.lessons li {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--card);
+  margin-bottom: 8px;
+}
+.lessons a {
+  display: flex;
+  gap: 14px;
+  align-items: baseline;
+  padding: 13px 16px;
+  text-decoration: none;
+  color: inherit;
+}
+.lessons a:hover { background: var(--accent-soft); }
+.lessons .lid {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--ink-3);
+  white-space: nowrap;
+}
+.lessons .ltitle { flex: 1; min-width: 0; }
+.lessons .lgroup { font-size: 12px; color: var(--ink-3); }
+
+/* ---- 상태 배지 ---- */
+.badge {
+  font-size: 11px;
+  font-family: var(--mono);
+  padding: 2px 8px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  color: var(--ink-2);
+  background: var(--bg);
+  white-space: nowrap;
+}
+.badge--design { color: var(--ink-3); }
+.badge--draft { color: var(--warn); border-color: var(--warn); background: var(--warn-soft); }
+.badge--review { color: var(--navy); border-color: var(--navy); background: var(--accent-soft); }
+.badge--done {
+  color: var(--ok);
+  border-color: var(--ok);
+  background: var(--ok-soft);
+  font-weight: 600;
+}
+
+/* ---- 목록에서 집필 상태를 한눈에 ---- */
+/* 배지만으로는 276줄을 훑을 때 눈에 들어오지 않아 왼쪽에 색 띠를 둔다. */
+.lessons li[data-status] { border-left: 4px solid var(--line); }
+.lessons li[data-status="done"] { border-left-color: var(--ok); }
+.lessons li[data-status="draft"] { border-left-color: var(--warn); }
+.lessons li[data-status="review"] { border-left-color: var(--navy); }
+.lessons li[data-status="design"] { border-left-color: var(--line); }
+.lessons li[data-status="done"] .ltitle { font-weight: 600; }
+
+.filters--status { margin-top: -4px; }
+.filters--status button[data-filter-status="done"][aria-pressed="true"] {
+  border-color: var(--ok);
+  color: var(--ok);
+}
+
+/* ---- 검색 ---- */
+.search {
+  width: 100%;
+  padding: 12px 14px;
+  font-size: 15px;
+  font-family: inherit;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--card);
+  color: var(--ink);
+}
+.search:focus { outline: 2px solid var(--navy); outline-offset: 1px; }
+.filters { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 18px; }
+.filters button {
+  font: inherit;
+  font-size: 13px;
+  padding: 6px 13px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: var(--card);
+  color: var(--ink-2);
+  cursor: pointer;
+}
+.filters button[aria-pressed="true"] { background: var(--navy); color: #fff; border-color: var(--navy); }
+.count { font-size: 13px; color: var(--ink-3); margin: 0 0 12px; }
+
+/* ---- 안내 상자 ---- */
+.callout {
+  background: var(--accent-soft);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--navy);
+  border-radius: var(--radius);
+  padding: 14px 18px;
+  margin: 18px 0;
+  font-size: 15px;
+}
+.callout--warn { border-left-color: var(--chrome); }
+
+/* ---- 이전·다음 ---- */
+.pager {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 36px 0 12px;
+  border-top: 1px solid var(--line);
+  padding-top: 16px;
+  font-size: 14px;
+}
+.pager a { text-decoration: none; }
+.pager span { color: var(--ink-3); }
+
+/* ---- 표 ---- */
+table { border-collapse: collapse; width: 100%; margin: 14px 0; font-size: 15px; }
+th, td { border: 1px solid var(--line); padding: 8px 11px; text-align: left; vertical-align: top; }
+th { background: var(--accent-soft); font-weight: 700; }
+
+/* ---- 꼬리말 ---- */
+.foot {
+  margin-top: 56px;
+  padding: 22px 16px 40px;
+  border-top: 1px solid var(--line);
+  color: var(--ink-3);
+  font-size: 13px;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 640px) {
+  .hero { padding: 20px; }
+  .hero h1 { font-size: 22px; }
+  .lessons a { flex-wrap: wrap; gap: 6px 12px; }
+}
+
+@media print {
+  .masthead, .filters, .search, .pager, .foot { display: none; }
+  body { background: #fff; font-size: 11pt; }
+  .card, .hero { border: 1px solid #ccc; break-inside: avoid; }
+}
+
+/* 수업 본문 전용 스타일. site.css의 토큰을 그대로 쓴다. */
+
+.lesson { font-size: 16.5px; }
+.lesson p { margin: 0 0 14px; }
+.lesson ul, .lesson ol { margin: 0 0 16px; padding-left: 22px; }
+.lesson li { margin-bottom: 7px; }
+.lesson li > ul { margin: 7px 0 4px; }
+.lesson code {
+  font-family: var(--mono);
+  font-size: .9em;
+  background: var(--accent-soft);
+  padding: 1px 5px;
+  border-radius: 4px;
+}
+.lesson section { scroll-margin-top: 70px; }
+
+/* 슬라이드 내려받기 */
+.dl { margin: 0 0 24px; }
+.dlbtn {
+  display: inline-block;
+  padding: 9px 18px;
+  border: 1px solid var(--navy);
+  border-radius: var(--radius);
+  color: var(--navy);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 700;
+}
+.dlbtn:hover { background: var(--navy); color: #fff; }
+
+/* 질문과 답 */
+.lesson p.q, .lesson p.a {
+  border-radius: var(--radius);
+  padding: 13px 17px;
+  margin: 0 0 12px;
+}
+.lesson p.q {
+  background: var(--accent-soft);
+  border-left: 4px solid var(--navy);
+}
+.lesson p.a {
+  background: rgba(242, 183, 5, .13);
+  border-left: 4px solid var(--chrome);
+  font-weight: 600;
+}
+.lesson p.q > span, .lesson p.a > span {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: .1em;
+  margin-right: 10px;
+  vertical-align: 1px;
+  font-weight: 700;
+}
+.lesson p.q > span { color: var(--navy); }
+.lesson p.a > span { color: var(--warn); }
+
+/* 질문 목록 */
+.qlist { margin: 0 0 24px; }
+.qlist li { margin-bottom: 9px; }
+.qlist a { text-decoration: none; }
+.qlist a:hover { text-decoration: underline; }
+
+/* 조건·한계 / 귀결 / 안전 상자 */
+.box {
+  border-radius: var(--radius);
+  padding: 14px 18px;
+  margin: 16px 0;
+  font-size: 15.5px;
+  border: 1px solid var(--line);
+}
+.box > b {
+  display: block;
+  font-size: 11px;
+  font-family: var(--mono);
+  letter-spacing: .1em;
+  margin-bottom: 5px;
+}
+.box--limit { background: var(--accent-soft); border-left: 4px solid var(--navy); }
+.box--limit > b { color: var(--navy); }
+.box--result { background: rgba(242, 183, 5, .1); border-left: 4px solid var(--chrome); }
+.box--result > b { color: var(--warn); }
+.box--safety { background: rgba(242, 183, 5, .14); border-left: 5px solid var(--chrome); }
+.box--safety > b { color: var(--warn); font-size: 12px; }
+.box--safety ul { margin: 6px 0 0; }
+
+/* 표 */
+.tw { overflow-x: auto; margin: 16px 0; }
+.lesson table { font-size: 14.5px; min-width: 520px; }
+.lesson th { white-space: nowrap; }
+
+/* 확인 문항 */
+.quiz { counter-reset: none; }
+.quiz > li { margin-bottom: 18px; }
+.quiz .qq { font-weight: 600; margin-bottom: 8px; }
+.quiz details {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--card);
+  padding: 0 14px;
+}
+.quiz details[open] { padding-bottom: 6px; }
+.quiz summary {
+  cursor: pointer;
+  padding: 9px 0;
+  font-size: 14px;
+  color: var(--navy);
+  font-weight: 700;
+}
+.quiz details p { margin: 4px 0 8px; font-size: 15.5px; }
+
+/* 참고문헌 */
+.ref { font-size: 14.5px; color: var(--ink-2); }
+.ref li { margin-bottom: 8px; }
+
+@media print {
+  .quiz details { border: none; }
+  .quiz details[open] summary { display: none; }
+  .lesson p.q, .lesson p.a, .box, .equation { break-inside: avoid; }
+  .contents { font-size: 13px; background: none; }
+}
+
+/* 그림 */
+.fig { margin: 20px 0; text-align: center; }
+.fig img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: #fff;
+}
+.fig figcaption {
+  font-size: 14px;
+  color: var(--ink-2);
+  margin-top: 9px;
+  text-align: left;
+  line-height: 1.6;
+}
+.fig figcaption > b { color: var(--navy); margin-right: 6px; }
+.fig .credit { color: var(--ink-3); font-size: 13px; }
+
+/* 보강 입력 상자와 외부 링크 그림 */
+.box--notes{border-left:4px solid #f2b705;background:#fffaec}
+.fig--ext img{outline:2px dashed #f2b705;outline-offset:3px}
+.fig .credit{font-size:.82em;color:#8a6300}
+
+/* 페이지에서 직접 고치는 기능 */
+.editbar{position:fixed;right:16px;bottom:16px;z-index:60;display:flex;gap:6px;
+  align-items:center;flex-wrap:wrap;justify-content:flex-end;max-width:min(94vw,520px);
+  padding:8px;border-radius:10px;background:#ffffffee;border:1px solid #c6d2dd;
+  box-shadow:0 2px 12px rgba(0,0,0,.14)}
+.editbar.is-on{background:#fffaecf2;border-color:#f2b705}
+.editbtn{font:inherit;font-size:.86rem;padding:6px 11px;border-radius:7px;cursor:pointer;
+  border:1px solid #003c71;background:#fff;color:#003c71}
+.editbtn:hover{background:#eaf1f8}
+.editbtn--main{background:#003c71;color:#fff;font-weight:700}
+.editbtn--main:hover{background:#00529c}
+.editbtn--warn{border-color:#b3261e;color:#b3261e}
+.editbtn--warn:hover{background:#fbeceb}
+.editcount{font-size:.82rem;color:#8a6300;font-weight:700}
+.editgrp{display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end}
+.editnote{position:fixed;left:16px;bottom:16px;z-index:60;max-width:min(92vw,460px);
+  padding:10px 13px;border-radius:9px;border-left:4px solid #f2b705;background:#16191df2;
+  color:#fff;font-size:.86rem;line-height:1.5;opacity:0;transform:translateY(8px);
+  transition:opacity .18s,transform .18s;pointer-events:none}
+.editnote.is-on{opacity:1;transform:none}
+.editdump{position:fixed;left:16px;bottom:72px;z-index:60;width:min(92vw,560px);height:40vh;
+  font:12px/1.5 monospace;padding:10px;border:2px solid #f2b705;border-radius:8px;background:#fff}
+body.editing [contenteditable]{outline:1px dashed #9fb3c4;outline-offset:3px;border-radius:3px}
+body.editing [contenteditable]:focus{outline:2px solid #003c71;background:#f7fbff}
+body.editing h2{position:relative}
+.memobtn{font:inherit;font-size:.62em;font-weight:400;margin-left:10px;padding:2px 8px;
+  border-radius:6px;cursor:pointer;border:1px dashed #8a6300;background:#fffaec;color:#8a6300;
+  vertical-align:middle}
+.memobtn:hover{background:#f2b705;color:#16191d}
+h2.has-memo::after{content:"메모";font-size:.58em;font-weight:400;margin-left:10px;
+  padding:2px 8px;border-radius:6px;background:#f2b705;color:#16191d;vertical-align:middle}
+.is-edited{background:#fffaec;box-shadow:inset 3px 0 0 #f2b705;padding-left:9px}
+@media print{.editbar,.editnote,.editdump,.memobtn{display:none}}
+.editmodal{position:fixed;inset:0;z-index:70;display:flex;align-items:center;
+  justify-content:center;padding:16px;background:#16191dbf}
+.editmodal__box{width:min(96vw,560px);background:#fff;border-radius:12px;padding:18px 20px;
+  box-shadow:0 8px 32px rgba(0,0,0,.3)}
+.editmodal__box h3{margin:0 0 6px;font-size:1.02rem;color:#003c71}
+.editmodal__box p{margin:0 0 12px;font-size:.84rem;color:#4a5159}
+.editmodal__box textarea{width:100%;font:inherit;font-size:.9rem;line-height:1.55;padding:10px;
+  border:1px solid #c6d2dd;border-radius:8px;resize:vertical;box-sizing:border-box}
+.editmodal__box textarea:focus{outline:2px solid #003c71;border-color:#003c71}
+.editmodal__row{display:flex;gap:8px;justify-content:flex-end;margin-top:12px}
+
+/* 깊이 층위 상자와 수업 사이 연결 */
+.box--step{border-left:4px solid #2e7d32;background:#ecf6ec}
+.box--step>b{color:#1e6b2c}
+.box--front{border-left:4px solid #6b4fa0;background:#f3eff9}
+.box--front>b{color:#5b3a8a}
+a.xref{font-variant-numeric:tabular-nums;white-space:nowrap;text-decoration:none;
+  border-bottom:1px dotted currentColor}
+a.xref:hover{background:#eaf1f8}
+
+/* ---- 본문 목차 ---- */
+/* 평범한 목록으로 두면 본문과 구별되지 않아 긴 수업에서 지나치기 쉽다. */
+.contents {
+  border: 1px solid var(--line);
+  background: var(--bg);
+  border-radius: var(--radius);
+  padding: 16px 22px;
+  margin: 28px 0 36px;
+}
+.contents strong {
+  display: block;
+  font-size: 13px;
+  letter-spacing: .04em;
+  color: var(--ink-2);
+  margin-bottom: 10px;
+}
+.contents .qlist { margin: 0; }
+.contents .qlist li { margin-bottom: 6px; font-size: 15.5px; }
+
+/* ---- 수식 상자 ---- */
+/* @eq 로 적은 줄. 본문 문단과 섞이면 식의 경계가 보이지 않는다. */
+.equation {
+  background: var(--accent-soft);
+  border-left: 3px solid var(--navy);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  padding: 16px 20px;
+  margin: 22px 0;
+  line-height: 2;
+  overflow-wrap: anywhere;
+}
+</style><link rel="stylesheet" href="../../../../assets/site.css"><link rel="stylesheet" href="../../../../assets/lesson.css"></head><body><header class="masthead">
   <div class="wrap">
     <a class="brand" href="../../../../index.html">의생명과학 교육과정</a>
     <nav>
       <a href="../../../../curriculum/index.html">전체 수업</a>
       <a href="../../../../curriculum/materials.html">자료 내려받기</a>
-      <a href="../../../../curriculum/M07/index.html">실습</a>
       <a href="../../../../archive/index.html">아카이브</a>
     </nav>
   </div>
 </header>
 
-<main class="wrap">
-<nav class="crumb" aria-label="이동 경로"><a href="../../../../index.html">대문</a><span aria-hidden="true">›</span><a href="../../../index.html">전체 수업</a><span aria-hidden="true">›</span><a href="../../index.html">M02</a><span aria-hidden="true">›</span><a href="../index.html">13주차</a><span aria-hidden="true">›</span><span>M02-W13-L01</span></nav>
+<main class="wrap wrap--narrow lesson" data-lesson-id="M02-W13-L01" data-lesson="M02-W13-L01"><nav class="crumb" aria-label="이동 경로"><a href="../../../../index.html">대문</a><span aria-hidden="true">›</span><a href="../../../index.html">전체 수업</a><span aria-hidden="true">›</span><a href="../../index.html">M02</a><span aria-hidden="true">›</span><a href="../index.html">13주차</a><span aria-hidden="true">›</span><span>M02-W13-L01</span></nav><section class="hero"><p class="eyebrow">M02-W13-L01 · 대사생화학 · 대사조절과 질환</p><h1>장기 간 대사 교신: 간·근육·지방·뇌 축과 기질 흐름</h1><p class="en"></p></section><section aria-labelledby="objectives"><h2 id="objectives">학습목표</h2><ul><li>장기 사이에서 이동하는 연료와 대사를 조절하는 신호를 구별한다.</li><li>간·근육·지방·뇌가 서로 다른 일을 맡아 혈당과 에너지 공급을 유지하는 과정을 설명한다.</li><li>젖산·알라닌·지방산·글리세롤의 이동을 탄소와 질소의 관점에서 추적한다.</li><li>혈중 농도만으로 물질의 생산 속도나 호르몬의 효과를 단정하지 않는다.</li></ul></section>
 
-  <section class="hero">
-    <p class="eyebrow">M02-W13-L01 · 대사생화학 · 대사조절과 질환</p>
-    <h1>장기 간 대사 교신: 간·근육·지방·뇌 축과 기질 흐름</h1>
-    <p class="lede">강의 수업 · 상태 <span class="badge badge--design">설계</span></p>
-  </section>
+<section aria-labelledby="prerequisites"><h2 id="prerequisites">선수지식</h2><p>12주차에서 배운 인슐린·글루카곤, 섭식과 공복의 대사 전환을 복습한다. 이번 수업에서는 각 장기의 반응을 따로 외우기보다, 한 장기에서 나온 물질이 다른 장기에 도착한 뒤 무엇이 되는지를 살펴본다. 기질은 효소 반응에 쓰이는 물질이며, 대사 흐름은 일정 시간 동안 경로를 통과하는 물질의 양이다.</p></section>
 
-  
-  <div class="callout">이 수업은 아직 집필 전이다. 제작 기준은
-  <a href="../../../../PROJECT.md">PROJECT.md</a>의 집필 원칙과 산출물 규격을 따른다.</div>
+<nav class="contents" aria-label="강의 구성"><strong>강의 구성</strong><ol class="qlist"><li><a href="#s1">1. 장기 사이에는 연료와 조절 신호가 함께 오간다</a></li><li><a href="#s2">2. 간은 들어온 영양소를 처리하고 필요한 연료를 내보낸다</a></li><li><a href="#s3">3. 근육은 연료를 쓰면서 탄소와 질소를 돌려보낸다</a></li><li><a href="#s4">4. 지방조직의 저장과 방출은 다른 장기의 부담을 바꾼다</a></li><li><a href="#s5">5. 뇌는 연료를 공급받으면서 섭취와 자율신경 반응을 조절한다</a></li><li><a href="#s6">6. 지방과 근육에서 나오는 단백질도 대사에 참여한다</a></li><li><a href="#s7">7. 혈액검사는 흐름의 결과를 보여 주지만 흐름 자체는 아니다</a></li><li><a href="#s8">8. 장기 하나의 반응이 다른 장기의 문제로 이어지는 과정을 읽는다</a></li></ol></nav><section aria-label="본문"><section id="s1" class="lesson-section"><h2>1. 장기 사이에는 연료와 조절 신호가 함께 오간다</h2>
+<p>식사 뒤 혈당이 올라가면 췌장의 β세포가 인슐린을 분비한다. 근육은 포도당을 받아 사용하거나 글리코젠으로 저장하고, 간은 포도당 방출을 줄인다. 한편 지방조직은 저장 지방의 분해를 억제한다. 혈당을 낮추는 일에 포도당을 직접 받아들이는 작용뿐 아니라 다른 연료의 방출을 줄이는 작용도 참여하는 것이다.</p>
+<p>이때 포도당과 인슐린은 같은 혈액을 통해 이동하지만 역할이 다르다. 포도당은 세포가 사용할 수 있는 탄소와 에너지를 제공한다. 인슐린은 수용체에 결합하여 포도당 수송과 효소 작용을 조절한다. 연료의 이동과 신호의 전달을 구별하면 대사 그림의 화살표를 정확하게 읽을 수 있다. 다만 어떤 대사물은 기질이면서 신호로도 작용하므로 두 범주가 완전히 배타적인 것은 아니다.</p>
+<p><strong>같은 혈액 속에서도 역할은 다르다</strong></p><div class="tw"><table aria-label="같은 혈액 속에서도 역할은 다르다"><thead><tr><th>이동 물질</th><th>주된 역할</th><th>받는 조직에서 확인할 것</th></tr></thead><tbody><tr><td>포도당·지방산·케톤체</td><td>에너지와 탄소 공급</td><td>수송체와 이용 효소가 있는가</td></tr><tr><td>인슐린·글루카곤</td><td>대사 경로 조절</td><td>수용체와 세포 내 신호가 작동하는가</td></tr><tr><td>알라닌·글루타민</td><td>탄소와 질소 운반</td><td>탄소 골격과 질소가 각각 어디로 가는가</td></tr></tbody></table>
+</div><p>12주차가 식사 전후의 시간 변화를 다루었다면, 이번 수업의 중심 질문은 “누가 누구에게 무엇을 보내는가?”이다. 각 장기가 가진 효소와 수송체가 다르기 때문에 같은 혈액을 받아도 반응은 같지 않다. <a href="#ref-t24">[T24]</a></p>
+</section>
+<section id="s2" class="lesson-section"><h2>2. 간은 들어온 영양소를 처리하고 필요한 연료를 내보낸다</h2>
+<p>장에서 흡수한 포도당과 아미노산은 문맥을 거쳐 간에 도착한다. 췌장에서 분비한 인슐린도 문맥을 통해 간에 먼저 전달된다. 따라서 간은 식사로 들어온 영양소와 호르몬 변화를 함께 접한다. 다만 식이지방의 대부분을 운반하는 킬로미크론은 림프를 거쳐 혈액으로 들어오므로, 모든 영양소가 같은 길로 간에 먼저 도착하는 것은 아니다.</p>
+<p>식사 뒤 간은 포도당을 글리코젠으로 저장하고, 필요와 영양 상태에 따라 지방산 합성에도 이용한다. 만들어진 중성지방은 VLDL에 실려 다른 조직으로 전달될 수 있다. 공복에는 간 글리코젠 분해와 포도당신생합성이 혈중 포도당 공급을 돕는다. 간의 역할은 단순히 저장과 분해 중 하나를 켜는 것이 아니라, 여러 경로의 상대적인 속도를 바꾸어 순방출량을 조절하는 것이다.</p>
+<p><strong>간에서 나가는 주요 물질</strong></p><div class="tw"><table aria-label="간에서 나가는 주요 물질"><thead><tr><th>방출 물질</th><th>주요 이용 조직</th><th>의미</th></tr></thead><tbody><tr><td>포도당</td><td>뇌·적혈구 등</td><td>장 흡수가 줄어도 포도당 공급 유지</td></tr><tr><td>케톤체</td><td>근육·심장·공복에 적응하는 뇌 등</td><td>지방산 유래 탄소를 다른 조직의 연료로 전달</td></tr><tr><td>VLDL의 중성지방</td><td>지방조직·근육 등</td><td>간에서 처리한 지방을 운반</td></tr><tr><td>요소</td><td>신장에서 배설</td><td>아미노산 질소를 처리한 결과</td></tr></tbody></table>
+</div><div class="box box--step"><b>시험에서 가려내는 지점</b> 간의 포도당 수송을 근육의 GLUT4 이동으로 설명하지 않는다. 간에서 인슐린은 효소와 대사 경로를 조절하여 포도당 저장을 돕고 포도당 생산을 억제한다.</div><p>간이 지방산을 산화하면 포도당신생합성에 필요한 에너지를 얻을 수 있다. 그러나 지방산의 탄소가 모두 포도당 탄소로 바뀐다는 뜻은 아니다. 사람에서 짝수 탄소 지방산이 만든 acetyl-CoA는 순포도당 합성의 탄소원이 되지 못한다. <a href="#ref-t24">[T24]</a></p>
+</section>
+<section id="s3" class="lesson-section"><h2>3. 근육은 연료를 쓰면서 탄소와 질소를 돌려보낸다</h2>
+<p>근육은 수축에 필요한 ATP를 계속 공급받아야 한다. 강한 운동에서는 해당과정의 속도가 빨라지고 젖산 생성과 방출이 증가할 수 있다. 젖산은 버려지는 찌꺼기만은 아니다. 간에서는 포도당신생합성의 기질이 되고, 심장이나 다른 산화성 조직에서는 다시 피루브산이 되어 산화될 수 있다. 젖산 생성 자체가 반드시 산소가 전혀 없다는 증거도 아니다.</p>
+<p>근육에서 아미노산을 처리하며 모인 질소의 일부는 알라닌이나 글루타민에 실려 이동한다. 알라닌은 간에서 아미노기를 넘겨주고 피루브산이 된다. 간은 그 탄소를 포도당 합성 등에 사용하며 질소를 요소 합성으로 보낼 수 있다. 따라서 알라닌의 이동을 “근육에서 간으로 포도당 재료를 보낸다”라고만 말하면 질소 운반이라는 중요한 역할을 놓친다.</p>
+<p><strong>근육에서 나온 물질의 다음 경로</strong></p><div class="tw"><table aria-label="근육에서 나온 물질의 다음 경로"><thead><tr><th>물질</th><th>받는 조직과 처리</th><th>주의할 점</th></tr></thead><tbody><tr><td>젖산</td><td>간의 포도당 합성, 다른 조직의 산화</td><td>모두 간으로 가는 것은 아님</td></tr><tr><td>알라닌</td><td>간에서 탄소와 질소 분리</td><td>포도당 재료이면서 질소 운반체</td></tr><tr><td>글루타민</td><td>신장·장 등에서 이용</td><td>신장에서는 암모늄 배설과 연결 가능</td></tr></tbody></table>
+</div><p>코리회로에서는 말초의 포도당 1분자에서 젖산 2분자가 생기고, 간이 이 젖산으로 포도당을 다시 만든다. 말초의 해당과정이 얻는 순 ATP는 2개이지만, 간의 재합성에는 ATP 4개와 GTP 2개가 필요하다. 몸 전체로 에너지가 새로 생기는 회로가 아니라, 간이 에너지를 써서 탄소를 재활용하고 말초의 요구를 지원하는 관계이다.</p>
+<div class="box box--step"><b>시험에서 가려내는 지점</b> 근육 글리코젠은 자유 포도당으로 직접 혈액에 공급되지 않는다. 그러나 그 탄소가 젖산이나 알라닌으로 이동한 뒤 간에서 포도당으로 재합성되는 간접 경로는 가능하다.</div></section>
+<section id="s4" class="lesson-section"><h2>4. 지방조직의 저장과 방출은 다른 장기의 부담을 바꾼다</h2>
+<p>지방조직은 중성지방을 저장하는 장소이자, 필요할 때 지방산과 글리세롤을 공급하는 조직이다. 식사 뒤 인슐린 작용은 저장 지방의 분해를 억제한다. 공복에 인슐린이 낮아지고 카테콜아민의 작용이 더해지면 지방 동원이 증가한다. 방출한 지방산은 알부민과 결합하여 이동하며, 글리세롤은 간과 신장의 포도당신생합성에 이용될 수 있다.</p>
+<p>지방산과 글리세롤은 같은 중성지방에서 나왔어도 목적지가 같지 않다. 지방산은 많은 조직의 산화 연료가 되고 간의 케톤체 생성에도 기여한다. 글리세롤은 포도당 탄소를 공급할 수 있다. “지방에서 포도당이 만들어진다”라는 표현을 읽을 때는 어느 부분을 말하는지 구분해야 한다.</p>
+<div class="box box--limit"><b>임상 연계</b><h3>학습용 사례: 체지방이 적으면 대사 문제도 항상 적을까?</h3><p>지방을 정상적으로 저장하기 어려운 지방이영양증에서는 간이나 근육으로 지방이 과도하게 유입되고 심한 인슐린 저항성이 나타날 수 있다. 이 사례는 지방조직의 양뿐 아니라 안전하게 저장하고 필요에 맞게 방출하는 기능이 중요함을 보여준다. 외형이나 체중만으로 대사 상태를 판단할 수는 없다. <a href="#ref-r2">[R2]</a></p></div>
+<p>혈중 지방산의 농도도 방출량만으로 정해지지 않는다. 조직의 흡수와 산화, 다시 지방으로 저장되는 양이 함께 영향을 준다. 지방조직이 지방산을 많이 내보내더라도 다른 조직이 빨리 받아 쓰면 농도 변화는 작을 수 있다. <a href="#ref-t24">[T24]</a> <a href="#ref-t25">[T25]</a></p>
+</section>
+<section id="s5" class="lesson-section"><h2>5. 뇌는 연료를 공급받으면서 섭취와 자율신경 반응을 조절한다</h2>
+<p>뇌는 일상적인 상태에서 포도당을 중요한 연료로 이용한다. 공복이 길어지면 케톤체 이용이 늘어나지만 포도당 필요가 완전히 사라지지는 않는다. 지방조직에 에너지가 많이 저장되어 있다는 사실만으로 뇌가 즉시 그 지방산을 충분히 사용할 수 있는 것은 아니다. 저장 에너지의 양과 특정 장기에 이용 가능한 연료의 양은 구별해야 한다.</p>
+<p>동시에 시상하부를 비롯한 뇌의 회로는 영양 상태와 호르몬 정보를 받아 섭취 행동과 자율신경 반응을 조절한다. 지방세포가 분비하는 렙틴은 에너지 저장 상태를 알리는 중요한 신호이다. 저장량과 영양 상태의 변화에 따라 렙틴 신호가 달라지며, 뇌는 이를 여러 신호와 함께 처리한다. 렙틴 하나가 식욕을 완전히 결정하는 스위치는 아니다.</p>
+<p><strong>뇌를 연결하여 읽는 두 방향</strong></p><div class="tw"><table aria-label="뇌를 연결하여 읽는 두 방향"><thead><tr><th>방향</th><th>예</th><th>해석</th></tr></thead><tbody><tr><td>말초 → 뇌</td><td>포도당·케톤체</td><td>실제 연료 공급</td></tr><tr><td>말초 → 뇌</td><td>렙틴·인슐린·장 유래 신호</td><td>영양 상태와 식사 정보 전달</td></tr><tr><td>뇌 → 말초</td><td>자율신경·섭취 행동의 변화</td><td>연료 동원과 유입을 조절</td></tr></tbody></table>
+</div><p>흔한 비만에서는 렙틴이 부족하기보다 혈중 렙틴이 높으면서 기대한 만큼의 식욕 억제 반응이 나타나지 않는 경우가 많다. 따라서 호르몬 농도가 높다는 사실을 그 호르몬의 효과가 강하다는 뜻으로 바꾸어 읽으면 안 된다. 드문 선천성 렙틴 결핍과 일반적인 비만은 구별해야 한다. <a href="#ref-t26">[T26]</a></p>
+</section>
+<section id="s6" class="lesson-section"><h2>6. 지방과 근육에서 나오는 단백질도 대사에 참여한다</h2>
+<p>지방조직이 분비하는 조절 단백질을 아디포카인, 근육에서 분비하는 조절 단백질을 마이오카인이라고 부른다. 이것은 분비 조직을 강조한 이름이지, 각각의 단백질이 그 조직에서만 만들어진다는 뜻은 아니다. 지방조직에는 지방세포 외에도 면역세포와 혈관세포가 있으므로 조직에서 검출된 분비물을 모두 지방세포 산물이라고 할 수 없다.</p>
+<p>아디포넥틴은 지방세포가 분비하며, 실험 연구에서 지방산 산화와 인슐린 감수성 조절에 관여하는 것으로 나타났다. 교재는 비만에서 아디포넥틴이 감소하는 경향을 설명한다. 그러나 사람의 혈중 수치와 질병 사이의 연관만으로 아디포넥틴을 투여하면 질환이 치료된다는 결론에 도달할 수는 없다. 기전 연구, 관찰 연구, 치료 연구는 서로 다른 질문에 답한다. <a href="#ref-t26">[T26]</a></p>
+<div class="box box--limit"><b>임상 연계</b><h3>학습용 비교: IL-6는 언제나 같은 뜻일까?</h3><p>IL-6는 만성 염증 상황에서도 관찰되고 운동 중 근육에서도 방출된다. 건강한 사람에게 급성으로 IL-6를 주입한 연구에서는 인슐린 자극하 포도당 처리가 증가했다. 이 결과는 “IL-6가 관찰되면 언제나 인슐린 저항성이 생긴다”라는 설명이 지나치게 단순함을 보여준다. 다만 급성 주입의 결과를 만성 질환이나 치료 효과로 확대할 수는 없다. <a href="#ref-r1">[R1]</a></p></div>
+<div class="box box--front"><b>연구 전선</b> 같은 물질의 효과가 다르게 나타난다면 분비한 세포, 농도, 지속 시간, 표적 조직을 나누어 비교해 보자. “좋은 호르몬”과 “나쁜 호르몬”이라는 분류보다 실험 조건을 설명하는 편이 정확하다.</div></section>
+<section id="s7" class="lesson-section"><h2>7. 혈액검사는 흐름의 결과를 보여 주지만 흐름 자체는 아니다</h2>
+<p>혈중 포도당이 일정해도 포도당의 생산과 사용이 멈춘 것은 아니다. 운동 중 간의 포도당 공급과 근육의 사용이 함께 늘면 혈당은 크게 달라지지 않을 수 있다. 반대로 혈당이 높아졌다는 사실만으로 간이 너무 많이 생산했는지, 말초 사용이 줄었는지, 두 변화가 함께 일어났는지는 구별되지 않는다.</p>
+<p>농도는 채혈 순간 혈액의 단위 부피에 들어 있는 양이다. 흐름은 단위 시간당 이동하거나 반응하는 양이다. 특정 장기의 순흡수를 추정하려면 그 장기로 들어가는 혈액과 나오는 혈액의 농도 차이에 혈류량을 함께 고려해야 한다. 같은 농도 차이라도 혈류량이 다르면 실제 이동량이 달라진다.</p>
+<p><strong>검사 결과에서 바로 알 수 있는 것과 더 필요한 정보</strong></p><div class="tw"><table aria-label="검사 결과에서 바로 알 수 있는 것과 더 필요한 정보"><thead><tr><th>관찰</th><th>가능한 해석</th><th>바로 단정할 수 없는 것</th></tr></thead><tbody><tr><td>혈당이 일정함</td><td>유입과 제거가 균형을 이룸</td><td>포도당 회전 속도가 낮다</td></tr><tr><td>인슐린이 높음</td><td>분비 증가 또는 제거 변화 등</td><td>인슐린 효과가 충분하다</td></tr><tr><td>젖산이 높음</td><td>생산과 제거의 균형 변화</td><td>근육만 원인이며 모두 산소 부족이다</td></tr></tbody></table>
+</div><div class="box box--step"><b>시험에서 가려내는 지점</b> 농도와 흐름, 호르몬의 양과 조직의 반응을 각각 구별한다. 정상 혈당과 높은 인슐린이 함께 나타나면 증가한 인슐린 분비로 혈당을 유지하는 보상 상태도 생각할 수 있지만, 두 수치만으로 기전을 확진하지는 않는다.</div><div class="box box--front"><b>연구 전선</b> 안정동위원소로 표시한 포도당을 이용하면 내인성 포도당 생산과 제거를 추정할 수 있다. 같은 혈당인 두 사람의 간 생산량이 다를 수 있음을 확인하려면 단일 채혈 외에 어떤 자료가 필요한지 설계해 보자.</div></section>
+<section id="s8" class="lesson-section"><h2>8. 장기 하나의 반응이 다른 장기의 문제로 이어지는 과정을 읽는다</h2>
+<p>식사 뒤에도 지방조직의 지방분해가 충분히 억제되지 않는 상황을 생각해 보자. 간으로 오는 지방산과 글리세롤이 많아질 수 있다. 글리세롤은 포도당신생합성의 탄소를 제공하고, 지방산 산화는 그 과정에 필요한 에너지와 조절 신호를 제공한다. 간의 포도당 방출 억제가 함께 불충분하면 혈당 유지가 더 어려워진다. 여기에 근육의 포도당 흡수 감소가 겹치면 췌장의 인슐린 요구량이 늘어난다.</p>
+<p>이것은 모든 사람의 당뇨병이 반드시 같은 순서로 진행한다는 설명이 아니다. 서로 다른 조직의 이상이 어떻게 연결되어 부담을 키우는지 보여 주는 모형이다. 인슐린 저항성이 있어도 β세포의 보상 능력에 따라 혈당은 다를 수 있다. 다음 강의에서는 지질 중간체와 염증 등이 세포의 인슐린 반응을 변화시키는 기전을 다룬다.</p>
+<div class="box box--limit"><b>임상 연계</b><h3>통합 연습: 공복인데 지방산과 혈당이 함께 높다</h3><p>“지방산을 쓰니 포도당은 반드시 낮아져야 한다”라고 생각하지 않는다. 지방산 공급이 많으면서 간의 포도당 생산도 충분히 억제되지 않을 수 있다. 이때 췌장 분비, 간 생산, 근육 흡수, 지방분해를 함께 검토한다. 이 사례의 목적은 특정 질환을 수치 없이 확진하는 것이 아니라, 여러 장기의 기여를 따로 묻는 것이다.</p></div>
+<p>장기 간 대사를 설명할 때는 출발 조직, 이동 물질, 도착 조직, 이후 반응의 순서로 문장을 만든다. 예를 들어 “지방조직의 글리세롤이 간으로 이동하여 포도당신생합성의 탄소원이 된다”라고 말하면, 무엇이 이동하고 무엇이 바뀌는지가 드러난다. 이러한 연결을 이해해야 한 조직을 표적으로 한 치료가 전신 대사에 영향을 주는 이유도 설명할 수 있다. <a href="#ref-t25">[T25]</a></p>
+</section></section>
 
-  <h2>학습목표</h2>
-  <p>작성 예정. 이 수업이 답하는 질문 6~9개를 먼저 확정한 뒤 측정 가능한 학습목표로 옮긴다.</p>
+<section aria-labelledby="questions"><h2 id="questions">확인 문항과 해설</h2><ol class="quiz">
+<li><p class="qq"><strong>판단.</strong> 운동 중 혈당이 일정하다면 근육의 포도당 사용량도 운동 전과 같다.</p><details><summary>해설</summary><p>틀리다. 간의 공급과 근육의 사용이 함께 증가하면 농도는 일정할 수 있다. 농도는 단위 시간당 생산·사용량과 다르다.</p></details></li>
+<li><p class="qq"><strong>판단.</strong> 근육 글리코젠의 탄소는 자유 포도당으로 직접 방출되지 않지만, 젖산을 거쳐 간의 포도당 합성에 이용될 수 있다.</p><details><summary>해설</summary><p>맞다. 근육에는 혈중으로 자유 포도당을 공급하는 데 필요한 glucose-6-phosphatase가 없지만, 젖산 등으로 나간 탄소는 다른 장기에서 재활용된다.</p></details></li>
+<li><p class="qq"><strong>판단.</strong> 혈중 렙틴이 높으면 식욕 억제 효과도 반드시 강하다.</p><details><summary>해설</summary><p>틀리다. 호르몬 농도와 표적 조직의 반응은 다르다. 흔한 비만에서는 높은 렙틴에도 반응이 충분하지 않을 수 있다.</p></details></li>
+<li><p class="qq"><strong>판단.</strong> 지방분해로 나온 글리세롤과 짝수 탄소 지방산은 모두 같은 방식으로 순포도당 합성에 탄소를 제공한다.</p><details><summary>해설</summary><p>틀리다. 글리세롤은 포도당 탄소원이 될 수 있다. 짝수 탄소 지방산이 만든 acetyl-CoA는 사람에서 순포도당 탄소원이 되지 못하지만, 산화를 통해 필요한 에너지를 공급한다.</p></details></li>
+<li><p class="qq">근육에서 간으로 이동한 알라닌의 탄소와 질소가 어떻게 처리되는지 각각 설명하라.</p><details><summary>해설</summary><p>알라닌은 아미노기전이를 거쳐 피루브산이 된다. 탄소는 포도당 합성 등에 쓰일 수 있고, 전달된 질소는 간에서 요소 합성으로 연결될 수 있다. 두 부분의 경로를 분리하여 설명한다.</p></details></li>
+<li><p class="qq">만성 염증에서 IL-6가 높다는 관찰과 운동 중 IL-6 방출이 증가한다는 관찰을 비교할 때, 최소 세 가지 조건을 제시하라.</p><details><summary>해설</summary><p>분비 세포, 농도, 지속 시간, 표적 조직, 동반 호르몬, 대상자의 질환 상태 등을 비교한다. 단백질 이름이 같다고 생리적 결과까지 같다고 가정하지 않는다.</p></details></li>
+</ol></section>
 
-  <h2>선수지식</h2>
-  <p>작성 예정.</p>
-
-  <h2>본문</h2>
-  <p>작성 예정. 각 절은 하나의 질문에 답하는 단위로 쓰고
-  질문 → 답 → 근거 → 조건과 한계 → 귀결의 순서로 전개한다.</p>
-
-  <h2>확인 문항</h2>
-  <p>작성 예정. 5개 이상, 절반 이상은 판단을 묻는 문항으로 한다.</p>
-
-  <h2>참고문헌</h2>
-  <p>작성 예정.</p>
-
-  <nav class="pager"><a href="../../../M02/W12/L03/index.html">← M02-W12-L03 에너지 센서</a><a href="../../../M02/W13/L02/index.html">M02-W13-L02 인슐린 저항성의 분자 기전 →</a></nav>
-
-</main>
-
-<footer class="foot wrap">
+<section aria-labelledby="references"><h2 id="references">참고문헌</h2><ol class="ref"><li id="ref-t24">[T24] Abali EE, Cline SD, Franklin DS, Viselli SM. Lippincott Illustrated Reviews: Biochemistry. 8판. Wolters Kluwer; 2022. 24장 섭식·공복 주기. 제공 PDF 파일 665–684쪽. PDF 파일 페이지이며 인쇄 쪽수와 다르다.</li><li id="ref-t25">[T25] 같은 교재 25장 인슐린 저항성과 조직 간 관계, 제공 PDF 파일 700쪽. 지방 저장 기능과 이소성 지방의 연결을 위한 기초 자료.</li><li id="ref-t26">[T26] 같은 교재 26장 지방조직의 내분비 기능과 체중 조절, 제공 PDF 파일 716, 719–722쪽.</li><li id="ref-r1">[R1] Carey AL et al. Interleukin-6 increases insulin-stimulated glucose disposal in humans and glucose uptake and fatty acid oxidation in vitro via AMP-activated protein kinase. Diabetes. 2006;55:2688–2697. <a href="https://pubmed.ncbi.nlm.nih.gov/17003332/">원저 초록</a>. 사람의 급성 주입과 세포 실험의 결과를 구별하여 참조하였다.</li><li id="ref-r2">[R2] Petersen KF et al. Leptin reverses insulin resistance and hepatic steatosis in patients with severe lipodystrophy. J Clin Invest. 2002;109:1345–1350. <a href="https://www.jci.org/articles/view/15001">원저</a>. 지방이영양증의 인슐린 저항성과 이소성 지방에 관한 사람 연구.</li></ol></section>
+<nav class="pager" aria-label="이전·다음 수업"><a href="../../W12/L03/index.html">← 에너지 센서: AMPK·mTORC1·sirtuin과 영양 가용성</a><a href="../../W13/L02/index.html">인슐린 저항성의 분자 기전: 지질 중간체·염증·소포체 스트레스 →</a></nav></main><footer class="foot wrap">
   <span>© 2026 Kim Jintae · Hanyang University</span>
   <a href="https://github.com/hoperiasd2/hoperiasd2.github.io">GitHub 저장소</a>
 </footer>
 
-<script src="../../../../assets/site.js"></script>
-</body>
-</html>
+<script src="../../../../assets/edit.js" defer></script></body></html>
